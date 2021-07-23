@@ -1,15 +1,10 @@
-import {
-  GemCategoryType,
-  GemQualityType,
-  ItemType,
-  PropertyType,
-} from '../enums/index.js';
+import {GemCategoryType, GemQualityType, PropertyType} from '../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
   [ids.ChippedRuby]: {
     id: ids.ChippedRuby,
-    type: ItemType.Gem,
+
     name: 'Chipped Ruby',
     clvl: 1,
     category: GemCategoryType.Ruby,
@@ -31,7 +26,7 @@ export default {
   },
   [ids.FlawedRuby]: {
     id: ids.FlawedRuby,
-    type: ItemType.Gem,
+
     name: 'Flawed Ruby',
     clvl: 5,
     category: GemCategoryType.Ruby,
@@ -53,7 +48,7 @@ export default {
   },
   [ids.Ruby]: {
     id: ids.Ruby,
-    type: ItemType.Gem,
+
     name: 'Ruby',
     clvl: 12,
     category: GemCategoryType.Ruby,
@@ -75,7 +70,7 @@ export default {
   },
   [ids.FlawlessRuby]: {
     id: ids.FlawlessRuby,
-    type: ItemType.Gem,
+
     name: 'Flawless Ruby',
     clvl: 15,
     category: GemCategoryType.Ruby,
@@ -97,7 +92,7 @@ export default {
   },
   [ids.PerfectRuby]: {
     id: ids.PerfectRuby,
-    type: ItemType.Gem,
+
     name: 'Perfect Ruby',
     clvl: 18,
     category: GemCategoryType.Ruby,
@@ -119,7 +114,7 @@ export default {
   },
   [ids.ChippedSapphire]: {
     id: ids.ChippedSapphire,
-    type: ItemType.Gem,
+
     name: 'Chipped Sapphire',
     clvl: 1,
     category: GemCategoryType.Sapphire,
@@ -141,7 +136,7 @@ export default {
   },
   [ids.FlawedSapphire]: {
     id: ids.FlawedSapphire,
-    type: ItemType.Gem,
+
     name: 'Flawed Sapphire',
     clvl: 5,
     category: GemCategoryType.Sapphire,
@@ -163,7 +158,7 @@ export default {
   },
   [ids.Sapphire]: {
     id: ids.Sapphire,
-    type: ItemType.Gem,
+
     name: 'Sapphire',
     clvl: 12,
     category: GemCategoryType.Sapphire,
@@ -185,7 +180,7 @@ export default {
   },
   [ids.FlawlessSapphire]: {
     id: ids.FlawlessSapphire,
-    type: ItemType.Gem,
+
     name: 'Flawless Sapphire',
     clvl: 15,
     category: GemCategoryType.Sapphire,
@@ -207,7 +202,7 @@ export default {
   },
   [ids.PerfectSapphire]: {
     id: ids.PerfectSapphire,
-    type: ItemType.Gem,
+
     name: 'Perfect Sapphire',
     clvl: 18,
     category: GemCategoryType.Sapphire,
@@ -229,7 +224,7 @@ export default {
   },
   [ids.ChippedTopaz]: {
     id: ids.ChippedTopaz,
-    type: ItemType.Gem,
+
     name: 'Chipped Topaz',
     clvl: 1,
     category: GemCategoryType.Topaz,
@@ -251,7 +246,7 @@ export default {
   },
   [ids.FlawedTopaz]: {
     id: ids.FlawedTopaz,
-    type: ItemType.Gem,
+
     name: 'Flawed Topaz',
     clvl: 5,
     category: GemCategoryType.Topaz,
@@ -273,7 +268,7 @@ export default {
   },
   [ids.Topaz]: {
     id: ids.Topaz,
-    type: ItemType.Gem,
+
     name: 'Topaz',
     clvl: 12,
     category: GemCategoryType.Topaz,
@@ -295,7 +290,7 @@ export default {
   },
   [ids.FlawlessTopaz]: {
     id: ids.FlawlessTopaz,
-    type: ItemType.Gem,
+
     name: 'Flawless Topaz',
     clvl: 15,
     category: GemCategoryType.Topaz,
@@ -317,7 +312,7 @@ export default {
   },
   [ids.PerfectTopaz]: {
     id: ids.PerfectTopaz,
-    type: ItemType.Gem,
+
     name: 'Perfect Topaz',
     clvl: 18,
     category: GemCategoryType.Topaz,
@@ -339,7 +334,7 @@ export default {
   },
   [ids.ChippedEmerald]: {
     id: ids.ChippedEmerald,
-    type: ItemType.Gem,
+
     name: 'Chipped Emerald',
     clvl: 1,
     category: GemCategoryType.Emerald,
@@ -361,7 +356,7 @@ export default {
   },
   [ids.FlawedEmerald]: {
     id: ids.FlawedEmerald,
-    type: ItemType.Gem,
+
     name: 'Flawed Emerald',
     clvl: 5,
     category: GemCategoryType.Emerald,
@@ -383,7 +378,7 @@ export default {
   },
   [ids.Emerald]: {
     id: ids.Emerald,
-    type: ItemType.Gem,
+
     name: 'Emerald',
     clvl: 12,
     category: GemCategoryType.Emerald,
@@ -405,7 +400,7 @@ export default {
   },
   [ids.FlawlessEmerald]: {
     id: ids.FlawlessEmerald,
-    type: ItemType.Gem,
+
     name: 'Flawless Emerald',
     clvl: 15,
     category: GemCategoryType.Emerald,
@@ -427,7 +422,7 @@ export default {
   },
   [ids.PerfectEmerald]: {
     id: ids.PerfectEmerald,
-    type: ItemType.Gem,
+
     name: 'Perfect Emerald',
     clvl: 18,
     category: GemCategoryType.Emerald,
@@ -449,7 +444,7 @@ export default {
   },
   [ids.ChippedDiamond]: {
     id: ids.ChippedDiamond,
-    type: ItemType.Gem,
+
     name: 'Chipped Diamond',
     clvl: 1,
     category: GemCategoryType.Diamond,
@@ -471,7 +466,7 @@ export default {
   },
   [ids.FlawedDiamond]: {
     id: ids.FlawedDiamond,
-    type: ItemType.Gem,
+
     name: 'Flawed Diamond',
     clvl: 5,
     category: GemCategoryType.Diamond,
@@ -493,7 +488,7 @@ export default {
   },
   [ids.Diamond]: {
     id: ids.Diamond,
-    type: ItemType.Gem,
+
     name: 'Diamond',
     clvl: 12,
     category: GemCategoryType.Diamond,
@@ -515,7 +510,7 @@ export default {
   },
   [ids.FlawlessDiamond]: {
     id: ids.FlawlessDiamond,
-    type: ItemType.Gem,
+
     name: 'Flawless Diamond',
     clvl: 15,
     category: GemCategoryType.Diamond,
@@ -537,7 +532,7 @@ export default {
   },
   [ids.PerfectDiamond]: {
     id: ids.PerfectDiamond,
-    type: ItemType.Gem,
+
     name: 'Perfect Diamond',
     clvl: 18,
     category: GemCategoryType.Diamond,
@@ -559,7 +554,7 @@ export default {
   },
   [ids.ChippedAmethyst]: {
     id: ids.ChippedAmethyst,
-    type: ItemType.Gem,
+
     name: 'Chipped Amethyst',
     clvl: 1,
     category: GemCategoryType.Amethyst,
@@ -581,7 +576,7 @@ export default {
   },
   [ids.FlawedAmethyst]: {
     id: ids.FlawedAmethyst,
-    type: ItemType.Gem,
+
     name: 'Flawed Amethyst',
     clvl: 5,
     category: GemCategoryType.Amethyst,
@@ -603,7 +598,7 @@ export default {
   },
   [ids.Amethyst]: {
     id: ids.Amethyst,
-    type: ItemType.Gem,
+
     name: 'Amethyst',
     clvl: 12,
     category: GemCategoryType.Amethyst,
@@ -625,7 +620,7 @@ export default {
   },
   [ids.FlawlessAmethyst]: {
     id: ids.FlawlessAmethyst,
-    type: ItemType.Gem,
+
     name: 'Flawless Amethyst',
     clvl: 15,
     category: GemCategoryType.Amethyst,
@@ -647,7 +642,7 @@ export default {
   },
   [ids.PerfectAmethyst]: {
     id: ids.PerfectAmethyst,
-    type: ItemType.Gem,
+
     name: 'Perfect Amethyst',
     clvl: 18,
     category: GemCategoryType.Amethyst,
@@ -669,7 +664,7 @@ export default {
   },
   [ids.ChippedSkull]: {
     id: ids.ChippedSkull,
-    type: ItemType.Gem,
+
     name: 'Chipped Skull',
     clvl: 1,
     category: GemCategoryType.Skull,
@@ -703,7 +698,7 @@ export default {
   },
   [ids.FlawedSkull]: {
     id: ids.FlawedSkull,
-    type: ItemType.Gem,
+
     name: 'Flawed Skull',
     clvl: 5,
     category: GemCategoryType.Skull,
@@ -737,7 +732,7 @@ export default {
   },
   [ids.Skull]: {
     id: ids.Skull,
-    type: ItemType.Gem,
+
     name: 'Skull',
     clvl: 12,
     category: GemCategoryType.Skull,
@@ -771,7 +766,7 @@ export default {
   },
   [ids.FlawlessSkull]: {
     id: ids.FlawlessSkull,
-    type: ItemType.Gem,
+
     name: 'Flawless Skull',
     clvl: 15,
     category: GemCategoryType.Skull,
@@ -805,7 +800,7 @@ export default {
   },
   [ids.PerfectSkull]: {
     id: ids.PerfectSkull,
-    type: ItemType.Gem,
+
     name: 'Perfect Skull',
     clvl: 18,
     category: GemCategoryType.Skull,

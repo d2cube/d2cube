@@ -1,10 +1,10 @@
-import {ItemType, PropertyType} from '../enums/index.js';
+import {PropertyType} from '../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
   [ids.El]: {
     id: ids.El,
-    type: ItemType.Rune,
+
     name: 'El Rune',
     clvl: 11,
     stats: {
@@ -42,7 +42,7 @@ export default {
   },
   [ids.Eld]: {
     id: ids.Eld,
-    type: ItemType.Rune,
+
     name: 'Eld Rune',
     clvl: 11,
     stats: {
@@ -68,7 +68,7 @@ export default {
   },
   [ids.Tir]: {
     id: ids.Tir,
-    type: ItemType.Rune,
+
     name: 'Tir Rune',
     clvl: 13,
     stats: {
@@ -88,7 +88,7 @@ export default {
   },
   [ids.Nef]: {
     id: ids.Nef,
-    type: ItemType.Rune,
+
     name: 'Nef Rune',
     clvl: 13,
     stats: {
@@ -108,7 +108,7 @@ export default {
   },
   [ids.Eth]: {
     id: ids.Eth,
-    type: ItemType.Rune,
+
     name: 'Eth Rune',
     clvl: 15,
     stats: {
@@ -128,7 +128,7 @@ export default {
   },
   [ids.Ith]: {
     id: ids.Ith,
-    type: ItemType.Rune,
+
     name: 'Ith Rune',
     clvl: 15,
     stats: {
@@ -148,7 +148,7 @@ export default {
   },
   [ids.Tal]: {
     id: ids.Tal,
-    type: ItemType.Rune,
+
     name: 'Tal Rune',
     clvl: 17,
     stats: {
@@ -168,7 +168,7 @@ export default {
   },
   [ids.Ral]: {
     id: ids.Ral,
-    type: ItemType.Rune,
+
     name: 'Ral Rune',
     clvl: 19,
     stats: {
@@ -188,7 +188,7 @@ export default {
   },
   [ids.Ort]: {
     id: ids.Ort,
-    type: ItemType.Rune,
+
     name: 'Ort Rune',
     clvl: 21,
     stats: {
@@ -208,7 +208,7 @@ export default {
   },
   [ids.Thul]: {
     id: ids.Thul,
-    type: ItemType.Rune,
+
     name: 'Thul Rune',
     clvl: 23,
     stats: {
@@ -228,7 +228,7 @@ export default {
   },
   [ids.Amn]: {
     id: ids.Amn,
-    type: ItemType.Rune,
+
     name: 'Amn Rune',
     clvl: 25,
     stats: {
@@ -248,7 +248,7 @@ export default {
   },
   [ids.Sol]: {
     id: ids.Sol,
-    type: ItemType.Rune,
+
     name: 'Sol Rune',
     clvl: 27,
     stats: {
@@ -268,7 +268,7 @@ export default {
   },
   [ids.Shael]: {
     id: ids.Shael,
-    type: ItemType.Rune,
+
     name: 'Shael Rune',
     clvl: 29,
     stats: {
@@ -288,7 +288,7 @@ export default {
   },
   [ids.Dol]: {
     id: ids.Dol,
-    type: ItemType.Rune,
+
     name: 'Dol Rune',
     clvl: 31,
     stats: {
@@ -308,7 +308,7 @@ export default {
   },
   [ids.Hel]: {
     id: ids.Hel,
-    type: ItemType.Rune,
+
     name: 'Hel Rune',
     clvl: null,
     stats: {
@@ -328,7 +328,7 @@ export default {
   },
   [ids.Io]: {
     id: ids.Io,
-    type: ItemType.Rune,
+
     name: 'Io Rune',
     clvl: 35,
     stats: {
@@ -348,7 +348,7 @@ export default {
   },
   [ids.Lum]: {
     id: ids.Lum,
-    type: ItemType.Rune,
+
     name: 'Lum Rune',
     clvl: 37,
     stats: {
@@ -368,7 +368,7 @@ export default {
   },
   [ids.Ko]: {
     id: ids.Ko,
-    type: ItemType.Rune,
+
     name: 'Ko Rune',
     clvl: 39,
     stats: {
@@ -388,7 +388,7 @@ export default {
   },
   [ids.Fal]: {
     id: ids.Fal,
-    type: ItemType.Rune,
+
     name: 'Fal Rune',
     clvl: 41,
     stats: {
@@ -408,7 +408,7 @@ export default {
   },
   [ids.Lem]: {
     id: ids.Lem,
-    type: ItemType.Rune,
+
     name: 'Lem Rune',
     clvl: 43,
     stats: {
@@ -428,7 +428,7 @@ export default {
   },
   [ids.Pul]: {
     id: ids.Pul,
-    type: ItemType.Rune,
+
     name: 'Pul Rune',
     clvl: 45,
     stats: {
@@ -454,7 +454,7 @@ export default {
   },
   [ids.Um]: {
     id: ids.Um,
-    type: ItemType.Rune,
+
     name: 'Um Rune',
     clvl: 47,
     stats: {
@@ -474,7 +474,7 @@ export default {
   },
   [ids.Mal]: {
     id: ids.Mal,
-    type: ItemType.Rune,
+
     name: 'Mal Rune',
     clvl: 49,
     stats: {
@@ -494,7 +494,7 @@ export default {
   },
   [ids.Ist]: {
     id: ids.Ist,
-    type: ItemType.Rune,
+
     name: 'Ist Rune',
     clvl: 51,
     stats: {
@@ -514,7 +514,7 @@ export default {
   },
   [ids.Gul]: {
     id: ids.Gul,
-    type: ItemType.Rune,
+
     name: 'Gul Rune',
     clvl: 53,
     stats: {
@@ -534,7 +534,7 @@ export default {
   },
   [ids.Vex]: {
     id: ids.Vex,
-    type: ItemType.Rune,
+
     name: 'Vex Rune',
     clvl: 55,
     stats: {
@@ -554,7 +554,7 @@ export default {
   },
   [ids.Ohm]: {
     id: ids.Ohm,
-    type: ItemType.Rune,
+
     name: 'Ohm Rune',
     clvl: 57,
     stats: {
@@ -574,7 +574,7 @@ export default {
   },
   [ids.Lo]: {
     id: ids.Lo,
-    type: ItemType.Rune,
+
     name: 'Lo Rune',
     clvl: 59,
     stats: {
@@ -594,7 +594,7 @@ export default {
   },
   [ids.Sur]: {
     id: ids.Sur,
-    type: ItemType.Rune,
+
     name: 'Sur Rune',
     clvl: 61,
     stats: {
@@ -614,7 +614,7 @@ export default {
   },
   [ids.Ber]: {
     id: ids.Ber,
-    type: ItemType.Rune,
+
     name: 'Ber Rune',
     clvl: 63,
     stats: {
@@ -634,7 +634,7 @@ export default {
   },
   [ids.Jah]: {
     id: ids.Jah,
-    type: ItemType.Rune,
+
     name: 'Jah Rune',
     clvl: 65,
     stats: {
@@ -654,7 +654,7 @@ export default {
   },
   [ids.Cham]: {
     id: ids.Cham,
-    type: ItemType.Rune,
+
     name: 'Cham Rune',
     clvl: 67,
     stats: {
@@ -674,7 +674,7 @@ export default {
   },
   [ids.Zod]: {
     id: ids.Zod,
-    type: ItemType.Rune,
+
     name: 'Zod Rune',
     clvl: 69,
     stats: {
