@@ -1,0 +1,66 @@
+{
+  "private": true,
+  "name": "d2cube",
+  "version": "1.0.0",
+  "description": "An interactive D2 cube and runewords companion",
+  "license": "MIT",
+  "keywords": [
+    "d2",
+    "d2r",
+    "diablo2",
+    "cube",
+    "runewords"
+  ],
+  "repository": "chrisrzhou/d2cube",
+  "bugs": "https://github.com/chrisrzhou/d2cube/issues",
+  "author": "Chris Zhou <chrisrzhou@pm.me> (https://chrisrzhou.io)",
+  "homepage": "https://d2cu.be",
+  "dependencies": {
+    "@tippyjs/react": "^4.2.5",
+    "gatsby": "^3.9.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "uinix-ui": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-xo-react": "^0.25.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "xo": "^0.42.0"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "lint": "xo --fix",
+    "serve": "gatsby serve",
+    "start": "gatsby develop"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
+  "xo": {
+    "esnext": false,
+    "env": [
+      "browser"
+    ],
+    "extends": [
+      "xo-react"
+    ],
+    "prettier": true,
+    "rules": {
+      "complexity": "off",
+      "import/no-anonymous-default-export": "off",
+      "react/no-array-index-key": "off",
+      "react/prop-types": "off",
+      "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-array-for-each": "off",
+      "unicorn/no-array-reduce": "off"
+    }
+  }
+}
