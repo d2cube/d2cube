@@ -1,18 +1,48 @@
 import React, {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
+import db from '../db/index.js';
 import {getRecipes} from '../queries/index.js';
 import {Recipe} from './recipe.js';
 
+const {RecipeType} = db.enums;
+
 export const Recipes = ({items}) => {
-  const [shouldFilter, setShouldFilter] = useState(false);
-  const recipes = getRecipes({items, shouldFilter});
+  const [showAvailable, setShowAvailable] = useState(false);
+  const [selectedRecipeType, setSelectedRecipeType] = useState(null);
+
+  const filters = [];
+  if (selectedRecipeType) {
+    filters.push({
+      key: 'type',
+      value: selectedRecipeType,
+    });
+  }
+
+  const recipes = getRecipes({
+    items,
+    filters,
+    showAvailable,
+  });
+
+  const handleUpdateRecipeType = (event) =>
+    setSelectedRecipeType(event.target.value);
 
   return (
     <div>
-      <button type="button" onClick={() => setShouldFilter(!shouldFilter)}>
-        {shouldFilter ? 'Unfilter' : 'Filter'}
-      </button>
+      <Layout align="center" spacing="m">
+        <button type="button" onClick={() => setShowAvailable(!showAvailable)}>
+          {showAvailable ? 'Show all' : 'Show available'}
+        </button>
+        <select value={selectedRecipeType} onChange={handleUpdateRecipeType}>
+          <option value={null} />
+          {Object.values(RecipeType).map((recipeType) => (
+            <option key={recipeType} value={recipeType}>
+              {recipeType}
+            </option>
+          ))}
+        </select>
+      </Layout>
       <p>{recipes.length} recipes found</p>
       <Layout as="ul" direction="column" spacing="s">
         {recipes.map((recipe) => (

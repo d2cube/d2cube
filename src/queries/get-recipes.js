@@ -31,20 +31,28 @@ const findItem = (stack, target) => {
 
 const itemify = (x) => (isPlainObject(x) ? x : getItemById(x));
 
-export const getRecipes = ({items = [], shouldFilter}) => {
-  const filteredRecipes = [];
+export const getRecipes = ({items = [], filters = [], showAvailable}) => {
+  const recipes = [];
+  const filteredRecipes =
+    filters.length > 0
+      ? db.recipes.filter((recipe) =>
+          filters.every((filter) => {
+            const {key, value} = filter;
+            return recipe[key] === value;
+          }),
+        )
+      : db.recipes;
 
-  db.recipes.forEach((recipe) => {
+  filteredRecipes.forEach((recipe) => {
     let inactiveSourceCount = 0;
     const itemStack = [...items];
     const sources = [];
-
     recipe.sources.forEach((source) => {
       const sourceItem = itemify(source);
       const matchedItem = findItem(itemStack, sourceItem);
-      const isInactive = shouldFilter ? !matchedItem : false;
+      const isInactive = showAvailable ? !matchedItem : false;
       sources.push({
-        item: shouldFilter ? matchedItem || sourceItem : sourceItem,
+        item: showAvailable ? matchedItem || sourceItem : sourceItem,
         isInactive,
       });
 
@@ -56,9 +64,9 @@ export const getRecipes = ({items = [], shouldFilter}) => {
     const hasInactiveSources = inactiveSourceCount > 0;
     const hasAllInactiveSources = inactiveSourceCount === sources.length;
 
-    if (!(shouldFilter && hasAllInactiveSources)) {
+    if (!(showAvailable && hasAllInactiveSources)) {
       const targetItem = itemify(recipe.target);
-      filteredRecipes.push({
+      recipes.push({
         ...recipe,
         sources,
         target: {
@@ -69,5 +77,5 @@ export const getRecipes = ({items = [], shouldFilter}) => {
     }
   });
 
-  return filteredRecipes;
+  return recipes;
 };
