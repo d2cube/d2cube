@@ -4,18 +4,18 @@
  * Note: Item images are named after their IDs.
  */
 
-import ammunition from './ammunition.js';
-import gem from './gem.js';
-import potion from './potion.js';
-import rune from './rune.js';
-import scroll from './scroll.js';
-import tome from './tome.js';
+import ammunitions from './ammunitions.js';
+import gems from './gems.js';
+import potions from './potions.js';
+import runes from './runes.js';
+import scrolls from './scrolls.js';
+import tomes from './tomes.js';
 
 export default {
-  ...ammunition,
-  ...gem,
-  ...potion,
-  ...rune,
-  ...scroll,
-  ...tome,
+  ...ammunitions,
+  ...gems,
+  ...potions,
+  ...runes,
+  ...scrolls,
+  ...tomes,
 };
