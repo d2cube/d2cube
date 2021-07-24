@@ -1,6 +1,5 @@
 import {navigate} from 'gatsby';
 import React, {useEffect, useState} from 'react';
-import {Layout} from 'uinix-ui';
 
 import Backdrop from './backdrop.js';
 
@@ -12,11 +11,11 @@ const PageLayout = ({children, title}) => {
   }
 
   return (
-    <Layout>
+    <div>
       <Backdrop />
       <h2>{title}</h2>
       {children}
-    </Layout>
+    </div>
   );
 };
 

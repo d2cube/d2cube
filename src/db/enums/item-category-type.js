@@ -1,0 +1,37 @@
+export const ItemCategoryType = {
+  // Weapons
+  Axe: 'Axe',
+  Bow: 'Bow',
+  Crossbow: 'Crossbow',
+  Dagger: 'Dagger',
+  Javelin: 'Javelin',
+  Mace: 'Mace',
+  Polearm: 'Polearm',
+  Scepter: 'Scepter',
+  Spear: 'Spear',
+  Stave: 'Stave',
+  Sword: 'Sword',
+  ThrowingWeapon: 'ThrowingWeapon',
+  Wand: 'Wand',
+  // Armor
+  Armor: 'Armor',
+  Belt: 'Belt',
+  Boot: 'Boot',
+  Circlet: 'Circlet',
+  Glove: 'Glove',
+  Helm: 'Helm',
+  Shield: 'Shield',
+  // Jewelry
+  Amulet: 'Amulet',
+  Charm: 'Charm',
+  Jewel: 'Jewel',
+  Ring: 'Ring',
+  // Class
+  AmazonWeapon: 'AmazonWeapon',
+  AssassinKatar: 'AssasinKatar',
+  BarbarianHelm: 'BarbarianHelm',
+  DruidPelt: 'DruidPelt',
+  NecromancerShrunkenHead: 'NecromancerShrunkenHead',
+  PaladinShield: 'PaladinShield',
+  SorceressOrb: 'SorceressOrb',
+};

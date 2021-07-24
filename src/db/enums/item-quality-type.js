@@ -1,11 +1,12 @@
+/**
+ * Values are kebab-cased to match theme definitions/paths
+ */
 export const ItemQualityType = {
-  Crafted: 'Crafted',
-  LowQuality: 'LowQuality',
-  Magic: 'Magic',
-  Normal: 'Normal',
-  Rare: 'Rare',
-  Runewords: 'Runewords',
-  Set: 'Set',
-  Superior: 'Superior',
-  Unique: 'Unique',
+  Crafted: 'crafted',
+  Magic: 'magic',
+  Normal: 'normal',
+  Rare: 'rare',
+  Runewords: 'runewords',
+  Set: 'set',
+  Unique: 'unique',
 };

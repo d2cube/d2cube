@@ -1,6 +1,8 @@
+import {RecipeType} from '../enums/index.js';
+import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import ids from '../ids/index.js';
 
-export default [
+const recipes = [
   {
     name: '3 El Runes → 1 Eld Rune',
     sources: [ids.El, ids.El, ids.El],
@@ -162,3 +164,7 @@ export default [
     target: ids.Zod,
   },
 ];
+
+export default mapRecipeProps({
+  type: RecipeType.Runes,
+})(recipes);

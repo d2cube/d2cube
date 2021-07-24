@@ -1,7 +1,13 @@
-import {ItemType, GemQualityType, PotionCategoryType} from '../enums/index.js';
+import {
+  ItemType,
+  GemQualityType,
+  PotionCategoryType,
+  RecipeType,
+} from '../enums/index.js';
+import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import ids from '../ids/index.js';
 
-export default [
+const recipes = [
   {
     name: '3 Rejuvenation Potions → 1 Full Rejuvenation Potion',
     sources: [
@@ -121,3 +127,7 @@ export default [
     target: ids.AntidotePotion,
   },
 ];
+
+export default mapRecipeProps({
+  type: RecipeType.Potions,
+})(recipes);

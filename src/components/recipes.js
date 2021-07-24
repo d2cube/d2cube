@@ -3,6 +3,7 @@ import {Layout} from 'uinix-ui';
 
 import db from '../db/index.js';
 import {getRecipes} from '../queries/index.js';
+import Item from './item.js';
 import Recipe from './recipe.js';
 
 const {RecipeType} = db.enums;
@@ -44,6 +45,11 @@ const Recipes = ({items}) => {
         </select>
       </Layout>
       <p>{recipes.length} recipes found</p>
+      <Layout wrap align="flex-end" spacing="m">
+        {items.map((item) => (
+          <Item key={item.id} item={item} />
+        ))}
+      </Layout>
       <Layout as="ul" direction="column" spacing="s">
         {recipes.map((recipe) => (
           <Recipe key={recipe.name} recipe={recipe} />

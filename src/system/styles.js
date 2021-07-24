@@ -6,6 +6,7 @@ const vendor = {
     backgroundColor: 'interface.tooltip',
   },
   '.tippy-content': {
+    color: 'text.primary',
     fontFamily: 'diablo',
     fontSize: 'm',
     padding: 's',
@@ -21,6 +22,7 @@ const global = {
   },
   body: {
     backgroundColor: 'interface.background',
+    color: 'text.primary',
     cursor: `url(${cursorSrc}), auto`,
     margin: 0,
     minHeight: '100vh',

@@ -6,8 +6,18 @@ const colors = {
     tooltip: 'rgba(0, 0, 0, 0.85)',
   },
   item: {
+    crafted: 'orange',
+    magic: '#4850b8',
+    normal: 'white',
+    rare: '#ccb67a',
     rune: '#FFA500',
-    runeword: '#A59263',
+    runewords: '#A59263',
+    set: '#00c400',
+    unique: '#908858',
+  },
+  text: {
+    primary: '#d8d8d8',
+    heading: '#e9c964',
   },
 };
 
@@ -37,7 +47,7 @@ const radii = {
 };
 
 const sizes = {
-  slot: 50,
+  slot: 40,
 };
 
 const spacings = {
