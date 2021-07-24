@@ -1,5 +1,6 @@
 const colors = {
   interface: {
+    background: '#010101',
     border: '#4d4842',
     grid: '#131015',
     tooltip: 'rgba(0, 0, 0, 0.85)',
@@ -53,6 +54,10 @@ const borders = {
   bordered: `${spacings.xxs} solid ${colors.interface.border}`,
 };
 
+const zIndices = {
+  back: '-1',
+};
+
 export default {
   borders,
   colors,
@@ -62,4 +67,5 @@ export default {
   radii,
   sizes,
   spacings,
+  zIndices,
 };

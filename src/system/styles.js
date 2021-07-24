@@ -1,3 +1,4 @@
+import cursorSrc from '../../static/assets/cursors/default.gif';
 import typography from './typography.js';
 
 const vendor = {
@@ -15,6 +16,16 @@ const vendor = {
 
 const global = {
   ...vendor,
+  '*': {
+    boxSizing: 'border-box',
+  },
+  body: {
+    backgroundColor: 'interface.background',
+    cursor: `url(${cursorSrc}), auto`,
+    margin: 0,
+    minHeight: '100vh',
+    padding: 0,
+  },
 };
 
 const rules = {
@@ -53,9 +64,26 @@ const rules = {
   },
 };
 
+const variants = {
+  layout: {
+    backdrop: {
+      bottom: 0,
+      height: '100%',
+      left: 0,
+      margin: '0 auto',
+      position: 'fixed',
+      right: 0,
+      top: 0,
+      width: '100%',
+      zIndex: 'back',
+    },
+  },
+};
+
 export default {
   global,
   typography,
+  variants,
   ...rules,
   ...vendor,
 };
