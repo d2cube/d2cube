@@ -1,9 +1,12 @@
 const colors = {
-  background: {
+  interface: {
+    border: '#4d4842',
+    grid: '#131015',
     tooltip: 'rgba(0, 0, 0, 0.85)',
   },
   item: {
     rune: '#FFA500',
+    runeword: '#A59263',
   },
 };
 
@@ -33,7 +36,7 @@ const radii = {
 };
 
 const sizes = {
-  slot: 40,
+  slot: 50,
 };
 
 const spacings = {
@@ -46,7 +49,12 @@ const spacings = {
   xxl: '128px',
 };
 
+const borders = {
+  bordered: `${spacings.xxs} solid ${colors.interface.border}`,
+};
+
 export default {
+  borders,
   colors,
   fontFamilies,
   fontSizes,

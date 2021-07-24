@@ -2,7 +2,7 @@ import React from 'react';
 
 import {useIsReady} from '../../utils/index.js';
 
-export const PageLayout = ({children, title}) => {
+const PageLayout = ({children, title}) => {
   const isReady = useIsReady();
 
   if (!isReady) {
@@ -16,3 +16,5 @@ export const PageLayout = ({children, title}) => {
     </div>
   );
 };
+
+export default PageLayout;

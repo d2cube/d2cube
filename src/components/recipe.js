@@ -1,9 +1,9 @@
 import React from 'react';
 import {Layout, Text} from 'uinix-ui';
 
-import {Item} from './item.js';
+import Item from './item.js';
 
-export const Recipe = ({recipe}) => {
+const Recipe = ({recipe}) => {
   const {name, sources, target} = recipe;
 
   return (
@@ -19,3 +19,5 @@ export const Recipe = ({recipe}) => {
     </Layout>
   );
 };
+
+export default Recipe;

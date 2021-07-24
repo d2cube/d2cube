@@ -4,11 +4,11 @@ import {Element, useStyles} from 'uinix-ui';
 import db from '../db/index.js';
 import {getItemById} from '../queries/index.js';
 import {resolveItemProps} from '../utils/index.js';
-import {ItemTooltip} from './item-tooltip.js';
+import ItemTooltip from './item-tooltip.js';
 
 const defaultVersion = db.enums.GameVersionType.D2;
 
-export const Item = ({isInactive, item, version = defaultVersion}) => {
+const Item = ({isInactive, item, version = defaultVersion}) => {
   const styles = useStyles();
 
   const id = item.placeholderId || item.id;
@@ -30,3 +30,5 @@ export const Item = ({isInactive, item, version = defaultVersion}) => {
     </ItemTooltip>
   );
 };
+
+export default Item;

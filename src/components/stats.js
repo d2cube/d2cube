@@ -1,4 +1,6 @@
 import {resolveStats, resolveTemplate} from '../utils/index.js';
 
-export const Stats = ({stats, template}) =>
+const Stats = ({stats, template}) =>
   resolveTemplate(template, resolveStats(stats));
+
+export default Stats;

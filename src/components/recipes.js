@@ -3,11 +3,11 @@ import {Layout} from 'uinix-ui';
 
 import db from '../db/index.js';
 import {getRecipes} from '../queries/index.js';
-import {Recipe} from './recipe.js';
+import Recipe from './recipe.js';
 
 const {RecipeType} = db.enums;
 
-export const Recipes = ({items}) => {
+const Recipes = ({items}) => {
   const [showAvailable, setShowAvailable] = useState(false);
   const [selectedRecipeType, setSelectedRecipeType] = useState(null);
 
@@ -52,3 +52,5 @@ export const Recipes = ({items}) => {
     </div>
   );
 };
+
+export default Recipes;

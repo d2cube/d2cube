@@ -2,7 +2,7 @@ import typography from './typography.js';
 
 const vendor = {
   '.tippy-box': {
-    backgroundColor: 'background.tooltip',
+    backgroundColor: 'interface.tooltip',
   },
   '.tippy-content': {
     fontFamily: 'diablo',

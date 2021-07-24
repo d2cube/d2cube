@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text} from 'uinix-ui';
 
-import {Tooltip} from './ui/index.js';
-import {Stats} from './stats.js';
+import Tooltip from './ui/Tooltip.js';
+import Stats from './stats.js';
 
-export const ItemTooltip = ({children, description}) => {
+const ItemTooltip = ({children, description}) => {
   const tooltip = description.map((section, i) => (
     <Text key={i} as="div">
       {section.map(({color, stats, text}, j) => (
@@ -18,3 +18,5 @@ export const ItemTooltip = ({children, description}) => {
 
   return <Tooltip tooltip={tooltip}>{children}</Tooltip>;
 };
+
+export default ItemTooltip;

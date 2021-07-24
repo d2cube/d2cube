@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-import {Cube, Item, PageLayout} from '../components/index.js';
+import Item from '../components/item.js';
+import PageLayout from '../components/ui/page-layout.js';
 import db from '../db/index.js';
 import {getItemsByType} from '../queries/index.js';
 
@@ -26,9 +27,6 @@ const Page = () => {
       {items.map((item) => (
         <Item key={item.id} item={item} />
       ))}
-      <hr />
-      <h2>Cube</h2>
-      <Cube />
     </PageLayout>
   );
 };

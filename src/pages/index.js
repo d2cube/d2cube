@@ -1,12 +1,7 @@
-import {Link} from 'gatsby';
 import React from 'react';
 
-import {PageLayout} from '../components/index.js';
+import Interface from '../components/Interface.js';
 
-const Page = () => (
-  <PageLayout title="Evil will be resurrected soon...">
-    <Link to="/explorer">Explore</Link>
-  </PageLayout>
-);
+const Page = () => <Interface />;
 
 export default Page;

@@ -1,15 +1,12 @@
 import React from 'react';
 
-import {items} from '../mocks/index.js';
-import {Item} from './item.js';
-import {Recipes} from './recipes.js';
+import Item from './item.js';
+import Grid from './ui/grid.js';
 
-export const Cube = () => (
+const Cube = ({items}) => (
   <div>
-    {items.map((item) => (
-      <Item key={item.id} item={item} />
-    ))}
-    <hr />
-    <Recipes items={items} />
+    <Grid items={items} itemComponent={Item} size={[4, 3]} />
   </div>
 );
+
+export default Cube;
