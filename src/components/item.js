@@ -10,13 +10,13 @@ const defaultVersion = db.enums.GameVersionType.D2;
 const Item = ({item: initialItem, version = defaultVersion}) => {
   const styles = useStyles();
 
-  const id = initialItem.placeholderId || initialItem.id;
+  const id = initialItem.baseId || initialItem.id;
   const item = {
     ...getItemById(id),
     ...initialItem,
   };
   const src = `../assets/images/${version}/items/${id}.webp`;
-  const description = item.placeholderDescription || item.description;
+  const description = item.baseDescription || item.description;
 
   return (
     <ItemTooltip description={description}>

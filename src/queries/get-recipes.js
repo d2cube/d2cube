@@ -3,7 +3,7 @@ import {isPlainObject} from 'uinix-fp';
 import db from '../db/index.js';
 import {getItemById} from './get-item-by-id.js';
 
-const reservedProperties = new Set(['placeholderDescription', 'placeholderId']);
+const reservedProperties = new Set(['baseDescription', 'baseId']);
 
 /**
  * Returns true and removes the item if it is found in the stack.
