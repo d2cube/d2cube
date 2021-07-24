@@ -1,7 +1,13 @@
-import {GemCategoryType, GemQualityType, PropertyType} from '../enums/index.js';
+import {
+  GemCategoryType,
+  GemQualityType,
+  ItemType,
+  PropertyType,
+} from '../enums/index.js';
+import {mapItemProps} from '../utils/map-item-props.js';
 import ids from '../ids/index.js';
 
-export default {
+const items = {
   [ids.ChippedRuby]: {
     id: ids.ChippedRuby,
     name: 'Chipped Ruby',
@@ -798,3 +804,18 @@ export default {
     },
   },
 };
+
+export default mapItemProps({
+  size: [1, 1],
+  type: ItemType.Gem,
+  mapDescription: (item) => [
+    [{text: item.name}, {text: 'Can be inserted into socked items'}],
+    [
+      {text: 'Weapons: {{}}', stats: item.stats.weapons},
+      {text: 'Armor: {{}}', stats: item.stats.armor},
+      {text: 'Helms: {{}}', stats: item.stats.armor},
+      {text: 'Shields: {{}}', stats: item.stats.shields},
+    ],
+    [{text: `Required Level: ${item.clvl || 'None'}`}],
+  ],
+})(items);

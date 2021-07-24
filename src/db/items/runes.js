@@ -1,7 +1,8 @@
-import {PropertyType} from '../enums/index.js';
+import {ItemType, PropertyType} from '../enums/index.js';
+import {mapItemProps} from '../utils/map-item-props.js';
 import ids from '../ids/index.js';
 
-export default {
+const items = {
   [ids.El]: {
     id: ids.El,
     name: 'El Rune',
@@ -660,3 +661,21 @@ export default {
     },
   },
 };
+
+export default mapItemProps({
+  size: [1, 1],
+  type: ItemType.Rune,
+  mapDescription: (item) => [
+    [
+      {text: item.name, color: 'item.rune'},
+      {text: 'Can be inserted into socked items'},
+    ],
+    [
+      {text: 'Weapons: {{}}', stats: item.stats.weapons},
+      {text: 'Armor: {{}}', stats: item.stats.armor},
+      {text: 'Helms: {{}}', stats: item.stats.armor},
+      {text: 'Shields: {{}}', stats: item.stats.shields},
+    ],
+    [{text: `Required Level: ${item.clvl || 'None'}`}],
+  ],
+})(items);

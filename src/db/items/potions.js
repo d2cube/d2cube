@@ -1,7 +1,8 @@
-import {PotionCategoryType} from '../enums/index.js';
+import {ItemType, PotionCategoryType} from '../enums/index.js';
+import {mapItemProps} from '../utils/map-item-props.js';
 import ids from '../ids/index.js';
 
-export default {
+const items = {
   [ids.MinorHealingPotion]: {
     id: ids.MinorHealingPotion,
     category: PotionCategoryType.Health,
@@ -114,3 +115,9 @@ export default {
     clvl: 24,
   },
 };
+
+export default mapItemProps({
+  size: [1, 1],
+  type: ItemType.Potion,
+  mapDescription: (item) => [[{text: item.name}]],
+})(items);

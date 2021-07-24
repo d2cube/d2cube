@@ -1,6 +1,5 @@
-import React from 'react';
-
-import {useIsReady} from '../../utils/index.js';
+import {navigate} from 'gatsby';
+import React, {useEffect, useState} from 'react';
 
 const PageLayout = ({children, title}) => {
   const isReady = useIsReady();
@@ -15,6 +14,18 @@ const PageLayout = ({children, title}) => {
       {children}
     </div>
   );
+};
+
+// Hack around gatsby/fela FOUC
+export const useIsReady = () => {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    navigate(window.location.pathname, {replace: true});
+    setIsReady(true);
+  }, []);
+
+  return isReady;
 };
 
 export default PageLayout;

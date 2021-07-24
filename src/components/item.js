@@ -3,29 +3,29 @@ import {Element, useStyles} from 'uinix-ui';
 
 import db from '../db/index.js';
 import {getItemById} from '../queries/index.js';
-import {resolveItemProps} from '../utils/index.js';
 import ItemTooltip from './item-tooltip.js';
 
 const defaultVersion = db.enums.GameVersionType.D2;
 
-const Item = ({isInactive, item, version = defaultVersion}) => {
+const Item = ({item: initialItem, version = defaultVersion}) => {
   const styles = useStyles();
 
-  const id = item.placeholderId || item.id;
-  const sourceItem = getItemById(id);
-
-  const resolvedItem = {...sourceItem, ...item};
-  const {description, size} = resolveItemProps(resolvedItem);
+  const id = initialItem.placeholderId || initialItem.id;
+  const item = {
+    ...getItemById(id),
+    ...initialItem,
+  };
   const src = `../assets/images/${version}/items/${id}.webp`;
+  const description = item.placeholderDescription || item.description;
 
   return (
-    <ItemTooltip description={item.placeholderDescription || description}>
+    <ItemTooltip description={description}>
       <Element
         as="img"
         alt={id}
         src={src}
-        styleProps={{isInactive, size}}
-        styles={[styles.itemSize, styles.interactive]}
+        styleProps={{item}}
+        styles={[styles.item, styles.interactive]}
       />
     </ItemTooltip>
   );
