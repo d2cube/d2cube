@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Interface from '../components/Interface.js';
+import Interface from '../components/interface.js';
 import PageLayout from '../components/ui/page-layout.js';
 
 const Page = () => (

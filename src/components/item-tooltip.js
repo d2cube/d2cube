@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text} from 'uinix-ui';
 
-import Tooltip from './ui/Tooltip.js';
+import Tooltip from './ui/tooltip.js';
 import Stats from './stats.js';
 
 const ItemTooltip = ({children, description}) => {
