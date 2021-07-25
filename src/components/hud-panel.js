@@ -12,10 +12,18 @@ const HudPanel = ({player}) => (
     <Experience experience={player.experience} />
     <Layout align="center" spacing="xs">
       <Grid size={[1, 4]}>
-        <BrandIcon icon="help" tooltip="dsdsdf" />
+        <BrandIcon icon="nav.home" to="/" tooltip="Home" />
+        <BrandIcon icon="nav.items" to="/items" tooltip="Items" />
+        <BrandIcon icon="nav.about" to="/about" tooltip="About" />
+        <BrandIcon
+          icon="nav.github"
+          href="https://github.com/chrisrzhou/d2cube"
+          target="_blank"
+          tooltip="Github"
+        />
       </Grid>
       <BrandIcon icon="interface.skill" size="icon.l" tooltip="Coming soon!" />
-      <BrandIcon icon="interface.game" size="icon.l" tooltip="Coming soon!" />
+      <BrandIcon icon="interface.add" size="icon.l" tooltip="Coming soon!" />
       <BrandIcon icon="interface.skill" size="icon.l" tooltip="Coming soon!" />
       <ItemGrid items={beltItems} size={[1, 4]} />
     </Layout>

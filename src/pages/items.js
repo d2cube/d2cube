@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
 import Item from '../components/item.js';
+import PageLayout from '../components/page-layout.js';
 import Recipes from '../components/recipes.js';
-import PageLayout from '../components/ui/page-layout.js';
 import db from '../db/index.js';
 import {inventoryItems} from '../mocks/index.js';
 import {getItemsByType} from '../queries/index.js';

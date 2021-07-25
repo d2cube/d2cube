@@ -1,6 +1,8 @@
 import buttonSrc from '../../../static/assets/images/ui/button.jpg';
 import cursorSrc from '../../../static/assets/images/ui/cursor.gif';
 
+const cursor = `url(${cursorSrc}), auto`;
+
 const vendor = {
   '.tippy-box': {
     backgroundColor: 'interface.popover',
@@ -23,10 +25,16 @@ export default {
   body: {
     backgroundColor: 'interface.background',
     color: 'text.primary',
-    cursor: `url(${cursorSrc}), auto`,
+    cursor,
     margin: 0,
     minHeight: '100vh',
     padding: 0,
+  },
+  a: {
+    cursor,
+  },
+  'a:hover': {
+    opacity: 'hover',
   },
   button: {
     // Based on button.jpg sprite
@@ -34,6 +42,7 @@ export default {
     backgroundSize: '100% 400%',
     border: 'none',
     color: 'brand.primary',
+    cursor,
     flex: 'none',
     fontFamily: 'diablo',
     fontSize: 'l',

@@ -1,10 +1,11 @@
-import {navigate, Link} from 'gatsby';
+import {navigate} from 'gatsby';
 import React, {useEffect, useState} from 'react';
 import {Layout} from 'uinix-ui';
 
-import Backdrop from './backdrop.js';
-import Splash from './splash.js';
-import Soundtrack from './soundtrack.js';
+import Hud from './hud.js';
+import Backdrop from './ui/backdrop.js';
+import Splash from './ui/splash.js';
+import Soundtrack from './ui/soundtrack.js';
 
 let cachedEntered = false;
 
@@ -26,14 +27,13 @@ const PageLayout = ({children, title}) => {
       <Backdrop />
       <Soundtrack isEnabled={entered} />
       {entered ? (
-        <Layout as="main" direction="column" flex="auto" px="l" spacing="l">
-          <Layout as="ul" spacing="l">
-            <Link to="/">Home</Link>
-            <Link to="/items">Items</Link>
+        <>
+          <Layout as="main" direction="column" flex="auto" px="l" spacing="l">
+            {title && <h2>{title}</h2>}
+            {children}
           </Layout>
-          {title && <h2>{title}</h2>}
-          {children}
-        </Layout>
+          <Hud />
+        </>
       ) : (
         <Splash onEnter={handleEnter} />
       )}

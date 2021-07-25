@@ -1,8 +1,11 @@
+import styles from './styles/index.js';
+
 const elementShorthandPropsMapping = {
   // Visual
   backgroundColor: ['bg'],
   border: ['b'],
   color: ['color'],
+  display: ['display'],
   opacity: ['opacity'],
   // Margin
   margin: ['m'],
@@ -28,17 +31,7 @@ const elementShorthandPropsMapping = {
   zIndex: ['z'],
 };
 
-const elementStyles = [
-  ({onClick}) =>
-    onClick
-      ? {
-          cursor: 'pointer',
-          ':hover': {
-            opacity: 'hover',
-          },
-        }
-      : null,
-];
+const elementStyles = [({onClick}) => (onClick ? styles.interactive : null)];
 
 export default {
   elementShorthandPropsMapping,

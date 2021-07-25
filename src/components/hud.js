@@ -9,7 +9,14 @@ const Hud = () => {
   const {life, mana} = player;
 
   return (
-    <Layout align="center" mx="auto" spacing="m">
+    <Layout
+      as="footer"
+      align="center"
+      bottom={0}
+      mx="auto"
+      position="sticky"
+      spacing="m"
+    >
       <Globe type="life" max={life.max} value={life.value} />
       <HudPanel player={player} />
       <Globe type="mana" max={mana.max} value={mana.value} />

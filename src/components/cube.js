@@ -1,5 +1,5 @@
 import React from 'react';
-import {Layout} from 'uinix-ui';
+import {Icon, Layout} from 'uinix-ui';
 
 import ItemGrid from './item-grid.js';
 import BrandIcon from './ui/brand-icon.js';
@@ -14,11 +14,23 @@ const Cube = ({items}) => (
   </Frame>
 );
 
-const help = `Use the Horadric Cube to transmute items into new items by clicking on the "Transmute" button.
-
-View or filter for available recipes by clicking on the "Recipes" button.
-
-Transfer items between the Cube and your Inventory as you would in the game.
-`;
+const help = (
+  <>
+    <p>
+      Use the Horadric Cube to transmute items into new items by clicking on the
+      &ldquo;Transmute&rdquo;{' '}
+      <Icon display="inline" icon="interface.transmute" size="icon.s" /> button.
+    </p>
+    <p>
+      View or filter for available recipes by clicking on the
+      &ldquo;Recipes&rdquo;{' '}
+      <Icon display="inline" icon="interface.transmute" size="icon.s" /> button.
+    </p>
+    <p>
+      Transfer items between the Cube and your Inventory as you would in the
+      game.
+    </p>
+  </>
+);
 
 export default Cube;

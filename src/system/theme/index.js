@@ -69,7 +69,7 @@ const keyframes = {
 
 const opacities = {
   inactive: '0.3',
-  hover: '0.9',
+  hover: '0.8',
 };
 
 const radii = {

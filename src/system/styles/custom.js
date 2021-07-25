@@ -1,6 +1,18 @@
+const centered = {
+  alignItems: 'center',
+  display: 'flex',
+  justifyContent: 'center',
+};
+
 const fadeIn = {
   animation: 'easeInOut',
   animationName: 'fade.in',
+};
+
+const interactive = {
+  ':hover': {
+    opacity: 'hover',
+  },
 };
 
 const globe = ({theme, type}) => {
@@ -36,6 +48,7 @@ const grid = ({size, theme}) => {
 const item = ({theme, isInactive, item}) => {
   const {position = [], size = []} = item;
   return {
+    ...interactive,
     gridRowStart: position[0],
     gridRowEnd: position[0] + size[0],
     gridColumnStart: position[1],
@@ -45,9 +58,6 @@ const item = ({theme, isInactive, item}) => {
     padding: 's',
     height: size[0] * theme.sizes.slot,
     width: size[1] * theme.sizes.slot,
-    ':hover': {
-      opacity: 'hover',
-    },
   };
 };
 
@@ -62,9 +72,11 @@ const progress = ({color, percent}) => ({
 });
 
 export default {
+  centered,
   fadeIn,
   globe,
   grid,
+  interactive,
   item,
   progress,
 };
