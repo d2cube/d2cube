@@ -34,7 +34,7 @@ const Soundtrack = ({isEnabled}) => {
           color="brand.primary"
           position="fixed"
           right="m"
-          size="icon"
+          size="icon.m"
           title={isPlaying ? 'Pause' : 'Play'}
           top="m"
           onClick={handleControls}

@@ -82,7 +82,11 @@ const sizes = {
   bar: 12,
   frame: slotSize * 12,
   globe: 160,
-  icon: 50,
+  icon: {
+    s: 20,
+    m: 40,
+    l: 60,
+  },
   slot: slotSize,
 };
 

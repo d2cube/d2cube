@@ -1,7 +1,9 @@
 import React from 'react';
 import {Layout, Text} from 'uinix-ui';
 
-const Frame = ({children, title}) => (
+import Help from './help.js';
+
+const Frame = ({children, help, title}) => (
   <Layout
     as="section"
     align="center"
@@ -9,9 +11,12 @@ const Frame = ({children, title}) => (
     spacing="l"
     variant="frame"
   >
-    <Text as="h2" variant="brand">
-      {title}
-    </Text>
+    <Layout align="center" spacing="m">
+      <Text as="h2" variant="brand">
+        {title}
+      </Text>
+      <Help text={help} />
+    </Layout>
     {children}
   </Layout>
 );

@@ -28,8 +28,8 @@ const button = {
   },
   icon: {
     ...defaultButton,
-    height: 'icon',
-    width: 'icon',
+    height: 'icon.l',
+    width: 'icon.l',
   },
 };
 
