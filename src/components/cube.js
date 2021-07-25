@@ -11,7 +11,7 @@ const Cube = ({items}) => (
       <ItemGrid items={items} size={[4, 3]} />
       <ButtonIcon
         alt="Transmute"
-        src="ui/transmute.png"
+        src="transmute.png"
         onClick={() => console.log('to be implemented')}
       />
     </Layout>

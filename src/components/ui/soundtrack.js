@@ -32,9 +32,11 @@ const Soundtrack = ({isEnabled}) => {
         <Icon
           icon={isPlaying ? 'pause' : 'play'}
           color="brand.primary"
+          position="fixed"
+          right="m"
           size="icon"
           title={isPlaying ? 'Pause' : 'Play'}
-          variant="controls"
+          top="m"
           onClick={handleControls}
         />
       )}

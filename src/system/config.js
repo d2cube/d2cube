@@ -1,6 +1,9 @@
 const elementShorthandPropsMapping = {
+  // Visual
   backgroundColor: ['bg'],
+  border: ['b'],
   color: ['color'],
+  opacity: ['opacity'],
   // Margin
   margin: ['m'],
   marginBottom: ['mb', 'my', 'm'],
@@ -13,6 +16,16 @@ const elementShorthandPropsMapping = {
   paddingLeft: ['pl', 'px', 'p'],
   paddingRight: ['pr', 'px', 'p'],
   paddingTop: ['pt', 'py', 'p'],
+  // Position
+  position: ['position'],
+  bottom: ['bottom'],
+  left: ['left'],
+  right: ['right'],
+  top: ['top'],
+  // Dimension
+  height: ['h'],
+  width: ['w'],
+  zIndex: ['z'],
 };
 
 const elementStyles = [

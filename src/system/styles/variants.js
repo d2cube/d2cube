@@ -2,11 +2,13 @@ import buttonSrc from '../../../static/assets/images/ui/button.jpg';
 import frameSrc from '../../../static/assets/images/ui/frame.png';
 import stoneSrc from '../../../static/assets/images/ui/stone.jpg';
 
+// Variables
 const defaultButton = {
   // Based on button.jpg sprite
   backgroundImage: `url(${buttonSrc})`,
   backgroundSize: '100% 400%',
   border: 'none',
+  flex: 'none',
   fontFamily: 'diablo',
   margin: 0,
   outline: 'none',
@@ -31,30 +33,12 @@ const button = {
   },
 };
 
-const backdrop = {
-  bottom: 0,
-  left: 0,
-  margin: '0 auto',
-  opacity: 'inactive',
-  position: 'fixed',
-  right: 0,
-  top: 0,
-  height: '100%',
-  width: '100%',
-  zIndex: 'back',
-};
-
-const controls = {
-  position: 'fixed',
-  right: 'm',
-  top: 'm',
-};
-
 const frame = {
   backgroundImage: `url(${stoneSrc})`,
   borderStyle: 'solid',
   borderWidth: 'frame',
   borderImage: `url(${frameSrc}) 140 repeat`,
+  width: 'frame',
 };
 
 const fullscreen = {
@@ -72,10 +56,8 @@ const splash = {
 };
 
 export default {
-  backdrop,
   button,
   fullscreen,
-  controls,
   frame,
   splash,
 };

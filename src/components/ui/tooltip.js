@@ -28,6 +28,7 @@ const Tooltip = ({children, tooltip}) => {
         <Tippy
           arrow={false}
           content={tooltip}
+          offset={0}
           reference={childRef}
           maxWidth="none"
         />

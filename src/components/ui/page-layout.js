@@ -23,9 +23,10 @@ const PageLayout = ({children, title}) => {
 
   return (
     <Layout direction="column" spacing="l" variant="fullscreen">
+      <Backdrop />
       <Soundtrack isEnabled={entered} />
       {entered ? (
-        <Layout as="main" direction="column" flex="auto" p="l" spacing="l">
+        <Layout as="main" direction="column" flex="auto" px="l" spacing="l">
           <Layout as="ul" spacing="l">
             <Link to="/">Home</Link>
             <Link to="/items">Items</Link>
@@ -36,7 +37,6 @@ const PageLayout = ({children, title}) => {
       ) : (
         <Splash onEnter={handleEnter} />
       )}
-      <Backdrop />
     </Layout>
   );
 };

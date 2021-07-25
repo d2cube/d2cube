@@ -27,7 +27,7 @@ const Item = ({isInactive, item: initialItem, version = defaultVersion}) => {
         alt={id}
         src={src}
         styleProps={{isInactive, item}}
-        styles={[styles.item, styles.interactive]}
+        styles={styles.item}
       />
     </ItemTooltip>
   );

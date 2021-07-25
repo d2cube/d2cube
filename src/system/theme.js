@@ -1,4 +1,6 @@
+// Variables
 const brandColor = '#a58546';
+const slotSize = 50;
 
 const animations = {
   easeInOut: '1s ease-in-out',
@@ -24,8 +26,14 @@ const colors = {
     set: '#00c400',
     unique: '#908858',
   },
+  player: {
+    life: '#a61313',
+    mana: '#2e329b',
+    stamina: '#ecba46',
+    xp: '#c0b98f',
+  },
   text: {
-    primary: '#d8d8d8',
+    primary: '#fdfad9',
     heading: brandColor,
   },
 };
@@ -71,16 +79,21 @@ const radii = {
 };
 
 const sizes = {
-  slot: 40,
+  bar: 12,
+  frame: slotSize * 12,
+  globe: 160,
   icon: 50,
+  slot: slotSize,
 };
 
 const spacings = {
+  xxs: '2px',
   xs: '4px',
   s: '8px',
   m: '16px',
   l: '32px',
   xl: '64px',
+  xxl: '128px',
 };
 
 const borderWidths = {
@@ -94,6 +107,7 @@ const borders = {
 
 const zIndices = {
   back: '-1',
+  forward: '1',
 };
 
 export default {
