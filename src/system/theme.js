@@ -1,9 +1,18 @@
+const brandColor = '#a58546';
+
+const animations = {
+  easeInOut: '1s ease-in-out',
+};
+
 const colors = {
+  brand: {
+    primary: brandColor,
+  },
   interface: {
     background: '#010101',
     border: '#4d4842',
     grid: '#131015',
-    tooltip: 'rgba(0, 0, 0, 0.85)',
+    popover: 'rgba(0, 0, 0, 0.9)',
   },
   item: {
     crafted: 'orange',
@@ -17,7 +26,7 @@ const colors = {
   },
   text: {
     primary: '#d8d8d8',
-    heading: '#e9c964',
+    heading: brandColor,
   },
 };
 
@@ -35,9 +44,24 @@ const fontSizes = {
   xxl: '2rem',
 };
 
+const keyframes = {
+  fade: {
+    in: {
+      '0%': {
+        filter: 'blur(10px)',
+        opacity: 0,
+      },
+      '100%': {
+        filter: 'blur(0px)',
+        opacity: '1',
+      },
+    },
+  },
+};
+
 const opacities = {
   inactive: '0.3',
-  hover: '0.8',
+  hover: '0.9',
 };
 
 const radii = {
@@ -69,10 +93,12 @@ const zIndices = {
 };
 
 export default {
+  animations,
   borders,
   colors,
   fontFamilies,
   fontSizes,
+  keyframes,
   opacities,
   radii,
   sizes,

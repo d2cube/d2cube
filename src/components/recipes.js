@@ -5,6 +5,7 @@ import db from '../db/index.js';
 import {getRecipes} from '../queries/index.js';
 import Item from './item.js';
 import Recipe from './recipe.js';
+import Button from './ui/button.js';
 
 const {RecipeType} = db.enums;
 
@@ -32,9 +33,10 @@ const Recipes = ({items}) => {
   return (
     <div>
       <Layout align="center" spacing="m">
-        <button type="button" onClick={() => setShowAvailable(!showAvailable)}>
-          {showAvailable ? 'Show all' : 'Show available'}
-        </button>
+        <Button
+          text={showAvailable ? 'Show all' : 'Show available'}
+          onClick={() => setShowAvailable(!showAvailable)}
+        />
         <select value={selectedRecipeType} onChange={handleUpdateRecipeType}>
           <option value={null} />
           {Object.values(RecipeType).map((recipeType) => (
