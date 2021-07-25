@@ -5,8 +5,8 @@ const fadeIn = {
 
 const grid = ({size, theme}) => {
   const slotSize = theme.sizes.slot;
-  const borderWidth = theme.spacings.xxs;
   const borderColor = theme.colors.interface.border;
+  const borderWidth = theme.borderWidths.border;
   return {
     backgroundColor: 'interface.grid',
     backgroundImage: `linear-gradient(to right, ${borderColor} ${borderWidth}, transparent ${borderWidth}),
@@ -15,8 +15,10 @@ const grid = ({size, theme}) => {
     display: 'grid',
     gridTemplateColumns: `repeat(${size[1]}, ${slotSize}px)`,
     gridTemplateRows: `repeat(${size[0]}, ${slotSize}px)`,
+    height: 'fit-content',
     paddingBottom: borderWidth,
     paddingRight: borderWidth,
+    width: 'fit-content',
   };
 };
 

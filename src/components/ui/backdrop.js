@@ -4,7 +4,7 @@ import {Element} from 'uinix-ui';
 import videoSrc from '../../../static/assets/videos/d2r.webm';
 
 const Backdrop = () => (
-  <Element autoPlay loop muted as="video" variant="layout.backdrop">
+  <Element autoPlay loop muted as="video" variant="backdrop">
     <source type="video/webm" src={videoSrc} />
   </Element>
 );

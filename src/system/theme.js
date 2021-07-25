@@ -75,17 +75,20 @@ const sizes = {
 };
 
 const spacings = {
-  xxs: '2px',
   xs: '4px',
   s: '8px',
   m: '16px',
   l: '32px',
   xl: '64px',
-  xxl: '128px',
+};
+
+const borderWidths = {
+  border: '2px',
+  frame: '40px',
 };
 
 const borders = {
-  bordered: `${spacings.xxs} solid ${colors.interface.border}`,
+  bordered: `${borderWidths.border} solid ${colors.interface.border}`,
 };
 
 const zIndices = {
@@ -95,6 +98,7 @@ const zIndices = {
 export default {
   animations,
   borders,
+  borderWidths,
   colors,
   fontFamilies,
   fontSizes,

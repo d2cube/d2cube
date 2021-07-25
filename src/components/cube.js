@@ -1,11 +1,12 @@
 import React from 'react';
 
 import ItemGrid from './item-grid.js';
+import Frame from './ui/frame.js';
 
 const Cube = ({items}) => (
-  <div>
+  <Frame title="Horadric Cube">
     <ItemGrid items={items} size={[4, 3]} />
-  </div>
+  </Frame>
 );
 
 export default Cube;

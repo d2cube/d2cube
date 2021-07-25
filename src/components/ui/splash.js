@@ -7,7 +7,7 @@ const Splash = ({onEnter}) => {
   const styles = useStyles();
 
   return (
-    <Layout align="center" justify="center" variant="layout.splash">
+    <Layout align="center" justify="center" variant="splash">
       <Layout
         align="center"
         direction="column"

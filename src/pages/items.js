@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Layout} from 'uinix-ui';
 
 import Item from '../components/item.js';
 import Recipes from '../components/recipes.js';
@@ -18,20 +19,22 @@ const Page = () => {
 
   return (
     <PageLayout title="Items">
-      <select value={selectedItemType} onChange={handleUpdateItemType}>
-        {Object.values(ItemType).map((type) => (
-          <option key={type} value={type}>
-            {type}
-          </option>
-        ))}
-      </select>
-      <hr />
-      {items.map((item) => (
-        <Item key={item.id} item={item} />
-      ))}
-      <hr />
-      <h2>Recipes</h2>
-      <Recipes items={inventoryItems} />
+      <Layout direction="column" spacing="l">
+        <select value={selectedItemType} onChange={handleUpdateItemType}>
+          {Object.values(ItemType).map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
+        <Layout wrap spacing="m">
+          {items.map((item) => (
+            <Item key={item.id} item={item} />
+          ))}
+        </Layout>
+        <h3>Recipes</h3>
+        <Recipes items={inventoryItems} />
+      </Layout>
     </PageLayout>
   );
 };

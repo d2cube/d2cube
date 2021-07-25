@@ -33,7 +33,7 @@ const Soundtrack = ({isEnabled}) => {
         color="brand.primary"
         size="slot"
         title={isPlaying ? 'Pause' : 'Play'}
-        variant="layout.controls"
+        variant="controls"
         onClick={handleControls}
       />
       <audio ref={audioRef} hidden loop src={tristramSrc} />

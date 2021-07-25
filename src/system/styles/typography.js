@@ -16,12 +16,15 @@ const global = {
   },
   h1: {
     fontFamily: 'diablo',
+    fontSize: 'xxl',
   },
   h2: {
     fontFamily: 'diablo',
+    fontSize: 'xl',
   },
   h3: {
     fontFamily: 'diablo',
+    fontSize: 'l',
   },
   h4: {
     fontFamily: 'diablo',
@@ -37,7 +40,6 @@ const global = {
 const variants = {
   brand: {
     color: 'brand.primary',
-    fontSize: 'xxl',
     margin: 0,
   },
 };

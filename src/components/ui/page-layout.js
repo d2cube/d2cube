@@ -1,6 +1,6 @@
 import {navigate, Link} from 'gatsby';
 import React, {useEffect, useState} from 'react';
-import {Element, useStyles} from 'uinix-ui';
+import {Layout} from 'uinix-ui';
 
 import Backdrop from './backdrop.js';
 import Splash from './splash.js';
@@ -11,7 +11,6 @@ let cachedEntered = false;
 const PageLayout = ({children, title}) => {
   const isReady = useIsReady();
   const [entered, setEntered] = useState(cachedEntered);
-  const styles = useStyles();
 
   if (!isReady) {
     return null;
@@ -22,21 +21,23 @@ const PageLayout = ({children, title}) => {
     setEntered(cachedEntered);
   };
 
-  const contents = (
-    <Element styles={styles.fadeIn}>
-      <Link to="/">Home</Link>
-      <Link to="/items">Items</Link>
-      <h2>{title}</h2>
-      {children}
-    </Element>
-  );
-
   return (
-    <div>
+    <Layout direction="column" spacing="l" variant="fullscreen">
       <Soundtrack isEnabled={entered} />
-      {entered ? contents : <Splash onEnter={handleEnter} />}
+      {entered ? (
+        <Layout as="main" direction="column" flex="auto" p="l" spacing="l">
+          <Layout as="ul" spacing="l">
+            <Link to="/">Home</Link>
+            <Link to="/items">Items</Link>
+          </Layout>
+          {title && <h2>{title}</h2>}
+          {children}
+        </Layout>
+      ) : (
+        <Splash onEnter={handleEnter} />
+      )}
       <Backdrop />
-    </div>
+    </Layout>
   );
 };
 
