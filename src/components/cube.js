@@ -2,14 +2,14 @@ import React from 'react';
 import {Layout} from 'uinix-ui';
 
 import ItemGrid from './item-grid.js';
-import ButtonIcon from './ui/button-icon.js';
+import BrandIcon from './ui/brand-icon.js';
 import Frame from './ui/frame.js';
 
 const Cube = ({items}) => (
   <Frame title="Horadric Cube" help={help}>
     <Layout align="center" direction="column" spacing="s">
       <ItemGrid items={items} size={[4, 3]} />
-      <ButtonIcon alt="Transmute" src="transmute.png" />
+      <BrandIcon icon="interface.transmute" size="icon.l" tooltip="Transmute" />
     </Layout>
   </Frame>
 );

@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {Icon} from 'uinix-ui';
 
 import src from '../../../static/assets/audio/intro.mp3';
+import BrandIcon from './brand-icon.js';
 
 const Soundtrack = ({isEnabled}) => {
   const audioRef = useRef();
@@ -29,13 +29,11 @@ const Soundtrack = ({isEnabled}) => {
   return (
     <>
       {isEnabled && (
-        <Icon
+        <BrandIcon
           icon={isPlaying ? 'pause' : 'play'}
-          color="brand.primary"
           position="fixed"
           right="m"
-          size="icon.m"
-          title={isPlaying ? 'Pause' : 'Play'}
+          tooltip={`${isPlaying ? 'Pause' : 'Play'} soundtrack`}
           top="m"
           onClick={handleControls}
         />

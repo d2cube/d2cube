@@ -14,6 +14,6 @@ const help = `Equip/unequip, and transfer items between your Inventory and Cube 
 Right click on an item to destroy it.
 
 Search and add new items to your inventory by clicking on the "Add" button.
-`
+`;
 
 export default Inventory;

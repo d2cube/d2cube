@@ -1,12 +1,7 @@
 import React from 'react';
-import {Icon} from 'uinix-ui';
 
-import Tooltip from './tooltip.js';
+import BrandIcon from './brand-icon.js';
 
-const Help = ({text}) => (
-  <Tooltip isReadable tooltip={text}>
-    <Icon color="brand.primary" icon="help" size="icon.s" />
-  </Tooltip>
-);
+const Help = ({text}) => <BrandIcon icon="help" size="icon.s" tooltip={text} />;
 
 export default Help;
