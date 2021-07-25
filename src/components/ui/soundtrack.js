@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Icon} from 'uinix-ui';
 
-import tristramSrc from '../../../static/assets/audio/tristram.mp3';
+import src from '../../../static/assets/audio/intro.mp3';
 
 const Soundtrack = ({isEnabled}) => {
   const audioRef = useRef();
@@ -36,7 +36,7 @@ const Soundtrack = ({isEnabled}) => {
         variant="controls"
         onClick={handleControls}
       />
-      <audio ref={audioRef} hidden loop src={tristramSrc} />
+      <audio ref={audioRef} hidden loop src={src} />
     </>
   );
 };
