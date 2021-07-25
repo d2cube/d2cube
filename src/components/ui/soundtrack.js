@@ -28,14 +28,16 @@ const Soundtrack = ({isEnabled}) => {
 
   return (
     <>
-      <Icon
-        icon={isPlaying ? 'pause' : 'play'}
-        color="brand.primary"
-        size="slot"
-        title={isPlaying ? 'Pause' : 'Play'}
-        variant="controls"
-        onClick={handleControls}
-      />
+      {isEnabled && (
+        <Icon
+          icon={isPlaying ? 'pause' : 'play'}
+          color="brand.primary"
+          size="icon"
+          title={isPlaying ? 'Pause' : 'Play'}
+          variant="controls"
+          onClick={handleControls}
+        />
+      )}
       <audio ref={audioRef} hidden loop src={src} />
     </>
   );

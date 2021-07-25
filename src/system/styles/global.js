@@ -1,4 +1,3 @@
-import buttonSrc from '../../../static/assets/images/ui/button.jpg';
 import cursorSrc from '../../../static/assets/images/ui/cursor.gif';
 
 const vendor = {
@@ -27,19 +26,5 @@ export default {
     margin: 0,
     minHeight: '100vh',
     padding: 0,
-  },
-  button: {
-    // Based on button.jpg sprite
-    backgroundImage: `url(${buttonSrc})`,
-    backgroundSize: '100% 400%',
-    border: 'none',
-    color: 'brand.primary',
-    fontFamily: 'diablo',
-    fontSize: 'l',
-    outline: 'none',
-    paddingBottom: 's',
-    paddingLeft: 'xl',
-    paddingRight: 'xl',
-    paddingTop: 's',
   },
 };

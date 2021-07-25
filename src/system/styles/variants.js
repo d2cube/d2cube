@@ -1,5 +1,35 @@
+import buttonSrc from '../../../static/assets/images/ui/button.jpg';
 import frameSrc from '../../../static/assets/images/ui/frame.png';
 import stoneSrc from '../../../static/assets/images/ui/stone.jpg';
+
+const defaultButton = {
+  // Based on button.jpg sprite
+  backgroundImage: `url(${buttonSrc})`,
+  backgroundSize: '100% 400%',
+  border: 'none',
+  fontFamily: 'diablo',
+  margin: 0,
+  outline: 'none',
+  padding: 0,
+};
+
+const button = {
+  primary: {
+    ...defaultButton,
+    color: 'brand.primary',
+    fontFamily: 'diablo',
+    fontSize: 'l',
+    paddingBottom: 's',
+    paddingLeft: 'xl',
+    paddingRight: 'xl',
+    paddingTop: 's',
+  },
+  icon: {
+    ...defaultButton,
+    height: 'icon',
+    width: 'icon',
+  },
+};
 
 const backdrop = {
   bottom: 0,
@@ -43,6 +73,7 @@ const splash = {
 
 export default {
   backdrop,
+  button,
   fullscreen,
   controls,
   frame,

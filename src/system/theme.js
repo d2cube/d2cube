@@ -72,6 +72,7 @@ const radii = {
 
 const sizes = {
   slot: 40,
+  icon: 50,
 };
 
 const spacings = {
