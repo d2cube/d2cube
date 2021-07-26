@@ -1,16 +1,16 @@
 import {filter} from 'uinix-fp';
 
 export const mapItemName = (item) => {
-  const {name, quality, prefix, suffix, tier} = item;
+  const {name, prefix, rarity, suffix, tier} = item;
 
   const itemName = filter()([
-    prefix || quality,
+    prefix || rarity,
     name,
     suffix,
     Array.from({length: tier}).join('+'),
   ]).join(' ');
 
-  const color = `item.${quality}`;
+  const color = `item.${rarity}`;
 
   return {text: itemName, color};
 };

@@ -1,4 +1,4 @@
-import {ItemQualityType, ItemType} from '../enums/index.js';
+import {ItemRarityType, ItemType} from '../enums/index.js';
 import {mapItems} from '../utils/map-items.js';
 import ids from '../ids/index.js';
 
@@ -6,13 +6,13 @@ const items = {
   [ids.Arrows]: {
     id: ids.Arrows,
     name: 'Arrows',
-    quality: ItemQualityType.Normal,
+    rarity: ItemRarityType.Normal,
     max: 350,
   },
   [ids.Bolts]: {
     id: ids.Bolts,
     name: 'Bolts',
-    quality: ItemQualityType.Normal,
+    rarity: ItemRarityType.Normal,
     max: 250,
   },
 };

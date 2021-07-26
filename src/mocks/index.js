@@ -1,7 +1,7 @@
 import db from '../db/index.js';
 import {getItemById} from '../queries/index.js';
 
-const {ItemQualityType} = db.enums;
+const {ItemRarityType} = db.enums;
 
 export const cubeItems = [
   {
@@ -45,27 +45,27 @@ export const inventoryItems = [
   {
     id: 'Ring',
     position: [3, 6],
-    quality: ItemQualityType.Magic,
+    rarity: ItemRarityType.Magic,
   },
   {
     id: 'Ring',
     position: [3, 8],
-    quality: ItemQualityType.Magic,
+    rarity: ItemRarityType.Magic,
   },
   {
     id: 'Ring',
     position: [3, 7],
-    quality: ItemQualityType.Crafted,
+    rarity: ItemRarityType.Crafted,
   },
   {
     id: 'Amulet',
     position: [4, 7],
-    quality: ItemQualityType.Magic,
+    rarity: ItemRarityType.Magic,
   },
   {
     id: 'Amulet',
     position: [4, 9],
-    quality: ItemQualityType.Rare,
+    rarity: ItemRarityType.Rare,
   },
   {
     id: 'HealingPotion',

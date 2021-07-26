@@ -1,4 +1,4 @@
-import {ItemQualityType, PrefixType, RecipeType} from '../enums/index.js';
+import {ItemRarityType, PrefixType, RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import ids from '../ids/index.js';
 
@@ -8,20 +8,20 @@ const recipes = [
     sources: [
       {
         id: ids.Amulet,
-        quality: ItemQualityType.Magic,
+        rarity: ItemRarityType.Magic,
       },
       {
         id: ids.Amulet,
-        quality: ItemQualityType.Magic,
+        rarity: ItemRarityType.Magic,
       },
       {
         id: ids.Amulet,
-        quality: ItemQualityType.Magic,
+        rarity: ItemRarityType.Magic,
       },
     ],
     target: {
       id: ids.Ring,
-      quality: ItemQualityType.Magic,
+      rarity: ItemRarityType.Magic,
     },
   },
   {
@@ -29,7 +29,7 @@ const recipes = [
     sources: [
       {
         id: ids.Ring,
-        quality: ItemQualityType.Magic,
+        rarity: ItemRarityType.Magic,
       },
       {
         id: ids.PerfectTopaz,
@@ -40,7 +40,7 @@ const recipes = [
     ],
     target: {
       id: ids.Ring,
-      quality: ItemQualityType.Magic,
+      rarity: ItemRarityType.Magic,
       prefix: PrefixType.Coral,
     },
   },
@@ -49,7 +49,7 @@ const recipes = [
     sources: [
       {
         id: ids.Ring,
-        quality: ItemQualityType.Magic,
+        rarity: ItemRarityType.Magic,
       },
       {
         id: ids.PerfectRuby,
@@ -60,7 +60,7 @@ const recipes = [
     ],
     target: {
       id: ids.Ring,
-      quality: ItemQualityType.Magic,
+      rarity: ItemRarityType.Magic,
       prefix: PrefixType.Garnet,
     },
   },
@@ -69,7 +69,7 @@ const recipes = [
     sources: [
       {
         id: ids.Ring,
-        quality: ItemQualityType.Magic,
+        rarity: ItemRarityType.Magic,
       },
       {
         id: ids.PerfectSapphire,
@@ -80,7 +80,7 @@ const recipes = [
     ],
     target: {
       id: ids.Ring,
-      quality: ItemQualityType.Magic,
+      rarity: ItemRarityType.Magic,
       prefix: PrefixType.Cobalt,
     },
   },
@@ -89,7 +89,7 @@ const recipes = [
     sources: [
       {
         id: ids.Ring,
-        quality: ItemQualityType.Magic,
+        rarity: ItemRarityType.Magic,
       },
       {
         id: ids.PerfectEmerald,
@@ -100,7 +100,7 @@ const recipes = [
     ],
     target: {
       id: ids.Ring,
-      quality: ItemQualityType.Magic,
+      rarity: ItemRarityType.Magic,
       prefix: PrefixType.Jade,
     },
   },
