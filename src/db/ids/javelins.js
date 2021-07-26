@@ -1,0 +1,17 @@
+export default {
+  Javelin: 'Javelin',
+  Pilum: 'Pilum',
+  ShortSpear: 'ShortSpear',
+  Glaive: 'Glaive',
+  ThrowingSpear: 'ThrowingSpear',
+  WarJavelin: 'WarJavelin',
+  GreatPilum: 'GreatPilum',
+  Simbilan: 'Simbilan',
+  Spiculum: 'Spiculum',
+  Harpoon: 'Harpoon',
+  HyperionJavelin: 'HyperionJavelin',
+  StygianPilum: 'StygianPilum',
+  BalrogSpear: 'BalrogSpear',
+  GhostGlaive: 'GhostGlaive',
+  WingedHarpoon: 'WingedHarpoon',
+};

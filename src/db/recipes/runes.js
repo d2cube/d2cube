@@ -166,5 +166,5 @@ const recipes = [
 ];
 
 export default mapRecipeProps({
-  type: RecipeType.Runes,
+  type: RecipeType.Rune,
 })(recipes);

@@ -43,5 +43,5 @@ const recipes = [
 ];
 
 export default mapRecipeProps({
-  type: RecipeType.Amulets,
+  type: RecipeType.Amulet,
 })(recipes);

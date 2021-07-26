@@ -129,5 +129,5 @@ const recipes = [
 ];
 
 export default mapRecipeProps({
-  type: RecipeType.Potions,
+  type: RecipeType.Potion,
 })(recipes);

@@ -77,7 +77,7 @@ export const mapItemOffenseProperties = (item) => {
   description.push({
     text: `${type} class - ${getAttackSpeedDescription(
       properties[ItemPropertyType.AttackSpeed],
-    )}`,
+    )} attack speed`,
   });
 
   return description;

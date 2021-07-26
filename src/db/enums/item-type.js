@@ -3,6 +3,7 @@ export const ItemType = {
   Amulet: 'Amulet',
   Essence: 'Essence',
   Gem: 'Gem',
+  Javelin: 'Javelin',
   Potion: 'Potion',
   Ring: 'Ring',
   Rune: 'Rune',

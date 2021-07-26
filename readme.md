@@ -27,7 +27,7 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [x] 3 Gems of the Same Type and Grade (lower than Perfect) = 1 Higher Grade Gem of the Same Type
 - [x] 2 Quivers of Bolts = 1 Quiver of Arrows
 - [x] 2 Quivers of Arrows = 1 Quiver of Bolts
-- [ ] 1 Spear + 1 Quiver of Arrows = 1 Stack of Javelins
+- [x] 1 Spear + 1 Quiver of Arrows = 1 Stack of Javelins
 - [ ] 1 Axe + 1 Dagger = Throwing Axe
 - [x] Strangling Gas Potion + any type of Healing Potion = 1 Antidote Potion
 - [x] Runes

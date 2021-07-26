@@ -1,9 +1,10 @@
 export const RecipeType = {
-  Ammunitions: 'Ammunitions',
-  Amulets: 'Amulets',
-  Gems: 'Gems',
-  Potions: 'Potions',
-  Quests: 'Quests',
-  Rings: 'Rings',
-  Runes: 'Runes',
+  Ammunition: 'Ammunition',
+  Amulet: 'Amulet',
+  Gem: 'Gem',
+  Javelin: 'Javelin',
+  Potion: 'Potion',
+  Quest: 'Quest',
+  Ring: 'Ring',
+  Rune: 'Rune',
 };

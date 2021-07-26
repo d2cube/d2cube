@@ -107,5 +107,5 @@ const recipes = [
 ];
 
 export default mapRecipeProps({
-  type: RecipeType.Rings,
+  type: RecipeType.Ring,
 })(recipes);
