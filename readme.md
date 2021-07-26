@@ -4,12 +4,25 @@ An interactive D2 cube and runeword companion.
 
 ---
 
+## TODO
+So much to do, so little time, so much fun.
+
+- [ ] Optimize resolvers for affixes, properties, item props (description/size)
+- [ ] Create item instances (rolls)
+- [ ] Document all weapons/armors
+- [ ] Document all affixes
+- [ ] About page
+- [ ] Runewords
+- [ ] Tests
+- [ ] Docs
+- [ ] Contribution
+
 ## Cube Checklist
 
 Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 
-- [ ] 3 Magic Rings = 1 Random Magic Amulet
-- [ ] 3 Magic Amulets = 1 Random Magic Ring
+- [x] 3 Magic Rings = 1 Random Magic Amulet
+- [x] 3 Magic Amulets = 1 Random Magic Ring
 - [x] 3 Small Rejuvenation Potions = 1 Full Rejuvenation Potion
 - [x] 3 Gems of the Same Type and Grade (lower than Perfect) = 1 Higher Grade Gem of the Same Type
 - [x] 2 Quivers of Bolts = 1 Quiver of Arrows
@@ -23,11 +36,11 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [ ] 6 Perfect Skulls + 1 Rare Item = 1 Random Low Quality Rare Item of the same type
 - [ ] 4 Health Potions (of any type) + Ruby (any type) + Magical Sword = A Magic Sword of the Leech
 - [ ] 3 Perfect Gems (of any type) + 1 Magic Item = 1 New Random Magic Item of the Same Type
-- [ ] 6 Perfect Gems (1 of each type) + 1 Amulet (Magic) = Prismatic Amulet
-- [ ] 1 Magic Ring + 1 Perfect Emerald + 1 Antidote Potion = 1 Jade Ring
-- [ ] 1 Magic Ring + 1 Perfect Ruby + 1 Exploding Potion = 1 Garnet Ring
-- [ ] 1 Magic Ring + 1 Perfect Topaz + 1 Rejuvenation Potion = 1 Coral Ring
-- [ ] 1 Magic Ring + 1 Perfect Sapphire + 1 Thawing Potion = 1 Cobalt Ring
+- [x] 6 Perfect Gems (1 of each type) + 1 Amulet (Magic) = Prismatic Amulet
+- [x] 1 Magic Ring + 1 Perfect Emerald + 1 Antidote Potion = 1 Jade Ring
+- [x] 1 Magic Ring + 1 Perfect Ruby + 1 Exploding Potion = 1 Garnet Ring
+- [x] 1 Magic Ring + 1 Perfect Topaz + 1 Rejuvenation Potion = 1 Coral Ring
+- [x] 1 Magic Ring + 1 Perfect Sapphire + 1 Thawing Potion = 1 Cobalt Ring
 - [ ] 1 Magic Shield (any type) + 1 Spiked Club (any quality) + 2 Skulls (any quality) = Magic Shield of Spikes
 - [ ] Diamond (any quality) + 1 Staff (any type and quality) + 1 Kris (any quality) + 1 Belt (any type and quality) = Savage Polearm Class Weapon
 - [ ] Wirt's Leg + A Tome of Town Portal = Secret Cow Level

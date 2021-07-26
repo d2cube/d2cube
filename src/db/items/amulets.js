@@ -2,6 +2,8 @@ import {ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItemProps} from '../utils/map-item-props.js';
 
+import {mapDescription} from './rings.js';
+
 const items = {
   [ids.Amulet]: {
     id: ids.Amulet,
@@ -13,7 +15,5 @@ const items = {
 export default mapItemProps({
   size: [1, 1],
   type: ItemType.Amulet,
-  mapDescription: (item) => [
-    [{text: item.name, color: `item.${item.quality}`}],
-  ],
+  mapDescription,
 })(items);
