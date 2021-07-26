@@ -1,4 +1,7 @@
+import db from '../db/index.js';
 import {getItemById} from '../queries/index.js';
+
+const {ItemQualityType} = db.enums;
 
 export const cubeItems = [
   {
@@ -42,14 +45,27 @@ export const inventoryItems = [
   {
     id: 'Ring',
     position: [3, 6],
-  },
-  {
-    id: 'Ring',
-    position: [3, 7],
+    quality: ItemQualityType.Magic,
   },
   {
     id: 'Ring',
     position: [3, 8],
+    quality: ItemQualityType.Magic,
+  },
+  {
+    id: 'Ring',
+    position: [3, 7],
+    quality: ItemQualityType.Crafted,
+  },
+  {
+    id: 'Amulet',
+    position: [4, 7],
+    quality: ItemQualityType.Magic,
+  },
+  {
+    id: 'Amulet',
+    position: [4, 9],
+    quality: ItemQualityType.Rare,
   },
 ].map((item) => ({
   ...getItemById(item.id),

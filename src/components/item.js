@@ -19,7 +19,7 @@ const Item = ({isInactive, item: initialItem, version = defaultVersion}) => {
   };
   const imageName = id + (item.variants ? roll(1, item.variants) : '');
   const src = `${version}/items/${imageName}.webp`;
-  const description = item.baseDescription || item.description;
+  const description = item.baseDescription || item.mapDescription(item);
 
   return (
     <ItemTooltip description={description}>

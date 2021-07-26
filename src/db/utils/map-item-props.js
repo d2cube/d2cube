@@ -6,9 +6,9 @@ export const mapItemProps = (props) => (items) => {
       ...acc,
       [id]: {
         ...item,
-        description: item.description || mapDescription(item),
         size,
         type,
+        mapDescription,
       },
     }),
     {},

@@ -3,17 +3,17 @@ import ids from '../ids/index.js';
 import {mapItemProps} from '../utils/map-item-props.js';
 
 const items = {
-  [ids.Ring]: {
-    id: ids.Ring,
-    name: 'Ring',
-    variants: 5,
+  [ids.Amulet]: {
+    id: ids.Amulet,
+    name: 'Amulet',
+    variants: 3,
   },
 };
 
 export default mapItemProps({
   size: [1, 1],
-  type: ItemType.Ring,
+  type: ItemType.Amulet,
   mapDescription: (item) => [
-    [{text: `${item.quality} ${item.name}`, color: `item.${item.quality}`}],
+    [{text: item.name, color: `item.${item.quality}`}],
   ],
 })(items);

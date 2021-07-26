@@ -7,13 +7,13 @@ const items = {
     id: ids.Arrows,
     name: 'Arrows',
     quality: ItemQualityType.Normal,
-    size: 350,
+    max: 350,
   },
   [ids.Bolts]: {
     id: ids.Bolts,
     name: 'Bolts',
     quality: ItemQualityType.Normal,
-    size: 250,
+    max: 250,
   },
 };
 
@@ -21,6 +21,6 @@ export default mapItemProps({
   size: [3, 1],
   type: ItemType.Ammunition,
   mapDescription: (item) => [
-    [{text: item.name}, {text: `Quantity: ${item.size}`}],
+    [{text: item.name}, {text: `Quantity: ${item.max}`}],
   ],
 })(items);
