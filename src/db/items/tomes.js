@@ -6,12 +6,12 @@ const items = {
   [ids.TomeOfIdentify]: {
     id: ids.TomeOfIdentify,
     name: 'Tome of Identify',
-    size: 20,
+    max: 20,
   },
   [ids.TomeOfTownPortal]: {
     id: ids.TomeOfTownPortal,
     name: 'Tome of Town Portal',
-    size: 20,
+    max: 20,
   },
 };
 
@@ -23,7 +23,7 @@ export default mapItemProps({
       {text: item.name},
       {text: 'Insert scrolls'},
       {text: 'Right click to use'},
-      {text: `Quantity: ${item.size}`},
+      {text: `Quantity: ${item.max}`},
     ],
   ],
 })(items);

@@ -5,10 +5,10 @@ export const mapItemProps = (props) => (items) => {
     (acc, [id, item]) => ({
       ...acc,
       [id]: {
-        ...item,
         size,
         type,
         mapDescription,
+        ...item,
       },
     }),
     {},

@@ -43,7 +43,6 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [x] 1 Magic Ring + 1 Perfect Sapphire + 1 Thawing Potion = 1 Cobalt Ring
 - [ ] 1 Magic Shield (any type) + 1 Spiked Club (any quality) + 2 Skulls (any quality) = Magic Shield of Spikes
 - [ ] Diamond (any quality) + 1 Staff (any type and quality) + 1 Kris (any quality) + 1 Belt (any type and quality) = Savage Polearm Class Weapon
-- [ ] Wirt's Leg + A Tome of Town Portal = Secret Cow Level
 - [x] 3 Health Potions + 3 Mana Potions + 1 Chipped Gem = 1 Rejuvenation Potion
 - [x] 3 Health Potions + 3 Mana Potions + 1 Gem (normal) = 1 Full Rejuvenation Potion
 - [ ] 3 Standard Gems (normal) and 1 Socketed Weapon (Any Type) = 1 Socketed Magic Weapon (of same type)
@@ -66,8 +65,9 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [ ] 1 Hel Rune + Scroll of Town Portal + Any Socketed Item = Remove items from sockets
 - [ ] 1 Hel Rune + Scroll of Town Portal + Any Socketed Item = Remove items from sockets
 - [ ] 1 Ral Rune + 1 Flawed Gem (any kind) + Armor = Fully Repaired and Recharged Armor
-- [ ] 1 Twisted Essence of Suffering + 1 Charged Essence of Hatred + 1 Burning Essence of Terror + 1 Festering Essence of Destruction = Token of Absolution
+- [x] 1 Twisted Essence of Suffering + 1 Charged Essence of Hatred + 1 Burning Essence of Terror + 1 Festering Essence of Destruction = Token of Absolution
 - [ ] Key of Terror + Key of Hate + Key of Destruction + Mephisto's Brain + Diablo's Horn + Baal's Eye = Pandemonium Event
+- [ ] Wirt's Leg + A Tome of Town Portal = Secret Cow Level
 
 
 ## Runewords Checklist
