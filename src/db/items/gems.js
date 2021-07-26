@@ -4,7 +4,7 @@ import {
   ItemType,
   PropertyType,
 } from '../enums/index.js';
-import {mapItemProps} from '../utils/map-item-props.js';
+import {mapItems} from '../utils/map-items.js';
 import ids from '../ids/index.js';
 
 const items = {
@@ -805,7 +805,7 @@ const items = {
   },
 };
 
-export default mapItemProps({
+export default mapItems({
   size: [1, 1],
   type: ItemType.Gem,
   mapDescription: (item) => [

@@ -7,7 +7,7 @@ An interactive D2 cube and runeword companion.
 ## TODO
 So much to do, so little time, so much fun.
 
-- [ ] Optimize resolvers for affixes, properties, item props (description/size)
+- [ ] Rework `description` nested array (sectioned) shape.  Might not be flexible.
 - [ ] Create item instances (rolls)
 - [ ] Document all weapons/armors
 - [ ] Document all affixes

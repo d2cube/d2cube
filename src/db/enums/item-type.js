@@ -7,6 +7,7 @@ export const ItemType = {
   Ring: 'Ring',
   Rune: 'Rune',
   Scroll: 'Scroll',
+  Spear: 'Spear',
   Token: 'Token',
   Tome: 'Tome',
 };

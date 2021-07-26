@@ -1,8 +1,7 @@
-import {filter} from 'uinix-fp';
-
 import {ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
-import {mapItemProps} from '../utils/map-item-props.js';
+import {mapItemName} from '../utils/map-item-name.js';
+import {mapItems} from '../utils/map-items.js';
 
 const items = {
   [ids.Ring]: {
@@ -12,17 +11,8 @@ const items = {
   },
 };
 
-export const mapDescription = (item) => {
-  const {name, quality, prefix, suffix} = item;
-  const color = `item.${quality}`;
-
-  const itemName = filter()([prefix || quality, name, suffix]).join(' ');
-
-  return [[{text: itemName, color}]];
-};
-
-export default mapItemProps({
+export default mapItems({
   size: [1, 1],
   type: ItemType.Ring,
-  mapDescription,
+  mapDescription: (item) => [[mapItemName(item)]],
 })(items);

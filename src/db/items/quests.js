@@ -1,6 +1,6 @@
 import {ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
-import {mapItemProps} from '../utils/map-item-props.js';
+import {mapItems} from '../utils/map-items.js';
 
 const items = {
   [ids.BurningEssenceOfTerror]: {
@@ -30,7 +30,7 @@ const items = {
   },
 };
 
-export default mapItemProps({
+export default mapItems({
   size: [1, 1],
   mapDescription: (item) => [[{text: item.name, color: 'item.crafted'}]],
 })(items);

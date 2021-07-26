@@ -67,6 +67,18 @@ export const inventoryItems = [
     position: [4, 9],
     quality: ItemQualityType.Rare,
   },
+  {
+    id: 'HealingPotion',
+    position: [1, 7],
+  },
+  {
+    id: 'MinorHealingPotion',
+    position: [1, 8],
+  },
+  {
+    id: 'WarSpear',
+    position: [1, 4],
+  },
 ].map((item) => ({
   ...getItemById(item.id),
   ...item,

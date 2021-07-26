@@ -1,4 +1,4 @@
-export const mapItemProps = (props) => (items) => {
+export const mapItems = (props) => (items) => {
   const {size, type, mapDescription} = props;
 
   return Object.entries(items).reduce(

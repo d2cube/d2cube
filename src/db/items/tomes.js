@@ -1,6 +1,6 @@
 import {ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
-import {mapItemProps} from '../utils/map-item-props.js';
+import {mapItems} from '../utils/map-items.js';
 
 const items = {
   [ids.TomeOfIdentify]: {
@@ -15,7 +15,7 @@ const items = {
   },
 };
 
-export default mapItemProps({
+export default mapItems({
   size: [2, 1],
   type: ItemType.Tome,
   mapDescription: (item) => [

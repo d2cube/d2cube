@@ -9,6 +9,7 @@ import Image from './ui/image.js';
 
 const defaultVersion = db.enums.GameVersionType.D2;
 
+// TODO: organize and document logic in relevant utils
 const Item = ({isInactive, item: initialItem, version = defaultVersion}) => {
   const styles = useStyles();
 

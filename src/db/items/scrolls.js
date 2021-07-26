@@ -1,6 +1,6 @@
 import {ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
-import {mapItemProps} from '../utils/map-item-props.js';
+import {mapItems} from '../utils/map-items.js';
 
 const items = {
   [ids.ScrollOfIdentify]: {
@@ -13,7 +13,7 @@ const items = {
   },
 };
 
-export default mapItemProps({
+export default mapItems({
   size: [1, 1],
   type: ItemType.Scroll,
   mapDescription: (item) => [[{text: item.name}, {text: 'Right click to use'}]],

@@ -1,5 +1,5 @@
 import {ItemQualityType, ItemType} from '../enums/index.js';
-import {mapItemProps} from '../utils/map-item-props.js';
+import {mapItems} from '../utils/map-items.js';
 import ids from '../ids/index.js';
 
 const items = {
@@ -17,7 +17,7 @@ const items = {
   },
 };
 
-export default mapItemProps({
+export default mapItems({
   size: [3, 1],
   type: ItemType.Ammunition,
   mapDescription: (item) => [

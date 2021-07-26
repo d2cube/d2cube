@@ -10,6 +10,7 @@ import quests from './quests.js';
 import rings from './rings.js';
 import runes from './runes.js';
 import scrolls from './scrolls.js';
+import spears from './spears.js';
 import tomes from './tomes.js';
 
 export default {
@@ -21,5 +22,6 @@ export default {
   ...rings,
   ...runes,
   ...scrolls,
+  ...spears,
   ...tomes,
 };
