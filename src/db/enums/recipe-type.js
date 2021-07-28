@@ -5,6 +5,7 @@ export const RecipeType = {
   Javelin: 'Javelin',
   Potion: 'Potion',
   Quest: 'Quest',
+  Rare: 'Rare',
   Ring: 'Ring',
   Rune: 'Rune',
   Socket: 'Socket',

@@ -46,10 +46,6 @@ const recipes = [
       },
     ],
     target: {
-      item: {
-        id: ids.Ring,
-        rarity: ItemRarityType.Magic,
-      },
       transform: (sources) => {
         const {item} = sources[4];
         return merge(item)({
@@ -98,10 +94,6 @@ const recipes = [
       },
     ],
     target: {
-      item: {
-        id: ids.Spear,
-        rarity: ItemRarityType.Magic,
-      },
       transform: (sources) => {
         const {item} = sources[3];
         return merge(item)({

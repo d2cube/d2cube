@@ -4,6 +4,7 @@ import gems from './gems.js';
 import javelins from './javelins.js';
 import potions from './potions.js';
 import quests from './quests.js';
+import rares from './rares.js';
 import rings from './rings.js';
 import runes from './runes.js';
 import sockets from './sockets.js';
@@ -15,6 +16,7 @@ export default [
   ...javelins,
   ...potions,
   ...quests,
+  ...rares,
   ...rings,
   ...runes,
   ...sockets,

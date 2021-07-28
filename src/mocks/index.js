@@ -73,7 +73,7 @@ export const inventoryItems = [
   {
     id: 'Amulet',
     position: [2, 6],
-    rarity: ItemRarityType.Rare,
+    rarity: ItemRarityType.Unique,
   },
   {
     id: 'Amulet',
