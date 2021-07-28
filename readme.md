@@ -31,7 +31,7 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [ ] 1 Axe + 1 Dagger = Throwing Axe
 - [x] Strangling Gas Potion + any type of Healing Potion = 1 Antidote Potion
 - [x] Runes
-- [ ] 3 Perfect Skulls + 1 Rare Item + Stone of Jordan = Add 1 Socket To a Rare Item
+- [x] 3 Perfect Skulls + 1 Rare Item + Stone of Jordan = Add 1 Socket To a Rare Item
 - [ ] 1 Perfect Skull + 1 Rare Item + Stone of Jordan = 1 High Quality New Rare Item of the same type
 - [ ] 6 Perfect Skulls + 1 Rare Item = 1 Random Low Quality Rare Item of the same type
 - [ ] 4 Health Potions (of any type) + Ruby (any type) + Magical Sword = A Magic Sword of the Leech

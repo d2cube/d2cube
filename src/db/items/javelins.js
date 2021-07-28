@@ -82,7 +82,7 @@ const items = {
     clvl: 18,
     ilvl: 30,
     size: [3, 1],
-    baseId: ids.Javelin,
+    imageId: ids.Javelin,
     properties: {
       [ItemPropertyType.Damage1H]: [6, 19],
       [ItemPropertyType.MeleeRange]: 3,
@@ -98,7 +98,7 @@ const items = {
     clvl: 25,
     ilvl: 37,
     size: [3, 1],
-    baseId: ids.Pilum,
+    imageId: ids.Pilum,
     properties: {
       [ItemPropertyType.Damage1H]: [11, 26],
       [ItemPropertyType.MeleeRange]: 3,
@@ -114,7 +114,7 @@ const items = {
     clvl: 25,
     ilvl: 40,
     size: [3, 1],
-    baseId: ids.ShortSpear,
+    imageId: ids.ShortSpear,
     properties: {
       [ItemPropertyType.Damage1H]: [8, 32],
       [ItemPropertyType.MeleeRange]: 3,
@@ -130,7 +130,7 @@ const items = {
     clvl: 25,
     ilvl: 46,
     size: [4, 1],
-    baseId: ids.Glaive,
+    imageId: ids.Glaive,
     properties: {
       [ItemPropertyType.Damage1H]: [13, 38],
       [ItemPropertyType.MeleeRange]: 3,
@@ -146,7 +146,7 @@ const items = {
     clvl: 25,
     ilvl: 51,
     size: [4, 1],
-    baseId: ids.ThrowingSpear,
+    imageId: ids.ThrowingSpear,
     properties: {
       [ItemPropertyType.Damage1H]: [13, 35],
       [ItemPropertyType.MeleeRange]: 3,
@@ -162,7 +162,7 @@ const items = {
     clvl: 40,
     ilvl: 54,
     size: [3, 1],
-    baseId: ids.Javelin,
+    imageId: ids.Javelin,
     properties: {
       [ItemPropertyType.Damage1H]: [21, 57],
       [ItemPropertyType.MeleeRange]: 3,
@@ -178,7 +178,7 @@ const items = {
     clvl: 46,
     ilvl: 62,
     size: [3, 1],
-    baseId: ids.Pilum,
+    imageId: ids.Pilum,
     properties: {
       [ItemPropertyType.Damage1H]: [14, 64],
       [ItemPropertyType.MeleeRange]: 3,
@@ -194,7 +194,7 @@ const items = {
     clvl: 53,
     ilvl: 71,
     size: [3, 1],
-    baseId: ids.ShortSpear,
+    imageId: ids.ShortSpear,
     properties: {
       [ItemPropertyType.Damage1H]: [33, 63],
       [ItemPropertyType.MeleeRange]: 3,
@@ -210,7 +210,7 @@ const items = {
     clvl: 59,
     ilvl: 69,
     size: [4, 1],
-    baseId: ids.Glaive,
+    imageId: ids.Glaive,
     properties: {
       [ItemPropertyType.Damage1H]: [19, 60],
       [ItemPropertyType.MeleeRange]: 3,
@@ -226,7 +226,7 @@ const items = {
     clvl: 65,
     ilvl: 85,
     size: [4, 1],
-    baseId: ids.ThrowingSpear,
+    imageId: ids.ThrowingSpear,
     properties: {
       [ItemPropertyType.Damage1H]: [27, 35],
       [ItemPropertyType.MeleeRange]: 3,

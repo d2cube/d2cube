@@ -1,5 +1,6 @@
-import {ItemType, RecipeType} from '../enums/index.js';
+import {RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
+import {isSpear} from '../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -7,13 +8,23 @@ const recipes = [
     name: '1 Spear (any type) + 1 Arrows = → 1 Javelin',
     sources: [
       {
-        type: ItemType.Spear,
-        baseId: ids.Spear,
-        baseDescription: [[{text: 'Spear (any type)'}]],
+        item: {
+          id: ids.Spear,
+          overrideDescription: [[{text: 'Spear (any type)'}]],
+        },
+        test: isSpear,
       },
-      ids.Arrows,
+      {
+        item: {
+          id: ids.Arrows,
+        },
+      },
     ],
-    target: ids.Javelin,
+    target: {
+      item: {
+        id: ids.Javelin,
+      },
+    },
   },
 ];
 

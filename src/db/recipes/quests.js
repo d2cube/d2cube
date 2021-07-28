@@ -6,12 +6,35 @@ const recipes = [
   {
     name: '4 Essences (1 of each type) → 1 Token of Absolution',
     sources: [
-      ids.TwistedEssenceOfSuffering,
-      ids.ChargedEssenceOfHatred,
-      ids.BurningEssenceOfTerror,
-      ids.FesteringEssenceOfDestruction,
+      {
+        item: {
+          id: ids.TwistedEssenceOfSuffering,
+        },
+      },
+
+      {
+        item: {
+          id: ids.ChargedEssenceOfHatred,
+        },
+      },
+
+      {
+        item: {
+          id: ids.BurningEssenceOfTerror,
+        },
+      },
+
+      {
+        item: {
+          id: ids.FesteringEssenceOfDestruction,
+        },
+      },
     ],
-    target: ids.TokenOfAbsolution,
+    target: {
+      item: {
+        id: ids.TokenOfAbsolution,
+      },
+    },
   },
 ];
 

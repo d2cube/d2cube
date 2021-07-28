@@ -5,13 +5,43 @@ import ids from '../ids/index.js';
 const recipes = [
   {
     name: '2 Bolts → 1 Arrows',
-    sources: [ids.Bolts, ids.Bolts],
-    target: ids.Arrows,
+    sources: [
+      {
+        item: {
+          id: ids.Bolts,
+        },
+      },
+      {
+        item: {
+          id: ids.Bolts,
+        },
+      },
+    ],
+    target: {
+      item: {
+        id: ids.Arrows,
+      },
+    },
   },
   {
     name: '2 Arrows → 1 Bolts',
-    sources: [ids.Arrows, ids.Arrows],
-    target: ids.Bolts,
+    sources: [
+      {
+        item: {
+          id: ids.Arrows,
+        },
+      },
+      {
+        item: {
+          id: ids.Arrows,
+        },
+      },
+    ],
+    target: {
+      item: {
+        id: ids.Bolts,
+      },
+    },
   },
 ];
 

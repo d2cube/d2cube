@@ -27,11 +27,19 @@ export const cubeItems = [
 
 export const inventoryItems = [
   {
+    id: 'Ruby',
+    position: [1, 1],
+  },
+  {
     id: 'El',
     position: [2, 1],
   },
   {
-    id: 'FlawlessRuby',
+    id: 'RejuvenationPotion',
+    position: [3, 1],
+  },
+  {
+    id: 'PerfectSkull',
     position: [4, 3],
   },
   {
@@ -50,6 +58,7 @@ export const inventoryItems = [
     id: 'Ring',
     position: [3, 8],
     rarity: ItemRarityType.Magic,
+    prefix: 'Cruel',
   },
   {
     id: 'Ring',
@@ -63,25 +72,30 @@ export const inventoryItems = [
   },
   {
     id: 'Amulet',
-    position: [4, 9],
+    position: [2, 6],
     rarity: ItemRarityType.Rare,
+  },
+  {
+    id: 'Amulet',
+    position: [2, 7],
+    rarity: ItemRarityType.Magic,
   },
   {
     id: 'HealingPotion',
     position: [1, 7],
   },
   {
-    id: 'MinorHealingPotion',
+    id: 'ChippedEmerald',
     position: [1, 8],
   },
   {
     id: 'WarFork',
     position: [1, 4],
-    sockets: ['Ber', 'Jah'],
+    sockets: ['Ber', 'Jah', null, null],
   },
   {
-    id: 'Pilum',
-    position: [1, 10],
+    id: 'StygianPike',
+    position: [1, 9],
     rarity: ItemRarityType.Rare,
   },
 ].map((item) => ({

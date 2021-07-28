@@ -11,13 +11,13 @@ import ItemTooltip from './item-tooltip.js';
 const Item = ({isInactive, item: initialItem}) => {
   const styles = useStyles();
 
-  const id = initialItem.baseId || initialItem.id;
+  const {id, imageId} = initialItem;
   const item = {
     ...getItemById(id),
     ...initialItem,
   };
   const {
-    baseDescription,
+    overrideDescription,
     position,
     size,
     properties = {},
@@ -25,7 +25,7 @@ const Item = ({isInactive, item: initialItem}) => {
     variants,
     mapDescription,
   } = item;
-  const description = baseDescription || mapDescription(item);
+  const description = overrideDescription || mapDescription(item);
 
   return (
     <ItemTooltip description={description}>
@@ -35,7 +35,7 @@ const Item = ({isInactive, item: initialItem}) => {
         styles={styles.gridItem}
       >
         <ItemImage
-          id={id}
+          id={imageId || id}
           isInactive={isInactive}
           size={size}
           variants={variants}

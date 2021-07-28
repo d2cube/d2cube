@@ -1,24 +1,14 @@
-import {isPlainObject} from 'uinix-fp';
-
 import db from '../db/index.js';
-import {getItemById} from './get-item-by-id.js';
-
-const reservedProperties = new Set(['baseDescription', 'baseId']);
 
 /**
  * Returns true and removes the item if it is found in the stack.
  *
  * Mutates the stack.
  */
-const findItem = (stack, target) => {
+const findItem = (stack, sourceItem, test) => {
   for (let i = 0; i < stack.length; i++) {
     const item = stack[i];
-    const properties = Object.keys(target).filter(
-      (key) => !reservedProperties.has(key),
-    );
-    const hasMatch = properties.every(
-      (property) => item[property] === target[property],
-    );
+    const hasMatch = test ? test(item) : sourceItem.id === item.id;
 
     if (hasMatch) {
       stack.splice(i, 1);
@@ -28,8 +18,6 @@ const findItem = (stack, target) => {
 
   return null;
 };
-
-const itemify = (x) => (isPlainObject(x) ? x : getItemById(x));
 
 export const getRecipes = ({items = [], filters = [], showAvailable}) => {
   const recipes = [];
@@ -48,8 +36,8 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
     const itemStack = [...items];
     const sources = [];
     recipe.sources.forEach((source) => {
-      const sourceItem = itemify(source);
-      const matchedItem = findItem(itemStack, sourceItem);
+      const sourceItem = source.item;
+      const matchedItem = findItem(itemStack, sourceItem, source.test);
       const isInactive = showAvailable ? !matchedItem : false;
       sources.push({
         item: showAvailable ? matchedItem || sourceItem : sourceItem,
@@ -65,12 +53,12 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
     const hasAllInactiveSources = inactiveSourceCount === sources.length;
 
     if (!(showAvailable && hasAllInactiveSources)) {
-      const targetItem = itemify(recipe.target);
+      const {item: targetItem, transform} = recipe.target;
       recipes.push({
         ...recipe,
         sources,
         target: {
-          item: targetItem,
+          item: transform ? transform(sources) : targetItem,
           isInactive: hasInactiveSources,
         },
       });

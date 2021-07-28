@@ -7,4 +7,5 @@ export const RecipeType = {
   Quest: 'Quest',
   Ring: 'Ring',
   Rune: 'Rune',
+  Socket: 'Socket',
 };

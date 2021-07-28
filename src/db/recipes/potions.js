@@ -1,130 +1,178 @@
-import {
-  ItemType,
-  GemQualityType,
-  PotionCategoryType,
-  RecipeType,
-} from '../enums/index.js';
+import {RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
+import {
+  isChippedGem,
+  isHealthPotion,
+  isManaPotion,
+  isRegularGem,
+} from '../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
   {
     name: '3 Rejuvenation Potions → 1 Full Rejuvenation Potion',
     sources: [
-      ids.RejuvenationPotion,
-      ids.RejuvenationPotion,
-      ids.RejuvenationPotion,
+      {
+        item: {
+          id: ids.RejuvenationPotion,
+        },
+      },
+      {
+        item: {
+          id: ids.RejuvenationPotion,
+        },
+      },
+      {
+        item: {
+          id: ids.RejuvenationPotion,
+        },
+      },
     ],
-    target: ids.FullRejuvenationPotion,
+    target: {
+      item: {
+        id: ids.FullRejuvenationPotion,
+      },
+    },
   },
   {
     name: '3 Health Potions + 3 Mana Potions + 1 Chipped Gem = 1 Rejuvenation Potion',
     sources: [
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Health,
-        baseId: ids.SuperHealingPotion,
-        baseDescription: [[{text: 'Health Potion (any type)'}]],
+        item: {
+          id: ids.SuperHealingPotion,
+          overrideDescription: [[{text: 'Health Potion (any type)'}]],
+        },
+        test: isHealthPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Health,
-        baseId: ids.SuperHealingPotion,
-        baseDescription: [[{text: 'Health Potion (any type)'}]],
+        item: {
+          id: ids.SuperHealingPotion,
+          overrideDescription: [[{text: 'Health Potion (any type)'}]],
+        },
+        test: isHealthPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Health,
-        baseId: ids.SuperHealingPotion,
-        baseDescription: [[{text: 'Health Potion (any type)'}]],
+        item: {
+          id: ids.SuperHealingPotion,
+          overrideDescription: [[{text: 'Health Potion (any type)'}]],
+        },
+        test: isHealthPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Mana,
-        baseId: ids.SuperManaPotion,
-        baseDescription: [[{text: 'Mana Potion (any type)'}]],
+        item: {
+          id: ids.SuperManaPotion,
+          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
+        },
+        test: isManaPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Mana,
-        baseId: ids.SuperManaPotion,
-        baseDescription: [[{text: 'Mana Potion (any type)'}]],
+        item: {
+          id: ids.SuperManaPotion,
+          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
+        },
+        test: isManaPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Mana,
-        baseId: ids.SuperManaPotion,
-        baseDescription: [[{text: 'Mana Potion (any type)'}]],
+        item: {
+          id: ids.SuperManaPotion,
+          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
+        },
+        test: isManaPotion,
       },
       {
-        type: ItemType.Gem,
-        quality: GemQualityType.Chipped,
-        baseId: ids.ChippedDiamond,
-        baseDescription: [[{text: 'Chipped Gem (any type)'}]],
+        item: {
+          id: ids.ChippedDiamond,
+          overrideDescription: [[{text: 'Chipped Gem (any type)'}]],
+        },
+        test: isChippedGem,
       },
     ],
-    target: ids.RejuvenationPotion,
+    target: {
+      item: {
+        id: ids.RejuvenationPotion,
+      },
+    },
   },
   {
     name: '3 Health Potions + 3 Mana Potions + 1 Regular Gem = 1 Full Rejuvenation Potion',
     sources: [
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Health,
-        baseId: ids.SuperHealingPotion,
-        baseDescription: [[{text: 'Health Potion (any type)'}]],
+        item: {
+          id: ids.SuperHealingPotion,
+          overrideDescription: [[{text: 'Health Potion (any type)'}]],
+        },
+        test: isHealthPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Health,
-        baseId: ids.SuperHealingPotion,
-        baseDescription: [[{text: 'Health Potion (any type)'}]],
+        item: {
+          id: ids.SuperHealingPotion,
+          overrideDescription: [[{text: 'Health Potion (any type)'}]],
+        },
+        test: isHealthPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Health,
-        baseId: ids.SuperHealingPotion,
-        baseDescription: [[{text: 'Health Potion (any type)'}]],
+        item: {
+          id: ids.SuperHealingPotion,
+          overrideDescription: [[{text: 'Health Potion (any type)'}]],
+        },
+        test: isHealthPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Mana,
-        baseId: ids.SuperManaPotion,
-        baseDescription: [[{text: 'Mana Potion (any type)'}]],
+        item: {
+          id: ids.SuperManaPotion,
+          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
+        },
+        test: isManaPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Mana,
-        baseId: ids.SuperManaPotion,
-        baseDescription: [[{text: 'Mana Potion (any type)'}]],
+        item: {
+          id: ids.SuperManaPotion,
+          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
+        },
+        test: isManaPotion,
       },
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Mana,
-        baseId: ids.SuperManaPotion,
-        baseDescription: [[{text: 'Mana Potion (any type)'}]],
+        item: {
+          id: ids.SuperManaPotion,
+          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
+        },
+        test: isManaPotion,
       },
       {
-        type: ItemType.Gem,
-        quality: GemQualityType.Regular,
-        baseId: ids.Diamond,
-        baseDescription: [[{text: 'Regular Gem (any type)'}]],
+        item: {
+          id: ids.Diamond,
+          overrideDescription: [[{text: 'Regular Gem (any type)'}]],
+        },
+        test: isRegularGem,
       },
     ],
-    target: ids.FullRejuvenationPotion,
+    target: {
+      item: {
+        id: ids.FullRejuvenationPotion,
+      },
+    },
   },
   {
     name: '1 Strangling Gas Potion + 1 Health Potion = 1 Antidote Potion',
     sources: [
-      ids.StranglingGasPotion,
       {
-        type: ItemType.Potion,
-        category: PotionCategoryType.Health,
-        baseId: ids.SuperHealingPotion,
-        baseDescription: [[{text: 'Health Potion (any type)'}]],
+        item: {
+          id: ids.StranglingGasPotion,
+        },
+      },
+      {
+        item: {
+          id: ids.SuperHealingPotion,
+          overrideDescription: [[{text: 'Health Potion (any type)'}]],
+        },
+        test: isHealthPotion,
       },
     ],
-    target: ids.AntidotePotion,
+    target: {
+      item: {
+        id: ids.AntidotePotion,
+      },
+    },
   },
 ];
 

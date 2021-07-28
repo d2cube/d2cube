@@ -3,12 +3,12 @@ import {Layout} from 'uinix-ui';
 
 import ItemSocket from './item-socket.js';
 
-const ItemSockets = ({maxSockets, sockets, size}) => {
-  if (!maxSockets || !sockets) {
+const ItemSockets = ({sockets, size}) => {
+  if (!sockets) {
     return null;
   }
 
-  const gridColumnStarts = getGridColumnStarts({maxSockets, size});
+  const gridColumnStarts = getGridColumnStarts({sockets, size});
 
   return (
     <Layout align="center" justify="center" ml="xxs" variant="absolute">
@@ -41,9 +41,9 @@ const styles = {
   }),
 };
 
-const getGridColumnStarts = ({maxSockets, size}) => {
+const getGridColumnStarts = ({sockets, size}) => {
   const [row] = size;
-  switch (maxSockets) {
+  switch (sockets.length) {
     case 1:
       return [1];
     case 2:

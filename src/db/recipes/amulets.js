@@ -1,5 +1,6 @@
 import {ItemRarityType, PrefixType, RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
+import {isMagicRing} from '../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -7,37 +8,74 @@ const recipes = [
     name: '3 Magic Rings → 1 Magic Ring',
     sources: [
       {
-        id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        item: {
+          id: ids.Ring,
+          rarity: ItemRarityType.Magic,
+        },
+        test: isMagicRing,
       },
       {
-        id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        item: {
+          id: ids.Ring,
+          rarity: ItemRarityType.Magic,
+        },
+        test: isMagicRing,
       },
       {
-        id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        item: {
+          id: ids.Ring,
+          rarity: ItemRarityType.Magic,
+        },
+        test: isMagicRing,
       },
     ],
     target: {
-      id: ids.Amulet,
-      rarity: ItemRarityType.Magic,
+      item: {
+        id: ids.Amulet,
+        rarity: ItemRarityType.Magic,
+      },
     },
   },
   {
     name: '6 Perfect Gems (1 of each type) → 1 Prismatic Amulet',
     sources: [
-      ids.PerfectAmethyst,
-      ids.PerfectDiamond,
-      ids.PerfectEmerald,
-      ids.PerfectRuby,
-      ids.PerfectSapphire,
-      ids.PerfectTopaz,
+      {
+        item: {
+          id: ids.PerfectAmethyst,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectDiamond,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectEmerald,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectRuby,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectSapphire,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectTopaz,
+        },
+      },
     ],
     target: {
-      id: ids.Amulet,
-      rarity: ItemRarityType.Magic,
-      prefix: PrefixType.Prismatic,
+      item: {
+        id: ids.Amulet,
+        rarity: ItemRarityType.Magic,
+        prefix: PrefixType.Prismatic,
+      },
     },
   },
 ];

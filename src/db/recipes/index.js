@@ -6,6 +6,7 @@ import potions from './potions.js';
 import quests from './quests.js';
 import rings from './rings.js';
 import runes from './runes.js';
+import sockets from './sockets.js';
 
 export default [
   ...ammunitions,
@@ -16,4 +17,5 @@ export default [
   ...quests,
   ...rings,
   ...runes,
+  ...sockets,
 ];

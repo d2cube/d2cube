@@ -21,13 +21,13 @@ const colors = {
     rune: '#FFA500',
     socketed: '#484848',
     rarity: {
-      crafted: 'orange',
-      magic: '#4850b8',
+      crafted: '#FFA500',
+      magic: '#4169E1',
       normal: 'white',
-      rare: '#ccb67a',
+      rare: '#FFFF00',
       runewords: '#A59263',
-      set: '#00c400',
-      unique: '#908858',
+      set: '#00FF00',
+      unique: '#A59263',
     },
   },
   player: {
@@ -106,14 +106,13 @@ const spacings = {
 };
 
 const borderWidths = {
-  thin: '1px',
   border: '2px',
   frame: '40px',
 };
 
 const borders = {
   bordered: `${borderWidths.border} solid ${colors.interface.border}`,
-  socketed: `${borderWidths.thin} solid ${colors.item.socketed}`,
+  socketed: `${borderWidths.border} solid ${colors.item.socketed}`,
 };
 
 const zIndices = {
