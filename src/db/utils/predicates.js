@@ -19,6 +19,9 @@ export const isRarityEqual = isPropValueEqual('rarity');
 
 export const isTypeEqual = isPropValueEqual('type');
 
+export const isSize = (size) => (x) =>
+  x.size[0] === size[0] && x.size[1] === size[1]; // Simplify with a deepEqual utility
+
 export const isItemPropertyEqual = (property) =>
   isPropValueEqual(`properties.${property}`);
 

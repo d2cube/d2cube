@@ -3,6 +3,7 @@ import {merge} from 'uinix-fp';
 import {ItemRarityType, RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
+  hasSockets,
   isChippedGem,
   isMagicWeapon,
   isSocketableRare,
@@ -102,6 +103,36 @@ const recipes = [
       },
     },
   },
+  {
+    name: '1 Hel Rune + Scroll of Town Portal → Remove items from sockets',
+    sources: [
+      {
+        item: {
+          id: ids.Hel,
+        },
+      },
+      {
+        item: {
+          id: ids.ScrollOfTownPortal,
+        },
+      },
+      {
+        item: {
+          id: ids.Spear,
+          overrideDescription: [[{text: 'Any item with sockets.  This will destroy any socketed items.'}]],
+        },
+        test: hasSockets,
+      },
+    ],
+    target: {
+      transform: (sources) => {
+        const {item} = sources[2];
+        return merge(item)({
+          sockets: item.sockets.map(socket => null),
+        });
+      },
+    },
+  }
 ];
 
 export default mapRecipeProps({
