@@ -47,16 +47,19 @@ export const isMagic = isRarityEqual(ItemRarityType.Magic);
 
 export const isRare = isRarityEqual(ItemRarityType.Rare);
 
-// Socketable
-export const isSocketable = hasItemProperty(ItemPropertyType.MaxSockets);
+// Weapon/Armor
+export const isArmor = hasItemProperty(ItemPropertyType.Defense);
 
-export const hasSockets = (x) => x.sockets?.length > 0;
-
-// Weapon
 export const isWeapon = or([
   hasItemProperty(ItemPropertyType.Damage1H),
   hasItemProperty(ItemPropertyType.Damage2H),
 ]);
+
+export const isSocketable = hasItemProperty(ItemPropertyType.MaxSockets);
+
+export const isEthereal = isPropValueEqual('isEthereal')(true);
+
+export const hasSockets = (x) => x.sockets?.length > 0;
 
 /**
  * Composed

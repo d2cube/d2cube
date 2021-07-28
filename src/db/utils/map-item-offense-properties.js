@@ -23,6 +23,7 @@ const getAttackSpeedDescription = (value) => {
   return 'Very Fast';
 };
 
+// TODO: abstract and reuse for all items.
 export const mapItemOffenseProperties = (item) => {
   const {properties, type} = item;
 
@@ -47,8 +48,11 @@ export const mapItemOffenseProperties = (item) => {
   }
 
   if (properties[ItemPropertyType.Durability]) {
+    const maxDurability = properties[ItemPropertyType.Durability];
     description.push({
-      text: `Durability: ${properties[ItemPropertyType.Durability]}`,
+      text: `Durability: ${
+        item.durability || maxDurability
+      } of ${maxDurability}`,
     });
   }
 

@@ -6,6 +6,7 @@ export const RecipeType = {
   Potion: 'Potion',
   Quest: 'Quest',
   Rare: 'Rare',
+  RepairRecharge: 'Repair/Recharge',
   Ring: 'Ring',
   Rune: 'Rune',
   Socket: 'Socket',

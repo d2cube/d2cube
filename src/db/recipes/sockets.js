@@ -119,7 +119,14 @@ const recipes = [
       {
         item: {
           id: ids.Spear,
-          overrideDescription: [[{text: 'Any item with sockets.  This will destroy any socketed items.'}]],
+          overrideDescription: [
+            [
+              {
+                text: 'Any item with sockets.  This will destroy any socketed items.',
+              },
+            ],
+          ],
+          sockets: ['Jah', 'Ber', 'Ist'],
         },
         test: hasSockets,
       },
@@ -128,11 +135,11 @@ const recipes = [
       transform: (sources) => {
         const {item} = sources[2];
         return merge(item)({
-          sockets: item.sockets.map(socket => null),
+          sockets: item.sockets.map((socket) => null),
         });
       },
     },
-  }
+  },
 ];
 
 export default mapRecipeProps({

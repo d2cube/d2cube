@@ -9,7 +9,6 @@ const Backdrop = () => (
     loop
     muted
     as="video"
-    opacity="inactive"
     src={videoSrc}
     z="back"
     variant="fullscreen"

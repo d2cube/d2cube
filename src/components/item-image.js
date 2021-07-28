@@ -9,6 +9,7 @@ const defaultVersion = db.enums.GameVersionType.D2;
 
 const ItemImage = ({
   id,
+  isEthereal,
   isInactive,
   size,
   variants,
@@ -23,7 +24,7 @@ const ItemImage = ({
     <Image
       alt={id}
       src={src}
-      styleProps={{isInactive, size}}
+      styleProps={{isEthereal, isInactive, size}}
       styles={styles.item}
     />
   );

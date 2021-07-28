@@ -72,7 +72,7 @@ const keyframes = {
 };
 
 const opacities = {
-  inactive: '0.4',
+  inactive: '0.3',
   hover: '0.8',
 };
 

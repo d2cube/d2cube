@@ -52,9 +52,10 @@ const gridItem = ({position = [], size = []}) => ({
   gridColumnEnd: position[1] + size[1],
 });
 
-const item = ({theme, isInactive, size}) => ({
+const item = ({theme, isEthereal, isInactive, size}) => ({
+  filter: isInactive ? 'grayscale(100%)' : undefined,
   objectFit: 'cover',
-  opacity: isInactive ? 'inactive' : undefined,
+  opacity: isInactive || isEthereal ? 'inactive': undefined,
   padding: 'xxs',
   height: size[0] * theme.sizes.slot,
   width: size[1] * theme.sizes.slot,

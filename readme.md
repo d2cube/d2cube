@@ -60,7 +60,7 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [ ] 1 Ral Rune + 1 Thul Rune + 1 Perfect Amethyst + Normal (Basic) Rare Armor = Exceptional Rare Armor
 - [ ] 1 Fal Rune + 1 Um Rune + 1 Perfect Sapphire + Exceptional Rare Weapon = Elite Rare Weapon
 - [ ] 1 Ko Rune + 1 Pul Rune + 1 Perfect Amethyst + Exceptional Rare Armor = Elite Rare Armor
-- [ ] 1 Ort Rune + Weapon = Fully Repaired Weapon
+- [x] 1 Ort Rune + Weapon = Fully Repaired Weapon
 - [ ] 1 Ral Rune + Armor = Fully Repaired Armor
 - [x] 1 Hel Rune + Scroll of Town Portal + Any Socketed Item = Remove items from sockets
 - [ ] 1 Ral Rune + 1 Flawed Gem (any kind) + Armor = Fully Repaired and Recharged Armor

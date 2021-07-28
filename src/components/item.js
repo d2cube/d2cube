@@ -11,7 +11,7 @@ import ItemTooltip from './item-tooltip.js';
 const Item = ({isInactive, item: initialItem}) => {
   const styles = useStyles();
 
-  const {id, imageId} = initialItem;
+  const {id, imageId, isEthereal} = initialItem;
   const item = {
     ...getItemById(id),
     ...initialItem,
@@ -36,6 +36,7 @@ const Item = ({isInactive, item: initialItem}) => {
       >
         <ItemImage
           id={imageId || id}
+          isEthereal={isEthereal}
           isInactive={isInactive}
           size={size}
           variants={variants}
