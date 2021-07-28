@@ -1,6 +1,4 @@
-import {props} from 'uinix-fp';
-
-import {and, not, isEqualPropValue} from '../../utils/fp.js';
+import {and, or, not, isPropValueEqual} from '../../utils/fp.js';
 import {
   GemQualityType,
   ItemRarityType,
@@ -9,22 +7,33 @@ import {
   PotionCategoryType,
 } from '../enums/index.js';
 
-const getItemPropertyPath = (property) => props(`properties.${property}`);
-
 /**
  * Simple
  **/
 // Props
-export const isCategoryEqual = isEqualPropValue('category');
-export const isQualityEqual = isEqualPropValue('quality');
-export const isRarityEqual = isEqualPropValue('rarity');
-export const isTypeEqual = isEqualPropValue('type');
+export const isCategoryEqual = isPropValueEqual('category');
+
+export const isQualityEqual = isPropValueEqual('quality');
+
+export const isRarityEqual = isPropValueEqual('rarity');
+
+export const isTypeEqual = isPropValueEqual('type');
+
+export const isItemPropertyEqual = (property) =>
+  isPropValueEqual(`properties.${property}`);
+
+export const hasItemProperty = (property) =>
+  not(isItemPropertyEqual(property)(undefined));
 
 // Types
 export const isAmulet = isTypeEqual(ItemType.Amulet);
+
 export const isGem = isTypeEqual(ItemType.Gem);
+
 export const isPotion = isTypeEqual(ItemType.Potion);
+
 export const isRing = isTypeEqual(ItemType.Ring);
+
 export const isSpear = isTypeEqual(ItemType.Spear);
 
 // Quality
@@ -32,13 +41,19 @@ export const isChipped = isQualityEqual(GemQualityType.Chipped);
 
 // Rarity
 export const isMagic = isRarityEqual(ItemRarityType.Magic);
+
 export const isRare = isRarityEqual(ItemRarityType.Rare);
 
 // Socketable
-export const isSocketable = (x) =>
-  getItemPropertyPath(ItemPropertyType.MaxSockets)(x) > 0;
+export const isSocketable = hasItemProperty(ItemPropertyType.MaxSockets);
 
 export const hasSockets = (x) => x.sockets?.length > 0;
+
+// Weapon
+export const isWeapon = or([
+  hasItemProperty(ItemPropertyType.Damage1H),
+  hasItemProperty(ItemPropertyType.Damage2H),
+]);
 
 /**
  * Composed
@@ -56,6 +71,8 @@ export const isHealthPotion = and([
 export const isMagicAmulet = and([isMagic, isAmulet]);
 
 export const isMagicRing = and([isMagic, isRing]);
+
+export const isMagicWeapon = and([isMagic, isWeapon]);
 
 export const isManaPotion = and([
   isCategoryEqual(PotionCategoryType.Mana),

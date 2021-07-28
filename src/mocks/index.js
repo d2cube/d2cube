@@ -96,7 +96,7 @@ export const inventoryItems = [
   {
     id: 'StygianPike',
     position: [1, 9],
-    rarity: ItemRarityType.Rare,
+    rarity: ItemRarityType.Magic,
   },
 ].map((item) => ({
   ...getItemById(item.id),

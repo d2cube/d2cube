@@ -11,10 +11,14 @@ const Recipe = ({recipe}) => {
       <Text>{name}</Text>
       <Layout align="center" spacing="m">
         {sources.map((source) => (
-          <Item key={source.id} {...source} />
+          <Item
+            key={source.id}
+            isInactive={source.isInactive}
+            item={source.item}
+          />
         ))}
         <Text>➔</Text>
-        <Item {...target} />
+        <Item isInactive={target.isInactive} item={target.item} />
       </Layout>
     </Layout>
   );
