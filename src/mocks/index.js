@@ -76,8 +76,9 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'WarSpear',
+    id: 'WarFork',
     position: [1, 4],
+    sockets: ['Ber', 'Jah'],
   },
 ].map((item) => ({
   ...getItemById(item.id),

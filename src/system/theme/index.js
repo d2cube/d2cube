@@ -17,14 +17,18 @@ const colors = {
     popover: 'rgba(0, 0, 0, 0.9)',
   },
   item: {
-    crafted: 'orange',
-    magic: '#4850b8',
-    normal: 'white',
-    rare: '#ccb67a',
+    invalid: 'rgba(149, 53, 39, 0.5)',
     rune: '#FFA500',
-    runewords: '#A59263',
-    set: '#00c400',
-    unique: '#908858',
+    socketed: '#484848',
+    rarity: {
+      crafted: 'orange',
+      magic: '#4850b8',
+      normal: 'white',
+      rare: '#ccb67a',
+      runewords: '#A59263',
+      set: '#00c400',
+      unique: '#908858',
+    },
   },
   player: {
     life: '#a61313',
@@ -68,7 +72,7 @@ const keyframes = {
 };
 
 const opacities = {
-  inactive: '0.3',
+  inactive: '0.4',
   hover: '0.8',
 };
 
@@ -88,6 +92,7 @@ const sizes = {
     l: 60,
   },
   slot: slotSize,
+  socket: slotSize * 0.8,
 };
 
 const spacings = {
@@ -101,12 +106,14 @@ const spacings = {
 };
 
 const borderWidths = {
+  thin: '1px',
   border: '2px',
   frame: '40px',
 };
 
 const borders = {
   bordered: `${borderWidths.border} solid ${colors.interface.border}`,
+  socketed: `${borderWidths.thin} solid ${colors.item.socketed}`,
 };
 
 const zIndices = {

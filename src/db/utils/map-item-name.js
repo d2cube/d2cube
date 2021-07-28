@@ -10,7 +10,7 @@ export const mapItemName = (item) => {
     Array.from({length: tier}).join('+'),
   ]).join(' ');
 
-  const color = `item.${rarity}`;
+  const color = `item.rarity.${rarity}`;
 
   return {text: itemName, color};
 };

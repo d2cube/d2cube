@@ -1,6 +1,14 @@
 import frameSrc from '../../../static/assets/images/ui/frame.png';
 import stoneSrc from '../../../static/assets/images/ui/stone.jpg';
 
+const absolute = {
+  bottom: 0,
+  left: 0,
+  position: 'absolute',
+  right: 0,
+  top: 0,
+};
+
 const frame = {
   backgroundImage: `url(${stoneSrc})`,
   borderStyle: 'solid',
@@ -10,7 +18,20 @@ const frame = {
 };
 
 const fullscreen = {
-  height: '100vh',
+  bottom: 0,
+  height: '100%',
+  left: 0,
+  position: 'fixed',
+  right: 0,
+  top: 0,
+  width: '100%',
+};
+
+const socket = {
+  borderRadius: 'round',
+  border: 'socketed',
+  height: 'socket',
+  width: 'socket',
 };
 
 const splash = {
@@ -23,8 +44,18 @@ const splash = {
   top: 0,
 };
 
+const sticky = {
+  bottom: {
+    bottom: 0,
+    position: 'sticky',
+  },
+};
+
 export default {
+  absolute,
   fullscreen,
   frame,
+  socket,
   splash,
+  sticky,
 };

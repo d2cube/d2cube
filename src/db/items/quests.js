@@ -32,5 +32,5 @@ const items = {
 
 export default mapItems({
   size: [1, 1],
-  mapDescription: (item) => [[{text: item.name, color: 'item.crafted'}]],
+  mapDescription: (item) => [[{text: item.name, color: 'item.rarity.crafted'}]],
 })(items);

@@ -45,29 +45,26 @@ const grid = ({size, theme}) => {
   };
 };
 
-const item = ({theme, isInactive, item}) => {
-  const {position = [], size = []} = item;
-  return {
-    ...interactive,
-    gridRowStart: position[0],
-    gridRowEnd: position[0] + size[0],
-    gridColumnStart: position[1],
-    gridColumnEnd: position[1] + size[1],
-    objectFit: 'cover',
-    opacity: isInactive ? 'inactive' : undefined,
-    padding: 's',
-    height: size[0] * theme.sizes.slot,
-    width: size[1] * theme.sizes.slot,
-  };
-};
+const gridItem = ({position = [], size = []}) => ({
+  gridRowStart: position[0],
+  gridRowEnd: position[0] + size[0],
+  gridColumnStart: position[1],
+  gridColumnEnd: position[1] + size[1],
+});
+
+const item = ({theme, isInactive, size}) => ({
+  objectFit: 'cover',
+  opacity: isInactive ? 'inactive' : undefined,
+  padding: 'xxs',
+  height: size[0] * theme.sizes.slot,
+  width: size[1] * theme.sizes.slot,
+  ':hover': {
+    backgroundColor: 'item.hover',
+  },
+});
 
 const progress = ({color, percent}) => ({
   backgroundColor: color,
-  bottom: 0,
-  left: 0,
-  position: 'absolute',
-  right: 0,
-  top: 0,
   width: percent,
 });
 
@@ -76,6 +73,7 @@ export default {
   fadeIn,
   globe,
   grid,
+  gridItem,
   interactive,
   item,
   progress,

@@ -19,6 +19,7 @@ const Experience = ({experience}) => {
             percent,
           }}
           styles={styles.progress}
+          variant="absolute"
         />
         {Array.from({length: 10}).map((_, i) => (
           <Layout key={i} b="bordered" flex="auto" h="bar" z="forward" />

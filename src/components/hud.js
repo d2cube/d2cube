@@ -12,10 +12,9 @@ const Hud = () => {
     <Layout
       as="footer"
       align="center"
-      bottom={0}
       mx="auto"
-      position="sticky"
       spacing="m"
+      variant="sticky.bottom"
     >
       <Globe type="life" max={life.max} value={life.value} />
       <HudPanel player={player} />

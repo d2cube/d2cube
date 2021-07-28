@@ -9,16 +9,10 @@ const Backdrop = () => (
     loop
     muted
     as="video"
-    bottom={0}
-    h="100%"
-    left={0}
     opacity="inactive"
-    position="fixed"
-    right={0}
     src={videoSrc}
-    top={0}
-    w="100%"
     z="back"
+    variant="fullscreen"
   />
 );
 

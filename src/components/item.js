@@ -1,16 +1,14 @@
 import React from 'react';
-import {useStyles} from 'uinix-ui';
+import {Element, useStyles} from 'uinix-ui';
+import {ItemPropertyType} from '../db/enums/item-property-type.js';
 
-import db from '../db/index.js';
 import {getItemById} from '../queries/index.js';
-import {roll} from '../utils/index.js';
+import ItemImage from './item-image.js';
+import ItemSockets from './item-sockets.js';
 import ItemTooltip from './item-tooltip.js';
-import Image from './ui/image.js';
-
-const defaultVersion = db.enums.GameVersionType.D2;
 
 // TODO: organize and document logic in relevant utils
-const Item = ({isInactive, item: initialItem, version = defaultVersion}) => {
+const Item = ({isInactive, item: initialItem}) => {
   const styles = useStyles();
 
   const id = initialItem.baseId || initialItem.id;
@@ -18,18 +16,38 @@ const Item = ({isInactive, item: initialItem, version = defaultVersion}) => {
     ...getItemById(id),
     ...initialItem,
   };
-  const imageName = id + (item.variants ? roll(1, item.variants) : '');
-  const src = `${version}/items/${imageName}.webp`;
-  const description = item.baseDescription || item.mapDescription(item);
+  const {
+    baseDescription,
+    position,
+    size,
+    properties = {},
+    sockets,
+    variants,
+    mapDescription,
+  } = item;
+  const description = baseDescription || mapDescription(item);
 
   return (
     <ItemTooltip description={description}>
-      <Image
-        alt={id}
-        src={src}
-        styleProps={{isInactive, item}}
-        styles={styles.item}
-      />
+      <Element
+        position="relative"
+        styleProps={{position, size}}
+        styles={styles.gridItem}
+      >
+        <ItemImage
+          id={id}
+          isInactive={isInactive}
+          size={size}
+          variants={variants}
+        />
+        <Element bottom={0} left={0} position="absolute" right={0} top={0}>
+          <ItemSockets
+            maxSockets={properties[ItemPropertyType.MaxSockets]}
+            sockets={sockets}
+            size={size}
+          />
+        </Element>
+      </Element>
     </ItemTooltip>
   );
 };

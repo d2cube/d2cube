@@ -23,7 +23,7 @@ const PageLayout = ({children, title}) => {
   };
 
   return (
-    <Layout direction="column" spacing="l" variant="fullscreen">
+    <Layout direction="column" h="100vh" spacing="l">
       <Backdrop />
       <Soundtrack isEnabled={entered} />
       {entered ? (
