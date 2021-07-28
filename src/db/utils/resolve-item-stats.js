@@ -1,16 +1,16 @@
-import db from '../db/index.js';
+import {PropertyType} from '../enums/index.js';
 
-const {PropertyType} = db.enums;
-
-export const resolveStats = (stats) => {
+export const resolveItemStats = (stats, delimiter = '\n') => {
   if (Array.isArray(stats)) {
-    return stats.map((s) => resolveStats(s)).join(', ');
+    return stats.map((s) => resolveItemStats(s)).join(delimiter);
   }
 
   const {property, values} = stats;
   const [x, y] = values;
 
   switch (property) {
+    case PropertyType.AllSkillLevels:
+      return `+${x} to All Skills`;
     case PropertyType.AllResistances:
       return `All Resistances +${x}`;
     case PropertyType.AttackRating:

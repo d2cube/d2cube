@@ -1,4 +1,6 @@
 import {ItemPropertyType} from '../enums/index.js';
+import {mapItemClvl} from './map-item-clvl.js';
+import {mapItemIlvl} from './map-item-ilvl.js';
 
 // TODO: confirm logic
 const getAttackSpeedDescription = (value) => {
@@ -22,13 +24,11 @@ const getAttackSpeedDescription = (value) => {
 };
 
 export const mapItemOffenseProperties = (item) => {
-  const {clvl, ilvl, properties, type} = item;
+  const {properties, type} = item;
 
   const description = [];
 
-  description.push({
-    text: `Item Level: ${ilvl}`,
-  });
+  description.push(mapItemIlvl(item));
 
   if (properties[ItemPropertyType.Damage1H]) {
     description.push({
@@ -68,17 +68,14 @@ export const mapItemOffenseProperties = (item) => {
     });
   }
 
-  if (clvl) {
-    description.push({
-      text: `Required Level: ${clvl}`,
-    });
-  }
-
-  description.push({
-    text: `${type} class - ${getAttackSpeedDescription(
-      properties[ItemPropertyType.AttackSpeed],
-    )} attack speed`,
-  });
+  description.concat([
+    mapItemClvl(item),
+    {
+      text: `${type} class - ${getAttackSpeedDescription(
+        properties[ItemPropertyType.AttackSpeed],
+      )} attack speed`,
+    },
+  ]);
 
   return description;
 };

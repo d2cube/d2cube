@@ -2,7 +2,7 @@ import React from 'react';
 import {useStyles} from 'uinix-ui';
 
 import db from '../db/index.js';
-import {roll} from '../utils/index.js';
+import {roll} from '../utils/roll.js';
 import Image from './ui/image.js';
 
 const defaultVersion = db.enums.GameVersionType.D2;

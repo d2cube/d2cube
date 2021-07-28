@@ -5,6 +5,8 @@ import {
   PropertyType,
 } from '../enums/index.js';
 import {mapItems} from '../utils/map-items.js';
+import {mapItemClvl} from '../utils/map-item-clvl.js';
+import {resolveItemStats} from '../utils/resolve-item-stats.js';
 import ids from '../ids/index.js';
 
 const items = {
@@ -811,11 +813,11 @@ export default mapItems({
   mapDescription: (item) => [
     [{text: item.name}, {text: 'Can be inserted into socked items'}],
     [
-      {text: 'Weapons: {{}}', stats: item.stats.weapons},
-      {text: 'Armor: {{}}', stats: item.stats.armor},
-      {text: 'Helms: {{}}', stats: item.stats.armor},
-      {text: 'Shields: {{}}', stats: item.stats.shields},
+      {text: `Weapons: ${resolveItemStats(item.stats.weapons, ', ')}`},
+      {text: `Armor: ${resolveItemStats(item.stats.armor, ', ')}`},
+      {text: `Helms: ${resolveItemStats(item.stats.armor, ', ')}`},
+      {text: `Shields: ${resolveItemStats(item.stats.shields, ', ')}`},
     ],
-    [{text: `Required Level: ${item.clvl || 'None'}`}],
+    [mapItemClvl(item)],
   ],
 })(items);

@@ -4,7 +4,7 @@ export const mapItemName = (item) => {
   const {name, prefix, rarity, suffix, tier} = item;
 
   const itemName = filter()([
-    prefix || rarity,
+    prefix,
     name,
     suffix,
     Array.from({length: tier}).join('+'),

@@ -43,9 +43,8 @@ export const inventoryItems = [
     position: [1, 3],
   },
   {
-    id: 'Ring',
+    id: 'StoneOfJordan',
     position: [3, 6],
-    rarity: ItemRarityType.Magic,
   },
   {
     id: 'Ring',
@@ -79,6 +78,11 @@ export const inventoryItems = [
     id: 'WarFork',
     position: [1, 4],
     sockets: ['Ber', 'Jah'],
+  },
+  {
+    id: 'Pilum',
+    position: [1, 10],
+    rarity: ItemRarityType.Rare,
   },
 ].map((item) => ({
   ...getItemById(item.id),
