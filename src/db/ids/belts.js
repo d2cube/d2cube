@@ -1,0 +1,17 @@
+export default {
+  Sash: 'Sash',
+  LightBelt: 'LightBelt',
+  Belt: 'Belt',
+  HeavyBelt: 'HeavyBelt',
+  PlatedBelt: 'PlatedBelt',
+  DemonhideSash: 'DemonhideSash',
+  SharksinBelt: 'SharksinBelt',
+  MeshBelt: 'MeshBelt',
+  BattleBelt: 'BattleBelt',
+  WarBelt: 'WarBelt',
+  SpiderwebSash: 'SpiderwebSash',
+  VampirefangBelt: 'VampirefangBelt',
+  MithrilCoil: 'MithrilCoil',
+  TrollBelt: 'TrollBelt',
+  ColossusGirdle: 'ColossusGirdle',
+};

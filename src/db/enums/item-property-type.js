@@ -9,4 +9,5 @@ export const ItemPropertyType = {
   MinimumDexterity: 'MinimumDexterity',
   Durability: 'Durability',
   MaxSockets: 'MaxSockets',
+  PotionSlots: 'PotionSlots',
 };
