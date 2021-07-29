@@ -1,5 +1,5 @@
 import {
-  BodyArmorType,
+  ArmorType,
   ItemPropertyType,
   ItemTierType,
   ItemType,
@@ -14,7 +14,7 @@ const items = {
     id: ids.QuiltedArmor,
     name: 'Quilted Armor',
     tier: ItemTierType.Normal,
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     clvl: 5,
     ilvl: 1,
     properties: {
@@ -27,7 +27,7 @@ const items = {
   [ids.LeatherArmor]: {
     id: ids.LeatherArmor,
     name: 'Leather Armor',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     ilvl: 3,
     properties: {
@@ -40,7 +40,7 @@ const items = {
   [ids.HardLeatherArmor]: {
     id: ids.HardLeatherArmor,
     name: 'Hard Leather Armor',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     ilvl: 5,
     properties: {
@@ -53,7 +53,7 @@ const items = {
   [ids.StuddedLeather]: {
     id: ids.StuddedLeather,
     name: 'Studded Leather',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     ilvl: 8,
     properties: {
@@ -66,7 +66,7 @@ const items = {
   [ids.RingMail]: {
     id: ids.RingMail,
     name: 'Ring Mail',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     ilvl: 11,
     properties: {
@@ -79,7 +79,7 @@ const items = {
   [ids.ScaleMail]: {
     id: ids.ScaleMail,
     name: 'Scale Mail',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
     ilvl: 13,
     properties: {
@@ -92,7 +92,7 @@ const items = {
   [ids.ChainMail]: {
     id: ids.ChainMail,
     name: 'Chain Mail',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     ilvl: 15,
     properties: {
@@ -105,7 +105,7 @@ const items = {
   [ids.BreastPlate]: {
     id: ids.BreastPlate,
     name: 'Breast Plate',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     ilvl: 18,
     properties: {
@@ -118,7 +118,7 @@ const items = {
   [ids.SplintMail]: {
     id: ids.SplintMail,
     name: 'Splint Mail',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     ilvl: 20,
     properties: {
@@ -131,7 +131,7 @@ const items = {
   [ids.PlateMail]: {
     id: ids.PlateMail,
     name: 'Plate Mail',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
     ilvl: 24,
     properties: {
@@ -144,7 +144,7 @@ const items = {
   [ids.FieldPlate]: {
     id: ids.FieldPlate,
     name: 'Field Plate',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     ilvl: 28,
     properties: {
@@ -157,7 +157,7 @@ const items = {
   [ids.GothicPlate]: {
     id: ids.GothicPlate,
     name: 'Gothic Plate',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     ilvl: 32,
     properties: {
@@ -170,7 +170,7 @@ const items = {
   [ids.LightPlate]: {
     id: ids.LightPlate,
     name: 'Light Plate',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     ilvl: 35,
     properties: {
@@ -183,7 +183,7 @@ const items = {
   [ids.FullPlateMail]: {
     id: ids.FullPlateMail,
     name: 'Full Plate Mail',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
     ilvl: 37,
     properties: {
@@ -196,7 +196,7 @@ const items = {
   [ids.AncientArmor]: {
     id: ids.AncientArmor,
     name: 'Ancient Armor',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     ilvl: 40,
     properties: {
@@ -209,7 +209,7 @@ const items = {
   [ids.GhostArmor]: {
     id: ids.GhostArmor,
     name: 'Ghost Armor',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 22,
     ilvl: 34,
@@ -224,7 +224,7 @@ const items = {
   [ids.SerpentskinArmor]: {
     id: ids.SerpentskinArmor,
     name: 'Serpentskin Armor',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 24,
     ilvl: 36,
@@ -239,7 +239,7 @@ const items = {
   [ids.DemonhideArmor]: {
     id: ids.DemonhideArmor,
     name: 'Demonhide Armor',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 37,
@@ -254,7 +254,7 @@ const items = {
   [ids.TrellisedArmor]: {
     id: ids.TrellisedArmor,
     name: 'Trellised Armor',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 40,
@@ -269,7 +269,7 @@ const items = {
   [ids.LinkedMail]: {
     id: ids.LinkedMail,
     name: 'Linked Mail',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 42,
@@ -284,7 +284,7 @@ const items = {
   [ids.TigulatedMail]: {
     id: ids.TigulatedMail,
     name: 'Tigulated Mail',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 43,
@@ -299,7 +299,7 @@ const items = {
   [ids.MeshArmor]: {
     id: ids.MeshArmor,
     name: 'Mesh Armor',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 45,
@@ -314,7 +314,7 @@ const items = {
   [ids.Cuirass]: {
     id: ids.Cuirass,
     name: 'Cuirass',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 47,
@@ -329,7 +329,7 @@ const items = {
   [ids.RussetArmor]: {
     id: ids.RussetArmor,
     name: 'Russet Armor',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 49,
@@ -344,7 +344,7 @@ const items = {
   [ids.TemplarCoat]: {
     id: ids.TemplarCoat,
     name: 'Templar Coat',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 52,
@@ -359,7 +359,7 @@ const items = {
   [ids.SharktoothArmor]: {
     id: ids.SharktoothArmor,
     name: 'Sharktooth Armor',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 55,
@@ -374,7 +374,7 @@ const items = {
   [ids.EmbossedPlate]: {
     id: ids.EmbossedPlate,
     name: 'Embossed Plate',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 58,
@@ -389,7 +389,7 @@ const items = {
   [ids.MagePlate]: {
     id: ids.MagePlate,
     name: 'Mage Plate',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 60,
@@ -404,7 +404,7 @@ const items = {
   [ids.ChaosArmor]: {
     id: ids.ChaosArmor,
     name: 'Chaos Armor',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 64,
@@ -419,7 +419,7 @@ const items = {
   [ids.OrnatePlate]: {
     id: ids.OrnatePlate,
     name: 'Ornate Plate',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 64,
@@ -434,7 +434,7 @@ const items = {
   [ids.DuskShroud]: {
     id: ids.DuskShroud,
     name: 'Dusk Shroud',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 49,
     ilvl: 65,
@@ -449,7 +449,7 @@ const items = {
   [ids.Wyrmhide]: {
     id: ids.Wyrmhide,
     name: 'Wyrmhide',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 50,
     ilvl: 67,
@@ -464,7 +464,7 @@ const items = {
   [ids.ScarabHusk]: {
     id: ids.ScarabHusk,
     name: 'Scarab Husk',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 51,
     ilvl: 68,
@@ -479,7 +479,7 @@ const items = {
   [ids.WireFleece]: {
     id: ids.WireFleece,
     name: 'Wire Fleece',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 53,
     ilvl: 70,
@@ -494,7 +494,7 @@ const items = {
   [ids.DiamondMail]: {
     id: ids.DiamondMail,
     name: 'Diamond Mail',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 54,
     ilvl: 72,
@@ -509,7 +509,7 @@ const items = {
   [ids.LoricatedMail]: {
     id: ids.LoricatedMail,
     name: 'Loricated Mail',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 55,
     ilvl: 73,
@@ -524,7 +524,7 @@ const items = {
   [ids.Boneweave]: {
     id: ids.Boneweave,
     name: 'Boneweave',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 47,
     ilvl: 62,
@@ -539,7 +539,7 @@ const items = {
   [ids.GreatHauberk]: {
     id: ids.GreatHauberk,
     name: 'Great Hauberk',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 56,
     ilvl: 75,
@@ -554,7 +554,7 @@ const items = {
   [ids.BalrogSkin]: {
     id: ids.BalrogSkin,
     name: 'Balrog Skin',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 57,
     ilvl: 76,
@@ -569,7 +569,7 @@ const items = {
   [ids.HellforgePlate]: {
     id: ids.HellforgePlate,
     name: 'Hellforge Plate',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 59,
     ilvl: 78,
@@ -584,7 +584,7 @@ const items = {
   [ids.KrakenShell]: {
     id: ids.KrakenShell,
     name: 'Kraken Shell',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 61,
     ilvl: 81,
@@ -599,7 +599,7 @@ const items = {
   [ids.LacqueredPlate]: {
     id: ids.LacqueredPlate,
     name: 'Lacquered Plate',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 62,
     ilvl: 82,
@@ -614,7 +614,7 @@ const items = {
   [ids.ArchonPlate]: {
     id: ids.ArchonPlate,
     name: 'Archon Plate',
-    armorType: BodyArmorType.Light,
+    armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 63,
     ilvl: 84,
@@ -629,7 +629,7 @@ const items = {
   [ids.ShadowPlate]: {
     id: ids.ShadowPlate,
     name: 'Shadow Plate',
-    armorType: BodyArmorType.Heavy,
+    armorType: ArmorType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 64,
     ilvl: 83,
@@ -644,7 +644,7 @@ const items = {
   [ids.SacredArmor]: {
     id: ids.SacredArmor,
     name: 'Sacred Armor',
-    armorType: BodyArmorType.Medium,
+    armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 66,
     ilvl: 85,

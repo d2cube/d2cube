@@ -55,6 +55,13 @@ export const mapItemProperties = (item) => {
     });
   }
 
+  if (properties[ItemPropertyType.BlockChance]) {
+    const blockChance = properties[ItemPropertyType.BlockChance];
+    description.push({
+      text: `Chance to Block: ${blockChance}%`,
+    });
+  }
+
   if (properties[ItemPropertyType.Durability]) {
     const maxDurability = properties[ItemPropertyType.Durability];
     description.push({

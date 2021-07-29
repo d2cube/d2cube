@@ -1,4 +1,4 @@
-export {BodyArmorType} from './body-armor-type.js';
+export {ArmorType} from './armor-type.js';
 export {GameVersionType} from './game-version-type.js';
 export {GemCategoryType} from './gem-category-type.js';
 export {GemQualityType} from './gem-quality-type.js';
