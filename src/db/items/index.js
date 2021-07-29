@@ -16,6 +16,7 @@ import shields from './shields.js';
 import spears from './spears.js';
 import swords from './swords.js';
 import tomes from './tomes.js';
+import uniques from './uniques.js';
 
 export default {
   ...ammunitions,
@@ -32,4 +33,5 @@ export default {
   ...spears,
   ...swords,
   ...tomes,
+  ...uniques,
 };
