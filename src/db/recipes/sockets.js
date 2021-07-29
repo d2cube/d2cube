@@ -135,7 +135,7 @@ const recipes = [
       transform: (sources) => {
         const {item} = sources[2];
         return merge(item)({
-          sockets: item.sockets.map((socket) => null),
+          sockets: item.sockets.map(() => null),
         });
       },
     },

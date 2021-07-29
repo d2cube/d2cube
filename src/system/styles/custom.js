@@ -55,7 +55,7 @@ const gridItem = ({position = [], size = []}) => ({
 const item = ({theme, isEthereal, isInactive, size}) => ({
   filter: isInactive ? 'grayscale(100%)' : undefined,
   objectFit: 'cover',
-  opacity: isInactive || isEthereal ? 'inactive': undefined,
+  opacity: isInactive || isEthereal ? 'inactive' : undefined,
   padding: 'xxs',
   height: size[0] * theme.sizes.slot,
   width: size[1] * theme.sizes.slot,

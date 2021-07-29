@@ -1,6 +1,6 @@
 // Variables
 const brandColor = '#a58546';
-const slotSize = 50;
+const slotSize = 40;
 
 const animations = {
   easeInOut: '1s ease-in-out',

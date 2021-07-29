@@ -1,6 +1,6 @@
 import {navigate} from 'gatsby';
 import React, {useEffect, useState} from 'react';
-import {Layout} from 'uinix-ui';
+import {Layout, useStyles} from 'uinix-ui';
 
 import Hud from './hud.js';
 import Backdrop from './ui/backdrop.js';
@@ -10,8 +10,9 @@ import Soundtrack from './ui/soundtrack.js';
 let cachedEntered = false;
 
 const PageLayout = ({children, title}) => {
-  const isReady = useIsReady();
   const [entered, setEntered] = useState(cachedEntered);
+  const isReady = useIsReady();
+  const styles = useStyles();
 
   if (!isReady) {
     return null;
@@ -27,13 +28,18 @@ const PageLayout = ({children, title}) => {
       <Backdrop />
       <Soundtrack isEnabled={entered} />
       {entered ? (
-        <>
-          <Layout as="main" direction="column" flex="auto" px="l" spacing="l">
-            {title && <h2>{title}</h2>}
-            {children}
-          </Layout>
+        <Layout
+          as="main"
+          direction="column"
+          flex="auto"
+          px="l"
+          spacing="l"
+          styles={styles.fadeIn}
+        >
+          {title && <h2>{title}</h2>}
+          {children}
           <Hud />
-        </>
+        </Layout>
       ) : (
         <Splash onEnter={handleEnter} />
       )}

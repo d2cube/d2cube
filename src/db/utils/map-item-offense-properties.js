@@ -72,14 +72,15 @@ export const mapItemOffenseProperties = (item) => {
     });
   }
 
-  description.concat([
-    mapItemClvl(item),
-    {
-      text: `${type} class - ${getAttackSpeedDescription(
-        properties[ItemPropertyType.AttackSpeed],
-      )} attack speed`,
-    },
-  ]);
+  if (item.clvl) {
+    description.push(mapItemClvl(item));
+  }
+
+  description.push({
+    text: `${type} class - ${getAttackSpeedDescription(
+      properties[ItemPropertyType.AttackSpeed],
+    )} attack speed`,
+  });
 
   return description;
 };

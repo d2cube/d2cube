@@ -9,6 +9,7 @@ export const ItemType = {
   Rune: 'Rune',
   Scroll: 'Scroll',
   Spear: 'Spear',
+  Sword: 'Sword',
   Token: 'Token',
   Tome: 'Tome',
 };

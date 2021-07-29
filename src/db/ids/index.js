@@ -14,6 +14,7 @@ import runes from './runes.js';
 import rings from './rings.js';
 import scrolls from './scrolls.js';
 import spears from './spears.js';
+import swords from './swords.js';
 import tomes from './tomes.js';
 
 export default {
@@ -27,5 +28,6 @@ export default {
   ...runes,
   ...scrolls,
   ...spears,
+  ...swords,
   ...tomes,
 };
