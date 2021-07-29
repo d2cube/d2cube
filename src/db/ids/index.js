@@ -8,6 +8,7 @@ import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
 import axes from './axes.js';
 import bodyArmors from './body-armors.js';
+import daggers from './daggers.js';
 import gems from './gems.js';
 import helms from './helms.js';
 import javelins from './javelins.js';
@@ -27,6 +28,7 @@ export default {
   ...ammunitions,
   ...axes,
   ...bodyArmors,
+  ...daggers,
   ...gems,
   ...helms,
   ...javelins,
