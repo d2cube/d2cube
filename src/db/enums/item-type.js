@@ -4,6 +4,7 @@ export const ItemType = {
   BodyArmor: 'BodyArmor',
   Essence: 'Essence',
   Gem: 'Gem',
+  Helm: 'Helm',
   Javelin: 'Javelin',
   Potion: 'Potion',
   Ring: 'Ring',
