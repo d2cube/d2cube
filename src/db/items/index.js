@@ -4,6 +4,7 @@
 
 import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
+import axes from './axes.js';
 import bodyArmors from './body-armors.js';
 import gems from './gems.js';
 import helms from './helms.js';
@@ -22,6 +23,7 @@ import uniques from './uniques.js';
 export default {
   ...ammunitions,
   ...amulets,
+  ...axes,
   ...bodyArmors,
   ...gems,
   ...helms,

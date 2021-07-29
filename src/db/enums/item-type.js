@@ -1,6 +1,7 @@
 export const ItemType = {
   Ammunition: 'Ammunition',
   Amulet: 'Amulet',
+  Axe: 'Axe',
   BodyArmor: 'BodyArmor',
   Essence: 'Essence',
   Gem: 'Gem',
