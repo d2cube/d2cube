@@ -1,7 +1,7 @@
 import {ItemPropertyType, ItemTierType, ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemOffenseProperties} from '../utils/map-item-offense-properties.js';
+import {mapItemProperties} from '../utils/map-item-properties.js';
 import {mapItems} from '../utils/map-items.js';
 
 const items = {
@@ -754,7 +754,5 @@ const items = {
 
 export default mapItems({
   type: ItemType.Sword,
-  mapDescription: (item) => [
-    [mapItemName(item), ...mapItemOffenseProperties(item)],
-  ],
+  mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
 })(items);

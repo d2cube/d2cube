@@ -1,3 +1,4 @@
+import {roll} from '../../utils/roll.js';
 import {ItemPropertyType} from '../enums/index.js';
 import {mapItemClvl} from './map-item-clvl.js';
 import {mapItemIlvl} from './map-item-ilvl.js';
@@ -24,7 +25,7 @@ const getAttackSpeedDescription = (value) => {
 };
 
 // TODO: abstract and reuse for all items.
-export const mapItemOffenseProperties = (item) => {
+export const mapItemProperties = (item) => {
   const {properties, type} = item;
 
   const description = [];
@@ -47,11 +48,18 @@ export const mapItemOffenseProperties = (item) => {
     });
   }
 
+  if (properties[ItemPropertyType.Defense]) {
+    const defense = properties[ItemPropertyType.Defense];
+    description.push({
+      text: `Defense: ${roll(defense[0], defense[1])}`,
+    });
+  }
+
   if (properties[ItemPropertyType.Durability]) {
     const maxDurability = properties[ItemPropertyType.Durability];
     description.push({
       text: `Durability: ${
-        item.durability || maxDurability
+        item.durability || roll(0, maxDurability)
       } of ${maxDurability}`,
     });
   }
@@ -76,11 +84,13 @@ export const mapItemOffenseProperties = (item) => {
     description.push(mapItemClvl(item));
   }
 
-  description.push({
-    text: `${type} class - ${getAttackSpeedDescription(
-      properties[ItemPropertyType.AttackSpeed],
-    )} attack speed`,
-  });
+  if (ItemPropertyType.AttackSpeed in properties) {
+    description.push({
+      text: `${type} class - ${getAttackSpeedDescription(
+        properties[ItemPropertyType.AttackSpeed],
+      )} attack speed`,
+    });
+  }
 
   return description;
 };
