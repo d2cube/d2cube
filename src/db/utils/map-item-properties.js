@@ -32,6 +32,14 @@ export const mapItemProperties = (item) => {
 
   description.push(mapItemIlvl(item));
 
+  if (properties[ItemPropertyType.DamageThrow]) {
+    description.push({
+      text: `Throw Damage: ${properties[ItemPropertyType.DamageThrow].join(
+        ' to ',
+      )}`,
+    });
+  }
+
   if (properties[ItemPropertyType.Damage1H]) {
     description.push({
       text: `One-hand Damage: ${properties[ItemPropertyType.Damage1H].join(
