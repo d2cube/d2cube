@@ -89,14 +89,14 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'Falchion',
+    id: 'Kris',
     durability: 1,
     isEthereal: true,
     position: [1, 4],
     sockets: ['Ist', null, null],
   },
   {
-    id: 'StygianPike',
+    id: 'MilitaryAxe',
     durability: 1,
     position: [1, 9],
     rarity: ItemRarityType.Rare,

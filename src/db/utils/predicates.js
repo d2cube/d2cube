@@ -37,6 +37,10 @@ export const isPotion = isTypeEqual(ItemType.Potion);
 
 export const isRing = isTypeEqual(ItemType.Ring);
 
+export const isAxe = isTypeEqual(ItemType.Axe);
+
+export const isDagger = isTypeEqual(ItemType.Dagger);
+
 export const isSpear = isTypeEqual(ItemType.Spear);
 
 // Quality
