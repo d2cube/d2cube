@@ -67,8 +67,8 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [x] 1 Ral Rune + 1 Flawed Gem (any kind) + Armor = Fully Repaired and Recharged Armor
 - [x] 1 Hel Rune + Scroll of Town Portal + Any Socketed Item = Remove items from sockets
 - [x] 1 Twisted Essence of Suffering + 1 Charged Essence of Hatred + 1 Burning Essence of Terror + 1 Festering Essence of Destruction = Token of Absolution
-- [ ] Key of Terror + Key of Hate + Key of Destruction + Mephisto's Brain + Diablo's Horn + Baal's Eye = Pandemonium Event
-- [ ] Wirt's Leg + A Tome of Town Portal = Secret Cow Level
+- [x] Key of Terror + Key of Hate + Key of Destruction + Mephisto's Brain + Diablo's Horn + Baal's Eye = Pandemonium Event
+- [x] Wirt's Leg + A Tome of Town Portal = Secret Cow Level
 
 
 ## Runewords Checklist

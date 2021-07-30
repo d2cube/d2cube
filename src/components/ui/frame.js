@@ -12,7 +12,7 @@ const Frame = ({children, help, title}) => (
     variant="frame"
   >
     <Layout align="center" spacing="m">
-      <Text as="h2" variant="brand">
+      <Text as="h2" variant="diablo">
         {title}
       </Text>
       <Help text={help} />

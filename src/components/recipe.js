@@ -18,7 +18,11 @@ const Recipe = ({recipe}) => {
           />
         ))}
         <Text>➔</Text>
-        <Item isInactive={target.isInactive} item={target.item} />
+        {typeof target === 'string' ? (
+          <Text variant="diablo">{target}</Text>
+        ) : (
+          <Item isInactive={target.isInactive} item={target.item} />
+        )}
       </Layout>
     </Layout>
   );

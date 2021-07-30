@@ -54,11 +54,11 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
     const hasAllInactiveSources = inactiveSourceCount === sources.length;
 
     if (!(showAvailable && hasAllInactiveSources)) {
-      const {item: targetItem, transform} = recipe.target;
+      const {event, item: targetItem, transform} = recipe.target;
       recipes.push({
         ...recipe,
         sources,
-        target: {
+        target: event || {
           item: transform ? transform(sources) : targetItem,
           isInactive: hasInactiveSources,
         },

@@ -14,7 +14,7 @@ const Splash = ({onEnter}) => {
         spacing="m"
         styles={styles.fadeIn}
       >
-        <Text as="h1" pt="70%" variant="brand">
+        <Text as="h1" pt="70%" variant="diablo">
           d2cube
         </Text>
         <Button text="Enter" onClick={onEnter} />

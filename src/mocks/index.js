@@ -51,6 +51,10 @@ export const inventoryItems = [
     position: [1, 3],
   },
   {
+    id: 'KeyOfTerror',
+    position: [2, 3],
+  },
+  {
     id: 'StoneOfJordan',
     position: [3, 6],
   },
@@ -100,6 +104,22 @@ export const inventoryItems = [
     rarity: 'normal',
     durability: 1,
     position: [1, 9],
+  },
+  {
+    id: 'WirtsLeg',
+    position: [1, 10],
+  },
+  {
+    id: 'DiablosHorn',
+    position: [3, 10],
+  },
+  {
+    id: 'MephistosBrain',
+    position: [4, 10],
+  },
+  {
+    id: 'BaalsEye',
+    position: [4, 1],
   },
 ].map((item) => ({
   ...getItemById(item.id),

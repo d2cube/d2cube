@@ -38,8 +38,9 @@ const global = {
 };
 
 const variants = {
-  brand: {
+  diablo: {
     color: 'brand.primary',
+    fontFamily: 'diablo',
     margin: 0,
   },
 };

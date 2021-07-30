@@ -1,4 +1,5 @@
 import amulets from './amulets.js';
+import events from './events.js';
 import gems from './gems.js';
 import magics from './magics.js';
 import potions from './potions.js';
@@ -12,6 +13,7 @@ import stacks from './stacks.js';
 
 export default [
   ...amulets,
+  ...events,
   ...gems,
   ...magics,
   ...potions,

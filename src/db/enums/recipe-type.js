@@ -1,6 +1,7 @@
 export const RecipeType = {
   Amulet: 'Amulet',
   Gem: 'Gem',
+  Event: 'Event',
   Potion: 'Potion',
   Quest: 'Quest',
   Magic: 'Magic',
