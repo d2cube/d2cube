@@ -86,6 +86,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 21,
     ilvl: 33,
+    baseId: ids.Spear,
     imageId: ids.Spear,
     properties: {
       [ItemPropertyType.Damage2H]: [10, 37],
@@ -103,6 +104,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 24,
     ilvl: 36,
+    baseId: ids.Trident,
     imageId: ids.Trident,
     properties: {
       [ItemPropertyType.Damage2H]: [19, 37],
@@ -120,6 +122,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 41,
+    baseId: ids.Brandistock,
     imageId: ids.Brandistock,
     properties: {
       [ItemPropertyType.Damage2H]: [16, 40],
@@ -137,6 +140,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 44,
+    baseId: ids.Spetum,
     imageId: ids.Spetum,
     properties: {
       [ItemPropertyType.Damage2H]: [29, 50],
@@ -154,6 +158,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 47,
+    baseId: ids.Pike,
     imageId: ids.Pike,
     properties: {
       [ItemPropertyType.Damage2H]: [27, 114],
@@ -171,6 +176,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 43,
     ilvl: 58,
+    baseId: ids.Spear,
     imageId: ids.Spear,
     properties: {
       [ItemPropertyType.Damage2H]: [35, 119],
@@ -188,6 +194,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 49,
     ilvl: 66,
+    baseId: ids.Trident,
     imageId: ids.Trident,
     properties: {
       [ItemPropertyType.Damage2H]: [29, 114],
@@ -205,6 +212,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 55,
     ilvl: 74,
+    baseId: ids.Brandistock,
     imageId: ids.Brandistock,
     properties: {
       [ItemPropertyType.Damage2H]: [42, 92],
@@ -222,6 +230,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 62,
     ilvl: 83,
+    baseId: ids.Spetum,
     imageId: ids.Spetum,
     properties: {
       [ItemPropertyType.Damage2H]: [18, 155],
@@ -239,6 +248,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 66,
     ilvl: 85,
+    baseId: ids.Pike,
     imageId: ids.Pike,
     properties: {
       [ItemPropertyType.Damage2H]: [33, 1778],

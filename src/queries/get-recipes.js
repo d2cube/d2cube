@@ -59,7 +59,9 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
         ...recipe,
         sources,
         target: event || {
-          item: transform ? transform(sources) : targetItem,
+          item: transform
+            ? transform(sources.map((source) => source.item))
+            : targetItem,
           isInactive: hasInactiveSources,
         },
       });

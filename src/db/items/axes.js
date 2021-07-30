@@ -202,6 +202,7 @@ const items = {
     clvl: 25,
     ilvl: 31,
     size: [2, 1],
+    baseId: ids.HandAxe,
     imageId: ids.HandAxe,
     properties: {
       [ItemPropertyType.Damage1H]: [10, 21],
@@ -220,6 +221,7 @@ const items = {
     clvl: 22,
     ilvl: 34,
     size: [3, 2],
+    baseId: ids.Axe,
     imageId: ids.Axe,
     properties: {
       [ItemPropertyType.Damage1H]: [10, 33],
@@ -238,6 +240,7 @@ const items = {
     clvl: 25,
     ilvl: 39,
     size: [3, 2],
+    baseId: ids.DoubleAxe,
     imageId: ids.DoubleAxe,
     properties: {
       [ItemPropertyType.Damage1H]: [13, 38],
@@ -256,6 +259,7 @@ const items = {
     clvl: 25,
     ilvl: 43,
     size: [3, 2],
+    baseId: ids.MilitaryPick,
     imageId: ids.MilitaryPick,
     properties: {
       [ItemPropertyType.Damage1H]: [14, 34],
@@ -274,6 +278,7 @@ const items = {
     clvl: 25,
     ilvl: 48,
     size: [3, 2],
+    baseId: ids.WarAxe,
     imageId: ids.WarAxe,
     properties: {
       [ItemPropertyType.Damage1H]: [16, 45],
@@ -292,6 +297,7 @@ const items = {
     clvl: 25,
     ilvl: 34,
     size: [3, 2],
+    baseId: ids.LargeAxe,
     imageId: ids.LargeAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [14, 34],
@@ -310,6 +316,7 @@ const items = {
     clvl: 25,
     ilvl: 38,
     size: [3, 2],
+    baseId: ids.BroadAxe,
     imageId: ids.BroadAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [21, 49],
@@ -328,6 +335,7 @@ const items = {
     clvl: 25,
     ilvl: 42,
     size: [3, 2],
+    baseId: ids.BattleAxe,
     imageId: ids.BattleAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [24, 77],
@@ -346,6 +354,7 @@ const items = {
     clvl: 25,
     ilvl: 46,
     size: [4, 2],
+    baseId: ids.GreatAxe,
     imageId: ids.GreatAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [18, 70],
@@ -364,6 +373,7 @@ const items = {
     clvl: 25,
     ilvl: 51,
     size: [3, 2],
+    baseId: ids.GiantAxe,
     imageId: ids.GiantAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [43, 85],
@@ -382,6 +392,7 @@ const items = {
     clvl: 22,
     ilvl: 34,
     size: [2, 1],
+    baseId: ids.ThrowingAxe,
     imageId: ids.ThrowingAxe,
     properties: {
       [ItemPropertyType.DamageThrow]: [18, 33],
@@ -399,6 +410,7 @@ const items = {
     clvl: 25,
     ilvl: 41,
     size: [3, 2],
+    baseId: ids.BalancedAxe,
     imageId: ids.BalancedAxe,
     properties: {
       [ItemPropertyType.DamageThrow]: [24, 34],
@@ -416,6 +428,7 @@ const items = {
     clvl: 40,
     ilvl: 54,
     size: [2, 1],
+    baseId: ids.HandAxe,
     imageId: ids.HandAxe,
     properties: {
       [ItemPropertyType.Damage1H]: [33, 58],
@@ -434,6 +447,7 @@ const items = {
     clvl: 45,
     ilvl: 61,
     size: [3, 2],
+    baseId: ids.Axe,
     imageId: ids.Axe,
     properties: {
       [ItemPropertyType.Damage1H]: [38, 60],
@@ -452,6 +466,7 @@ const items = {
     clvl: 52,
     ilvl: 70,
     size: [3, 2],
+    baseId: ids.DoubleAxe,
     imageId: ids.DoubleAxe,
     properties: {
       [ItemPropertyType.Damage1H]: [33, 66],
@@ -470,6 +485,7 @@ const items = {
     clvl: 59,
     ilvl: 79,
     size: [3, 2],
+    baseId: ids.MilitaryPick,
     imageId: ids.MilitaryPick,
     properties: {
       [ItemPropertyType.Damage1H]: [30, 48],
@@ -488,6 +504,7 @@ const items = {
     clvl: 64,
     ilvl: 85,
     size: [3, 2],
+    baseId: ids.WarAxe,
     imageId: ids.WarAxe,
     properties: {
       [ItemPropertyType.Damage1H]: [24, 71],
@@ -506,6 +523,7 @@ const items = {
     clvl: 42,
     ilvl: 57,
     size: [3, 2],
+    baseId: ids.LargeAxe,
     imageId: ids.LargeAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [25, 123],
@@ -524,6 +542,7 @@ const items = {
     clvl: 48,
     ilvl: 65,
     size: [3, 2],
+    baseId: ids.BroadAxe,
     imageId: ids.BroadAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [62, 110],
@@ -542,6 +561,7 @@ const items = {
     clvl: 54,
     ilvl: 73,
     size: [3, 2],
+    baseId: ids.BattleAxe,
     imageId: ids.BattleAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [49, 137],
@@ -560,6 +580,7 @@ const items = {
     clvl: 61,
     ilvl: 82,
     size: [4, 2],
+    baseId: ids.GreatAxe,
     imageId: ids.GreatAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [59, 94],
@@ -578,6 +599,7 @@ const items = {
     clvl: 66,
     ilvl: 85,
     size: [3, 2],
+    baseId: ids.GiantAxe,
     imageId: ids.GiantAxe,
     properties: {
       [ItemPropertyType.Damage2H]: [60, 124],
@@ -596,6 +618,7 @@ const items = {
     clvl: 42,
     ilvl: 56,
     size: [2, 1],
+    baseId: ids.ThrowingAxe,
     imageId: ids.ThrowingAxe,
     properties: {
       [ItemPropertyType.DamageThrow]: [15, 66],
@@ -613,6 +636,7 @@ const items = {
     clvl: 60,
     ilvl: 80,
     size: [3, 2],
+    baseId: ids.BalancedAxe,
     imageId: ids.BalancedAxe,
     properties: {
       [ItemPropertyType.DamageThrow]: [7, 60],

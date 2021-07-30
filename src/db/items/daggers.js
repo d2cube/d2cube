@@ -106,6 +106,7 @@ const items = {
     clvl: 19,
     ilvl: 31,
     size: [2, 1],
+    baseId: ids.Dagger,
     imageId: ids.Dagger,
     properties: {
       [ItemPropertyType.Damage1H]: [6, 18],
@@ -124,6 +125,7 @@ const items = {
     clvl: 24,
     ilvl: 36,
     size: [2, 1],
+    baseId: ids.Dirk,
     imageId: ids.Dirk,
     properties: {
       [ItemPropertyType.Damage1H]: [10, 26],
@@ -142,6 +144,7 @@ const items = {
     clvl: 25,
     ilvl: 42,
     size: [3, 1],
+    baseId: ids.Kris,
     imageId: ids.Kris,
     properties: {
       [ItemPropertyType.Damage1H]: [15, 31],
@@ -160,6 +163,7 @@ const items = {
     clvl: 25,
     ilvl: 46,
     size: [3, 1],
+    baseId: ids.Blade,
     imageId: ids.Blade,
     properties: {
       [ItemPropertyType.Damage1H]: [19, 36],
@@ -178,6 +182,7 @@ const items = {
     clvl: 19,
     ilvl: 31,
     size: [2, 1],
+    baseId: ids.ThrowingKnife,
     imageId: ids.ThrowingKnife,
     properties: {
       [ItemPropertyType.DamageThrow]: [11, 24],
@@ -195,6 +200,7 @@ const items = {
     clvl: 22,
     ilvl: 39,
     size: [2, 1],
+    baseId: ids.BalancedKnife,
     imageId: ids.BalancedKnife,
     properties: {
       [ItemPropertyType.DamageThrow]: [14, 27],
@@ -212,6 +218,7 @@ const items = {
     clvl: 43,
     ilvl: 58,
     size: [2, 1],
+    baseId: ids.Dagger,
     imageId: ids.Dagger,
     properties: {
       [ItemPropertyType.Damage1H]: [23, 49],
@@ -230,6 +237,7 @@ const items = {
     clvl: 52,
     ilvl: 70,
     size: [2, 1],
+    baseId: ids.Dirk,
     imageId: ids.Dirk,
     properties: {
       [ItemPropertyType.Damage1H]: [37, 53],
@@ -248,6 +256,7 @@ const items = {
     clvl: 62,
     ilvl: 83,
     size: [3, 1],
+    baseId: ids.Kris,
     imageId: ids.Kris,
     properties: {
       [ItemPropertyType.Damage1H]: [15, 57],
@@ -266,6 +275,7 @@ const items = {
     clvl: 66,
     ilvl: 85,
     size: [3, 1],
+    baseId: ids.Blade,
     imageId: ids.Blade,
     properties: {
       [ItemPropertyType.Damage1H]: [31, 47],
@@ -284,6 +294,7 @@ const items = {
     clvl: 48,
     ilvl: 64,
     size: [2, 1],
+    baseId: ids.ThrowingKnife,
     imageId: ids.ThrowingKnife,
     properties: {
       [ItemPropertyType.DamageThrow]: [23, 54],
@@ -301,6 +312,7 @@ const items = {
     clvl: 57,
     ilvl: 77,
     size: [2, 1],
+    baseId: ids.BalancedKnife,
     imageId: ids.BalancedKnife,
     properties: {
       [ItemPropertyType.DamageThrow]: [23, 39],

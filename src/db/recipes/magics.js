@@ -58,12 +58,10 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[4];
-        return merge(item)({
+      transform: (sources) =>
+        merge(sources[4])({
           suffix: SuffixType.Leech,
-        });
-      },
+        }),
     },
   },
   {
@@ -103,10 +101,7 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[3];
-        return item;
-      },
+      transform: (sources) => sources[3],
     },
   },
   {
@@ -151,13 +146,11 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[3];
-        return merge(item)({
+      transform: (sources) =>
+        merge(sources[3])({
           rarity: ItemRarityType.Magic,
           sockets: Array.from({length: roll(1, 2)}).map(() => null),
-        });
-      },
+        }),
     },
   },
 ];

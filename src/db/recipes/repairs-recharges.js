@@ -29,7 +29,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[1];
+        const item = sources[1];
         return merge(item)({
           durability: item.properties[ItemPropertyType.Durability],
         });
@@ -61,7 +61,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[2];
+        const item = sources[2];
         return merge(item)({
           durability: item.properties[ItemPropertyType.Durability],
         });
@@ -78,7 +78,7 @@ const recipes = [
       },
       {
         item: {
-          id: ids.DuskShroud,
+          id: ids.ArchonPlate,
           overrideDescription: [
             [{text: 'Any non-ethereal armor (helms, belts, gloves etc)'}],
           ],
@@ -88,7 +88,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[1];
+        const item = sources[1];
         return merge(item)({
           durability: item.properties[ItemPropertyType.Durability],
         });
@@ -112,7 +112,7 @@ const recipes = [
       },
       {
         item: {
-          id: ids.DuskShroud,
+          id: ids.ArchonPlate,
           overrideDescription: [
             [{text: 'Any non-ethereal armor (helms, belts, gloves etc)'}],
           ],
@@ -122,7 +122,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[2];
+        const item = sources[2];
         return merge(item)({
           durability: item.properties[ItemPropertyType.Durability],
         });

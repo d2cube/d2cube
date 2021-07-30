@@ -157,3 +157,19 @@ export const isUnsocketedNormalShield = and([isUnsocketed, isNormalShield]);
 export const isUnsocketedNormalWeapon = and([isUnsocketed, isNormalWeapon]);
 
 export const isSocketedNormalWeapon = and([isSocketed, isNormal, isWeapon]);
+
+export const isExceptionalTierRareArmor = and([
+  isExceptionalTier,
+  isRare,
+  isArmor,
+]);
+
+export const isExceptionalTierRareWeapon = and([
+  isExceptionalTier,
+  isRare,
+  isWeapon,
+]);
+
+export const isNormalTierRareArmor = and([isNormalTier, isRare, isArmor]);
+
+export const isNormalTierRareWeapon = and([isNormalTier, isRare, isWeapon]);

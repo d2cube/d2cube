@@ -242,6 +242,7 @@ const items = {
     clvl: 18,
     ilvl: 30,
     size: [3, 1],
+    baseId: ids.ShortSword,
     imageId: ids.ShortSword,
     properties: {
       [ItemPropertyType.Damage1H]: [8, 22],
@@ -260,6 +261,7 @@ const items = {
     clvl: 25,
     ilvl: 43,
     size: [3, 1],
+    baseId: ids.Scimitar,
     imageId: ids.Scimitar,
     properties: {
       [ItemPropertyType.Damage1H]: [8, 21],
@@ -278,6 +280,7 @@ const items = {
     clvl: 23,
     ilvl: 35,
     size: [3, 1],
+    baseId: ids.Sabre,
     imageId: ids.Sabre,
     properties: {
       [ItemPropertyType.Damage1H]: [10, 24],
@@ -296,6 +299,7 @@ const items = {
     clvl: 25,
     ilvl: 37,
     size: [3, 1],
+    baseId: ids.Falchion,
     imageId: ids.Falchion,
     properties: {
       [ItemPropertyType.Damage1H]: [16, 35],
@@ -314,6 +318,7 @@ const items = {
     clvl: 25,
     ilvl: 37,
     size: [3, 2],
+    baseId: ids.CrystalSword,
     imageId: ids.CrystalSword,
     properties: {
       [ItemPropertyType.Damage1H]: [13, 35],
@@ -332,6 +337,7 @@ const items = {
     clvl: 25,
     ilvl: 40,
     size: [3, 2],
+    baseId: ids.BroadSword,
     imageId: ids.BroadSword,
     properties: {
       [ItemPropertyType.Damage1H]: [16, 34],
@@ -350,6 +356,7 @@ const items = {
     clvl: 25,
     ilvl: 44,
     size: [3, 2],
+    baseId: ids.LongSword,
     imageId: ids.LongSword,
     properties: {
       [ItemPropertyType.Damage1H]: [10, 42],
@@ -368,6 +375,7 @@ const items = {
     clvl: 25,
     ilvl: 49,
     size: [3, 1],
+    baseId: ids.WarSword,
     imageId: ids.WarSword,
     properties: {
       [ItemPropertyType.Damage1H]: [18, 43],
@@ -386,6 +394,7 @@ const items = {
     clvl: 25,
     ilvl: 37,
     size: [4, 1],
+    baseId: ids.TwoHandedSword,
     imageId: ids.TwoHandedSword,
     properties: {
       [ItemPropertyType.Damage1H]: [8, 26],
@@ -405,6 +414,7 @@ const items = {
     clvl: 25,
     ilvl: 42,
     size: [4, 1],
+    baseId: ids.Claymore,
     imageId: ids.Claymore,
     properties: {
       [ItemPropertyType.Damage1H]: [13, 30],
@@ -424,6 +434,7 @@ const items = {
     clvl: 25,
     ilvl: 45,
     size: [4, 1],
+    baseId: ids.GiantSword,
     imageId: ids.GiantSword,
     properties: {
       [ItemPropertyType.Damage1H]: [10, 37],
@@ -443,6 +454,7 @@ const items = {
     clvl: 25,
     ilvl: 48,
     size: [4, 1],
+    baseId: ids.BastardSword,
     imageId: ids.BastardSword,
     properties: {
       [ItemPropertyType.Damage1H]: [14, 40],
@@ -462,6 +474,7 @@ const items = {
     clvl: 25,
     ilvl: 49,
     size: [4, 2],
+    baseId: ids.Flamberge,
     imageId: ids.Flamberge,
     properties: {
       [ItemPropertyType.Damage1H]: [19, 35],
@@ -481,6 +494,7 @@ const items = {
     clvl: 25,
     ilvl: 54,
     size: [4, 2],
+    baseId: ids.GreatSword,
     imageId: ids.GreatSword,
     properties: {
       [ItemPropertyType.Damage1H]: [24, 40],
@@ -500,6 +514,7 @@ const items = {
     clvl: 42,
     ilvl: 56,
     size: [3, 1],
+    baseId: ids.ShortSword,
     imageId: ids.ShortSword,
     properties: {
       [ItemPropertyType.Damage1H]: [31, 59],
@@ -518,6 +533,7 @@ const items = {
     clvl: 45,
     ilvl: 61,
     size: [3, 1],
+    baseId: ids.Scimitar,
     imageId: ids.Scimitar,
     properties: {
       [ItemPropertyType.Damage1H]: [26, 46],
@@ -536,6 +552,7 @@ const items = {
     clvl: 47,
     ilvl: 63,
     size: [3, 1],
+    baseId: ids.Sabre,
     imageId: ids.Sabre,
     properties: {
       [ItemPropertyType.Damage1H]: [33, 45],
@@ -554,6 +571,7 @@ const items = {
     clvl: 51,
     ilvl: 69,
     size: [3, 1],
+    baseId: ids.Falchion,
     imageId: ids.Falchion,
     properties: {
       [ItemPropertyType.Damage1H]: [28, 68],
@@ -572,6 +590,7 @@ const items = {
     clvl: 54,
     ilvl: 73,
     size: [3, 2],
+    baseId: ids.CrystalSword,
     imageId: ids.CrystalSword,
     properties: {
       [ItemPropertyType.Damage1H]: [31, 35],
@@ -589,6 +608,7 @@ const items = {
     clvl: 58,
     ilvl: 78,
     size: [3, 2],
+    baseId: ids.BroadSword,
     imageId: ids.BroadSword,
     properties: {
       [ItemPropertyType.Damage1H]: [37, 53],
@@ -607,6 +627,7 @@ const items = {
     clvl: 61,
     ilvl: 82,
     size: [3, 2],
+    baseId: ids.LongSword,
     imageId: ids.LongSword,
     properties: {
       [ItemPropertyType.Damage1H]: [5, 77],
@@ -625,6 +646,7 @@ const items = {
     clvl: 66,
     ilvl: 85,
     size: [3, 1],
+    baseId: ids.WarSword,
     imageId: ids.WarSword,
     properties: {
       [ItemPropertyType.Damage1H]: [40, 50],
@@ -643,6 +665,7 @@ const items = {
     clvl: 44,
     ilvl: 59,
     size: [4, 1],
+    baseId: ids.TwoHandedSword,
     imageId: ids.TwoHandedSword,
     properties: {
       [ItemPropertyType.Damage1H]: [20, 56],
@@ -662,6 +685,7 @@ const items = {
     clvl: 49,
     ilvl: 66,
     size: [4, 1],
+    baseId: ids.Claymore,
     imageId: ids.Claymore,
     properties: {
       [ItemPropertyType.Damage1H]: [22, 62],
@@ -681,6 +705,7 @@ const items = {
     clvl: 53,
     ilvl: 71,
     size: [4, 1],
+    baseId: ids.GiantSword,
     imageId: ids.GiantSword,
     properties: {
       [ItemPropertyType.Damage1H]: [15, 75],
@@ -700,6 +725,7 @@ const items = {
     clvl: 57,
     ilvl: 77,
     size: [4, 1],
+    baseId: ids.BastardSword,
     imageId: ids.BastardSword,
     properties: {
       [ItemPropertyType.Damage1H]: [24, 54],
@@ -719,6 +745,7 @@ const items = {
     clvl: 80,
     ilvl: 60,
     size: [4, 2],
+    baseId: ids.Flamberge,
     imageId: ids.Flamberge,
     properties: {
       [ItemPropertyType.Damage1H]: [26, 70],
@@ -738,6 +765,7 @@ const items = {
     clvl: 63,
     ilvl: 85,
     size: [4, 2],
+    baseId: ids.GreatSword,
     imageId: ids.GreatSword,
     properties: {
       [ItemPropertyType.Damage1H]: [25, 65],

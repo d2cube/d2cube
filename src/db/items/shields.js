@@ -138,6 +138,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 22,
     ilvl: 34,
+    baseId: ids.Buckler,
     imageId: ids.Buckler,
     properties: {
       [ItemPropertyType.Defense]: [41, 49],
@@ -155,6 +156,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 37,
+    baseId: ids.SmallShield,
     imageId: ids.SmallShield,
     properties: {
       [ItemPropertyType.Defense]: [47, 55],
@@ -172,6 +174,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 42,
+    baseId: ids.LargeShield,
     imageId: ids.LargeShield,
     properties: {
       [ItemPropertyType.Defense]: [53, 61],
@@ -189,6 +192,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 45,
+    baseId: ids.KiteShield,
     imageId: ids.KiteShield,
     properties: {
       [ItemPropertyType.Defense]: [59, 67],
@@ -206,6 +210,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 42,
+    baseId: ids.SpikedShield,
     imageId: ids.SpikedShield,
     properties: {
       [ItemPropertyType.Defense]: [68, 78],
@@ -223,6 +228,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 48,
+    baseId: ids.BoneShield,
     imageId: ids.BoneShield,
     properties: {
       [ItemPropertyType.Defense]: [50, 151],
@@ -240,6 +246,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 22,
+    baseId: ids.TowerShield,
     imageId: ids.TowerShield,
     properties: {
       [ItemPropertyType.Defense]: [68, 78],
@@ -257,6 +264,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 56,
+    baseId: ids.GothicShield,
     imageId: ids.GothicShield,
     properties: {
       [ItemPropertyType.Defense]: [80, 93],
@@ -274,6 +282,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 43,
     ilvl: 58,
+    baseId: ids.Buckler,
     imageId: ids.Buckler,
     properties: {
       [ItemPropertyType.Defense]: [95, 110],
@@ -291,6 +300,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 45,
     ilvl: 61,
+    baseId: ids.SmallShield,
     imageId: ids.SmallShield,
     properties: {
       [ItemPropertyType.Defense]: [108, 123],
@@ -308,6 +318,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 48,
     ilvl: 64,
+    baseId: ids.LargeShield,
     imageId: ids.LargeShield,
     properties: {
       [ItemPropertyType.Defense]: [119, 135],
@@ -325,6 +336,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 54,
     ilvl: 72,
+    baseId: ids.KiteShield,
     imageId: ids.KiteShield,
     properties: {
       [ItemPropertyType.Defense]: [133, 148],
@@ -342,6 +354,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 51,
     ilvl: 68,
+    baseId: ids.SpikedShield,
     imageId: ids.SpikedShield,
     properties: {
       [ItemPropertyType.Defense]: [147, 163],
@@ -359,6 +372,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 57,
     ilvl: 76,
+    baseId: ids.BoneShield,
     imageId: ids.BoneShield,
     properties: {
       [ItemPropertyType.Defense]: [158, 173],
@@ -376,6 +390,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 59,
     ilvl: 79,
+    baseId: ids.TowerShield,
     imageId: ids.TowerShield,
     properties: {
       [ItemPropertyType.Defense]: [145, 161],
@@ -393,6 +408,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 63,
     ilvl: 84,
+    baseId: ids.GothicShield,
     imageId: ids.GothicShield,
     properties: {
       [ItemPropertyType.Defense]: [153, 170],

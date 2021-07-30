@@ -213,6 +213,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 22,
     ilvl: 34,
+    baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
       [ItemPropertyType.Defense]: [102, 117],
@@ -228,6 +229,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 24,
     ilvl: 36,
+    baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
       [ItemPropertyType.Defense]: [111, 126],
@@ -243,6 +245,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 37,
+    baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
       [ItemPropertyType.Defense]: [122, 136],
@@ -258,6 +261,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 40,
+    baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
       [ItemPropertyType.Defense]: [138, 153],
@@ -273,6 +277,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 42,
+    baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
       [ItemPropertyType.Defense]: [158, 172],
@@ -288,6 +293,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 43,
+    baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
       [ItemPropertyType.Defense]: [176, 190],
@@ -303,6 +309,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 45,
+    baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
       [ItemPropertyType.Defense]: [198, 213],
@@ -318,6 +325,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 47,
+    baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
       [ItemPropertyType.Defense]: [188, 202],
@@ -333,6 +341,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 49,
+    baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
       [ItemPropertyType.Defense]: [225, 243],
@@ -348,6 +357,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 52,
+    baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
       [ItemPropertyType.Defense]: [252, 274],
@@ -363,6 +373,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 55,
+    baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
       [ItemPropertyType.Defense]: [242, 258],
@@ -378,6 +389,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 58,
+    baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
       [ItemPropertyType.Defense]: [282, 303],
@@ -393,6 +405,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 60,
+    baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
       [ItemPropertyType.Defense]: [225, 261],
@@ -408,6 +421,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 64,
+    baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
       [ItemPropertyType.Defense]: [315, 342],
@@ -423,6 +437,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 64,
+    baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {
       [ItemPropertyType.Defense]: [417, 450],
@@ -438,6 +453,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 49,
     ilvl: 65,
+    baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
       [ItemPropertyType.Defense]: [361, 467],
@@ -453,6 +469,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 50,
     ilvl: 67,
+    baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
       [ItemPropertyType.Defense]: [364, 470],
@@ -468,6 +485,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 51,
     ilvl: 68,
+    baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
       [ItemPropertyType.Defense]: [369, 474],
@@ -483,6 +501,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 53,
     ilvl: 70,
+    baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
       [ItemPropertyType.Defense]: [375, 481],
@@ -498,6 +517,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 54,
     ilvl: 72,
+    baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
       [ItemPropertyType.Defense]: [383, 489],
@@ -513,6 +533,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 55,
     ilvl: 73,
+    baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
       [ItemPropertyType.Defense]: [390, 496],
@@ -528,6 +549,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 47,
     ilvl: 62,
+    baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
       [ItemPropertyType.Defense]: [399, 505],
@@ -543,6 +565,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 56,
     ilvl: 75,
+    baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
       [ItemPropertyType.Defense]: [395, 501],
@@ -558,6 +581,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 57,
     ilvl: 76,
+    baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
       [ItemPropertyType.Defense]: [410, 517],
@@ -573,6 +597,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 59,
     ilvl: 78,
+    baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
       [ItemPropertyType.Defense]: [421, 530],
@@ -588,6 +613,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 61,
     ilvl: 81,
+    baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
       [ItemPropertyType.Defense]: [417, 523],
@@ -603,6 +629,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 62,
     ilvl: 82,
+    baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
       [ItemPropertyType.Defense]: [433, 541],
@@ -618,6 +645,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 63,
     ilvl: 84,
+    baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
       [ItemPropertyType.Defense]: [410, 524],
@@ -633,6 +661,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 64,
     ilvl: 83,
+    baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
       [ItemPropertyType.Defense]: [446, 557],
@@ -648,6 +677,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 66,
     ilvl: 85,
+    baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {
       [ItemPropertyType.Defense]: [487, 600],

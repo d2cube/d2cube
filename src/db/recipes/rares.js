@@ -31,10 +31,7 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[2];
-        return item;
-      },
+      transform: (sources) => sources[2],
     },
   },
   {
@@ -86,10 +83,7 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[6];
-        return item;
-      },
+      transform: (sources) => sources[6],
     },
   },
 ];

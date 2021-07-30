@@ -71,6 +71,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 24,
     ilvl: 36,
+    baseId: ids.Sash,
     imageId: ids.Sash,
     properties: {
       [ItemPropertyType.Defense]: [29, 34],
@@ -85,6 +86,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 39,
+    baseId: ids.LightBelt,
     imageId: ids.LightBelt,
     properties: {
       [ItemPropertyType.Defense]: [31, 36],
@@ -99,6 +101,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 43,
+    baseId: ids.Belt,
     imageId: ids.Belt,
     properties: {
       [ItemPropertyType.Defense]: [35, 40],
@@ -113,6 +116,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 49,
+    baseId: ids.HeavyBelt,
     imageId: ids.HeavyBelt,
     properties: {
       [ItemPropertyType.Defense]: [37, 42],
@@ -127,6 +131,7 @@ const items = {
     tier: ItemTierType.Exceptional,
     clvl: 25,
     ilvl: 54,
+    baseId: ids.PlatedBelt,
     imageId: ids.PlatedBelt,
     properties: {
       [ItemPropertyType.Defense]: [41, 52],
@@ -141,6 +146,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 46,
     ilvl: 61,
+    baseId: ids.Sash,
     imageId: ids.Sash,
     properties: {
       [ItemPropertyType.Defense]: [55, 62],
@@ -155,6 +161,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 51,
     ilvl: 68,
+    baseId: ids.LightBelt,
     imageId: ids.LightBelt,
     properties: {
       [ItemPropertyType.Defense]: [56, 63],
@@ -169,6 +176,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 56,
     ilvl: 75,
+    baseId: ids.Belt,
     imageId: ids.Belt,
     properties: {
       [ItemPropertyType.Defense]: [58, 65],
@@ -183,6 +191,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 62,
     ilvl: 82,
+    baseId: ids.HeavyBelt,
     imageId: ids.HeavyBelt,
     properties: {
       [ItemPropertyType.Defense]: [59, 66],
@@ -197,6 +206,7 @@ const items = {
     tier: ItemTierType.Elite,
     clvl: 67,
     ilvl: 85,
+    baseId: ids.PlatedBelt,
     imageId: ids.PlatedBelt,
     properties: {
       [ItemPropertyType.Defense]: [61, 71],

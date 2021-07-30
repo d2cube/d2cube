@@ -14,7 +14,7 @@ export default {
   BarbedShield: 'BarbedShield',
   GrimShield: 'GrimShield',
   Pavise: 'Pavise',
-  AnchientShield: 'AnchientShield',
+  AncientShield: 'AncientShield',
   Heater: 'Heater',
   Luna: 'Luna',
   Hyperion: 'Hyperion',

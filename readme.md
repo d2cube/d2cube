@@ -10,6 +10,7 @@ So much to do, so little time, so much fun.
 - [ ] Rework `description` nested array (sectioned) shape.  Current setup might not be flexible.
 - [ ] Figure out logic on calculating and displaying stats and properties.
 - [ ] Create item instances (rolls)
+- [ ] Cleanup code (share utils/transforms/mappers/predicates)
 - [ ] Document all weapons/armors
 - [ ] Document all affixes
 - [ ] About page
@@ -57,10 +58,10 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [ ] 1 Tal Rune + 1 Shael Rune + 1 Perfect Diamond + Normal Unique Armor = Exceptional Version of Armor
 - [ ] 1 Lum Rune + 1 Pul Rune + 1 Perfect Emerald + Exceptional Unique Weapon = Elite Version of Weapon (Single Player and Ladder Only)
 - [ ] 1 Ko Rune + 1 Lem Rune + 1 Perfect Diamond + Exceptional Unique Armor = Elite Version of Armor (Single Player and Ladder Only)
-- [ ] 1 Ort Rune + 1 Amn Rune + 1 Perfect Sapphire + Normal (Basic) Rare Weapon = Exceptional Rare Weapon
-- [ ] 1 Ral Rune + 1 Thul Rune + 1 Perfect Amethyst + Normal (Basic) Rare Armor = Exceptional Rare Armor
-- [ ] 1 Fal Rune + 1 Um Rune + 1 Perfect Sapphire + Exceptional Rare Weapon = Elite Rare Weapon
-- [ ] 1 Ko Rune + 1 Pul Rune + 1 Perfect Amethyst + Exceptional Rare Armor = Elite Rare Armor
+- [x] 1 Ort Rune + 1 Amn Rune + 1 Perfect Sapphire + Normal (Basic) Rare Weapon = Exceptional Rare Weapon
+- [x] 1 Ral Rune + 1 Thul Rune + 1 Perfect Amethyst + Normal (Basic) Rare Armor = Exceptional Rare Armor
+- [x] 1 Fal Rune + 1 Um Rune + 1 Perfect Sapphire + Exceptional Rare Weapon = Elite Rare Weapon
+- [x] 1 Ko Rune + 1 Pul Rune + 1 Perfect Amethyst + Exceptional Rare Armor = Elite Rare Armor
 - [x] 1 Ort Rune + Weapon = Fully Repaired Weapon
 - [x] 1 Ort Rune + 1 Chipped Gem (any kind) + Weapon = Fully Repaired and Recharged Weapon
 - [x] 1 Ral Rune + Armor = Fully Repaired Armor

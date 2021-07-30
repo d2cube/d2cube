@@ -53,12 +53,10 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[4];
-        return merge(item)({
+      transform: (sources) =>
+        merge(sources[4])({
           sockets: [null],
-        });
-      },
+        }),
     },
   },
   {
@@ -102,12 +100,10 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[3];
-        return merge(item)({
+      transform: (sources) =>
+        merge(sources[3])({
           sockets: Array.from({length: roll(1, 2)}).map(() => null),
-        });
-      },
+        }),
     },
   },
   {
@@ -151,12 +147,10 @@ const recipes = [
       },
     ],
     target: {
-      transform: (sources) => {
-        const {item} = sources[3];
-        return merge(item)({
+      transform: (sources) =>
+        merge(sources[3])({
           sockets: Array.from({length: roll(1, 2)}).map(() => null),
-        });
-      },
+        }),
     },
   },
   {
@@ -189,7 +183,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[2];
+        const item = sources[2];
         return merge(item)({
           sockets: item.sockets.map(() => null),
         });
@@ -216,7 +210,7 @@ const recipes = [
       },
       {
         item: {
-          id: ids.DuskShroud,
+          id: ids.ArchonPlate,
           rarity: ItemRarityType.Normal,
           overrideDescription: [
             [
@@ -231,7 +225,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[3];
+        const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: roll(1, Math.min(maxSockets, 4))}).map(
@@ -276,7 +270,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[3];
+        const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: roll(1, Math.min(maxSockets, 6))}).map(
@@ -321,7 +315,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[3];
+        const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: roll(1, Math.min(maxSockets, 3))}).map(
@@ -366,7 +360,7 @@ const recipes = [
     ],
     target: {
       transform: (sources) => {
-        const {item} = sources[3];
+        const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: roll(1, Math.min(maxSockets, 4))}).map(

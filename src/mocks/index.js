@@ -93,8 +93,8 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'SplintMail',
-    rarity: 'normal',
+    id: 'CrystalSword',
+    rarity: 'rare',
     durability: 1,
     position: [1, 4],
     sockets: ['Jah', 'Ber', null],
