@@ -1,8 +1,6 @@
 export const RecipeType = {
-  Ammunition: 'Ammunition',
   Amulet: 'Amulet',
   Gem: 'Gem',
-  Javelin: 'Javelin',
   Potion: 'Potion',
   Quest: 'Quest',
   Rare: 'Rare',
@@ -10,4 +8,5 @@ export const RecipeType = {
   Ring: 'Ring',
   Rune: 'Rune',
   Socket: 'Socket',
+  Stack: 'Stack',
 };
