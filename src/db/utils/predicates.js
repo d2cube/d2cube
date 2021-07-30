@@ -6,6 +6,7 @@ import {
   ItemPropertyType,
   ItemType,
   PotionCategoryType,
+  ItemTierType,
 } from '../enums/index.js';
 
 /**
@@ -17,6 +18,8 @@ export const isCategoryEqual = isPropValueEqual('category');
 export const isQualityEqual = isPropValueEqual('quality');
 
 export const isRarityEqual = isPropValueEqual('rarity');
+
+export const isTierEqual = isPropValueEqual('tier');
 
 export const isTypeEqual = isPropValueEqual('type');
 
@@ -46,10 +49,9 @@ export const isSpear = isTypeEqual(ItemType.Spear);
 
 export const isSword = isTypeEqual(ItemType.Sword);
 
-// Quality
-export const isChipped = isQualityEqual(GemQualityType.Chipped);
-
 // Rarity
+export const isNormal = isRarityEqual(ItemRarityType.Normal);
+
 export const isMagic = isRarityEqual(ItemRarityType.Magic);
 
 export const isRare = isRarityEqual(ItemRarityType.Rare);
@@ -68,11 +70,27 @@ export const isEthereal = isPropValueEqual('isEthereal')(true);
 
 export const hasSockets = (x) => x.sockets?.length > 0;
 
+export const isNormalTier = isTierEqual(ItemTierType.Normal);
+
+export const isExceptionalTier = isTierEqual(ItemTierType.Exceptional);
+
+export const isEliteTier = isTierEqual(ItemTierType.Elite);
+
 /**
  * Composed
  **/
 export const isChippedGem = and([
   isQualityEqual(GemQualityType.Chipped),
+  isGem,
+]);
+
+export const isRegularGem = and([
+  isQualityEqual(GemQualityType.Regular),
+  isGem,
+]);
+
+export const isPerfectGem = and([
+  isQualityEqual(GemQualityType.Perfect),
   isGem,
 ]);
 
@@ -96,10 +114,7 @@ export const isManaPotion = and([
   isPotion,
 ]);
 
-export const isRegularGem = and([
-  isQualityEqual(GemQualityType.Regular),
-  isGem,
-]);
-
 // A socketable rare must be socketable and have no sockets
 export const isSocketableRare = and([isSocketable, isRare, not(hasSockets)]);
+
+export const isSocketedNormalWeapon = and([isNormal, hasSockets, isWeapon]);

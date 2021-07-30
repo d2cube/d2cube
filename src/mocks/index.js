@@ -89,9 +89,9 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'Kris',
+    id: 'BroadSword',
+    rarity: 'magic',
     durability: 1,
-    isEthereal: true,
     position: [1, 4],
     sockets: ['Ist', null, null],
   },
@@ -99,7 +99,8 @@ export const inventoryItems = [
     id: 'MilitaryAxe',
     durability: 1,
     position: [1, 9],
-    rarity: ItemRarityType.Rare,
+    sockets: [null, null, null],
+    rarity: ItemRarityType.Normal,
   },
 ].map((item) => ({
   ...getItemById(item.id),

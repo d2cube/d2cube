@@ -36,7 +36,7 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [x] 1 Perfect Skull + 1 Rare Item + Stone of Jordan = 1 High Quality New Rare Item of the same type
 - [x] 6 Perfect Skulls + 1 Rare Item = 1 Random Low Quality Rare Item of the same type
 - [x] 4 Health Potions (of any type) + Ruby (any type) + Magical Sword = A Magic Sword of the Leech
-- [ ] 3 Perfect Gems (of any type) + 1 Magic Item = 1 New Random Magic Item of the Same Type
+- [x] 3 Perfect Gems (of any type) + 1 Magic Item = 1 New Random Magic Item of the Same Type
 - [x] 6 Perfect Gems (1 of each type) + 1 Amulet (Magic) = Prismatic Amulet
 - [x] 1 Magic Ring + 1 Perfect Emerald + 1 Antidote Potion = 1 Jade Ring
 - [x] 1 Magic Ring + 1 Perfect Ruby + 1 Exploding Potion = 1 Garnet Ring
@@ -46,7 +46,7 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [ ] Diamond (any quality) + 1 Staff (any type and quality) + 1 Kris (any quality) + 1 Belt (any type and quality) = Savage Polearm Class Weapon
 - [x] 3 Health Potions + 3 Mana Potions + 1 Chipped Gem = 1 Rejuvenation Potion
 - [x] 3 Health Potions + 3 Mana Potions + 1 Gem (normal) = 1 Full Rejuvenation Potion
-- [ ] 3 Standard Gems (normal) and 1 Socketed Weapon (Any Type) = 1 Socketed Magic Weapon (of same type)
+- [x] 3 Standard Gems (normal) and 1 Socketed Weapon (Any Type) = 1 Socketed Magic Weapon (of same type)
 - [x] 3 Chipped Gems + 1 Magic Weapon = Socketed Magic Weapon
 - [ ] 3 Flawless Gems + 1 Magic Weapon = Socketed Magic Weapon
 - [ ] 1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + Normal Body Armor = Socketed Body Armor of same type

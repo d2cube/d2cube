@@ -14,6 +14,7 @@ export const ItemType = {
   Rune: 'Rune',
   Scroll: 'Scroll',
   Shield: 'Shield',
+  Skull: 'Skull',
   Spear: 'Spear',
   Sword: 'Sword',
   Token: 'Token',

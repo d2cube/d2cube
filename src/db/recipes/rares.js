@@ -6,7 +6,7 @@ import ids from '../ids/index.js';
 
 const recipes = [
   {
-    name: '1 Perfect Skull + 1 Stone of Jordan + 1 Rare Item → 1 High Quality New Rare Item of the same type',
+    name: '1 Perfect Skull + 1 Stone of Jordan + 1 Rare Item (any type) → 1 High Quality New Rare Item (of the same type)',
     sources: [
       {
         item: {
@@ -38,7 +38,7 @@ const recipes = [
     },
   },
   {
-    name: '6 Perfect Skulls + 1 Rare Item → 1 Random Low Quality Rare Item of the same type',
+    name: '6 Perfect Skulls + 1 Rare Item (any type) → 1 Random Low Quality Rare Item (of the same type)',
     sources: [
       {
         item: {
