@@ -49,6 +49,8 @@ export const isSpear = isTypeEqual(ItemType.Spear);
 
 export const isSword = isTypeEqual(ItemType.Sword);
 
+export const isBodyArmor = isTypeEqual(ItemType.BodyArmor);
+
 // Rarity
 export const isNormal = isRarityEqual(ItemRarityType.Normal);
 
@@ -68,7 +70,9 @@ export const isSocketable = hasItemProperty(ItemPropertyType.MaxSockets);
 
 export const isEthereal = isPropValueEqual('isEthereal')(true);
 
-export const hasSockets = (x) => x.sockets?.length > 0;
+export const isSocketed = (x) => x.sockets?.length > 0;
+
+export const isUnsocketed = not(isSocketed);
 
 export const isNormalTier = isTierEqual(ItemTierType.Normal);
 
@@ -81,6 +85,11 @@ export const isEliteTier = isTierEqual(ItemTierType.Elite);
  **/
 export const isChippedGem = and([
   isQualityEqual(GemQualityType.Chipped),
+  isGem,
+]);
+
+export const isFlawlessGem = and([
+  isQualityEqual(GemQualityType.Flawless),
   isGem,
 ]);
 
@@ -114,7 +123,13 @@ export const isManaPotion = and([
   isPotion,
 ]);
 
-// A socketable rare must be socketable and have no sockets
-export const isSocketableRare = and([isSocketable, isRare, not(hasSockets)]);
+export const isNormalBodyArmor = and([isNormal, isBodyArmor]);
 
-export const isSocketedNormalWeapon = and([isNormal, hasSockets, isWeapon]);
+export const isUnsocketedRare = and([isUnsocketed, isRare]);
+
+export const isUnsocketedNormalBodyArmor = and([
+  isUnsocketed,
+  isNormalBodyArmor,
+]);
+
+export const isSocketedNormalWeapon = and([isSocketed, isNormal, isWeapon]);

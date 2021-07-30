@@ -1,4 +1,5 @@
 import db from '../db/index.js';
+import {createItem} from '../utils/create-item.js';
 
 /**
  * Returns true and removes the item if it is found in the stack.
@@ -39,10 +40,10 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
       const sourceItem = source.item;
       const matchedItem = findItem(itemStack, sourceItem, source.test);
       const isInactive = showAvailable ? !matchedItem : false;
-      sources.push({
-        item: showAvailable ? matchedItem || sourceItem : sourceItem,
-        isInactive,
-      });
+      const item = createItem(
+        showAvailable ? matchedItem || sourceItem : sourceItem,
+      );
+      sources.push({item, isInactive});
 
       if (isInactive) {
         inactiveSourceCount++;

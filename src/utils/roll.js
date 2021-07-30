@@ -1,1 +1,2 @@
-export const roll = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+export const roll = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;

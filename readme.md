@@ -48,8 +48,8 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [x] 3 Health Potions + 3 Mana Potions + 1 Gem (normal) = 1 Full Rejuvenation Potion
 - [x] 3 Standard Gems (normal) and 1 Socketed Weapon (Any Type) = 1 Socketed Magic Weapon (of same type)
 - [x] 3 Chipped Gems + 1 Magic Weapon = Socketed Magic Weapon
-- [ ] 3 Flawless Gems + 1 Magic Weapon = Socketed Magic Weapon
-- [ ] 1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + Normal Body Armor = Socketed Body Armor of same type
+- [x] 3 Flawless Gems + 1 Magic Weapon = Socketed Magic Weapon
+- [x] 1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + Normal Body Armor = Socketed Body Armor of same type
 - [ ] 1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + Normal Weapon = Socketed Weapon of same type
 - [ ] 1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + Normal Helm = Socketed Helm of same type
  - [ ] 1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + Normal Shield = Socketed Shield of same type

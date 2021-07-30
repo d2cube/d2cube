@@ -47,7 +47,7 @@ export const inventoryItems = [
     position: [1, 2],
   },
   {
-    id: 'Bolts',
+    id: 'FlawlessTopaz',
     position: [1, 3],
   },
   {
@@ -89,18 +89,18 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'BroadSword',
-    rarity: 'magic',
+    id: 'SplintMail',
+    rarity: 'normal',
     durability: 1,
     position: [1, 4],
-    sockets: ['Ist', null, null],
+    sockets: ['Jah', 'Ber', null],
   },
   {
     id: 'MilitaryAxe',
+    rarity: 'magic',
     durability: 1,
+    sockets: [],
     position: [1, 9],
-    sockets: [null, null, null],
-    rarity: ItemRarityType.Normal,
   },
 ].map((item) => ({
   ...getItemById(item.id),

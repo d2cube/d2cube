@@ -1,5 +1,6 @@
 import {merge} from 'uinix-fp';
 
+import {roll} from '../../utils/roll.js';
 import {ItemRarityType, RecipeType, SuffixType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
@@ -136,7 +137,7 @@ const recipes = [
         item: {
           id: ids.CrystalSword,
           rarity: ItemRarityType.Normal,
-          sockets: [null, null],
+          sockets: Array.from({length: roll(1, 6)}).map(() => null),
           overrideDescription: [
             [
               {
@@ -154,7 +155,7 @@ const recipes = [
         const {item} = sources[3];
         return merge(item)({
           rarity: ItemRarityType.Magic,
-          sockets: [null, null],
+          sockets: Array.from({length: roll(1, 2)}).map(() => null),
         });
       },
     },
