@@ -10,3 +10,4 @@ export {PotionCategoryType} from './potion-category-type.js';
 export {PrefixType} from './prefix-type.js';
 export {PropertyType} from './property-type.js';
 export {RecipeType} from './recipe-type.js';
+export {SuffixType} from './suffix-type.js';

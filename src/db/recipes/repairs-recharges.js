@@ -17,7 +17,7 @@ const recipes = [
       },
       {
         item: {
-          id: ids.Spear,
+          id: ids.CrystalSword,
           overrideDescription: [[{text: 'Any non-ethereal weapon'}]],
           properties: {},
         },
@@ -25,7 +25,6 @@ const recipes = [
       },
     ],
     target: {
-      item: {id: ids.Spear},
       transform: (sources) => {
         const {item} = sources[1];
         return merge(item)({

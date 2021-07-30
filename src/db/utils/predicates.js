@@ -1,5 +1,6 @@
 import {and, or, not, isPropValueEqual} from '../../utils/fp.js';
 import {
+  GemCategoryType,
   GemQualityType,
   ItemRarityType,
   ItemPropertyType,
@@ -43,6 +44,8 @@ export const isDagger = isTypeEqual(ItemType.Dagger);
 
 export const isSpear = isTypeEqual(ItemType.Spear);
 
+export const isSword = isTypeEqual(ItemType.Sword);
+
 // Quality
 export const isChipped = isQualityEqual(GemQualityType.Chipped);
 
@@ -73,6 +76,8 @@ export const isChippedGem = and([
   isGem,
 ]);
 
+export const isRuby = and([isCategoryEqual(GemCategoryType.Ruby), isGem]);
+
 export const isHealthPotion = and([
   isCategoryEqual(PotionCategoryType.Health),
   isPotion,
@@ -81,6 +86,8 @@ export const isHealthPotion = and([
 export const isMagicAmulet = and([isMagic, isAmulet]);
 
 export const isMagicRing = and([isMagic, isRing]);
+
+export const isMagicSword = and([isMagic, isSword]);
 
 export const isMagicWeapon = and([isMagic, isWeapon]);
 

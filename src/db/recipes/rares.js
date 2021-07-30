@@ -20,7 +20,7 @@ const recipes = [
       },
       {
         item: {
-          id: ids.Spear,
+          id: ids.CrystalSword,
           rarity: ItemRarityType.Rare,
           overrideDescription: [
             [{text: 'Rare Item', color: 'item.rarity.rare'}],
@@ -72,7 +72,7 @@ const recipes = [
       },
       {
         item: {
-          id: ids.Spear,
+          id: ids.CrystalSword,
           rarity: ItemRarityType.Rare,
           overrideDescription: [
             [{text: 'Rare Item', color: 'item.rarity.rare'}],

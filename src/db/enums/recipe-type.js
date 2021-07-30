@@ -3,6 +3,7 @@ export const RecipeType = {
   Gem: 'Gem',
   Potion: 'Potion',
   Quest: 'Quest',
+  Magic: 'Magic',
   Rare: 'Rare',
   RepairRecharge: 'Repair/Recharge',
   Ring: 'Ring',

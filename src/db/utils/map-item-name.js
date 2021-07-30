@@ -6,7 +6,7 @@ export const mapItemName = (item) => {
   const itemName = filter()([
     prefix,
     name,
-    suffix,
+    suffix ? `of ${suffix}` : '',
     Array.from({length: tier}).join('+'),
   ]).join(' ');
 

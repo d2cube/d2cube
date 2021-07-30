@@ -7,7 +7,8 @@ An interactive D2 cube and runeword companion.
 ## TODO
 So much to do, so little time, so much fun.
 
-- [ ] Rework `description` nested array (sectioned) shape.  Might not be flexible.
+- [ ] Rework `description` nested array (sectioned) shape.  Current setup might not be flexible.
+- [ ] Figure out logic on calculating and displaying stats and properties.
 - [ ] Create item instances (rolls)
 - [ ] Document all weapons/armors
 - [ ] Document all affixes
@@ -28,13 +29,13 @@ Reference: https://diablo.fandom.com/wiki/Horadric_Cube
 - [x] 2 Quivers of Bolts = 1 Quiver of Arrows
 - [x] 2 Quivers of Arrows = 1 Quiver of Bolts
 - [x] 1 Spear + 1 Quiver of Arrows = 1 Stack of Javelins
-- [ ] 1 Axe + 1 Dagger = Throwing Axe
+- [x] 1 Axe + 1 Dagger = Throwing Axe
 - [x] Strangling Gas Potion + any type of Healing Potion = 1 Antidote Potion
 - [x] Runes
 - [x] 3 Perfect Skulls + 1 Rare Item + Stone of Jordan = Add 1 Socket To a Rare Item
 - [x] 1 Perfect Skull + 1 Rare Item + Stone of Jordan = 1 High Quality New Rare Item of the same type
 - [x] 6 Perfect Skulls + 1 Rare Item = 1 Random Low Quality Rare Item of the same type
-- [ ] 4 Health Potions (of any type) + Ruby (any type) + Magical Sword = A Magic Sword of the Leech
+- [x] 4 Health Potions (of any type) + Ruby (any type) + Magical Sword = A Magic Sword of the Leech
 - [ ] 3 Perfect Gems (of any type) + 1 Magic Item = 1 New Random Magic Item of the Same Type
 - [x] 6 Perfect Gems (1 of each type) + 1 Amulet (Magic) = Prismatic Amulet
 - [x] 1 Magic Ring + 1 Perfect Emerald + 1 Antidote Potion = 1 Jade Ring
