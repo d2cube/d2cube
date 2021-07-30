@@ -9,6 +9,9 @@ import {
   isMagicWeapon,
   isSocketed,
   isUnsocketedNormalBodyArmor,
+  isUnsocketedNormalHelm,
+  isUnsocketedNormalShield,
+  isUnsocketedNormalWeapon,
   isUnsocketedRare,
 } from '../utils/predicates.js';
 import ids from '../ids/index.js';
@@ -218,11 +221,147 @@ const recipes = [
           overrideDescription: [
             [
               {text: 'Adds 1-4 sockets to an unsocketed normal body armor.'},
-              {text: 'Does not work with low-quality or superior armor.'},
+              {text: 'Does not work with low-quality or superior items.'},
+              {text: 'Cannot add sockets beyond the max socket of the item.'},
             ],
           ],
         },
         test: isUnsocketedNormalBodyArmor,
+      },
+    ],
+    target: {
+      transform: (sources) => {
+        const {item} = sources[3];
+        const maxSockets = item.properties[ItemPropertyType.MaxSockets];
+        return merge(item)({
+          sockets: Array.from({length: roll(1, Math.min(maxSockets, 4))}).map(
+            () => null,
+          ),
+        });
+      },
+    },
+  },
+  {
+    name: '1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + 1 Normal Weapon → Socketed Weapon (of the same type)',
+    sources: [
+      {
+        item: {
+          id: ids.Ral,
+        },
+      },
+      {
+        item: {
+          id: ids.Amn,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectAmethyst,
+        },
+      },
+      {
+        item: {
+          id: ids.CrystalSword,
+          rarity: ItemRarityType.Normal,
+          overrideDescription: [
+            [
+              {text: 'Adds 1-6 sockets to an unsocketed normal weapon.'},
+              {text: 'Does not work with low-quality or superior items.'},
+              {text: 'Cannot add sockets beyond the max socket of the item.'},
+            ],
+          ],
+        },
+        test: isUnsocketedNormalWeapon,
+      },
+    ],
+    target: {
+      transform: (sources) => {
+        const {item} = sources[3];
+        const maxSockets = item.properties[ItemPropertyType.MaxSockets];
+        return merge(item)({
+          sockets: Array.from({length: roll(1, Math.min(maxSockets, 6))}).map(
+            () => null,
+          ),
+        });
+      },
+    },
+  },
+  {
+    name: '1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + 1 Normal Helm → Socketed Helm (of the same type)',
+    sources: [
+      {
+        item: {
+          id: ids.Ral,
+        },
+      },
+      {
+        item: {
+          id: ids.Thul,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectSapphire,
+        },
+      },
+      {
+        item: {
+          id: ids.Crown,
+          rarity: ItemRarityType.Normal,
+          overrideDescription: [
+            [
+              {text: 'Adds 1-3 sockets to an unsocketed normal helm.'},
+              {text: 'Does not work with low-quality or superior items.'},
+              {text: 'Cannot add sockets beyond the max socket of the item.'},
+            ],
+          ],
+        },
+        test: isUnsocketedNormalHelm,
+      },
+    ],
+    target: {
+      transform: (sources) => {
+        const {item} = sources[3];
+        const maxSockets = item.properties[ItemPropertyType.MaxSockets];
+        return merge(item)({
+          sockets: Array.from({length: roll(1, Math.min(maxSockets, 3))}).map(
+            () => null,
+          ),
+        });
+      },
+    },
+  },
+  {
+    name: '1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + 1 Normal Shield → Socketed Shield (of the same type)',
+    sources: [
+      {
+        item: {
+          id: ids.Tal,
+        },
+      },
+      {
+        item: {
+          id: ids.Amn,
+        },
+      },
+      {
+        item: {
+          id: ids.PerfectRuby,
+        },
+      },
+      {
+        item: {
+          id: ids.Monarch,
+          rarity: ItemRarityType.Normal,
+          overrideDescription: [
+            [
+              {text: 'Adds 1-4 sockets to an unsocketed normal shield.'},
+              {text: 'Does not work with low-quality or superior items.'},
+              {text: 'Cannot add sockets beyond the max socket of the item.'},
+            ],
+          ],
+        },
+        test: isUnsocketedNormalShield,
       },
     ],
     target: {

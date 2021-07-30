@@ -45,6 +45,10 @@ export const isAxe = isTypeEqual(ItemType.Axe);
 
 export const isDagger = isTypeEqual(ItemType.Dagger);
 
+export const isHelm = isTypeEqual(ItemType.Helm);
+
+export const isShield = isTypeEqual(ItemType.Shield);
+
 export const isSpear = isTypeEqual(ItemType.Spear);
 
 export const isSword = isTypeEqual(ItemType.Sword);
@@ -70,6 +74,8 @@ export const isSocketable = hasItemProperty(ItemPropertyType.MaxSockets);
 
 export const isEthereal = isPropValueEqual('isEthereal')(true);
 
+export const isNonEthereal = not(isEthereal);
+
 export const isSocketed = (x) => x.sockets?.length > 0;
 
 export const isUnsocketed = not(isSocketed);
@@ -87,6 +93,8 @@ export const isChippedGem = and([
   isQualityEqual(GemQualityType.Chipped),
   isGem,
 ]);
+
+export const isFlawedGem = and([isQualityEqual(GemQualityType.Flawed), isGem]);
 
 export const isFlawlessGem = and([
   isQualityEqual(GemQualityType.Flawless),
@@ -125,11 +133,27 @@ export const isManaPotion = and([
 
 export const isNormalBodyArmor = and([isNormal, isBodyArmor]);
 
+export const isNormalHelm = and([isNormal, isHelm]);
+
+export const isNormalShield = and([isNormal, isShield]);
+
+export const isNormalWeapon = and([isNormal, isWeapon]);
+
+export const isNonEtherealArmor = and([isNonEthereal, isArmor]);
+
+export const isNonEtherealWeapon = and([isNonEthereal, isWeapon]);
+
 export const isUnsocketedRare = and([isUnsocketed, isRare]);
 
 export const isUnsocketedNormalBodyArmor = and([
   isUnsocketed,
   isNormalBodyArmor,
 ]);
+
+export const isUnsocketedNormalHelm = and([isUnsocketed, isNormalHelm]);
+
+export const isUnsocketedNormalShield = and([isUnsocketed, isNormalShield]);
+
+export const isUnsocketedNormalWeapon = and([isUnsocketed, isNormalWeapon]);
 
 export const isSocketedNormalWeapon = and([isSocketed, isNormal, isWeapon]);

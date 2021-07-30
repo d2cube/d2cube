@@ -96,10 +96,9 @@ export const inventoryItems = [
     sockets: ['Jah', 'Ber', null],
   },
   {
-    id: 'MilitaryAxe',
-    rarity: 'magic',
+    id: 'Falcata',
+    rarity: 'normal',
     durability: 1,
-    sockets: [],
     position: [1, 9],
   },
 ].map((item) => ({
