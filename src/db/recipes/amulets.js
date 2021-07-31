@@ -1,4 +1,4 @@
-import {ItemRarityType, PrefixType, RecipeType} from '../enums/index.js';
+import {ItemQualityType, PrefixType, RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {isMagicRing} from '../utils/predicates.js';
 import ids from '../ids/index.js';
@@ -10,21 +10,21 @@ const recipes = [
       {
         item: {
           id: ids.Ring,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicRing,
       },
       {
         item: {
           id: ids.Ring,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicRing,
       },
       {
         item: {
           id: ids.Ring,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicRing,
       },
@@ -32,7 +32,7 @@ const recipes = [
     target: {
       item: {
         id: ids.Amulet,
-        rarity: ItemRarityType.Magic,
+        quality: ItemQualityType.Magic,
       },
     },
   },
@@ -73,7 +73,7 @@ const recipes = [
     target: {
       item: {
         id: ids.Amulet,
-        rarity: ItemRarityType.Magic,
+        quality: ItemQualityType.Magic,
         prefix: PrefixType.Prismatic,
       },
     },

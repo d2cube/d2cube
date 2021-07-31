@@ -1,7 +1,7 @@
 /**
  * Values are kebab-cased to match theme definitions/paths
  */
-export const ItemRarityType = {
+export const ItemQualityType = {
   Crafted: 'crafted',
   Magic: 'magic',
   Normal: 'normal',

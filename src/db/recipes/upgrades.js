@@ -1,5 +1,5 @@
 import {up} from '../../utils/up.js';
-import {ItemRarityType, RecipeType} from '../enums/index.js';
+import {ItemQualityType, RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isExceptionalTierUniqueArmor,
@@ -35,7 +35,7 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Unique,
+          quality: ItemQualityType.Unique,
         },
         test: isNormalTierUniqueWeapon,
       },
@@ -65,7 +65,7 @@ const recipes = [
       {
         item: {
           id: ids.LightPlate,
-          rarity: ItemRarityType.Unique,
+          quality: ItemQualityType.Unique,
         },
         test: isNormalTierUniqueArmor,
       },
@@ -95,7 +95,7 @@ const recipes = [
       {
         item: {
           id: ids.DimensionalBlade,
-          rarity: ItemRarityType.Unique,
+          quality: ItemQualityType.Unique,
         },
         test: isExceptionalTierUniqueWeapon,
       },
@@ -125,7 +125,7 @@ const recipes = [
       {
         item: {
           id: ids.MagePlate,
-          rarity: ItemRarityType.Unique,
+          quality: ItemQualityType.Unique,
         },
         test: isExceptionalTierUniqueArmor,
       },
@@ -155,10 +155,10 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Rare,
+          quality: ItemQualityType.Rare,
           overrideDescription: [
             [
-              {text: 'Rare Weapon', color: 'item.rarity.rare'},
+              {text: 'Rare Weapon', color: 'item.quality.rare'},
               {text: 'Must be Normal tier.'},
             ],
           ],
@@ -191,10 +191,10 @@ const recipes = [
       {
         item: {
           id: ids.LightPlate,
-          rarity: ItemRarityType.Rare,
+          quality: ItemQualityType.Rare,
           overrideDescription: [
             [
-              {text: 'Rare Armor', color: 'item.rarity.rare'},
+              {text: 'Rare Armor', color: 'item.quality.rare'},
               {text: 'Must be Normal tier.'},
             ],
           ],
@@ -227,10 +227,10 @@ const recipes = [
       {
         item: {
           id: ids.DimensionalBlade,
-          rarity: ItemRarityType.Rare,
+          quality: ItemQualityType.Rare,
           overrideDescription: [
             [
-              {text: 'Rare Weapon', color: 'item.rarity.rare'},
+              {text: 'Rare Weapon', color: 'item.quality.rare'},
               {text: 'Must be Exceptional tier.'},
             ],
           ],
@@ -263,10 +263,10 @@ const recipes = [
       {
         item: {
           id: ids.MagePlate,
-          rarity: ItemRarityType.Rare,
+          quality: ItemQualityType.Rare,
           overrideDescription: [
             [
-              {text: 'Rare Armor', color: 'item.rarity.rare'},
+              {text: 'Rare Armor', color: 'item.quality.rare'},
               {text: 'Must be Exceptional tier.'},
             ],
           ],

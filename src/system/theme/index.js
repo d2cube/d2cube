@@ -20,7 +20,7 @@ const colors = {
     invalid: 'rgba(149, 53, 39, 0.5)',
     rune: '#FFA500',
     socketed: '#484848',
-    rarity: {
+    quality: {
       crafted: '#FFA500',
       magic: '#4169E1',
       normal: 'white',

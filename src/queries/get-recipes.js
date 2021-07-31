@@ -1,5 +1,5 @@
 import db from '../db/index.js';
-import {createItem} from '../utils/create-item.js';
+import {DEPRECATED_createItem} from '../utils/create-item.js';
 
 /**
  * Returns true and removes the item if it is found in the stack.
@@ -40,7 +40,7 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
       const sourceItem = source.item;
       const matchedItem = findItem(itemStack, sourceItem, source.test);
       const isInactive = showAvailable ? !matchedItem : false;
-      const item = createItem(
+      const item = DEPRECATED_createItem(
         showAvailable ? matchedItem || sourceItem : sourceItem,
       );
       sources.push({item, isInactive});

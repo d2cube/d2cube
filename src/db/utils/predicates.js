@@ -2,7 +2,7 @@ import {and, or, not, isPropValueEqual} from '../../utils/fp.js';
 import {
   GemCategoryType,
   GemQualityType,
-  ItemRarityType,
+  ItemQualityType,
   ItemPropertyType,
   ItemType,
   PotionCategoryType,
@@ -16,8 +16,6 @@ import {
 export const isCategoryEqual = isPropValueEqual('category');
 
 export const isQualityEqual = isPropValueEqual('quality');
-
-export const isRarityEqual = isPropValueEqual('rarity');
 
 export const isTierEqual = isPropValueEqual('tier');
 
@@ -55,14 +53,14 @@ export const isSword = isTypeEqual(ItemType.Sword);
 
 export const isBodyArmor = isTypeEqual(ItemType.BodyArmor);
 
-// Rarity
-export const isNormal = isRarityEqual(ItemRarityType.Normal);
+// Quality
+export const isNormal = isQualityEqual(ItemQualityType.Normal);
 
-export const isMagic = isRarityEqual(ItemRarityType.Magic);
+export const isMagic = isQualityEqual(ItemQualityType.Magic);
 
-export const isRare = isRarityEqual(ItemRarityType.Rare);
+export const isRare = isQualityEqual(ItemQualityType.Rare);
 
-export const isUnique = isRarityEqual(ItemRarityType.Unique);
+export const isUnique = isQualityEqual(ItemQualityType.Unique);
 
 // Weapon/Armor
 export const isArmor = hasItemProperty(ItemPropertyType.Defense);

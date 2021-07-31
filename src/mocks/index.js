@@ -1,7 +1,7 @@
 import db from '../db/index.js';
-import {createItem} from '../utils/create-item.js';
+import {DEPRECATED_createItem, createItem} from '../utils/create-item.js';
 
-const {ItemRarityType} = db.enums;
+const {ItemQualityType} = db.enums;
 
 export const cubeItems = [
   {
@@ -20,7 +20,7 @@ export const cubeItems = [
     id: 'Bolts',
     position: [1, 3],
   },
-].map(createItem);
+].map(DEPRECATED_createItem);
 
 export const inventoryItems = [
   {
@@ -58,28 +58,28 @@ export const inventoryItems = [
   {
     id: 'Ring',
     position: [3, 8],
-    rarity: ItemRarityType.Magic,
+    quality: ItemQualityType.Magic,
     prefix: 'Cruel',
   },
   {
     id: 'Ring',
     position: [3, 7],
-    rarity: ItemRarityType.Crafted,
+    quality: ItemQualityType.Crafted,
   },
   {
     id: 'Amulet',
     position: [4, 7],
-    rarity: ItemRarityType.Magic,
+    quality: ItemQualityType.Magic,
   },
   {
     id: 'Amulet',
     position: [2, 6],
-    rarity: ItemRarityType.Unique,
+    quality: ItemQualityType.Unique,
   },
   {
     id: 'Amulet',
     position: [2, 7],
-    rarity: ItemRarityType.Magic,
+    quality: ItemQualityType.Magic,
   },
   {
     id: 'HealingPotion',
@@ -102,7 +102,7 @@ export const inventoryItems = [
   },
   {
     id: 'Falcata',
-    rarity: 'normal',
+    quality: 'normal',
     durability: 1,
     position: [1, 9],
   },

@@ -1,7 +1,7 @@
 import {merge} from 'uinix-fp';
 
 import {roll} from '../../utils/roll.js';
-import {ItemRarityType, RecipeType, SuffixType} from '../enums/index.js';
+import {ItemQualityType, RecipeType, SuffixType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isHealthPotion,
@@ -49,9 +49,9 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
           overrideDescription: [
-            [{text: 'Magic Sword', color: 'item.rarity.magic'}],
+            [{text: 'Magic Sword', color: 'item.quality.magic'}],
           ],
         },
         test: isMagicSword,
@@ -91,9 +91,9 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
           overrideDescription: [
-            [{text: 'Magic Item', color: 'item.rarity.magic'}],
+            [{text: 'Magic Item', color: 'item.quality.magic'}],
             [{text: 'Including rings, amulets, jewels, charms etc'}],
           ],
         },
@@ -131,13 +131,13 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Normal,
+          quality: ItemQualityType.Normal,
           sockets: Array.from({length: roll(1, 6)}).map(() => null),
           overrideDescription: [
             [
               {
                 text: 'Socketed Normal Weapon (any type)',
-                color: 'item.rarity.normal',
+                color: 'item.quality.normal',
               },
             ],
           ],
@@ -148,7 +148,7 @@ const recipes = [
     target: {
       transform: (sources) =>
         merge(sources[3])({
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
           sockets: Array.from({length: roll(1, 2)}).map(() => null),
         }),
     },

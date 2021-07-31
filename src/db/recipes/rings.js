@@ -1,4 +1,4 @@
-import {ItemRarityType, PrefixType, RecipeType} from '../enums/index.js';
+import {ItemQualityType, PrefixType, RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {isMagicAmulet, isMagicRing} from '../utils/predicates.js';
 import ids from '../ids/index.js';
@@ -10,21 +10,21 @@ const recipes = [
       {
         item: {
           id: ids.Amulet,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicAmulet,
       },
       {
         item: {
           id: ids.Amulet,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicAmulet,
       },
       {
         item: {
           id: ids.Amulet,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicAmulet,
       },
@@ -32,7 +32,7 @@ const recipes = [
     target: {
       item: {
         id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        quality: ItemQualityType.Magic,
       },
     },
   },
@@ -42,7 +42,7 @@ const recipes = [
       {
         item: {
           id: ids.Ring,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicRing,
       },
@@ -60,7 +60,7 @@ const recipes = [
     target: {
       item: {
         id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        quality: ItemQualityType.Magic,
         prefix: PrefixType.Coral,
       },
     },
@@ -71,7 +71,7 @@ const recipes = [
       {
         item: {
           id: ids.Ring,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicRing,
       },
@@ -89,7 +89,7 @@ const recipes = [
     target: {
       item: {
         id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        quality: ItemQualityType.Magic,
         prefix: PrefixType.Garnet,
       },
     },
@@ -100,7 +100,7 @@ const recipes = [
       {
         item: {
           id: ids.Ring,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicRing,
       },
@@ -116,7 +116,7 @@ const recipes = [
     target: {
       item: {
         id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        quality: ItemQualityType.Magic,
         prefix: PrefixType.Cobalt,
       },
     },
@@ -127,7 +127,7 @@ const recipes = [
       {
         item: {
           id: ids.Ring,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
         },
         test: isMagicRing,
       },
@@ -141,7 +141,7 @@ const recipes = [
     target: {
       item: {
         id: ids.Ring,
-        rarity: ItemRarityType.Magic,
+        quality: ItemQualityType.Magic,
         prefix: PrefixType.Jade,
       },
     },

@@ -30,7 +30,7 @@ export default mapItems({
     if (item.stats) {
       description.push({
         text: resolveItemStats(item.stats),
-        color: 'item.rarity.magic',
+        color: 'item.quality.magic',
       });
     }
 

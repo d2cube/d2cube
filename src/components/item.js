@@ -2,7 +2,7 @@ import React from 'react';
 import {Element, useStyles} from 'uinix-ui';
 import {ItemPropertyType} from '../db/enums/item-property-type.js';
 
-import {createItem} from '../utils/create-item.js';
+import {DEPRECATED_createItem} from '../utils/create-item.js';
 import ItemImage from './item-image.js';
 import ItemSockets from './item-sockets.js';
 import ItemTooltip from './item-tooltip.js';
@@ -12,7 +12,7 @@ const Item = ({isInactive, item: initialItem}) => {
   const styles = useStyles();
 
   const {id, imageId, isEthereal} = initialItem;
-  const item = createItem(initialItem);
+  const item = DEPRECATED_createItem(initialItem);
   const {
     overrideDescription,
     position,

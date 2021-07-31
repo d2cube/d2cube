@@ -1,7 +1,7 @@
 import {filter} from 'uinix-fp';
 
 export const mapItemName = (item) => {
-  const {name, prefix, rarity, suffix, tier} = item;
+  const {name, prefix, quality, suffix, tier} = item;
 
   const itemName = filter()([
     prefix,
@@ -10,7 +10,7 @@ export const mapItemName = (item) => {
     Array.from({length: tier}).join('+'),
   ]).join(' ');
 
-  const color = `item.rarity.${rarity}`;
+  const color = `item.quality.${quality}`;
 
   return {text: itemName, color};
 };

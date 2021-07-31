@@ -1,4 +1,4 @@
-import {ItemPropertyType, ItemRarityType, ItemType} from '../enums/index.js';
+import {ItemPropertyType, ItemQualityType, ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItemName} from '../utils/map-item-name.js';
 import {mapItemProperties} from '../utils/map-item-properties.js';
@@ -75,7 +75,7 @@ const items = {
     id: ids.WirtsLeg,
     type: ItemType.Mace,
     name: "Wirt's Leg",
-    rarity: ItemRarityType.Unique,
+    quality: ItemQualityType.Unique,
     clvl: null,
     size: [2, 1],
     properties: {
@@ -98,11 +98,11 @@ export default mapItems({
 
     switch (item.type) {
       case ItemType.Cow:
-        color = 'item.rarity.unique';
+        color = 'item.quality.unique';
         break;
       case ItemType.Essence:
       case ItemType.Key:
-        color = 'item.rarity.crafted';
+        color = 'item.quality.crafted';
         break;
       default:
         color = null;

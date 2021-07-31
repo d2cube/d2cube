@@ -1,5 +1,5 @@
 import {getItemById} from '../../queries/get-item-by-id.js';
-import {PropertyType, ItemRarityType, ItemType} from '../enums/index.js';
+import {PropertyType, ItemQualityType, ItemType} from '../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItemName} from '../utils/map-item-name.js';
 import {mapItemProperties} from '../utils/map-item-properties.js';
@@ -93,9 +93,9 @@ const items = {
 };
 
 export default mapItems({
-  rarity: ItemRarityType.Unique,
+  quality: ItemQualityType.Unique,
   mapDescription: (item) => {
-    let description = [{text: item.name, color: 'item.rarity.unique'}];
+    let description = [{text: item.name, color: 'item.quality.unique'}];
 
     if (item.baseId) {
       const baseItem = getItemById(item.baseId);
@@ -103,7 +103,7 @@ export default mapItems({
         item.properties = baseItem.properties;
         description.push({
           ...mapItemName(baseItem),
-          color: 'item.rarity.unique',
+          color: 'item.quality.unique',
         });
         description = description.concat(mapItemProperties(item));
       }
@@ -113,7 +113,7 @@ export default mapItems({
       Object.entries(item.stats).forEach(([property, values]) => {
         description.push({
           text: resolveStats({property, values}),
-          color: 'item.rarity.magic',
+          color: 'item.quality.magic',
         });
       });
     }

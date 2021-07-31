@@ -1,7 +1,7 @@
 import {merge} from 'uinix-fp';
 
 import {roll} from '../../utils/roll.js';
-import {ItemPropertyType, ItemRarityType, RecipeType} from '../enums/index.js';
+import {ItemPropertyType, ItemQualityType, RecipeType} from '../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isChippedGem,
@@ -43,9 +43,9 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Rare,
+          quality: ItemQualityType.Rare,
           overrideDescription: [
-            [{text: 'Rare Item', color: 'item.rarity.rare'}],
+            [{text: 'Rare Item', color: 'item.quality.rare'}],
             [{text: 'Item must be socketable and have no initial sockets.'}],
           ],
         },
@@ -86,9 +86,9 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
           overrideDescription: [
-            [{text: 'Magic Weapon', color: 'item.rarity.magic'}],
+            [{text: 'Magic Weapon', color: 'item.quality.magic'}],
             [
               {text: 'Always creates an ilvl 25 weapon'},
               {text: '1-2 sockets will be added.'},
@@ -133,9 +133,9 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Magic,
+          quality: ItemQualityType.Magic,
           overrideDescription: [
-            [{text: 'Magic Weapon', color: 'item.rarity.magic'}],
+            [{text: 'Magic Weapon', color: 'item.quality.magic'}],
             [
               {text: 'Always creates an ilvl 30 weapon'},
               {text: '1-2 sockets will be added.'},
@@ -211,7 +211,7 @@ const recipes = [
       {
         item: {
           id: ids.ArchonPlate,
-          rarity: ItemRarityType.Normal,
+          quality: ItemQualityType.Normal,
           overrideDescription: [
             [
               {text: 'Adds 1-4 sockets to an unsocketed normal body armor.'},
@@ -256,7 +256,7 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          rarity: ItemRarityType.Normal,
+          quality: ItemQualityType.Normal,
           overrideDescription: [
             [
               {text: 'Adds 1-6 sockets to an unsocketed normal weapon.'},
@@ -301,7 +301,7 @@ const recipes = [
       {
         item: {
           id: ids.Crown,
-          rarity: ItemRarityType.Normal,
+          quality: ItemQualityType.Normal,
           overrideDescription: [
             [
               {text: 'Adds 1-3 sockets to an unsocketed normal helm.'},
@@ -346,7 +346,7 @@ const recipes = [
       {
         item: {
           id: ids.Monarch,
-          rarity: ItemRarityType.Normal,
+          quality: ItemQualityType.Normal,
           overrideDescription: [
             [
               {text: 'Adds 1-4 sockets to an unsocketed normal shield.'},
