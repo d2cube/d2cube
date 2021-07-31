@@ -7,6 +7,7 @@ export const createItem = (data) => {
   const item = getItemById(id);
 
   return rollItem({
+    ...data,
     ...item,
     position,
     // TODO remove hardcode and generalize

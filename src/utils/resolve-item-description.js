@@ -1,24 +1,22 @@
-import {i, pipe} from 'uinix-fp';
+import {pipe} from 'uinix-fp';
 
 import {ItemPropertyType, ItemType} from '../enums/index.js';
-import {coerce, push} from './fp.js';
+import {concatIfNotEmpty, join} from './fp.js';
 
 export const resolveItemDescription = (item) =>
   pipe([
-    push(name(item)),
-    push(quantity(item)),
-    push(clvl(item.clvl)),
-    push(description(item.description)),
+    concatIfNotEmpty(name)(item),
+    concatIfNotEmpty()(quantity(item)),
+    concatIfNotEmpty(clvl)(item.clvl),
+    concatIfNotEmpty()(item.description),
   ])([]);
 
-export const clvl = coerce((x) => ({
+const clvl = (x) => ({
   text: `Required level: ${x}`,
-}));
+});
 
-export const description = coerce(i);
-
-export const quantity = (item) => {
-  // TODO remove null coercion after refactor
+// TODO: rework this and remove null coercion after refactor
+const quantity = (item) => {
   if (item.properties?.base?.[ItemPropertyType.Quantity]) {
     return {
       text: `Quantity: ${item?.roll?.base?.Quantity}`,
@@ -26,8 +24,8 @@ export const quantity = (item) => {
   }
 };
 
-export const name = (item) => {
-  const {quality, name, type} = item;
+const name = (item) => {
+  const {quality, name, personalization, prefix, suffix, type} = item;
 
   let color;
   switch (type) {
@@ -41,8 +39,16 @@ export const name = (item) => {
       break;
   }
 
+  const text = pipe([
+    concatIfNotEmpty()(personalization),
+    concatIfNotEmpty()(prefix),
+    concatIfNotEmpty()(name),
+    concatIfNotEmpty((x) => `of ${x}`)(suffix),
+    join(' '),
+  ])([]);
+
   return {
-    text: name,
+    text,
     color,
   };
 };

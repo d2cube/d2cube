@@ -53,7 +53,7 @@
  *    Quality level.
  * @property {Enum} [quality]
  *    Most items have qualities e.g. LowQuality/Normal/Magic/Unique/Set/Crafted
- * @property {number} [variant]
+ * @property {number} [variants]
  *    Items with multiple image assets will apply the specified variant.
  * @property {Enum} [set]
  *    If the item belongs to an existing set e.g. AngelicRaiment.
