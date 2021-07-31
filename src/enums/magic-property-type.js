@@ -1,4 +1,4 @@
-export const PropertyType = {
+export const MagicPropertyType = {
   Strength: 'Strength',
   Energy: 'Energy',
   Dexterity: 'Dexterity',

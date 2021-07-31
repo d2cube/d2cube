@@ -1,683 +1,666 @@
-import {ItemType, PropertyType} from '../../enums/index.js';
-import {mapItems} from '../utils/map-items.js';
-import {mapItemClvl} from '../utils/map-item-clvl.js';
-import {resolveItemStats} from '../utils/resolve-item-stats.js';
+import {ItemType, MagicPropertyType} from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
-const items = {
-  [ids.El]: {
+export default createBaseItems({
+  size: [1, 1],
+  type: ItemType.Rune,
+})([
+  {
     id: ids.El,
     name: 'El Rune',
     clvl: 11,
     stats: {
       weapons: [
         {
-          property: PropertyType.AttackRating,
+          property: MagicPropertyType.AttackRating,
           values: [50],
         },
         {
-          property: PropertyType.LightRadius,
+          property: MagicPropertyType.LightRadius,
           values: [1],
         },
       ],
       armor: [
         {
-          property: PropertyType.Defense,
+          property: MagicPropertyType.Defense,
           values: [15],
         },
         {
-          property: PropertyType.LightRadius,
+          property: MagicPropertyType.LightRadius,
           values: [1],
         },
       ],
       shields: [
         {
-          property: PropertyType.Defense,
+          property: MagicPropertyType.Defense,
           values: [15],
         },
         {
-          property: PropertyType.LightRadius,
+          property: MagicPropertyType.LightRadius,
           values: [1],
         },
       ],
     },
   },
-  [ids.Eld]: {
+  {
     id: ids.Eld,
     name: 'Eld Rune',
     clvl: 11,
     stats: {
       weapons: [
         {
-          property: PropertyType.DamageToUndead,
+          property: MagicPropertyType.DamageToUndead,
           values: [75],
         },
         {
-          property: PropertyType.AttackRatingAgainstUndead,
+          property: MagicPropertyType.AttackRatingAgainstUndead,
           values: [50],
         },
       ],
       armor: {
-        property: PropertyType.SlowerStaminaDrain,
+        property: MagicPropertyType.SlowerStaminaDrain,
         values: [15],
       },
       shields: {
-        property: PropertyType.IncreasedChanceOfBlocking,
+        property: MagicPropertyType.IncreasedChanceOfBlocking,
         values: [7],
       },
     },
   },
-  [ids.Tir]: {
+  {
     id: ids.Tir,
     name: 'Tir Rune',
     clvl: 13,
     stats: {
       weapons: {
-        property: PropertyType.ManaAfterKill,
+        property: MagicPropertyType.ManaAfterKill,
         values: [2],
       },
       armor: {
-        property: PropertyType.ManaAfterKill,
+        property: MagicPropertyType.ManaAfterKill,
         values: [2],
       },
       shields: {
-        property: PropertyType.ManaAfterKill,
+        property: MagicPropertyType.ManaAfterKill,
         values: [2],
       },
     },
   },
-  [ids.Nef]: {
+  {
     id: ids.Nef,
     name: 'Nef Rune',
     clvl: 13,
     stats: {
       weapons: {
-        property: PropertyType.Knockback,
+        property: MagicPropertyType.Knockback,
         values: [],
       },
       armor: {
-        property: PropertyType.DefenseVsMissle,
+        property: MagicPropertyType.DefenseVsMissle,
         values: [30],
       },
       shields: {
-        property: PropertyType.DefenseVsMissle,
+        property: MagicPropertyType.DefenseVsMissle,
         values: [30],
       },
     },
   },
-  [ids.Eth]: {
+  {
     id: ids.Eth,
     name: 'Eth Rune',
     clvl: 15,
     stats: {
       weapons: {
-        property: PropertyType.TargetDefense,
+        property: MagicPropertyType.TargetDefense,
         values: [25],
       },
       armor: {
-        property: PropertyType.RegenerateMana,
+        property: MagicPropertyType.RegenerateMana,
         values: [15],
       },
       shields: {
-        property: PropertyType.RegenerateMana,
+        property: MagicPropertyType.RegenerateMana,
         values: [15],
       },
     },
   },
-  [ids.Ith]: {
+  {
     id: ids.Ith,
     name: 'Ith Rune',
     clvl: 15,
     stats: {
       weapons: {
-        property: PropertyType.MaximumDamage,
+        property: MagicPropertyType.MaximumDamage,
         values: [9],
       },
       armor: {
-        property: PropertyType.DamageTakenGoesToMana,
+        property: MagicPropertyType.DamageTakenGoesToMana,
         values: [15],
       },
       shields: {
-        property: PropertyType.DamageTakenGoesToMana,
+        property: MagicPropertyType.DamageTakenGoesToMana,
         values: [15],
       },
     },
   },
-  [ids.Tal]: {
+  {
     id: ids.Tal,
     name: 'Tal Rune',
     clvl: 17,
     stats: {
       weapons: {
-        property: PropertyType.PoisonDamage,
+        property: MagicPropertyType.PoisonDamage,
         values: [75, 5],
       },
       armor: {
-        property: PropertyType.PoisonResist,
+        property: MagicPropertyType.PoisonResist,
         values: [30],
       },
       shields: {
-        property: PropertyType.PoisonResist,
+        property: MagicPropertyType.PoisonResist,
         values: [35],
       },
     },
   },
-  [ids.Ral]: {
+  {
     id: ids.Ral,
     name: 'Ral Rune',
     clvl: 19,
     stats: {
       weapons: {
-        property: PropertyType.FireDamage,
+        property: MagicPropertyType.FireDamage,
         values: [5, 30],
       },
       armor: {
-        property: PropertyType.FireResist,
+        property: MagicPropertyType.FireResist,
         values: [30],
       },
       shields: {
-        property: PropertyType.FireResist,
+        property: MagicPropertyType.FireResist,
         values: [35],
       },
     },
   },
-  [ids.Ort]: {
+  {
     id: ids.Ort,
     name: 'Ort Rune',
     clvl: 21,
     stats: {
       weapons: {
-        property: PropertyType.LightningDamage,
+        property: MagicPropertyType.LightningDamage,
         values: [1, 50],
       },
       armor: {
-        property: PropertyType.LightningResist,
+        property: MagicPropertyType.LightningResist,
         values: [30],
       },
       shields: {
-        property: PropertyType.LightningResist,
+        property: MagicPropertyType.LightningResist,
         values: [35],
       },
     },
   },
-  [ids.Thul]: {
+  {
     id: ids.Thul,
     name: 'Thul Rune',
     clvl: 23,
     stats: {
       weapons: {
-        property: PropertyType.ColdDamage,
+        property: MagicPropertyType.ColdDamage,
         values: [3, 14, 3],
       },
       armor: {
-        property: PropertyType.ColdResist,
+        property: MagicPropertyType.ColdResist,
         values: [30],
       },
       shields: {
-        property: PropertyType.ColdResist,
+        property: MagicPropertyType.ColdResist,
         values: [35],
       },
     },
   },
-  [ids.Amn]: {
+  {
     id: ids.Amn,
     name: 'Amn Rune',
     clvl: 25,
     stats: {
       weapons: {
-        property: PropertyType.LifeStolenPerHit,
+        property: MagicPropertyType.LifeStolenPerHit,
         values: [7],
       },
       armor: {
-        property: PropertyType.AttackerTakesDamage,
+        property: MagicPropertyType.AttackerTakesDamage,
         values: [14],
       },
       shields: {
-        property: PropertyType.AttackerTakesDamage,
+        property: MagicPropertyType.AttackerTakesDamage,
         values: [14],
       },
     },
   },
-  [ids.Sol]: {
+  {
     id: ids.Sol,
     name: 'Sol Rune',
     clvl: 27,
     stats: {
       weapons: {
-        property: PropertyType.MinimumDamage,
+        property: MagicPropertyType.MinimumDamage,
         values: [9],
       },
       armor: {
-        property: PropertyType.DamageReduced,
+        property: MagicPropertyType.DamageReduced,
         values: [7],
       },
       shields: {
-        property: PropertyType.DamageReduced,
+        property: MagicPropertyType.DamageReduced,
         values: [7],
       },
     },
   },
-  [ids.Shael]: {
+  {
     id: ids.Shael,
     name: 'Shael Rune',
     clvl: 29,
     stats: {
       weapons: {
-        property: PropertyType.IncreasedAttackSpeed,
+        property: MagicPropertyType.IncreasedAttackSpeed,
         values: [20],
       },
       armor: {
-        property: PropertyType.FasterHitRecovery,
+        property: MagicPropertyType.FasterHitRecovery,
         values: [20],
       },
       shields: {
-        property: PropertyType.FasterBlockRate,
+        property: MagicPropertyType.FasterBlockRate,
         values: [20],
       },
     },
   },
-  [ids.Dol]: {
+  {
     id: ids.Dol,
     name: 'Dol Rune',
     clvl: 31,
     stats: {
       weapons: {
-        property: PropertyType.HitCausesMonsterToFlee,
+        property: MagicPropertyType.HitCausesMonsterToFlee,
         values: [25],
       },
       armor: {
-        property: PropertyType.ReplenishLife,
+        property: MagicPropertyType.ReplenishLife,
         values: [7],
       },
       shields: {
-        property: PropertyType.ReplenishLife,
+        property: MagicPropertyType.ReplenishLife,
         values: [7],
       },
     },
   },
-  [ids.Hel]: {
+  {
     id: ids.Hel,
     name: 'Hel Rune',
     clvl: null,
     stats: {
       weapons: {
-        property: PropertyType.Requirements,
+        property: MagicPropertyType.Requirements,
         values: [20],
       },
       armor: {
-        property: PropertyType.Requirements,
+        property: MagicPropertyType.Requirements,
         values: [15],
       },
       shields: {
-        property: PropertyType.Requirements,
+        property: MagicPropertyType.Requirements,
         values: [15],
       },
     },
   },
-  [ids.Io]: {
+  {
     id: ids.Io,
     name: 'Io Rune',
     clvl: 35,
     stats: {
       weapons: {
-        property: PropertyType.Vitality,
+        property: MagicPropertyType.Vitality,
         values: [10],
       },
       armor: {
-        property: PropertyType.Vitality,
+        property: MagicPropertyType.Vitality,
         values: [10],
       },
       shields: {
-        property: PropertyType.Vitality,
+        property: MagicPropertyType.Vitality,
         values: [10],
       },
     },
   },
-  [ids.Lum]: {
+  {
     id: ids.Lum,
     name: 'Lum Rune',
     clvl: 37,
     stats: {
       weapons: {
-        property: PropertyType.Energy,
+        property: MagicPropertyType.Energy,
         values: [10],
       },
       armor: {
-        property: PropertyType.Energy,
+        property: MagicPropertyType.Energy,
         values: [10],
       },
       shields: {
-        property: PropertyType.Energy,
+        property: MagicPropertyType.Energy,
         values: [10],
       },
     },
   },
-  [ids.Ko]: {
+  {
     id: ids.Ko,
     name: 'Ko Rune',
     clvl: 39,
     stats: {
       weapons: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [10],
       },
       armor: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [10],
       },
       shields: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [10],
       },
     },
   },
-  [ids.Fal]: {
+  {
     id: ids.Fal,
     name: 'Fal Rune',
     clvl: 41,
     stats: {
       weapons: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [10],
       },
       armor: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [10],
       },
       shields: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [10],
       },
     },
   },
-  [ids.Lem]: {
+  {
     id: ids.Lem,
     name: 'Lem Rune',
     clvl: 43,
     stats: {
       weapons: {
-        property: PropertyType.ExtraGold,
+        property: MagicPropertyType.ExtraGold,
         values: [75],
       },
       armor: {
-        property: PropertyType.ExtraGold,
+        property: MagicPropertyType.ExtraGold,
         values: [50],
       },
       shields: {
-        property: PropertyType.ExtraGold,
+        property: MagicPropertyType.ExtraGold,
         values: [50],
       },
     },
   },
-  [ids.Pul]: {
+  {
     id: ids.Pul,
     name: 'Pul Rune',
     clvl: 45,
     stats: {
       weapons: [
         {
-          property: PropertyType.DamageToDemons,
+          property: MagicPropertyType.DamageToDemons,
           values: [75],
         },
         {
-          property: PropertyType.AttackRatingAgainstDemons,
+          property: MagicPropertyType.AttackRatingAgainstDemons,
           values: [100],
         },
       ],
       armor: {
-        property: PropertyType.EnhancedDefense,
+        property: MagicPropertyType.EnhancedDefense,
         values: [30],
       },
       shields: {
-        property: PropertyType.EnhancedDefense,
+        property: MagicPropertyType.EnhancedDefense,
         values: [30],
       },
     },
   },
-  [ids.Um]: {
+  {
     id: ids.Um,
     name: 'Um Rune',
     clvl: 47,
     stats: {
       weapons: {
-        property: PropertyType.OpenWounds,
+        property: MagicPropertyType.OpenWounds,
         values: [25],
       },
       armor: {
-        property: PropertyType.AllResistances,
+        property: MagicPropertyType.AllResistances,
         values: [15],
       },
       shields: {
-        property: PropertyType.AllResistances,
+        property: MagicPropertyType.AllResistances,
         values: [22],
       },
     },
   },
-  [ids.Mal]: {
+  {
     id: ids.Mal,
     name: 'Mal Rune',
     clvl: 49,
     stats: {
       weapons: {
-        property: PropertyType.PreventMonsterHeal,
+        property: MagicPropertyType.PreventMonsterHeal,
         values: [],
       },
       armor: {
-        property: PropertyType.MagicDamageReduced,
+        property: MagicPropertyType.MagicDamageReduced,
         values: [7],
       },
       shields: {
-        property: PropertyType.MagicDamageReduced,
+        property: MagicPropertyType.MagicDamageReduced,
         values: [7],
       },
     },
   },
-  [ids.Ist]: {
+  {
     id: ids.Ist,
     name: 'Ist Rune',
     clvl: 51,
     stats: {
       weapons: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [30],
       },
       armor: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [25],
       },
       shields: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [25],
       },
     },
   },
-  [ids.Gul]: {
+  {
     id: ids.Gul,
     name: 'Gul Rune',
     clvl: 53,
     stats: {
       weapons: {
-        property: PropertyType.BonusToAttackRating,
+        property: MagicPropertyType.BonusToAttackRating,
         values: [20],
       },
       armor: {
-        property: PropertyType.MaximumPoisonResist,
+        property: MagicPropertyType.MaximumPoisonResist,
         values: [5],
       },
       shields: {
-        property: PropertyType.MaximumPoisonResist,
+        property: MagicPropertyType.MaximumPoisonResist,
         values: [5],
       },
     },
   },
-  [ids.Vex]: {
+  {
     id: ids.Vex,
     name: 'Vex Rune',
     clvl: 55,
     stats: {
       weapons: {
-        property: PropertyType.ManaStolenPerHit,
+        property: MagicPropertyType.ManaStolenPerHit,
         values: [7],
       },
       armor: {
-        property: PropertyType.MaximumFireResist,
+        property: MagicPropertyType.MaximumFireResist,
         values: [5],
       },
       shields: {
-        property: PropertyType.MaximumFireResist,
+        property: MagicPropertyType.MaximumFireResist,
         values: [5],
       },
     },
   },
-  [ids.Ohm]: {
+  {
     id: ids.Ohm,
     name: 'Ohm Rune',
     clvl: 57,
     stats: {
       weapons: {
-        property: PropertyType.EnhancedDamage,
+        property: MagicPropertyType.EnhancedDamage,
         values: [50],
       },
       armor: {
-        property: PropertyType.MaximumColdResist,
+        property: MagicPropertyType.MaximumColdResist,
         values: [5],
       },
       shields: {
-        property: PropertyType.MaximumColdResist,
+        property: MagicPropertyType.MaximumColdResist,
         values: [5],
       },
     },
   },
-  [ids.Lo]: {
+  {
     id: ids.Lo,
     name: 'Lo Rune',
     clvl: 59,
     stats: {
       weapons: {
-        property: PropertyType.DeadlyStrike,
+        property: MagicPropertyType.DeadlyStrike,
         values: [20],
       },
       armor: {
-        property: PropertyType.MaximumLightningResist,
+        property: MagicPropertyType.MaximumLightningResist,
         values: [5],
       },
       shields: {
-        property: PropertyType.MaximumLightningResist,
+        property: MagicPropertyType.MaximumLightningResist,
         values: [5],
       },
     },
   },
-  [ids.Sur]: {
+  {
     id: ids.Sur,
     name: 'Sur Rune',
     clvl: 61,
     stats: {
       weapons: {
-        property: PropertyType.HitBlindsTarget,
+        property: MagicPropertyType.HitBlindsTarget,
         values: [],
       },
       armor: {
-        property: PropertyType.IncreaseMaximumMana,
+        property: MagicPropertyType.IncreaseMaximumMana,
         values: [5],
       },
       shields: {
-        property: PropertyType.Mana,
+        property: MagicPropertyType.Mana,
         values: [50],
       },
     },
   },
-  [ids.Ber]: {
+  {
     id: ids.Ber,
     name: 'Ber Rune',
     clvl: 63,
     stats: {
       weapons: {
-        property: PropertyType.CrushingBlow,
+        property: MagicPropertyType.CrushingBlow,
         values: [20],
       },
       armor: {
-        property: PropertyType.DamageReducedPercentage,
+        property: MagicPropertyType.DamageReducedPercentage,
         values: [8],
       },
       shields: {
-        property: PropertyType.DamageReducedPercentage,
+        property: MagicPropertyType.DamageReducedPercentage,
         values: [8],
       },
     },
   },
-  [ids.Jah]: {
+  {
     id: ids.Jah,
     name: 'Jah Rune',
     clvl: 65,
     stats: {
       weapons: {
-        property: PropertyType.IgnoreTargetDefense,
+        property: MagicPropertyType.IgnoreTargetDefense,
         values: [],
       },
       armor: {
-        property: PropertyType.IncreaseMaximumLife,
+        property: MagicPropertyType.IncreaseMaximumLife,
         values: [5],
       },
       shields: {
-        property: PropertyType.Life,
+        property: MagicPropertyType.Life,
         values: [50],
       },
     },
   },
-  [ids.Cham]: {
+  {
     id: ids.Cham,
     name: 'Cham Rune',
     clvl: 67,
     stats: {
       weapons: {
-        property: PropertyType.FreezesTarget,
+        property: MagicPropertyType.FreezesTarget,
         values: [3],
       },
       armor: {
-        property: PropertyType.CannotBeFrozen,
+        property: MagicPropertyType.CannotBeFrozen,
         values: [],
       },
       shields: {
-        property: PropertyType.CannotBeFrozen,
+        property: MagicPropertyType.CannotBeFrozen,
         values: [],
       },
     },
   },
-  [ids.Zod]: {
+  {
     id: ids.Zod,
     name: 'Zod Rune',
     clvl: 69,
     stats: {
       weapons: {
-        property: PropertyType.Indestructible,
+        property: MagicPropertyType.Indestructible,
         values: [],
       },
       armor: {
-        property: PropertyType.Indestructible,
+        property: MagicPropertyType.Indestructible,
         values: [],
       },
       shields: {
-        property: PropertyType.Indestructible,
+        property: MagicPropertyType.Indestructible,
         values: [],
       },
     },
   },
-};
-
-export default mapItems({
-  size: [1, 1],
-  type: ItemType.Rune,
-  mapDescription: (item) => [
-    [
-      {text: item.name, color: 'item.rune'},
-      {text: 'Can be inserted into socked items'},
-    ],
-    [
-      {text: `Weapons: ${resolveItemStats(item.stats.weapons, ', ')}`},
-      {text: `Armor: ${resolveItemStats(item.stats.armor, ', ')}`},
-      {text: `Helms: ${resolveItemStats(item.stats.armor, ', ')}`},
-      {text: `Shields: ${resolveItemStats(item.stats.shields, ', ')}`},
-    ],
-    [mapItemClvl(item)],
-  ],
-})(items);
+]);

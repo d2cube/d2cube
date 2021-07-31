@@ -1,10 +1,14 @@
 import {getItemById} from '../../queries/get-item-by-id.js';
-import {PropertyType, ItemQualityType, ItemType} from '../../enums/index.js';
+import {
+  ItemQualityType,
+  ItemType,
+  MagicPropertyType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItemName} from '../utils/map-item-name.js';
 import {mapItemProperties} from '../utils/map-item-properties.js';
 import {mapItems} from '../utils/map-items.js';
-import {resolveStats} from '../utils/resolve-stats.js';
+import {resolveMagicProperties} from '../utils/resolve-magic-properties.js';
 
 const items = {
   [ids.BladeOfAliBaba]: {
@@ -16,11 +20,11 @@ const items = {
     baseId: ids.Tulwar,
     sockets: [null, null],
     stats: {
-      [PropertyType.EnhancedDamage]: [60, 120],
-      [PropertyType.ExtraGoldByLevel]: [2, 247, 2.5],
-      [PropertyType.MagicFind]: [1, 99, 1],
-      [PropertyType.Mana]: [15],
-      [PropertyType.Dexterity]: [5, 15],
+      [MagicPropertyType.EnhancedDamage]: [60, 120],
+      [MagicPropertyType.ExtraGoldByLevel]: [2, 247, 2.5],
+      [MagicPropertyType.MagicFind]: [1, 99, 1],
+      [MagicPropertyType.Mana]: [15],
+      [MagicPropertyType.Dexterity]: [5, 15],
     },
   },
   [ids.BloodCrescent]: {
@@ -32,13 +36,13 @@ const items = {
     ilvl: 87,
     baseId: ids.Scimitar,
     stats: {
-      [PropertyType.EnhancedDamage]: [60, 80],
-      [PropertyType.OpenWounds]: [33],
-      [PropertyType.IncreasedAttackSpeed]: [15],
-      [PropertyType.LifeStolenPerHit]: [15],
-      [PropertyType.AllResistances]: [15],
-      [PropertyType.Life]: [15],
-      [PropertyType.LightRadius]: [4],
+      [MagicPropertyType.EnhancedDamage]: [60, 80],
+      [MagicPropertyType.OpenWounds]: [33],
+      [MagicPropertyType.IncreasedAttackSpeed]: [15],
+      [MagicPropertyType.LifeStolenPerHit]: [15],
+      [MagicPropertyType.AllResistances]: [15],
+      [MagicPropertyType.Life]: [15],
+      [MagicPropertyType.LightRadius]: [4],
     },
   },
   [ids.LidlessWall]: {
@@ -50,13 +54,13 @@ const items = {
     baseId: ids.GrimShield,
     sockets: [null, null],
     stats: {
-      [PropertyType.EnhancedDefense]: [80, 130],
-      [PropertyType.AllSkillLevels]: [1],
-      [PropertyType.IncreaseMaximumMana]: [10],
-      [PropertyType.FasterCastRate]: [20],
-      [PropertyType.ManaAfterKill]: [3, 5],
-      [PropertyType.Energy]: [10],
-      [PropertyType.LightRadius]: [1],
+      [MagicPropertyType.EnhancedDefense]: [80, 130],
+      [MagicPropertyType.AllSkillLevels]: [1],
+      [MagicPropertyType.IncreaseMaximumMana]: [10],
+      [MagicPropertyType.FasterCastRate]: [20],
+      [MagicPropertyType.ManaAfterKill]: [3, 5],
+      [MagicPropertyType.Energy]: [10],
+      [MagicPropertyType.LightRadius]: [1],
     },
   },
   [ids.StoneOfJordan]: {
@@ -67,10 +71,10 @@ const items = {
     clvl: 29,
     ilvl: 66,
     stats: {
-      [PropertyType.AllSkillLevels]: [1],
-      [PropertyType.LightningDamage]: [1, 12],
-      [PropertyType.Mana]: [20],
-      [PropertyType.IncreaseMaximumMana]: [25],
+      [MagicPropertyType.AllSkillLevels]: [1],
+      [MagicPropertyType.LightningDamage]: [1, 12],
+      [MagicPropertyType.Mana]: [20],
+      [MagicPropertyType.IncreaseMaximumMana]: [25],
     },
   },
   [ids.WallOfTheEyeless]: {
@@ -82,12 +86,12 @@ const items = {
     baseId: ids.BoneShield,
     sockets: [null, null],
     stats: {
-      [PropertyType.EnhancedDefense]: [30, 40],
-      [PropertyType.Defense]: [10],
-      [PropertyType.ManaAfterKill]: [5],
-      [PropertyType.FasterCastRate]: [20],
-      [PropertyType.ManaStolenPerHit]: [3],
-      [PropertyType.PoisonResist]: [20],
+      [MagicPropertyType.EnhancedDefense]: [30, 40],
+      [MagicPropertyType.Defense]: [10],
+      [MagicPropertyType.ManaAfterKill]: [5],
+      [MagicPropertyType.FasterCastRate]: [20],
+      [MagicPropertyType.ManaStolenPerHit]: [3],
+      [MagicPropertyType.PoisonResist]: [20],
     },
   },
 };
@@ -112,7 +116,7 @@ export default mapItems({
     if (item.stats) {
       Object.entries(item.stats).forEach(([property, values]) => {
         description.push({
-          text: resolveStats({property, values}),
+          text: resolveMagicProperties({property, values}),
           color: 'item.quality.magic',
         });
       });

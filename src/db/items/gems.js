@@ -2,7 +2,7 @@ import {
   GemClassType,
   GemQualityType,
   ItemType,
-  PropertyType,
+  MagicPropertyType,
 } from '../../enums/index.js';
 import {mapItems} from '../utils/map-items.js';
 import {mapItemClvl} from '../utils/map-item-clvl.js';
@@ -18,15 +18,15 @@ const items = {
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
-        property: PropertyType.FireDamage,
+        property: MagicPropertyType.FireDamage,
         values: [3, 4],
       },
       armor: {
-        property: PropertyType.Life,
+        property: MagicPropertyType.Life,
         values: [10],
       },
       shields: {
-        property: PropertyType.FireResist,
+        property: MagicPropertyType.FireResist,
         values: [12],
       },
     },
@@ -39,15 +39,15 @@ const items = {
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
-        property: PropertyType.FireDamage,
+        property: MagicPropertyType.FireDamage,
         values: [5, 8],
       },
       armor: {
-        property: PropertyType.Life,
+        property: MagicPropertyType.Life,
         values: [17],
       },
       shields: {
-        property: PropertyType.FireResist,
+        property: MagicPropertyType.FireResist,
         values: [16],
       },
     },
@@ -60,15 +60,15 @@ const items = {
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
-        property: PropertyType.FireDamage,
+        property: MagicPropertyType.FireDamage,
         values: [8, 12],
       },
       armor: {
-        property: PropertyType.Life,
+        property: MagicPropertyType.Life,
         values: [24],
       },
       shields: {
-        property: PropertyType.FireResist,
+        property: MagicPropertyType.FireResist,
         values: [22],
       },
     },
@@ -81,15 +81,15 @@ const items = {
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
-        property: PropertyType.FireDamage,
+        property: MagicPropertyType.FireDamage,
         values: [10, 16],
       },
       armor: {
-        property: PropertyType.Life,
+        property: MagicPropertyType.Life,
         values: [31],
       },
       shields: {
-        property: PropertyType.FireResist,
+        property: MagicPropertyType.FireResist,
         values: [28],
       },
     },
@@ -102,15 +102,15 @@ const items = {
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
-        property: PropertyType.FireDamage,
+        property: MagicPropertyType.FireDamage,
         values: [15, 20],
       },
       armor: {
-        property: PropertyType.Life,
+        property: MagicPropertyType.Life,
         values: [38],
       },
       shields: {
-        property: PropertyType.FireResist,
+        property: MagicPropertyType.FireResist,
         values: [40],
       },
     },
@@ -123,15 +123,15 @@ const items = {
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
-        property: PropertyType.ColdDamage,
+        property: MagicPropertyType.ColdDamage,
         values: [1, 3, 1],
       },
       armor: {
-        property: PropertyType.Mana,
+        property: MagicPropertyType.Mana,
         values: [10],
       },
       shields: {
-        property: PropertyType.ColdResist,
+        property: MagicPropertyType.ColdResist,
         values: [12],
       },
     },
@@ -144,15 +144,15 @@ const items = {
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
-        property: PropertyType.ColdDamage,
+        property: MagicPropertyType.ColdDamage,
         values: [3, 5, 1.4],
       },
       armor: {
-        property: PropertyType.Mana,
+        property: MagicPropertyType.Mana,
         values: [17],
       },
       shields: {
-        property: PropertyType.ColdResist,
+        property: MagicPropertyType.ColdResist,
         values: [16],
       },
     },
@@ -165,15 +165,15 @@ const items = {
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
-        property: PropertyType.ColdDamage,
+        property: MagicPropertyType.ColdDamage,
         values: [4, 7, 2],
       },
       armor: {
-        property: PropertyType.Mana,
+        property: MagicPropertyType.Mana,
         values: [24],
       },
       shields: {
-        property: PropertyType.ColdResist,
+        property: MagicPropertyType.ColdResist,
         values: [22],
       },
     },
@@ -186,15 +186,15 @@ const items = {
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
-        property: PropertyType.ColdDamage,
+        property: MagicPropertyType.ColdDamage,
         values: [6, 10, 2.4],
       },
       armor: {
-        property: PropertyType.Mana,
+        property: MagicPropertyType.Mana,
         values: [31],
       },
       shields: {
-        property: PropertyType.ColdResist,
+        property: MagicPropertyType.ColdResist,
         values: [28],
       },
     },
@@ -207,15 +207,15 @@ const items = {
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
-        property: PropertyType.ColdDamage,
+        property: MagicPropertyType.ColdDamage,
         values: [10, 14, 3],
       },
       armor: {
-        property: PropertyType.Mana,
+        property: MagicPropertyType.Mana,
         values: [38],
       },
       shields: {
-        property: PropertyType.ColdResist,
+        property: MagicPropertyType.ColdResist,
         values: [40],
       },
     },
@@ -228,15 +228,15 @@ const items = {
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
-        property: PropertyType.LightningDamage,
+        property: MagicPropertyType.LightningDamage,
         values: [1, 8],
       },
       armor: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [9],
       },
       shields: {
-        property: PropertyType.LightningResist,
+        property: MagicPropertyType.LightningResist,
         values: [12],
       },
     },
@@ -249,15 +249,15 @@ const items = {
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
-        property: PropertyType.LightningDamage,
+        property: MagicPropertyType.LightningDamage,
         values: [1, 14],
       },
       armor: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [13],
       },
       shields: {
-        property: PropertyType.LightningResist,
+        property: MagicPropertyType.LightningResist,
         values: [16],
       },
     },
@@ -270,15 +270,15 @@ const items = {
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
-        property: PropertyType.LightningDamage,
+        property: MagicPropertyType.LightningDamage,
         values: [1, 22],
       },
       armor: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [16],
       },
       shields: {
-        property: PropertyType.LightningResist,
+        property: MagicPropertyType.LightningResist,
         values: [22],
       },
     },
@@ -291,15 +291,15 @@ const items = {
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
-        property: PropertyType.LightningDamage,
+        property: MagicPropertyType.LightningDamage,
         values: [1, 30],
       },
       armor: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [20],
       },
       shields: {
-        property: PropertyType.LightningResist,
+        property: MagicPropertyType.LightningResist,
         values: [28],
       },
     },
@@ -312,15 +312,15 @@ const items = {
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
-        property: PropertyType.LightningDamage,
+        property: MagicPropertyType.LightningDamage,
         values: [1, 40],
       },
       armor: {
-        property: PropertyType.MagicFind,
+        property: MagicPropertyType.MagicFind,
         values: [24],
       },
       shields: {
-        property: PropertyType.LightningResist,
+        property: MagicPropertyType.LightningResist,
         values: [40],
       },
     },
@@ -333,15 +333,15 @@ const items = {
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
-        property: PropertyType.PoisonDamage,
+        property: MagicPropertyType.PoisonDamage,
         values: [10, 3],
       },
       armor: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [3],
       },
       shields: {
-        property: PropertyType.PoisonResist,
+        property: MagicPropertyType.PoisonResist,
         values: [12],
       },
     },
@@ -354,15 +354,15 @@ const items = {
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
-        property: PropertyType.PoisonDamage,
+        property: MagicPropertyType.PoisonDamage,
         values: [20, 4],
       },
       armor: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [4],
       },
       shields: {
-        property: PropertyType.PoisonResist,
+        property: MagicPropertyType.PoisonResist,
         values: [16],
       },
     },
@@ -375,15 +375,15 @@ const items = {
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
-        property: PropertyType.PoisonDamage,
+        property: MagicPropertyType.PoisonDamage,
         values: [40, 5],
       },
       armor: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [6],
       },
       shields: {
-        property: PropertyType.PoisonResist,
+        property: MagicPropertyType.PoisonResist,
         values: [22],
       },
     },
@@ -396,15 +396,15 @@ const items = {
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
-        property: PropertyType.PoisonDamage,
+        property: MagicPropertyType.PoisonDamage,
         values: [60, 6],
       },
       armor: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [8],
       },
       shields: {
-        property: PropertyType.PoisonResist,
+        property: MagicPropertyType.PoisonResist,
         values: [28],
       },
     },
@@ -417,15 +417,15 @@ const items = {
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
-        property: PropertyType.PoisonDamage,
+        property: MagicPropertyType.PoisonDamage,
         values: [100, 7],
       },
       armor: {
-        property: PropertyType.Dexterity,
+        property: MagicPropertyType.Dexterity,
         values: [10],
       },
       shields: {
-        property: PropertyType.PoisonResist,
+        property: MagicPropertyType.PoisonResist,
         values: [40],
       },
     },
@@ -438,15 +438,15 @@ const items = {
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
-        property: PropertyType.DamageToUndead,
+        property: MagicPropertyType.DamageToUndead,
         values: [28],
       },
       armor: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [20],
       },
       shields: {
-        property: PropertyType.AllResistances,
+        property: MagicPropertyType.AllResistances,
         values: [6],
       },
     },
@@ -459,15 +459,15 @@ const items = {
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
-        property: PropertyType.DamageToUndead,
+        property: MagicPropertyType.DamageToUndead,
         values: [34],
       },
       armor: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [40],
       },
       shields: {
-        property: PropertyType.AllResistances,
+        property: MagicPropertyType.AllResistances,
         values: [8],
       },
     },
@@ -480,15 +480,15 @@ const items = {
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
-        property: PropertyType.DamageToUndead,
+        property: MagicPropertyType.DamageToUndead,
         values: [44],
       },
       armor: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [60],
       },
       shields: {
-        property: PropertyType.AllResistances,
+        property: MagicPropertyType.AllResistances,
         values: [11],
       },
     },
@@ -501,15 +501,15 @@ const items = {
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
-        property: PropertyType.DamageToUndead,
+        property: MagicPropertyType.DamageToUndead,
         values: [54],
       },
       armor: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [80],
       },
       shields: {
-        property: PropertyType.AllResistances,
+        property: MagicPropertyType.AllResistances,
         values: [14],
       },
     },
@@ -522,15 +522,15 @@ const items = {
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
-        property: PropertyType.DamageToUndead,
+        property: MagicPropertyType.DamageToUndead,
         values: [68],
       },
       armor: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [100],
       },
       shields: {
-        property: PropertyType.AllResistances,
+        property: MagicPropertyType.AllResistances,
         values: [19],
       },
     },
@@ -543,15 +543,15 @@ const items = {
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [40],
       },
       armor: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [3],
       },
       shields: {
-        property: PropertyType.Defense,
+        property: MagicPropertyType.Defense,
         values: [8],
       },
     },
@@ -564,15 +564,15 @@ const items = {
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [60],
       },
       armor: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [4],
       },
       shields: {
-        property: PropertyType.Defense,
+        property: MagicPropertyType.Defense,
         values: [12],
       },
     },
@@ -585,15 +585,15 @@ const items = {
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [80],
       },
       armor: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [6],
       },
       shields: {
-        property: PropertyType.Defense,
+        property: MagicPropertyType.Defense,
         values: [18],
       },
     },
@@ -606,15 +606,15 @@ const items = {
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [100],
       },
       armor: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [8],
       },
       shields: {
-        property: PropertyType.Defense,
+        property: MagicPropertyType.Defense,
         values: [24],
       },
     },
@@ -627,15 +627,15 @@ const items = {
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
-        property: PropertyType.AttackRating,
+        property: MagicPropertyType.AttackRating,
         values: [150],
       },
       armor: {
-        property: PropertyType.Strength,
+        property: MagicPropertyType.Strength,
         values: [10],
       },
       shields: {
-        property: PropertyType.Defense,
+        property: MagicPropertyType.Defense,
         values: [30],
       },
     },
@@ -649,26 +649,26 @@ const items = {
     stats: {
       weapons: [
         {
-          property: PropertyType.LifeStolenPerHit,
+          property: MagicPropertyType.LifeStolenPerHit,
           values: [2],
         },
         {
-          property: PropertyType.ManaStolenPerHit,
+          property: MagicPropertyType.ManaStolenPerHit,
           values: [1],
         },
       ],
       armor: [
         {
-          property: PropertyType.RegenerateMana,
+          property: MagicPropertyType.RegenerateMana,
           values: [8],
         },
         {
-          property: PropertyType.ReplenishLife,
+          property: MagicPropertyType.ReplenishLife,
           values: [2],
         },
       ],
       shields: {
-        property: PropertyType.AttackerTakesDamage,
+        property: MagicPropertyType.AttackerTakesDamage,
         values: [4],
       },
     },
@@ -682,26 +682,26 @@ const items = {
     stats: {
       weapons: [
         {
-          property: PropertyType.LifeStolenPerHit,
+          property: MagicPropertyType.LifeStolenPerHit,
           values: [2],
         },
         {
-          property: PropertyType.ManaStolenPerHit,
+          property: MagicPropertyType.ManaStolenPerHit,
           values: [2],
         },
       ],
       armor: [
         {
-          property: PropertyType.RegenerateMana,
+          property: MagicPropertyType.RegenerateMana,
           values: [8],
         },
         {
-          property: PropertyType.ReplenishLife,
+          property: MagicPropertyType.ReplenishLife,
           values: [3],
         },
       ],
       shields: {
-        property: PropertyType.AttackerTakesDamage,
+        property: MagicPropertyType.AttackerTakesDamage,
         values: [8],
       },
     },
@@ -715,26 +715,26 @@ const items = {
     stats: {
       weapons: [
         {
-          property: PropertyType.LifeStolenPerHit,
+          property: MagicPropertyType.LifeStolenPerHit,
           values: [3],
         },
         {
-          property: PropertyType.ManaStolenPerHit,
+          property: MagicPropertyType.ManaStolenPerHit,
           values: [2],
         },
       ],
       armor: [
         {
-          property: PropertyType.RegenerateMana,
+          property: MagicPropertyType.RegenerateMana,
           values: [12],
         },
         {
-          property: PropertyType.ReplenishLife,
+          property: MagicPropertyType.ReplenishLife,
           values: [3],
         },
       ],
       shields: {
-        property: PropertyType.AttackerTakesDamage,
+        property: MagicPropertyType.AttackerTakesDamage,
         values: [12],
       },
     },
@@ -748,26 +748,26 @@ const items = {
     stats: {
       weapons: [
         {
-          property: PropertyType.LifeStolenPerHit,
+          property: MagicPropertyType.LifeStolenPerHit,
           values: [3],
         },
         {
-          property: PropertyType.ManaStolenPerHit,
+          property: MagicPropertyType.ManaStolenPerHit,
           values: [3],
         },
       ],
       armor: [
         {
-          property: PropertyType.RegenerateMana,
+          property: MagicPropertyType.RegenerateMana,
           values: [12],
         },
         {
-          property: PropertyType.ReplenishLife,
+          property: MagicPropertyType.ReplenishLife,
           values: [4],
         },
       ],
       shields: {
-        property: PropertyType.AttackerTakesDamage,
+        property: MagicPropertyType.AttackerTakesDamage,
         values: [16],
       },
     },
@@ -781,26 +781,26 @@ const items = {
     stats: {
       weapons: [
         {
-          property: PropertyType.LifeStolenPerHit,
+          property: MagicPropertyType.LifeStolenPerHit,
           values: [4],
         },
         {
-          property: PropertyType.ManaStolenPerHit,
+          property: MagicPropertyType.ManaStolenPerHit,
           values: [3],
         },
       ],
       armor: [
         {
-          property: PropertyType.RegenerateMana,
+          property: MagicPropertyType.RegenerateMana,
           values: [19],
         },
         {
-          property: PropertyType.ReplenishLife,
+          property: MagicPropertyType.ReplenishLife,
           values: [5],
         },
       ],
       shields: {
-        property: PropertyType.AttackerTakesDamage,
+        property: MagicPropertyType.AttackerTakesDamage,
         values: [20],
       },
     },
