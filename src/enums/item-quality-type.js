@@ -1,5 +1,7 @@
 /**
- * Values are kebab-cased to match theme definitions/paths
+ * Values are kebab-cased to match theme definitions/paths.
+ * @readonly
+ * @enum {string}
  */
 export const ItemQualityType = {
   Crafted: 'crafted',

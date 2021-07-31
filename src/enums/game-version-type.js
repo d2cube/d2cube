@@ -1,5 +1,7 @@
 /**
- * Values are lowercased to match folder paths
+ * Values are lowercased to match folder paths.
+ * @readonly
+ * @enum {string}
  */
 export const GameVersionType = {
   D2: 'd2',

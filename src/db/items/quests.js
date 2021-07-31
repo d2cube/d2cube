@@ -1,5 +1,5 @@
 import {
-  ItemPropertyType,
+  BasePropertyType,
   ItemQualityType,
   ItemType,
 } from '../../enums/index.js';
@@ -17,13 +17,13 @@ const items = {
     clvl: null,
     size: [2, 1],
     properties: {
-      [ItemPropertyType.Damage1H]: [1, 8],
-      [ItemPropertyType.MeleeRange]: 1,
-      [ItemPropertyType.AttackSpeed]: -10,
-      [ItemPropertyType.MinimumStrength]: null,
-      [ItemPropertyType.MinimumDexterity]: null,
-      [ItemPropertyType.Durability]: 66,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Damage1H]: [1, 8],
+      [BasePropertyType.MeleeRange]: 1,
+      [BasePropertyType.AttackSpeed]: -10,
+      [BasePropertyType.MinimumStrength]: null,
+      [BasePropertyType.MinimumDexterity]: null,
+      [BasePropertyType.Durability]: 66,
+      [BasePropertyType.MaxSockets]: 3,
     },
     mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
   },

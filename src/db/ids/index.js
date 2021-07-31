@@ -24,6 +24,10 @@ import swords from './swords.js';
 import tomes from './tomes.js';
 import uniques from './uniques.js';
 
+/**
+ * @readonly
+ * @enum {string}
+ */
 export default {
   ...amulets,
   ...ammunitions,

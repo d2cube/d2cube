@@ -1,6 +1,6 @@
 import {
   ArmorType,
-  ItemPropertyType,
+  BasePropertyType,
   ItemTierType,
   ItemType,
 } from '../../enums/index.js';
@@ -18,10 +18,10 @@ const items = {
     clvl: 5,
     ilvl: 1,
     properties: {
-      [ItemPropertyType.Defense]: [8, 11],
-      [ItemPropertyType.MinimumStrength]: 12,
-      [ItemPropertyType.Durability]: 20,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [8, 11],
+      [BasePropertyType.MinimumStrength]: 12,
+      [BasePropertyType.Durability]: 20,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.LeatherArmor]: {
@@ -31,10 +31,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 3,
     properties: {
-      [ItemPropertyType.Defense]: [14, 17],
-      [ItemPropertyType.MinimumStrength]: 15,
-      [ItemPropertyType.Durability]: 24,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [14, 17],
+      [BasePropertyType.MinimumStrength]: 15,
+      [BasePropertyType.Durability]: 24,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.HardLeatherArmor]: {
@@ -44,10 +44,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 5,
     properties: {
-      [ItemPropertyType.Defense]: [21, 24],
-      [ItemPropertyType.MinimumStrength]: 20,
-      [ItemPropertyType.Durability]: 28,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [21, 24],
+      [BasePropertyType.MinimumStrength]: 20,
+      [BasePropertyType.Durability]: 28,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.StuddedLeather]: {
@@ -57,10 +57,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 8,
     properties: {
-      [ItemPropertyType.Defense]: [32, 35],
-      [ItemPropertyType.MinimumStrength]: 27,
-      [ItemPropertyType.Durability]: 32,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [32, 35],
+      [BasePropertyType.MinimumStrength]: 27,
+      [BasePropertyType.Durability]: 32,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.RingMail]: {
@@ -70,10 +70,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 11,
     properties: {
-      [ItemPropertyType.Defense]: [45, 48],
-      [ItemPropertyType.MinimumStrength]: 36,
-      [ItemPropertyType.Durability]: 26,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [45, 48],
+      [BasePropertyType.MinimumStrength]: 36,
+      [BasePropertyType.Durability]: 26,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.ScaleMail]: {
@@ -83,10 +83,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 13,
     properties: {
-      [ItemPropertyType.Defense]: [57, 60],
-      [ItemPropertyType.MinimumStrength]: 44,
-      [ItemPropertyType.Durability]: 36,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [57, 60],
+      [BasePropertyType.MinimumStrength]: 44,
+      [BasePropertyType.Durability]: 36,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.ChainMail]: {
@@ -96,10 +96,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 15,
     properties: {
-      [ItemPropertyType.Defense]: [72, 75],
-      [ItemPropertyType.MinimumStrength]: 48,
-      [ItemPropertyType.Durability]: 45,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [72, 75],
+      [BasePropertyType.MinimumStrength]: 48,
+      [BasePropertyType.Durability]: 45,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.BreastPlate]: {
@@ -109,10 +109,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 18,
     properties: {
-      [ItemPropertyType.Defense]: [65, 68],
-      [ItemPropertyType.MinimumStrength]: 30,
-      [ItemPropertyType.Durability]: 50,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [65, 68],
+      [BasePropertyType.MinimumStrength]: 30,
+      [BasePropertyType.Durability]: 50,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.SplintMail]: {
@@ -122,10 +122,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 20,
     properties: {
-      [ItemPropertyType.Defense]: [90, 95],
-      [ItemPropertyType.MinimumStrength]: 51,
-      [ItemPropertyType.Durability]: 30,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [90, 95],
+      [BasePropertyType.MinimumStrength]: 51,
+      [BasePropertyType.Durability]: 30,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.PlateMail]: {
@@ -135,10 +135,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 24,
     properties: {
-      [ItemPropertyType.Defense]: [108, 116],
-      [ItemPropertyType.MinimumStrength]: 65,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [108, 116],
+      [BasePropertyType.MinimumStrength]: 65,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.FieldPlate]: {
@@ -148,10 +148,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 28,
     properties: {
-      [ItemPropertyType.Defense]: [101, 105],
-      [ItemPropertyType.MinimumStrength]: 55,
-      [ItemPropertyType.Durability]: 48,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [101, 105],
+      [BasePropertyType.MinimumStrength]: 55,
+      [BasePropertyType.Durability]: 48,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.GothicPlate]: {
@@ -161,10 +161,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 32,
     properties: {
-      [ItemPropertyType.Defense]: [128, 135],
-      [ItemPropertyType.MinimumStrength]: 70,
-      [ItemPropertyType.Durability]: 55,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [128, 135],
+      [BasePropertyType.MinimumStrength]: 70,
+      [BasePropertyType.Durability]: 55,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.LightPlate]: {
@@ -174,10 +174,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 35,
     properties: {
-      [ItemPropertyType.Defense]: [90, 107],
-      [ItemPropertyType.MinimumStrength]: 41,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [90, 107],
+      [BasePropertyType.MinimumStrength]: 41,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.FullPlateMail]: {
@@ -187,10 +187,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 37,
     properties: {
-      [ItemPropertyType.Defense]: [150, 161],
-      [ItemPropertyType.MinimumStrength]: 80,
-      [ItemPropertyType.Durability]: 70,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [150, 161],
+      [BasePropertyType.MinimumStrength]: 80,
+      [BasePropertyType.Durability]: 70,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.AncientArmor]: {
@@ -200,10 +200,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 40,
     properties: {
-      [ItemPropertyType.Defense]: [218, 233],
-      [ItemPropertyType.MinimumStrength]: 100,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [218, 233],
+      [BasePropertyType.MinimumStrength]: 100,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.GhostArmor]: {
@@ -216,10 +216,10 @@ const items = {
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
-      [ItemPropertyType.Defense]: [102, 117],
-      [ItemPropertyType.MinimumStrength]: 38,
-      [ItemPropertyType.Durability]: 20,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [102, 117],
+      [BasePropertyType.MinimumStrength]: 38,
+      [BasePropertyType.Durability]: 20,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.SerpentskinArmor]: {
@@ -232,10 +232,10 @@ const items = {
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
-      [ItemPropertyType.Defense]: [111, 126],
-      [ItemPropertyType.MinimumStrength]: 43,
-      [ItemPropertyType.Durability]: 24,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [111, 126],
+      [BasePropertyType.MinimumStrength]: 43,
+      [BasePropertyType.Durability]: 24,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.DemonhideArmor]: {
@@ -248,10 +248,10 @@ const items = {
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
-      [ItemPropertyType.Defense]: [122, 136],
-      [ItemPropertyType.MinimumStrength]: 50,
-      [ItemPropertyType.Durability]: 28,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [122, 136],
+      [BasePropertyType.MinimumStrength]: 50,
+      [BasePropertyType.Durability]: 28,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.TrellisedArmor]: {
@@ -264,10 +264,10 @@ const items = {
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
-      [ItemPropertyType.Defense]: [138, 153],
-      [ItemPropertyType.MinimumStrength]: 61,
-      [ItemPropertyType.Durability]: 32,
-      [ItemPropertyType.MaxSockets]: 2,
+      [BasePropertyType.Defense]: [138, 153],
+      [BasePropertyType.MinimumStrength]: 61,
+      [BasePropertyType.Durability]: 32,
+      [BasePropertyType.MaxSockets]: 2,
     },
   },
   [ids.LinkedMail]: {
@@ -280,10 +280,10 @@ const items = {
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
-      [ItemPropertyType.Defense]: [158, 172],
-      [ItemPropertyType.MinimumStrength]: 74,
-      [ItemPropertyType.Durability]: 26,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [158, 172],
+      [BasePropertyType.MinimumStrength]: 74,
+      [BasePropertyType.Durability]: 26,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.TigulatedMail]: {
@@ -296,10 +296,10 @@ const items = {
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
-      [ItemPropertyType.Defense]: [176, 190],
-      [ItemPropertyType.MinimumStrength]: 86,
-      [ItemPropertyType.Durability]: 36,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [176, 190],
+      [BasePropertyType.MinimumStrength]: 86,
+      [BasePropertyType.Durability]: 36,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.MeshArmor]: {
@@ -312,10 +312,10 @@ const items = {
     baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
-      [ItemPropertyType.Defense]: [198, 213],
-      [ItemPropertyType.MinimumStrength]: 92,
-      [ItemPropertyType.Durability]: 45,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [198, 213],
+      [BasePropertyType.MinimumStrength]: 92,
+      [BasePropertyType.Durability]: 45,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.Cuirass]: {
@@ -328,10 +328,10 @@ const items = {
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
-      [ItemPropertyType.Defense]: [188, 202],
-      [ItemPropertyType.MinimumStrength]: 65,
-      [ItemPropertyType.Durability]: 50,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [188, 202],
+      [BasePropertyType.MinimumStrength]: 65,
+      [BasePropertyType.Durability]: 50,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.RussetArmor]: {
@@ -344,10 +344,10 @@ const items = {
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
-      [ItemPropertyType.Defense]: [225, 243],
-      [ItemPropertyType.MinimumStrength]: 97,
-      [ItemPropertyType.Durability]: 30,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [225, 243],
+      [BasePropertyType.MinimumStrength]: 97,
+      [BasePropertyType.Durability]: 30,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.TemplarCoat]: {
@@ -360,10 +360,10 @@ const items = {
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
-      [ItemPropertyType.Defense]: [252, 274],
-      [ItemPropertyType.MinimumStrength]: 118,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [252, 274],
+      [BasePropertyType.MinimumStrength]: 118,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.SharktoothArmor]: {
@@ -376,10 +376,10 @@ const items = {
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
-      [ItemPropertyType.Defense]: [242, 258],
-      [ItemPropertyType.MinimumStrength]: 103,
-      [ItemPropertyType.Durability]: 48,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [242, 258],
+      [BasePropertyType.MinimumStrength]: 103,
+      [BasePropertyType.Durability]: 48,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.EmbossedPlate]: {
@@ -392,10 +392,10 @@ const items = {
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
-      [ItemPropertyType.Defense]: [282, 303],
-      [ItemPropertyType.MinimumStrength]: 125,
-      [ItemPropertyType.Durability]: 55,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [282, 303],
+      [BasePropertyType.MinimumStrength]: 125,
+      [BasePropertyType.Durability]: 55,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.MagePlate]: {
@@ -408,10 +408,10 @@ const items = {
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
-      [ItemPropertyType.Defense]: [225, 261],
-      [ItemPropertyType.MinimumStrength]: 55,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 3,
+      [BasePropertyType.Defense]: [225, 261],
+      [BasePropertyType.MinimumStrength]: 55,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 3,
     },
   },
   [ids.ChaosArmor]: {
@@ -424,10 +424,10 @@ const items = {
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
-      [ItemPropertyType.Defense]: [315, 342],
-      [ItemPropertyType.MinimumStrength]: 140,
-      [ItemPropertyType.Durability]: 70,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [315, 342],
+      [BasePropertyType.MinimumStrength]: 140,
+      [BasePropertyType.Durability]: 70,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.OrnatePlate]: {
@@ -440,10 +440,10 @@ const items = {
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {
-      [ItemPropertyType.Defense]: [417, 450],
-      [ItemPropertyType.MinimumStrength]: 170,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [417, 450],
+      [BasePropertyType.MinimumStrength]: 170,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.DuskShroud]: {
@@ -456,10 +456,10 @@ const items = {
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
-      [ItemPropertyType.Defense]: [361, 467],
-      [ItemPropertyType.MinimumStrength]: 77,
-      [ItemPropertyType.Durability]: 20,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [361, 467],
+      [BasePropertyType.MinimumStrength]: 77,
+      [BasePropertyType.Durability]: 20,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.Wyrmhide]: {
@@ -472,10 +472,10 @@ const items = {
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
-      [ItemPropertyType.Defense]: [364, 470],
-      [ItemPropertyType.MinimumStrength]: 84,
-      [ItemPropertyType.Durability]: 24,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [364, 470],
+      [BasePropertyType.MinimumStrength]: 84,
+      [BasePropertyType.Durability]: 24,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.ScarabHusk]: {
@@ -488,10 +488,10 @@ const items = {
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
-      [ItemPropertyType.Defense]: [369, 474],
-      [ItemPropertyType.MinimumStrength]: 95,
-      [ItemPropertyType.Durability]: 28,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [369, 474],
+      [BasePropertyType.MinimumStrength]: 95,
+      [BasePropertyType.Durability]: 28,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.WireFleece]: {
@@ -504,10 +504,10 @@ const items = {
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
-      [ItemPropertyType.Defense]: [375, 481],
-      [ItemPropertyType.MinimumStrength]: 111,
-      [ItemPropertyType.Durability]: 70,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [375, 481],
+      [BasePropertyType.MinimumStrength]: 111,
+      [BasePropertyType.Durability]: 70,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.DiamondMail]: {
@@ -520,10 +520,10 @@ const items = {
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
-      [ItemPropertyType.Defense]: [383, 489],
-      [ItemPropertyType.MinimumStrength]: 131,
-      [ItemPropertyType.Durability]: 26,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [383, 489],
+      [BasePropertyType.MinimumStrength]: 131,
+      [BasePropertyType.Durability]: 26,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.LoricatedMail]: {
@@ -536,10 +536,10 @@ const items = {
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
-      [ItemPropertyType.Defense]: [390, 496],
-      [ItemPropertyType.MinimumStrength]: 149,
-      [ItemPropertyType.Durability]: 36,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [390, 496],
+      [BasePropertyType.MinimumStrength]: 149,
+      [BasePropertyType.Durability]: 36,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.Boneweave]: {
@@ -552,10 +552,10 @@ const items = {
     baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
-      [ItemPropertyType.Defense]: [399, 505],
-      [ItemPropertyType.MinimumStrength]: 158,
-      [ItemPropertyType.Durability]: 45,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [399, 505],
+      [BasePropertyType.MinimumStrength]: 158,
+      [BasePropertyType.Durability]: 45,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.GreatHauberk]: {
@@ -568,10 +568,10 @@ const items = {
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
-      [ItemPropertyType.Defense]: [395, 501],
-      [ItemPropertyType.MinimumStrength]: 118,
-      [ItemPropertyType.Durability]: 50,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [395, 501],
+      [BasePropertyType.MinimumStrength]: 118,
+      [BasePropertyType.Durability]: 50,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.BalrogSkin]: {
@@ -584,10 +584,10 @@ const items = {
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
-      [ItemPropertyType.Defense]: [410, 517],
-      [ItemPropertyType.MinimumStrength]: 165,
-      [ItemPropertyType.Durability]: 30,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [410, 517],
+      [BasePropertyType.MinimumStrength]: 165,
+      [BasePropertyType.Durability]: 30,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.HellforgePlate]: {
@@ -600,10 +600,10 @@ const items = {
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
-      [ItemPropertyType.Defense]: [421, 530],
-      [ItemPropertyType.MinimumStrength]: 196,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [421, 530],
+      [BasePropertyType.MinimumStrength]: 196,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.KrakenShell]: {
@@ -616,10 +616,10 @@ const items = {
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
-      [ItemPropertyType.Defense]: [417, 523],
-      [ItemPropertyType.MinimumStrength]: 174,
-      [ItemPropertyType.Durability]: 48,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [417, 523],
+      [BasePropertyType.MinimumStrength]: 174,
+      [BasePropertyType.Durability]: 48,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.LacqueredPlate]: {
@@ -632,10 +632,10 @@ const items = {
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
-      [ItemPropertyType.Defense]: [433, 541],
-      [ItemPropertyType.MinimumStrength]: 208,
-      [ItemPropertyType.Durability]: 55,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [433, 541],
+      [BasePropertyType.MinimumStrength]: 208,
+      [BasePropertyType.Durability]: 55,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.ArchonPlate]: {
@@ -648,10 +648,10 @@ const items = {
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
-      [ItemPropertyType.Defense]: [410, 524],
-      [ItemPropertyType.MinimumStrength]: 103,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [410, 524],
+      [BasePropertyType.MinimumStrength]: 103,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.ShadowPlate]: {
@@ -664,10 +664,10 @@ const items = {
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
-      [ItemPropertyType.Defense]: [446, 557],
-      [ItemPropertyType.MinimumStrength]: 230,
-      [ItemPropertyType.Durability]: 70,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [446, 557],
+      [BasePropertyType.MinimumStrength]: 230,
+      [BasePropertyType.Durability]: 70,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
   [ids.SacredArmor]: {
@@ -680,10 +680,10 @@ const items = {
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {
-      [ItemPropertyType.Defense]: [487, 600],
-      [ItemPropertyType.MinimumStrength]: 232,
-      [ItemPropertyType.Durability]: 60,
-      [ItemPropertyType.MaxSockets]: 4,
+      [BasePropertyType.Defense]: [487, 600],
+      [BasePropertyType.MinimumStrength]: 232,
+      [BasePropertyType.Durability]: 60,
+      [BasePropertyType.MaxSockets]: 4,
     },
   },
 };

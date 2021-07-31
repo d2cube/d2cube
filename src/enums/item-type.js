@@ -1,3 +1,7 @@
+/**
+ * @readonly
+ * @enum {string}
+ */
 export const ItemType = {
   Ammunition: 'Ammunition',
   Amulet: 'Amulet',

@@ -3,7 +3,7 @@ import {
   GemClassType,
   GemQualityType,
   ItemQualityType,
-  ItemPropertyType,
+  BasePropertyType,
   ItemType,
   PotionClassType,
   ItemTierType,
@@ -63,14 +63,14 @@ export const isRare = isQualityEqual(ItemQualityType.Rare);
 export const isUnique = isQualityEqual(ItemQualityType.Unique);
 
 // Weapon/Armor
-export const isArmor = hasItemProperty(ItemPropertyType.Defense);
+export const isArmor = hasItemProperty(BasePropertyType.Defense);
 
 export const isWeapon = or([
-  hasItemProperty(ItemPropertyType.Damage1H),
-  hasItemProperty(ItemPropertyType.Damage2H),
+  hasItemProperty(BasePropertyType.Damage1H),
+  hasItemProperty(BasePropertyType.Damage2H),
 ]);
 
-export const isSocketable = hasItemProperty(ItemPropertyType.MaxSockets);
+export const isSocketable = hasItemProperty(BasePropertyType.MaxSockets);
 
 export const isEthereal = isPropValueEqual('isEthereal')(true);
 

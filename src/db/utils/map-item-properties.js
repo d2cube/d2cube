@@ -1,5 +1,5 @@
 import {random} from '../../utils/random.js';
-import {ItemPropertyType} from '../../enums/index.js';
+import {BasePropertyType} from '../../enums/index.js';
 import {mapItemClvl} from './map-item-clvl.js';
 import {mapItemIlvl} from './map-item-ilvl.js';
 
@@ -32,46 +32,46 @@ export const mapItemProperties = (item) => {
 
   description.push(mapItemIlvl(item));
 
-  if (properties[ItemPropertyType.DamageThrow]) {
+  if (properties[BasePropertyType.DamageThrow]) {
     description.push({
-      text: `Throw Damage: ${properties[ItemPropertyType.DamageThrow].join(
+      text: `Throw Damage: ${properties[BasePropertyType.DamageThrow].join(
         ' to ',
       )}`,
     });
   }
 
-  if (properties[ItemPropertyType.Damage1H]) {
+  if (properties[BasePropertyType.Damage1H]) {
     description.push({
-      text: `One-hand Damage: ${properties[ItemPropertyType.Damage1H].join(
+      text: `One-hand Damage: ${properties[BasePropertyType.Damage1H].join(
         ' to ',
       )}`,
     });
   }
 
-  if (properties[ItemPropertyType.Damage2H]) {
+  if (properties[BasePropertyType.Damage2H]) {
     description.push({
-      text: `Two-hand Damage: ${properties[ItemPropertyType.Damage2H].join(
+      text: `Two-hand Damage: ${properties[BasePropertyType.Damage2H].join(
         ' to ',
       )}`,
     });
   }
 
-  if (properties[ItemPropertyType.Defense]) {
-    const defense = properties[ItemPropertyType.Defense];
+  if (properties[BasePropertyType.Defense]) {
+    const defense = properties[BasePropertyType.Defense];
     description.push({
       text: `Defense: ${random(defense[0], defense[1])}`,
     });
   }
 
-  if (properties[ItemPropertyType.BlockChance]) {
-    const blockChance = properties[ItemPropertyType.BlockChance];
+  if (properties[BasePropertyType.BlockChance]) {
+    const blockChance = properties[BasePropertyType.BlockChance];
     description.push({
       text: `Chance to Block: ${blockChance}%`,
     });
   }
 
-  if (properties[ItemPropertyType.Durability]) {
-    const maxDurability = properties[ItemPropertyType.Durability];
+  if (properties[BasePropertyType.Durability]) {
+    const maxDurability = properties[BasePropertyType.Durability];
     description.push({
       text: `Durability: ${
         item.durability || random(0, maxDurability)
@@ -79,18 +79,18 @@ export const mapItemProperties = (item) => {
     });
   }
 
-  if (properties[ItemPropertyType.MinimumDexterity]) {
+  if (properties[BasePropertyType.MinimumDexterity]) {
     description.push({
       text: `Required Dexterity: ${
-        properties[ItemPropertyType.MinimumDexterity]
+        properties[BasePropertyType.MinimumDexterity]
       }`,
     });
   }
 
-  if (properties[ItemPropertyType.MinimumStrength]) {
+  if (properties[BasePropertyType.MinimumStrength]) {
     description.push({
       text: `Required Strength: ${
-        properties[ItemPropertyType.MinimumStrength]
+        properties[BasePropertyType.MinimumStrength]
       }`,
     });
   }
@@ -99,10 +99,10 @@ export const mapItemProperties = (item) => {
     description.push(mapItemClvl(item));
   }
 
-  if (ItemPropertyType.AttackSpeed in properties) {
+  if (BasePropertyType.AttackSpeed in properties) {
     description.push({
       text: `${type} class - ${getAttackSpeedDescription(
-        properties[ItemPropertyType.AttackSpeed],
+        properties[BasePropertyType.AttackSpeed],
       )} attack speed`,
     });
   }

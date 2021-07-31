@@ -1,7 +1,7 @@
 import React from 'react';
 import {Element, useStyles} from 'uinix-ui';
-import {ItemPropertyType} from '../enums/item-property-type.js';
 
+import {BasePropertyType} from '../enums/index.js';
 import {createItem} from '../utils/create-item.js';
 import {resolveItemDescription} from '../utils/resolve-item-description.js';
 import ItemImage from './item-image.js';
@@ -32,7 +32,7 @@ const Item = ({isInactive, item: initialItem}) => {
         />
         <Element bottom={0} left={0} position="absolute" right={0} top={0}>
           <ItemSockets
-            maxSockets={properties[ItemPropertyType.MaxSockets]}
+            maxSockets={properties[BasePropertyType.MaxSockets]}
             sockets={sockets}
             size={size}
           />

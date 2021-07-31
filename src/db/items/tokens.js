@@ -9,9 +9,11 @@ export default createBaseItems({
   {
     id: ids.TokenOfAbsolution,
     name: 'Token of Absolution',
-    description: {
-      text: 'Right-click to reset stat/skill points',
-      color: 'crafted',
-    },
+    description: [
+      {
+        text: 'Right-click to reset stat/skill points',
+        color: 'crafted',
+      },
+    ],
   },
 ]);

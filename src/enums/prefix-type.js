@@ -1,6 +1,7 @@
 /**
  * Reference: https://diablo-archive.fandom.com/wiki/Affixes_(Diablo_II)#.2BElemental_Resistances
- * Prefix and Suffix Master List
+ * @readonly
+ * @enum {string}
  */
 export const PrefixType = {
   Cobalt: 'Cobalt',

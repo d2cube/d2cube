@@ -1,4 +1,4 @@
-import {ItemPropertyType, ItemType} from '../../enums/index.js';
+import {BasePropertyType, ItemType} from '../../enums/index.js';
 import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
@@ -7,7 +7,7 @@ export default createBaseItems({
   type: ItemType.Tome,
   properties: {
     base: {
-      [ItemPropertyType.Quantity]: 20,
+      [BasePropertyType.Quantity]: 20,
     },
   },
 })([

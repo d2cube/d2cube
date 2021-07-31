@@ -1,3 +1,7 @@
+/**
+ * @readonly
+ * @enum {string}
+ */
 export const GemClassType = {
   Amethyst: 'Amethyst',
   Diamond: 'Diamond',

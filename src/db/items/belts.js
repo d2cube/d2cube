@@ -1,4 +1,4 @@
-import {ItemPropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItemName} from '../utils/map-item-name.js';
 import {mapItemProperties} from '../utils/map-item-properties.js';
@@ -11,10 +11,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 3,
     properties: {
-      [ItemPropertyType.Defense]: [2, 2],
-      [ItemPropertyType.PotionSlots]: 8,
-      [ItemPropertyType.MinimumStrength]: null,
-      [ItemPropertyType.Durability]: 12,
+      [BasePropertyType.Defense]: [2, 2],
+      [BasePropertyType.PotionSlots]: 8,
+      [BasePropertyType.MinimumStrength]: null,
+      [BasePropertyType.Durability]: 12,
     },
   },
   [ids.LightBelt]: {
@@ -23,10 +23,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 7,
     properties: {
-      [ItemPropertyType.Defense]: [3, 3],
-      [ItemPropertyType.PotionSlots]: 8,
-      [ItemPropertyType.MinimumStrength]: null,
-      [ItemPropertyType.Durability]: 14,
+      [BasePropertyType.Defense]: [3, 3],
+      [BasePropertyType.PotionSlots]: 8,
+      [BasePropertyType.MinimumStrength]: null,
+      [BasePropertyType.Durability]: 14,
     },
   },
   [ids.Belt]: {
@@ -35,10 +35,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 12,
     properties: {
-      [ItemPropertyType.Defense]: [5, 5],
-      [ItemPropertyType.PotionSlots]: 12,
-      [ItemPropertyType.MinimumStrength]: 25,
-      [ItemPropertyType.Durability]: 16,
+      [BasePropertyType.Defense]: [5, 5],
+      [BasePropertyType.PotionSlots]: 12,
+      [BasePropertyType.MinimumStrength]: 25,
+      [BasePropertyType.Durability]: 16,
     },
   },
   [ids.HeavyBelt]: {
@@ -47,10 +47,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 18,
     properties: {
-      [ItemPropertyType.Defense]: [6, 6],
-      [ItemPropertyType.PotionSlots]: 12,
-      [ItemPropertyType.MinimumStrength]: 45,
-      [ItemPropertyType.Durability]: 20,
+      [BasePropertyType.Defense]: [6, 6],
+      [BasePropertyType.PotionSlots]: 12,
+      [BasePropertyType.MinimumStrength]: 45,
+      [BasePropertyType.Durability]: 20,
     },
   },
   [ids.PlatedBelt]: {
@@ -59,10 +59,10 @@ const items = {
     tier: ItemTierType.Normal,
     ilvl: 27,
     properties: {
-      [ItemPropertyType.Defense]: [8, 11],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 60,
-      [ItemPropertyType.Durability]: 24,
+      [BasePropertyType.Defense]: [8, 11],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 60,
+      [BasePropertyType.Durability]: 24,
     },
   },
   [ids.DemonhideSash]: {
@@ -74,10 +74,10 @@ const items = {
     baseId: ids.Sash,
     imageId: ids.Sash,
     properties: {
-      [ItemPropertyType.Defense]: [29, 34],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 20,
-      [ItemPropertyType.Durability]: 12,
+      [BasePropertyType.Defense]: [29, 34],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 20,
+      [BasePropertyType.Durability]: 12,
     },
   },
   [ids.SharksinBelt]: {
@@ -89,10 +89,10 @@ const items = {
     baseId: ids.LightBelt,
     imageId: ids.LightBelt,
     properties: {
-      [ItemPropertyType.Defense]: [31, 36],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 20,
-      [ItemPropertyType.Durability]: 14,
+      [BasePropertyType.Defense]: [31, 36],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 20,
+      [BasePropertyType.Durability]: 14,
     },
   },
   [ids.MeshBelt]: {
@@ -104,10 +104,10 @@ const items = {
     baseId: ids.Belt,
     imageId: ids.Belt,
     properties: {
-      [ItemPropertyType.Defense]: [35, 40],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 58,
-      [ItemPropertyType.Durability]: 16,
+      [BasePropertyType.Defense]: [35, 40],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 58,
+      [BasePropertyType.Durability]: 16,
     },
   },
   [ids.BattleBelt]: {
@@ -119,10 +119,10 @@ const items = {
     baseId: ids.HeavyBelt,
     imageId: ids.HeavyBelt,
     properties: {
-      [ItemPropertyType.Defense]: [37, 42],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 88,
-      [ItemPropertyType.Durability]: 18,
+      [BasePropertyType.Defense]: [37, 42],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 88,
+      [BasePropertyType.Durability]: 18,
     },
   },
   [ids.WarBelt]: {
@@ -134,10 +134,10 @@ const items = {
     baseId: ids.PlatedBelt,
     imageId: ids.PlatedBelt,
     properties: {
-      [ItemPropertyType.Defense]: [41, 52],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 110,
-      [ItemPropertyType.Durability]: 24,
+      [BasePropertyType.Defense]: [41, 52],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 110,
+      [BasePropertyType.Durability]: 24,
     },
   },
   [ids.SpiderwebSash]: {
@@ -149,10 +149,10 @@ const items = {
     baseId: ids.Sash,
     imageId: ids.Sash,
     properties: {
-      [ItemPropertyType.Defense]: [55, 62],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 50,
-      [ItemPropertyType.Durability]: 12,
+      [BasePropertyType.Defense]: [55, 62],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 50,
+      [BasePropertyType.Durability]: 12,
     },
   },
   [ids.VampirefangBelt]: {
@@ -164,10 +164,10 @@ const items = {
     baseId: ids.LightBelt,
     imageId: ids.LightBelt,
     properties: {
-      [ItemPropertyType.Defense]: [56, 63],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 50,
-      [ItemPropertyType.Durability]: 14,
+      [BasePropertyType.Defense]: [56, 63],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 50,
+      [BasePropertyType.Durability]: 14,
     },
   },
   [ids.MithrilCoil]: {
@@ -179,10 +179,10 @@ const items = {
     baseId: ids.Belt,
     imageId: ids.Belt,
     properties: {
-      [ItemPropertyType.Defense]: [58, 65],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 106,
-      [ItemPropertyType.Durability]: 16,
+      [BasePropertyType.Defense]: [58, 65],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 106,
+      [BasePropertyType.Durability]: 16,
     },
   },
   [ids.TrollBelt]: {
@@ -194,10 +194,10 @@ const items = {
     baseId: ids.HeavyBelt,
     imageId: ids.HeavyBelt,
     properties: {
-      [ItemPropertyType.Defense]: [59, 66],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 151,
-      [ItemPropertyType.Durability]: 18,
+      [BasePropertyType.Defense]: [59, 66],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 151,
+      [BasePropertyType.Durability]: 18,
     },
   },
   [ids.ColossusGirdle]: {
@@ -209,10 +209,10 @@ const items = {
     baseId: ids.PlatedBelt,
     imageId: ids.PlatedBelt,
     properties: {
-      [ItemPropertyType.Defense]: [61, 71],
-      [ItemPropertyType.PotionSlots]: 16,
-      [ItemPropertyType.MinimumStrength]: 185,
-      [ItemPropertyType.Durability]: 24,
+      [BasePropertyType.Defense]: [61, 71],
+      [BasePropertyType.PotionSlots]: 16,
+      [BasePropertyType.MinimumStrength]: 185,
+      [BasePropertyType.Durability]: 24,
     },
   },
 };

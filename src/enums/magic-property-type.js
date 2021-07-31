@@ -1,3 +1,7 @@
+/**
+ * @readonly
+ * @enum {string}
+ */
 export const MagicPropertyType = {
   Strength: 'Strength',
   Energy: 'Energy',

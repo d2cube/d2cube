@@ -1,5 +1,7 @@
 /**
- * Values are numeric to perform arithmetic
+ * Values are numeric to perform arithmetic.
+ * @readonly
+ * @enum {number}
  */
 export const GemQualityType = {
   Chipped: 0,

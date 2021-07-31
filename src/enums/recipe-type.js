@@ -1,3 +1,7 @@
+/**
+ * @readonly
+ * @enum {string}
+ */
 export const RecipeType = {
   Amulet: 'Amulet',
   Gem: 'Gem',

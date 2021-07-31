@@ -13,7 +13,7 @@ export const not = (f) => (x) => !f(x);
 
 export const or = (fs) => (x) => fs.reduce((acc, f) => f(x) || acc, false);
 
-export const concatIfNotEmpty =
+export const pushIfNotEmpty =
   (f = i) =>
   (x) =>
   (xs) =>

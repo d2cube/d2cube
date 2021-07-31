@@ -1,15 +1,17 @@
 import {pipe} from 'uinix-fp';
 
-import {ItemPropertyType, ItemType} from '../enums/index.js';
-import {concatIfNotEmpty, join} from './fp.js';
+import {BasePropertyType, ItemType} from '../enums/index.js';
+import {join, pushIfNotEmpty} from './fp.js';
 
-export const resolveItemDescription = (item) =>
-  pipe([
-    concatIfNotEmpty(name)(item),
-    concatIfNotEmpty()(quantity(item)),
-    concatIfNotEmpty(clvl)(item.clvl),
-    concatIfNotEmpty()(item.description),
+export const resolveItemDescription = (item) => {
+  const description = pipe([
+    pushIfNotEmpty(name)(item),
+    pushIfNotEmpty()(quantity(item)),
+    pushIfNotEmpty(clvl)(item.clvl),
   ])([]);
+
+  return description.concat(item.description || []);
+};
 
 const clvl = (x) => ({
   text: `Required level: ${x}`,
@@ -17,7 +19,7 @@ const clvl = (x) => ({
 
 // TODO: rework this and remove null coercion after refactor
 const quantity = (item) => {
-  if (item.properties?.base?.[ItemPropertyType.Quantity]) {
+  if (item.properties?.base?.[BasePropertyType.Quantity]) {
     return {
       text: `Quantity: ${item?.roll?.base?.Quantity}`,
     };
@@ -40,10 +42,10 @@ const name = (item) => {
   }
 
   const text = pipe([
-    concatIfNotEmpty()(personalization),
-    concatIfNotEmpty()(prefix),
-    concatIfNotEmpty()(name),
-    concatIfNotEmpty((x) => `of ${x}`)(suffix),
+    pushIfNotEmpty()(personalization),
+    pushIfNotEmpty()(prefix),
+    pushIfNotEmpty()(name),
+    pushIfNotEmpty((x) => `of ${x}`)(suffix),
     join(' '),
   ])([]);
 

@@ -1,6 +1,6 @@
 import {merge} from 'uinix-fp';
 
-import {ItemPropertyType, RecipeType} from '../../enums/index.js';
+import {BasePropertyType, RecipeType} from '../../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isChippedGem,
@@ -31,7 +31,7 @@ const recipes = [
       transform: (sources) => {
         const item = sources[1];
         return merge(item)({
-          durability: item.properties[ItemPropertyType.Durability],
+          durability: item.properties[BasePropertyType.Durability],
         });
       },
     },
@@ -63,7 +63,7 @@ const recipes = [
       transform: (sources) => {
         const item = sources[2];
         return merge(item)({
-          durability: item.properties[ItemPropertyType.Durability],
+          durability: item.properties[BasePropertyType.Durability],
         });
       },
     },
@@ -90,7 +90,7 @@ const recipes = [
       transform: (sources) => {
         const item = sources[1];
         return merge(item)({
-          durability: item.properties[ItemPropertyType.Durability],
+          durability: item.properties[BasePropertyType.Durability],
         });
       },
     },
@@ -124,7 +124,7 @@ const recipes = [
       transform: (sources) => {
         const item = sources[2];
         return merge(item)({
-          durability: item.properties[ItemPropertyType.Durability],
+          durability: item.properties[BasePropertyType.Durability],
         });
       },
     },

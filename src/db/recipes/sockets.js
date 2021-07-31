@@ -2,7 +2,7 @@ import {merge} from 'uinix-fp';
 
 import {random} from '../../utils/random.js';
 import {
-  ItemPropertyType,
+  BasePropertyType,
   ItemQualityType,
   RecipeType,
 } from '../../enums/index.js';
@@ -230,7 +230,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[ItemPropertyType.MaxSockets];
+        const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: random(1, Math.min(maxSockets, 4))}).map(
             () => null,
@@ -275,7 +275,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[ItemPropertyType.MaxSockets];
+        const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: random(1, Math.min(maxSockets, 6))}).map(
             () => null,
@@ -320,7 +320,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[ItemPropertyType.MaxSockets];
+        const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: random(1, Math.min(maxSockets, 3))}).map(
             () => null,
@@ -365,7 +365,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[ItemPropertyType.MaxSockets];
+        const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: Array.from({length: random(1, Math.min(maxSockets, 4))}).map(
             () => null,

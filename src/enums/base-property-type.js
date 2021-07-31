@@ -1,4 +1,8 @@
-export const ItemPropertyType = {
+/**
+ * @readonly
+ * @enum {string}
+ */
+export const BasePropertyType = {
   AttackSpeed: 'AttackSpeed',
   BlockChance: 'BlockChance',
   Damage1H: 'Damage1H',
