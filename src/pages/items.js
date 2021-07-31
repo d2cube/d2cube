@@ -4,11 +4,9 @@ import {Layout} from 'uinix-ui';
 import Item from '../components/item.js';
 import PageLayout from '../components/page-layout.js';
 import Recipes from '../components/recipes.js';
-import db from '../db/index.js';
+import {ItemType} from '../enums/index.js';
 import {inventoryItems} from '../mocks/index.js';
 import {getItemsByType} from '../queries/index.js';
-
-const {ItemType} = db.enums;
 
 const Page = () => {
   const [selectedItemType, setSelectedItemType] = useState(ItemType.Potion);

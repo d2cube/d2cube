@@ -1,4 +1,8 @@
-import {ItemPropertyType, ItemQualityType, ItemType} from '../enums/index.js';
+import {
+  ItemPropertyType,
+  ItemQualityType,
+  ItemType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItemName} from '../utils/map-item-name.js';
 import {mapItemProperties} from '../utils/map-item-properties.js';

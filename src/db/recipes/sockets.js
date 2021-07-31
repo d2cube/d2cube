@@ -1,7 +1,11 @@
 import {merge} from 'uinix-fp';
 
 import {roll} from '../../utils/roll.js';
-import {ItemPropertyType, ItemQualityType, RecipeType} from '../enums/index.js';
+import {
+  ItemPropertyType,
+  ItemQualityType,
+  RecipeType,
+} from '../../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isChippedGem,

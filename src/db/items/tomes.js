@@ -1,4 +1,4 @@
-import {ItemType} from '../enums/index.js';
+import {ItemType} from '../../enums/index.js';
 import ids from '../ids/index.js';
 import {mapItems} from '../utils/map-items.js';
 

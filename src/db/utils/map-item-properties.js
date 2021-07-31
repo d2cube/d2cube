@@ -1,5 +1,5 @@
 import {roll} from '../../utils/roll.js';
-import {ItemPropertyType} from '../enums/index.js';
+import {ItemPropertyType} from '../../enums/index.js';
 import {mapItemClvl} from './map-item-clvl.js';
 import {mapItemIlvl} from './map-item-ilvl.js';
 

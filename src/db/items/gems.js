@@ -3,7 +3,7 @@ import {
   GemQualityType,
   ItemType,
   PropertyType,
-} from '../enums/index.js';
+} from '../../enums/index.js';
 import {mapItems} from '../utils/map-items.js';
 import {mapItemClvl} from '../utils/map-item-clvl.js';
 import {resolveItemStats} from '../utils/resolve-item-stats.js';

@@ -1,4 +1,4 @@
-import {ItemQualityType, PrefixType, RecipeType} from '../enums/index.js';
+import {ItemQualityType, PrefixType, RecipeType} from '../../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {isMagicRing} from '../utils/predicates.js';
 import ids from '../ids/index.js';

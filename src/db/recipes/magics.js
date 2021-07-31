@@ -1,7 +1,7 @@
 import {merge} from 'uinix-fp';
 
 import {roll} from '../../utils/roll.js';
-import {ItemQualityType, RecipeType, SuffixType} from '../enums/index.js';
+import {ItemQualityType, RecipeType, SuffixType} from '../../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isHealthPotion,

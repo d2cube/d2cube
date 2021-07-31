@@ -1,7 +1,5 @@
-import db from '../db/index.js';
+import {ItemQualityType} from '../enums/index.js';
 import {DEPRECATED_createItem, createItem} from '../utils/create-item.js';
-
-const {ItemQualityType} = db.enums;
 
 export const cubeItems = [
   {

@@ -1,6 +1,6 @@
 import {merge} from 'uinix-fp';
 
-import {ItemPropertyType, RecipeType} from '../enums/index.js';
+import {ItemPropertyType, RecipeType} from '../../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isChippedGem,

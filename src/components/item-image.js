@@ -1,11 +1,11 @@
 import React from 'react';
 import {useStyles} from 'uinix-ui';
 
-import db from '../db/index.js';
+import {GameVersionType} from '../enums/index.js';
 import {roll} from '../utils/roll.js';
 import Image from './ui/image.js';
 
-const defaultVersion = db.enums.GameVersionType.D2;
+const defaultVersion = GameVersionType.D2;
 
 const ItemImage = ({
   id,

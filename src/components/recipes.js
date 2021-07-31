@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
-import db from '../db/index.js';
+import {RecipeType} from '../enums/index.js';
 import {getRecipes} from '../queries/index.js';
 import Item from './item.js';
 import Recipe from './recipe.js';
 import Button from './ui/button.js';
-
-const {RecipeType} = db.enums;
 
 const Recipes = ({items}) => {
   const [showAvailable, setShowAvailable] = useState(false);

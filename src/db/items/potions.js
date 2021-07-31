@@ -1,4 +1,4 @@
-import {ItemType, PotionCategoryType} from '../enums/index.js';
+import {ItemType, PotionCategoryType} from '../../enums/index.js';
 import {mapItems} from '../utils/map-items.js';
 import ids from '../ids/index.js';
 

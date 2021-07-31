@@ -1,4 +1,4 @@
-import {PropertyType} from '../enums/index.js';
+import {PropertyType} from '../../enums/index.js';
 
 export const resolveStats = (stats) => {
   const {property, values} = stats;

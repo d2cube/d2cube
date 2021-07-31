@@ -1,5 +1,5 @@
 import {and, not} from '../../utils/fp.js';
-import {ItemQualityType, RecipeType} from '../enums/index.js';
+import {ItemQualityType, RecipeType} from '../../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {isRare, isSize} from '../utils/predicates.js';
 import ids from '../ids/index.js';

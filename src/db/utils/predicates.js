@@ -7,7 +7,7 @@ import {
   ItemType,
   PotionCategoryType,
   ItemTierType,
-} from '../enums/index.js';
+} from '../../enums/index.js';
 
 /**
  * Simple

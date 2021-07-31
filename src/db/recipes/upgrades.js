@@ -1,5 +1,5 @@
 import {up} from '../../utils/up.js';
-import {ItemQualityType, RecipeType} from '../enums/index.js';
+import {ItemQualityType, RecipeType} from '../../enums/index.js';
 import {mapRecipeProps} from '../utils/map-recipe-props.js';
 import {
   isExceptionalTierUniqueArmor,
