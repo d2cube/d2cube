@@ -1,116 +1,116 @@
-import {ItemType, PotionCategoryType} from '../../enums/index.js';
+import {ItemType, PotionClassType} from '../../enums/index.js';
 import {mapItems} from '../utils/map-items.js';
 import ids from '../ids/index.js';
 
 const items = {
   [ids.MinorHealingPotion]: {
     id: ids.MinorHealingPotion,
-    category: PotionCategoryType.Health,
+    class: PotionClassType.Health,
     name: 'Minor Healing Potion',
   },
   [ids.LightHealingPotion]: {
     id: ids.LightHealingPotion,
-    category: PotionCategoryType.Health,
+    class: PotionClassType.Health,
     name: 'Light Healing Potion',
   },
   [ids.HealingPotion]: {
     id: ids.HealingPotion,
-    category: PotionCategoryType.Health,
+    class: PotionClassType.Health,
     name: 'Healing Potion',
   },
   [ids.GreaterHealingPotion]: {
     id: ids.GreaterHealingPotion,
-    category: PotionCategoryType.Health,
+    class: PotionClassType.Health,
     name: 'Greater Healing Potion',
   },
   [ids.SuperHealingPotion]: {
     id: ids.SuperHealingPotion,
-    category: PotionCategoryType.Health,
+    class: PotionClassType.Health,
     name: 'Super Healing Potion',
   },
   [ids.MinorManaPotion]: {
     id: ids.MinorManaPotion,
-    category: PotionCategoryType.Mana,
+    class: PotionClassType.Mana,
     name: 'Minor Mana Potion',
   },
   [ids.LightManaPotion]: {
     id: ids.LightManaPotion,
-    category: PotionCategoryType.Mana,
+    class: PotionClassType.Mana,
     name: 'Light Mana Potion',
   },
   [ids.ManaPotion]: {
     id: ids.ManaPotion,
-    category: PotionCategoryType.Mana,
+    class: PotionClassType.Mana,
     name: 'Mana Potion',
   },
   [ids.GreaterManaPotion]: {
     id: ids.GreaterManaPotion,
-    category: PotionCategoryType.Mana,
+    class: PotionClassType.Mana,
     name: 'Greater Mana Potion',
   },
   [ids.SuperManaPotion]: {
     id: ids.SuperManaPotion,
-    category: PotionCategoryType.Mana,
+    class: PotionClassType.Mana,
     name: 'Super Mana Potion',
   },
   [ids.RejuvenationPotion]: {
     id: ids.RejuvenationPotion,
-    category: PotionCategoryType.Rejuvenation,
+    class: PotionClassType.Rejuvenation,
     name: 'Rejuvenation Potion',
   },
   [ids.FullRejuvenationPotion]: {
     id: ids.FullRejuvenationPotion,
-    category: PotionCategoryType.Rejuvenation,
+    class: PotionClassType.Rejuvenation,
     name: 'Full Rejuvenation Potion',
   },
   [ids.AntidotePotion]: {
     id: ids.AntidotePotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Antidote Potion',
   },
   [ids.ThawingPotion]: {
     id: ids.ThawingPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Thawing Potion',
   },
   [ids.StaminaPotion]: {
     id: ids.StaminaPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Stamina Potion',
   },
   [ids.FulminatingPotion]: {
     id: ids.FulminatingPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Fulminating Potion',
     clvl: 6,
   },
   [ids.ExplodingPotion]: {
     id: ids.ExplodingPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Exploding Potion',
     clvl: 12,
   },
   [ids.OilPotion]: {
     id: ids.OilPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Oil Potion',
     clvl: 20,
   },
   [ids.StranglingGasPotion]: {
     id: ids.StranglingGasPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Strangling Gas Potion',
     clvl: 6,
   },
   [ids.ChokingGasPotion]: {
     id: ids.ChokingGasPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Choking Gas Potion',
     clvl: 16,
   },
   [ids.RancidGasPotion]: {
     id: ids.RancidGasPotion,
-    category: PotionCategoryType.Other,
+    class: PotionClassType.Other,
     name: 'Rancid Gas Potion',
     clvl: 24,
   },

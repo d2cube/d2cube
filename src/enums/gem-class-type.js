@@ -1,4 +1,4 @@
-export const GemCategoryType = {
+export const GemClassType = {
   Amethyst: 'Amethyst',
   Diamond: 'Diamond',
   Emerald: 'Emerald',

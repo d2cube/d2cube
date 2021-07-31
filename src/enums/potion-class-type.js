@@ -1,4 +1,4 @@
-export const PotionCategoryType = {
+export const PotionClassType = {
   Health: 'Health',
   Mana: 'Mana',
   Rejuvenation: 'Rejuvenation',

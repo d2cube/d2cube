@@ -1,11 +1,11 @@
 import {and, or, not, isPropValueEqual} from '../../utils/fp.js';
 import {
-  GemCategoryType,
+  GemClassType,
   GemQualityType,
   ItemQualityType,
   ItemPropertyType,
   ItemType,
-  PotionCategoryType,
+  PotionClassType,
   ItemTierType,
 } from '../../enums/index.js';
 
@@ -13,7 +13,7 @@ import {
  * Simple
  **/
 // Props
-export const isCategoryEqual = isPropValueEqual('category');
+export const isClassEqual = isPropValueEqual('class');
 
 export const isQualityEqual = isPropValueEqual('quality');
 
@@ -111,10 +111,10 @@ export const isPerfectGem = and([
   isGem,
 ]);
 
-export const isRuby = and([isCategoryEqual(GemCategoryType.Ruby), isGem]);
+export const isRuby = and([isClassEqual(GemClassType.Ruby), isGem]);
 
 export const isHealthPotion = and([
-  isCategoryEqual(PotionCategoryType.Health),
+  isClassEqual(PotionClassType.Health),
   isPotion,
 ]);
 
@@ -126,10 +126,7 @@ export const isMagicSword = and([isMagic, isSword]);
 
 export const isMagicWeapon = and([isMagic, isWeapon]);
 
-export const isManaPotion = and([
-  isCategoryEqual(PotionCategoryType.Mana),
-  isPotion,
-]);
+export const isManaPotion = and([isClassEqual(PotionClassType.Mana), isPotion]);
 
 export const isNormalBodyArmor = and([isNormal, isBodyArmor]);
 

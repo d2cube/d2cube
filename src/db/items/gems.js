@@ -1,5 +1,5 @@
 import {
-  GemCategoryType,
+  GemClassType,
   GemQualityType,
   ItemType,
   PropertyType,
@@ -14,7 +14,7 @@ const items = {
     id: ids.ChippedRuby,
     name: 'Chipped Ruby',
     clvl: 1,
-    category: GemCategoryType.Ruby,
+    class: GemClassType.Ruby,
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
@@ -35,7 +35,7 @@ const items = {
     id: ids.FlawedRuby,
     name: 'Flawed Ruby',
     clvl: 5,
-    category: GemCategoryType.Ruby,
+    class: GemClassType.Ruby,
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
@@ -56,7 +56,7 @@ const items = {
     id: ids.Ruby,
     name: 'Ruby',
     clvl: 12,
-    category: GemCategoryType.Ruby,
+    class: GemClassType.Ruby,
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
@@ -77,7 +77,7 @@ const items = {
     id: ids.FlawlessRuby,
     name: 'Flawless Ruby',
     clvl: 15,
-    category: GemCategoryType.Ruby,
+    class: GemClassType.Ruby,
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
@@ -98,7 +98,7 @@ const items = {
     id: ids.PerfectRuby,
     name: 'Perfect Ruby',
     clvl: 18,
-    category: GemCategoryType.Ruby,
+    class: GemClassType.Ruby,
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
@@ -119,7 +119,7 @@ const items = {
     id: ids.ChippedSapphire,
     name: 'Chipped Sapphire',
     clvl: 1,
-    category: GemCategoryType.Sapphire,
+    class: GemClassType.Sapphire,
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
@@ -140,7 +140,7 @@ const items = {
     id: ids.FlawedSapphire,
     name: 'Flawed Sapphire',
     clvl: 5,
-    category: GemCategoryType.Sapphire,
+    class: GemClassType.Sapphire,
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
@@ -161,7 +161,7 @@ const items = {
     id: ids.Sapphire,
     name: 'Sapphire',
     clvl: 12,
-    category: GemCategoryType.Sapphire,
+    class: GemClassType.Sapphire,
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
@@ -182,7 +182,7 @@ const items = {
     id: ids.FlawlessSapphire,
     name: 'Flawless Sapphire',
     clvl: 15,
-    category: GemCategoryType.Sapphire,
+    class: GemClassType.Sapphire,
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
@@ -203,7 +203,7 @@ const items = {
     id: ids.PerfectSapphire,
     name: 'Perfect Sapphire',
     clvl: 18,
-    category: GemCategoryType.Sapphire,
+    class: GemClassType.Sapphire,
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
@@ -224,7 +224,7 @@ const items = {
     id: ids.ChippedTopaz,
     name: 'Chipped Topaz',
     clvl: 1,
-    category: GemCategoryType.Topaz,
+    class: GemClassType.Topaz,
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
@@ -245,7 +245,7 @@ const items = {
     id: ids.FlawedTopaz,
     name: 'Flawed Topaz',
     clvl: 5,
-    category: GemCategoryType.Topaz,
+    class: GemClassType.Topaz,
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
@@ -266,7 +266,7 @@ const items = {
     id: ids.Topaz,
     name: 'Topaz',
     clvl: 12,
-    category: GemCategoryType.Topaz,
+    class: GemClassType.Topaz,
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
@@ -287,7 +287,7 @@ const items = {
     id: ids.FlawlessTopaz,
     name: 'Flawless Topaz',
     clvl: 15,
-    category: GemCategoryType.Topaz,
+    class: GemClassType.Topaz,
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
@@ -308,7 +308,7 @@ const items = {
     id: ids.PerfectTopaz,
     name: 'Perfect Topaz',
     clvl: 18,
-    category: GemCategoryType.Topaz,
+    class: GemClassType.Topaz,
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
@@ -329,7 +329,7 @@ const items = {
     id: ids.ChippedEmerald,
     name: 'Chipped Emerald',
     clvl: 1,
-    category: GemCategoryType.Emerald,
+    class: GemClassType.Emerald,
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
@@ -350,7 +350,7 @@ const items = {
     id: ids.FlawedEmerald,
     name: 'Flawed Emerald',
     clvl: 5,
-    category: GemCategoryType.Emerald,
+    class: GemClassType.Emerald,
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
@@ -371,7 +371,7 @@ const items = {
     id: ids.Emerald,
     name: 'Emerald',
     clvl: 12,
-    category: GemCategoryType.Emerald,
+    class: GemClassType.Emerald,
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
@@ -392,7 +392,7 @@ const items = {
     id: ids.FlawlessEmerald,
     name: 'Flawless Emerald',
     clvl: 15,
-    category: GemCategoryType.Emerald,
+    class: GemClassType.Emerald,
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
@@ -413,7 +413,7 @@ const items = {
     id: ids.PerfectEmerald,
     name: 'Perfect Emerald',
     clvl: 18,
-    category: GemCategoryType.Emerald,
+    class: GemClassType.Emerald,
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
@@ -434,7 +434,7 @@ const items = {
     id: ids.ChippedDiamond,
     name: 'Chipped Diamond',
     clvl: 1,
-    category: GemCategoryType.Diamond,
+    class: GemClassType.Diamond,
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
@@ -455,7 +455,7 @@ const items = {
     id: ids.FlawedDiamond,
     name: 'Flawed Diamond',
     clvl: 5,
-    category: GemCategoryType.Diamond,
+    class: GemClassType.Diamond,
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
@@ -476,7 +476,7 @@ const items = {
     id: ids.Diamond,
     name: 'Diamond',
     clvl: 12,
-    category: GemCategoryType.Diamond,
+    class: GemClassType.Diamond,
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
@@ -497,7 +497,7 @@ const items = {
     id: ids.FlawlessDiamond,
     name: 'Flawless Diamond',
     clvl: 15,
-    category: GemCategoryType.Diamond,
+    class: GemClassType.Diamond,
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
@@ -518,7 +518,7 @@ const items = {
     id: ids.PerfectDiamond,
     name: 'Perfect Diamond',
     clvl: 18,
-    category: GemCategoryType.Diamond,
+    class: GemClassType.Diamond,
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
@@ -539,7 +539,7 @@ const items = {
     id: ids.ChippedAmethyst,
     name: 'Chipped Amethyst',
     clvl: 1,
-    category: GemCategoryType.Amethyst,
+    class: GemClassType.Amethyst,
     quality: GemQualityType.Chipped,
     stats: {
       weapons: {
@@ -560,7 +560,7 @@ const items = {
     id: ids.FlawedAmethyst,
     name: 'Flawed Amethyst',
     clvl: 5,
-    category: GemCategoryType.Amethyst,
+    class: GemClassType.Amethyst,
     quality: GemQualityType.Flawed,
     stats: {
       weapons: {
@@ -581,7 +581,7 @@ const items = {
     id: ids.Amethyst,
     name: 'Amethyst',
     clvl: 12,
-    category: GemCategoryType.Amethyst,
+    class: GemClassType.Amethyst,
     quality: GemQualityType.Regular,
     stats: {
       weapons: {
@@ -602,7 +602,7 @@ const items = {
     id: ids.FlawlessAmethyst,
     name: 'Flawless Amethyst',
     clvl: 15,
-    category: GemCategoryType.Amethyst,
+    class: GemClassType.Amethyst,
     quality: GemQualityType.Flawless,
     stats: {
       weapons: {
@@ -623,7 +623,7 @@ const items = {
     id: ids.PerfectAmethyst,
     name: 'Perfect Amethyst',
     clvl: 18,
-    category: GemCategoryType.Amethyst,
+    class: GemClassType.Amethyst,
     quality: GemQualityType.Perfect,
     stats: {
       weapons: {
@@ -644,7 +644,7 @@ const items = {
     id: ids.ChippedSkull,
     name: 'Chipped Skull',
     clvl: 1,
-    category: GemCategoryType.Skull,
+    class: GemClassType.Skull,
     quality: GemQualityType.Chipped,
     stats: {
       weapons: [
@@ -677,7 +677,7 @@ const items = {
     id: ids.FlawedSkull,
     name: 'Flawed Skull',
     clvl: 5,
-    category: GemCategoryType.Skull,
+    class: GemClassType.Skull,
     quality: GemQualityType.Flawed,
     stats: {
       weapons: [
@@ -710,7 +710,7 @@ const items = {
     id: ids.Skull,
     name: 'Skull',
     clvl: 12,
-    category: GemCategoryType.Skull,
+    class: GemClassType.Skull,
     quality: GemQualityType.Regular,
     stats: {
       weapons: [
@@ -743,7 +743,7 @@ const items = {
     id: ids.FlawlessSkull,
     name: 'Flawless Skull',
     clvl: 15,
-    category: GemCategoryType.Skull,
+    class: GemClassType.Skull,
     quality: GemQualityType.Flawless,
     stats: {
       weapons: [
@@ -776,7 +776,7 @@ const items = {
     id: ids.PerfectSkull,
     name: 'Perfect Skull',
     clvl: 18,
-    category: GemCategoryType.Skull,
+    class: GemClassType.Skull,
     quality: GemQualityType.Perfect,
     stats: {
       weapons: [
