@@ -1,5 +1,5 @@
 import {ItemQualityType} from '../enums/index.js';
-import {DEPRECATED_createItem, createItem} from '../utils/create-item.js';
+import {createItem} from '../utils/create-item.js';
 
 export const cubeItems = [
   {
@@ -18,7 +18,7 @@ export const cubeItems = [
     id: 'Bolts',
     position: [1, 3],
   },
-].map(DEPRECATED_createItem);
+].map(createItem);
 
 export const inventoryItems = [
   {

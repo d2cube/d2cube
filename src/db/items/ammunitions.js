@@ -1,26 +1,27 @@
-import {ItemQualityType, ItemType} from '../../enums/index.js';
-import {mapItems} from '../utils/map-items.js';
+import {ItemPropertyType, ItemType} from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
-const items = {
-  [ids.Arrows]: {
-    id: ids.Arrows,
-    name: 'Arrows',
-    quality: ItemQualityType.Normal,
-    max: 350,
-  },
-  [ids.Bolts]: {
-    id: ids.Bolts,
-    name: 'Bolts',
-    quality: ItemQualityType.Normal,
-    max: 250,
-  },
-};
-
-export default mapItems({
+export default createBaseItems({
   size: [3, 1],
   type: ItemType.Ammunition,
-  mapDescription: (item) => [
-    [{text: item.name}, {text: `Quantity: ${item.max}`}],
-  ],
-})(items);
+})([
+  {
+    id: ids.Arrows,
+    name: 'Arrows',
+    properties: {
+      base: {
+        [ItemPropertyType.Quantity]: 350,
+      },
+    },
+  },
+  {
+    id: ids.Bolts,
+    name: 'Bolts',
+    properties: {
+      base: {
+        [ItemPropertyType.Quantity]: 250,
+      },
+    },
+  },
+]);

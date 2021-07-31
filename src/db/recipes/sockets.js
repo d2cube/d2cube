@@ -1,6 +1,6 @@
 import {merge} from 'uinix-fp';
 
-import {roll} from '../../utils/roll.js';
+import {random} from '../../utils/random.js';
 import {
   ItemPropertyType,
   ItemQualityType,
@@ -106,7 +106,7 @@ const recipes = [
     target: {
       transform: (sources) =>
         merge(sources[3])({
-          sockets: Array.from({length: roll(1, 2)}).map(() => null),
+          sockets: Array.from({length: random(1, 2)}).map(() => null),
         }),
     },
   },
@@ -153,7 +153,7 @@ const recipes = [
     target: {
       transform: (sources) =>
         merge(sources[3])({
-          sockets: Array.from({length: roll(1, 2)}).map(() => null),
+          sockets: Array.from({length: random(1, 2)}).map(() => null),
         }),
     },
   },
@@ -232,7 +232,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: roll(1, Math.min(maxSockets, 4))}).map(
+          sockets: Array.from({length: random(1, Math.min(maxSockets, 4))}).map(
             () => null,
           ),
         });
@@ -277,7 +277,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: roll(1, Math.min(maxSockets, 6))}).map(
+          sockets: Array.from({length: random(1, Math.min(maxSockets, 6))}).map(
             () => null,
           ),
         });
@@ -322,7 +322,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: roll(1, Math.min(maxSockets, 3))}).map(
+          sockets: Array.from({length: random(1, Math.min(maxSockets, 3))}).map(
             () => null,
           ),
         });
@@ -367,7 +367,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[ItemPropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: roll(1, Math.min(maxSockets, 4))}).map(
+          sockets: Array.from({length: random(1, Math.min(maxSockets, 4))}).map(
             () => null,
           ),
         });

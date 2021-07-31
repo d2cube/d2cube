@@ -2,7 +2,7 @@ import React from 'react';
 import {useStyles} from 'uinix-ui';
 
 import {GameVersionType} from '../enums/index.js';
-import {roll} from '../utils/roll.js';
+import {random} from '../utils/random.js';
 import Image from './ui/image.js';
 
 const defaultVersion = GameVersionType.D2;
@@ -17,7 +17,7 @@ const ItemImage = ({
 }) => {
   const styles = useStyles();
 
-  const imageName = id + (variants ? roll(1, variants) : '');
+  const imageName = id + (variants ? random(1, variants) : '');
   const src = `${version}/items/${imageName}.webp`;
 
   return (

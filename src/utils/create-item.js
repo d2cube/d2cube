@@ -1,17 +1,15 @@
 import {getItemById} from '../queries/index.js';
-
-export const DEPRECATED_createItem = (initialItem) => ({
-  ...getItemById(initialItem.id),
-  ...initialItem,
-});
+import {rollItem} from './roll-item.js';
 
 export const createItem = (data) => {
   const {id, position} = data;
 
   const item = getItemById(id);
 
-  return {
+  return rollItem({
     ...item,
     position,
-  };
+    // TODO remove hardcode and generalize
+    sockets: [],
+  });
 };

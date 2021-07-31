@@ -1,4 +1,4 @@
-import {roll} from '../../utils/roll.js';
+import {random} from '../../utils/random.js';
 import {ItemPropertyType} from '../../enums/index.js';
 import {mapItemClvl} from './map-item-clvl.js';
 import {mapItemIlvl} from './map-item-ilvl.js';
@@ -59,7 +59,7 @@ export const mapItemProperties = (item) => {
   if (properties[ItemPropertyType.Defense]) {
     const defense = properties[ItemPropertyType.Defense];
     description.push({
-      text: `Defense: ${roll(defense[0], defense[1])}`,
+      text: `Defense: ${random(defense[0], defense[1])}`,
     });
   }
 
@@ -74,7 +74,7 @@ export const mapItemProperties = (item) => {
     const maxDurability = properties[ItemPropertyType.Durability];
     description.push({
       text: `Durability: ${
-        item.durability || roll(0, maxDurability)
+        item.durability || random(0, maxDurability)
       } of ${maxDurability}`,
     });
   }

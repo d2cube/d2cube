@@ -1,8 +1,9 @@
 import React from 'react';
 import {Element, useStyles} from 'uinix-ui';
-import {ItemPropertyType} from '../db/enums/item-property-type.js';
+import {ItemPropertyType} from '../enums/item-property-type.js';
 
-import {DEPRECATED_createItem} from '../utils/create-item.js';
+import {createItem} from '../utils/create-item.js';
+import {resolveItemDescription} from '../utils/resolve-item-description.js';
 import ItemImage from './item-image.js';
 import ItemSockets from './item-sockets.js';
 import ItemTooltip from './item-tooltip.js';
@@ -12,20 +13,11 @@ const Item = ({isInactive, item: initialItem}) => {
   const styles = useStyles();
 
   const {id, imageId, isEthereal} = initialItem;
-  const item = DEPRECATED_createItem(initialItem);
-  const {
-    overrideDescription,
-    position,
-    size,
-    properties = {},
-    sockets,
-    variants,
-    mapDescription,
-  } = item;
-  const description = overrideDescription || mapDescription(item);
+  const item = createItem(initialItem);
+  const {position, size, properties = {}, sockets, variants} = item;
 
   return (
-    <ItemTooltip description={description}>
+    <ItemTooltip description={resolveItemDescription(item)}>
       <Element
         position="relative"
         styleProps={{position, size}}

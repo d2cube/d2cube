@@ -8,3 +8,6 @@ export const not = (f) => (x) => !f(x);
 
 export const isPropValueEqual = (prop) => (value) => (x) =>
   props(prop)(x) === value;
+
+// Push x to xs if x is not null.  mutates xs.
+export const push = (x) => (xs) => typeof x === undefined ? x : [...xs, x];
