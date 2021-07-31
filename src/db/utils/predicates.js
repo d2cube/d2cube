@@ -62,6 +62,8 @@ export const isMagic = isRarityEqual(ItemRarityType.Magic);
 
 export const isRare = isRarityEqual(ItemRarityType.Rare);
 
+export const isUnique = isRarityEqual(ItemRarityType.Unique);
+
 // Weapon/Armor
 export const isArmor = hasItemProperty(ItemPropertyType.Defense);
 
@@ -164,6 +166,18 @@ export const isExceptionalTierRareArmor = and([
   isArmor,
 ]);
 
+export const isExceptionalTierUniqueArmor = and([
+  isExceptionalTier,
+  isUnique,
+  isArmor,
+]);
+
+export const isExceptionalTierUniqueWeapon = and([
+  isExceptionalTier,
+  isUnique,
+  isWeapon,
+]);
+
 export const isExceptionalTierRareWeapon = and([
   isExceptionalTier,
   isRare,
@@ -173,3 +187,7 @@ export const isExceptionalTierRareWeapon = and([
 export const isNormalTierRareArmor = and([isNormalTier, isRare, isArmor]);
 
 export const isNormalTierRareWeapon = and([isNormalTier, isRare, isWeapon]);
+
+export const isNormalTierUniqueArmor = and([isNormalTier, isUnique, isArmor]);
+
+export const isNormalTierUniqueWeapon = and([isNormalTier, isUnique, isWeapon]);

@@ -1,16 +1,11 @@
-export const mapItems = (props) => (items) => {
-  const {size, type, mapDescription} = props;
-
-  return Object.entries(items).reduce(
+export const mapItems = (props) => (items) =>
+  Object.entries(items).reduce(
     (acc, [id, item]) => ({
       ...acc,
       [id]: {
-        size,
-        type,
-        mapDescription,
+        ...props,
         ...item,
       },
     }),
     {},
   );
-};

@@ -1,5 +1,5 @@
 import db from '../db/index.js';
-import {getItemById} from '../queries/index.js';
+import {createItem} from '../utils/create-item.js';
 
 const {ItemRarityType} = db.enums;
 
@@ -20,10 +20,7 @@ export const cubeItems = [
     id: 'Bolts',
     position: [1, 3],
   },
-].map((item) => ({
-  ...getItemById(item.id),
-  ...item,
-}));
+].map(createItem);
 
 export const inventoryItems = [
   {
@@ -93,11 +90,15 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'CrystalSword',
-    rarity: 'rare',
+    id: 'WallOfTheEyeless',
     durability: 1,
     position: [1, 4],
     sockets: ['Jah', 'Ber', null],
+    tier: 2,
+    properties: {
+      // TODO: remove for testing
+      Defense: 9999,
+    },
   },
   {
     id: 'Falcata',
@@ -121,10 +122,7 @@ export const inventoryItems = [
     id: 'BaalsEye',
     position: [4, 1],
   },
-].map((item) => ({
-  ...getItemById(item.id),
-  ...item,
-}));
+].map(createItem);
 
 export const beltItems = [
   {
