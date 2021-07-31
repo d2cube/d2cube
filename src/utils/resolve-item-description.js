@@ -1,14 +1,21 @@
-import {pipe} from 'uinix-fp';
+import {i, pipe} from 'uinix-fp';
 
-import {ItemPropertyType} from '../enums/index.js';
+import {ItemPropertyType, ItemType} from '../enums/index.js';
 import {coerce, push} from './fp.js';
 
 export const resolveItemDescription = (item) =>
   pipe([
-    push(name(item)), //
+    push(name(item)),
     push(quantity(item)),
     push(clvl(item.clvl)),
+    push(description(item.description)),
   ])([]);
+
+export const clvl = coerce((x) => ({
+  text: `Required level: ${x}`,
+}));
+
+export const description = coerce(i);
 
 export const quantity = (item) => {
   // TODO remove null coercion after refactor
@@ -19,11 +26,23 @@ export const quantity = (item) => {
   }
 };
 
-export const clvl = coerce(x => ({
-  text: `Required level: ${x}`,
-}));
+export const name = (item) => {
+  const {quality, name, type} = item;
 
-export const name = (item) => ({
-  text: item.name,
-  color: item.quality,
-});
+  let color;
+  switch (type) {
+    case ItemType.Key:
+    case ItemType.Essence:
+    case ItemType.Token:
+      color = 'crafted';
+      break;
+    default:
+      color = quality;
+      break;
+  }
+
+  return {
+    text: name,
+    color,
+  };
+};

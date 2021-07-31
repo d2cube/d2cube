@@ -12,7 +12,9 @@
  *    An alias to explicitly indicate ids defined in ~/db/ids.
  *    An item ID is the PascalCasing of the item's name.
  *    e.g. "Andariel's Visage" -> AndarielsVisage
- *
+ */
+
+/**
  * @typedef Properties
  *    Items have properties defined as a map of enums to multi-variadic values.
  *    This mapping is resolved accordingly by its item property type enum.
@@ -22,6 +24,13 @@
  *    Magic properties.
  * @property {Object.<number, Object.<Enum, number[]>>} [set]
  *    Set properties.  The numeric keys represent the set bonus requirement.
+ *
+ * @typedef Description
+ *    Item description that will be rendered in the item's tooltip.
+ * @property {string} [text]
+ *    Single-lined text description.
+ * @property {string} [color]
+ *    A color that exists under system.theme.colors.item.
  */
 
 /**
@@ -36,6 +45,8 @@
  *    e.g. Ring/Amulet/Gem/Rune.
  * @property {[number, number]} size
  *    e.g. The size of an item (by row and column).
+ * @property {Description[]} [description]
+ *    Additional description
  * @property {number} [clvl]
  *    Required character level.
  * @property {number} [qlvl]
