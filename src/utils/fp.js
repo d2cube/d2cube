@@ -6,8 +6,11 @@ export const or = (fs) => (x) => fs.reduce((acc, f) => f(x) || acc, false);
 
 export const not = (f) => (x) => !f(x);
 
+export const isEmpty = x => x === null || x === undefined;
+
+export const coerce = (f) => x => isEmpty(x) ? null : f(x);
+
 export const isPropValueEqual = (prop) => (value) => (x) =>
   props(prop)(x) === value;
 
-// Push x to xs if x is not null.  mutates xs.
-export const push = (x) => (xs) => typeof x === undefined ? x : [...xs, x];
+export const push = (x) => (xs) => isEmpty(x) ? xs : [...xs, x];
