@@ -1,81 +1,129 @@
 import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
-import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemProperties} from '../utils/map-item-properties.js';
-import {mapItems} from '../utils/map-items.js';
 
-const items = {
-  [ids.Javelin]: {
+export default createBaseItems({
+  type: ItemType.Javelin,
+})([
+  {
     id: ids.Javelin,
     name: 'Javelin',
     tier: ItemTierType.Normal,
     qlvl: 1,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [1, 5],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: null,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [1, 5],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+      },
     },
   },
-  [ids.Pilum]: {
+  {
     id: ids.Pilum,
     name: 'Pilum',
     tier: ItemTierType.Normal,
     qlvl: 10,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [4, 9],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: 45,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [4, 9],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [45],
+        },
+      },
     },
   },
-  [ids.ShortSpear]: {
+  {
     id: ids.ShortSpear,
     name: 'Short Spear',
     tier: ItemTierType.Normal,
     qlvl: 15,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [2, 13],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 40,
-      [BasePropertyType.MinimumDexterity]: 40,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [2, 13],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [40],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [40],
+        },
+      },
     },
   },
-  [ids.Glaive]: {
+  {
     id: ids.Glaive,
     name: 'Glaive',
     tier: ItemTierType.Normal,
     qlvl: 23,
     size: [4, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [5, 17],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 20,
-      [BasePropertyType.MinimumStrength]: 52,
-      [BasePropertyType.MinimumDexterity]: 35,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [5, 17],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [20],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [52],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [35],
+        },
+      },
     },
   },
-  [ids.ThrowingSpear]: {
+  {
     id: ids.ThrowingSpear,
     name: 'Throwing Spear',
     tier: ItemTierType.Normal,
     qlvl: 29,
     size: [4, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [5, 15],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: 65,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [5, 15],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [65],
+        },
+      },
     },
   },
-  [ids.WarJavelin]: {
+  {
     id: ids.WarJavelin,
     name: 'War Javelin',
     tier: ItemTierType.Exceptional,
@@ -85,14 +133,26 @@ const items = {
     baseId: ids.Javelin,
     imageId: ids.Javelin,
     properties: {
-      [BasePropertyType.Damage1H]: [6, 19],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 25,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [6, 19],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [25],
+        },
+      },
     },
   },
-  [ids.GreatPilum]: {
+  {
     id: ids.GreatPilum,
     name: 'Great Pilum',
     tier: ItemTierType.Exceptional,
@@ -102,14 +162,26 @@ const items = {
     baseId: ids.Pilum,
     imageId: ids.Pilum,
     properties: {
-      [BasePropertyType.Damage1H]: [11, 26],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 88,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [11, 26],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [88],
+        },
+      },
     },
   },
-  [ids.Simbilan]: {
+  {
     id: ids.Simbilan,
     name: 'Simbilan',
     tier: ItemTierType.Exceptional,
@@ -119,14 +191,26 @@ const items = {
     baseId: ids.ShortSpear,
     imageId: ids.ShortSpear,
     properties: {
-      [BasePropertyType.Damage1H]: [8, 32],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 80,
-      [BasePropertyType.MinimumDexterity]: 80,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [8, 32],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [80],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [80],
+        },
+      },
     },
   },
-  [ids.Spiculum]: {
+  {
     id: ids.Spiculum,
     name: 'Spiculum',
     tier: ItemTierType.Exceptional,
@@ -136,14 +220,26 @@ const items = {
     baseId: ids.Glaive,
     imageId: ids.Glaive,
     properties: {
-      [BasePropertyType.Damage1H]: [13, 38],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 20,
-      [BasePropertyType.MinimumStrength]: 98,
-      [BasePropertyType.MinimumDexterity]: 73,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [13, 38],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [20],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [98],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [73],
+        },
+      },
     },
   },
-  [ids.Harpoon]: {
+  {
     id: ids.Harpoon,
     name: 'Harpoon',
     tier: ItemTierType.Exceptional,
@@ -153,14 +249,26 @@ const items = {
     baseId: ids.ThrowingSpear,
     imageId: ids.ThrowingSpear,
     properties: {
-      [BasePropertyType.Damage1H]: [13, 35],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 118,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [13, 35],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [118],
+        },
+      },
     },
   },
-  [ids.HyperionJavelin]: {
+  {
     id: ids.HyperionJavelin,
     name: 'Hyperion Javelin',
     tier: ItemTierType.Elite,
@@ -170,14 +278,26 @@ const items = {
     baseId: ids.Javelin,
     imageId: ids.Javelin,
     properties: {
-      [BasePropertyType.Damage1H]: [21, 57],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 98,
-      [BasePropertyType.MinimumDexterity]: 123,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [21, 57],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [98],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [123],
+        },
+      },
     },
   },
-  [ids.StygianPilum]: {
+  {
     id: ids.StygianPilum,
     name: 'Stygian Pilum',
     tier: ItemTierType.Elite,
@@ -187,14 +307,26 @@ const items = {
     baseId: ids.Pilum,
     imageId: ids.Pilum,
     properties: {
-      [BasePropertyType.Damage1H]: [14, 64],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 118,
-      [BasePropertyType.MinimumDexterity]: 112,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [14, 64],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [118],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [112],
+        },
+      },
     },
   },
-  [ids.BalrogSpear]: {
+  {
     id: ids.BalrogSpear,
     name: 'Balrog Spear',
     tier: ItemTierType.Elite,
@@ -204,14 +336,26 @@ const items = {
     baseId: ids.ShortSpear,
     imageId: ids.ShortSpear,
     properties: {
-      [BasePropertyType.Damage1H]: [33, 63],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 127,
-      [BasePropertyType.MinimumDexterity]: 95,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [33, 63],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [127],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [95],
+        },
+      },
     },
   },
-  [ids.GhostGlaive]: {
+  {
     id: ids.GhostGlaive,
     name: 'Ghost Glaive',
     tier: ItemTierType.Elite,
@@ -221,14 +365,26 @@ const items = {
     baseId: ids.Glaive,
     imageId: ids.Glaive,
     properties: {
-      [BasePropertyType.Damage1H]: [19, 60],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 20,
-      [BasePropertyType.MinimumStrength]: 89,
-      [BasePropertyType.MinimumDexterity]: 137,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [19, 60],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [20],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [89],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [137],
+        },
+      },
     },
   },
-  [ids.WingedHarpoon]: {
+  {
     id: ids.WingedHarpoon,
     name: 'Winged Harpoon',
     tier: ItemTierType.Elite,
@@ -238,16 +394,23 @@ const items = {
     baseId: ids.ThrowingSpear,
     imageId: ids.ThrowingSpear,
     properties: {
-      [BasePropertyType.Damage1H]: [27, 35],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 76,
-      [BasePropertyType.MinimumDexterity]: 145,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [27, 35],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [76],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [145],
+        },
+      },
     },
   },
-};
-
-export default mapItems({
-  type: ItemType.Javelin,
-  mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
-})(items);
+]);
