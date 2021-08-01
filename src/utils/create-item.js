@@ -18,5 +18,5 @@ const getBaseItemById = (id) => {
   return {
     ...baseItem,
     variants: undefined,
-  }
+  };
 };
