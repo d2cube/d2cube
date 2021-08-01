@@ -1,6 +1,6 @@
 import {ItemQualityType, PrefixType, RecipeType} from '../../enums/index.js';
-import {mapRecipeProps} from '../utils/map-recipe-props.js';
-import {isMagicAmulet, isMagicRing} from '../utils/predicates.js';
+import {createRecipes} from '../../utils/create-recipes.js';
+import {isMagicAmulet, isMagicRing} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -148,6 +148,6 @@ const recipes = [
   },
 ];
 
-export default mapRecipeProps({
+export default createRecipes({
   type: RecipeType.Ring,
 })(recipes);

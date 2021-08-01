@@ -1,6 +1,6 @@
 import {RecipeType} from '../../enums/index.js';
-import {mapRecipeProps} from '../utils/map-recipe-props.js';
-import {isAxe, isDagger, isSpear} from '../utils/predicates.js';
+import {createRecipes} from '../../utils/create-recipes.js';
+import {isAxe, isDagger, isSpear} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -45,7 +45,7 @@ const recipes = [
     },
   },
   {
-    name: '1 Spear (any type) + 1 Arrows = → 1 Javelin',
+    name: '1 Spear (any type) + 1 Arrows → 1 Javelin',
     sources: [
       {
         item: {
@@ -67,7 +67,7 @@ const recipes = [
     },
   },
   {
-    name: '1 Axe (any type) + 1 Dagger = → 1 Throwing Axe',
+    name: '1 Axe (any type) + 1 Dagger → 1 Throwing Axe',
     sources: [
       {
         item: {
@@ -92,6 +92,6 @@ const recipes = [
   },
 ];
 
-export default mapRecipeProps({
+export default createRecipes({
   type: RecipeType.Stack,
 })(recipes);

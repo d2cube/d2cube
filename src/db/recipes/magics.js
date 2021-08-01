@@ -2,7 +2,7 @@ import {merge} from 'uinix-fp';
 
 import {random} from '../../utils/random.js';
 import {ItemQualityType, RecipeType, SuffixType} from '../../enums/index.js';
-import {mapRecipeProps} from '../utils/map-recipe-props.js';
+import {createRecipes} from '../../utils/create-recipes.js';
 import {
   isHealthPotion,
   isMagic,
@@ -11,7 +11,7 @@ import {
   isRegularGem,
   isRuby,
   isSocketedNormalWeapon,
-} from '../utils/predicates.js';
+} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -155,6 +155,6 @@ const recipes = [
   },
 ];
 
-export default mapRecipeProps({
+export default createRecipes({
   type: RecipeType.Magic,
 })(recipes);

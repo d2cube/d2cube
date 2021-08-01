@@ -1,7 +1,7 @@
-import {and, not} from '../../utils/fp.js';
+import {and} from '../../utils/fp.js';
 import {ItemQualityType, RecipeType} from '../../enums/index.js';
-import {mapRecipeProps} from '../utils/map-recipe-props.js';
-import {isRare, isSize} from '../utils/predicates.js';
+import {createRecipes} from '../../utils/create-recipes.js';
+import {isRare} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -79,7 +79,7 @@ const recipes = [
             ],
           ],
         },
-        test: and([isRare, not(isSize([4, 2]))]),
+        test: and([isRare]),
       },
     ],
     target: {
@@ -88,6 +88,6 @@ const recipes = [
   },
 ];
 
-export default mapRecipeProps({
+export default createRecipes({
   type: RecipeType.Rare,
 })(recipes);

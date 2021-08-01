@@ -14,7 +14,7 @@ export const createItem = (data) => {
 };
 
 const getBaseItemById = (id) => {
-  const baseItem = getItemById(id) || {};
+  const baseItem = getItemById(id);
   return {
     ...baseItem,
     variants: undefined,

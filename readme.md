@@ -7,15 +7,18 @@ An interactive D2 cube and runeword companion.
 ## TODO
 So much to do, so little time, so much fun.
 
-- [ ] Rework `description` nested array (sectioned) shape.  Current setup might not be flexible.
 - [ ] Figure out logic on calculating and displaying stats and properties.
-- [ ] Cleanup and split up items/uniques/sets
+- [ ] Check/verify recipes
 - [ ] Create item instances (rolls)
 - [ ] Cleanup code (share utils/transforms/mappers/predicates)
 - [ ] Document all weapons/armors
 - [ ] Document all affixes
-- [ ] About page
-- [ ] Runewords
+- [ ] Mercenary
+- [ ] Larzuk
+- [ ] Stats Page
+- [ ] Rare name page
+- [ ] Personalization
+- [ ] Runewords page
 - [ ] Tests
 - [ ] Docs
 - [ ] Contribution

@@ -1,5 +1,5 @@
 import {RecipeType} from '../../enums/index.js';
-import {mapRecipeProps} from '../utils/map-recipe-props.js';
+import {createRecipes} from '../../utils/create-recipes.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -860,6 +860,6 @@ const recipes = [
   },
 ];
 
-export default mapRecipeProps({
+export default createRecipes({
   type: RecipeType.Rune,
 })(recipes);

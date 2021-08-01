@@ -1,13 +1,13 @@
 import {merge} from 'uinix-fp';
 
 import {BasePropertyType, RecipeType} from '../../enums/index.js';
-import {mapRecipeProps} from '../utils/map-recipe-props.js';
+import {createRecipes} from '../../utils/create-recipes.js';
 import {
   isChippedGem,
   isFlawedGem,
   isNonEtherealArmor,
   isNonEtherealWeapon,
-} from '../utils/predicates.js';
+} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -131,6 +131,6 @@ const recipes = [
   },
 ];
 
-export default mapRecipeProps({
+export default createRecipes({
   type: RecipeType.RepairRecharge,
 })(recipes);

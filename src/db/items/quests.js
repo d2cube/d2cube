@@ -1,45 +1,13 @@
-import {
-  BasePropertyType,
-  ItemQualityType,
-  ItemType,
-} from '../../enums/index.js';
+import {ItemQualityType, ItemType} from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
-import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemProperties} from '../utils/map-item-properties.js';
-import {mapItems} from '../utils/map-items.js';
 
-const items = {
-  [ids.WirtsLeg]: {
+export default createBaseItems({})([
+  {
     id: ids.WirtsLeg,
+    title: "Wirt's Leg",
     type: ItemType.Mace,
-    name: "Wirt's Leg",
     quality: ItemQualityType.Unique,
-    size: [3, 1],
-    properties: {
-      [BasePropertyType.Damage1H]: [1, 8],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.Durability]: 66,
-      [BasePropertyType.MaxSockets]: 3,
-    },
-    mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
+    baseId: ids.Mace,
   },
-};
-
-export default mapItems({
-  mapDescription: (item) => {
-    const text = item.name;
-    let color;
-
-    switch (item.type) {
-      case ItemType.Essence:
-      case ItemType.Key:
-        color = 'item.quality.crafted';
-        break;
-      default:
-        color = null;
-    }
-
-    return [[{text, color}]];
-  },
-})(items);
+]);

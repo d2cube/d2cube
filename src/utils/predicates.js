@@ -1,4 +1,3 @@
-import {and, or, not, isPropValueEqual} from '../../utils/fp.js';
 import {
   GemClassType,
   GemQualityType,
@@ -7,7 +6,8 @@ import {
   ItemType,
   PotionClassType,
   ItemTierType,
-} from '../../enums/index.js';
+} from '../enums/index.js';
+import {and, or, not, isPropValueEqual} from './fp.js';
 
 /**
  * Simple
@@ -20,9 +20,6 @@ export const isQualityEqual = isPropValueEqual('quality');
 export const isTierEqual = isPropValueEqual('tier');
 
 export const isTypeEqual = isPropValueEqual('type');
-
-export const isSize = (size) => (x) =>
-  x.size[0] === size[0] && x.size[1] === size[1]; // Simplify with a deepEqual utility
 
 export const isItemPropertyEqual = (property) =>
   isPropValueEqual(`properties.${property}`);

@@ -1,11 +1,11 @@
 import {RecipeType} from '../../enums/index.js';
-import {mapRecipeProps} from '../utils/map-recipe-props.js';
+import {createRecipes} from '../../utils/create-recipes.js';
 import {
   isChippedGem,
   isHealthPotion,
   isManaPotion,
   isRegularGem,
-} from '../utils/predicates.js';
+} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -35,7 +35,7 @@ const recipes = [
     },
   },
   {
-    name: '3 Health Potions + 3 Mana Potions + 1 Chipped Gem = 1 Rejuvenation Potion',
+    name: '3 Health Potions + 3 Mana Potions + 1 Chipped Gem → 1 Rejuvenation Potion',
     sources: [
       {
         item: {
@@ -94,7 +94,7 @@ const recipes = [
     },
   },
   {
-    name: '3 Health Potions + 3 Mana Potions + 1 Regular Gem = 1 Full Rejuvenation Potion',
+    name: '3 Health Potions + 3 Mana Potions + 1 Regular Gem → 1 Full Rejuvenation Potion',
     sources: [
       {
         item: {
@@ -153,7 +153,7 @@ const recipes = [
     },
   },
   {
-    name: '1 Strangling Gas Potion + 1 Health Potion = 1 Antidote Potion',
+    name: '1 Strangling Gas Potion + 1 Health Potion → 1 Antidote Potion',
     sources: [
       {
         item: {
@@ -176,6 +176,6 @@ const recipes = [
   },
 ];
 
-export default mapRecipeProps({
+export default createRecipes({
   type: RecipeType.Potion,
 })(recipes);

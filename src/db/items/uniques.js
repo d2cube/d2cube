@@ -8,13 +8,11 @@ import ids from '../ids/index.js';
 
 export default createBaseItems({
   quality: ItemQualityType.Unique,
-  type: ItemType.Sword,
 })([
   {
     id: ids.BladeOfAliBaba,
     title: 'Blade of Ali Baba',
     type: ItemType.Sword,
-    size: [3, 1],
     clvl: 35,
     baseId: ids.Tulwar,
     sockets: [null, null],
@@ -42,7 +40,6 @@ export default createBaseItems({
     id: ids.BloodCrescent,
     title: 'Blood Crescent',
     type: ItemType.Sword,
-    size: [3, 1],
     clvl: 7,
     qlvl: 87,
     baseId: ids.Scimitar,
@@ -134,7 +131,6 @@ export default createBaseItems({
     id: ids.WallOfTheEyeless,
     title: 'Wall of the Eyeless',
     type: ItemType.Shield,
-    size: [3, 2],
     clvl: 35,
     baseId: ids.BoneShield,
     properties: {
