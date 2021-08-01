@@ -361,7 +361,6 @@ export default createBaseItems({
   {
     id: ids.Hel,
     name: 'Hel Rune',
-    clvl: null,
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {

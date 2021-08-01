@@ -40,7 +40,7 @@ export default createBaseItems({
   },
   {
     id: ids.BloodCrescent,
-    name: 'Blood Crescent',
+    title: 'Blood Crescent',
     type: ItemType.Sword,
     size: [3, 1],
     clvl: 7,
@@ -74,7 +74,7 @@ export default createBaseItems({
   },
   {
     id: ids.LidlessWall,
-    name: 'Lidless Wall',
+    title: 'Lidless Wall',
     type: ItemType.Shield,
     size: [3, 2],
     clvl: 35,
@@ -107,11 +107,12 @@ export default createBaseItems({
   },
   {
     id: ids.StoneOfJordan,
-    name: 'Stone of Jordan',
+    title: 'Stone of Jordan',
     type: ItemType.Ring,
     size: [1, 1],
     clvl: 29,
     qlvl: 66,
+    baseId: ids.Ring,
     properties: {
       magic: {
         [MagicPropertyType.AllSkillLevels]: {
@@ -131,7 +132,7 @@ export default createBaseItems({
   },
   {
     id: ids.WallOfTheEyeless,
-    name: 'Wall of the Eyeless',
+    title: 'Wall of the Eyeless',
     type: ItemType.Shield,
     size: [3, 2],
     clvl: 35,

@@ -7,8 +7,16 @@ export const createItem = (data) => {
   const {baseId, id} = data;
 
   const item = getItemById(id);
-  const baseItem = getItemById(baseId);
+  const baseItem = getBaseItemById(baseId);
   const resolvedItem = merge(data)(merge(baseItem)(item));
 
   return rollItem(resolvedItem);
+};
+
+const getBaseItemById = (id) => {
+  const baseItem = getItemById(id) || {};
+  return {
+    ...baseItem,
+    variants: undefined,
+  }
 };

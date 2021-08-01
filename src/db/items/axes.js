@@ -10,7 +10,7 @@ export default createBaseItems({
     name: 'Hand Axe',
     tier: ItemTierType.Normal,
     qlvl: 3,
-    size: [2, 1],
+    size: [3, 1],
     properties: {
       base: {
         [BasePropertyType.Damage1H]: {
@@ -21,12 +21,6 @@ export default createBaseItems({
         },
         [BasePropertyType.AttackSpeed]: {
           values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: null,
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [28],
@@ -57,9 +51,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [32],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
-        },
         [BasePropertyType.Durability]: {
           values: [24],
         },
@@ -88,9 +79,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [43],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [24],
@@ -153,9 +141,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [67],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
-        },
         [BasePropertyType.Durability]: {
           values: [26],
         },
@@ -184,9 +169,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [35],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [30],
@@ -217,9 +199,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [48],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
-        },
         [BasePropertyType.Durability]: {
           values: [35],
         },
@@ -248,9 +227,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [54],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [40],
@@ -313,9 +289,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [70],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
-        },
         [BasePropertyType.Durability]: {
           values: [50],
         },
@@ -345,9 +318,6 @@ export default createBaseItems({
         [BasePropertyType.AttackSpeed]: {
           values: [10],
         },
-        [BasePropertyType.MinimumStrength]: {
-          values: null,
-        },
         [BasePropertyType.MinimumDexterity]: {
           values: [40],
         },
@@ -373,9 +343,6 @@ export default createBaseItems({
         },
         [BasePropertyType.AttackSpeed]: {
           values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: null,
         },
         [BasePropertyType.MinimumDexterity]: {
           values: [57],
@@ -441,9 +408,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [68],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
-        },
         [BasePropertyType.Durability]: {
           values: [24],
         },
@@ -475,9 +439,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [85],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [24],
@@ -546,9 +507,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [121],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
-        },
         [BasePropertyType.Durability]: {
           values: [26],
         },
@@ -580,9 +538,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [73],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [30],
@@ -616,9 +571,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [92],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
-        },
         [BasePropertyType.Durability]: {
           values: [35],
         },
@@ -650,9 +602,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [101],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [40],
@@ -720,9 +669,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [125],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [50],
@@ -994,9 +940,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [196],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: null,
         },
         [BasePropertyType.Durability]: {
           values: [30],
