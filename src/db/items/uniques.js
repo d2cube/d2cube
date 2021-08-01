@@ -29,7 +29,7 @@ const items = {
     type: ItemType.Sword,
     size: [3, 1],
     clvl: 7,
-    ilvl: 87,
+    qlvl: 87,
     baseId: ids.Scimitar,
     stats: {
       [MagicPropertyType.EnhancedDamage]: [60, 80],
@@ -65,7 +65,7 @@ const items = {
     type: ItemType.Ring,
     size: [1, 1],
     clvl: 29,
-    ilvl: 66,
+    qlvl: 66,
     stats: {
       [MagicPropertyType.AllSkillLevels]: [1],
       [MagicPropertyType.LightningDamage]: [1, 12],

@@ -1,7 +1,7 @@
 import {random} from '../../utils/random.js';
 import {BasePropertyType} from '../../enums/index.js';
 import {mapItemClvl} from './map-item-clvl.js';
-import {mapItemIlvl} from './map-item-ilvl.js';
+import {mapItemQlvl} from './map-item-qlvl.js';
 
 // TODO: confirm logic
 const getAttackSpeedDescription = (value) => {
@@ -30,7 +30,7 @@ export const mapItemProperties = (item) => {
 
   const description = [];
 
-  description.push(mapItemIlvl(item));
+  description.push(mapItemQlvl(item));
 
   if (properties[BasePropertyType.DamageThrow]) {
     description.push({

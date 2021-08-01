@@ -16,7 +16,7 @@ const items = {
     tier: ItemTierType.Normal,
     armorType: ArmorType.Light,
     clvl: 5,
-    ilvl: 1,
+    qlvl: 1,
     properties: {
       [BasePropertyType.Defense]: [8, 11],
       [BasePropertyType.MinimumStrength]: 12,
@@ -29,7 +29,7 @@ const items = {
     name: 'Leather Armor',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 3,
+    qlvl: 3,
     properties: {
       [BasePropertyType.Defense]: [14, 17],
       [BasePropertyType.MinimumStrength]: 15,
@@ -42,7 +42,7 @@ const items = {
     name: 'Hard Leather Armor',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 5,
+    qlvl: 5,
     properties: {
       [BasePropertyType.Defense]: [21, 24],
       [BasePropertyType.MinimumStrength]: 20,
@@ -55,7 +55,7 @@ const items = {
     name: 'Studded Leather',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 8,
+    qlvl: 8,
     properties: {
       [BasePropertyType.Defense]: [32, 35],
       [BasePropertyType.MinimumStrength]: 27,
@@ -68,7 +68,7 @@ const items = {
     name: 'Ring Mail',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 11,
+    qlvl: 11,
     properties: {
       [BasePropertyType.Defense]: [45, 48],
       [BasePropertyType.MinimumStrength]: 36,
@@ -81,7 +81,7 @@ const items = {
     name: 'Scale Mail',
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
-    ilvl: 13,
+    qlvl: 13,
     properties: {
       [BasePropertyType.Defense]: [57, 60],
       [BasePropertyType.MinimumStrength]: 44,
@@ -94,7 +94,7 @@ const items = {
     name: 'Chain Mail',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 15,
+    qlvl: 15,
     properties: {
       [BasePropertyType.Defense]: [72, 75],
       [BasePropertyType.MinimumStrength]: 48,
@@ -107,7 +107,7 @@ const items = {
     name: 'Breast Plate',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 18,
+    qlvl: 18,
     properties: {
       [BasePropertyType.Defense]: [65, 68],
       [BasePropertyType.MinimumStrength]: 30,
@@ -120,7 +120,7 @@ const items = {
     name: 'Splint Mail',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 20,
+    qlvl: 20,
     properties: {
       [BasePropertyType.Defense]: [90, 95],
       [BasePropertyType.MinimumStrength]: 51,
@@ -133,7 +133,7 @@ const items = {
     name: 'Plate Mail',
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
-    ilvl: 24,
+    qlvl: 24,
     properties: {
       [BasePropertyType.Defense]: [108, 116],
       [BasePropertyType.MinimumStrength]: 65,
@@ -146,7 +146,7 @@ const items = {
     name: 'Field Plate',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 28,
+    qlvl: 28,
     properties: {
       [BasePropertyType.Defense]: [101, 105],
       [BasePropertyType.MinimumStrength]: 55,
@@ -159,7 +159,7 @@ const items = {
     name: 'Gothic Plate',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 32,
+    qlvl: 32,
     properties: {
       [BasePropertyType.Defense]: [128, 135],
       [BasePropertyType.MinimumStrength]: 70,
@@ -172,7 +172,7 @@ const items = {
     name: 'Light Plate',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 35,
+    qlvl: 35,
     properties: {
       [BasePropertyType.Defense]: [90, 107],
       [BasePropertyType.MinimumStrength]: 41,
@@ -185,7 +185,7 @@ const items = {
     name: 'Full Plate Mail',
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
-    ilvl: 37,
+    qlvl: 37,
     properties: {
       [BasePropertyType.Defense]: [150, 161],
       [BasePropertyType.MinimumStrength]: 80,
@@ -198,7 +198,7 @@ const items = {
     name: 'Ancient Armor',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 40,
+    qlvl: 40,
     properties: {
       [BasePropertyType.Defense]: [218, 233],
       [BasePropertyType.MinimumStrength]: 100,
@@ -212,7 +212,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 22,
-    ilvl: 34,
+    qlvl: 34,
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
@@ -228,7 +228,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 24,
-    ilvl: 36,
+    qlvl: 36,
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
@@ -244,7 +244,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 37,
+    qlvl: 37,
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
@@ -260,7 +260,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 40,
+    qlvl: 40,
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
@@ -276,7 +276,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 42,
+    qlvl: 42,
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
@@ -292,7 +292,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 43,
+    qlvl: 43,
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
@@ -308,7 +308,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 45,
+    qlvl: 45,
     baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
@@ -324,7 +324,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 47,
+    qlvl: 47,
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
@@ -340,7 +340,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 49,
+    qlvl: 49,
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
@@ -356,7 +356,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 52,
+    qlvl: 52,
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
@@ -372,7 +372,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 55,
+    qlvl: 55,
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
@@ -388,7 +388,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 58,
+    qlvl: 58,
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
@@ -404,7 +404,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 60,
+    qlvl: 60,
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
@@ -420,7 +420,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 64,
+    qlvl: 64,
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
@@ -436,7 +436,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 64,
+    qlvl: 64,
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {
@@ -452,7 +452,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 49,
-    ilvl: 65,
+    qlvl: 65,
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
@@ -468,7 +468,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 50,
-    ilvl: 67,
+    qlvl: 67,
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
@@ -484,7 +484,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 51,
-    ilvl: 68,
+    qlvl: 68,
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
@@ -500,7 +500,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 53,
-    ilvl: 70,
+    qlvl: 70,
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
@@ -516,7 +516,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 54,
-    ilvl: 72,
+    qlvl: 72,
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
@@ -532,7 +532,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 55,
-    ilvl: 73,
+    qlvl: 73,
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
@@ -548,7 +548,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 47,
-    ilvl: 62,
+    qlvl: 62,
     baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
@@ -564,7 +564,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 56,
-    ilvl: 75,
+    qlvl: 75,
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
@@ -580,7 +580,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 57,
-    ilvl: 76,
+    qlvl: 76,
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
@@ -596,7 +596,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 59,
-    ilvl: 78,
+    qlvl: 78,
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
@@ -612,7 +612,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 61,
-    ilvl: 81,
+    qlvl: 81,
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
@@ -628,7 +628,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 62,
-    ilvl: 82,
+    qlvl: 82,
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
@@ -644,7 +644,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 63,
-    ilvl: 84,
+    qlvl: 84,
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
@@ -660,7 +660,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 64,
-    ilvl: 83,
+    qlvl: 83,
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
@@ -676,7 +676,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 66,
-    ilvl: 85,
+    qlvl: 85,
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {

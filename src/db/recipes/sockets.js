@@ -94,7 +94,7 @@ const recipes = [
           overrideDescription: [
             [{text: 'Magic Weapon', color: 'item.quality.magic'}],
             [
-              {text: 'Always creates an ilvl 25 weapon'},
+              {text: 'Always creates an qlvl 25 weapon'},
               {text: '1-2 sockets will be added.'},
               {text: 'Properties will be rerolled'},
             ],
@@ -141,7 +141,7 @@ const recipes = [
           overrideDescription: [
             [{text: 'Magic Weapon', color: 'item.quality.magic'}],
             [
-              {text: 'Always creates an ilvl 30 weapon'},
+              {text: 'Always creates an qlvl 30 weapon'},
               {text: '1-2 sockets will be added.'},
               {text: 'Properties will be rerolled'},
             ],

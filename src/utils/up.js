@@ -16,7 +16,7 @@ export const up = (currentItem) => {
   const uppedProperties = {
     name: uppedItem.name,
     clvl: uppedItem.clvl,
-    ilvl: uppedItem.ilvl,
+    qlvl: uppedItem.qlvl,
     properties: uppedItem.properties,
   };
 

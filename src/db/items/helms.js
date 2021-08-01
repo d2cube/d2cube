@@ -9,7 +9,7 @@ const items = {
     id: ids.Cap,
     name: 'Cap',
     tier: ItemTierType.Normal,
-    ilvl: 1,
+    qlvl: 1,
     properties: {
       [BasePropertyType.Defense]: [3, 5],
       [BasePropertyType.MinimumStrength]: null,
@@ -21,7 +21,7 @@ const items = {
     id: ids.SkullCap,
     name: 'Skull Cap',
     tier: ItemTierType.Normal,
-    ilvl: 5,
+    qlvl: 5,
     properties: {
       [BasePropertyType.Defense]: [8, 11],
       [BasePropertyType.MinimumStrength]: 15,
@@ -33,7 +33,7 @@ const items = {
     id: ids.Helm,
     name: 'Helm',
     tier: ItemTierType.Normal,
-    ilvl: 11,
+    qlvl: 11,
     properties: {
       [BasePropertyType.Defense]: [15, 18],
       [BasePropertyType.MinimumStrength]: 26,
@@ -45,7 +45,7 @@ const items = {
     id: ids.FullHelm,
     name: 'Full Helm',
     tier: ItemTierType.Normal,
-    ilvl: 15,
+    qlvl: 15,
     properties: {
       [BasePropertyType.Defense]: [23, 26],
       [BasePropertyType.MinimumStrength]: 41,
@@ -57,7 +57,7 @@ const items = {
     id: ids.Mask,
     name: 'Mask',
     tier: ItemTierType.Normal,
-    ilvl: 19,
+    qlvl: 19,
     properties: {
       [BasePropertyType.Defense]: [9, 27],
       [BasePropertyType.MinimumStrength]: 23,
@@ -69,7 +69,7 @@ const items = {
     id: ids.BoneHelm,
     name: 'Bone Helm',
     tier: ItemTierType.Normal,
-    ilvl: 22,
+    qlvl: 22,
     properties: {
       [BasePropertyType.Defense]: [33, 36],
       [BasePropertyType.MinimumStrength]: 25,
@@ -81,7 +81,7 @@ const items = {
     id: ids.GreatHelm,
     name: 'Great Helm',
     tier: ItemTierType.Normal,
-    ilvl: 23,
+    qlvl: 23,
     properties: {
       [BasePropertyType.Defense]: [30, 35],
       [BasePropertyType.MinimumStrength]: 63,
@@ -93,7 +93,7 @@ const items = {
     id: ids.Crown,
     name: 'Crown',
     tier: ItemTierType.Normal,
-    ilvl: 29,
+    qlvl: 29,
     properties: {
       [BasePropertyType.Defense]: [25, 45],
       [BasePropertyType.MinimumStrength]: 55,
@@ -106,7 +106,7 @@ const items = {
     name: 'War Hat',
     tier: ItemTierType.Exceptional,
     clvl: 22,
-    ilvl: 34,
+    qlvl: 34,
     baseId: ids.Cap,
     imageId: ids.Cap,
     properties: {
@@ -121,7 +121,7 @@ const items = {
     name: 'Sallet',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 37,
+    qlvl: 37,
     baseId: ids.SkullCap,
     imageId: ids.SkullCap,
     properties: {
@@ -136,7 +136,7 @@ const items = {
     name: 'Casque',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 42,
+    qlvl: 42,
     baseId: ids.Helm,
     imageId: ids.Helm,
     properties: {
@@ -151,7 +151,7 @@ const items = {
     name: 'Basinet',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 45,
+    qlvl: 45,
     baseId: ids.FullHelm,
     imageId: ids.FullHelm,
     properties: {
@@ -166,7 +166,7 @@ const items = {
     name: 'Death Mask',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 48,
+    qlvl: 48,
     baseId: ids.Mask,
     imageId: ids.Mask,
     properties: {
@@ -181,7 +181,7 @@ const items = {
     name: 'Grim Helm',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 50,
+    qlvl: 50,
     baseId: ids.BoneHelm,
     imageId: ids.BoneHelm,
     properties: {
@@ -196,7 +196,7 @@ const items = {
     name: 'Winged Helm',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 51,
+    qlvl: 51,
     baseId: ids.GreatHelm,
     imageId: ids.GreatHelm,
     properties: {
@@ -211,7 +211,7 @@ const items = {
     name: 'Grand Crown',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 55,
+    qlvl: 55,
     baseId: ids.Crown,
     imageId: ids.Crown,
     properties: {
@@ -226,7 +226,7 @@ const items = {
     name: 'Shako',
     tier: ItemTierType.Elite,
     clvl: 43,
-    ilvl: 58,
+    qlvl: 58,
     baseId: ids.Cap,
     imageId: ids.Cap,
     properties: {
@@ -241,7 +241,7 @@ const items = {
     name: 'Hydraskull',
     tier: ItemTierType.Elite,
     clvl: 47,
-    ilvl: 63,
+    qlvl: 63,
     baseId: ids.SkullCap,
     imageId: ids.SkullCap,
     properties: {
@@ -256,7 +256,7 @@ const items = {
     name: 'Armet',
     tier: ItemTierType.Elite,
     clvl: 51,
-    ilvl: 68,
+    qlvl: 68,
     baseId: ids.Helm,
     imageId: ids.Helm,
     properties: {
@@ -271,7 +271,7 @@ const items = {
     name: 'Giant Conch',
     tier: ItemTierType.Elite,
     clvl: 40,
-    ilvl: 54,
+    qlvl: 54,
     baseId: ids.FullHelm,
     imageId: ids.FullHelm,
     properties: {
@@ -286,7 +286,7 @@ const items = {
     name: 'Demonhead',
     tier: ItemTierType.Elite,
     clvl: 55,
-    ilvl: 74,
+    qlvl: 74,
     baseId: ids.Mask,
     imageId: ids.Mask,
     properties: {
@@ -301,7 +301,7 @@ const items = {
     name: 'Bone Visage',
     tier: ItemTierType.Elite,
     clvl: 63,
-    ilvl: 84,
+    qlvl: 84,
     baseId: ids.BoneHelm,
     imageId: ids.BoneHelm,
     properties: {
@@ -316,7 +316,7 @@ const items = {
     name: 'Spired Helm',
     tier: ItemTierType.Elite,
     clvl: 59,
-    ilvl: 79,
+    qlvl: 79,
     baseId: ids.GreatHelm,
     imageId: ids.GreatHelm,
     properties: {
@@ -331,7 +331,7 @@ const items = {
     name: 'Corona',
     tier: ItemTierType.Elite,
     clvl: 66,
-    ilvl: 85,
+    qlvl: 85,
     baseId: ids.Crown,
     imageId: ids.Crown,
     properties: {

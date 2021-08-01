@@ -16,7 +16,7 @@ const items = {
     size: [2, 2],
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 1,
+    qlvl: 1,
     properties: {
       [BasePropertyType.Defense]: [4, 6],
       [BasePropertyType.BlockChance]: 30,
@@ -31,7 +31,7 @@ const items = {
     size: [2, 2],
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 5,
+    qlvl: 5,
     properties: {
       [BasePropertyType.Defense]: [8, 10],
       [BasePropertyType.BlockChance]: 35,
@@ -46,7 +46,7 @@ const items = {
     size: [3, 2],
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 11,
+    qlvl: 11,
     properties: {
       [BasePropertyType.Defense]: [12, 14],
       [BasePropertyType.BlockChance]: 35,
@@ -61,7 +61,7 @@ const items = {
     size: [3, 2],
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 15,
+    qlvl: 15,
     properties: {
       [BasePropertyType.Defense]: [16, 18],
       [BasePropertyType.BlockChance]: 38,
@@ -76,7 +76,7 @@ const items = {
     size: [3, 2],
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 11,
+    qlvl: 11,
     properties: {
       [BasePropertyType.Defense]: [15, 25],
       [BasePropertyType.BlockChance]: 40,
@@ -91,7 +91,7 @@ const items = {
     size: [3, 2],
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
-    ilvl: 19,
+    qlvl: 19,
     properties: {
       [BasePropertyType.Defense]: [10, 30],
       [BasePropertyType.BlockChance]: 50,
@@ -106,7 +106,7 @@ const items = {
     size: [4, 2],
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
-    ilvl: 22,
+    qlvl: 22,
     properties: {
       [BasePropertyType.Defense]: [22, 25],
       [BasePropertyType.BlockChance]: 54,
@@ -121,7 +121,7 @@ const items = {
     size: [4, 2],
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
-    ilvl: 30,
+    qlvl: 30,
     properties: {
       [BasePropertyType.Defense]: [30, 35],
       [BasePropertyType.BlockChance]: 46,
@@ -137,7 +137,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 22,
-    ilvl: 34,
+    qlvl: 34,
     baseId: ids.Buckler,
     imageId: ids.Buckler,
     properties: {
@@ -155,7 +155,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 37,
+    qlvl: 37,
     baseId: ids.SmallShield,
     imageId: ids.SmallShield,
     properties: {
@@ -173,7 +173,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 42,
+    qlvl: 42,
     baseId: ids.LargeShield,
     imageId: ids.LargeShield,
     properties: {
@@ -191,7 +191,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 45,
+    qlvl: 45,
     baseId: ids.KiteShield,
     imageId: ids.KiteShield,
     properties: {
@@ -209,7 +209,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 42,
+    qlvl: 42,
     baseId: ids.SpikedShield,
     imageId: ids.SpikedShield,
     properties: {
@@ -227,7 +227,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 48,
+    qlvl: 48,
     baseId: ids.BoneShield,
     imageId: ids.BoneShield,
     properties: {
@@ -245,7 +245,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 22,
+    qlvl: 22,
     baseId: ids.TowerShield,
     imageId: ids.TowerShield,
     properties: {
@@ -263,7 +263,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 56,
+    qlvl: 56,
     baseId: ids.GothicShield,
     imageId: ids.GothicShield,
     properties: {
@@ -281,7 +281,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 43,
-    ilvl: 58,
+    qlvl: 58,
     baseId: ids.Buckler,
     imageId: ids.Buckler,
     properties: {
@@ -299,7 +299,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 45,
-    ilvl: 61,
+    qlvl: 61,
     baseId: ids.SmallShield,
     imageId: ids.SmallShield,
     properties: {
@@ -317,7 +317,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 48,
-    ilvl: 64,
+    qlvl: 64,
     baseId: ids.LargeShield,
     imageId: ids.LargeShield,
     properties: {
@@ -335,7 +335,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 54,
-    ilvl: 72,
+    qlvl: 72,
     baseId: ids.KiteShield,
     imageId: ids.KiteShield,
     properties: {
@@ -353,7 +353,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 51,
-    ilvl: 68,
+    qlvl: 68,
     baseId: ids.SpikedShield,
     imageId: ids.SpikedShield,
     properties: {
@@ -371,7 +371,7 @@ const items = {
     armorType: ArmorType.Light,
     tier: ItemTierType.Elite,
     clvl: 57,
-    ilvl: 76,
+    qlvl: 76,
     baseId: ids.BoneShield,
     imageId: ids.BoneShield,
     properties: {
@@ -389,7 +389,7 @@ const items = {
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 59,
-    ilvl: 79,
+    qlvl: 79,
     baseId: ids.TowerShield,
     imageId: ids.TowerShield,
     properties: {
@@ -407,7 +407,7 @@ const items = {
     armorType: ArmorType.Medium,
     tier: ItemTierType.Elite,
     clvl: 63,
-    ilvl: 84,
+    qlvl: 84,
     baseId: ids.GothicShield,
     imageId: ids.GothicShield,
     properties: {

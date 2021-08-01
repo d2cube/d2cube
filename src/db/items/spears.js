@@ -9,7 +9,7 @@ const items = {
     id: ids.Spear,
     name: 'Spear',
     tier: ItemTierType.Normal,
-    ilvl: 5,
+    qlvl: 5,
     properties: {
       [BasePropertyType.Damage2H]: [3, 15],
       [BasePropertyType.MeleeRange]: 4,
@@ -24,7 +24,7 @@ const items = {
     id: ids.Trident,
     name: 'Trident',
     tier: ItemTierType.Normal,
-    ilvl: 9,
+    qlvl: 9,
     properties: {
       [BasePropertyType.Damage2H]: [9, 15],
       [BasePropertyType.MeleeRange]: 4,
@@ -39,7 +39,7 @@ const items = {
     id: ids.Brandistock,
     name: 'Brandistock',
     tier: ItemTierType.Normal,
-    ilvl: 16,
+    qlvl: 16,
     properties: {
       [BasePropertyType.Damage2H]: [7, 17],
       [BasePropertyType.MeleeRange]: 5,
@@ -54,7 +54,7 @@ const items = {
     id: ids.Spetum,
     name: 'Spetum',
     tier: ItemTierType.Normal,
-    ilvl: 20,
+    qlvl: 20,
     properties: {
       [BasePropertyType.Damage2H]: [15, 23],
       [BasePropertyType.MeleeRange]: 5,
@@ -69,7 +69,7 @@ const items = {
     id: ids.Pike,
     name: 'Pike',
     tier: ItemTierType.Normal,
-    ilvl: 24,
+    qlvl: 24,
     properties: {
       [BasePropertyType.Damage2H]: [14, 63],
       [BasePropertyType.MeleeRange]: 5,
@@ -85,7 +85,7 @@ const items = {
     name: 'War Spear',
     tier: ItemTierType.Exceptional,
     clvl: 21,
-    ilvl: 33,
+    qlvl: 33,
     baseId: ids.Spear,
     imageId: ids.Spear,
     properties: {
@@ -103,7 +103,7 @@ const items = {
     name: 'Fuscina',
     tier: ItemTierType.Exceptional,
     clvl: 24,
-    ilvl: 36,
+    qlvl: 36,
     baseId: ids.Trident,
     imageId: ids.Trident,
     properties: {
@@ -121,7 +121,7 @@ const items = {
     name: 'War Fork',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 41,
+    qlvl: 41,
     baseId: ids.Brandistock,
     imageId: ids.Brandistock,
     properties: {
@@ -139,7 +139,7 @@ const items = {
     name: 'Yari',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 44,
+    qlvl: 44,
     baseId: ids.Spetum,
     imageId: ids.Spetum,
     properties: {
@@ -157,7 +157,7 @@ const items = {
     name: 'Lance',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 47,
+    qlvl: 47,
     baseId: ids.Pike,
     imageId: ids.Pike,
     properties: {
@@ -175,7 +175,7 @@ const items = {
     name: 'Hyperion Spear',
     tier: ItemTierType.Elite,
     clvl: 43,
-    ilvl: 58,
+    qlvl: 58,
     baseId: ids.Spear,
     imageId: ids.Spear,
     properties: {
@@ -193,7 +193,7 @@ const items = {
     name: 'Stygian Pike',
     tier: ItemTierType.Elite,
     clvl: 49,
-    ilvl: 66,
+    qlvl: 66,
     baseId: ids.Trident,
     imageId: ids.Trident,
     properties: {
@@ -211,7 +211,7 @@ const items = {
     name: 'Mancatcher',
     tier: ItemTierType.Elite,
     clvl: 55,
-    ilvl: 74,
+    qlvl: 74,
     baseId: ids.Brandistock,
     imageId: ids.Brandistock,
     properties: {
@@ -229,7 +229,7 @@ const items = {
     name: 'Ghost Spear',
     tier: ItemTierType.Elite,
     clvl: 62,
-    ilvl: 83,
+    qlvl: 83,
     baseId: ids.Spetum,
     imageId: ids.Spetum,
     properties: {
@@ -247,7 +247,7 @@ const items = {
     name: 'War Pike',
     tier: ItemTierType.Elite,
     clvl: 66,
-    ilvl: 85,
+    qlvl: 85,
     baseId: ids.Pike,
     imageId: ids.Pike,
     properties: {

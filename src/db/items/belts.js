@@ -9,7 +9,7 @@ const items = {
     id: ids.Sash,
     name: 'Sash',
     tier: ItemTierType.Normal,
-    ilvl: 3,
+    qlvl: 3,
     properties: {
       [BasePropertyType.Defense]: [2, 2],
       [BasePropertyType.PotionSlots]: 8,
@@ -21,7 +21,7 @@ const items = {
     id: ids.LightBelt,
     name: 'Light Belt',
     tier: ItemTierType.Normal,
-    ilvl: 7,
+    qlvl: 7,
     properties: {
       [BasePropertyType.Defense]: [3, 3],
       [BasePropertyType.PotionSlots]: 8,
@@ -33,7 +33,7 @@ const items = {
     id: ids.Belt,
     name: 'Belt',
     tier: ItemTierType.Normal,
-    ilvl: 12,
+    qlvl: 12,
     properties: {
       [BasePropertyType.Defense]: [5, 5],
       [BasePropertyType.PotionSlots]: 12,
@@ -45,7 +45,7 @@ const items = {
     id: ids.HeavyBelt,
     name: 'Heavy Belt',
     tier: ItemTierType.Normal,
-    ilvl: 18,
+    qlvl: 18,
     properties: {
       [BasePropertyType.Defense]: [6, 6],
       [BasePropertyType.PotionSlots]: 12,
@@ -57,7 +57,7 @@ const items = {
     id: ids.PlatedBelt,
     name: 'Plated Belt',
     tier: ItemTierType.Normal,
-    ilvl: 27,
+    qlvl: 27,
     properties: {
       [BasePropertyType.Defense]: [8, 11],
       [BasePropertyType.PotionSlots]: 16,
@@ -70,7 +70,7 @@ const items = {
     name: 'Demonhide Sash',
     tier: ItemTierType.Exceptional,
     clvl: 24,
-    ilvl: 36,
+    qlvl: 36,
     baseId: ids.Sash,
     imageId: ids.Sash,
     properties: {
@@ -85,7 +85,7 @@ const items = {
     name: 'Sharkskin Belt',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 39,
+    qlvl: 39,
     baseId: ids.LightBelt,
     imageId: ids.LightBelt,
     properties: {
@@ -100,7 +100,7 @@ const items = {
     name: 'Mesh Belt',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 43,
+    qlvl: 43,
     baseId: ids.Belt,
     imageId: ids.Belt,
     properties: {
@@ -115,7 +115,7 @@ const items = {
     name: 'Battle Belt',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 49,
+    qlvl: 49,
     baseId: ids.HeavyBelt,
     imageId: ids.HeavyBelt,
     properties: {
@@ -130,7 +130,7 @@ const items = {
     name: 'War Belt',
     tier: ItemTierType.Exceptional,
     clvl: 25,
-    ilvl: 54,
+    qlvl: 54,
     baseId: ids.PlatedBelt,
     imageId: ids.PlatedBelt,
     properties: {
@@ -145,7 +145,7 @@ const items = {
     name: 'Spiderweb Sash',
     tier: ItemTierType.Elite,
     clvl: 46,
-    ilvl: 61,
+    qlvl: 61,
     baseId: ids.Sash,
     imageId: ids.Sash,
     properties: {
@@ -160,7 +160,7 @@ const items = {
     name: 'Vampirefang Belt',
     tier: ItemTierType.Elite,
     clvl: 51,
-    ilvl: 68,
+    qlvl: 68,
     baseId: ids.LightBelt,
     imageId: ids.LightBelt,
     properties: {
@@ -175,7 +175,7 @@ const items = {
     name: 'Mithril Coil',
     tier: ItemTierType.Elite,
     clvl: 56,
-    ilvl: 75,
+    qlvl: 75,
     baseId: ids.Belt,
     imageId: ids.Belt,
     properties: {
@@ -190,7 +190,7 @@ const items = {
     name: 'Troll Belt',
     tier: ItemTierType.Elite,
     clvl: 62,
-    ilvl: 82,
+    qlvl: 82,
     baseId: ids.HeavyBelt,
     imageId: ids.HeavyBelt,
     properties: {
@@ -205,7 +205,7 @@ const items = {
     name: 'Colossus Girdle',
     tier: ItemTierType.Elite,
     clvl: 67,
-    ilvl: 85,
+    qlvl: 85,
     baseId: ids.PlatedBelt,
     imageId: ids.PlatedBelt,
     properties: {
