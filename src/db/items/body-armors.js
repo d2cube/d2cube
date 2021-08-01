@@ -4,13 +4,14 @@ import {
   ItemTierType,
   ItemType,
 } from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
-import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemProperties} from '../utils/map-item-properties.js';
-import {mapItems} from '../utils/map-items.js';
 
-const items = {
-  [ids.QuiltedArmor]: {
+export default createBaseItems({
+  type: ItemType.BodyArmor,
+  size: [3, 2],
+})([
+  {
     id: ids.QuiltedArmor,
     name: 'Quilted Armor',
     tier: ItemTierType.Normal,
@@ -18,195 +19,345 @@ const items = {
     clvl: 5,
     qlvl: 1,
     properties: {
-      [BasePropertyType.Defense]: [8, 11],
-      [BasePropertyType.MinimumStrength]: 12,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [8, 11],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [12],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.LeatherArmor]: {
+  {
     id: ids.LeatherArmor,
     name: 'Leather Armor',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     qlvl: 3,
     properties: {
-      [BasePropertyType.Defense]: [14, 17],
-      [BasePropertyType.MinimumStrength]: 15,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [14, 17],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [15],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.HardLeatherArmor]: {
+  {
     id: ids.HardLeatherArmor,
     name: 'Hard Leather Armor',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     qlvl: 5,
     properties: {
-      [BasePropertyType.Defense]: [21, 24],
-      [BasePropertyType.MinimumStrength]: 20,
-      [BasePropertyType.Durability]: 28,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [21, 24],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [20],
+        },
+        [BasePropertyType.Durability]: {
+          values: [28],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.StuddedLeather]: {
+  {
     id: ids.StuddedLeather,
     name: 'Studded Leather',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     qlvl: 8,
     properties: {
-      [BasePropertyType.Defense]: [32, 35],
-      [BasePropertyType.MinimumStrength]: 27,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [32, 35],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [27],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.RingMail]: {
+  {
     id: ids.RingMail,
     name: 'Ring Mail',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 11,
     properties: {
-      [BasePropertyType.Defense]: [45, 48],
-      [BasePropertyType.MinimumStrength]: 36,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [45, 48],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [36],
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.ScaleMail]: {
+  {
     id: ids.ScaleMail,
     name: 'Scale Mail',
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
     qlvl: 13,
     properties: {
-      [BasePropertyType.Defense]: [57, 60],
-      [BasePropertyType.MinimumStrength]: 44,
-      [BasePropertyType.Durability]: 36,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [57, 60],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [44],
+        },
+        [BasePropertyType.Durability]: {
+          values: [36],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.ChainMail]: {
+  {
     id: ids.ChainMail,
     name: 'Chain Mail',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 15,
     properties: {
-      [BasePropertyType.Defense]: [72, 75],
-      [BasePropertyType.MinimumStrength]: 48,
-      [BasePropertyType.Durability]: 45,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [72, 75],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [48],
+        },
+        [BasePropertyType.Durability]: {
+          values: [45],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.BreastPlate]: {
+  {
     id: ids.BreastPlate,
     name: 'Breast Plate',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     qlvl: 18,
     properties: {
-      [BasePropertyType.Defense]: [65, 68],
-      [BasePropertyType.MinimumStrength]: 30,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [65, 68],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [30],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.SplintMail]: {
+  {
     id: ids.SplintMail,
     name: 'Splint Mail',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 20,
     properties: {
-      [BasePropertyType.Defense]: [90, 95],
-      [BasePropertyType.MinimumStrength]: 51,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [90, 95],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [51],
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.PlateMail]: {
+  {
     id: ids.PlateMail,
     name: 'Plate Mail',
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
     qlvl: 24,
     properties: {
-      [BasePropertyType.Defense]: [108, 116],
-      [BasePropertyType.MinimumStrength]: 65,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [108, 116],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [65],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.FieldPlate]: {
+  {
     id: ids.FieldPlate,
     name: 'Field Plate',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 28,
     properties: {
-      [BasePropertyType.Defense]: [101, 105],
-      [BasePropertyType.MinimumStrength]: 55,
-      [BasePropertyType.Durability]: 48,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [101, 105],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [55],
+        },
+        [BasePropertyType.Durability]: {
+          values: [48],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.GothicPlate]: {
+  {
     id: ids.GothicPlate,
     name: 'Gothic Plate',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 32,
     properties: {
-      [BasePropertyType.Defense]: [128, 135],
-      [BasePropertyType.MinimumStrength]: 70,
-      [BasePropertyType.Durability]: 55,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [128, 135],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [70],
+        },
+        [BasePropertyType.Durability]: {
+          values: [55],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.LightPlate]: {
+  {
     id: ids.LightPlate,
     name: 'Light Plate',
     armorType: ArmorType.Light,
     tier: ItemTierType.Normal,
     qlvl: 35,
     properties: {
-      [BasePropertyType.Defense]: [90, 107],
-      [BasePropertyType.MinimumStrength]: 41,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [90, 107],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [41],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.FullPlateMail]: {
+  {
     id: ids.FullPlateMail,
     name: 'Full Plate Mail',
     armorType: ArmorType.Heavy,
     tier: ItemTierType.Normal,
     qlvl: 37,
     properties: {
-      [BasePropertyType.Defense]: [150, 161],
-      [BasePropertyType.MinimumStrength]: 80,
-      [BasePropertyType.Durability]: 70,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [150, 161],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [80],
+        },
+        [BasePropertyType.Durability]: {
+          values: [70],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.AncientArmor]: {
+  {
     id: ids.AncientArmor,
     name: 'Ancient Armor',
     armorType: ArmorType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 40,
     properties: {
-      [BasePropertyType.Defense]: [218, 233],
-      [BasePropertyType.MinimumStrength]: 100,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [218, 233],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [100],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.GhostArmor]: {
+  {
     id: ids.GhostArmor,
     name: 'Ghost Armor',
     armorType: ArmorType.Light,
@@ -216,13 +367,23 @@ const items = {
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
-      [BasePropertyType.Defense]: [102, 117],
-      [BasePropertyType.MinimumStrength]: 38,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [102, 117],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [38],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.SerpentskinArmor]: {
+  {
     id: ids.SerpentskinArmor,
     name: 'Serpentskin Armor',
     armorType: ArmorType.Light,
@@ -232,13 +393,23 @@ const items = {
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
-      [BasePropertyType.Defense]: [111, 126],
-      [BasePropertyType.MinimumStrength]: 43,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [111, 126],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [43],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.DemonhideArmor]: {
+  {
     id: ids.DemonhideArmor,
     name: 'Demonhide Armor',
     armorType: ArmorType.Light,
@@ -248,13 +419,23 @@ const items = {
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
-      [BasePropertyType.Defense]: [122, 136],
-      [BasePropertyType.MinimumStrength]: 50,
-      [BasePropertyType.Durability]: 28,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [122, 136],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [50],
+        },
+        [BasePropertyType.Durability]: {
+          values: [28],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.TrellisedArmor]: {
+  {
     id: ids.TrellisedArmor,
     name: 'Trellised Armor',
     armorType: ArmorType.Light,
@@ -264,13 +445,23 @@ const items = {
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
-      [BasePropertyType.Defense]: [138, 153],
-      [BasePropertyType.MinimumStrength]: 61,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [138, 153],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [61],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.LinkedMail]: {
+  {
     id: ids.LinkedMail,
     name: 'Linked Mail',
     armorType: ArmorType.Medium,
@@ -280,13 +471,23 @@ const items = {
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
-      [BasePropertyType.Defense]: [158, 172],
-      [BasePropertyType.MinimumStrength]: 74,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [158, 172],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [74],
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.TigulatedMail]: {
+  {
     id: ids.TigulatedMail,
     name: 'Tigulated Mail',
     armorType: ArmorType.Heavy,
@@ -296,13 +497,23 @@ const items = {
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
-      [BasePropertyType.Defense]: [176, 190],
-      [BasePropertyType.MinimumStrength]: 86,
-      [BasePropertyType.Durability]: 36,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [176, 190],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [86],
+        },
+        [BasePropertyType.Durability]: {
+          values: [36],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.MeshArmor]: {
+  {
     id: ids.MeshArmor,
     name: 'Mesh Armor',
     armorType: ArmorType.Medium,
@@ -312,13 +523,23 @@ const items = {
     baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
-      [BasePropertyType.Defense]: [198, 213],
-      [BasePropertyType.MinimumStrength]: 92,
-      [BasePropertyType.Durability]: 45,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [198, 213],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [92],
+        },
+        [BasePropertyType.Durability]: {
+          values: [45],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.Cuirass]: {
+  {
     id: ids.Cuirass,
     name: 'Cuirass',
     armorType: ArmorType.Light,
@@ -328,13 +549,23 @@ const items = {
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
-      [BasePropertyType.Defense]: [188, 202],
-      [BasePropertyType.MinimumStrength]: 65,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [188, 202],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [65],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.RussetArmor]: {
+  {
     id: ids.RussetArmor,
     name: 'Russet Armor',
     armorType: ArmorType.Medium,
@@ -344,13 +575,23 @@ const items = {
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
-      [BasePropertyType.Defense]: [225, 243],
-      [BasePropertyType.MinimumStrength]: 97,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [225, 243],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [97],
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.TemplarCoat]: {
+  {
     id: ids.TemplarCoat,
     name: 'Templar Coat',
     armorType: ArmorType.Heavy,
@@ -360,13 +601,23 @@ const items = {
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
-      [BasePropertyType.Defense]: [252, 274],
-      [BasePropertyType.MinimumStrength]: 118,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [252, 274],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [118],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.SharktoothArmor]: {
+  {
     id: ids.SharktoothArmor,
     name: 'Sharktooth Armor',
     armorType: ArmorType.Medium,
@@ -376,13 +627,23 @@ const items = {
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
-      [BasePropertyType.Defense]: [242, 258],
-      [BasePropertyType.MinimumStrength]: 103,
-      [BasePropertyType.Durability]: 48,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [242, 258],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [103],
+        },
+        [BasePropertyType.Durability]: {
+          values: [48],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.EmbossedPlate]: {
+  {
     id: ids.EmbossedPlate,
     name: 'Embossed Plate',
     armorType: ArmorType.Medium,
@@ -392,13 +653,23 @@ const items = {
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
-      [BasePropertyType.Defense]: [282, 303],
-      [BasePropertyType.MinimumStrength]: 125,
-      [BasePropertyType.Durability]: 55,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [282, 303],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [125],
+        },
+        [BasePropertyType.Durability]: {
+          values: [55],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.MagePlate]: {
+  {
     id: ids.MagePlate,
     name: 'Mage Plate',
     armorType: ArmorType.Light,
@@ -408,13 +679,23 @@ const items = {
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
-      [BasePropertyType.Defense]: [225, 261],
-      [BasePropertyType.MinimumStrength]: 55,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [225, 261],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [55],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.ChaosArmor]: {
+  {
     id: ids.ChaosArmor,
     name: 'Chaos Armor',
     armorType: ArmorType.Heavy,
@@ -424,13 +705,23 @@ const items = {
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
-      [BasePropertyType.Defense]: [315, 342],
-      [BasePropertyType.MinimumStrength]: 140,
-      [BasePropertyType.Durability]: 70,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [315, 342],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [140],
+        },
+        [BasePropertyType.Durability]: {
+          values: [70],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.OrnatePlate]: {
+  {
     id: ids.OrnatePlate,
     name: 'Ornate Plate',
     armorType: ArmorType.Medium,
@@ -440,13 +731,23 @@ const items = {
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {
-      [BasePropertyType.Defense]: [417, 450],
-      [BasePropertyType.MinimumStrength]: 170,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [417, 450],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [170],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.DuskShroud]: {
+  {
     id: ids.DuskShroud,
     name: 'Dusk Shroud',
     armorType: ArmorType.Light,
@@ -456,13 +757,23 @@ const items = {
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
     properties: {
-      [BasePropertyType.Defense]: [361, 467],
-      [BasePropertyType.MinimumStrength]: 77,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [361, 467],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [77],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.Wyrmhide]: {
+  {
     id: ids.Wyrmhide,
     name: 'Wyrmhide',
     armorType: ArmorType.Light,
@@ -472,13 +783,23 @@ const items = {
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
     properties: {
-      [BasePropertyType.Defense]: [364, 470],
-      [BasePropertyType.MinimumStrength]: 84,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [364, 470],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [84],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.ScarabHusk]: {
+  {
     id: ids.ScarabHusk,
     name: 'Scarab Husk',
     armorType: ArmorType.Light,
@@ -488,13 +809,23 @@ const items = {
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
     properties: {
-      [BasePropertyType.Defense]: [369, 474],
-      [BasePropertyType.MinimumStrength]: 95,
-      [BasePropertyType.Durability]: 28,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [369, 474],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [95],
+        },
+        [BasePropertyType.Durability]: {
+          values: [28],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.WireFleece]: {
+  {
     id: ids.WireFleece,
     name: 'Wire Fleece',
     armorType: ArmorType.Light,
@@ -504,13 +835,23 @@ const items = {
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
     properties: {
-      [BasePropertyType.Defense]: [375, 481],
-      [BasePropertyType.MinimumStrength]: 111,
-      [BasePropertyType.Durability]: 70,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [375, 481],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [111],
+        },
+        [BasePropertyType.Durability]: {
+          values: [70],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.DiamondMail]: {
+  {
     id: ids.DiamondMail,
     name: 'Diamond Mail',
     armorType: ArmorType.Medium,
@@ -520,13 +861,23 @@ const items = {
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
     properties: {
-      [BasePropertyType.Defense]: [383, 489],
-      [BasePropertyType.MinimumStrength]: 131,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [383, 489],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [131],
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.LoricatedMail]: {
+  {
     id: ids.LoricatedMail,
     name: 'Loricated Mail',
     armorType: ArmorType.Heavy,
@@ -536,13 +887,23 @@ const items = {
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
     properties: {
-      [BasePropertyType.Defense]: [390, 496],
-      [BasePropertyType.MinimumStrength]: 149,
-      [BasePropertyType.Durability]: 36,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [390, 496],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [149],
+        },
+        [BasePropertyType.Durability]: {
+          values: [36],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.Boneweave]: {
+  {
     id: ids.Boneweave,
     name: 'Boneweave',
     armorType: ArmorType.Medium,
@@ -552,13 +913,23 @@ const items = {
     baseId: ids.RingMail,
     imageId: ids.RingMail,
     properties: {
-      [BasePropertyType.Defense]: [399, 505],
-      [BasePropertyType.MinimumStrength]: 158,
-      [BasePropertyType.Durability]: 45,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [399, 505],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [158],
+        },
+        [BasePropertyType.Durability]: {
+          values: [45],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.GreatHauberk]: {
+  {
     id: ids.GreatHauberk,
     name: 'Great Hauberk',
     armorType: ArmorType.Light,
@@ -568,13 +939,23 @@ const items = {
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
     properties: {
-      [BasePropertyType.Defense]: [395, 501],
-      [BasePropertyType.MinimumStrength]: 118,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [395, 501],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [118],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.BalrogSkin]: {
+  {
     id: ids.BalrogSkin,
     name: 'Balrog Skin',
     armorType: ArmorType.Medium,
@@ -584,13 +965,23 @@ const items = {
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
     properties: {
-      [BasePropertyType.Defense]: [410, 517],
-      [BasePropertyType.MinimumStrength]: 165,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [410, 517],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [165],
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.HellforgePlate]: {
+  {
     id: ids.HellforgePlate,
     name: 'Hellforge Plate',
     armorType: ArmorType.Heavy,
@@ -600,13 +991,23 @@ const items = {
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
     properties: {
-      [BasePropertyType.Defense]: [421, 530],
-      [BasePropertyType.MinimumStrength]: 196,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [421, 530],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [196],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.KrakenShell]: {
+  {
     id: ids.KrakenShell,
     name: 'Kraken Shell',
     armorType: ArmorType.Medium,
@@ -616,13 +1017,23 @@ const items = {
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
     properties: {
-      [BasePropertyType.Defense]: [417, 523],
-      [BasePropertyType.MinimumStrength]: 174,
-      [BasePropertyType.Durability]: 48,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [417, 523],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [174],
+        },
+        [BasePropertyType.Durability]: {
+          values: [48],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.LacqueredPlate]: {
+  {
     id: ids.LacqueredPlate,
     name: 'Lacquered Plate',
     armorType: ArmorType.Medium,
@@ -632,13 +1043,23 @@ const items = {
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
     properties: {
-      [BasePropertyType.Defense]: [433, 541],
-      [BasePropertyType.MinimumStrength]: 208,
-      [BasePropertyType.Durability]: 55,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [433, 541],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [208],
+        },
+        [BasePropertyType.Durability]: {
+          values: [55],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.ArchonPlate]: {
+  {
     id: ids.ArchonPlate,
     name: 'Archon Plate',
     armorType: ArmorType.Light,
@@ -648,13 +1069,23 @@ const items = {
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
     properties: {
-      [BasePropertyType.Defense]: [410, 524],
-      [BasePropertyType.MinimumStrength]: 103,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [410, 524],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [103],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.ShadowPlate]: {
+  {
     id: ids.ShadowPlate,
     name: 'Shadow Plate',
     armorType: ArmorType.Heavy,
@@ -664,13 +1095,23 @@ const items = {
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
     properties: {
-      [BasePropertyType.Defense]: [446, 557],
-      [BasePropertyType.MinimumStrength]: 230,
-      [BasePropertyType.Durability]: 70,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [446, 557],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [230],
+        },
+        [BasePropertyType.Durability]: {
+          values: [70],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.SacredArmor]: {
+  {
     id: ids.SacredArmor,
     name: 'Sacred Armor',
     armorType: ArmorType.Medium,
@@ -680,16 +1121,20 @@ const items = {
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
     properties: {
-      [BasePropertyType.Defense]: [487, 600],
-      [BasePropertyType.MinimumStrength]: 232,
-      [BasePropertyType.Durability]: 60,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [487, 600],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [232],
+        },
+        [BasePropertyType.Durability]: {
+          values: [60],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-};
-
-export default mapItems({
-  type: ItemType.BodyArmor,
-  size: [3, 2],
-  mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
-})(items);
+]);
