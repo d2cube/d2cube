@@ -45,23 +45,23 @@ const grid = ({size, theme}) => {
   };
 };
 
-const gridItem = ({position = [], size = []}) => ({
+const item = ({theme, isEthereal, isInactive, position = [], size = []}) => ({
+  // Dimensions
+  padding: 'xxs',
+  ':hover': {
+    backgroundColor: 'item.hover',
+  },
+  height: size[0] * theme.sizes.slot,
+  width: size[1] * theme.sizes.slot,
+  // Grid
   gridRowStart: position[0],
   gridRowEnd: position[0] + size[0],
   gridColumnStart: position[1],
   gridColumnEnd: position[1] + size[1],
-});
-
-const item = ({theme, isEthereal, isInactive, size}) => ({
+  // Effects
   filter: isInactive ? 'grayscale(100%)' : undefined,
   objectFit: 'cover',
   opacity: isInactive || isEthereal ? 'inactive' : undefined,
-  padding: 'xxs',
-  height: size[0] * theme.sizes.slot,
-  width: size[1] * theme.sizes.slot,
-  ':hover': {
-    backgroundColor: 'item.hover',
-  },
 });
 
 const progress = ({color, percent}) => ({
@@ -74,7 +74,6 @@ export default {
   fadeIn,
   globe,
   grid,
-  gridItem,
   interactive,
   item,
   progress,

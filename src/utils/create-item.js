@@ -10,7 +10,5 @@ export const createItem = (data) => {
     ...data,
     ...item,
     position,
-    // TODO remove hardcode and generalize
-    sockets: [],
   });
 };

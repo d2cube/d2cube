@@ -19,16 +19,15 @@ const Item = ({item: initialItem, isInactive = false}) => {
     <ItemTooltip description={resolveItemDescription(item)}>
       <Element
         position="relative"
-        styleProps={{position, size}}
-        styles={styles.gridItem}
+        styleProps={{
+          isEthereal,
+          isInactive,
+          position,
+          size,
+        }}
+        styles={styles.item}
       >
-        <ItemImage
-          id={imageId || id}
-          isEthereal={isEthereal}
-          isInactive={isInactive}
-          size={size}
-          variants={variants}
-        />
+        <ItemImage id={imageId || id} variants={variants} />
         <Element bottom={0} left={0} position="absolute" right={0} top={0}>
           <ItemSockets sockets={sockets} size={size} />
         </Element>
