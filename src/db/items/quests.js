@@ -35,9 +35,6 @@ export default mapItems({
     let color;
 
     switch (item.type) {
-      case ItemType.Cow:
-        color = 'item.quality.unique';
-        break;
       case ItemType.Essence:
       case ItemType.Key:
         color = 'item.quality.crafted';

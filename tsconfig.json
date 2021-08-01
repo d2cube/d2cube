@@ -5,6 +5,7 @@
     "checkJs": true,
     "declaration": true,
     "emitDeclarationOnly": true,
+    "jsx": "react",
     "lib": [
       "dom",
       "es2020"
@@ -15,5 +16,5 @@
     "strict": false,
     "target": "es2020"
   },
-  "include": ["*.js"],
+  "include": ["src/", "module.d.ts"],
 }

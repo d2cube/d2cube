@@ -4,7 +4,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import 'tippy.js/dist/tippy.css';
 
 // Based on: https://github.com/atomiks/tippyjs-react/issues/71#issuecomment-796880050
-const Tooltip = ({children, isReadable, tooltip}) => {
+const Tooltip = ({children, isReadable = false, tooltip}) => {
   const spanRef = useRef(null);
   const [childRef, setChildRef] = useState(null);
 
@@ -28,7 +28,7 @@ const Tooltip = ({children, isReadable, tooltip}) => {
         <Tippy
           arrow={false}
           content={tooltip}
-          offset={0}
+          offset={[0, 0]}
           reference={childRef}
           maxWidth={isReadable ? undefined : 'none'}
         />

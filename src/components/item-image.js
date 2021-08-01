@@ -9,10 +9,10 @@ const defaultVersion = GameVersionType.D2;
 
 const ItemImage = ({
   id,
-  isEthereal,
-  isInactive,
   size,
-  variants,
+  isEthereal = false,
+  isInactive = false,
+  variants = null,
   version = defaultVersion,
 }) => {
   const styles = useStyles();

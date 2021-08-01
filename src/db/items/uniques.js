@@ -1,14 +1,10 @@
-import {getItemById} from '../../queries/get-item-by-id.js';
 import {
   ItemQualityType,
   ItemType,
   MagicPropertyType,
 } from '../../enums/index.js';
 import ids from '../ids/index.js';
-import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemProperties} from '../utils/map-item-properties.js';
 import {mapItems} from '../utils/map-items.js';
-import {resolveMagicProperties} from '../utils/resolve-magic-properties.js';
 
 const items = {
   [ids.BladeOfAliBaba]: {
@@ -98,30 +94,4 @@ const items = {
 
 export default mapItems({
   quality: ItemQualityType.Unique,
-  mapDescription: (item) => {
-    let description = [{text: item.name, color: 'item.quality.unique'}];
-
-    if (item.baseId) {
-      const baseItem = getItemById(item.baseId);
-      if (baseItem) {
-        item.properties = baseItem.properties;
-        description.push({
-          ...mapItemName(baseItem),
-          color: 'item.quality.unique',
-        });
-        description = description.concat(mapItemProperties(item));
-      }
-    }
-
-    if (item.stats) {
-      Object.entries(item.stats).forEach(([property, values]) => {
-        description.push({
-          text: resolveMagicProperties({property, values}),
-          color: 'item.quality.magic',
-        });
-      });
-    }
-
-    return [description];
-  },
 })(items);

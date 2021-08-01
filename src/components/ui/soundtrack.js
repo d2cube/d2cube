@@ -5,7 +5,7 @@ import BrandIcon from './brand-icon.js';
 
 const Soundtrack = ({isEnabled}) => {
   const audioRef = useRef();
-  const [isPlaying, setIsPlaying] = useState();
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
