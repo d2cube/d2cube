@@ -12,18 +12,30 @@ export default createBaseItems({
 })([
   {
     id: ids.BladeOfAliBaba,
-    name: 'Blade of Ali Baba',
+    title: 'Blade of Ali Baba',
     type: ItemType.Sword,
     size: [3, 1],
     clvl: 35,
     baseId: ids.Tulwar,
     sockets: [null, null],
-    stats: {
-      [MagicPropertyType.EnhancedDamage]: [60, 120],
-      [MagicPropertyType.ExtraGoldByLevel]: [2, 247, 2.5],
-      [MagicPropertyType.MagicFind]: [1, 99, 1],
-      [MagicPropertyType.Mana]: [15],
-      [MagicPropertyType.Dexterity]: [5, 15],
+    properties: {
+      magic: {
+        [MagicPropertyType.EnhancedDamage]: {
+          values: [60, 120],
+        },
+        [MagicPropertyType.ExtraGoldByLevel]: {
+          values: [2, 247, 2.5],
+        },
+        [MagicPropertyType.MagicFind]: {
+          values: [1, 99, 1],
+        },
+        [MagicPropertyType.Mana]: {
+          values: [15],
+        },
+        [MagicPropertyType.Dexterity]: {
+          values: [5, 15],
+        },
+      },
     },
   },
   {
@@ -34,14 +46,30 @@ export default createBaseItems({
     clvl: 7,
     qlvl: 87,
     baseId: ids.Scimitar,
-    stats: {
-      [MagicPropertyType.EnhancedDamage]: [60, 80],
-      [MagicPropertyType.OpenWounds]: [33],
-      [MagicPropertyType.IncreasedAttackSpeed]: [15],
-      [MagicPropertyType.LifeStolenPerHit]: [15],
-      [MagicPropertyType.AllResistances]: [15],
-      [MagicPropertyType.Life]: [15],
-      [MagicPropertyType.LightRadius]: [4],
+    properties: {
+      magic: {
+        [MagicPropertyType.EnhancedDamage]: {
+          values: [60, 80],
+        },
+        [MagicPropertyType.OpenWounds]: {
+          values: [33],
+        },
+        [MagicPropertyType.IncreasedAttackSpeed]: {
+          values: [15],
+        },
+        [MagicPropertyType.LifeStolenPerHit]: {
+          values: [15],
+        },
+        [MagicPropertyType.AllResistances]: {
+          values: [15],
+        },
+        [MagicPropertyType.Life]: {
+          values: [15],
+        },
+        [MagicPropertyType.LightRadius]: {
+          values: [4],
+        },
+      },
     },
   },
   {
@@ -51,14 +79,30 @@ export default createBaseItems({
     size: [3, 2],
     clvl: 35,
     baseId: ids.GrimShield,
-    stats: {
-      [MagicPropertyType.EnhancedDefense]: [80, 130],
-      [MagicPropertyType.AllSkillLevels]: [1],
-      [MagicPropertyType.IncreaseMaximumMana]: [10],
-      [MagicPropertyType.FasterCastRate]: [20],
-      [MagicPropertyType.ManaAfterKill]: [3, 5],
-      [MagicPropertyType.Energy]: [10],
-      [MagicPropertyType.LightRadius]: [1],
+    properties: {
+      magic: {
+        [MagicPropertyType.EnhancedDefense]: {
+          values: [80, 130],
+        },
+        [MagicPropertyType.AllSkillLevels]: {
+          values: [1],
+        },
+        [MagicPropertyType.IncreaseMaximumMana]: {
+          values: [10],
+        },
+        [MagicPropertyType.FasterCastRate]: {
+          values: [20],
+        },
+        [MagicPropertyType.ManaAfterKill]: {
+          values: [3, 5],
+        },
+        [MagicPropertyType.Energy]: {
+          values: [10],
+        },
+        [MagicPropertyType.LightRadius]: {
+          values: [1],
+        },
+      },
     },
   },
   {
@@ -68,11 +112,21 @@ export default createBaseItems({
     size: [1, 1],
     clvl: 29,
     qlvl: 66,
-    stats: {
-      [MagicPropertyType.AllSkillLevels]: [1],
-      [MagicPropertyType.LightningDamage]: [1, 12],
-      [MagicPropertyType.Mana]: [20],
-      [MagicPropertyType.IncreaseMaximumMana]: [25],
+    properties: {
+      magic: {
+        [MagicPropertyType.AllSkillLevels]: {
+          values: [1],
+        },
+        [MagicPropertyType.LightningDamage]: {
+          values: [1, 12],
+        },
+        [MagicPropertyType.Mana]: {
+          values: [20],
+        },
+        [MagicPropertyType.IncreaseMaximumMana]: {
+          values: [25],
+        },
+      },
     },
   },
   {
@@ -82,13 +136,27 @@ export default createBaseItems({
     size: [3, 2],
     clvl: 35,
     baseId: ids.BoneShield,
-    stats: {
-      [MagicPropertyType.EnhancedDefense]: [30, 40],
-      [MagicPropertyType.Defense]: [10],
-      [MagicPropertyType.ManaAfterKill]: [5],
-      [MagicPropertyType.FasterCastRate]: [20],
-      [MagicPropertyType.ManaStolenPerHit]: [3],
-      [MagicPropertyType.PoisonResist]: [20],
+    properties: {
+      magic: {
+        [MagicPropertyType.EnhancedDefense]: {
+          values: [30, 40],
+        },
+        [MagicPropertyType.Defense]: {
+          values: [10],
+        },
+        [MagicPropertyType.ManaAfterKill]: {
+          values: [5],
+        },
+        [MagicPropertyType.FasterCastRate]: {
+          values: [20],
+        },
+        [MagicPropertyType.ManaStolenPerHit]: {
+          values: [3],
+        },
+        [MagicPropertyType.PoisonResist]: {
+          values: [20],
+        },
+      },
     },
   },
 ]);

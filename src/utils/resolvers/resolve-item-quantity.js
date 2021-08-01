@@ -7,5 +7,6 @@ export const resolveItemQuantity = (item) => {
     'base',
     BasePropertyType.Quantity,
   )(item);
+
   return cb((x) => `Quantity: ${x}`)(value);
 };

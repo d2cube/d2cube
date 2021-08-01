@@ -76,6 +76,8 @@ export {};
  *    e.g. Ring/Amulet/Gem/Rune.
  * @property {number[]} size
  *    A 2-sized array indicating the item's size (by row/column).
+ * @property {string} [title]
+ *    Additional title to display before the name (e.g. for Unique/Set items)
  * @property {Description[]} [description]
  *    Additional description
  * @property {number} [clvl]

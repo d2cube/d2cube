@@ -5,6 +5,7 @@ import {resolveItemBaseProperties} from './resolve-item-base-properties.js';
 import {resolveItemClvl} from './resolve-item-clvl.js';
 import {resolveItemName} from './resolve-item-name.js';
 import {resolveItemQuantity} from './resolve-item-quantity.js';
+import {resolveItemMagicProperties} from './resolve-item-magic-properties.js';
 import {resolveItemSocketProperties} from './resolve-item-socket-properties.js';
 
 export const resolveItemDescription = (item) =>
@@ -14,5 +15,6 @@ export const resolveItemDescription = (item) =>
     concat(resolveItemBaseProperties(item)),
     concat(resolveItemSocketProperties(item)),
     concat(resolveItemClvl(item)),
-    concat(item.description || []),
+    concat(resolveItemMagicProperties(item)),
+    concat(item.description),
   ])([]);

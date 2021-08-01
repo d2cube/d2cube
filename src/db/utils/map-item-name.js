@@ -10,7 +10,5 @@ export const mapItemName = (item) => {
     Array.from({length: tier}).join('+'),
   ]).join(' ');
 
-  const color = `item.quality.${quality}`;
-
-  return {text: itemName, color};
+  return {text: itemName, color: `item.quality.${quality}`};
 };

@@ -38,21 +38,18 @@ export const resolveBaseProperty = (item) => (entry) => {
 
 // TODO: confirm logic
 const getAttackSpeedDescription = (value) => {
+  let description;
   if (value >= 20) {
-    return 'Very Slow';
+    description = 'Very Slow';
+  } else if (value >= 10) {
+    description = 'Slow';
+  } else if (value >= 0) {
+    description = 'Normal';
+  } else if (value >= -10) {
+    description = 'Fast';
+  } else {
+    description = 'Very Fast';
   }
 
-  if (value >= 10) {
-    return 'Slow';
-  }
-
-  if (value >= 0) {
-    return 'Normal';
-  }
-
-  if (value >= -10) {
-    return 'Fast';
-  }
-
-  return 'Very Fast';
+  return description;
 };
