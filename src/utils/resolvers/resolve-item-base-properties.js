@@ -19,6 +19,7 @@ const order = [
   BasePropertyType.DamageThrow,
   BasePropertyType.Damage1H,
   BasePropertyType.Damage2H,
+  BasePropertyType.Defense,
   BasePropertyType.Durability,
   BasePropertyType.AttackSpeed,
   BasePropertyType.MinimumDexterity,

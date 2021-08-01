@@ -13,6 +13,6 @@ export const createItem = (data) => {
   return rollItem({
     ...resolvedItem,
     position,
-    sockets
+    sockets,
   });
 };
