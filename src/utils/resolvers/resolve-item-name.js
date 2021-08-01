@@ -4,7 +4,7 @@ import {ItemType} from '../../enums/index.js';
 import {cb, concat, join} from '../fp.js';
 
 export const resolveItemName = (item) => {
-  const {quality, name, personalization, prefix, suffix, type} = item;
+  const {quality, name, personalization, prefix, suffix, tier, type} = item;
 
   let color;
   switch (type) {
@@ -22,6 +22,7 @@ export const resolveItemName = (item) => {
     concat(personalization),
     concat(prefix),
     concat(name),
+    concat(cb((x) => Array.from({length: x}).join('+'))(tier)),
     concat(cb((x) => `of ${x}`)(suffix)),
     join(' '),
   ])([]);

@@ -18,5 +18,8 @@ export const not = (f) => (x) => !f(x);
 
 export const or = (fs) => (x) => fs.reduce((acc, f) => f(x) || acc, false);
 
+export const sortEntriesBy = (order) => (entries) =>
+  entries.sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]));
+
 export const size = (xs) =>
   isPlainObject(xs) ? Object.keys(xs).length : xs.length;

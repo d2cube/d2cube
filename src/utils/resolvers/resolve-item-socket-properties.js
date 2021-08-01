@@ -6,7 +6,8 @@ import {resolveItemPropertyValue} from './resolve-item-property-value.js';
 import {resolveMagicProperty} from './resolve-magic-property.js';
 
 export const resolveItemSocketProperties = (item) => {
-  if (!props('properties.socket')(item)) {
+  const socketProperties = props('properties.socket')(item);
+  if (!socketProperties) {
     return [];
   }
 
@@ -31,8 +32,9 @@ const mapSocketPropertyText = (item) => (socketType) => {
     'socket',
     socketCategoryType,
   )(item);
-  const propertyTexts =
-    Object.entries(socketProperties).map(resolveMagicProperty);
+  const propertyTexts = Object.entries(socketProperties).map(
+    resolveMagicProperty(item),
+  );
 
   const text = pipe([
     concat(`${socketType}:`),

@@ -1,201 +1,389 @@
 import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
-import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemProperties} from '../utils/map-item-properties.js';
-import {mapItems} from '../utils/map-items.js';
 
-const items = {
-  [ids.HandAxe]: {
+export default createBaseItems({
+  type: ItemType.Axe,
+})([
+  {
     id: ids.HandAxe,
     name: 'Hand Axe',
     tier: ItemTierType.Normal,
     ilvl: 3,
     size: [2, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [3, 6],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 28,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [3, 6],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: null,
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [28],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Axe]: {
+  {
     id: ids.Axe,
     name: 'Axe',
     tier: ItemTierType.Normal,
     ilvl: 7,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [4, 11],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 32,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [4, 11],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [32],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.DoubleAxe]: {
+  {
     id: ids.DoubleAxe,
     name: 'Double Axe',
     tier: ItemTierType.Normal,
     ilvl: 13,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [5, 13],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 43,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [5, 13],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [43],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.MilitaryPick]: {
+  {
     id: ids.MilitaryPick,
     name: 'Military Pick',
     tier: ItemTierType.Normal,
     ilvl: 19,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [7, 11],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 49,
-      [BasePropertyType.MinimumDexterity]: 33,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [7, 11],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [49],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [33],
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.WarAxe]: {
+  {
     id: ids.WarAxe,
     name: 'War Axe',
     tier: ItemTierType.Normal,
     ilvl: 25,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [10, 18],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 67,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [10, 18],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [67],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.LargeAxe]: {
+  {
     id: ids.LargeAxe,
     name: 'Large Axe',
     tier: ItemTierType.Normal,
     ilvl: 6,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage2H]: [6, 13],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 35,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [6, 13],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [35],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.BroadAxe]: {
+  {
     id: ids.BroadAxe,
     name: 'Broad Axe',
     tier: ItemTierType.Normal,
     ilvl: 12,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage2H]: [10, 18],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 48,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 35,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [10, 18],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [48],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [35],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.BattleAxe]: {
+  {
     id: ids.BattleAxe,
     name: 'Battle Axe',
     tier: ItemTierType.Normal,
     ilvl: 17,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage2H]: [12, 32],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 54,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [12, 32],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [54],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.GreatAxe]: {
+  {
     id: ids.GreatAxe,
     name: 'Great Axe',
     tier: ItemTierType.Normal,
     ilvl: 23,
     size: [4, 2],
     properties: {
-      [BasePropertyType.Damage2H]: [9, 30],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 63,
-      [BasePropertyType.MinimumDexterity]: 39,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [9, 30],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [63],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [39],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.GiantAxe]: {
+  {
     id: ids.GiantAxe,
     name: 'Giant Axe',
     tier: ItemTierType.Normal,
     ilvl: 27,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage2H]: [22, 45],
-      [BasePropertyType.MeleeRange]: 4,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 70,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [22, 45],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [4],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [70],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.ThrowingAxe]: {
+  {
     id: ids.ThrowingAxe,
     name: 'Throwing Axe',
     tier: ItemTierType.Normal,
     ilvl: 7,
     size: [2, 1],
     properties: {
-      [BasePropertyType.DamageThrow]: [8, 12],
-      [BasePropertyType.Damage1H]: [4, 7],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: 40,
+      base: {
+        [BasePropertyType.DamageThrow]: {
+          values: [8, 12],
+        },
+        [BasePropertyType.Damage1H]: {
+          values: [4, 7],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: null,
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [40],
+        },
+      },
     },
   },
-  [ids.BalancedAxe]: {
+  {
     id: ids.BalancedAxe,
     name: 'Balanced Axe',
     tier: ItemTierType.Normal,
     ilvl: 16,
     size: [3, 2],
     properties: {
-      [BasePropertyType.DamageThrow]: [12, 15],
-      [BasePropertyType.Damage1H]: [5, 10],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: 57,
+      base: {
+        [BasePropertyType.DamageThrow]: {
+          values: [12, 15],
+        },
+        [BasePropertyType.Damage1H]: {
+          values: [5, 10],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: null,
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [57],
+        },
+      },
     },
   },
-  [ids.Hatchet]: {
+  {
     id: ids.Hatchet,
     name: 'Hatchet',
     tier: ItemTierType.Exceptional,
@@ -205,16 +393,32 @@ const items = {
     baseId: ids.HandAxe,
     imageId: ids.HandAxe,
     properties: {
-      [BasePropertyType.Damage1H]: [10, 21],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 25,
-      [BasePropertyType.Durability]: 28,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [10, 21],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [25],
+        },
+        [BasePropertyType.Durability]: {
+          values: [28],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Cleaver]: {
+  {
     id: ids.Cleaver,
     name: 'Cleaver',
     tier: ItemTierType.Exceptional,
@@ -224,16 +428,32 @@ const items = {
     baseId: ids.Axe,
     imageId: ids.Axe,
     properties: {
-      [BasePropertyType.Damage1H]: [10, 33],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 68,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [10, 33],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [68],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.TwinAxe]: {
+  {
     id: ids.TwinAxe,
     name: 'Twin Axe',
     tier: ItemTierType.Exceptional,
@@ -243,16 +463,32 @@ const items = {
     baseId: ids.DoubleAxe,
     imageId: ids.DoubleAxe,
     properties: {
-      [BasePropertyType.Damage1H]: [13, 38],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 85,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [13, 38],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [85],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.Crowbill]: {
+  {
     id: ids.Crowbill,
     name: 'Crowbill',
     tier: ItemTierType.Exceptional,
@@ -262,16 +498,32 @@ const items = {
     baseId: ids.MilitaryPick,
     imageId: ids.MilitaryPick,
     properties: {
-      [BasePropertyType.Damage1H]: [14, 34],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 94,
-      [BasePropertyType.MinimumDexterity]: 70,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [14, 34],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [94],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [70],
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.Naga]: {
+  {
     id: ids.Naga,
     name: 'Naga',
     tier: ItemTierType.Exceptional,
@@ -281,16 +533,32 @@ const items = {
     baseId: ids.WarAxe,
     imageId: ids.WarAxe,
     properties: {
-      [BasePropertyType.Damage1H]: [16, 45],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 121,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [16, 45],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [121],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.MilitaryAxe]: {
+  {
     id: ids.MilitaryAxe,
     name: 'Military Axe',
     tier: ItemTierType.Exceptional,
@@ -300,16 +568,32 @@ const items = {
     baseId: ids.LargeAxe,
     imageId: ids.LargeAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [14, 34],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 73,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [14, 34],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [73],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.BeardedAxe]: {
+  {
     id: ids.BeardedAxe,
     name: 'Bearded Axe',
     tier: ItemTierType.Exceptional,
@@ -319,16 +603,32 @@ const items = {
     baseId: ids.BroadAxe,
     imageId: ids.BroadAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [21, 49],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 92,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 35,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [21, 49],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [92],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [35],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.Tabar]: {
+  {
     id: ids.Tabar,
     name: 'Tabar',
     tier: ItemTierType.Exceptional,
@@ -338,16 +638,32 @@ const items = {
     baseId: ids.BattleAxe,
     imageId: ids.BattleAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [24, 77],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 101,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [24, 77],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [101],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.GothicAxe]: {
+  {
     id: ids.GothicAxe,
     name: 'Gothic Axe',
     tier: ItemTierType.Exceptional,
@@ -357,16 +673,32 @@ const items = {
     baseId: ids.GreatAxe,
     imageId: ids.GreatAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [18, 70],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 115,
-      [BasePropertyType.MinimumDexterity]: 79,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [18, 70],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [115],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [79],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.AncientAxe]: {
+  {
     id: ids.AncientAxe,
     name: 'Ancient Axe',
     tier: ItemTierType.Exceptional,
@@ -376,16 +708,32 @@ const items = {
     baseId: ids.GiantAxe,
     imageId: ids.GiantAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [43, 85],
-      [BasePropertyType.MeleeRange]: 4,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 125,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [43, 85],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [4],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [125],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.Francisca]: {
+  {
     id: ids.Francisca,
     name: 'Francisca',
     tier: ItemTierType.Exceptional,
@@ -395,15 +743,29 @@ const items = {
     baseId: ids.ThrowingAxe,
     imageId: ids.ThrowingAxe,
     properties: {
-      [BasePropertyType.DamageThrow]: [18, 33],
-      [BasePropertyType.Damage1H]: [11, 22],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 80,
+      base: {
+        [BasePropertyType.DamageThrow]: {
+          values: [18, 33],
+        },
+        [BasePropertyType.Damage1H]: {
+          values: [11, 22],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [80],
+        },
+      },
     },
   },
-  [ids.Hurlbat]: {
+  {
     id: ids.Hurlbat,
     name: 'Balanced Axe',
     tier: ItemTierType.Exceptional,
@@ -413,15 +775,29 @@ const items = {
     baseId: ids.BalancedAxe,
     imageId: ids.BalancedAxe,
     properties: {
-      [BasePropertyType.DamageThrow]: [24, 34],
-      [BasePropertyType.Damage1H]: [13, 27],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 106,
+      base: {
+        [BasePropertyType.DamageThrow]: {
+          values: [24, 34],
+        },
+        [BasePropertyType.Damage1H]: {
+          values: [13, 27],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [106],
+        },
+      },
     },
   },
-  [ids.Tomahawk]: {
+  {
     id: ids.Tomahawk,
     name: 'Tomahawk',
     tier: ItemTierType.Elite,
@@ -431,16 +807,32 @@ const items = {
     baseId: ids.HandAxe,
     imageId: ids.HandAxe,
     properties: {
-      [BasePropertyType.Damage1H]: [33, 58],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 125,
-      [BasePropertyType.MinimumDexterity]: 67,
-      [BasePropertyType.Durability]: 28,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [33, 58],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [125],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [67],
+        },
+        [BasePropertyType.Durability]: {
+          values: [28],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.SmallCrescent]: {
+  {
     id: ids.SmallCrescent,
     name: 'Small Crescent',
     tier: ItemTierType.Elite,
@@ -450,16 +842,32 @@ const items = {
     baseId: ids.Axe,
     imageId: ids.Axe,
     properties: {
-      [BasePropertyType.Damage1H]: [38, 60],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 115,
-      [BasePropertyType.MinimumDexterity]: 83,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [38, 60],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [115],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [83],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.EttinAxe]: {
+  {
     id: ids.EttinAxe,
     name: 'Ettin Axe',
     tier: ItemTierType.Elite,
@@ -469,16 +877,32 @@ const items = {
     baseId: ids.DoubleAxe,
     imageId: ids.DoubleAxe,
     properties: {
-      [BasePropertyType.Damage1H]: [33, 66],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 145,
-      [BasePropertyType.MinimumDexterity]: 45,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [33, 66],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [145],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [45],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.WarSpike]: {
+  {
     id: ids.WarSpike,
     name: 'War Spike',
     tier: ItemTierType.Elite,
@@ -488,16 +912,32 @@ const items = {
     baseId: ids.MilitaryPick,
     imageId: ids.MilitaryPick,
     properties: {
-      [BasePropertyType.Damage1H]: [30, 48],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 133,
-      [BasePropertyType.MinimumDexterity]: 54,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [30, 48],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [133],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [54],
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.BerserkerAxe]: {
+  {
     id: ids.BerserkerAxe,
     name: 'Berserker Axe',
     tier: ItemTierType.Elite,
@@ -507,16 +947,32 @@ const items = {
     baseId: ids.WarAxe,
     imageId: ids.WarAxe,
     properties: {
-      [BasePropertyType.Damage1H]: [24, 71],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 138,
-      [BasePropertyType.MinimumDexterity]: 59,
-      [BasePropertyType.Durability]: 26,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [24, 71],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [138],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [59],
+        },
+        [BasePropertyType.Durability]: {
+          values: [26],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.FeralAxe]: {
+  {
     id: ids.FeralAxe,
     name: 'Feral Axe',
     tier: ItemTierType.Elite,
@@ -526,16 +982,32 @@ const items = {
     baseId: ids.LargeAxe,
     imageId: ids.LargeAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [25, 123],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -15,
-      [BasePropertyType.MinimumStrength]: 196,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [25, 123],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-15],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [196],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: null,
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.SilverEdgedAxe]: {
+  {
     id: ids.SilverEdgedAxe,
     name: 'Silver-Edged Axe',
     tier: ItemTierType.Elite,
@@ -545,16 +1017,32 @@ const items = {
     baseId: ids.BroadAxe,
     imageId: ids.BroadAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [62, 110],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 166,
-      [BasePropertyType.MinimumDexterity]: 65,
-      [BasePropertyType.Durability]: 35,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [62, 110],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [166],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [65],
+        },
+        [BasePropertyType.Durability]: {
+          values: [35],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.Decapitator]: {
+  {
     id: ids.Decapitator,
     name: 'Decapitator',
     tier: ItemTierType.Elite,
@@ -564,16 +1052,32 @@ const items = {
     baseId: ids.BattleAxe,
     imageId: ids.BattleAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [49, 137],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 189,
-      [BasePropertyType.MinimumDexterity]: 33,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [49, 137],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [189],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [33],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.ChampionAxe]: {
+  {
     id: ids.ChampionAxe,
     name: 'Champion Axe',
     tier: ItemTierType.Elite,
@@ -583,16 +1087,32 @@ const items = {
     baseId: ids.GreatAxe,
     imageId: ids.GreatAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [59, 94],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 167,
-      [BasePropertyType.MinimumDexterity]: 59,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [59, 94],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [167],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [59],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.GloriusAxe]: {
+  {
     id: ids.GloriusAxe,
     name: 'Glorius Axe',
     tier: ItemTierType.Elite,
@@ -602,16 +1122,32 @@ const items = {
     baseId: ids.GiantAxe,
     imageId: ids.GiantAxe,
     properties: {
-      [BasePropertyType.Damage2H]: [60, 124],
-      [BasePropertyType.MeleeRange]: 4,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 164,
-      [BasePropertyType.MinimumDexterity]: 55,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage2H]: {
+          values: [60, 124],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [4],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [164],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [55],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.FlyingAxe]: {
+  {
     id: ids.FlyingAxe,
     name: 'FlyingAxe',
     tier: ItemTierType.Elite,
@@ -621,15 +1157,29 @@ const items = {
     baseId: ids.ThrowingAxe,
     imageId: ids.ThrowingAxe,
     properties: {
-      [BasePropertyType.DamageThrow]: [15, 66],
-      [BasePropertyType.Damage1H]: [17, 65],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 88,
-      [BasePropertyType.MinimumDexterity]: 108,
+      base: {
+        [BasePropertyType.DamageThrow]: {
+          values: [15, 66],
+        },
+        [BasePropertyType.Damage1H]: {
+          values: [17, 65],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [88],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [108],
+        },
+      },
     },
   },
-  [ids.WingedAxe]: {
+  {
     id: ids.WingedAxe,
     name: 'Winged Axe',
     tier: ItemTierType.Elite,
@@ -639,17 +1189,26 @@ const items = {
     baseId: ids.BalancedAxe,
     imageId: ids.BalancedAxe,
     properties: {
-      [BasePropertyType.DamageThrow]: [7, 60],
-      [BasePropertyType.Damage1H]: [11, 56],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 96,
-      [BasePropertyType.MinimumDexterity]: 122,
+      base: {
+        [BasePropertyType.DamageThrow]: {
+          values: [7, 60],
+        },
+        [BasePropertyType.Damage1H]: {
+          values: [11, 56],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [96],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [122],
+        },
+      },
     },
   },
-};
-
-export default mapItems({
-  type: ItemType.Axe,
-  mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
-})(items);
+]);

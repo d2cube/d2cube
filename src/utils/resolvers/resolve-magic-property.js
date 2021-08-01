@@ -1,6 +1,6 @@
 import {MagicPropertyType} from '../../enums/index.js';
 
-export const resolveMagicProperty = (entry) => {
+export const resolveMagicProperty = (_item) => (entry) => {
   const property = entry[0];
   const {values} = entry[1];
   const [x, y] = values;
