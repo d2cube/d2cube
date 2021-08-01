@@ -1,241 +1,477 @@
 import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
-import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemProperties} from '../utils/map-item-properties.js';
-import {mapItems} from '../utils/map-items.js';
 
-const items = {
-  [ids.ShortSword]: {
+export default createBaseItems({
+  type: ItemType.Sword,
+})([
+  {
     id: ids.ShortSword,
     name: 'Short Sword',
     tier: ItemTierType.Normal,
     qlvl: 1,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [2, 7],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [2, 7],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Scimitar]: {
+  {
     id: ids.Scimitar,
     name: 'Scimitar',
     tier: ItemTierType.Normal,
     qlvl: 5,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [2, 6],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -20,
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.MinimumDexterity]: 21,
-      [BasePropertyType.Durability]: 22,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [2, 6],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-20],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [21],
+        },
+        [BasePropertyType.Durability]: {
+          values: [22],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Sabre]: {
+  {
     id: ids.Sabre,
     name: 'Sabre',
     tier: ItemTierType.Normal,
     qlvl: 8,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [3, 8],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 25,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [3, 8],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [25],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Falchion]: {
+  {
     id: ids.Falchion,
     name: 'Falchion',
     tier: ItemTierType.Normal,
     qlvl: 11,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [9, 17],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 20,
-      [BasePropertyType.MinimumStrength]: 33,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [9, 17],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [20],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [33],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.CrystalSword]: {
+  {
     id: ids.CrystalSword,
     name: 'Crystal Sword',
     tier: ItemTierType.Normal,
     qlvl: 11,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [5, 15],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 43,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [5, 15],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [43],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.BroadSword]: {
+  {
     id: ids.BroadSword,
     name: 'Broad Sword',
     tier: ItemTierType.Normal,
     qlvl: 15,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [7, 14],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 48,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [7, 14],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [48],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.LongSword]: {
+  {
     id: ids.LongSword,
     name: 'Long Sword',
     tier: ItemTierType.Normal,
     qlvl: 20,
     size: [3, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [3, 19],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 55,
-      [BasePropertyType.MinimumDexterity]: 39,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [3, 19],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [55],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [39],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.WarSword]: {
+  {
     id: ids.WarSword,
     name: 'War Sword',
     tier: ItemTierType.Normal,
     qlvl: 27,
     size: [3, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [8, 20],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 71,
-      [BasePropertyType.MinimumDexterity]: 45,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [8, 20],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [71],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [45],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.TwoHandedSword]: {
+  {
     id: ids.TwoHandedSword,
     name: 'Two-handed Sword',
     tier: ItemTierType.Normal,
     qlvl: 10,
     size: [4, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [2, 9],
-      [BasePropertyType.Damage2H]: [8, 17],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 35,
-      [BasePropertyType.MinimumDexterity]: 27,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [2, 9],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [8, 17],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [35],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [27],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.Claymore]: {
+  {
     id: ids.Claymore,
     name: 'Claymore',
     tier: ItemTierType.Normal,
     qlvl: 17,
     size: [4, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [5, 12],
-      [BasePropertyType.Damage2H]: [13, 30],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 47,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [5, 12],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [13, 30],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [47],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.GiantSword]: {
+  {
     id: ids.GiantSword,
     name: 'Giant Sword',
     tier: ItemTierType.Normal,
     qlvl: 21,
     size: [4, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [3, 16],
-      [BasePropertyType.Damage2H]: [9, 28],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 56,
-      [BasePropertyType.MinimumDexterity]: 34,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [3, 16],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [9, 28],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [56],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [34],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.BastardSword]: {
+  {
     id: ids.BastardSword,
     name: 'Bastard Sword',
     tier: ItemTierType.Normal,
     qlvl: 24,
     size: [4, 1],
     properties: {
-      [BasePropertyType.Damage1H]: [7, 19],
-      [BasePropertyType.Damage2H]: [20, 28],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 62,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [7, 19],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [20, 28],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [62],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.Flamberge]: {
+  {
     id: ids.Flamberge,
     name: 'Flamberge',
     tier: ItemTierType.Normal,
     qlvl: 27,
     size: [4, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [9, 15],
-      [BasePropertyType.Damage2H]: [13, 26],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 70,
-      [BasePropertyType.MinimumDexterity]: 49,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [9, 15],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [13, 26],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [70],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [49],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.GreatSword]: {
+  {
     id: ids.GreatSword,
     name: 'Great Sword',
     tier: ItemTierType.Normal,
     qlvl: 33,
     size: [4, 2],
     properties: {
-      [BasePropertyType.Damage1H]: [12, 20],
-      [BasePropertyType.Damage2H]: [25, 42],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 100,
-      [BasePropertyType.MinimumDexterity]: 60,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [12, 20],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [25, 42],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [100],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [60],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.Gladius]: {
+  {
     id: ids.Gladius,
     name: 'Gladius',
     tier: ItemTierType.Exceptional,
@@ -245,16 +481,32 @@ const items = {
     baseId: ids.ShortSword,
     imageId: ids.ShortSword,
     properties: {
-      [BasePropertyType.Damage1H]: [8, 22],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: null,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [8, 22],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Cutlass]: {
+  {
     id: ids.Cutlass,
     name: 'Cutlass',
     tier: ItemTierType.Exceptional,
@@ -264,16 +516,32 @@ const items = {
     baseId: ids.Scimitar,
     imageId: ids.Scimitar,
     properties: {
-      [BasePropertyType.Damage1H]: [8, 21],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -30,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 52,
-      [BasePropertyType.Durability]: 22,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [8, 21],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-30],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [52],
+        },
+        [BasePropertyType.Durability]: {
+          values: [22],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Shamshir]: {
+  {
     id: ids.Shamshir,
     name: 'Shamshir',
     tier: ItemTierType.Exceptional,
@@ -283,16 +551,32 @@ const items = {
     baseId: ids.Sabre,
     imageId: ids.Sabre,
     properties: {
-      [BasePropertyType.Damage1H]: [10, 24],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 58,
-      [BasePropertyType.MinimumDexterity]: 58,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [10, 24],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [58],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [58],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Tulwar]: {
+  {
     id: ids.Tulwar,
     name: 'Tulwar',
     tier: ItemTierType.Exceptional,
@@ -302,16 +586,32 @@ const items = {
     baseId: ids.Falchion,
     imageId: ids.Falchion,
     properties: {
-      [BasePropertyType.Damage1H]: [16, 35],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 20,
-      [BasePropertyType.MinimumStrength]: 70,
-      [BasePropertyType.MinimumDexterity]: 42,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [16, 35],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [20],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [70],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [42],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.DimensionalBlade]: {
+  {
     id: ids.DimensionalBlade,
     name: 'Dimensional Blade',
     tier: ItemTierType.Exceptional,
@@ -321,16 +621,32 @@ const items = {
     baseId: ids.CrystalSword,
     imageId: ids.CrystalSword,
     properties: {
-      [BasePropertyType.Damage1H]: [13, 35],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 85,
-      [BasePropertyType.MinimumDexterity]: 60,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [13, 35],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [85],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [60],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.BattleSword]: {
+  {
     id: ids.BattleSword,
     name: 'Battle Sword',
     tier: ItemTierType.Exceptional,
@@ -340,16 +656,32 @@ const items = {
     baseId: ids.BroadSword,
     imageId: ids.BroadSword,
     properties: {
-      [BasePropertyType.Damage1H]: [16, 34],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 92,
-      [BasePropertyType.MinimumDexterity]: 43,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [16, 34],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [92],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [43],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.RuneSword]: {
+  {
     id: ids.RuneSword,
     name: 'Rune Sword',
     tier: ItemTierType.Exceptional,
@@ -359,16 +691,32 @@ const items = {
     baseId: ids.LongSword,
     imageId: ids.LongSword,
     properties: {
-      [BasePropertyType.Damage1H]: [10, 42],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 103,
-      [BasePropertyType.MinimumDexterity]: 79,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [10, 42],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [103],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [79],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.AncientSword]: {
+  {
     id: ids.AncientSword,
     name: 'Ancient Sword',
     tier: ItemTierType.Exceptional,
@@ -378,16 +726,32 @@ const items = {
     baseId: ids.WarSword,
     imageId: ids.WarSword,
     properties: {
-      [BasePropertyType.Damage1H]: [18, 43],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 127,
-      [BasePropertyType.MinimumDexterity]: 88,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [18, 43],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [127],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [88],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.Espandon]: {
+  {
     id: ids.Espandon,
     name: 'Espandon',
     tier: ItemTierType.Exceptional,
@@ -397,17 +761,35 @@ const items = {
     baseId: ids.TwoHandedSword,
     imageId: ids.TwoHandedSword,
     properties: {
-      [BasePropertyType.Damage1H]: [8, 26],
-      [BasePropertyType.Damage2H]: [18, 40],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 73,
-      [BasePropertyType.MinimumDexterity]: 61,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [8, 26],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [18, 40],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [73],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [61],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.DacianFalx]: {
+  {
     id: ids.DacianFalx,
     name: 'Dacian Falx',
     tier: ItemTierType.Exceptional,
@@ -417,17 +799,35 @@ const items = {
     baseId: ids.Claymore,
     imageId: ids.Claymore,
     properties: {
-      [BasePropertyType.Damage1H]: [13, 30],
-      [BasePropertyType.Damage2H]: [26, 61],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 91,
-      [BasePropertyType.MinimumDexterity]: 20,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [13, 30],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [26, 61],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [91],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [20],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.TuskSword]: {
+  {
     id: ids.TuskSword,
     name: 'Tusk Sword',
     tier: ItemTierType.Exceptional,
@@ -437,17 +837,35 @@ const items = {
     baseId: ids.GiantSword,
     imageId: ids.GiantSword,
     properties: {
-      [BasePropertyType.Damage1H]: [10, 37],
-      [BasePropertyType.Damage2H]: [19, 58],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 104,
-      [BasePropertyType.MinimumDexterity]: 71,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [10, 37],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [19, 58],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [104],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [71],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.GothicSword]: {
+  {
     id: ids.GothicSword,
     name: 'Gothic Sword',
     tier: ItemTierType.Exceptional,
@@ -457,17 +875,35 @@ const items = {
     baseId: ids.BastardSword,
     imageId: ids.BastardSword,
     properties: {
-      [BasePropertyType.Damage1H]: [14, 40],
-      [BasePropertyType.Damage2H]: [39, 60],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 113,
-      [BasePropertyType.MinimumDexterity]: 20,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [14, 40],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [39, 60],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [113],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [20],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.Zweihander]: {
+  {
     id: ids.Zweihander,
     name: 'Zweihander',
     tier: ItemTierType.Exceptional,
@@ -477,17 +913,35 @@ const items = {
     baseId: ids.Flamberge,
     imageId: ids.Flamberge,
     properties: {
-      [BasePropertyType.Damage1H]: [19, 35],
-      [BasePropertyType.Damage2H]: [29, 54],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 125,
-      [BasePropertyType.MinimumDexterity]: 94,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [19, 35],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [29, 54],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [125],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [94],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.ExecutionerSword]: {
+  {
     id: ids.ExecutionerSword,
     name: 'Executioner Sword',
     tier: ItemTierType.Exceptional,
@@ -497,17 +951,35 @@ const items = {
     baseId: ids.GreatSword,
     imageId: ids.GreatSword,
     properties: {
-      [BasePropertyType.Damage1H]: [24, 40],
-      [BasePropertyType.Damage2H]: [47, 80],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 170,
-      [BasePropertyType.MinimumDexterity]: 110,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [24, 40],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [47, 80],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [170],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [110],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.Falcata]: {
+  {
     id: ids.Falcata,
     name: 'Falcata',
     tier: ItemTierType.Elite,
@@ -517,16 +989,32 @@ const items = {
     baseId: ids.ShortSword,
     imageId: ids.ShortSword,
     properties: {
-      [BasePropertyType.Damage1H]: [31, 59],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 150,
-      [BasePropertyType.MinimumDexterity]: 88,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [31, 59],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [150],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [88],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Ataghan]: {
+  {
     id: ids.Ataghan,
     name: 'Ataghan',
     tier: ItemTierType.Elite,
@@ -536,16 +1024,32 @@ const items = {
     baseId: ids.Scimitar,
     imageId: ids.Scimitar,
     properties: {
-      [BasePropertyType.Damage1H]: [26, 46],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -20,
-      [BasePropertyType.MinimumStrength]: 135,
-      [BasePropertyType.MinimumDexterity]: 95,
-      [BasePropertyType.Durability]: 22,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [26, 46],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-20],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [135],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [95],
+        },
+        [BasePropertyType.Durability]: {
+          values: [22],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.ElegantBlade]: {
+  {
     id: ids.ElegantBlade,
     name: 'Elegant Blade',
     tier: ItemTierType.Elite,
@@ -555,16 +1059,32 @@ const items = {
     baseId: ids.Sabre,
     imageId: ids.Sabre,
     properties: {
-      [BasePropertyType.Damage1H]: [33, 45],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 109,
-      [BasePropertyType.MinimumDexterity]: 122,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [33, 45],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [109],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [122],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.HydraEdge]: {
+  {
     id: ids.HydraEdge,
     name: 'Hydra Edge',
     tier: ItemTierType.Elite,
@@ -574,16 +1094,32 @@ const items = {
     baseId: ids.Falchion,
     imageId: ids.Falchion,
     properties: {
-      [BasePropertyType.Damage1H]: [28, 68],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 142,
-      [BasePropertyType.MinimumDexterity]: 105,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [28, 68],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [142],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [105],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.PhaseBlade]: {
+  {
     id: ids.PhaseBlade,
     name: 'Phase Blade',
     tier: ItemTierType.Elite,
@@ -593,15 +1129,29 @@ const items = {
     baseId: ids.CrystalSword,
     imageId: ids.CrystalSword,
     properties: {
-      [BasePropertyType.Damage1H]: [31, 35],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -30,
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.MinimumDexterity]: 136,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [31, 35],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-30],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [136],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-  [ids.ConquestSword]: {
+  {
     id: ids.ConquestSword,
     name: 'Conquest Sword',
     tier: ItemTierType.Elite,
@@ -611,16 +1161,32 @@ const items = {
     baseId: ids.BroadSword,
     imageId: ids.BroadSword,
     properties: {
-      [BasePropertyType.Damage1H]: [37, 53],
-      [BasePropertyType.MeleeRange]: 1,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 142,
-      [BasePropertyType.MinimumDexterity]: 112,
-      [BasePropertyType.Durability]: 32,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [37, 53],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [1],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [142],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [112],
+        },
+        [BasePropertyType.Durability]: {
+          values: [32],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.CrypticSword]: {
+  {
     id: ids.CrypticSword,
     name: 'Cryptic Sword',
     tier: ItemTierType.Elite,
@@ -630,16 +1196,32 @@ const items = {
     baseId: ids.LongSword,
     imageId: ids.LongSword,
     properties: {
-      [BasePropertyType.Damage1H]: [5, 77],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 99,
-      [BasePropertyType.MinimumDexterity]: 109,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [5, 77],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [99],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [109],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.MythicalSword]: {
+  {
     id: ids.MythicalSword,
     name: 'Mythical Sword',
     tier: ItemTierType.Elite,
@@ -649,16 +1231,32 @@ const items = {
     baseId: ids.WarSword,
     imageId: ids.WarSword,
     properties: {
-      [BasePropertyType.Damage1H]: [40, 50],
-      [BasePropertyType.MeleeRange]: 2,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 147,
-      [BasePropertyType.MinimumDexterity]: 124,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [40, 50],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [2],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [147],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [124],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.LegendSword]: {
+  {
     id: ids.LegendSword,
     name: 'Legend Sword',
     tier: ItemTierType.Elite,
@@ -668,17 +1266,35 @@ const items = {
     baseId: ids.TwoHandedSword,
     imageId: ids.TwoHandedSword,
     properties: {
-      [BasePropertyType.Damage1H]: [20, 56],
-      [BasePropertyType.Damage2H]: [50, 94],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -15,
-      [BasePropertyType.MinimumStrength]: 175,
-      [BasePropertyType.MinimumDexterity]: 100,
-      [BasePropertyType.Durability]: 44,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [20, 56],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [50, 94],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-15],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [175],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [100],
+        },
+        [BasePropertyType.Durability]: {
+          values: [44],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.HighlandBlade]: {
+  {
     id: ids.HighlandBlade,
     name: 'Highland Blade',
     tier: ItemTierType.Elite,
@@ -688,17 +1304,35 @@ const items = {
     baseId: ids.Claymore,
     imageId: ids.Claymore,
     properties: {
-      [BasePropertyType.Damage1H]: [22, 62],
-      [BasePropertyType.Damage2H]: [67, 96],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -5,
-      [BasePropertyType.MinimumStrength]: 171,
-      [BasePropertyType.MinimumDexterity]: 104,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [22, 62],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [67, 96],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-5],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [171],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [104],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.BalrogBlade]: {
+  {
     id: ids.BalrogBlade,
     name: 'Balrog Blade',
     tier: ItemTierType.Elite,
@@ -708,17 +1342,35 @@ const items = {
     baseId: ids.GiantSword,
     imageId: ids.GiantSword,
     properties: {
-      [BasePropertyType.Damage1H]: [15, 75],
-      [BasePropertyType.Damage2H]: [55, 118],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 0,
-      [BasePropertyType.MinimumStrength]: 185,
-      [BasePropertyType.MinimumDexterity]: 87,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [15, 75],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [55, 118],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [0],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [185],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [87],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.ChampionSword]: {
+  {
     id: ids.ChampionSword,
     name: 'Champion Sword',
     tier: ItemTierType.Elite,
@@ -728,17 +1380,35 @@ const items = {
     baseId: ids.BastardSword,
     imageId: ids.BastardSword,
     properties: {
-      [BasePropertyType.Damage1H]: [24, 54],
-      [BasePropertyType.Damage2H]: [71, 83],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: -10,
-      [BasePropertyType.MinimumStrength]: 163,
-      [BasePropertyType.MinimumDexterity]: 103,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 4,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [24, 54],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [71, 83],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [-10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [163],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [103],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [4],
+        },
+      },
     },
   },
-  [ids.ColossusSword]: {
+  {
     id: ids.ColossusSword,
     name: 'Colossus Sword',
     tier: ItemTierType.Elite,
@@ -748,17 +1418,35 @@ const items = {
     baseId: ids.Flamberge,
     imageId: ids.Flamberge,
     properties: {
-      [BasePropertyType.Damage1H]: [26, 70],
-      [BasePropertyType.Damage2H]: [61, 121],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 10,
-      [BasePropertyType.MinimumStrength]: 182,
-      [BasePropertyType.MinimumDexterity]: 95,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 5,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [26, 70],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [61, 121],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [10],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [182],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [95],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [5],
+        },
+      },
     },
   },
-  [ids.ColossusBlade]: {
+  {
     id: ids.ColossusBlade,
     name: 'Colossus Blade',
     tier: ItemTierType.Elite,
@@ -768,19 +1456,32 @@ const items = {
     baseId: ids.GreatSword,
     imageId: ids.GreatSword,
     properties: {
-      [BasePropertyType.Damage1H]: [25, 65],
-      [BasePropertyType.Damage2H]: [58, 115],
-      [BasePropertyType.MeleeRange]: 3,
-      [BasePropertyType.AttackSpeed]: 5,
-      [BasePropertyType.MinimumStrength]: 189,
-      [BasePropertyType.MinimumDexterity]: 110,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 6,
+      base: {
+        [BasePropertyType.Damage1H]: {
+          values: [25, 65],
+        },
+        [BasePropertyType.Damage2H]: {
+          values: [58, 115],
+        },
+        [BasePropertyType.MeleeRange]: {
+          values: [3],
+        },
+        [BasePropertyType.AttackSpeed]: {
+          values: [5],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [189],
+        },
+        [BasePropertyType.MinimumDexterity]: {
+          values: [110],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [6],
+        },
+      },
     },
   },
-};
-
-export default mapItems({
-  type: ItemType.Sword,
-  mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
-})(items);
+]);

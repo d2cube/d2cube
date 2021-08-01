@@ -3,11 +3,14 @@ import {
   ItemType,
   MagicPropertyType,
 } from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
-import {mapItems} from '../utils/map-items.js';
 
-const items = {
-  [ids.BladeOfAliBaba]: {
+export default createBaseItems({
+  quality: ItemQualityType.Unique,
+  type: ItemType.Sword,
+})([
+  {
     id: ids.BladeOfAliBaba,
     name: 'Blade of Ali Baba',
     type: ItemType.Sword,
@@ -23,7 +26,7 @@ const items = {
       [MagicPropertyType.Dexterity]: [5, 15],
     },
   },
-  [ids.BloodCrescent]: {
+  {
     id: ids.BloodCrescent,
     name: 'Blood Crescent',
     type: ItemType.Sword,
@@ -41,14 +44,13 @@ const items = {
       [MagicPropertyType.LightRadius]: [4],
     },
   },
-  [ids.LidlessWall]: {
+  {
     id: ids.LidlessWall,
     name: 'Lidless Wall',
     type: ItemType.Shield,
     size: [3, 2],
     clvl: 35,
     baseId: ids.GrimShield,
-    sockets: [null, null],
     stats: {
       [MagicPropertyType.EnhancedDefense]: [80, 130],
       [MagicPropertyType.AllSkillLevels]: [1],
@@ -59,7 +61,7 @@ const items = {
       [MagicPropertyType.LightRadius]: [1],
     },
   },
-  [ids.StoneOfJordan]: {
+  {
     id: ids.StoneOfJordan,
     name: 'Stone of Jordan',
     type: ItemType.Ring,
@@ -73,14 +75,13 @@ const items = {
       [MagicPropertyType.IncreaseMaximumMana]: [25],
     },
   },
-  [ids.WallOfTheEyeless]: {
+  {
     id: ids.WallOfTheEyeless,
     name: 'Wall of the Eyeless',
     type: ItemType.Shield,
     size: [3, 2],
     clvl: 35,
     baseId: ids.BoneShield,
-    sockets: [null, null],
     stats: {
       [MagicPropertyType.EnhancedDefense]: [30, 40],
       [MagicPropertyType.Defense]: [10],
@@ -90,8 +91,4 @@ const items = {
       [MagicPropertyType.PoisonResist]: [20],
     },
   },
-};
-
-export default mapItems({
-  quality: ItemQualityType.Unique,
-})(items);
+]);
