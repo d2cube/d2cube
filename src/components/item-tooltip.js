@@ -7,7 +7,7 @@ const ItemTooltip = ({children, description}) => {
   const tooltip = description.map((line, i) =>
     line ? (
       <Text key={i} as="div" color={`item.${line.color}`}>
-        {line.text}
+        {typeof line === 'string' ? line : line.text}
       </Text>
     ) : (
       <br />

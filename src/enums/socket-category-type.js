@@ -4,6 +4,6 @@
  */
 export const SocketCategoryType = {
   Armor: 'Armor',
-  Shields: 'Shields',
-  Weapons: 'Weapons',
+  Shield: 'Shield',
+  Weapon: 'Weapon',
 };

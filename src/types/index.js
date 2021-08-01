@@ -1,4 +1,10 @@
 /**
+ * This module exports nothing.  It contains JSDoc typedefs.
+ */
+
+export {};
+
+/**
  * References:
  * - https://user.xmission.com/~trevin/DiabloIIv1.09_Item_Format.shtml
  */
@@ -68,8 +74,8 @@
  *    The display name of an item.
  * @property {ItemType} type
  *    e.g. Ring/Amulet/Gem/Rune.
- * @property {[number, number]} size
- *    e.g. The size of an item (by row and column).
+ * @property {number[]} size
+ *    A 2-sized array indicating the item's size (by row/column).
  * @property {Description[]} [description]
  *    Additional description
  * @property {number} [clvl]
@@ -89,7 +95,7 @@
  *    An item is instanced if it is created and exists in the game.
  * @property {string} uuid
  *    A uuid for the instanced item.
- * @property {[number, number]} position
+ * @property {number[]} position
  *    A 2-sized array representing the row/column in a container.
  * @property {boolean} [isEthereal]
  *    Item is ethereal (cannot be repaired).

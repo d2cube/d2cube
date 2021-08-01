@@ -2,7 +2,7 @@ import React from 'react';
 import {Element, useStyles} from 'uinix-ui';
 
 import {createItem} from '../utils/create-item.js';
-import {resolveItemDescription} from '../utils/resolve-item-description.js';
+import {resolveItemDescription} from '../utils/resolvers/resolve-item-description.js';
 import ItemImage from './item-image.js';
 import ItemSockets from './item-sockets.js';
 import ItemTooltip from './item-tooltip.js';
