@@ -19,9 +19,6 @@ export default createBaseItems({
         [BasePropertyType.PotionSlots]: {
           values: [8],
         },
-        [BasePropertyType.MinimumStrength]: {
-          values: [],
-        },
         [BasePropertyType.Durability]: {
           values: [12],
         },
@@ -40,9 +37,6 @@ export default createBaseItems({
         },
         [BasePropertyType.PotionSlots]: {
           values: [8],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [],
         },
         [BasePropertyType.Durability]: {
           values: [14],

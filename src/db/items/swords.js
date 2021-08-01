@@ -22,12 +22,6 @@ export default createBaseItems({
         [BasePropertyType.AttackSpeed]: {
           values: [0],
         },
-        [BasePropertyType.MinimumStrength]: {
-          values: [],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [],
-        },
         [BasePropertyType.Durability]: {
           values: [24],
         },
@@ -53,9 +47,6 @@ export default createBaseItems({
         },
         [BasePropertyType.AttackSpeed]: {
           values: [-20],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [],
         },
         [BasePropertyType.MinimumDexterity]: {
           values: [21],
@@ -121,9 +112,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [33],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [],
-        },
         [BasePropertyType.Durability]: {
           values: [32],
         },
@@ -153,9 +141,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [43],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [],
-        },
         [BasePropertyType.Durability]: {
           values: [20],
         },
@@ -184,9 +169,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [48],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [],
         },
         [BasePropertyType.Durability]: {
           values: [32],
@@ -319,9 +301,6 @@ export default createBaseItems({
         [BasePropertyType.MinimumStrength]: {
           values: [47],
         },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [],
-        },
         [BasePropertyType.Durability]: {
           values: [50],
         },
@@ -388,9 +367,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [62],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [],
         },
         [BasePropertyType.Durability]: {
           values: [40],
@@ -493,9 +469,6 @@ export default createBaseItems({
         },
         [BasePropertyType.MinimumStrength]: {
           values: [25],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [],
         },
         [BasePropertyType.Durability]: {
           values: [24],
