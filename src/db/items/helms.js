@@ -1,107 +1,185 @@
 import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
-import {mapItemName} from '../utils/map-item-name.js';
-import {mapItemProperties} from '../utils/map-item-properties.js';
-import {mapItems} from '../utils/map-items.js';
 
-const items = {
-  [ids.Cap]: {
+export default createBaseItems({
+  type: ItemType.Helm,
+  size: [2, 2],
+})([
+  {
     id: ids.Cap,
     name: 'Cap',
     tier: ItemTierType.Normal,
     qlvl: 1,
     properties: {
-      [BasePropertyType.Defense]: [3, 5],
-      [BasePropertyType.MinimumStrength]: null,
-      [BasePropertyType.Durability]: 12,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [3, 5],
+        },
+        [BasePropertyType.Durability]: {
+          values: [12],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.SkullCap]: {
+  {
     id: ids.SkullCap,
     name: 'Skull Cap',
     tier: ItemTierType.Normal,
     qlvl: 5,
     properties: {
-      [BasePropertyType.Defense]: [8, 11],
-      [BasePropertyType.MinimumStrength]: 15,
-      [BasePropertyType.Durability]: 18,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [8, 11],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [15],
+        },
+        [BasePropertyType.Durability]: {
+          values: [18],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Helm]: {
+  {
     id: ids.Helm,
     name: 'Helm',
     tier: ItemTierType.Normal,
     qlvl: 11,
     properties: {
-      [BasePropertyType.Defense]: [15, 18],
-      [BasePropertyType.MinimumStrength]: 26,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [15, 18],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [26],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.FullHelm]: {
+  {
     id: ids.FullHelm,
     name: 'Full Helm',
     tier: ItemTierType.Normal,
     qlvl: 15,
     properties: {
-      [BasePropertyType.Defense]: [23, 26],
-      [BasePropertyType.MinimumStrength]: 41,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [23, 26],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [41],
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Mask]: {
+  {
     id: ids.Mask,
     name: 'Mask',
     tier: ItemTierType.Normal,
     qlvl: 19,
     properties: {
-      [BasePropertyType.Defense]: [9, 27],
-      [BasePropertyType.MinimumStrength]: 23,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [9, 27],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [23],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.BoneHelm]: {
+  {
     id: ids.BoneHelm,
     name: 'Bone Helm',
     tier: ItemTierType.Normal,
     qlvl: 22,
     properties: {
-      [BasePropertyType.Defense]: [33, 36],
-      [BasePropertyType.MinimumStrength]: 25,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [33, 36],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [25],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.GreatHelm]: {
+  {
     id: ids.GreatHelm,
     name: 'Great Helm',
     tier: ItemTierType.Normal,
     qlvl: 23,
     properties: {
-      [BasePropertyType.Defense]: [30, 35],
-      [BasePropertyType.MinimumStrength]: 63,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [30, 35],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [63],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.Crown]: {
+  {
     id: ids.Crown,
     name: 'Crown',
     tier: ItemTierType.Normal,
     qlvl: 29,
     properties: {
-      [BasePropertyType.Defense]: [25, 45],
-      [BasePropertyType.MinimumStrength]: 55,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [25, 45],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [55],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.WarHat]: {
+  {
     id: ids.WarHat,
     name: 'War Hat',
     tier: ItemTierType.Exceptional,
@@ -110,13 +188,23 @@ const items = {
     baseId: ids.Cap,
     imageId: ids.Cap,
     properties: {
-      [BasePropertyType.Defense]: [45, 54],
-      [BasePropertyType.MinimumStrength]: 20,
-      [BasePropertyType.Durability]: 12,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [45, 54],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [20],
+        },
+        [BasePropertyType.Durability]: {
+          values: [12],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Sallet]: {
+  {
     id: ids.Sallet,
     name: 'Sallet',
     tier: ItemTierType.Exceptional,
@@ -125,13 +213,23 @@ const items = {
     baseId: ids.SkullCap,
     imageId: ids.SkullCap,
     properties: {
-      [BasePropertyType.Defense]: [52, 62],
-      [BasePropertyType.MinimumStrength]: 43,
-      [BasePropertyType.Durability]: 18,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [52, 62],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [43],
+        },
+        [BasePropertyType.Durability]: {
+          values: [18],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Casque]: {
+  {
     id: ids.Casque,
     name: 'Casque',
     tier: ItemTierType.Exceptional,
@@ -140,13 +238,23 @@ const items = {
     baseId: ids.Helm,
     imageId: ids.Helm,
     properties: {
-      [BasePropertyType.Defense]: [63, 72],
-      [BasePropertyType.MinimumStrength]: 59,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [63, 72],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [59],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Basinet]: {
+  {
     id: ids.Basinet,
     name: 'Basinet',
     tier: ItemTierType.Exceptional,
@@ -155,13 +263,23 @@ const items = {
     baseId: ids.FullHelm,
     imageId: ids.FullHelm,
     properties: {
-      [BasePropertyType.Defense]: [75, 84],
-      [BasePropertyType.MinimumStrength]: 82,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [75, 84],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [82],
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.DeathMask]: {
+  {
     id: ids.DeathMask,
     name: 'Death Mask',
     tier: ItemTierType.Exceptional,
@@ -170,13 +288,23 @@ const items = {
     baseId: ids.Mask,
     imageId: ids.Mask,
     properties: {
-      [BasePropertyType.Defense]: [54, 86],
-      [BasePropertyType.MinimumStrength]: 55,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [54, 86],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [55],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.GrimHelm]: {
+  {
     id: ids.GrimHelm,
     name: 'Grim Helm',
     tier: ItemTierType.Exceptional,
@@ -185,13 +313,23 @@ const items = {
     baseId: ids.BoneHelm,
     imageId: ids.BoneHelm,
     properties: {
-      [BasePropertyType.Defense]: [60, 125],
-      [BasePropertyType.MinimumStrength]: 58,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [60, 125],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [58],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.WingedHelm]: {
+  {
     id: ids.WingedHelm,
     name: 'Winged Helm',
     tier: ItemTierType.Exceptional,
@@ -200,13 +338,23 @@ const items = {
     baseId: ids.GreatHelm,
     imageId: ids.GreatHelm,
     properties: {
-      [BasePropertyType.Defense]: [85, 98],
-      [BasePropertyType.MinimumStrength]: 115,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [85, 98],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [115],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.GrandCrown]: {
+  {
     id: ids.GrandCrown,
     name: 'Grand Crown',
     tier: ItemTierType.Exceptional,
@@ -215,13 +363,23 @@ const items = {
     baseId: ids.Crown,
     imageId: ids.Crown,
     properties: {
-      [BasePropertyType.Defense]: [78, 113],
-      [BasePropertyType.MinimumStrength]: 103,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [78, 113],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [103],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.Shako]: {
+  {
     id: ids.Shako,
     name: 'Shako',
     tier: ItemTierType.Elite,
@@ -230,13 +388,23 @@ const items = {
     baseId: ids.Cap,
     imageId: ids.Cap,
     properties: {
-      [BasePropertyType.Defense]: [98, 141],
-      [BasePropertyType.MinimumStrength]: 50,
-      [BasePropertyType.Durability]: 12,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [98, 141],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [50],
+        },
+        [BasePropertyType.Durability]: {
+          values: [12],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Hydraskull]: {
+  {
     id: ids.Hydraskull,
     name: 'Hydraskull',
     tier: ItemTierType.Elite,
@@ -245,13 +413,23 @@ const items = {
     baseId: ids.SkullCap,
     imageId: ids.SkullCap,
     properties: {
-      [BasePropertyType.Defense]: [101, 145],
-      [BasePropertyType.MinimumStrength]: 84,
-      [BasePropertyType.Durability]: 18,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [101, 145],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [84],
+        },
+        [BasePropertyType.Durability]: {
+          values: [18],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Armet]: {
+  {
     id: ids.Armet,
     name: 'Armet',
     tier: ItemTierType.Elite,
@@ -260,13 +438,23 @@ const items = {
     baseId: ids.Helm,
     imageId: ids.Helm,
     properties: {
-      [BasePropertyType.Defense]: [105, 149],
-      [BasePropertyType.MinimumStrength]: 109,
-      [BasePropertyType.Durability]: 24,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [105, 149],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [109],
+        },
+        [BasePropertyType.Durability]: {
+          values: [24],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.GiantConch]: {
+  {
     id: ids.GiantConch,
     name: 'Giant Conch',
     tier: ItemTierType.Elite,
@@ -275,13 +463,23 @@ const items = {
     baseId: ids.FullHelm,
     imageId: ids.FullHelm,
     properties: {
-      [BasePropertyType.Defense]: [110, 154],
-      [BasePropertyType.MinimumStrength]: 142,
-      [BasePropertyType.Durability]: 30,
-      [BasePropertyType.MaxSockets]: 2,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [110, 154],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [142],
+        },
+        [BasePropertyType.Durability]: {
+          values: [30],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [2],
+        },
+      },
     },
   },
-  [ids.Demonhead]: {
+  {
     id: ids.Demonhead,
     name: 'Demonhead',
     tier: ItemTierType.Elite,
@@ -290,13 +488,23 @@ const items = {
     baseId: ids.Mask,
     imageId: ids.Mask,
     properties: {
-      [BasePropertyType.Defense]: [101, 154],
-      [BasePropertyType.MinimumStrength]: 102,
-      [BasePropertyType.Durability]: 20,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [101, 154],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [102],
+        },
+        [BasePropertyType.Durability]: {
+          values: [20],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.BoneVisage]: {
+  {
     id: ids.BoneVisage,
     name: 'Bone Visage',
     tier: ItemTierType.Elite,
@@ -305,13 +513,23 @@ const items = {
     baseId: ids.BoneHelm,
     imageId: ids.BoneHelm,
     properties: {
-      [BasePropertyType.Defense]: [100, 157],
-      [BasePropertyType.MinimumStrength]: 106,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [100, 157],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [106],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.SpiredHelm]: {
+  {
     id: ids.SpiredHelm,
     name: 'Spired Helm',
     tier: ItemTierType.Elite,
@@ -320,13 +538,23 @@ const items = {
     baseId: ids.GreatHelm,
     imageId: ids.GreatHelm,
     properties: {
-      [BasePropertyType.Defense]: [114, 159],
-      [BasePropertyType.MinimumStrength]: 192,
-      [BasePropertyType.Durability]: 40,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [114, 159],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [192],
+        },
+        [BasePropertyType.Durability]: {
+          values: [40],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-  [ids.Corona]: {
+  {
     id: ids.Corona,
     name: 'Corona',
     tier: ItemTierType.Elite,
@@ -335,16 +563,20 @@ const items = {
     baseId: ids.Crown,
     imageId: ids.Crown,
     properties: {
-      [BasePropertyType.Defense]: [111, 165],
-      [BasePropertyType.MinimumStrength]: 174,
-      [BasePropertyType.Durability]: 50,
-      [BasePropertyType.MaxSockets]: 3,
+      base: {
+        [BasePropertyType.Defense]: {
+          values: [111, 165],
+        },
+        [BasePropertyType.MinimumStrength]: {
+          values: [174],
+        },
+        [BasePropertyType.Durability]: {
+          values: [50],
+        },
+        [BasePropertyType.MaxSockets]: {
+          values: [3],
+        },
+      },
     },
   },
-};
-
-export default mapItems({
-  type: ItemType.Helm,
-  size: [2, 2],
-  mapDescription: (item) => [[mapItemName(item), ...mapItemProperties(item)]],
-})(items);
+]);

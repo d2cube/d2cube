@@ -15,7 +15,7 @@ const items = {
     name: "Wirt's Leg",
     quality: ItemQualityType.Unique,
     clvl: null,
-    size: [2, 1],
+    size: [3, 1],
     properties: {
       [BasePropertyType.Damage1H]: [1, 8],
       [BasePropertyType.MeleeRange]: 1,
