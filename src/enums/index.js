@@ -12,6 +12,7 @@ export {ItemSetType} from './item-set-type.js';
 export {ItemTierType} from './item-tier-type.js';
 export {ItemType} from './item-type.js';
 export {MagicPropertyType} from './magic-property-type.js';
+export {PlayerClassType} from './player-class-type.js';
 export {PotionClassType} from './potion-class-type.js';
 export {PrefixType} from './prefix-type.js';
 export {RecipeType} from './recipe-type.js';

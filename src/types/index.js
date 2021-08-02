@@ -25,6 +25,7 @@ export {};
  * @typedef {import('../enums/index.js').ItemTierType} ItemTierType
  * @typedef {import('../enums/index.js').ItemType} ItemType
  * @typedef {import('../enums/index.js').MagicPropertyType} MagicPropertyType
+ * @typedef {import('../enums/index.js').PlayerClassType} PlayerClassType
  * @typedef {import('../enums/index.js').PotionClassType} PotionClassType
  * @typedef {import('../enums/index.js').PrefixType} PrefixType
  * @typedef {import('../enums/index.js').RecipeType} RecipeType
@@ -92,6 +93,8 @@ export {};
  *    If the item belongs to an existing set e.g. AngelicRaiment.
  * @property {Properties} [properties]
  *    Item properties.
+ * @property {PlayerClassType} [playerClass]
+ *    If specified, the item is restricted to the player class.
  *
  * @typedef ItemInstance
  *    An item is instanced if it is created and exists in the game.
