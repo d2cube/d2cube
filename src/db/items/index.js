@@ -7,6 +7,7 @@ import amulets from './amulets.js';
 import axes from './axes.js';
 import belts from './belts.js';
 import bodyArmors from './body-armors.js';
+import boots from './boots.js';
 import bows from './bows.js';
 import daggers from './daggers.js';
 import essences from './essences.js';
@@ -33,6 +34,7 @@ export default {
   ...axes,
   ...belts,
   ...bodyArmors,
+  ...boots,
   ...bows,
   ...daggers,
   ...essences,
