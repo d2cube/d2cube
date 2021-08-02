@@ -7,6 +7,7 @@ import Recipes from '../components/recipes.js';
 import {ItemType} from '../enums/index.js';
 import {inventoryItems} from '../mocks/index.js';
 import {getItemsByType} from '../queries/index.js';
+import {fill} from '../utils/fp.js';
 
 const Page = () => {
   const [selectedItemType, setSelectedItemType] = useState(ItemType.Potion);
@@ -26,9 +27,15 @@ const Page = () => {
           ))}
         </select>
         <Layout wrap spacing="m">
-          {items.map((item) => (
-            <Item key={item.id} item={item} />
-          ))}
+          {items.map((item) =>
+            item.variants ? (
+              fill(item.variants)((i) => (
+                <Item key={i} item={item} variant={i + 1} />
+              ))
+            ) : (
+              <Item key={item.id} item={item} />
+            ),
+          )}
         </Layout>
         <h3>Recipes</h3>
         <Recipes items={inventoryItems} />

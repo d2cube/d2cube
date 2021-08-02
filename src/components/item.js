@@ -8,7 +8,7 @@ import ItemSockets from './item-sockets.js';
 import ItemTooltip from './item-tooltip.js';
 
 // TODO: organize and document logic in relevant utils
-const Item = ({item: initialItem, isInactive = false}) => {
+const Item = ({item: initialItem, isInactive = false, variant = null}) => {
   const styles = useStyles();
 
   const {id, imageId, isEthereal} = initialItem;
@@ -27,7 +27,7 @@ const Item = ({item: initialItem, isInactive = false}) => {
         }}
         styles={styles.item}
       >
-        <ItemImage id={imageId || id} variants={variants} />
+        <ItemImage id={imageId || id} variant={variant} variants={variants} />
         <Element bottom={0} left={0} position="absolute" right={0} top={0}>
           <ItemSockets sockets={sockets} size={size} />
         </Element>

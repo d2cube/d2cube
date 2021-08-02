@@ -9,6 +9,7 @@ import belts from './belts.js';
 import bodyArmors from './body-armors.js';
 import boots from './boots.js';
 import bows from './bows.js';
+import charms from './charms.js';
 import circlets from './circlets.js';
 import daggers from './daggers.js';
 import essences from './essences.js';
@@ -16,6 +17,7 @@ import gems from './gems.js';
 import gloves from './gloves.js';
 import helms from './helms.js';
 import javelins from './javelins.js';
+import jewels from './jewels.js';
 import keys from './keys.js';
 import organs from './organs.js';
 import potions from './potions.js';
@@ -38,6 +40,7 @@ export default {
   ...bodyArmors,
   ...boots,
   ...bows,
+  ...charms,
   ...circlets,
   ...daggers,
   ...essences,
@@ -45,6 +48,7 @@ export default {
   ...gloves,
   ...helms,
   ...javelins,
+  ...jewels,
   ...keys,
   ...organs,
   ...potions,

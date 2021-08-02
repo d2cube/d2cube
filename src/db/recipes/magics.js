@@ -1,5 +1,6 @@
 import {merge} from 'uinix-fp';
 
+import {fillNull} from '../../utils/fp.js';
 import {random} from '../../utils/random.js';
 import {ItemQualityType, RecipeType, SuffixType} from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
@@ -132,7 +133,7 @@ const recipes = [
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Normal,
-          sockets: Array.from({length: random(1, 6)}).map(() => null),
+          sockets: fillNull(random(1, 6)),
           overrideDescription: [
             [
               {
@@ -149,7 +150,7 @@ const recipes = [
       transform: (sources) =>
         merge(sources[3])({
           quality: ItemQualityType.Magic,
-          sockets: Array.from({length: random(1, 2)}).map(() => null),
+          sockets: fillNull(random(1, 2)),
         }),
     },
   },

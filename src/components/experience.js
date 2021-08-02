@@ -1,6 +1,7 @@
 import React from 'react';
 import {Element, Layout, useStyles} from 'uinix-ui';
 
+import {fill} from '../utils/fp.js';
 import Tooltip from './ui/tooltip.js';
 
 const Experience = ({experience}) => {
@@ -21,7 +22,7 @@ const Experience = ({experience}) => {
           styles={styles.progress}
           variant="absolute"
         />
-        {Array.from({length: 10}).map((_, i) => (
+        {fill(10)((i) => (
           <Layout key={i} b="bordered" flex="auto" h="bar" z="forward" />
         ))}
       </Layout>

@@ -11,12 +11,14 @@ import belts from './belts.js';
 import bodyArmors from './body-armors.js';
 import boots from './boots.js';
 import bows from './bows.js';
+import charms from './charms.js';
 import circlets from './circlets.js';
 import daggers from './daggers.js';
 import gems from './gems.js';
 import gloves from './gloves.js';
 import helms from './helms.js';
 import javelins from './javelins.js';
+import jewels from './jewels.js';
 import potions from './potions.js';
 import quests from './quests.js';
 import runes from './runes.js';
@@ -36,12 +38,14 @@ export default {
   ...bodyArmors,
   ...boots,
   ...bows,
+  ...charms,
   ...circlets,
   ...daggers,
   ...gems,
   ...gloves,
   ...helms,
   ...javelins,
+  ...jewels,
   ...potions,
   ...quests,
   ...rings,

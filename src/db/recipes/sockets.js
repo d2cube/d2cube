@@ -1,5 +1,6 @@
 import {merge} from 'uinix-fp';
 
+import {fillNull} from '../../utils/fp.js';
 import {random} from '../../utils/random.js';
 import {
   BasePropertyType,
@@ -106,7 +107,7 @@ const recipes = [
     target: {
       transform: (sources) =>
         merge(sources[3])({
-          sockets: Array.from({length: random(1, 2)}).map(() => null),
+          sockets: fillNull(random(1, 2)),
         }),
     },
   },
@@ -153,7 +154,7 @@ const recipes = [
     target: {
       transform: (sources) =>
         merge(sources[3])({
-          sockets: Array.from({length: random(1, 2)}).map(() => null),
+          sockets: fillNull(random(1, 2)),
         }),
     },
   },
@@ -232,9 +233,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: random(1, Math.min(maxSockets, 4))}).map(
-            () => null,
-          ),
+          sockets: fillNull(random(1, Math.min(maxSockets, 4))),
         });
       },
     },
@@ -277,9 +276,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: random(1, Math.min(maxSockets, 6))}).map(
-            () => null,
-          ),
+          sockets: fillNull(random(1, Math.min(maxSockets, 6))),
         });
       },
     },
@@ -322,9 +319,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: random(1, Math.min(maxSockets, 3))}).map(
-            () => null,
-          ),
+          sockets: fillNull(random(1, Math.min(maxSockets, 3))),
         });
       },
     },
@@ -367,9 +362,7 @@ const recipes = [
         const item = sources[3];
         const maxSockets = item.properties[BasePropertyType.MaxSockets];
         return merge(item)({
-          sockets: Array.from({length: random(1, Math.min(maxSockets, 4))}).map(
-            () => null,
-          ),
+          sockets: fillNull(random(1, Math.min(maxSockets, 4))),
         });
       },
     },

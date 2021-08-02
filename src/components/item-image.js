@@ -6,9 +6,20 @@ import Image from './ui/image.js';
 
 const defaultVersion = GameVersionType.D2;
 
-const ItemImage = ({id, variants = null, version = defaultVersion}) => {
-  const imageName = id + (variants ? random(1, variants) : '');
-  const src = `${version}/items/${imageName}.webp`;
+const ItemImage = ({
+  id,
+  variant = null,
+  variants = null,
+  version = defaultVersion,
+}) => {
+  let suffix = '';
+  if (variant) {
+    suffix += variant;
+  } else if (variants) {
+    suffix += random(1, variants);
+  }
+
+  const src = `${version}/items/${id}${suffix}.webp`;
 
   return <Image alt={id} src={src} />;
 };
