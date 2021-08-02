@@ -10,6 +10,7 @@ export const ItemType = {
   BodyArmor: 'BodyArmor',
   Boot: 'Boot',
   Bow: 'Bow',
+  Circlet: 'Circlet',
   Dagger: 'Dagger',
   Essence: 'Essence',
   Gem: 'Gem',

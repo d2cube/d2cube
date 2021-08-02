@@ -11,6 +11,7 @@ import belts from './belts.js';
 import bodyArmors from './body-armors.js';
 import boots from './boots.js';
 import bows from './bows.js';
+import circlets from './circlets.js';
 import daggers from './daggers.js';
 import gems from './gems.js';
 import gloves from './gloves.js';
@@ -35,6 +36,7 @@ export default {
   ...bodyArmors,
   ...boots,
   ...bows,
+  ...circlets,
   ...daggers,
   ...gems,
   ...gloves,

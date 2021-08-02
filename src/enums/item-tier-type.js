@@ -7,4 +7,5 @@ export const ItemTierType = {
   Normal: 1,
   Exceptional: 2,
   Elite: 3,
+  ElitePlus: 4, // Applies to circlets
 };
