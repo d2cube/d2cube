@@ -13,6 +13,7 @@ export const ItemType = {
   Dagger: 'Dagger',
   Essence: 'Essence',
   Gem: 'Gem',
+  Glove: 'Glove',
   Helm: 'Helm',
   Javelin: 'Javelin',
   Key: 'Key',

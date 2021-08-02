@@ -12,6 +12,7 @@ import bows from './bows.js';
 import daggers from './daggers.js';
 import essences from './essences.js';
 import gems from './gems.js';
+import gloves from './gloves.js';
 import helms from './helms.js';
 import javelins from './javelins.js';
 import keys from './keys.js';
@@ -39,6 +40,7 @@ export default {
   ...daggers,
   ...essences,
   ...gems,
+  ...gloves,
   ...helms,
   ...javelins,
   ...keys,
