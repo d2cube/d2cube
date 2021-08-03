@@ -27,6 +27,7 @@ export const ItemType = {
   Potion: 'Potion',
   Ring: 'Ring',
   Rune: 'Rune',
+  Scepter: 'Scepter',
   Scroll: 'Scroll',
   Shield: 'Shield',
   Spear: 'Spear',
