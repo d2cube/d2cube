@@ -8,8 +8,8 @@ import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
 export default createBaseItems({
-  type: ItemType.BodyArmor,
   size: [3, 2],
+  type: ItemType.BodyArmor,
 })([
   {
     id: ids.QuiltedArmor,

@@ -1,10 +1,16 @@
-import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {
+  BasePropertyType,
+  ItemTierType,
+  ItemType,
+  WeaponClassType,
+} from '../../enums/index.js';
 import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
 export default createBaseItems({
-  type: ItemType.Wand,
+  class: WeaponClassType.Staff,
   size: [2, 1],
+  type: ItemType.Wand,
 })([
   {
     id: ids.Wand,

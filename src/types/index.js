@@ -31,6 +31,7 @@ export {};
  * @typedef {import('../enums/index.js').RecipeType} RecipeType
  * @typedef {import('../enums/index.js').SocketCategoryType} SocketCategoryType
  * @typedef {import('../enums/index.js').SuffixType} SuffixType
+ * @typedef {import('../enums/index.js').WeaponClassType} WeaponClassType
  *
  * @typedef {import('../db/ids/index.js')} Id
  *    An item ID is the PascalCasing of the item's name.
@@ -85,6 +86,8 @@ export {};
  *    Required character level.
  * @property {number} [qlvl]
  *    Quality level.
+ * @property {ArmorClassType|GemClassType|PotionClassType|WeaponClassType} [class]
+ *    The sub-category/class/family of the item
  * @property {ItemQualityType} [quality]
  *    Most items have qualities e.g. LowQuality/Normal/Magic/Unique/Set/Crafted
  * @property {number} [variants]

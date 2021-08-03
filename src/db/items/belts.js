@@ -3,8 +3,8 @@ import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
 export default createBaseItems({
-  type: ItemType.Belt,
   size: [1, 2],
+  type: ItemType.Belt,
 })([
   {
     id: ids.Sash,

@@ -1,7 +1,6 @@
 import {BasePropertyType} from '../../enums/index.js';
 
 export const resolveBaseProperty = (item) => (entry) => {
-  const {type} = item;
   const property = entry[0];
   const {values} = entry[1];
 
@@ -14,7 +13,9 @@ export const resolveBaseProperty = (item) => (entry) => {
 
   switch (property) {
     case BasePropertyType.AttackSpeed:
-      return `${type} Class - ${getAttackSpeedDescription(x)} Attack Speed`;
+      return `${item.class} Class - ${getAttackSpeedDescription(
+        x,
+      )} Attack Speed`;
     case BasePropertyType.BlockChance:
       return `Chance to Block: ${x}%`;
     case BasePropertyType.Damage1H:

@@ -1,12 +1,18 @@
-import {BasePropertyType, ItemType} from '../../enums/index.js';
+import {
+  BasePropertyType,
+  ItemType,
+  WeaponClassType,
+} from '../../enums/index.js';
 import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
-export default createBaseItems({})([
+export default createBaseItems({
+  type: ItemType.Quest,
+})([
   {
     id: ids.WirtsLeg,
     title: "Wirt's Leg",
-    type: ItemType.Mace,
+    class: WeaponClassType.Mace,
     size: [3, 1],
     properties: {
       base: {

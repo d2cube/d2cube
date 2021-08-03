@@ -1,10 +1,16 @@
-import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {
+  BasePropertyType,
+  ItemTierType,
+  ItemType,
+  WeaponClassType,
+} from '../../enums/index.js';
 import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
 export default createBaseItems({
-  type: ItemType.Spear,
+  class: WeaponClassType.Spear,
   size: [4, 2],
+  type: ItemType.Spear,
 })([
   {
     id: ids.Spear,

@@ -3,8 +3,8 @@ import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
 export default createBaseItems({
-  type: ItemType.Boot,
   size: [2, 2],
+  type: ItemType.Boot,
 })([
   {
     id: ids.Boots,

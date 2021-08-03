@@ -3,8 +3,8 @@ import {createBaseItems} from '../../utils/create-base-items.js';
 import ids from '../ids/index.js';
 
 export default createBaseItems({
-  type: ItemType.Circlet,
   size: [2, 2],
+  type: ItemType.Circlet,
 })([
   {
     id: ids.Circlet,
