@@ -20,6 +20,7 @@ import gloves from './gloves.js';
 import helms from './helms.js';
 import javelins from './javelins.js';
 import jewels from './jewels.js';
+import maces from './maces.js';
 import potions from './potions.js';
 import quests from './quests.js';
 import runes from './runes.js';
@@ -48,6 +49,7 @@ export default {
   ...helms,
   ...javelins,
   ...jewels,
+  ...maces,
   ...potions,
   ...quests,
   ...rings,
