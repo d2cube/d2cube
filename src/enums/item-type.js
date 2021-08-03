@@ -31,6 +31,7 @@ export const ItemType = {
   Scroll: 'Scroll',
   Shield: 'Shield',
   Spear: 'Spear',
+  Staff: 'Staff',
   Sword: 'Sword',
   Token: 'Token',
   Tome: 'Tome',

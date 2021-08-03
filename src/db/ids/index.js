@@ -30,6 +30,7 @@ import scepters from './scepters.js';
 import scrolls from './scrolls.js';
 import shields from './shields.js';
 import spears from './spears.js';
+import staves from './staves.js';
 import swords from './swords.js';
 import tomes from './tomes.js';
 import uniques from './uniques.js';
@@ -61,6 +62,7 @@ export default {
   ...scrolls,
   ...shields,
   ...spears,
+  ...staves,
   ...swords,
   ...tomes,
   ...uniques,

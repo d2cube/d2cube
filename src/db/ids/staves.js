@@ -1,0 +1,17 @@
+export default {
+  ShortStaff: 'ShortStaff',
+  LongStaff: 'LongStaff',
+  GnarledStaff: 'GnarledStaff',
+  BattleStaff: 'BattleStaff',
+  WarStaff: 'WarStaff',
+  JoStaff: 'JoStaff',
+  Quaterstaff: 'Quaterstaff',
+  CedarStaff: 'CedarStaff',
+  GothicStaff: 'GothicStaff',
+  RuneStaff: 'RuneStaff',
+  WalkingStick: 'WalkingStick',
+  Stalagmite: 'Stalagmite',
+  ElderStaff: 'ElderStaff',
+  Shillelagh: 'Shillelagh',
+  ArchonStaff: 'ArchonStaff',
+};
