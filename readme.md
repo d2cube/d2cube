@@ -23,6 +23,13 @@ So much to do, so little time, so much fun.
 - [ ] Docs
 - [ ] Contribution
 
+## Calculation edge cases
+
+The following are edge case calculations that are not immediately obvious
+- Always round down.
+- ResolvedEnhancedDefense = Math.floor((MaxDefense + 1) * EnhancedDefense)
+- If MinDamage exceeds MaxDamage, set max damage to MinDamage + 1
+
 ## Cube Checklist
 
 Reference: https://diablo.fandom.com/wiki/Horadric_Cube

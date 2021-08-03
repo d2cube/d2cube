@@ -14,7 +14,7 @@ export default createBaseItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: {
-          values: [2, 2],
+          values: [2],
         },
         [BasePropertyType.PotionSlots]: {
           values: [8],
@@ -33,7 +33,7 @@ export default createBaseItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: {
-          values: [3, 3],
+          values: [3],
         },
         [BasePropertyType.PotionSlots]: {
           values: [8],
@@ -52,7 +52,7 @@ export default createBaseItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: {
-          values: [5, 5],
+          values: [5],
         },
         [BasePropertyType.PotionSlots]: {
           values: [12],
@@ -74,7 +74,7 @@ export default createBaseItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: {
-          values: [6, 6],
+          values: [6],
         },
         [BasePropertyType.PotionSlots]: {
           values: [12],
