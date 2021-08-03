@@ -2,7 +2,7 @@
  * @readonly
  * @enum {string}
  */
-export const ArmorType = {
+export const ArmorClassType = {
   Light: 'Light',
   Medium: 'Medium',
   Heavy: 'Heavy',

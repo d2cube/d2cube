@@ -1,4 +1,4 @@
-export {ArmorType} from './armor-type.js';
+export {ArmorClassType} from './armor-class-type.js';
 export {BasePropertyType} from './base-property-type.js';
 export {ContainerType} from './container-type.js';
 export {EquipSlotType} from './equip-slot-type.js';

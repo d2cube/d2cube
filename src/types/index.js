@@ -11,7 +11,7 @@ export {};
 
 /**
  * // Enums
- * @typedef {import('../enums/index.js').ArmorType} ArmorType
+ * @typedef {import('../enums/index.js').ArmorClassType} ArmorClassType
  * @typedef {import('../enums/index.js').BasePropertyType} BasePropertyType
  * @typedef {import('../enums/index.js').ContainerType} ContainerType
  * @typedef {import('../enums/index.js').EquipSlotType} EquipSlotType

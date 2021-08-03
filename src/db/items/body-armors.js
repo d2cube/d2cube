@@ -1,5 +1,5 @@
 import {
-  ArmorType,
+  ArmorClassType,
   BasePropertyType,
   ItemTierType,
   ItemType,
@@ -15,7 +15,7 @@ export default createBaseItems({
     id: ids.QuiltedArmor,
     name: 'Quilted Armor',
     tier: ItemTierType.Normal,
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     clvl: 5,
     qlvl: 1,
     properties: {
@@ -38,7 +38,7 @@ export default createBaseItems({
   {
     id: ids.LeatherArmor,
     name: 'Leather Armor',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     qlvl: 3,
     properties: {
@@ -61,7 +61,7 @@ export default createBaseItems({
   {
     id: ids.HardLeatherArmor,
     name: 'Hard Leather Armor',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     qlvl: 5,
     properties: {
@@ -84,7 +84,7 @@ export default createBaseItems({
   {
     id: ids.StuddedLeather,
     name: 'Studded Leather',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     qlvl: 8,
     properties: {
@@ -107,7 +107,7 @@ export default createBaseItems({
   {
     id: ids.RingMail,
     name: 'Ring Mail',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 11,
     properties: {
@@ -130,7 +130,7 @@ export default createBaseItems({
   {
     id: ids.ScaleMail,
     name: 'Scale Mail',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     qlvl: 13,
     properties: {
@@ -153,7 +153,7 @@ export default createBaseItems({
   {
     id: ids.ChainMail,
     name: 'Chain Mail',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 15,
     properties: {
@@ -176,7 +176,7 @@ export default createBaseItems({
   {
     id: ids.BreastPlate,
     name: 'Breast Plate',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     qlvl: 18,
     properties: {
@@ -199,7 +199,7 @@ export default createBaseItems({
   {
     id: ids.SplintMail,
     name: 'Splint Mail',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 20,
     properties: {
@@ -222,7 +222,7 @@ export default createBaseItems({
   {
     id: ids.PlateMail,
     name: 'Plate Mail',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     qlvl: 24,
     properties: {
@@ -245,7 +245,7 @@ export default createBaseItems({
   {
     id: ids.FieldPlate,
     name: 'Field Plate',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 28,
     properties: {
@@ -268,7 +268,7 @@ export default createBaseItems({
   {
     id: ids.GothicPlate,
     name: 'Gothic Plate',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 32,
     properties: {
@@ -291,7 +291,7 @@ export default createBaseItems({
   {
     id: ids.LightPlate,
     name: 'Light Plate',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     qlvl: 35,
     properties: {
@@ -314,7 +314,7 @@ export default createBaseItems({
   {
     id: ids.FullPlateMail,
     name: 'Full Plate Mail',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     qlvl: 37,
     properties: {
@@ -337,7 +337,7 @@ export default createBaseItems({
   {
     id: ids.AncientArmor,
     name: 'Ancient Armor',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     qlvl: 40,
     properties: {
@@ -360,7 +360,7 @@ export default createBaseItems({
   {
     id: ids.GhostArmor,
     name: 'Ghost Armor',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 22,
     qlvl: 34,
@@ -386,7 +386,7 @@ export default createBaseItems({
   {
     id: ids.SerpentskinArmor,
     name: 'Serpentskin Armor',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 24,
     qlvl: 36,
@@ -412,7 +412,7 @@ export default createBaseItems({
   {
     id: ids.DemonhideArmor,
     name: 'Demonhide Armor',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 37,
@@ -438,7 +438,7 @@ export default createBaseItems({
   {
     id: ids.TrellisedArmor,
     name: 'Trellised Armor',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 40,
@@ -464,7 +464,7 @@ export default createBaseItems({
   {
     id: ids.LinkedMail,
     name: 'Linked Mail',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 42,
@@ -490,7 +490,7 @@ export default createBaseItems({
   {
     id: ids.TigulatedMail,
     name: 'Tigulated Mail',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 43,
@@ -516,7 +516,7 @@ export default createBaseItems({
   {
     id: ids.MeshArmor,
     name: 'Mesh Armor',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 45,
@@ -542,7 +542,7 @@ export default createBaseItems({
   {
     id: ids.Cuirass,
     name: 'Cuirass',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 47,
@@ -568,7 +568,7 @@ export default createBaseItems({
   {
     id: ids.RussetArmor,
     name: 'Russet Armor',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 49,
@@ -594,7 +594,7 @@ export default createBaseItems({
   {
     id: ids.TemplarCoat,
     name: 'Templar Coat',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 52,
@@ -620,7 +620,7 @@ export default createBaseItems({
   {
     id: ids.SharktoothArmor,
     name: 'Sharktooth Armor',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 55,
@@ -646,7 +646,7 @@ export default createBaseItems({
   {
     id: ids.EmbossedPlate,
     name: 'Embossed Plate',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 58,
@@ -672,7 +672,7 @@ export default createBaseItems({
   {
     id: ids.MagePlate,
     name: 'Mage Plate',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 60,
@@ -698,7 +698,7 @@ export default createBaseItems({
   {
     id: ids.ChaosArmor,
     name: 'Chaos Armor',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 64,
@@ -724,7 +724,7 @@ export default createBaseItems({
   {
     id: ids.OrnatePlate,
     name: 'Ornate Plate',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     clvl: 25,
     qlvl: 64,
@@ -750,7 +750,7 @@ export default createBaseItems({
   {
     id: ids.DuskShroud,
     name: 'Dusk Shroud',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     clvl: 49,
     qlvl: 65,
@@ -776,7 +776,7 @@ export default createBaseItems({
   {
     id: ids.Wyrmhide,
     name: 'Wyrmhide',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     clvl: 50,
     qlvl: 67,
@@ -802,7 +802,7 @@ export default createBaseItems({
   {
     id: ids.ScarabHusk,
     name: 'Scarab Husk',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     clvl: 51,
     qlvl: 68,
@@ -828,7 +828,7 @@ export default createBaseItems({
   {
     id: ids.WireFleece,
     name: 'Wire Fleece',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     clvl: 53,
     qlvl: 70,
@@ -854,7 +854,7 @@ export default createBaseItems({
   {
     id: ids.DiamondMail,
     name: 'Diamond Mail',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     clvl: 54,
     qlvl: 72,
@@ -880,7 +880,7 @@ export default createBaseItems({
   {
     id: ids.LoricatedMail,
     name: 'Loricated Mail',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 55,
     qlvl: 73,
@@ -906,7 +906,7 @@ export default createBaseItems({
   {
     id: ids.Boneweave,
     name: 'Boneweave',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     clvl: 47,
     qlvl: 62,
@@ -932,7 +932,7 @@ export default createBaseItems({
   {
     id: ids.GreatHauberk,
     name: 'Great Hauberk',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     clvl: 56,
     qlvl: 75,
@@ -958,7 +958,7 @@ export default createBaseItems({
   {
     id: ids.BalrogSkin,
     name: 'Balrog Skin',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     clvl: 57,
     qlvl: 76,
@@ -984,7 +984,7 @@ export default createBaseItems({
   {
     id: ids.HellforgePlate,
     name: 'Hellforge Plate',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 59,
     qlvl: 78,
@@ -1010,7 +1010,7 @@ export default createBaseItems({
   {
     id: ids.KrakenShell,
     name: 'Kraken Shell',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     clvl: 61,
     qlvl: 81,
@@ -1036,7 +1036,7 @@ export default createBaseItems({
   {
     id: ids.LacqueredPlate,
     name: 'Lacquered Plate',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     clvl: 62,
     qlvl: 82,
@@ -1062,7 +1062,7 @@ export default createBaseItems({
   {
     id: ids.ArchonPlate,
     name: 'Archon Plate',
-    armorType: ArmorType.Light,
+    armorType: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     clvl: 63,
     qlvl: 84,
@@ -1088,7 +1088,7 @@ export default createBaseItems({
   {
     id: ids.ShadowPlate,
     name: 'Shadow Plate',
-    armorType: ArmorType.Heavy,
+    armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     clvl: 64,
     qlvl: 83,
@@ -1114,7 +1114,7 @@ export default createBaseItems({
   {
     id: ids.SacredArmor,
     name: 'Sacred Armor',
-    armorType: ArmorType.Medium,
+    armorType: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     clvl: 66,
     qlvl: 85,
