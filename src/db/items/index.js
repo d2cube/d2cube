@@ -36,6 +36,7 @@ import swords from './swords.js';
 import tokens from './tokens.js';
 import tomes from './tomes.js';
 import uniques from './uniques.js';
+import wands from './wands.js';
 
 export default {
   ...ammunitions,
@@ -72,4 +73,5 @@ export default {
   ...tokens,
   ...tomes,
   ...uniques,
+  ...wands,
 };

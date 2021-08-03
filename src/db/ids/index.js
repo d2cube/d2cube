@@ -34,6 +34,7 @@ import staves from './staves.js';
 import swords from './swords.js';
 import tomes from './tomes.js';
 import uniques from './uniques.js';
+import wands from './wands.js';
 
 export default {
   ...amulets,
@@ -66,4 +67,5 @@ export default {
   ...swords,
   ...tomes,
   ...uniques,
+  ...wands,
 };

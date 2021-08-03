@@ -35,4 +35,5 @@ export const ItemType = {
   Sword: 'Sword',
   Token: 'Token',
   Tome: 'Tome',
+  Wand: 'Wand',
 };
