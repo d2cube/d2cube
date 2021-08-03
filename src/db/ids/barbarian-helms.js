@@ -1,0 +1,17 @@
+export default {
+  JawboneCap: 'JawboneCap',
+  FangedHelm: 'FangedHelm',
+  HornedHelm: 'HornedHelm',
+  AssaultHelmet: 'AssaultHelmet',
+  AvengerGuard: 'AvengerGuard',
+  JawboneVisor: 'JawboneVisor',
+  LionHelm: 'LionHelm',
+  RageMask: 'RageMask',
+  SavageHelmet: 'SavageHelmet',
+  SlayerGuard: 'SlayerGuard',
+  CarnageHelm: 'CarnageHelm',
+  FuryVisor: 'FuryVisor',
+  DestroyerHelm: 'DestroyerHelm',
+  ConquerorCrown: 'ConquerorCrown',
+  GuardianCrown: 'GuardianCrown',
+};

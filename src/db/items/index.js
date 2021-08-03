@@ -5,6 +5,7 @@
 import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
 import axes from './axes.js';
+import barbarianHelms from './barbarian-helms.js';
 import belts from './belts.js';
 import bodyArmors from './body-armors.js';
 import boots from './boots.js';
@@ -42,6 +43,7 @@ export default {
   ...ammunitions,
   ...amulets,
   ...axes,
+  ...barbarianHelms,
   ...belts,
   ...bodyArmors,
   ...boots,
