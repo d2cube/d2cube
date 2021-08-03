@@ -23,6 +23,7 @@ export const ItemType = {
   Key: 'Key',
   Mace: 'Mace',
   Organ: 'Organ',
+  Polearm: 'Polearm',
   Potion: 'Potion',
   Ring: 'Ring',
   Rune: 'Rune',

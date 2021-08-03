@@ -22,6 +22,7 @@ import jewels from './jewels.js';
 import keys from './keys.js';
 import maces from './maces.js';
 import organs from './organs.js';
+import polearms from './polearms.js';
 import potions from './potions.js';
 import quests from './quests.js';
 import rings from './rings.js';
@@ -55,6 +56,7 @@ export default {
   ...keys,
   ...maces,
   ...organs,
+  ...polearms,
   ...potions,
   ...quests,
   ...rings,
