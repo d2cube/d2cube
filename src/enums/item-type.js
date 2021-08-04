@@ -5,6 +5,7 @@
 export const ItemType = {
   Ammunition: 'Ammunition',
   Amulet: 'Amulet',
+  AssassinKatar: 'AssassinKatar',
   Axe: 'Axe',
   BarbarianHelm: 'BarbarianHelm',
   Belt: 'Belt',
@@ -13,7 +14,6 @@ export const ItemType = {
   Bow: 'Bow',
   Charm: 'Charm',
   Circlet: 'Circlet',
-  Claw: 'Claw',
   Crossbow: 'Crossbow',
   Dagger: 'Dagger',
   Essence: 'Essence',

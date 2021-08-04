@@ -6,6 +6,7 @@
 
 import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
+import assassinKatars from './assassin-katars.js';
 import axes from './axes.js';
 import barbarianHelms from './barbarian-helms.js';
 import belts from './belts.js';
@@ -40,6 +41,7 @@ import wands from './wands.js';
 export default {
   ...amulets,
   ...ammunitions,
+  ...assassinKatars,
   ...axes,
   ...barbarianHelms,
   ...belts,
