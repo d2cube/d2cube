@@ -25,6 +25,7 @@ import helms from './helms.js';
 import javelins from './javelins.js';
 import jewels from './jewels.js';
 import maces from './maces.js';
+import necromancerHeads from './necromancer-heads.js';
 import polearms from './polearms.js';
 import potions from './potions.js';
 import quests from './quests.js';
@@ -63,6 +64,7 @@ export default {
   ...javelins,
   ...jewels,
   ...maces,
+  ...necromancerHeads,
   ...polearms,
   ...potions,
   ...quests,

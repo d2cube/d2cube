@@ -25,6 +25,7 @@ import javelins from './javelins.js';
 import jewels from './jewels.js';
 import keys from './keys.js';
 import maces from './maces.js';
+import necromancerHeads from './necromancer-heads.js';
 import organs from './organs.js';
 import polearms from './polearms.js';
 import potions from './potions.js';
@@ -67,6 +68,7 @@ export default {
   ...jewels,
   ...keys,
   ...maces,
+  ...necromancerHeads,
   ...organs,
   ...polearms,
   ...potions,
