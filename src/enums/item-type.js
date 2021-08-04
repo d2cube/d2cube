@@ -33,6 +33,7 @@ export const ItemType = {
   Scepter: 'Scepter',
   Scroll: 'Scroll',
   Shield: 'Shield',
+  SorceressOrb: 'SorceressOrb',
   Spear: 'Spear',
   Staff: 'Staff',
   Sword: 'Sword',

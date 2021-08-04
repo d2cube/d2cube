@@ -32,6 +32,7 @@ import runes from './runes.js';
 import scepters from './scepters.js';
 import scrolls from './scrolls.js';
 import shields from './shields.js';
+import sorceressOrbs from './sorceress-orbs.js';
 import spears from './spears.js';
 import staves from './staves.js';
 import swords from './swords.js';
@@ -71,6 +72,7 @@ export default {
   ...scepters,
   ...scrolls,
   ...shields,
+  ...sorceressOrbs,
   ...spears,
   ...staves,
   ...swords,

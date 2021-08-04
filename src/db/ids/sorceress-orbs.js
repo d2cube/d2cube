@@ -1,0 +1,17 @@
+export default {
+  EagleOrb: 'EagleOrb',
+  SacredGlobe: 'SacredGlobe',
+  SmokedSphere: 'SmokedSphere',
+  ClaspedOrb: 'ClaspedOrb',
+  JaredsStone: 'JaredsStone',
+  GlowingOrb: 'GlowingOrb',
+  CrystallineGlobe: 'CrystallineGlobe',
+  CloudySphere: 'CloudySphere',
+  SparklingBall: 'SparklingBall',
+  SwirlingCrystal: 'SwirlingCrystal',
+  HeavenlyStone: 'HeavenlyStone',
+  EldritchOrb: 'EldritchOrb',
+  DemonHeart: 'DemonHeart',
+  VortexOrb: 'VortexOrb',
+  DimensionalShard: 'DimensionalShard',
+};
