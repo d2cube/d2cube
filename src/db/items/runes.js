@@ -17,28 +17,16 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.AttackRating]: {
-            values: [50],
-          },
-          [MagicPropertyType.LightRadius]: {
-            values: [1],
-          },
+          [MagicPropertyType.AttackRating]: [50],
+          [MagicPropertyType.LightRadius]: [1],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Defense]: {
-            values: [15],
-          },
-          [MagicPropertyType.LightRadius]: {
-            values: [1],
-          },
+          [MagicPropertyType.Defense]: [15],
+          [MagicPropertyType.LightRadius]: [1],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: {
-            values: [15],
-          },
-          [MagicPropertyType.LightRadius]: {
-            values: [1],
-          },
+          [MagicPropertyType.Defense]: [15],
+          [MagicPropertyType.LightRadius]: [1],
         },
       },
     },
@@ -50,22 +38,14 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.DamageToUndead]: {
-            values: [75],
-          },
-          [MagicPropertyType.AttackRatingAgainstUndead]: {
-            values: [50],
-          },
+          [MagicPropertyType.DamageToUndead]: [75],
+          [MagicPropertyType.AttackRatingAgainstUndead]: [50],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.SlowerStaminaDrain]: {
-            values: [15],
-          },
+          [MagicPropertyType.SlowerStaminaDrain]: [15],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.IncreasedChanceOfBlocking]: {
-            values: [7],
-          },
+          [MagicPropertyType.IncreasedChanceOfBlocking]: [7],
         },
       },
     },
@@ -77,19 +57,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ManaAfterKill]: {
-            values: [2],
-          },
+          [MagicPropertyType.ManaAfterKill]: [2],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ManaAfterKill]: {
-            values: [2],
-          },
+          [MagicPropertyType.ManaAfterKill]: [2],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ManaAfterKill]: {
-            values: [2],
-          },
+          [MagicPropertyType.ManaAfterKill]: [2],
         },
       },
     },
@@ -101,19 +75,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Knockback]: {
-            values: [],
-          },
+          [MagicPropertyType.Knockback]: [],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DefenseVsMissle]: {
-            values: [30],
-          },
+          [MagicPropertyType.DefenseVsMissle]: [30],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DefenseVsMissle]: {
-            values: [30],
-          },
+          [MagicPropertyType.DefenseVsMissle]: [30],
         },
       },
     },
@@ -125,19 +93,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.TargetDefense]: {
-            values: [25],
-          },
+          [MagicPropertyType.TargetDefense]: [25],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.RegenerateMana]: {
-            values: [15],
-          },
+          [MagicPropertyType.RegenerateMana]: [15],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.RegenerateMana]: {
-            values: [15],
-          },
+          [MagicPropertyType.RegenerateMana]: [15],
         },
       },
     },
@@ -149,19 +111,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.MaximumDamage]: {
-            values: [9],
-          },
+          [MagicPropertyType.MaximumDamage]: [9],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DamageTakenGoesToMana]: {
-            values: [15],
-          },
+          [MagicPropertyType.DamageTakenGoesToMana]: [15],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DamageTakenGoesToMana]: {
-            values: [15],
-          },
+          [MagicPropertyType.DamageTakenGoesToMana]: [15],
         },
       },
     },
@@ -173,19 +129,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: {
-            values: [75, 5],
-          },
+          [MagicPropertyType.PoisonDamage]: [75, 5],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.PoisonResist]: {
-            values: [30],
-          },
+          [MagicPropertyType.PoisonResist]: [30],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.PoisonResist]: {
-            values: [35],
-          },
+          [MagicPropertyType.PoisonResist]: [35],
         },
       },
     },
@@ -197,19 +147,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: {
-            values: [5, 30],
-          },
+          [MagicPropertyType.FireDamage]: [5, 30],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.FireResist]: {
-            values: [30],
-          },
+          [MagicPropertyType.FireResist]: [30],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.FireResist]: {
-            values: [35],
-          },
+          [MagicPropertyType.FireResist]: [35],
         },
       },
     },
@@ -221,19 +165,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: {
-            values: [1, 50],
-          },
+          [MagicPropertyType.LightningDamage]: [1, 50],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.LightningResist]: {
-            values: [30],
-          },
+          [MagicPropertyType.LightningResist]: [30],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.LightningResist]: {
-            values: [35],
-          },
+          [MagicPropertyType.LightningResist]: [35],
         },
       },
     },
@@ -245,19 +183,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: {
-            values: [3, 14, 3],
-          },
+          [MagicPropertyType.ColdDamage]: [3, 14, 3],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ColdResist]: {
-            values: [30],
-          },
+          [MagicPropertyType.ColdResist]: [30],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ColdResist]: {
-            values: [35],
-          },
+          [MagicPropertyType.ColdResist]: [35],
         },
       },
     },
@@ -269,19 +201,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LifeStolenPerHit]: {
-            values: [7],
-          },
+          [MagicPropertyType.LifeStolenPerHit]: [7],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AttackerTakesDamage]: {
-            values: [14],
-          },
+          [MagicPropertyType.AttackerTakesDamage]: [14],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AttackerTakesDamage]: {
-            values: [14],
-          },
+          [MagicPropertyType.AttackerTakesDamage]: [14],
         },
       },
     },
@@ -293,19 +219,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.MinimumDamage]: {
-            values: [9],
-          },
+          [MagicPropertyType.MinimumDamage]: [9],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DamageReduced]: {
-            values: [7],
-          },
+          [MagicPropertyType.DamageReduced]: [7],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DamageReduced]: {
-            values: [7],
-          },
+          [MagicPropertyType.DamageReduced]: [7],
         },
       },
     },
@@ -317,19 +237,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.IncreasedAttackSpeed]: {
-            values: [20],
-          },
+          [MagicPropertyType.IncreasedAttackSpeed]: [20],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.FasterHitRecovery]: {
-            values: [20],
-          },
+          [MagicPropertyType.FasterHitRecovery]: [20],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.FasterBlockRate]: {
-            values: [20],
-          },
+          [MagicPropertyType.FasterBlockRate]: [20],
         },
       },
     },
@@ -341,19 +255,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.HitCausesMonsterToFlee]: {
-            values: [25],
-          },
+          [MagicPropertyType.HitCausesMonsterToFlee]: [25],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ReplenishLife]: {
-            values: [7],
-          },
+          [MagicPropertyType.ReplenishLife]: [7],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ReplenishLife]: {
-            values: [7],
-          },
+          [MagicPropertyType.ReplenishLife]: [7],
         },
       },
     },
@@ -364,19 +272,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Requirements]: {
-            values: [20],
-          },
+          [MagicPropertyType.Requirements]: [20],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Requirements]: {
-            values: [15],
-          },
+          [MagicPropertyType.Requirements]: [15],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Requirements]: {
-            values: [15],
-          },
+          [MagicPropertyType.Requirements]: [15],
         },
       },
     },
@@ -388,19 +290,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Vitality]: {
-            values: [10],
-          },
+          [MagicPropertyType.Vitality]: [10],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Vitality]: {
-            values: [10],
-          },
+          [MagicPropertyType.Vitality]: [10],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Vitality]: {
-            values: [10],
-          },
+          [MagicPropertyType.Vitality]: [10],
         },
       },
     },
@@ -412,19 +308,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Energy]: {
-            values: [10],
-          },
+          [MagicPropertyType.Energy]: [10],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Energy]: {
-            values: [10],
-          },
+          [MagicPropertyType.Energy]: [10],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Energy]: {
-            values: [10],
-          },
+          [MagicPropertyType.Energy]: [10],
         },
       },
     },
@@ -436,19 +326,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Dexterity]: {
-            values: [10],
-          },
+          [MagicPropertyType.Dexterity]: [10],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: {
-            values: [10],
-          },
+          [MagicPropertyType.Dexterity]: [10],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Dexterity]: {
-            values: [10],
-          },
+          [MagicPropertyType.Dexterity]: [10],
         },
       },
     },
@@ -460,19 +344,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Strength]: {
-            values: [10],
-          },
+          [MagicPropertyType.Strength]: [10],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: {
-            values: [10],
-          },
+          [MagicPropertyType.Strength]: [10],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Strength]: {
-            values: [10],
-          },
+          [MagicPropertyType.Strength]: [10],
         },
       },
     },
@@ -484,19 +362,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ExtraGold]: {
-            values: [75],
-          },
+          [MagicPropertyType.ExtraGold]: [75],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ExtraGold]: {
-            values: [50],
-          },
+          [MagicPropertyType.ExtraGold]: [50],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ExtraGold]: {
-            values: [50],
-          },
+          [MagicPropertyType.ExtraGold]: [50],
         },
       },
     },
@@ -508,22 +380,14 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.DamageToDemons]: {
-            values: [75],
-          },
-          [MagicPropertyType.AttackRatingAgainstDemons]: {
-            values: [100],
-          },
+          [MagicPropertyType.DamageToDemons]: [75],
+          [MagicPropertyType.AttackRatingAgainstDemons]: [100],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.EnhancedDefense]: {
-            values: [30],
-          },
+          [MagicPropertyType.EnhancedDefense]: [30],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.EnhancedDefense]: {
-            values: [30],
-          },
+          [MagicPropertyType.EnhancedDefense]: [30],
         },
       },
     },
@@ -535,19 +399,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.OpenWounds]: {
-            values: [25],
-          },
+          [MagicPropertyType.OpenWounds]: [25],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AllResistances]: {
-            values: [15],
-          },
+          [MagicPropertyType.AllResistances]: [15],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AllResistances]: {
-            values: [22],
-          },
+          [MagicPropertyType.AllResistances]: [22],
         },
       },
     },
@@ -559,19 +417,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PreventMonsterHeal]: {
-            values: [],
-          },
+          [MagicPropertyType.PreventMonsterHeal]: [],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MagicDamageReduced]: {
-            values: [7],
-          },
+          [MagicPropertyType.MagicDamageReduced]: [7],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MagicDamageReduced]: {
-            values: [7],
-          },
+          [MagicPropertyType.MagicDamageReduced]: [7],
         },
       },
     },
@@ -583,19 +435,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.MagicFind]: {
-            values: [30],
-          },
+          [MagicPropertyType.MagicFind]: [30],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MagicFind]: {
-            values: [25],
-          },
+          [MagicPropertyType.MagicFind]: [25],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MagicFind]: {
-            values: [25],
-          },
+          [MagicPropertyType.MagicFind]: [25],
         },
       },
     },
@@ -607,19 +453,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.BonusToAttackRating]: {
-            values: [20],
-          },
+          [MagicPropertyType.BonusToAttackRating]: [20],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumPoisonResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumPoisonResist]: [5],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumPoisonResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumPoisonResist]: [5],
         },
       },
     },
@@ -631,19 +471,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ManaStolenPerHit]: {
-            values: [7],
-          },
+          [MagicPropertyType.ManaStolenPerHit]: [7],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumFireResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumFireResist]: [5],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumFireResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumFireResist]: [5],
         },
       },
     },
@@ -655,19 +489,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.EnhancedDamage]: {
-            values: [50],
-          },
+          [MagicPropertyType.EnhancedDamage]: [50],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumColdResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumColdResist]: [5],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumColdResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumColdResist]: [5],
         },
       },
     },
@@ -679,19 +507,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.DeadlyStrike]: {
-            values: [20],
-          },
+          [MagicPropertyType.DeadlyStrike]: [20],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumLightningResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumLightningResist]: [5],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumLightningResist]: {
-            values: [5],
-          },
+          [MagicPropertyType.MaximumLightningResist]: [5],
         },
       },
     },
@@ -703,19 +525,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.HitBlindsTarget]: {
-            values: [],
-          },
+          [MagicPropertyType.HitBlindsTarget]: [],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.IncreaseMaximumMana]: {
-            values: [5],
-          },
+          [MagicPropertyType.IncreaseMaximumMana]: [5],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Mana]: {
-            values: [50],
-          },
+          [MagicPropertyType.Mana]: [50],
         },
       },
     },
@@ -727,19 +543,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.CrushingBlow]: {
-            values: [20],
-          },
+          [MagicPropertyType.CrushingBlow]: [20],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DamageReducedPercentage]: {
-            values: [8],
-          },
+          [MagicPropertyType.DamageReducedPercentage]: [8],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DamageReducedPercentage]: {
-            values: [8],
-          },
+          [MagicPropertyType.DamageReducedPercentage]: [8],
         },
       },
     },
@@ -751,19 +561,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.IgnoreTargetDefense]: {
-            values: [],
-          },
+          [MagicPropertyType.IgnoreTargetDefense]: [],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.IncreaseMaximumLife]: {
-            values: [5],
-          },
+          [MagicPropertyType.IncreaseMaximumLife]: [5],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Life]: {
-            values: [50],
-          },
+          [MagicPropertyType.Life]: [50],
         },
       },
     },
@@ -775,19 +579,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FreezesTarget]: {
-            values: [3],
-          },
+          [MagicPropertyType.FreezesTarget]: [3],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.CannotBeFrozen]: {
-            values: [],
-          },
+          [MagicPropertyType.CannotBeFrozen]: [],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.CannotBeFrozen]: {
-            values: [],
-          },
+          [MagicPropertyType.CannotBeFrozen]: [],
         },
       },
     },
@@ -799,19 +597,13 @@ export default createBaseItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Indestructible]: {
-            values: [],
-          },
+          [MagicPropertyType.Indestructible]: [],
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Indestructible]: {
-            values: [],
-          },
+          [MagicPropertyType.Indestructible]: [],
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Indestructible]: {
-            values: [],
-          },
+          [MagicPropertyType.Indestructible]: [],
         },
       },
     },

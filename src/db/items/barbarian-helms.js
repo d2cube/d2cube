@@ -20,18 +20,10 @@ export default createBaseItems({
     qlvl: 4,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [10, 15],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [25],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [10, 15],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [25],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -43,18 +35,10 @@ export default createBaseItems({
     qlvl: 8,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [15, 20],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [35],
-        },
-        [BasePropertyType.Durability]: {
-          values: [35],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [15, 20],
+        [BasePropertyType.MinimumStrength]: [35],
+        [BasePropertyType.Durability]: [35],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -66,18 +50,10 @@ export default createBaseItems({
     qlvl: 16,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [25, 30],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [45],
-        },
-        [BasePropertyType.Durability]: {
-          values: [45],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [25, 30],
+        [BasePropertyType.MinimumStrength]: [45],
+        [BasePropertyType.Durability]: [45],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -89,18 +65,10 @@ export default createBaseItems({
     qlvl: 20,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [30, 35],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [55],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [30, 35],
+        [BasePropertyType.MinimumStrength]: [55],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -112,18 +80,10 @@ export default createBaseItems({
     qlvl: 24,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [35, 50],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [65],
-        },
-        [BasePropertyType.Durability]: {
-          values: [55],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [35, 50],
+        [BasePropertyType.MinimumStrength]: [65],
+        [BasePropertyType.Durability]: [55],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -137,18 +97,10 @@ export default createBaseItems({
     imageId: ids.JawboneCap,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [55, 68],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [58],
-        },
-        [BasePropertyType.Durability]: {
-          values: [25],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [55, 68],
+        [BasePropertyType.MinimumStrength]: [58],
+        [BasePropertyType.Durability]: [25],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -162,18 +114,10 @@ export default createBaseItems({
     imageId: ids.FangedHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [63, 75],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [73],
-        },
-        [BasePropertyType.Durability]: {
-          values: [35],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [63, 75],
+        [BasePropertyType.MinimumStrength]: [73],
+        [BasePropertyType.Durability]: [35],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -187,18 +131,10 @@ export default createBaseItems({
     imageId: ids.HornedHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [78, 90],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [88],
-        },
-        [BasePropertyType.Durability]: {
-          values: [45],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [78, 90],
+        [BasePropertyType.MinimumStrength]: [88],
+        [BasePropertyType.Durability]: [45],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -212,18 +148,10 @@ export default createBaseItems({
     imageId: ids.AssaultHelmet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [85, 98],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [103],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [85, 98],
+        [BasePropertyType.MinimumStrength]: [103],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -237,18 +165,10 @@ export default createBaseItems({
     imageId: ids.AvengerGuard,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [93, 120],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [118],
-        },
-        [BasePropertyType.Durability]: {
-          values: [55],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [93, 120],
+        [BasePropertyType.MinimumStrength]: [118],
+        [BasePropertyType.Durability]: [55],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -262,18 +182,10 @@ export default createBaseItems({
     imageId: ids.JawboneCap,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [102, 147],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [106],
-        },
-        [BasePropertyType.Durability]: {
-          values: [25],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [102, 147],
+        [BasePropertyType.MinimumStrength]: [106],
+        [BasePropertyType.Durability]: [25],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -287,18 +199,10 @@ export default createBaseItems({
     imageId: ids.FangedHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [105, 150],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [129],
-        },
-        [BasePropertyType.Durability]: {
-          values: [35],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [105, 150],
+        [BasePropertyType.MinimumStrength]: [129],
+        [BasePropertyType.Durability]: [35],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -312,18 +216,10 @@ export default createBaseItems({
     imageId: ids.HornedHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [111, 156],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [151],
-        },
-        [BasePropertyType.Durability]: {
-          values: [45],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [111, 156],
+        [BasePropertyType.MinimumStrength]: [151],
+        [BasePropertyType.Durability]: [45],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -337,18 +233,10 @@ export default createBaseItems({
     imageId: ids.AssaultHelmet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [114, 159],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [174],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [114, 159],
+        [BasePropertyType.MinimumStrength]: [174],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -362,18 +250,10 @@ export default createBaseItems({
     imageId: ids.AvengerGuard,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [117, 168],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [196],
-        },
-        [BasePropertyType.Durability]: {
-          values: [55],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [117, 168],
+        [BasePropertyType.MinimumStrength]: [196],
+        [BasePropertyType.Durability]: [55],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },

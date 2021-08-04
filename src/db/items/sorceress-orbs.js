@@ -21,21 +21,11 @@ export default createBaseItems({
     size: [2, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [2, 5],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [2, 5],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -47,21 +37,11 @@ export default createBaseItems({
     size: [2, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [3, 8],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [30],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [3, 8],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.Durability]: [30],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -73,21 +53,11 @@ export default createBaseItems({
     size: [2, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [4, 10],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [35],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [4, 10],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [35],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -99,21 +69,11 @@ export default createBaseItems({
     size: [2, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [5, 12],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [40],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [5, 12],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [40],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -125,21 +85,11 @@ export default createBaseItems({
     size: [3, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [8, 18],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Damage1H]: [8, 18],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -154,21 +104,11 @@ export default createBaseItems({
     imageId: ids.EagleOrb,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [8, 21],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [8, 21],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -183,21 +123,11 @@ export default createBaseItems({
     imageId: ids.SacredGlobe,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [10, 26],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [30],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [10, 26],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.Durability]: [30],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -212,21 +142,11 @@ export default createBaseItems({
     imageId: ids.SmokedSphere,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [11, 29],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [35],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [11, 29],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [35],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -241,21 +161,11 @@ export default createBaseItems({
     imageId: ids.ClaspedOrb,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [13, 32],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [40],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [13, 32],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [40],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -270,21 +180,11 @@ export default createBaseItems({
     imageId: ids.JaredsStone,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [18, 42],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Damage1H]: [18, 42],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -299,21 +199,11 @@ export default createBaseItems({
     imageId: ids.EagleOrb,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [21, 46],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [21, 46],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -328,21 +218,11 @@ export default createBaseItems({
     imageId: ids.SacredGlobe,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [18, 50],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [30],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [18, 50],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.Durability]: [30],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -357,21 +237,11 @@ export default createBaseItems({
     imageId: ids.SmokedSphere,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [23, 55],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [35],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [23, 55],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [35],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -386,21 +256,11 @@ export default createBaseItems({
     imageId: ids.ClaspedOrb,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [12, 66],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [40],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [12, 66],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [40],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -415,21 +275,11 @@ export default createBaseItems({
     imageId: ids.JaredsStone,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [30, 53],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Damage1H]: [30, 53],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },

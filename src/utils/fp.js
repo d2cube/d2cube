@@ -11,6 +11,8 @@ export const fill = (n) => (f) => range(0)(n).map(f);
 
 export const fillNull = (n) => fill(n)(k(null));
 
+export const floor = (x) => Math.floor(x);
+
 export const join = (delimiter) => (xs) => xs.join(delimiter);
 
 export const isEmpty = (x) => x === null || x === undefined;

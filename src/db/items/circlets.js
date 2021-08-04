@@ -14,15 +14,9 @@ export default createBaseItems({
     qlvl: 24,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [20, 30],
-        },
-        [BasePropertyType.Durability]: {
-          values: [35],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [20, 30],
+        [BasePropertyType.Durability]: [35],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -35,15 +29,9 @@ export default createBaseItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [30, 40],
-        },
-        [BasePropertyType.Durability]: {
-          values: [30],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [30, 40],
+        [BasePropertyType.Durability]: [30],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -56,15 +44,9 @@ export default createBaseItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [40, 50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [25],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [40, 50],
+        [BasePropertyType.Durability]: [25],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -77,15 +59,9 @@ export default createBaseItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [50, 60],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [50, 60],
+        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },

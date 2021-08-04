@@ -16,21 +16,11 @@ export default createBaseItems({
     size: [3, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [1, 8],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [66],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Damage1H]: [1, 8],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.Durability]: [66],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },

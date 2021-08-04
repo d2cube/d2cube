@@ -19,21 +19,11 @@ export default createBaseItems({
     qlvl: 2,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [2, 4],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [1],
-        },
+        [BasePropertyType.Damage1H]: [2, 4],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [1],
       },
     },
   },
@@ -44,21 +34,11 @@ export default createBaseItems({
     qlvl: 12,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [2, 8],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [1],
-        },
+        [BasePropertyType.Damage1H]: [2, 8],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [1],
       },
     },
   },
@@ -69,21 +49,11 @@ export default createBaseItems({
     qlvl: 18,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [3, 7],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-20],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [3, 7],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-20],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -94,21 +64,11 @@ export default createBaseItems({
     qlvl: 26,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [5, 11],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [5, 11],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -122,24 +82,12 @@ export default createBaseItems({
     imageId: ids.Wand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [8, 18],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [1],
-        },
+        [BasePropertyType.Damage1H]: [8, 18],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [1],
       },
     },
   },
@@ -153,24 +101,12 @@ export default createBaseItems({
     imageId: ids.YewWand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [8, 24],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [8, 24],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -184,24 +120,12 @@ export default createBaseItems({
     imageId: ids.BoneWand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [10, 22],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-20],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [10, 22],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-20],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -215,24 +139,12 @@ export default createBaseItems({
     imageId: ids.GrimWand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [13, 29],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [15],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [13, 29],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [15],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -246,24 +158,12 @@ export default createBaseItems({
     imageId: ids.Wand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [18, 33],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [22],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [18, 33],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [22],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -277,24 +177,12 @@ export default createBaseItems({
     imageId: ids.YewWand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [20, 42],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [20, 42],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [14],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -308,24 +196,12 @@ export default createBaseItems({
     imageId: ids.BoneWand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [10, 31],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-20],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [17],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [10, 31],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [-20],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [17],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -339,24 +215,12 @@ export default createBaseItems({
     imageId: ids.GrimWand,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [22, 28],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [1],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Damage1H]: [22, 28],
+        [BasePropertyType.MeleeRange]: [1],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [18],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },

@@ -1,40 +1,25 @@
+import {k} from 'uinix-fp';
+
 import {BasePropertyType} from '../../enums/index.js';
 
-export const resolveBaseProperty = (item) => (entry) => {
-  const property = entry[0];
-  const {values} = entry[1];
+export const resolveBaseProperty =
+  (item) =>
+  ([property, values]) => {
+    const serializer = serializers[property] || k('');
+    return serializer(values, item);
+  };
 
-  // TODO: remove this guard after refactor
-  if (!values) {
-    return '';
-  }
-
-  const [x, y] = values;
-
-  switch (property) {
-    case BasePropertyType.AttackSpeed:
-      return `${item.class} Class - ${getAttackSpeedDescription(
-        x,
-      )} Attack Speed`;
-    case BasePropertyType.BlockChance:
-      return `Chance to Block: ${x}%`;
-    case BasePropertyType.Damage1H:
-      return `One-hand Damage: ${x} to ${y}`;
-    case BasePropertyType.Damage2H:
-      return `Two-hand Damage: ${x} to ${y}`;
-    case BasePropertyType.DamageThrow:
-      return `Throw Damage: ${x} to ${y}`;
-    case BasePropertyType.Defense:
-      return `Defense: ${x}`;
-    case BasePropertyType.Durability:
-      return `Durability: ${x} of ${x}`;
-    case BasePropertyType.MinimumDexterity:
-      return `Required Dexterity: ${x}`;
-    case BasePropertyType.MinimumStrength:
-      return `Required Strength: ${x}`;
-    default:
-      return '';
-  }
+const serializers = {
+  [BasePropertyType.AttackSpeed]: ([x], item) =>
+    `Class ${item.class} - ${getAttackSpeedDescription(x)} Attack Speed`,
+  [BasePropertyType.BlockChance]: ([x]) => `Chance to Block: ${x}%`,
+  [BasePropertyType.Damage1H]: ([x, y]) => `One-hand Damage: ${x} to ${y}`,
+  [BasePropertyType.Damage2H]: ([x, y]) => `Two-hand Damage: ${x} to ${y}`,
+  [BasePropertyType.DamageThrow]: ([x, y]) => `Throw Damage: ${x} to ${y}`,
+  [BasePropertyType.Defense]: ([x]) => `Defense: ${x}`,
+  [BasePropertyType.Durability]: ([x]) => `Durability: ${x} of ${x}`,
+  [BasePropertyType.MinimumDexterity]: ([x]) => `Required Dexterity: ${x}`,
+  [BasePropertyType.MinimumStrength]: ([x]) => `Required Strength: ${x}`,
 };
 
 // TODO: confirm logic

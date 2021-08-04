@@ -20,18 +20,10 @@ export default createBaseItems({
     qlvl: 1,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [8, 11],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [12],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [8, 11],
+        [BasePropertyType.MinimumStrength]: [12],
+        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -43,18 +35,10 @@ export default createBaseItems({
     qlvl: 3,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [14, 17],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [15],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [14, 17],
+        [BasePropertyType.MinimumStrength]: [15],
+        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -66,18 +50,10 @@ export default createBaseItems({
     qlvl: 5,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [21, 24],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [20],
-        },
-        [BasePropertyType.Durability]: {
-          values: [28],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [21, 24],
+        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.Durability]: [28],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -89,18 +65,10 @@ export default createBaseItems({
     qlvl: 8,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [32, 35],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [27],
-        },
-        [BasePropertyType.Durability]: {
-          values: [32],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [32, 35],
+        [BasePropertyType.MinimumStrength]: [27],
+        [BasePropertyType.Durability]: [32],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -112,18 +80,10 @@ export default createBaseItems({
     qlvl: 11,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [45, 48],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [36],
-        },
-        [BasePropertyType.Durability]: {
-          values: [26],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [45, 48],
+        [BasePropertyType.MinimumStrength]: [36],
+        [BasePropertyType.Durability]: [26],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -135,18 +95,10 @@ export default createBaseItems({
     qlvl: 13,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [57, 60],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [44],
-        },
-        [BasePropertyType.Durability]: {
-          values: [36],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [57, 60],
+        [BasePropertyType.MinimumStrength]: [44],
+        [BasePropertyType.Durability]: [36],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -158,18 +110,10 @@ export default createBaseItems({
     qlvl: 15,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [72, 75],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [48],
-        },
-        [BasePropertyType.Durability]: {
-          values: [45],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [72, 75],
+        [BasePropertyType.MinimumStrength]: [48],
+        [BasePropertyType.Durability]: [45],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -181,18 +125,10 @@ export default createBaseItems({
     qlvl: 18,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [65, 68],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [30],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [65, 68],
+        [BasePropertyType.MinimumStrength]: [30],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -204,18 +140,10 @@ export default createBaseItems({
     qlvl: 20,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [90, 95],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [51],
-        },
-        [BasePropertyType.Durability]: {
-          values: [30],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [90, 95],
+        [BasePropertyType.MinimumStrength]: [51],
+        [BasePropertyType.Durability]: [30],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -227,18 +155,10 @@ export default createBaseItems({
     qlvl: 24,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [108, 116],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [65],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [108, 116],
+        [BasePropertyType.MinimumStrength]: [65],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -250,18 +170,10 @@ export default createBaseItems({
     qlvl: 28,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [101, 105],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [55],
-        },
-        [BasePropertyType.Durability]: {
-          values: [48],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [101, 105],
+        [BasePropertyType.MinimumStrength]: [55],
+        [BasePropertyType.Durability]: [48],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -273,18 +185,10 @@ export default createBaseItems({
     qlvl: 32,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [128, 135],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [70],
-        },
-        [BasePropertyType.Durability]: {
-          values: [55],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [128, 135],
+        [BasePropertyType.MinimumStrength]: [70],
+        [BasePropertyType.Durability]: [55],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -296,18 +200,10 @@ export default createBaseItems({
     qlvl: 35,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [90, 107],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [41],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [90, 107],
+        [BasePropertyType.MinimumStrength]: [41],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -319,18 +215,10 @@ export default createBaseItems({
     qlvl: 37,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [150, 161],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [80],
-        },
-        [BasePropertyType.Durability]: {
-          values: [70],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [150, 161],
+        [BasePropertyType.MinimumStrength]: [80],
+        [BasePropertyType.Durability]: [70],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -342,18 +230,10 @@ export default createBaseItems({
     qlvl: 40,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [218, 233],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [100],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [218, 233],
+        [BasePropertyType.MinimumStrength]: [100],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -368,18 +248,10 @@ export default createBaseItems({
     imageId: ids.QuiltedArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [102, 117],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [38],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [102, 117],
+        [BasePropertyType.MinimumStrength]: [38],
+        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -394,18 +266,10 @@ export default createBaseItems({
     imageId: ids.LeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [111, 126],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [43],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [111, 126],
+        [BasePropertyType.MinimumStrength]: [43],
+        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -420,18 +284,10 @@ export default createBaseItems({
     imageId: ids.HardLeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [122, 136],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [28],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [122, 136],
+        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.Durability]: [28],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -446,18 +302,10 @@ export default createBaseItems({
     imageId: ids.StuddedLeather,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [138, 153],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [61],
-        },
-        [BasePropertyType.Durability]: {
-          values: [32],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [2],
-        },
+        [BasePropertyType.Defense]: [138, 153],
+        [BasePropertyType.MinimumStrength]: [61],
+        [BasePropertyType.Durability]: [32],
+        [BasePropertyType.MaxSockets]: [2],
       },
     },
   },
@@ -472,18 +320,10 @@ export default createBaseItems({
     imageId: ids.ChainMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [158, 172],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [74],
-        },
-        [BasePropertyType.Durability]: {
-          values: [26],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [158, 172],
+        [BasePropertyType.MinimumStrength]: [74],
+        [BasePropertyType.Durability]: [26],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -498,18 +338,10 @@ export default createBaseItems({
     imageId: ids.ScaleMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [176, 190],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [86],
-        },
-        [BasePropertyType.Durability]: {
-          values: [36],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [176, 190],
+        [BasePropertyType.MinimumStrength]: [86],
+        [BasePropertyType.Durability]: [36],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -524,18 +356,10 @@ export default createBaseItems({
     imageId: ids.RingMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [198, 213],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [92],
-        },
-        [BasePropertyType.Durability]: {
-          values: [45],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [198, 213],
+        [BasePropertyType.MinimumStrength]: [92],
+        [BasePropertyType.Durability]: [45],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -550,18 +374,10 @@ export default createBaseItems({
     imageId: ids.BreastPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [188, 202],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [65],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [188, 202],
+        [BasePropertyType.MinimumStrength]: [65],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -576,18 +392,10 @@ export default createBaseItems({
     imageId: ids.SplintMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [225, 243],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [97],
-        },
-        [BasePropertyType.Durability]: {
-          values: [30],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [225, 243],
+        [BasePropertyType.MinimumStrength]: [97],
+        [BasePropertyType.Durability]: [30],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -602,18 +410,10 @@ export default createBaseItems({
     imageId: ids.PlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [252, 274],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [118],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [252, 274],
+        [BasePropertyType.MinimumStrength]: [118],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -628,18 +428,10 @@ export default createBaseItems({
     imageId: ids.FieldPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [242, 258],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [103],
-        },
-        [BasePropertyType.Durability]: {
-          values: [48],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [242, 258],
+        [BasePropertyType.MinimumStrength]: [103],
+        [BasePropertyType.Durability]: [48],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -654,18 +446,10 @@ export default createBaseItems({
     imageId: ids.GothicPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [282, 303],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [125],
-        },
-        [BasePropertyType.Durability]: {
-          values: [55],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [282, 303],
+        [BasePropertyType.MinimumStrength]: [125],
+        [BasePropertyType.Durability]: [55],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -680,18 +464,10 @@ export default createBaseItems({
     imageId: ids.LightPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [225, 261],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [55],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Defense]: [225, 261],
+        [BasePropertyType.MinimumStrength]: [55],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -706,18 +482,10 @@ export default createBaseItems({
     imageId: ids.FullPlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [315, 342],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [140],
-        },
-        [BasePropertyType.Durability]: {
-          values: [70],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [315, 342],
+        [BasePropertyType.MinimumStrength]: [140],
+        [BasePropertyType.Durability]: [70],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -732,18 +500,10 @@ export default createBaseItems({
     imageId: ids.AncientArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [417, 450],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [170],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [417, 450],
+        [BasePropertyType.MinimumStrength]: [170],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -758,18 +518,10 @@ export default createBaseItems({
     imageId: ids.QuiltedArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [361, 467],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [77],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [361, 467],
+        [BasePropertyType.MinimumStrength]: [77],
+        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -784,18 +536,10 @@ export default createBaseItems({
     imageId: ids.LeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [364, 470],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [84],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [364, 470],
+        [BasePropertyType.MinimumStrength]: [84],
+        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -810,18 +554,10 @@ export default createBaseItems({
     imageId: ids.HardLeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [369, 474],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [95],
-        },
-        [BasePropertyType.Durability]: {
-          values: [28],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [369, 474],
+        [BasePropertyType.MinimumStrength]: [95],
+        [BasePropertyType.Durability]: [28],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -836,18 +572,10 @@ export default createBaseItems({
     imageId: ids.StuddedLeather,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [375, 481],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [111],
-        },
-        [BasePropertyType.Durability]: {
-          values: [70],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [375, 481],
+        [BasePropertyType.MinimumStrength]: [111],
+        [BasePropertyType.Durability]: [70],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -862,18 +590,10 @@ export default createBaseItems({
     imageId: ids.ChainMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [383, 489],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [131],
-        },
-        [BasePropertyType.Durability]: {
-          values: [26],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [383, 489],
+        [BasePropertyType.MinimumStrength]: [131],
+        [BasePropertyType.Durability]: [26],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -888,18 +608,10 @@ export default createBaseItems({
     imageId: ids.ScaleMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [390, 496],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [149],
-        },
-        [BasePropertyType.Durability]: {
-          values: [36],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [390, 496],
+        [BasePropertyType.MinimumStrength]: [149],
+        [BasePropertyType.Durability]: [36],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -914,18 +626,10 @@ export default createBaseItems({
     imageId: ids.RingMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [399, 505],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [158],
-        },
-        [BasePropertyType.Durability]: {
-          values: [45],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [399, 505],
+        [BasePropertyType.MinimumStrength]: [158],
+        [BasePropertyType.Durability]: [45],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -940,18 +644,10 @@ export default createBaseItems({
     imageId: ids.BreastPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [395, 501],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [118],
-        },
-        [BasePropertyType.Durability]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [395, 501],
+        [BasePropertyType.MinimumStrength]: [118],
+        [BasePropertyType.Durability]: [50],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -966,18 +662,10 @@ export default createBaseItems({
     imageId: ids.SplintMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [410, 517],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [165],
-        },
-        [BasePropertyType.Durability]: {
-          values: [30],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [410, 517],
+        [BasePropertyType.MinimumStrength]: [165],
+        [BasePropertyType.Durability]: [30],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -992,18 +680,10 @@ export default createBaseItems({
     imageId: ids.PlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [421, 530],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [196],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [421, 530],
+        [BasePropertyType.MinimumStrength]: [196],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -1018,18 +698,10 @@ export default createBaseItems({
     imageId: ids.FieldPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [417, 523],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [174],
-        },
-        [BasePropertyType.Durability]: {
-          values: [48],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [417, 523],
+        [BasePropertyType.MinimumStrength]: [174],
+        [BasePropertyType.Durability]: [48],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -1044,18 +716,10 @@ export default createBaseItems({
     imageId: ids.GothicPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [433, 541],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [208],
-        },
-        [BasePropertyType.Durability]: {
-          values: [55],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [433, 541],
+        [BasePropertyType.MinimumStrength]: [208],
+        [BasePropertyType.Durability]: [55],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -1070,18 +734,10 @@ export default createBaseItems({
     imageId: ids.LightPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [410, 524],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [103],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [410, 524],
+        [BasePropertyType.MinimumStrength]: [103],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -1096,18 +752,10 @@ export default createBaseItems({
     imageId: ids.FullPlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [446, 557],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [230],
-        },
-        [BasePropertyType.Durability]: {
-          values: [70],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [446, 557],
+        [BasePropertyType.MinimumStrength]: [230],
+        [BasePropertyType.Durability]: [70],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -1122,18 +770,10 @@ export default createBaseItems({
     imageId: ids.AncientArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [487, 600],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [232],
-        },
-        [BasePropertyType.Durability]: {
-          values: [60],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Defense]: [487, 600],
+        [BasePropertyType.MinimumStrength]: [232],
+        [BasePropertyType.Durability]: [60],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },

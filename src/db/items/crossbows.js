@@ -19,21 +19,11 @@ export default createBaseItems({
     size: [3, 2],
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [6, 9],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [21],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [27],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Damage2H]: [6, 9],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumStrength]: [21],
+        [BasePropertyType.MinimumDexterity]: [27],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -45,21 +35,11 @@ export default createBaseItems({
     size: [3, 2],
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [9, 16],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [40],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [33],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Damage2H]: [9, 16],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [40],
+        [BasePropertyType.MinimumDexterity]: [33],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -71,21 +51,11 @@ export default createBaseItems({
     size: [4, 2],
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [14, 26],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [60],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [40],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [6],
-        },
+        [BasePropertyType.Damage2H]: [14, 26],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [60],
+        [BasePropertyType.MinimumDexterity]: [40],
+        [BasePropertyType.MaxSockets]: [6],
       },
     },
   },
@@ -97,21 +67,11 @@ export default createBaseItems({
     size: [3, 2],
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [6, 12],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-40],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [40],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [50],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [5],
-        },
+        [BasePropertyType.Damage2H]: [6, 12],
+        [BasePropertyType.AttackSpeed]: [-40],
+        [BasePropertyType.MinimumStrength]: [40],
+        [BasePropertyType.MinimumDexterity]: [50],
+        [BasePropertyType.MaxSockets]: [5],
       },
     },
   },
@@ -126,21 +86,11 @@ export default createBaseItems({
     imageId: ids.LightCrossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [14, 27],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [52],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [61],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Damage2H]: [14, 27],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumStrength]: [52],
+        [BasePropertyType.MinimumDexterity]: [61],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -155,21 +105,11 @@ export default createBaseItems({
     imageId: ids.Crossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [20, 42],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [80],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [70],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Damage2H]: [20, 42],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [80],
+        [BasePropertyType.MinimumDexterity]: [70],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -184,21 +124,11 @@ export default createBaseItems({
     imageId: ids.HeavyCrossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [35, 55],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [110],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [80],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [6],
-        },
+        [BasePropertyType.Damage2H]: [35, 55],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [110],
+        [BasePropertyType.MinimumDexterity]: [80],
+        [BasePropertyType.MaxSockets]: [6],
       },
     },
   },
@@ -213,21 +143,11 @@ export default createBaseItems({
     imageId: ids.RepeatingCrossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [14, 32],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-60],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [80],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [95],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [5],
-        },
+        [BasePropertyType.Damage2H]: [14, 32],
+        [BasePropertyType.AttackSpeed]: [-60],
+        [BasePropertyType.MinimumStrength]: [80],
+        [BasePropertyType.MinimumDexterity]: [95],
+        [BasePropertyType.MaxSockets]: [5],
       },
     },
   },
@@ -242,21 +162,11 @@ export default createBaseItems({
     imageId: ids.LightCrossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [28, 73],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [83],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [155],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [3],
-        },
+        [BasePropertyType.Damage2H]: [28, 73],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumStrength]: [83],
+        [BasePropertyType.MinimumDexterity]: [155],
+        [BasePropertyType.MaxSockets]: [3],
       },
     },
   },
@@ -271,21 +181,11 @@ export default createBaseItems({
     imageId: ids.Crossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [25, 87],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [117],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [105],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [4],
-        },
+        [BasePropertyType.Damage2H]: [25, 87],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [117],
+        [BasePropertyType.MinimumDexterity]: [105],
+        [BasePropertyType.MaxSockets]: [4],
       },
     },
   },
@@ -300,21 +200,11 @@ export default createBaseItems({
     imageId: ids.HeavyCrossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [32, 91],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [163],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [77],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [6],
-        },
+        [BasePropertyType.Damage2H]: [32, 91],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [163],
+        [BasePropertyType.MinimumDexterity]: [77],
+        [BasePropertyType.MaxSockets]: [6],
       },
     },
   },
@@ -329,21 +219,11 @@ export default createBaseItems({
     imageId: ids.RepeatingCrossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {
-          values: [26, 40],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-60],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [141],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [98],
-        },
-        [BasePropertyType.MaxSockets]: {
-          values: [5],
-        },
+        [BasePropertyType.Damage2H]: [26, 40],
+        [BasePropertyType.AttackSpeed]: [-60],
+        [BasePropertyType.MinimumStrength]: [141],
+        [BasePropertyType.MinimumDexterity]: [98],
+        [BasePropertyType.MaxSockets]: [5],
       },
     },
   },

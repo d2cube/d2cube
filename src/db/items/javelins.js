@@ -19,15 +19,9 @@ export default createBaseItems({
     size: [3, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [1, 5],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
+        [BasePropertyType.Damage1H]: [1, 5],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [-10],
       },
     },
   },
@@ -39,18 +33,10 @@ export default createBaseItems({
     size: [3, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [4, 9],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [45],
-        },
+        [BasePropertyType.Damage1H]: [4, 9],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumDexterity]: [45],
       },
     },
   },
@@ -62,21 +48,11 @@ export default createBaseItems({
     size: [3, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [2, 13],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [40],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [40],
-        },
+        [BasePropertyType.Damage1H]: [2, 13],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [40],
+        [BasePropertyType.MinimumDexterity]: [40],
       },
     },
   },
@@ -88,21 +64,11 @@ export default createBaseItems({
     size: [4, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [5, 17],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [20],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [52],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [35],
-        },
+        [BasePropertyType.Damage1H]: [5, 17],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [20],
+        [BasePropertyType.MinimumStrength]: [52],
+        [BasePropertyType.MinimumDexterity]: [35],
       },
     },
   },
@@ -114,18 +80,10 @@ export default createBaseItems({
     size: [4, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [5, 15],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [65],
-        },
+        [BasePropertyType.Damage1H]: [5, 15],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumDexterity]: [65],
       },
     },
   },
@@ -140,21 +98,11 @@ export default createBaseItems({
     imageId: ids.Javelin,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [6, 19],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [25],
-        },
+        [BasePropertyType.Damage1H]: [6, 19],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.MinimumDexterity]: [25],
       },
     },
   },
@@ -169,21 +117,11 @@ export default createBaseItems({
     imageId: ids.Pilum,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [11, 26],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [88],
-        },
+        [BasePropertyType.Damage1H]: [11, 26],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.MinimumDexterity]: [88],
       },
     },
   },
@@ -198,21 +136,11 @@ export default createBaseItems({
     imageId: ids.ShortSpear,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [8, 32],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [80],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [80],
-        },
+        [BasePropertyType.Damage1H]: [8, 32],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [80],
+        [BasePropertyType.MinimumDexterity]: [80],
       },
     },
   },
@@ -227,21 +155,11 @@ export default createBaseItems({
     imageId: ids.Glaive,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [13, 38],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [20],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [98],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [73],
-        },
+        [BasePropertyType.Damage1H]: [13, 38],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [20],
+        [BasePropertyType.MinimumStrength]: [98],
+        [BasePropertyType.MinimumDexterity]: [73],
       },
     },
   },
@@ -256,21 +174,11 @@ export default createBaseItems({
     imageId: ids.ThrowingSpear,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [13, 35],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [118],
-        },
+        [BasePropertyType.Damage1H]: [13, 35],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.MinimumDexterity]: [118],
       },
     },
   },
@@ -285,21 +193,11 @@ export default createBaseItems({
     imageId: ids.Javelin,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [21, 57],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [98],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [123],
-        },
+        [BasePropertyType.Damage1H]: [21, 57],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumStrength]: [98],
+        [BasePropertyType.MinimumDexterity]: [123],
       },
     },
   },
@@ -314,21 +212,11 @@ export default createBaseItems({
     imageId: ids.Pilum,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [14, 64],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [0],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [118],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [112],
-        },
+        [BasePropertyType.Damage1H]: [14, 64],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [0],
+        [BasePropertyType.MinimumStrength]: [118],
+        [BasePropertyType.MinimumDexterity]: [112],
       },
     },
   },
@@ -343,21 +231,11 @@ export default createBaseItems({
     imageId: ids.ShortSpear,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [33, 63],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [127],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [95],
-        },
+        [BasePropertyType.Damage1H]: [33, 63],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [10],
+        [BasePropertyType.MinimumStrength]: [127],
+        [BasePropertyType.MinimumDexterity]: [95],
       },
     },
   },
@@ -372,21 +250,11 @@ export default createBaseItems({
     imageId: ids.Glaive,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [19, 60],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [20],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [89],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [137],
-        },
+        [BasePropertyType.Damage1H]: [19, 60],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [20],
+        [BasePropertyType.MinimumStrength]: [89],
+        [BasePropertyType.MinimumDexterity]: [137],
       },
     },
   },
@@ -401,21 +269,11 @@ export default createBaseItems({
     imageId: ids.ThrowingSpear,
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: {
-          values: [27, 35],
-        },
-        [BasePropertyType.MeleeRange]: {
-          values: [3],
-        },
-        [BasePropertyType.AttackSpeed]: {
-          values: [-10],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [76],
-        },
-        [BasePropertyType.MinimumDexterity]: {
-          values: [145],
-        },
+        [BasePropertyType.Damage1H]: [27, 35],
+        [BasePropertyType.MeleeRange]: [3],
+        [BasePropertyType.AttackSpeed]: [-10],
+        [BasePropertyType.MinimumStrength]: [76],
+        [BasePropertyType.MinimumDexterity]: [145],
       },
     },
   },

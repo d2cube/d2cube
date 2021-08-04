@@ -13,12 +13,8 @@ export default createBaseItems({
     qlvl: 3,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [2, 3],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [2, 3],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -29,12 +25,8 @@ export default createBaseItems({
     qlvl: 7,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [5, 6],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [5, 6],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -45,15 +37,9 @@ export default createBaseItems({
     qlvl: 12,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [8, 9],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [8, 9],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -64,15 +50,9 @@ export default createBaseItems({
     qlvl: 20,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [9, 11],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [45],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [9, 11],
+        [BasePropertyType.MinimumStrength]: [45],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -83,15 +63,9 @@ export default createBaseItems({
     qlvl: 27,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [12, 15],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [60],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [12, 15],
+        [BasePropertyType.MinimumStrength]: [60],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },
@@ -105,15 +79,9 @@ export default createBaseItems({
     imageId: ids.LeatherGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [28, 35],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [20],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [28, 35],
+        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -127,15 +95,9 @@ export default createBaseItems({
     imageId: ids.HeavyGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [33, 39],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [20],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [33, 39],
+        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -149,15 +111,9 @@ export default createBaseItems({
     imageId: ids.ChainGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [37, 44],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [58],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [37, 44],
+        [BasePropertyType.MinimumStrength]: [58],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -171,15 +127,9 @@ export default createBaseItems({
     imageId: ids.LightGauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [39, 47],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [88],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [39, 47],
+        [BasePropertyType.MinimumStrength]: [88],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -193,15 +143,9 @@ export default createBaseItems({
     imageId: ids.Gauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [43, 53],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [110],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [43, 53],
+        [BasePropertyType.MinimumStrength]: [110],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },
@@ -215,15 +159,9 @@ export default createBaseItems({
     imageId: ids.LeatherGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [54, 62],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [54, 62],
+        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -237,15 +175,9 @@ export default createBaseItems({
     imageId: ids.HeavyGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [56, 65],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [56, 65],
+        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -259,15 +191,9 @@ export default createBaseItems({
     imageId: ids.ChainGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [59, 67],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [106],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [59, 67],
+        [BasePropertyType.MinimumStrength]: [106],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -281,15 +207,9 @@ export default createBaseItems({
     imageId: ids.LightGauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [59, 68],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [151],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [59, 68],
+        [BasePropertyType.MinimumStrength]: [151],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -303,15 +223,9 @@ export default createBaseItems({
     imageId: ids.Gauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [62, 71],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [185],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [62, 71],
+        [BasePropertyType.MinimumStrength]: [185],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },

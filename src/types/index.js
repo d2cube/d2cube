@@ -39,12 +39,9 @@ export {};
  */
 
 /**
- * @typedef Values
+ * @typedef {number[]|Array<number[]>} Values
  *    Values are always represented as numbers.
- *    Specify min/max values to specify the range.
- *    @property {number[]} [min]
- *    @property {number[]} [max]
- *    @property {number[]} values
+ *    Ranges are represented as array of Values.
  *
  * @typedef Properties
  *    Items have properties defined as a map of enums to multi-variadic values.

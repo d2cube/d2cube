@@ -13,12 +13,8 @@ export default createBaseItems({
     qlvl: 3,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [2, 3],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [2, 3],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -29,15 +25,9 @@ export default createBaseItems({
     qlvl: 7,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [5, 6],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [18],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [5, 6],
+        [BasePropertyType.MinimumStrength]: [18],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -48,15 +38,9 @@ export default createBaseItems({
     qlvl: 12,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [8, 9],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [30],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [8, 9],
+        [BasePropertyType.MinimumStrength]: [30],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -67,15 +51,9 @@ export default createBaseItems({
     qlvl: 20,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [9, 11],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [9, 11],
+        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -86,15 +64,9 @@ export default createBaseItems({
     qlvl: 27,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [12, 15],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [70],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [12, 15],
+        [BasePropertyType.MinimumStrength]: [70],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },
@@ -108,15 +80,9 @@ export default createBaseItems({
     imageId: ids.Boots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [28, 35],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [20],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [28, 35],
+        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -130,15 +96,9 @@ export default createBaseItems({
     imageId: ids.HeavyBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [33, 39],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [47],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [33, 39],
+        [BasePropertyType.MinimumStrength]: [47],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -152,15 +112,9 @@ export default createBaseItems({
     imageId: ids.ChainBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [37, 44],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [65],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [37, 44],
+        [BasePropertyType.MinimumStrength]: [65],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -174,15 +128,9 @@ export default createBaseItems({
     imageId: ids.LightPlatedBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [39, 47],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [95],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [39, 47],
+        [BasePropertyType.MinimumStrength]: [95],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -196,15 +144,9 @@ export default createBaseItems({
     imageId: ids.Greaves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [43, 53],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [125],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [43, 53],
+        [BasePropertyType.MinimumStrength]: [125],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },
@@ -218,15 +160,9 @@ export default createBaseItems({
     imageId: ids.Boots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [54, 62],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [54, 62],
+        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -240,15 +176,9 @@ export default createBaseItems({
     qlvl: 66,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [56, 65],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [91],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [56, 65],
+        [BasePropertyType.MinimumStrength]: [91],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -262,15 +192,9 @@ export default createBaseItems({
     imageId: ids.ChainBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [59, 67],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [118],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [59, 67],
+        [BasePropertyType.MinimumStrength]: [118],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -284,15 +208,9 @@ export default createBaseItems({
     imageId: ids.LightPlatedBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [59, 68],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [163],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [59, 68],
+        [BasePropertyType.MinimumStrength]: [163],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -306,15 +224,9 @@ export default createBaseItems({
     imageId: ids.Greaves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [62, 71],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [208],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [62, 71],
+        [BasePropertyType.MinimumStrength]: [208],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },

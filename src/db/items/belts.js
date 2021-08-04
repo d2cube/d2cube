@@ -13,15 +13,9 @@ export default createBaseItems({
     qlvl: 3,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [2],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [8],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [2],
+        [BasePropertyType.PotionSlots]: [8],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -32,15 +26,9 @@ export default createBaseItems({
     qlvl: 7,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [3],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [8],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [3],
+        [BasePropertyType.PotionSlots]: [8],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -51,18 +39,10 @@ export default createBaseItems({
     qlvl: 12,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [5],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [12],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [25],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [5],
+        [BasePropertyType.PotionSlots]: [12],
+        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -73,18 +53,10 @@ export default createBaseItems({
     qlvl: 18,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [6],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [12],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [45],
-        },
-        [BasePropertyType.Durability]: {
-          values: [20],
-        },
+        [BasePropertyType.Defense]: [6],
+        [BasePropertyType.PotionSlots]: [12],
+        [BasePropertyType.MinimumStrength]: [45],
+        [BasePropertyType.Durability]: [20],
       },
     },
   },
@@ -95,18 +67,10 @@ export default createBaseItems({
     qlvl: 27,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [8, 11],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [60],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [8, 11],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [60],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },
@@ -120,18 +84,10 @@ export default createBaseItems({
     imageId: ids.Sash,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [29, 34],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [20],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [29, 34],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -145,18 +101,10 @@ export default createBaseItems({
     imageId: ids.LightBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [31, 36],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [20],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [31, 36],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -170,18 +118,10 @@ export default createBaseItems({
     imageId: ids.Belt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [35, 40],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [58],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [35, 40],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [58],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -195,18 +135,10 @@ export default createBaseItems({
     imageId: ids.HeavyBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [37, 42],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [88],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [37, 42],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [88],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -220,18 +152,10 @@ export default createBaseItems({
     imageId: ids.PlatedBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [41, 52],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [110],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [41, 52],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [110],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },
@@ -245,18 +169,10 @@ export default createBaseItems({
     imageId: ids.Sash,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [55, 62],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [12],
-        },
+        [BasePropertyType.Defense]: [55, 62],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.Durability]: [12],
       },
     },
   },
@@ -270,18 +186,10 @@ export default createBaseItems({
     imageId: ids.LightBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [56, 63],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [50],
-        },
-        [BasePropertyType.Durability]: {
-          values: [14],
-        },
+        [BasePropertyType.Defense]: [56, 63],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.Durability]: [14],
       },
     },
   },
@@ -295,18 +203,10 @@ export default createBaseItems({
     imageId: ids.Belt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [58, 65],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [106],
-        },
-        [BasePropertyType.Durability]: {
-          values: [16],
-        },
+        [BasePropertyType.Defense]: [58, 65],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [106],
+        [BasePropertyType.Durability]: [16],
       },
     },
   },
@@ -320,18 +220,10 @@ export default createBaseItems({
     imageId: ids.HeavyBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [59, 66],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [151],
-        },
-        [BasePropertyType.Durability]: {
-          values: [18],
-        },
+        [BasePropertyType.Defense]: [59, 66],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [151],
+        [BasePropertyType.Durability]: [18],
       },
     },
   },
@@ -345,18 +237,10 @@ export default createBaseItems({
     imageId: ids.PlatedBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: {
-          values: [61, 71],
-        },
-        [BasePropertyType.PotionSlots]: {
-          values: [16],
-        },
-        [BasePropertyType.MinimumStrength]: {
-          values: [185],
-        },
-        [BasePropertyType.Durability]: {
-          values: [24],
-        },
+        [BasePropertyType.Defense]: [61, 71],
+        [BasePropertyType.PotionSlots]: [16],
+        [BasePropertyType.MinimumStrength]: [185],
+        [BasePropertyType.Durability]: [24],
       },
     },
   },
