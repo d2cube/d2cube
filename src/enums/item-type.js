@@ -29,6 +29,7 @@ export const ItemType = {
   Mace: 'Mace',
   NecromancerHead: 'NecromancerHead',
   Organ: 'Organ',
+  PaladinShield: 'PaladinShield',
   Polearm: 'Polearm',
   Potion: 'Potion',
   Ring: 'Ring',

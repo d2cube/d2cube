@@ -27,6 +27,7 @@ import keys from './keys.js';
 import maces from './maces.js';
 import necromancerHeads from './necromancer-heads.js';
 import organs from './organs.js';
+import paladinShields from './paladin-shields.js';
 import polearms from './polearms.js';
 import potions from './potions.js';
 import quests from './quests.js';
@@ -70,6 +71,7 @@ export default {
   ...maces,
   ...necromancerHeads,
   ...organs,
+  ...paladinShields,
   ...polearms,
   ...potions,
   ...quests,

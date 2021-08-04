@@ -1,0 +1,17 @@
+export default {
+  Targe: 'Targe',
+  Rondache: 'Rondache',
+  HeraldicShield: 'HeraldicShield',
+  AerinShield: 'AerinShield',
+  CrownShield: 'CrownShield',
+  AkaranTarge: 'AkaranTarge',
+  AkaranRondache: 'AkaranRondache',
+  ProtectorShield: 'ProtectorShield',
+  GildedShield: 'GildedShield',
+  RoyalShield: 'RoyalShield',
+  SacredTarge: 'SacredTarge',
+  SacredRondache: 'SacredRondache',
+  KurastShield: 'KurastShield',
+  ZakarumShield: 'ZakarumShield',
+  VortexShield: 'VortexShield',
+};
