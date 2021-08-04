@@ -18,6 +18,7 @@ import charms from './charms.js';
 import circlets from './circlets.js';
 import crossbows from './crossbows.js';
 import daggers from './daggers.js';
+import druidPelts from './druid-pelts.js';
 import gems from './gems.js';
 import gloves from './gloves.js';
 import helms from './helms.js';
@@ -55,6 +56,7 @@ export default {
   ...circlets,
   ...crossbows,
   ...daggers,
+  ...druidPelts,
   ...gems,
   ...gloves,
   ...helms,

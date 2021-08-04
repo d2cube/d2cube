@@ -17,6 +17,7 @@ export const ItemType = {
   Circlet: 'Circlet',
   Crossbow: 'Crossbow',
   Dagger: 'Dagger',
+  DruidPelt: 'DruidPelt',
   Essence: 'Essence',
   Gem: 'Gem',
   Glove: 'Glove',
