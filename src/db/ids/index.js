@@ -4,6 +4,7 @@
  * Note: Item images are named after their IDs.
  */
 
+import amazonWeapons from './amazon-weapons.js';
 import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
 import assassinKatars from './assassin-katars.js';
@@ -40,6 +41,7 @@ import uniques from './uniques.js';
 import wands from './wands.js';
 
 export default {
+  ...amazonWeapons,
   ...amulets,
   ...ammunitions,
   ...assassinKatars,

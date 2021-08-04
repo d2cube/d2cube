@@ -2,6 +2,7 @@
  * Database of normalized items.
  */
 
+import amazonWeapons from './amazon-weapons.js';
 import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
 import assasinKatars from './assassin-katars.js';
@@ -42,6 +43,7 @@ import uniques from './uniques.js';
 import wands from './wands.js';
 
 export default {
+  ...amazonWeapons,
   ...ammunitions,
   ...amulets,
   ...assasinKatars,

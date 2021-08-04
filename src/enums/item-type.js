@@ -3,6 +3,7 @@
  * @enum {string}
  */
 export const ItemType = {
+  AmazonWeapon: 'AmazonWeapon',
   Ammunition: 'Ammunition',
   Amulet: 'Amulet',
   AssassinKatar: 'AssassinKatar',
