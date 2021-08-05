@@ -4,8 +4,7 @@
     "allowSyntheticDefaultImports": true,
     "checkJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "lib": [
       "dom",
       "es2020"
@@ -14,7 +13,18 @@
     "module": "es2020",
     "skipLibCheck": true,
     "strict": false,
-    "target": "es2020"
+    "target": "es2020",
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["src/", "module.d.ts"],
+  "include": [
+    "src/",
+    "module.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

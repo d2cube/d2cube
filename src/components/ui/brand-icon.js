@@ -1,10 +1,10 @@
-import {Link} from 'gatsby';
+import Link from 'next/link.js';
 import React from 'react';
 import {Layout, Icon, useStyles} from 'uinix-ui';
 
 import Tooltip from './tooltip.js';
 
-const BrandIcon = ({icon, size = 'icon.m', to = null, tooltip, ...rest}) => {
+const BrandIcon = ({icon, size = 'icon.m', href = null, tooltip, ...rest}) => {
   const styles = useStyles();
   const as = rest.href ? 'a' : 'div';
 
@@ -20,7 +20,7 @@ const BrandIcon = ({icon, size = 'icon.m', to = null, tooltip, ...rest}) => {
   return (
     <Tooltip isReadable tooltip={tooltip}>
       <Layout {...rest} as={as} align="center" justify="center">
-        {to ? <Link to={to}>{iconElement}</Link> : iconElement}
+        {href ? <Link href={href}>{iconElement}</Link> : iconElement}
       </Layout>
     </Tooltip>
   );

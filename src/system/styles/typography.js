@@ -1,12 +1,9 @@
-import alegreyaSansRegularSrc from '../../../static/assets/fonts/alegreya-sans-regular.ttf';
-import exocetMediumSrc from '../../../static/assets/fonts/exocet-medium.ttf';
-
 const fontFaces = {
   AlegreyaSansRegular: {
-    src: [alegreyaSansRegularSrc],
+    src: ['fonts/alegreya-sans-regular.ttf'],
   },
   ExocetMedium: {
-    src: [exocetMediumSrc],
+    src: ['fonts/exocet-medium.ttf'],
   },
 };
 

@@ -1,7 +1,11 @@
 node_modules/
-.cache/
 .DS_Store
 package-lock.json
-public
+
+# build
+.next/
+out/
+
+# types
 *.d.ts
 !module.d.ts

@@ -1,7 +1,4 @@
-import buttonSrc from '../../../static/assets/images/ui/button.jpg';
-import cursorSrc from '../../../static/assets/images/ui/cursor.gif';
-
-const cursor = `url(${cursorSrc}), auto`;
+const cursor = 'url(images/ui/cursor.gif), auto';
 
 const vendor = {
   '.tippy-box': {
@@ -37,8 +34,7 @@ export default {
     opacity: 'hover',
   },
   button: {
-    // Based on button.jpg sprite
-    backgroundImage: `url(${buttonSrc})`,
+    backgroundImage: 'url(images/ui/button.jpg)',
     backgroundSize: '100% 400%',
     border: 'none',
     color: 'brand.primary',

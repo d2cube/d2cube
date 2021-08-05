@@ -1,6 +1,3 @@
-import frameSrc from '../../../static/assets/images/ui/frame.png';
-import stoneSrc from '../../../static/assets/images/ui/stone.jpg';
-
 const absolute = {
   bottom: 0,
   left: 0,
@@ -10,10 +7,10 @@ const absolute = {
 };
 
 const frame = {
-  backgroundImage: `url(${stoneSrc})`,
+  backgroundImage: 'url(images/ui/stone.jpg)',
   borderStyle: 'solid',
   borderWidth: 'frame',
-  borderImage: `url(${frameSrc}) 140 repeat`,
+  borderImage: 'url(images/ui/frame.png) 140 repeat',
   width: 'frame',
 };
 

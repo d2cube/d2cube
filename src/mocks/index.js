@@ -93,10 +93,6 @@ export const inventoryItems = [
     position: [1, 4],
     sockets: ['Jah', 'Ber', null],
     tier: 2,
-    properties: {
-      // TODO: remove for testing
-      Defense: 9999,
-    },
   },
   {
     id: 'Falcata',

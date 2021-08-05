@@ -12,13 +12,12 @@ const HudPanel = ({player}) => (
     <Experience experience={player.experience} />
     <Layout align="center" spacing="xs">
       <Grid size={[1, 4]}>
-        <BrandIcon icon="nav.home" to="/" tooltip="Home" />
-        <BrandIcon icon="nav.items" to="/items" tooltip="Items" />
-        <BrandIcon icon="nav.about" to="/about" tooltip="About" />
+        <BrandIcon icon="nav.home" href="/" tooltip="Home" />
+        <BrandIcon icon="nav.items" href="/items" tooltip="Items" />
+        <BrandIcon icon="nav.about" href="/about" tooltip="About" />
         <BrandIcon
           icon="nav.github"
           href="https://github.com/chrisrzhou/d2cube"
-          target="_blank"
           tooltip="Github"
         />
       </Grid>

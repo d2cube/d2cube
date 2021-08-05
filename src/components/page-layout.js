@@ -1,5 +1,4 @@
-import {navigate} from 'gatsby';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Layout, useStyles} from 'uinix-ui';
 
 import Hud from './hud.js';
@@ -11,12 +10,7 @@ let cachedEntered = false;
 
 const PageLayout = ({children, title = null}) => {
   const [entered, setEntered] = useState(cachedEntered);
-  const isReady = useIsReady();
   const styles = useStyles();
-
-  if (!isReady) {
-    return null;
-  }
 
   const handleEnter = () => {
     cachedEntered = true;
@@ -45,18 +39,6 @@ const PageLayout = ({children, title = null}) => {
       )}
     </Layout>
   );
-};
-
-// Hack around gatsby/fela FOUC
-export const useIsReady = () => {
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    navigate(window.location.pathname, {replace: true});
-    setIsReady(true);
-  }, []);
-
-  return isReady;
 };
 
 export default PageLayout;
