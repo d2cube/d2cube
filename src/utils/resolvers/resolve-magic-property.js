@@ -22,6 +22,7 @@ const lvl =
     `${serialize([[x, x * 99]])} (+${x}${unit} Based on Character Level)`;
 
 const serializers = {
+  [MagicPropertyType.AddSockets]: f(([x]) => `Socketed (${x})`),
   [MagicPropertyType.AllSkillLevels]: ([x]) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: ([x]) => `All Resistances +${x}`,
   [MagicPropertyType.AttackRating]: ([x]) => `+${x} to Attack Rating`,
@@ -47,7 +48,7 @@ const serializers = {
   [MagicPropertyType.DeadlyStrike]: ([x]) => `${x}% Deadly Strike`,
   [MagicPropertyType.Defense]: ([x]) => `+${x} Defense`,
   [MagicPropertyType.DefenseVsMissle]: ([x]) => `+${x} Defense Vs. Missle`,
-  [MagicPropertyType.Dexterity]: ([x]) => `+${x} to Dexterity`,
+  [MagicPropertyType.Dexterity]: f(([x]) => `+${x} to Dexterity`),
   [MagicPropertyType.Energy]: ([x]) => `+${x} to Energy`,
   [MagicPropertyType.EnhancedDamage]: f(([x]) => `${x}% Enhanced Damage`),
   [MagicPropertyType.EnhancedDefense]: ([x]) => `${x}% Enhanced Defense`,
@@ -79,8 +80,9 @@ const serializers = {
   [MagicPropertyType.LightRadius]: ([x]) => `+${x} to Light Radius`,
   [MagicPropertyType.MagicDamageReduced]: ([x]) =>
     `Magic Damage Reduced by ${x}`,
-  [MagicPropertyType.MagicFind]: ([x]) =>
-    `${x}% Better Chance of Getting Magic Items`,
+  [MagicPropertyType.MagicFind]: f(
+    ([x]) => `${x}% Better Chance of Getting Magic Items`,
+  ),
   [MagicPropertyType.Mana]: ([x]) => `+${x} to Mana`,
   [MagicPropertyType.ManaAfterKill]: ([x]) => `+${x} to Mana After Each kill`,
   [MagicPropertyType.ManaStolenPerHit]: ([x]) => `${x}% Mana Stolen Per Hit`,
@@ -110,5 +112,9 @@ const serializers = {
 
 serializers[MagicPropertyType.ExtraGoldByLevel] = lvl(
   serializers[MagicPropertyType.ExtraGold],
+  '%',
+);
+serializers[MagicPropertyType.MagicFindByLevel] = lvl(
+  serializers[MagicPropertyType.MagicFind],
   '%',
 );

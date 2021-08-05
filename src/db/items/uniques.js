@@ -15,7 +15,6 @@ export default createBaseItems({
     type: ItemType.Sword,
     clvl: 35,
     baseId: ids.Tulwar,
-    sockets: [null, null],
     properties: {
       magic: {
         [MagicPropertyType.EnhancedDamage]: [[60, 120]],
@@ -23,6 +22,7 @@ export default createBaseItems({
         [MagicPropertyType.MagicFind]: [1, 99, 1],
         [MagicPropertyType.Mana]: [15],
         [MagicPropertyType.Dexterity]: [5, 15],
+        [MagicPropertyType.AddSockets]: [2],
       },
     },
   },

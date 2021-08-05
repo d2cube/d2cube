@@ -10,7 +10,7 @@ import {getItemsByType} from '../queries/index.js';
 import {fill} from '../utils/fp.js';
 
 const Page = () => {
-  const [selectedItemType, setSelectedItemType] = useState(ItemType.Potion);
+  const [selectedItemType, setSelectedItemType] = useState(ItemType.Sword);
   const items = getItemsByType(selectedItemType);
 
   const handleUpdateItemType = (event) =>
