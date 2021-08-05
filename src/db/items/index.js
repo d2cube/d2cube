@@ -1,3 +1,5 @@
+import {createItems} from '../utils/create-items.js';
+
 /**
  * Database of normalized items.
  */
@@ -45,7 +47,7 @@ import tomes from './tomes.js';
 import uniques from './uniques.js';
 import wands from './wands.js';
 
-export default {
+export default createItems({
   ...amazonWeapons,
   ...ammunitions,
   ...amulets,
@@ -88,4 +90,4 @@ export default {
   ...tomes,
   ...uniques,
   ...wands,
-};
+});

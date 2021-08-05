@@ -3,10 +3,10 @@ import {
   ItemType,
   MagicPropertyType,
 } from '../../enums/index.js';
-import {createBaseItems} from '../../utils/create-base-items.js';
+import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
-export default createBaseItems({
+export default normalizeItems({
   quality: ItemQualityType.Unique,
 })([
   {

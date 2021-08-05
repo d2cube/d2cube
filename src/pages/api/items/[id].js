@@ -1,4 +1,4 @@
-import {getItemById} from '../../../queries/index.js';
+import {getItemById} from '../../../api/index.js';
 
 export default function (request, response) {
   const {id} = request.query;

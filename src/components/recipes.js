@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
+import {getRecipes} from '../api/index.js';
 import {RecipeType} from '../enums/index.js';
-import {getRecipes} from '../queries/index.js';
 import Item from './item.js';
 import Recipe from './recipe.js';
 import Button from './ui/button.js';

@@ -1,14 +1,8 @@
-/**
- * Rolls an item based on its properties.
- */
+import {merge} from 'uinix-fp';
 
-import {random} from './random.js';
+import {getItemById} from '../api/index.js';
 
-export const rollItem = (item) => ({
-  ...item,
-  roll: {
-    base: {
-      Quantity: random(10, 30),
-    },
-  },
-});
+export const rollItem = (data) => {
+  const item = getItemById(data.id);
+  return merge(data)(item);
+};

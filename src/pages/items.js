@@ -6,7 +6,7 @@ import PageLayout from '../components/page-layout.js';
 import Recipes from '../components/recipes.js';
 import {ItemType} from '../enums/index.js';
 import {inventoryItems} from '../mocks/index.js';
-import {getItemsByType} from '../queries/index.js';
+import {getItemsByType} from '../api/index.js';
 import {fill} from '../utils/fp.js';
 
 const Page = () => {
@@ -33,7 +33,11 @@ const Page = () => {
                 <Item key={i} item={item} variant={i + 1} />
               ))
             ) : (
-              <Item key={item.id} item={item} />
+              <Layout direction="column" spacing="l">
+                <h4>{item.title || item.name}</h4>
+                <Item key={item.id} item={item} />
+                <pre>{JSON.stringify(item, null, 2)}</pre>
+              </Layout>
             ),
           )}
         </Layout>

@@ -1,5 +1,5 @@
-import {ItemQualityType} from '../enums/index.js';
-import {createItem} from '../utils/create-item.js';
+import {ItemQualityType} from '../enums/item-quality-type.js';
+import {rollItem} from '../utils/roll-item.js';
 
 export const cubeItems = [
   {
@@ -18,7 +18,7 @@ export const cubeItems = [
     id: 'Bolts',
     position: [1, 3],
   },
-].map(createItem);
+].map(rollItem);
 
 export const inventoryItems = [
   {
@@ -116,7 +116,7 @@ export const inventoryItems = [
     id: 'BaalsEye',
     position: [4, 1],
   },
-].map(createItem);
+].map(rollItem);
 
 export const beltItems = [
   {
@@ -135,7 +135,7 @@ export const beltItems = [
     id: 'ScrollOfTownPortal',
     position: [1, 4],
   },
-];
+].map(rollItem);
 
 export const player = {
   life: {

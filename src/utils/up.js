@@ -1,4 +1,4 @@
-import {getItems} from '../queries/index.js';
+import {getItems} from '../api/index.js';
 
 export const up = (currentItem) => {
   const items = getItems();

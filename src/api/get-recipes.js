@@ -1,5 +1,6 @@
 import db from '../db/index.js';
-import {createItem} from '../utils/create-item.js';
+// TODO: see if this can be removed if the app is always using valid items.
+import {rollItem} from '../utils/roll-item.js';
 
 /**
  * Returns true and removes the item if it is found in the stack.
@@ -40,7 +41,7 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
       const sourceItem = source.item;
       const matchedItem = findItem(itemStack, sourceItem, source.test);
       const isInactive = showAvailable ? !matchedItem : false;
-      const item = createItem(
+      const item = rollItem(
         showAvailable ? matchedItem || sourceItem : sourceItem,
       );
       sources.push({item, isInactive});
@@ -61,7 +62,7 @@ export const getRecipes = ({items = [], filters = [], showAvailable}) => {
         target: event || {
           item: transform
             ? transform(sources.map((source) => source.item))
-            : targetItem,
+            : rollItem(targetItem),
           isInactive: hasInactiveSources,
         },
       });

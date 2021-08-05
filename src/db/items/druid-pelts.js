@@ -4,10 +4,10 @@ import {
   ItemType,
   PlayerClassType,
 } from '../../enums/index.js';
-import {createBaseItems} from '../../utils/create-base-items.js';
+import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
-export default createBaseItems({
+export default normalizeItems({
   playerClass: PlayerClassType.Druid,
   size: [2, 2],
   type: ItemType.DruidPelt,
