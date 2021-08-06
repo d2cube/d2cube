@@ -21,7 +21,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [10, 15],
-        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.RequiredStrength]: [25],
         [BasePropertyType.Durability]: [25],
         [BasePropertyType.MaxSockets]: [2],
       },
@@ -36,7 +36,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [15, 20],
-        [BasePropertyType.MinimumStrength]: [35],
+        [BasePropertyType.RequiredStrength]: [35],
         [BasePropertyType.Durability]: [35],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -51,7 +51,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [25, 30],
-        [BasePropertyType.MinimumStrength]: [45],
+        [BasePropertyType.RequiredStrength]: [45],
         [BasePropertyType.Durability]: [45],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -66,7 +66,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [30, 35],
-        [BasePropertyType.MinimumStrength]: [55],
+        [BasePropertyType.RequiredStrength]: [55],
         [BasePropertyType.Durability]: [50],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -81,7 +81,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [35, 50],
-        [BasePropertyType.MinimumStrength]: [65],
+        [BasePropertyType.RequiredStrength]: [65],
         [BasePropertyType.Durability]: [55],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -98,7 +98,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [55, 68],
-        [BasePropertyType.MinimumStrength]: [58],
+        [BasePropertyType.RequiredStrength]: [58],
         [BasePropertyType.Durability]: [25],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -115,7 +115,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [63, 75],
-        [BasePropertyType.MinimumStrength]: [73],
+        [BasePropertyType.RequiredStrength]: [73],
         [BasePropertyType.Durability]: [35],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -132,7 +132,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [78, 90],
-        [BasePropertyType.MinimumStrength]: [88],
+        [BasePropertyType.RequiredStrength]: [88],
         [BasePropertyType.Durability]: [45],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -149,7 +149,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [85, 98],
-        [BasePropertyType.MinimumStrength]: [103],
+        [BasePropertyType.RequiredStrength]: [103],
         [BasePropertyType.Durability]: [50],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -166,7 +166,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [93, 120],
-        [BasePropertyType.MinimumStrength]: [118],
+        [BasePropertyType.RequiredStrength]: [118],
         [BasePropertyType.Durability]: [55],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -183,7 +183,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [102, 147],
-        [BasePropertyType.MinimumStrength]: [106],
+        [BasePropertyType.RequiredStrength]: [106],
         [BasePropertyType.Durability]: [25],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -200,7 +200,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [105, 150],
-        [BasePropertyType.MinimumStrength]: [129],
+        [BasePropertyType.RequiredStrength]: [129],
         [BasePropertyType.Durability]: [35],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -217,7 +217,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [111, 156],
-        [BasePropertyType.MinimumStrength]: [151],
+        [BasePropertyType.RequiredStrength]: [151],
         [BasePropertyType.Durability]: [45],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -234,7 +234,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [114, 159],
-        [BasePropertyType.MinimumStrength]: [174],
+        [BasePropertyType.RequiredStrength]: [174],
         [BasePropertyType.Durability]: [50],
         [BasePropertyType.MaxSockets]: [3],
       },
@@ -251,7 +251,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [117, 168],
-        [BasePropertyType.MinimumStrength]: [196],
+        [BasePropertyType.RequiredStrength]: [196],
         [BasePropertyType.Durability]: [55],
         [BasePropertyType.MaxSockets]: [3],
       },

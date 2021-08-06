@@ -26,7 +26,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [5, 6],
-        [BasePropertyType.MinimumStrength]: [18],
+        [BasePropertyType.RequiredStrength]: [18],
         [BasePropertyType.Durability]: [14],
       },
     },
@@ -39,7 +39,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [8, 9],
-        [BasePropertyType.MinimumStrength]: [30],
+        [BasePropertyType.RequiredStrength]: [30],
         [BasePropertyType.Durability]: [16],
       },
     },
@@ -52,7 +52,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [9, 11],
-        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.RequiredStrength]: [50],
         [BasePropertyType.Durability]: [18],
       },
     },
@@ -65,7 +65,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [12, 15],
-        [BasePropertyType.MinimumStrength]: [70],
+        [BasePropertyType.RequiredStrength]: [70],
         [BasePropertyType.Durability]: [24],
       },
     },
@@ -81,7 +81,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [28, 35],
-        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.RequiredStrength]: [20],
         [BasePropertyType.Durability]: [12],
       },
     },
@@ -97,7 +97,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [33, 39],
-        [BasePropertyType.MinimumStrength]: [47],
+        [BasePropertyType.RequiredStrength]: [47],
         [BasePropertyType.Durability]: [14],
       },
     },
@@ -113,7 +113,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [37, 44],
-        [BasePropertyType.MinimumStrength]: [65],
+        [BasePropertyType.RequiredStrength]: [65],
         [BasePropertyType.Durability]: [16],
       },
     },
@@ -129,7 +129,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [39, 47],
-        [BasePropertyType.MinimumStrength]: [95],
+        [BasePropertyType.RequiredStrength]: [95],
         [BasePropertyType.Durability]: [18],
       },
     },
@@ -145,7 +145,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [43, 53],
-        [BasePropertyType.MinimumStrength]: [125],
+        [BasePropertyType.RequiredStrength]: [125],
         [BasePropertyType.Durability]: [24],
       },
     },
@@ -161,7 +161,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [54, 62],
-        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.RequiredStrength]: [50],
         [BasePropertyType.Durability]: [12],
       },
     },
@@ -177,7 +177,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [56, 65],
-        [BasePropertyType.MinimumStrength]: [91],
+        [BasePropertyType.RequiredStrength]: [91],
         [BasePropertyType.Durability]: [14],
       },
     },
@@ -193,7 +193,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [59, 67],
-        [BasePropertyType.MinimumStrength]: [118],
+        [BasePropertyType.RequiredStrength]: [118],
         [BasePropertyType.Durability]: [16],
       },
     },
@@ -209,7 +209,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [59, 68],
-        [BasePropertyType.MinimumStrength]: [163],
+        [BasePropertyType.RequiredStrength]: [163],
         [BasePropertyType.Durability]: [18],
       },
     },
@@ -225,7 +225,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Defense]: [62, 71],
-        [BasePropertyType.MinimumStrength]: [208],
+        [BasePropertyType.RequiredStrength]: [208],
         [BasePropertyType.Durability]: [24],
       },
     },

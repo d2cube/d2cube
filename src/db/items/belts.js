@@ -41,7 +41,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [5],
         [BasePropertyType.PotionSlots]: [12],
-        [BasePropertyType.MinimumStrength]: [25],
+        [BasePropertyType.RequiredStrength]: [25],
         [BasePropertyType.Durability]: [16],
       },
     },
@@ -55,7 +55,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [6],
         [BasePropertyType.PotionSlots]: [12],
-        [BasePropertyType.MinimumStrength]: [45],
+        [BasePropertyType.RequiredStrength]: [45],
         [BasePropertyType.Durability]: [20],
       },
     },
@@ -69,7 +69,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [8, 11],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [60],
+        [BasePropertyType.RequiredStrength]: [60],
         [BasePropertyType.Durability]: [24],
       },
     },
@@ -86,7 +86,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [29, 34],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.RequiredStrength]: [20],
         [BasePropertyType.Durability]: [12],
       },
     },
@@ -103,7 +103,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [31, 36],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [20],
+        [BasePropertyType.RequiredStrength]: [20],
         [BasePropertyType.Durability]: [14],
       },
     },
@@ -120,7 +120,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [35, 40],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [58],
+        [BasePropertyType.RequiredStrength]: [58],
         [BasePropertyType.Durability]: [16],
       },
     },
@@ -137,7 +137,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [37, 42],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [88],
+        [BasePropertyType.RequiredStrength]: [88],
         [BasePropertyType.Durability]: [18],
       },
     },
@@ -154,7 +154,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [41, 52],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [110],
+        [BasePropertyType.RequiredStrength]: [110],
         [BasePropertyType.Durability]: [24],
       },
     },
@@ -171,7 +171,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [55, 62],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.RequiredStrength]: [50],
         [BasePropertyType.Durability]: [12],
       },
     },
@@ -188,7 +188,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [56, 63],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [50],
+        [BasePropertyType.RequiredStrength]: [50],
         [BasePropertyType.Durability]: [14],
       },
     },
@@ -205,7 +205,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [58, 65],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [106],
+        [BasePropertyType.RequiredStrength]: [106],
         [BasePropertyType.Durability]: [16],
       },
     },
@@ -222,7 +222,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [59, 66],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [151],
+        [BasePropertyType.RequiredStrength]: [151],
         [BasePropertyType.Durability]: [18],
       },
     },
@@ -239,7 +239,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.Defense]: [61, 71],
         [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.MinimumStrength]: [185],
+        [BasePropertyType.RequiredStrength]: [185],
         [BasePropertyType.Durability]: [24],
       },
     },

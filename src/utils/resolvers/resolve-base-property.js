@@ -18,8 +18,8 @@ const serializers = {
   [BasePropertyType.DamageThrow]: ([x, y]) => `Throw Damage: ${x} to ${y}`,
   [BasePropertyType.Defense]: ([x]) => `Defense: ${x}`,
   [BasePropertyType.Durability]: ([x]) => `Durability: ${x} of ${x}`,
-  [BasePropertyType.MinimumDexterity]: ([x]) => `Required Dexterity: ${x}`,
-  [BasePropertyType.MinimumStrength]: ([x]) => `Required Strength: ${x}`,
+  [BasePropertyType.RequiredDexterity]: ([x]) => `Required Dexterity: ${x}`,
+  [BasePropertyType.RequiredStrength]: ([x]) => `Required Strength: ${x}`,
 };
 
 // TODO: confirm logic

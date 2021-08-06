@@ -23,6 +23,6 @@ const order = [
   BasePropertyType.BlockChance,
   BasePropertyType.Durability,
   BasePropertyType.AttackSpeed,
-  BasePropertyType.MinimumDexterity,
-  BasePropertyType.MinimumStrength,
+  BasePropertyType.RequiredDexterity,
+  BasePropertyType.RequiredStrength,
 ];
