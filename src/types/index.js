@@ -75,8 +75,6 @@ export {};
  *    e.g. Ring/Amulet/Gem/Rune.
  * @property {number[]} size
  *    A 2-sized array indicating the item's size (by row/column).
- * @property {string} [title]
- *    Additional title to display before the name (e.g. for Unique/Set items)
  * @property {Description[]} [description]
  *    Additional description
  * @property {number} [clvl]
@@ -91,6 +89,8 @@ export {};
  *    Items with multiple image assets will apply the specified variant.
  * @property {ItemSetType} [set]
  *    If the item belongs to an existing set e.g. AngelicRaiment.
+ * @property {string} [basename]
+ *    The base item's name (auto-generated for unique and set items).
  * @property {Properties} [properties]
  *    Item properties.
  * @property {PlayerClassType} [playerClass]

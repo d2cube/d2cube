@@ -11,7 +11,7 @@ export default normalizeItems({
 })([
   {
     id: ids.WirtsLeg,
-    title: "Wirt's Leg",
+    name: "Wirt's Leg",
     class: WeaponClassType.Mace,
     size: [3, 1],
     properties: {

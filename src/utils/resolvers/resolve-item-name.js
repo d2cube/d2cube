@@ -4,7 +4,7 @@ import {ItemType} from '../../enums/index.js';
 import {cb, concat, join} from '../fp.js';
 
 export const resolveItemName = (item) => {
-  const {quality, name, personalization, prefix, suffix, tier, title, type} =
+  const {basename, quality, name, personalization, prefix, suffix, tier, type} =
     item;
 
   let color;
@@ -29,7 +29,7 @@ export const resolveItemName = (item) => {
   ])([]);
 
   return pipe([
-    concat({color, text: title}),
     concat({color, text: resolvedName}),
+    concat({color, text: basename}),
   ])([]);
 };

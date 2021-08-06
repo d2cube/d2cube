@@ -33,7 +33,7 @@ const Page = () => {
                 <Item key={i} item={item} variant={i + 1} />
               ))
             ) : (
-              <Layout direction="column" spacing="l">
+              <Layout key={item.id} direction="column" spacing="l">
                 <h4>{item.title || item.name}</h4>
                 <Item key={item.id} item={item} />
                 <pre>{JSON.stringify(item, null, 2)}</pre>

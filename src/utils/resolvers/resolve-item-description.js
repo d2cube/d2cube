@@ -7,6 +7,7 @@ import {resolveItemName} from './resolve-item-name.js';
 import {resolveItemQuantity} from './resolve-item-quantity.js';
 import {resolveItemMagicProperties} from './resolve-item-magic-properties.js';
 import {resolveItemSocketProperties} from './resolve-item-socket-properties.js';
+import {resolveItemStats} from './resolve-item-stats.js';
 
 export const resolveItemDescription = (item) =>
   pipe([
@@ -15,6 +16,7 @@ export const resolveItemDescription = (item) =>
     concat(resolveItemBaseProperties(item)),
     concat(resolveItemSocketProperties(item)),
     concat(resolveItemClvl(item)),
+    concat(resolveItemStats(item)),
     concat(resolveItemMagicProperties(item)),
     concat(item.description),
   ])([]);

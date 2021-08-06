@@ -11,7 +11,7 @@ export const resolveBaseProperty =
 
 const serializers = {
   [BasePropertyType.AttackSpeed]: ([x], item) =>
-    `Class ${item.class} - ${getAttackSpeedDescription(x)} Attack Speed`,
+    `${item.class} Class - ${getAttackSpeedDescription(x)} Attack Speed`,
   [BasePropertyType.BlockChance]: ([x]) => `Chance to Block: ${x}%`,
   [BasePropertyType.Damage1H]: ([x, y]) => `One-hand Damage: ${x} to ${y}`,
   [BasePropertyType.Damage2H]: ([x, y]) => `Two-hand Damage: ${x} to ${y}`,

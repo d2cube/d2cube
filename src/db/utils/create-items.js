@@ -1,4 +1,6 @@
 import {merge} from 'uinix-fp';
+import {ItemQualityType} from '../../enums/index.js';
+import {calcItemStats} from './calc-item-stats.js';
 
 export const createItems = (items) =>
   Object.entries(items).reduce((acc, [id, item]) => {
@@ -13,9 +15,18 @@ const createItem = (items) => (initialItem) => {
 
   const item = merge(baseItem)(initialItem);
 
+  switch (item.quality) {
+    case ItemQualityType.Set:
+    case ItemQualityType.Unique:
+      item.basename = baseItem.name;
+      break;
+    default:
+      break;
+  }
+
   return {
     properties: {},
     ...item,
-    data: {},
+    stats: calcItemStats(item),
   };
 };

@@ -11,7 +11,7 @@ export default normalizeItems({
 })([
   {
     id: ids.BladeOfAliBaba,
-    title: 'Blade of Ali Baba',
+    name: 'Blade of Ali Baba',
     type: ItemType.Sword,
     clvl: 35,
     baseId: ids.Tulwar,
@@ -28,7 +28,7 @@ export default normalizeItems({
   },
   {
     id: ids.BloodCrescent,
-    title: 'Blood Crescent',
+    name: 'Blood Crescent',
     type: ItemType.Sword,
     clvl: 7,
     qlvl: 87,
@@ -47,7 +47,7 @@ export default normalizeItems({
   },
   {
     id: ids.LidlessWall,
-    title: 'Lidless Wall',
+    name: 'Lidless Wall',
     type: ItemType.Shield,
     size: [3, 2],
     clvl: 35,
@@ -66,7 +66,7 @@ export default normalizeItems({
   },
   {
     id: ids.StoneOfJordan,
-    title: 'Stone of Jordan',
+    name: 'Stone of Jordan',
     type: ItemType.Ring,
     size: [1, 1],
     clvl: 29,
@@ -83,7 +83,7 @@ export default normalizeItems({
   },
   {
     id: ids.WallOfTheEyeless,
-    title: 'Wall of the Eyeless',
+    name: 'Wall of the Eyeless',
     type: ItemType.Shield,
     clvl: 35,
     baseId: ids.BoneShield,
