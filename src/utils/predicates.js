@@ -60,7 +60,7 @@ export const isRare = isQualityEqual(ItemQualityType.Rare);
 export const isUnique = isQualityEqual(ItemQualityType.Unique);
 
 // Weapon/Armor
-export const isArmor = hasItemProperty(BasePropertyType.Defense);
+export const isArmor = hasItemProperty(BasePropertyType.ArmorDefense);
 
 export const isWeapon = or([
   hasItemProperty(BasePropertyType.Damage1H),

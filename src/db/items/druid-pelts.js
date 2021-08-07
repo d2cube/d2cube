@@ -20,10 +20,10 @@ export default normalizeItems({
     qlvl: 4,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [8, 11],
-        [BasePropertyType.RequiredStrength]: [16],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [8, 11],
+        [BasePropertyType.RequiredStrength]: 16,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -35,10 +35,10 @@ export default normalizeItems({
     qlvl: 8,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [4, 15],
-        [BasePropertyType.RequiredStrength]: [20],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [4, 15],
+        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -50,10 +50,10 @@ export default normalizeItems({
     qlvl: 16,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [18, 24],
-        [BasePropertyType.RequiredStrength]: [24],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [18, 24],
+        [BasePropertyType.RequiredStrength]: 24,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -65,10 +65,10 @@ export default normalizeItems({
     qlvl: 20,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [12, 28],
-        [BasePropertyType.RequiredStrength]: [28],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [12, 28],
+        [BasePropertyType.RequiredStrength]: 28,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -80,10 +80,10 @@ export default normalizeItems({
     qlvl: 24,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [22, 35],
-        [BasePropertyType.RequiredStrength]: [30],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [22, 35],
+        [BasePropertyType.RequiredStrength]: 30,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -97,10 +97,10 @@ export default normalizeItems({
     imageId: ids.WolfHead,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [52, 62],
-        [BasePropertyType.RequiredStrength]: [44],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [52, 62],
+        [BasePropertyType.RequiredStrength]: 44,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -114,10 +114,10 @@ export default normalizeItems({
     imageId: ids.HawkHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [46, 68],
-        [BasePropertyType.RequiredStrength]: [50],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [46, 68],
+        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -131,10 +131,10 @@ export default normalizeItems({
     imageId: ids.Antlers,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [67, 81],
-        [BasePropertyType.RequiredStrength]: [56],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [67, 81],
+        [BasePropertyType.RequiredStrength]: 56,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -148,10 +148,10 @@ export default normalizeItems({
     imageId: ids.FalconMask,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [58, 87],
-        [BasePropertyType.RequiredStrength]: [62],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [58, 87],
+        [BasePropertyType.RequiredStrength]: 62,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -165,10 +165,10 @@ export default normalizeItems({
     imageId: ids.SpiritMask,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [73, 98],
-        [BasePropertyType.RequiredStrength]: [65],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [73, 98],
+        [BasePropertyType.RequiredStrength]: 65,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -182,10 +182,10 @@ export default normalizeItems({
     imageId: ids.WolfHead,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [101, 145],
-        [BasePropertyType.RequiredStrength]: [86],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [101, 145],
+        [BasePropertyType.RequiredStrength]: 86,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -199,10 +199,10 @@ export default normalizeItems({
     imageId: ids.HawkHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [98, 147],
-        [BasePropertyType.RequiredStrength]: [95],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [98, 147],
+        [BasePropertyType.RequiredStrength]: 95,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -216,10 +216,10 @@ export default normalizeItems({
     imageId: ids.Antlers,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [107, 152],
-        [BasePropertyType.RequiredStrength]: [104],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [107, 152],
+        [BasePropertyType.RequiredStrength]: 104,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -233,10 +233,10 @@ export default normalizeItems({
     imageId: ids.FalconMask,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [103, 155],
-        [BasePropertyType.RequiredStrength]: [113],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [103, 155],
+        [BasePropertyType.RequiredStrength]: 113,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -250,10 +250,10 @@ export default normalizeItems({
     imageId: ids.SpiritMask,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [109, 159],
-        [BasePropertyType.RequiredStrength]: [118],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [109, 159],
+        [BasePropertyType.RequiredStrength]: 118,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },

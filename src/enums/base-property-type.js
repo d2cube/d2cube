@@ -3,12 +3,12 @@
  * @enum {string}
  */
 export const BasePropertyType = {
+  ArmorDefense: 'ArmorDefense',
   AttackSpeed: 'AttackSpeed',
   BlockChance: 'BlockChance',
   Damage1H: 'Damage1H',
   Damage2H: 'Damage2H',
   DamageThrow: 'DamageThrow',
-  Defense: 'Defense',
   Durability: 'Durability',
   MeleeRange: 'MeleeRange',
   RequiredStrength: 'RequiredStrength',

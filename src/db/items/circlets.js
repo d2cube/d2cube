@@ -14,9 +14,9 @@ export default normalizeItems({
     qlvl: 24,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [20, 30],
-        [BasePropertyType.Durability]: [35],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [20, 30],
+        [BasePropertyType.Durability]: 35,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -29,9 +29,9 @@ export default normalizeItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [30, 40],
-        [BasePropertyType.Durability]: [30],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [30, 40],
+        [BasePropertyType.Durability]: 30,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -44,9 +44,9 @@ export default normalizeItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [40, 50],
-        [BasePropertyType.Durability]: [25],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [40, 50],
+        [BasePropertyType.Durability]: 25,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -59,9 +59,9 @@ export default normalizeItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [50, 60],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [50, 60],
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },

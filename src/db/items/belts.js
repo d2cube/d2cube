@@ -13,9 +13,9 @@ export default normalizeItems({
     qlvl: 3,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [2],
-        [BasePropertyType.PotionSlots]: [8],
-        [BasePropertyType.Durability]: [12],
+        [BasePropertyType.ArmorDefense]: 2,
+        [BasePropertyType.PotionSlots]: 8,
+        [BasePropertyType.Durability]: 12,
       },
     },
   },
@@ -26,9 +26,9 @@ export default normalizeItems({
     qlvl: 7,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [3],
-        [BasePropertyType.PotionSlots]: [8],
-        [BasePropertyType.Durability]: [14],
+        [BasePropertyType.ArmorDefense]: 3,
+        [BasePropertyType.PotionSlots]: 8,
+        [BasePropertyType.Durability]: 14,
       },
     },
   },
@@ -39,10 +39,10 @@ export default normalizeItems({
     qlvl: 12,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [5],
-        [BasePropertyType.PotionSlots]: [12],
-        [BasePropertyType.RequiredStrength]: [25],
-        [BasePropertyType.Durability]: [16],
+        [BasePropertyType.ArmorDefense]: 5,
+        [BasePropertyType.PotionSlots]: 12,
+        [BasePropertyType.RequiredStrength]: 25,
+        [BasePropertyType.Durability]: 16,
       },
     },
   },
@@ -53,10 +53,10 @@ export default normalizeItems({
     qlvl: 18,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [6],
-        [BasePropertyType.PotionSlots]: [12],
-        [BasePropertyType.RequiredStrength]: [45],
-        [BasePropertyType.Durability]: [20],
+        [BasePropertyType.ArmorDefense]: 6,
+        [BasePropertyType.PotionSlots]: 12,
+        [BasePropertyType.RequiredStrength]: 45,
+        [BasePropertyType.Durability]: 20,
       },
     },
   },
@@ -67,10 +67,10 @@ export default normalizeItems({
     qlvl: 27,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [8, 11],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [60],
-        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.ArmorDefense]: [8, 11],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 60,
+        [BasePropertyType.Durability]: 24,
       },
     },
   },
@@ -84,10 +84,10 @@ export default normalizeItems({
     imageId: ids.Sash,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [29, 34],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [20],
-        [BasePropertyType.Durability]: [12],
+        [BasePropertyType.ArmorDefense]: [29, 34],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.Durability]: 12,
       },
     },
   },
@@ -101,10 +101,10 @@ export default normalizeItems({
     imageId: ids.LightBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [31, 36],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [20],
-        [BasePropertyType.Durability]: [14],
+        [BasePropertyType.ArmorDefense]: [31, 36],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.Durability]: 14,
       },
     },
   },
@@ -118,10 +118,10 @@ export default normalizeItems({
     imageId: ids.Belt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [35, 40],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [58],
-        [BasePropertyType.Durability]: [16],
+        [BasePropertyType.ArmorDefense]: [35, 40],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 58,
+        [BasePropertyType.Durability]: 16,
       },
     },
   },
@@ -135,10 +135,10 @@ export default normalizeItems({
     imageId: ids.HeavyBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [37, 42],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [88],
-        [BasePropertyType.Durability]: [18],
+        [BasePropertyType.ArmorDefense]: [37, 42],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 88,
+        [BasePropertyType.Durability]: 18,
       },
     },
   },
@@ -152,10 +152,10 @@ export default normalizeItems({
     imageId: ids.PlatedBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [41, 52],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [110],
-        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.ArmorDefense]: [41, 52],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 110,
+        [BasePropertyType.Durability]: 24,
       },
     },
   },
@@ -169,10 +169,10 @@ export default normalizeItems({
     imageId: ids.Sash,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [55, 62],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [50],
-        [BasePropertyType.Durability]: [12],
+        [BasePropertyType.ArmorDefense]: [55, 62],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.Durability]: 12,
       },
     },
   },
@@ -186,10 +186,10 @@ export default normalizeItems({
     imageId: ids.LightBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [56, 63],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [50],
-        [BasePropertyType.Durability]: [14],
+        [BasePropertyType.ArmorDefense]: [56, 63],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.Durability]: 14,
       },
     },
   },
@@ -203,10 +203,10 @@ export default normalizeItems({
     imageId: ids.Belt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [58, 65],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [106],
-        [BasePropertyType.Durability]: [16],
+        [BasePropertyType.ArmorDefense]: [58, 65],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 106,
+        [BasePropertyType.Durability]: 16,
       },
     },
   },
@@ -220,10 +220,10 @@ export default normalizeItems({
     imageId: ids.HeavyBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [59, 66],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [151],
-        [BasePropertyType.Durability]: [18],
+        [BasePropertyType.ArmorDefense]: [59, 66],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 151,
+        [BasePropertyType.Durability]: 18,
       },
     },
   },
@@ -237,10 +237,10 @@ export default normalizeItems({
     imageId: ids.PlatedBelt,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [61, 71],
-        [BasePropertyType.PotionSlots]: [16],
-        [BasePropertyType.RequiredStrength]: [185],
-        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.ArmorDefense]: [61, 71],
+        [BasePropertyType.PotionSlots]: 16,
+        [BasePropertyType.RequiredStrength]: 185,
+        [BasePropertyType.Durability]: 24,
       },
     },
   },

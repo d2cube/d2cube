@@ -17,16 +17,16 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.AttackRating]: [50],
-          [MagicPropertyType.LightRadius]: [1],
+          [MagicPropertyType.AttackRating]: 50,
+          [MagicPropertyType.LightRadius]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Defense]: [15],
-          [MagicPropertyType.LightRadius]: [1],
+          [MagicPropertyType.Defense]: 15,
+          [MagicPropertyType.LightRadius]: 1,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: [15],
-          [MagicPropertyType.LightRadius]: [1],
+          [MagicPropertyType.Defense]: 15,
+          [MagicPropertyType.LightRadius]: 1,
         },
       },
     },
@@ -38,14 +38,14 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.DamageToUndead]: [75],
-          [MagicPropertyType.AttackRatingAgainstUndead]: [50],
+          [MagicPropertyType.DamageToUndead]: 75,
+          [MagicPropertyType.AttackRatingAgainstUndead]: 50,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.SlowerStaminaDrain]: [15],
+          [MagicPropertyType.SlowerStaminaDrain]: 15,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.IncreasedChanceOfBlocking]: [7],
+          [MagicPropertyType.IncreasedChanceOfBlocking]: 7,
         },
       },
     },
@@ -57,13 +57,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ManaAfterKill]: [2],
+          [MagicPropertyType.ManaAfterKill]: 2,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ManaAfterKill]: [2],
+          [MagicPropertyType.ManaAfterKill]: 2,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ManaAfterKill]: [2],
+          [MagicPropertyType.ManaAfterKill]: 2,
         },
       },
     },
@@ -75,13 +75,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Knockback]: [],
+          [MagicPropertyType.Knockback]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DefenseVsMissle]: [30],
+          [MagicPropertyType.DefenseVsMissle]: 30,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DefenseVsMissle]: [30],
+          [MagicPropertyType.DefenseVsMissle]: 30,
         },
       },
     },
@@ -93,13 +93,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.TargetDefense]: [25],
+          [MagicPropertyType.TargetDefense]: 25,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.RegenerateMana]: [15],
+          [MagicPropertyType.RegenerateMana]: 15,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.RegenerateMana]: [15],
+          [MagicPropertyType.RegenerateMana]: 15,
         },
       },
     },
@@ -111,13 +111,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.MaximumDamage]: [9],
+          [MagicPropertyType.MaximumDamage]: 9,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DamageTakenGoesToMana]: [15],
+          [MagicPropertyType.DamageTakenGoesToMana]: 15,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DamageTakenGoesToMana]: [15],
+          [MagicPropertyType.DamageTakenGoesToMana]: 15,
         },
       },
     },
@@ -129,13 +129,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: [75, 5],
+          [MagicPropertyType.PoisonDamage]: {min: 75, max: 5},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.PoisonResist]: [30],
+          [MagicPropertyType.PoisonResist]: 30,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.PoisonResist]: [35],
+          [MagicPropertyType.PoisonResist]: 35,
         },
       },
     },
@@ -147,13 +147,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: [5, 30],
+          [MagicPropertyType.FireDamage]: {min: 5, max: 30},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.FireResist]: [30],
+          [MagicPropertyType.FireResist]: 30,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.FireResist]: [35],
+          [MagicPropertyType.FireResist]: 35,
         },
       },
     },
@@ -165,13 +165,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: [1, 50],
+          [MagicPropertyType.LightningDamage]: {min: 1, max: 50},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.LightningResist]: [30],
+          [MagicPropertyType.LightningResist]: 30,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.LightningResist]: [35],
+          [MagicPropertyType.LightningResist]: 35,
         },
       },
     },
@@ -183,13 +183,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: [3, 14, 3],
+          [MagicPropertyType.ColdDamage]: {min: 3, max: 14, t: 3},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ColdResist]: [30],
+          [MagicPropertyType.ColdResist]: 30,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ColdResist]: [35],
+          [MagicPropertyType.ColdResist]: 35,
         },
       },
     },
@@ -201,13 +201,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LifeStolenPerHit]: [7],
+          [MagicPropertyType.LifeStolenPerHit]: 7,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AttackerTakesDamage]: [14],
+          [MagicPropertyType.AttackerTakesDamage]: 14,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AttackerTakesDamage]: [14],
+          [MagicPropertyType.AttackerTakesDamage]: 14,
         },
       },
     },
@@ -219,13 +219,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.MinimumDamage]: [9],
+          [MagicPropertyType.MinimumDamage]: 9,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DamageReduced]: [7],
+          [MagicPropertyType.DamageReduced]: 7,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DamageReduced]: [7],
+          [MagicPropertyType.DamageReduced]: 7,
         },
       },
     },
@@ -237,13 +237,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.IncreasedAttackSpeed]: [20],
+          [MagicPropertyType.IncreasedAttackSpeed]: 20,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.FasterHitRecovery]: [20],
+          [MagicPropertyType.FasterHitRecovery]: 20,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.FasterBlockRate]: [20],
+          [MagicPropertyType.FasterBlockRate]: 20,
         },
       },
     },
@@ -255,13 +255,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.HitCausesMonsterToFlee]: [25],
+          [MagicPropertyType.HitCausesMonsterToFlee]: 25,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ReplenishLife]: [7],
+          [MagicPropertyType.ReplenishLife]: 7,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ReplenishLife]: [7],
+          [MagicPropertyType.ReplenishLife]: 7,
         },
       },
     },
@@ -272,13 +272,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Requirements]: [20],
+          [MagicPropertyType.Requirements]: 20,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Requirements]: [15],
+          [MagicPropertyType.Requirements]: 15,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Requirements]: [15],
+          [MagicPropertyType.Requirements]: 15,
         },
       },
     },
@@ -290,13 +290,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Vitality]: [10],
+          [MagicPropertyType.Vitality]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Vitality]: [10],
+          [MagicPropertyType.Vitality]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Vitality]: [10],
+          [MagicPropertyType.Vitality]: 10,
         },
       },
     },
@@ -308,13 +308,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Energy]: [10],
+          [MagicPropertyType.Energy]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Energy]: [10],
+          [MagicPropertyType.Energy]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Energy]: [10],
+          [MagicPropertyType.Energy]: 10,
         },
       },
     },
@@ -326,13 +326,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Dexterity]: [10],
+          [MagicPropertyType.Dexterity]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: [10],
+          [MagicPropertyType.Dexterity]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Dexterity]: [10],
+          [MagicPropertyType.Dexterity]: 10,
         },
       },
     },
@@ -344,13 +344,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Strength]: [10],
+          [MagicPropertyType.Strength]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: [10],
+          [MagicPropertyType.Strength]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Strength]: [10],
+          [MagicPropertyType.Strength]: 10,
         },
       },
     },
@@ -362,13 +362,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ExtraGold]: [75],
+          [MagicPropertyType.ExtraGold]: 75,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.ExtraGold]: [50],
+          [MagicPropertyType.ExtraGold]: 50,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.ExtraGold]: [50],
+          [MagicPropertyType.ExtraGold]: 50,
         },
       },
     },
@@ -380,14 +380,14 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.DamageToDemons]: [75],
-          [MagicPropertyType.AttackRatingAgainstDemons]: [100],
+          [MagicPropertyType.DamageToDemons]: 75,
+          [MagicPropertyType.AttackRatingAgainstDemons]: 100,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.EnhancedDefense]: [30],
+          [MagicPropertyType.EnhancedDefense]: 30,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.EnhancedDefense]: [30],
+          [MagicPropertyType.EnhancedDefense]: 30,
         },
       },
     },
@@ -399,13 +399,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.OpenWounds]: [25],
+          [MagicPropertyType.OpenWounds]: 25,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AllResistances]: [15],
+          [MagicPropertyType.AllResistances]: 15,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AllResistances]: [22],
+          [MagicPropertyType.AllResistances]: 22,
         },
       },
     },
@@ -417,13 +417,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PreventMonsterHeal]: [],
+          [MagicPropertyType.PreventMonsterHeal]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MagicDamageReduced]: [7],
+          [MagicPropertyType.MagicDamageReduced]: 7,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MagicDamageReduced]: [7],
+          [MagicPropertyType.MagicDamageReduced]: 7,
         },
       },
     },
@@ -435,13 +435,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.MagicFind]: [30],
+          [MagicPropertyType.MagicFind]: 30,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MagicFind]: [25],
+          [MagicPropertyType.MagicFind]: 25,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MagicFind]: [25],
+          [MagicPropertyType.MagicFind]: 25,
         },
       },
     },
@@ -453,13 +453,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.BonusToAttackRating]: [20],
+          [MagicPropertyType.BonusToAttackRating]: 20,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumPoisonResist]: [5],
+          [MagicPropertyType.MaximumPoisonResist]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumPoisonResist]: [5],
+          [MagicPropertyType.MaximumPoisonResist]: 5,
         },
       },
     },
@@ -471,13 +471,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ManaStolenPerHit]: [7],
+          [MagicPropertyType.ManaStolenPerHit]: 7,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumFireResist]: [5],
+          [MagicPropertyType.MaximumFireResist]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumFireResist]: [5],
+          [MagicPropertyType.MaximumFireResist]: 5,
         },
       },
     },
@@ -489,13 +489,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.EnhancedDamage]: [50],
+          [MagicPropertyType.EnhancedDamage]: 50,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumColdResist]: [5],
+          [MagicPropertyType.MaximumColdResist]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumColdResist]: [5],
+          [MagicPropertyType.MaximumColdResist]: 5,
         },
       },
     },
@@ -507,13 +507,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.DeadlyStrike]: [20],
+          [MagicPropertyType.DeadlyStrike]: 20,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.MaximumLightningResist]: [5],
+          [MagicPropertyType.MaximumLightningResist]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.MaximumLightningResist]: [5],
+          [MagicPropertyType.MaximumLightningResist]: 5,
         },
       },
     },
@@ -525,13 +525,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.HitBlindsTarget]: [],
+          [MagicPropertyType.HitBlindsTarget]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.IncreaseMaximumMana]: [5],
+          [MagicPropertyType.IncreaseMaximumMana]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Mana]: [50],
+          [MagicPropertyType.Mana]: 50,
         },
       },
     },
@@ -543,13 +543,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.CrushingBlow]: [20],
+          [MagicPropertyType.CrushingBlow]: 20,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.DamageReducedPercentage]: [8],
+          [MagicPropertyType.DamageReducedPercentage]: 8,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.DamageReducedPercentage]: [8],
+          [MagicPropertyType.DamageReducedPercentage]: 8,
         },
       },
     },
@@ -561,13 +561,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.IgnoreTargetDefense]: [],
+          [MagicPropertyType.IgnoreTargetDefense]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.IncreaseMaximumLife]: [5],
+          [MagicPropertyType.IncreaseMaximumLife]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Life]: [50],
+          [MagicPropertyType.Life]: 50,
         },
       },
     },
@@ -579,13 +579,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FreezesTarget]: [3],
+          [MagicPropertyType.FreezesTarget]: 3,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.CannotBeFrozen]: [],
+          [MagicPropertyType.CannotBeFrozen]: 1,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.CannotBeFrozen]: [],
+          [MagicPropertyType.CannotBeFrozen]: 1,
         },
       },
     },
@@ -597,13 +597,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Indestructible]: [],
+          [MagicPropertyType.Indestructible]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Indestructible]: [],
+          [MagicPropertyType.Indestructible]: 1,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Indestructible]: [],
+          [MagicPropertyType.Indestructible]: 1,
         },
       },
     },

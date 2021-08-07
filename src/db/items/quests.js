@@ -16,11 +16,11 @@ export default normalizeItems({
     size: [3, 1],
     properties: {
       base: {
-        [BasePropertyType.Damage1H]: [1, 8],
-        [BasePropertyType.MeleeRange]: [1],
-        [BasePropertyType.AttackSpeed]: [-10],
-        [BasePropertyType.Durability]: [66],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.Damage1H]: {min: 1, max: 8},
+        [BasePropertyType.MeleeRange]: 1,
+        [BasePropertyType.AttackSpeed]: -10,
+        [BasePropertyType.Durability]: 66,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },

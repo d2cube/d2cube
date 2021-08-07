@@ -3,7 +3,7 @@ import {pipe, props} from 'uinix-fp';
 import {SocketCategoryType} from '../../enums/index.js';
 import {concat, join} from '../fp.js';
 import {resolveItemPropertyValue} from './resolve-item-property-value.js';
-import {resolveMagicProperty} from './resolve-magic-property.js';
+import {resolveItemProperty} from './resolve-item-property.js';
 
 export const resolveItemSocketProperties = (item) => {
   const socketProperties = props('properties.socket')(item);
@@ -33,7 +33,7 @@ const mapSocketPropertyText = (item) => (socketType) => {
     socketCategoryType,
   )(item);
   const propertyTexts = Object.entries(socketProperties).map(
-    resolveMagicProperty(item),
+    ([property, values]) => resolveItemProperty(item)({property, values}),
   );
 
   const text = pipe([

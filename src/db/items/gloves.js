@@ -13,8 +13,8 @@ export default normalizeItems({
     qlvl: 3,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [2, 3],
-        [BasePropertyType.Durability]: [12],
+        [BasePropertyType.ArmorDefense]: [2, 3],
+        [BasePropertyType.Durability]: 12,
       },
     },
   },
@@ -25,8 +25,8 @@ export default normalizeItems({
     qlvl: 7,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [5, 6],
-        [BasePropertyType.Durability]: [14],
+        [BasePropertyType.ArmorDefense]: [5, 6],
+        [BasePropertyType.Durability]: 14,
       },
     },
   },
@@ -37,9 +37,9 @@ export default normalizeItems({
     qlvl: 12,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [8, 9],
-        [BasePropertyType.RequiredStrength]: [25],
-        [BasePropertyType.Durability]: [16],
+        [BasePropertyType.ArmorDefense]: [8, 9],
+        [BasePropertyType.RequiredStrength]: 25,
+        [BasePropertyType.Durability]: 16,
       },
     },
   },
@@ -50,9 +50,9 @@ export default normalizeItems({
     qlvl: 20,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [9, 11],
-        [BasePropertyType.RequiredStrength]: [45],
-        [BasePropertyType.Durability]: [18],
+        [BasePropertyType.ArmorDefense]: [9, 11],
+        [BasePropertyType.RequiredStrength]: 45,
+        [BasePropertyType.Durability]: 18,
       },
     },
   },
@@ -63,9 +63,9 @@ export default normalizeItems({
     qlvl: 27,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [12, 15],
-        [BasePropertyType.RequiredStrength]: [60],
-        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.ArmorDefense]: [12, 15],
+        [BasePropertyType.RequiredStrength]: 60,
+        [BasePropertyType.Durability]: 24,
       },
     },
   },
@@ -79,9 +79,9 @@ export default normalizeItems({
     imageId: ids.LeatherGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [28, 35],
-        [BasePropertyType.RequiredStrength]: [20],
-        [BasePropertyType.Durability]: [12],
+        [BasePropertyType.ArmorDefense]: [28, 35],
+        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.Durability]: 12,
       },
     },
   },
@@ -95,9 +95,9 @@ export default normalizeItems({
     imageId: ids.HeavyGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [33, 39],
-        [BasePropertyType.RequiredStrength]: [20],
-        [BasePropertyType.Durability]: [14],
+        [BasePropertyType.ArmorDefense]: [33, 39],
+        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.Durability]: 14,
       },
     },
   },
@@ -111,9 +111,9 @@ export default normalizeItems({
     imageId: ids.ChainGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [37, 44],
-        [BasePropertyType.RequiredStrength]: [58],
-        [BasePropertyType.Durability]: [16],
+        [BasePropertyType.ArmorDefense]: [37, 44],
+        [BasePropertyType.RequiredStrength]: 58,
+        [BasePropertyType.Durability]: 16,
       },
     },
   },
@@ -127,9 +127,9 @@ export default normalizeItems({
     imageId: ids.LightGauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [39, 47],
-        [BasePropertyType.RequiredStrength]: [88],
-        [BasePropertyType.Durability]: [18],
+        [BasePropertyType.ArmorDefense]: [39, 47],
+        [BasePropertyType.RequiredStrength]: 88,
+        [BasePropertyType.Durability]: 18,
       },
     },
   },
@@ -143,9 +143,9 @@ export default normalizeItems({
     imageId: ids.Gauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [43, 53],
-        [BasePropertyType.RequiredStrength]: [110],
-        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.ArmorDefense]: [43, 53],
+        [BasePropertyType.RequiredStrength]: 110,
+        [BasePropertyType.Durability]: 24,
       },
     },
   },
@@ -159,9 +159,9 @@ export default normalizeItems({
     imageId: ids.LeatherGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [54, 62],
-        [BasePropertyType.RequiredStrength]: [50],
-        [BasePropertyType.Durability]: [12],
+        [BasePropertyType.ArmorDefense]: [54, 62],
+        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.Durability]: 12,
       },
     },
   },
@@ -175,9 +175,9 @@ export default normalizeItems({
     imageId: ids.HeavyGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [56, 65],
-        [BasePropertyType.RequiredStrength]: [50],
-        [BasePropertyType.Durability]: [14],
+        [BasePropertyType.ArmorDefense]: [56, 65],
+        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.Durability]: 14,
       },
     },
   },
@@ -191,9 +191,9 @@ export default normalizeItems({
     imageId: ids.ChainGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [59, 67],
-        [BasePropertyType.RequiredStrength]: [106],
-        [BasePropertyType.Durability]: [16],
+        [BasePropertyType.ArmorDefense]: [59, 67],
+        [BasePropertyType.RequiredStrength]: 106,
+        [BasePropertyType.Durability]: 16,
       },
     },
   },
@@ -207,9 +207,9 @@ export default normalizeItems({
     imageId: ids.LightGauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [59, 68],
-        [BasePropertyType.RequiredStrength]: [151],
-        [BasePropertyType.Durability]: [18],
+        [BasePropertyType.ArmorDefense]: [59, 68],
+        [BasePropertyType.RequiredStrength]: 151,
+        [BasePropertyType.Durability]: 18,
       },
     },
   },
@@ -223,9 +223,9 @@ export default normalizeItems({
     imageId: ids.Gauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [62, 71],
-        [BasePropertyType.RequiredStrength]: [185],
-        [BasePropertyType.Durability]: [24],
+        [BasePropertyType.ArmorDefense]: [62, 71],
+        [BasePropertyType.RequiredStrength]: 185,
+        [BasePropertyType.Durability]: 24,
       },
     },
   },

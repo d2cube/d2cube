@@ -20,10 +20,10 @@ export default normalizeItems({
     qlvl: 1,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [8, 11],
-        [BasePropertyType.RequiredStrength]: [12],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [8, 11],
+        [BasePropertyType.RequiredStrength]: 12,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -35,10 +35,10 @@ export default normalizeItems({
     qlvl: 3,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [14, 17],
-        [BasePropertyType.RequiredStrength]: [15],
-        [BasePropertyType.Durability]: [24],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [14, 17],
+        [BasePropertyType.RequiredStrength]: 15,
+        [BasePropertyType.Durability]: 24,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -50,10 +50,10 @@ export default normalizeItems({
     qlvl: 5,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [21, 24],
-        [BasePropertyType.RequiredStrength]: [20],
-        [BasePropertyType.Durability]: [28],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [21, 24],
+        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.Durability]: 28,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -65,10 +65,10 @@ export default normalizeItems({
     qlvl: 8,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [32, 35],
-        [BasePropertyType.RequiredStrength]: [27],
-        [BasePropertyType.Durability]: [32],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [32, 35],
+        [BasePropertyType.RequiredStrength]: 27,
+        [BasePropertyType.Durability]: 32,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -80,10 +80,10 @@ export default normalizeItems({
     qlvl: 11,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [45, 48],
-        [BasePropertyType.RequiredStrength]: [36],
-        [BasePropertyType.Durability]: [26],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [45, 48],
+        [BasePropertyType.RequiredStrength]: 36,
+        [BasePropertyType.Durability]: 26,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -95,10 +95,10 @@ export default normalizeItems({
     qlvl: 13,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [57, 60],
-        [BasePropertyType.RequiredStrength]: [44],
-        [BasePropertyType.Durability]: [36],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [57, 60],
+        [BasePropertyType.RequiredStrength]: 44,
+        [BasePropertyType.Durability]: 36,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -110,10 +110,10 @@ export default normalizeItems({
     qlvl: 15,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [72, 75],
-        [BasePropertyType.RequiredStrength]: [48],
-        [BasePropertyType.Durability]: [45],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [72, 75],
+        [BasePropertyType.RequiredStrength]: 48,
+        [BasePropertyType.Durability]: 45,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -125,10 +125,10 @@ export default normalizeItems({
     qlvl: 18,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [65, 68],
-        [BasePropertyType.RequiredStrength]: [30],
-        [BasePropertyType.Durability]: [50],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [65, 68],
+        [BasePropertyType.RequiredStrength]: 30,
+        [BasePropertyType.Durability]: 50,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -140,10 +140,10 @@ export default normalizeItems({
     qlvl: 20,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [90, 95],
-        [BasePropertyType.RequiredStrength]: [51],
-        [BasePropertyType.Durability]: [30],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [90, 95],
+        [BasePropertyType.RequiredStrength]: 51,
+        [BasePropertyType.Durability]: 30,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -155,10 +155,10 @@ export default normalizeItems({
     qlvl: 24,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [108, 116],
-        [BasePropertyType.RequiredStrength]: [65],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [108, 116],
+        [BasePropertyType.RequiredStrength]: 65,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -170,10 +170,10 @@ export default normalizeItems({
     qlvl: 28,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [101, 105],
-        [BasePropertyType.RequiredStrength]: [55],
-        [BasePropertyType.Durability]: [48],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [101, 105],
+        [BasePropertyType.RequiredStrength]: 55,
+        [BasePropertyType.Durability]: 48,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -185,10 +185,10 @@ export default normalizeItems({
     qlvl: 32,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [128, 135],
-        [BasePropertyType.RequiredStrength]: [70],
-        [BasePropertyType.Durability]: [55],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [128, 135],
+        [BasePropertyType.RequiredStrength]: 70,
+        [BasePropertyType.Durability]: 55,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -200,10 +200,10 @@ export default normalizeItems({
     qlvl: 35,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [90, 107],
-        [BasePropertyType.RequiredStrength]: [41],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [90, 107],
+        [BasePropertyType.RequiredStrength]: 41,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -215,10 +215,10 @@ export default normalizeItems({
     qlvl: 37,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [150, 161],
-        [BasePropertyType.RequiredStrength]: [80],
-        [BasePropertyType.Durability]: [70],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [150, 161],
+        [BasePropertyType.RequiredStrength]: 80,
+        [BasePropertyType.Durability]: 70,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -230,10 +230,10 @@ export default normalizeItems({
     qlvl: 40,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [218, 233],
-        [BasePropertyType.RequiredStrength]: [100],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [218, 233],
+        [BasePropertyType.RequiredStrength]: 100,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -248,10 +248,10 @@ export default normalizeItems({
     imageId: ids.QuiltedArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [102, 117],
-        [BasePropertyType.RequiredStrength]: [38],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [102, 117],
+        [BasePropertyType.RequiredStrength]: 38,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -266,10 +266,10 @@ export default normalizeItems({
     imageId: ids.LeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [111, 126],
-        [BasePropertyType.RequiredStrength]: [43],
-        [BasePropertyType.Durability]: [24],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [111, 126],
+        [BasePropertyType.RequiredStrength]: 43,
+        [BasePropertyType.Durability]: 24,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -284,10 +284,10 @@ export default normalizeItems({
     imageId: ids.HardLeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [122, 136],
-        [BasePropertyType.RequiredStrength]: [50],
-        [BasePropertyType.Durability]: [28],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [122, 136],
+        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.Durability]: 28,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -302,10 +302,10 @@ export default normalizeItems({
     imageId: ids.StuddedLeather,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [138, 153],
-        [BasePropertyType.RequiredStrength]: [61],
-        [BasePropertyType.Durability]: [32],
-        [BasePropertyType.MaxSockets]: [2],
+        [BasePropertyType.ArmorDefense]: [138, 153],
+        [BasePropertyType.RequiredStrength]: 61,
+        [BasePropertyType.Durability]: 32,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -320,10 +320,10 @@ export default normalizeItems({
     imageId: ids.ChainMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [158, 172],
-        [BasePropertyType.RequiredStrength]: [74],
-        [BasePropertyType.Durability]: [26],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [158, 172],
+        [BasePropertyType.RequiredStrength]: 74,
+        [BasePropertyType.Durability]: 26,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -338,10 +338,10 @@ export default normalizeItems({
     imageId: ids.ScaleMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [176, 190],
-        [BasePropertyType.RequiredStrength]: [86],
-        [BasePropertyType.Durability]: [36],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [176, 190],
+        [BasePropertyType.RequiredStrength]: 86,
+        [BasePropertyType.Durability]: 36,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -356,10 +356,10 @@ export default normalizeItems({
     imageId: ids.RingMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [198, 213],
-        [BasePropertyType.RequiredStrength]: [92],
-        [BasePropertyType.Durability]: [45],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [198, 213],
+        [BasePropertyType.RequiredStrength]: 92,
+        [BasePropertyType.Durability]: 45,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -374,10 +374,10 @@ export default normalizeItems({
     imageId: ids.BreastPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [188, 202],
-        [BasePropertyType.RequiredStrength]: [65],
-        [BasePropertyType.Durability]: [50],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [188, 202],
+        [BasePropertyType.RequiredStrength]: 65,
+        [BasePropertyType.Durability]: 50,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -392,10 +392,10 @@ export default normalizeItems({
     imageId: ids.SplintMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [225, 243],
-        [BasePropertyType.RequiredStrength]: [97],
-        [BasePropertyType.Durability]: [30],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [225, 243],
+        [BasePropertyType.RequiredStrength]: 97,
+        [BasePropertyType.Durability]: 30,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -410,10 +410,10 @@ export default normalizeItems({
     imageId: ids.PlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [252, 274],
-        [BasePropertyType.RequiredStrength]: [118],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [252, 274],
+        [BasePropertyType.RequiredStrength]: 118,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -428,10 +428,10 @@ export default normalizeItems({
     imageId: ids.FieldPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [242, 258],
-        [BasePropertyType.RequiredStrength]: [103],
-        [BasePropertyType.Durability]: [48],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [242, 258],
+        [BasePropertyType.RequiredStrength]: 103,
+        [BasePropertyType.Durability]: 48,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -446,10 +446,10 @@ export default normalizeItems({
     imageId: ids.GothicPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [282, 303],
-        [BasePropertyType.RequiredStrength]: [125],
-        [BasePropertyType.Durability]: [55],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [282, 303],
+        [BasePropertyType.RequiredStrength]: 125,
+        [BasePropertyType.Durability]: 55,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -464,10 +464,10 @@ export default normalizeItems({
     imageId: ids.LightPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [225, 261],
-        [BasePropertyType.RequiredStrength]: [55],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [3],
+        [BasePropertyType.ArmorDefense]: [225, 261],
+        [BasePropertyType.RequiredStrength]: 55,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -482,10 +482,10 @@ export default normalizeItems({
     imageId: ids.FullPlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [315, 342],
-        [BasePropertyType.RequiredStrength]: [140],
-        [BasePropertyType.Durability]: [70],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [315, 342],
+        [BasePropertyType.RequiredStrength]: 140,
+        [BasePropertyType.Durability]: 70,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -500,10 +500,10 @@ export default normalizeItems({
     imageId: ids.AncientArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [417, 450],
-        [BasePropertyType.RequiredStrength]: [170],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [417, 450],
+        [BasePropertyType.RequiredStrength]: 170,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -518,10 +518,10 @@ export default normalizeItems({
     imageId: ids.QuiltedArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [361, 467],
-        [BasePropertyType.RequiredStrength]: [77],
-        [BasePropertyType.Durability]: [20],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [361, 467],
+        [BasePropertyType.RequiredStrength]: 77,
+        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -536,10 +536,10 @@ export default normalizeItems({
     imageId: ids.LeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [364, 470],
-        [BasePropertyType.RequiredStrength]: [84],
-        [BasePropertyType.Durability]: [24],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [364, 470],
+        [BasePropertyType.RequiredStrength]: 84,
+        [BasePropertyType.Durability]: 24,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -554,10 +554,10 @@ export default normalizeItems({
     imageId: ids.HardLeatherArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [369, 474],
-        [BasePropertyType.RequiredStrength]: [95],
-        [BasePropertyType.Durability]: [28],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [369, 474],
+        [BasePropertyType.RequiredStrength]: 95,
+        [BasePropertyType.Durability]: 28,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -572,10 +572,10 @@ export default normalizeItems({
     imageId: ids.StuddedLeather,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [375, 481],
-        [BasePropertyType.RequiredStrength]: [111],
-        [BasePropertyType.Durability]: [70],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [375, 481],
+        [BasePropertyType.RequiredStrength]: 111,
+        [BasePropertyType.Durability]: 70,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -590,10 +590,10 @@ export default normalizeItems({
     imageId: ids.ChainMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [383, 489],
-        [BasePropertyType.RequiredStrength]: [131],
-        [BasePropertyType.Durability]: [26],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [383, 489],
+        [BasePropertyType.RequiredStrength]: 131,
+        [BasePropertyType.Durability]: 26,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -608,10 +608,10 @@ export default normalizeItems({
     imageId: ids.ScaleMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [390, 496],
-        [BasePropertyType.RequiredStrength]: [149],
-        [BasePropertyType.Durability]: [36],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [390, 496],
+        [BasePropertyType.RequiredStrength]: 149,
+        [BasePropertyType.Durability]: 36,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -626,10 +626,10 @@ export default normalizeItems({
     imageId: ids.RingMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [399, 505],
-        [BasePropertyType.RequiredStrength]: [158],
-        [BasePropertyType.Durability]: [45],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [399, 505],
+        [BasePropertyType.RequiredStrength]: 158,
+        [BasePropertyType.Durability]: 45,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -644,10 +644,10 @@ export default normalizeItems({
     imageId: ids.BreastPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [395, 501],
-        [BasePropertyType.RequiredStrength]: [118],
-        [BasePropertyType.Durability]: [50],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [395, 501],
+        [BasePropertyType.RequiredStrength]: 118,
+        [BasePropertyType.Durability]: 50,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -662,10 +662,10 @@ export default normalizeItems({
     imageId: ids.SplintMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [410, 517],
-        [BasePropertyType.RequiredStrength]: [165],
-        [BasePropertyType.Durability]: [30],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [410, 517],
+        [BasePropertyType.RequiredStrength]: 165,
+        [BasePropertyType.Durability]: 30,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -680,10 +680,10 @@ export default normalizeItems({
     imageId: ids.PlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [421, 530],
-        [BasePropertyType.RequiredStrength]: [196],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [421, 530],
+        [BasePropertyType.RequiredStrength]: 196,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -698,10 +698,10 @@ export default normalizeItems({
     imageId: ids.FieldPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [417, 523],
-        [BasePropertyType.RequiredStrength]: [174],
-        [BasePropertyType.Durability]: [48],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [417, 523],
+        [BasePropertyType.RequiredStrength]: 174,
+        [BasePropertyType.Durability]: 48,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -716,10 +716,10 @@ export default normalizeItems({
     imageId: ids.GothicPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [433, 541],
-        [BasePropertyType.RequiredStrength]: [208],
-        [BasePropertyType.Durability]: [55],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [433, 541],
+        [BasePropertyType.RequiredStrength]: 208,
+        [BasePropertyType.Durability]: 55,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -734,10 +734,10 @@ export default normalizeItems({
     imageId: ids.LightPlate,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [410, 524],
-        [BasePropertyType.RequiredStrength]: [103],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [410, 524],
+        [BasePropertyType.RequiredStrength]: 103,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -752,10 +752,10 @@ export default normalizeItems({
     imageId: ids.FullPlateMail,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [446, 557],
-        [BasePropertyType.RequiredStrength]: [230],
-        [BasePropertyType.Durability]: [70],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [446, 557],
+        [BasePropertyType.RequiredStrength]: 230,
+        [BasePropertyType.Durability]: 70,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
@@ -770,10 +770,10 @@ export default normalizeItems({
     imageId: ids.AncientArmor,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [487, 600],
-        [BasePropertyType.RequiredStrength]: [232],
-        [BasePropertyType.Durability]: [60],
-        [BasePropertyType.MaxSockets]: [4],
+        [BasePropertyType.ArmorDefense]: [487, 600],
+        [BasePropertyType.RequiredStrength]: 232,
+        [BasePropertyType.Durability]: 60,
+        [BasePropertyType.MaxSockets]: 4,
       },
     },
   },
