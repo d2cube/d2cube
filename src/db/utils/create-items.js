@@ -1,5 +1,6 @@
-import {merge} from 'uinix-fp';
-import {ItemQualityType} from '../../enums/index.js';
+import {merge, props} from 'uinix-fp';
+import {ItemQualityType, MagicPropertyType} from '../../enums/index.js';
+import {fillNull} from '../../utils/fp.js';
 import {calcItemStats} from './calc-item-stats.js';
 
 export const createItems = (items) =>
@@ -22,6 +23,13 @@ const createItem = (items) => (initialItem) => {
       break;
     default:
       break;
+  }
+
+  const addSockets = props(`properties.magic.${MagicPropertyType.AddSockets}`)(
+    item,
+  );
+  if (addSockets) {
+    item.sockets = fillNull(addSockets);
   }
 
   return {
