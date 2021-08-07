@@ -7,6 +7,7 @@ export const resolveItemProperty =
   (item) =>
   ({property, values}) => {
     const resolver = resolvers[property] || k(null);
+    // @ts-ignore fix
     return resolver(values, item);
   };
 
