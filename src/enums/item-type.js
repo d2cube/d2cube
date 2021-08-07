@@ -36,6 +36,7 @@ export const ItemType = {
   Rune: 'Rune',
   Scepter: 'Scepter',
   Scroll: 'Scroll',
+  Set: 'Set',
   Shield: 'Shield',
   SorceressOrb: 'SorceressOrb',
   Spear: 'Spear',
@@ -43,5 +44,6 @@ export const ItemType = {
   Sword: 'Sword',
   Token: 'Token',
   Tome: 'Tome',
+  Unique: 'Unique',
   Wand: 'Wand',
 };

@@ -15,22 +15,22 @@ const Cube = ({items}) => (
 );
 
 const help = (
-  <>
-    <p>
+  <Layout direction="column" spacing="m">
+    <div>
       Use the Horadric Cube to transmute items into new items by clicking on the
       &ldquo;Transmute&rdquo;{' '}
       <Icon display="inline" icon="interface.transmute" size="icon.s" /> button.
-    </p>
-    <p>
+    </div>
+    <div>
       View or filter for available recipes by clicking on the
       &ldquo;Recipes&rdquo;{' '}
       <Icon display="inline" icon="interface.transmute" size="icon.s" /> button.
-    </p>
-    <p>
+    </div>
+    <div>
       Transfer items between the Cube and your Inventory as you would in the
       game.
-    </p>
-  </>
+    </div>
+  </Layout>
 );
 
 export default Cube;

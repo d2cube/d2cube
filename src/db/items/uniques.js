@@ -9,11 +9,11 @@ import ids from '../ids/index.js';
 
 export default normalizeItems({
   quality: ItemQualityType.Unique,
+  type: ItemType.Unique,
 })([
   {
     id: ids.BladeOfAliBaba,
     name: 'Blade of Ali Baba',
-    type: ItemType.Sword,
     baseId: ids.Tulwar,
     properties: {
       base: {
@@ -32,7 +32,6 @@ export default normalizeItems({
   {
     id: ids.BloodCrescent,
     name: 'Blood Crescent',
-    type: ItemType.Sword,
     baseId: ids.Scimitar,
     properties: {
       base: {
@@ -53,7 +52,6 @@ export default normalizeItems({
   {
     id: ids.LidlessWall,
     name: 'Lidless Wall',
-    type: ItemType.Shield,
     size: [3, 2],
     baseId: ids.GrimShield,
     properties: {
@@ -75,7 +73,6 @@ export default normalizeItems({
   {
     id: ids.StoneOfJordan,
     name: 'Stone of Jordan',
-    type: ItemType.Ring,
     size: [1, 1],
     baseId: ids.Ring,
     properties: {
@@ -94,7 +91,6 @@ export default normalizeItems({
   {
     id: ids.WallOfTheEyeless,
     name: 'Wall of the Eyeless',
-    type: ItemType.Shield,
     baseId: ids.BoneShield,
     properties: {
       base: {

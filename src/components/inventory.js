@@ -15,18 +15,18 @@ const Inventory = ({items}) => (
 );
 
 const help = (
-  <>
-    <p>
+  <Layout direction="column" spacing="m">
+    <div>
       Equip/unequip, and transfer items between your Inventory and Cube as you
       would in the game.
-    </p>
-    <p>Right click on an item to destroy it.</p>
-    <p>
+    </div>
+    <div>Right click on an item to destroy it.</div>
+    <div>
       Search and add new items to your inventory by clicking on the &ldquo;Add
       Item&rdquo; <Icon display="inline" icon="interface.add" size="icon.s" />{' '}
       button.
-    </p>
-  </>
+    </div>
+  </Layout>
 );
 
 export default Inventory;

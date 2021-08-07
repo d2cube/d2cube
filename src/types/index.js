@@ -51,10 +51,10 @@ export {};
  *    Base item properties.
  * @property {Object.<MagicPropertyType, Values>} [magic]
  *    Magic properties.
- * @property {Object.<number, Object.<MagicPropertyType, Values>>} [set]
- *    Set properties.  The numeric keys represent the set bonus requirement.
+ * @property {Array.<MagicPropertyType, Values|null>} [set]
+ *    Set properties.  The array index relates to the effective set count bonus.
  * @property {Object.<SocketCategoryType, Object.<MagicPropertyType, Values>>} [socket]
- *    Set properties.  The numeric keys represent the set bonus requirement.
+ *    Socket properties.
  *
  * @typedef Description
  *    Item description that will be rendered in the item's tooltip.
