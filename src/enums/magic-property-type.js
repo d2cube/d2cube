@@ -3,12 +3,13 @@
  * @enum {string}
  */
 export const MagicPropertyType = {
-  Strength: 'Strength',
-  Energy: 'Energy',
-  Dexterity: 'Dexterity',
-  Vitality: 'Vitality',
-  Life: 'Life',
-  Mana: 'Mana',
+  AddDefense: 'AddDefense',
+  AddDexterity: 'AddDexterity',
+  AddEnergy: 'AddEnergy',
+  AddLife: 'AddLife',
+  AddMana: 'AddMana',
+  AddStrength: 'AddStrength',
+  AddVitality: 'AddVitality',
   MaximumStamina: 'MaximumStamina',
   EnhancedDefense: 'EnhancedDefense',
   EnhancedDamage: 'EnhancedDamage',
@@ -18,7 +19,6 @@ export const MagicPropertyType = {
   MaximumDamage: 'MaximumDamage',
   RegenerateMana: 'RegenerateMana',
   HealStamina: 'HealStamina',
-  Defense: 'Defense',
   DefenseVsMissle: 'DefenseVsMissle',
   DefenseVsMelee: 'DefenseVsMelee',
   DamageReduced: 'DamageReduced',

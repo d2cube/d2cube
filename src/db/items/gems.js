@@ -1,4 +1,5 @@
 import {
+  BasePropertyType,
   GemClassType,
   GemQualityType,
   ItemType,
@@ -15,16 +16,18 @@ export default normalizeItems({
   {
     id: ids.ChippedRuby,
     name: 'Chipped Ruby',
-    clvl: 1,
     class: GemClassType.Ruby,
     quality: GemQualityType.Chipped,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 1,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.FireDamage]: {min: 3, max: 4},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Life]: 10,
+          [MagicPropertyType.AddLife]: 10,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 12,
@@ -35,16 +38,18 @@ export default normalizeItems({
   {
     id: ids.FlawedRuby,
     name: 'Flawed Ruby',
-    clvl: 5,
     class: GemClassType.Ruby,
     quality: GemQualityType.Flawed,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 5,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.FireDamage]: {min: 5, max: 8},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Life]: 17,
+          [MagicPropertyType.AddLife]: 17,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 16,
@@ -55,16 +60,18 @@ export default normalizeItems({
   {
     id: ids.Ruby,
     name: 'Ruby',
-    clvl: 12,
     class: GemClassType.Ruby,
     quality: GemQualityType.Regular,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 12,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.FireDamage]: {min: 8, max: 12},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Life]: 24,
+          [MagicPropertyType.AddLife]: 24,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 22,
@@ -75,16 +82,18 @@ export default normalizeItems({
   {
     id: ids.FlawlessRuby,
     name: 'Flawless Ruby',
-    clvl: 15,
     class: GemClassType.Ruby,
     quality: GemQualityType.Flawless,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.FireDamage]: {min: 10, max: 16},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Life]: 31,
+          [MagicPropertyType.AddLife]: 31,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 28,
@@ -95,16 +104,18 @@ export default normalizeItems({
   {
     id: ids.PerfectRuby,
     name: 'Perfect Ruby',
-    clvl: 18,
     class: GemClassType.Ruby,
     quality: GemQualityType.Perfect,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 18,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.FireDamage]: {min: 15, max: 20},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Life]: 38,
+          [MagicPropertyType.AddLife]: 38,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 40,
@@ -115,16 +126,18 @@ export default normalizeItems({
   {
     id: ids.ChippedSapphire,
     name: 'Chipped Sapphire',
-    clvl: 1,
-    class: GemClassType.Sapphire,
     quality: GemQualityType.Chipped,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 1,
+      },
+      class: GemClassType.Sapphire,
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ColdDamage]: {min: 1, max: 3, t: 1},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Mana]: 10,
+          [MagicPropertyType.AddMana]: 10,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.ColdResist]: 12,
@@ -135,16 +148,18 @@ export default normalizeItems({
   {
     id: ids.FlawedSapphire,
     name: 'Flawed Sapphire',
-    clvl: 5,
     class: GemClassType.Sapphire,
     quality: GemQualityType.Flawed,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 5,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ColdDamage]: {min: 3, max: 5, t: 1.4},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Mana]: 17,
+          [MagicPropertyType.AddMana]: 17,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.ColdResist]: 16,
@@ -155,16 +170,18 @@ export default normalizeItems({
   {
     id: ids.Sapphire,
     name: 'Sapphire',
-    clvl: 12,
     class: GemClassType.Sapphire,
     quality: GemQualityType.Regular,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 12,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ColdDamage]: {min: 4, max: 7, t: 2},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Mana]: 24,
+          [MagicPropertyType.AddMana]: 24,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.ColdResist]: 22,
@@ -175,16 +192,18 @@ export default normalizeItems({
   {
     id: ids.FlawlessSapphire,
     name: 'Flawless Sapphire',
-    clvl: 15,
     class: GemClassType.Sapphire,
     quality: GemQualityType.Flawless,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ColdDamage]: {min: 6, max: 10, t: 2.4},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Mana]: 31,
+          [MagicPropertyType.AddMana]: 31,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.ColdResist]: 28,
@@ -195,16 +214,18 @@ export default normalizeItems({
   {
     id: ids.PerfectSapphire,
     name: 'Perfect Sapphire',
-    clvl: 18,
     class: GemClassType.Sapphire,
     quality: GemQualityType.Perfect,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 18,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ColdDamage]: {min: 10, max: 14, t: 3},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Mana]: 38,
+          [MagicPropertyType.AddMana]: 38,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.ColdResist]: 40,
@@ -215,10 +236,12 @@ export default normalizeItems({
   {
     id: ids.ChippedTopaz,
     name: 'Chipped Topaz',
-    clvl: 1,
     class: GemClassType.Topaz,
     quality: GemQualityType.Chipped,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 1,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LightningDamage]: {min: 1, max: 8},
@@ -235,10 +258,12 @@ export default normalizeItems({
   {
     id: ids.FlawedTopaz,
     name: 'Flawed Topaz',
-    clvl: 5,
     class: GemClassType.Topaz,
     quality: GemQualityType.Flawed,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 5,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LightningDamage]: {min: 1, max: 14},
@@ -255,10 +280,12 @@ export default normalizeItems({
   {
     id: ids.Topaz,
     name: 'Topaz',
-    clvl: 12,
     class: GemClassType.Topaz,
     quality: GemQualityType.Regular,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 12,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LightningDamage]: {min: 1, max: 22},
@@ -275,10 +302,12 @@ export default normalizeItems({
   {
     id: ids.FlawlessTopaz,
     name: 'Flawless Topaz',
-    clvl: 15,
     class: GemClassType.Topaz,
     quality: GemQualityType.Flawless,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LightningDamage]: {min: 1, max: 30},
@@ -295,10 +324,12 @@ export default normalizeItems({
   {
     id: ids.PerfectTopaz,
     name: 'Perfect Topaz',
-    clvl: 18,
     class: GemClassType.Topaz,
     quality: GemQualityType.Perfect,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 18,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LightningDamage]: {min: 1, max: 40},
@@ -315,16 +346,18 @@ export default normalizeItems({
   {
     id: ids.ChippedEmerald,
     name: 'Chipped Emerald',
-    clvl: 1,
     class: GemClassType.Emerald,
     quality: GemQualityType.Chipped,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 1,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.PoisonDamage]: {min: 10, max: 3},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: 3,
+          [MagicPropertyType.AddDexterity]: 3,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.PoisonResist]: 12,
@@ -335,16 +368,18 @@ export default normalizeItems({
   {
     id: ids.FlawedEmerald,
     name: 'Flawed Emerald',
-    clvl: 5,
     class: GemClassType.Emerald,
     quality: GemQualityType.Flawed,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 5,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.PoisonDamage]: {min: 20, max: 4},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: 4,
+          [MagicPropertyType.AddDexterity]: 4,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.PoisonResist]: 16,
@@ -355,16 +390,18 @@ export default normalizeItems({
   {
     id: ids.Emerald,
     name: 'Emerald',
-    clvl: 12,
     class: GemClassType.Emerald,
     quality: GemQualityType.Regular,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 12,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.PoisonDamage]: {min: 40, max: 5},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: 6,
+          [MagicPropertyType.AddDexterity]: 6,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.PoisonResist]: 22,
@@ -375,16 +412,18 @@ export default normalizeItems({
   {
     id: ids.FlawlessEmerald,
     name: 'Flawless Emerald',
-    clvl: 15,
     class: GemClassType.Emerald,
     quality: GemQualityType.Flawless,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.PoisonDamage]: {min: 60, max: 6},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: 8,
+          [MagicPropertyType.AddDexterity]: 8,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.PoisonResist]: 28,
@@ -395,16 +434,18 @@ export default normalizeItems({
   {
     id: ids.PerfectEmerald,
     name: 'Perfect Emerald',
-    clvl: 18,
     class: GemClassType.Emerald,
     quality: GemQualityType.Perfect,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 18,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.PoisonDamage]: {min: 100, max: 7},
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: 10,
+          [MagicPropertyType.AddDexterity]: 10,
         },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.PoisonResist]: 40,
@@ -415,10 +456,12 @@ export default normalizeItems({
   {
     id: ids.ChippedDiamond,
     name: 'Chipped Diamond',
-    clvl: 1,
     class: GemClassType.Diamond,
     quality: GemQualityType.Chipped,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 1,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DamageToUndead]: 28,
@@ -435,10 +478,12 @@ export default normalizeItems({
   {
     id: ids.FlawedDiamond,
     name: 'Flawed Diamond',
-    clvl: 5,
     class: GemClassType.Diamond,
     quality: GemQualityType.Flawed,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 5,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DamageToUndead]: 34,
@@ -455,10 +500,12 @@ export default normalizeItems({
   {
     id: ids.Diamond,
     name: 'Diamond',
-    clvl: 12,
     class: GemClassType.Diamond,
     quality: GemQualityType.Regular,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 12,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DamageToUndead]: 44,
@@ -475,10 +522,12 @@ export default normalizeItems({
   {
     id: ids.FlawlessDiamond,
     name: 'Flawless Diamond',
-    clvl: 15,
     class: GemClassType.Diamond,
     quality: GemQualityType.Flawless,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DamageToUndead]: 54,
@@ -495,10 +544,12 @@ export default normalizeItems({
   {
     id: ids.PerfectDiamond,
     name: 'Perfect Diamond',
-    clvl: 18,
     class: GemClassType.Diamond,
     quality: GemQualityType.Perfect,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 18,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DamageToUndead]: 68,
@@ -515,19 +566,21 @@ export default normalizeItems({
   {
     id: ids.ChippedAmethyst,
     name: 'Chipped Amethyst',
-    clvl: 1,
     class: GemClassType.Amethyst,
     quality: GemQualityType.Chipped,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 1,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.AttackRating]: 40,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: 3,
+          [MagicPropertyType.AddStrength]: 3,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: 8,
+          [MagicPropertyType.AddDefense]: 8,
         },
       },
     },
@@ -535,19 +588,21 @@ export default normalizeItems({
   {
     id: ids.FlawedAmethyst,
     name: 'Flawed Amethyst',
-    clvl: 5,
     class: GemClassType.Amethyst,
     quality: GemQualityType.Flawed,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 5,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.AttackRating]: 60,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: 4,
+          [MagicPropertyType.AddStrength]: 4,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: 12,
+          [MagicPropertyType.AddDefense]: 12,
         },
       },
     },
@@ -555,19 +610,21 @@ export default normalizeItems({
   {
     id: ids.Amethyst,
     name: 'Amethyst',
-    clvl: 12,
     class: GemClassType.Amethyst,
     quality: GemQualityType.Regular,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 12,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.AttackRating]: 80,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: 6,
+          [MagicPropertyType.AddStrength]: 6,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: 18,
+          [MagicPropertyType.AddDefense]: 18,
         },
       },
     },
@@ -575,19 +632,21 @@ export default normalizeItems({
   {
     id: ids.FlawlessAmethyst,
     name: 'Flawless Amethyst',
-    clvl: 15,
     class: GemClassType.Amethyst,
     quality: GemQualityType.Flawless,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.AttackRating]: 100,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: 8,
+          [MagicPropertyType.AddStrength]: 8,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: 24,
+          [MagicPropertyType.AddDefense]: 24,
         },
       },
     },
@@ -595,19 +654,21 @@ export default normalizeItems({
   {
     id: ids.PerfectAmethyst,
     name: 'Perfect Amethyst',
-    clvl: 18,
     class: GemClassType.Amethyst,
     quality: GemQualityType.Perfect,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 18,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.AttackRating]: 150,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: 10,
+          [MagicPropertyType.AddStrength]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: 30,
+          [MagicPropertyType.AddDefense]: 30,
         },
       },
     },
@@ -615,10 +676,12 @@ export default normalizeItems({
   {
     id: ids.ChippedSkull,
     name: 'Chipped Skull',
-    clvl: 1,
     class: GemClassType.Skull,
     quality: GemQualityType.Chipped,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 1,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LifeStolenPerHit]: 2,
@@ -637,10 +700,12 @@ export default normalizeItems({
   {
     id: ids.FlawedSkull,
     name: 'Flawed Skull',
-    clvl: 5,
     class: GemClassType.Skull,
     quality: GemQualityType.Flawed,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 5,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LifeStolenPerHit]: 2,
@@ -659,10 +724,12 @@ export default normalizeItems({
   {
     id: ids.Skull,
     name: 'Skull',
-    clvl: 12,
     class: GemClassType.Skull,
     quality: GemQualityType.Regular,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 12,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LifeStolenPerHit]: 3,
@@ -681,10 +748,12 @@ export default normalizeItems({
   {
     id: ids.FlawlessSkull,
     name: 'Flawless Skull',
-    clvl: 15,
     class: GemClassType.Skull,
     quality: GemQualityType.Flawless,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LifeStolenPerHit]: 3,
@@ -703,10 +772,12 @@ export default normalizeItems({
   {
     id: ids.PerfectSkull,
     name: 'Perfect Skull',
-    clvl: 18,
     class: GemClassType.Skull,
     quality: GemQualityType.Perfect,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 18,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LifeStolenPerHit]: 4,

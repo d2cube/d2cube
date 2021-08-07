@@ -39,9 +39,10 @@ export {};
  */
 
 /**
- * @typedef {number[]|Array<number[]>} Values
- *    Values are always represented as numbers.
- *    Ranges are represented as array of Values.
+ * @typedef {any} Values
+ *    Primitive values are usually numbers or booleans.
+ *    Composite values assume an object form.
+ *    Range/varying values may contain primitive/composite values.
  *
  * @typedef Properties
  *    Items have properties defined as a map of enums to multi-variadic values.
@@ -76,10 +77,6 @@ export {};
  * @property {number[]} size
  *    A 2-sized array indicating the item's size (by row/column).
  * @property {Description[]} [description]
- *    Additional description
- * @property {number} [clvl]
- *    Required character level.
- * @property {number} [qlvl]
  *    Quality level.
  * @property {ArmorClassType|GemClassType|PotionClassType|WeaponClassType} [class]
  *    The sub-category/class/family of the item

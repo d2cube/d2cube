@@ -1,4 +1,8 @@
-import {ItemType, PotionClassType} from '../../enums/index.js';
+import {
+  BasePropertyType,
+  ItemType,
+  PotionClassType,
+} from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
@@ -81,31 +85,43 @@ export default normalizeItems({
   {
     id: ids.FulminatingPotion,
     name: 'Fulminating Potion',
-    clvl: 6,
+    properties: {
+      [BasePropertyType.RequiredLevel]: 6,
+    },
   },
   {
     id: ids.ExplodingPotion,
     name: 'Exploding Potion',
-    clvl: 12,
+    properties: {
+      [BasePropertyType.RequiredLevel]: 12,
+    },
   },
   {
     id: ids.OilPotion,
     name: 'Oil Potion',
-    clvl: 20,
+    properties: {
+      [BasePropertyType.RequiredLevel]: 20,
+    },
   },
   {
     id: ids.StranglingGasPotion,
     name: 'Strangling Gas Potion',
-    clvl: 6,
+    properties: {
+      [BasePropertyType.RequiredLevel]: 6,
+    },
   },
   {
     id: ids.ChokingGasPotion,
     name: 'Choking Gas Potion',
-    clvl: 16,
+    properties: {
+      [BasePropertyType.RequiredLevel]: 16,
+    },
   },
   {
     id: ids.RancidGasPotion,
     name: 'Rancid Gas Potion',
-    clvl: 24,
+    properties: {
+      [BasePropertyType.RequiredLevel]: 24,
+    },
   },
 ]);

@@ -1,4 +1,5 @@
 import {
+  BasePropertyType,
   ItemType,
   MagicPropertyType,
   SocketCategoryType,
@@ -13,19 +14,21 @@ export default normalizeItems({
   {
     id: ids.El,
     name: 'El Rune',
-    clvl: 11,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 11,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.AttackRating]: 50,
           [MagicPropertyType.LightRadius]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Defense]: 15,
+          [MagicPropertyType.AddDefense]: 15,
           [MagicPropertyType.LightRadius]: 1,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Defense]: 15,
+          [MagicPropertyType.AddDefense]: 15,
           [MagicPropertyType.LightRadius]: 1,
         },
       },
@@ -34,8 +37,10 @@ export default normalizeItems({
   {
     id: ids.Eld,
     name: 'Eld Rune',
-    clvl: 11,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 11,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DamageToUndead]: 75,
@@ -53,8 +58,10 @@ export default normalizeItems({
   {
     id: ids.Tir,
     name: 'Tir Rune',
-    clvl: 13,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 13,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ManaAfterKill]: 2,
@@ -71,8 +78,10 @@ export default normalizeItems({
   {
     id: ids.Nef,
     name: 'Nef Rune',
-    clvl: 13,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 13,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.Knockback]: 1,
@@ -89,8 +98,10 @@ export default normalizeItems({
   {
     id: ids.Eth,
     name: 'Eth Rune',
-    clvl: 15,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.TargetDefense]: 25,
@@ -107,8 +118,10 @@ export default normalizeItems({
   {
     id: ids.Ith,
     name: 'Ith Rune',
-    clvl: 15,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 15,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.MaximumDamage]: 9,
@@ -125,8 +138,10 @@ export default normalizeItems({
   {
     id: ids.Tal,
     name: 'Tal Rune',
-    clvl: 17,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 17,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.PoisonDamage]: {min: 75, max: 5},
@@ -143,8 +158,10 @@ export default normalizeItems({
   {
     id: ids.Ral,
     name: 'Ral Rune',
-    clvl: 19,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 19,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.FireDamage]: {min: 5, max: 30},
@@ -161,8 +178,10 @@ export default normalizeItems({
   {
     id: ids.Ort,
     name: 'Ort Rune',
-    clvl: 21,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 21,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LightningDamage]: {min: 1, max: 50},
@@ -179,8 +198,10 @@ export default normalizeItems({
   {
     id: ids.Thul,
     name: 'Thul Rune',
-    clvl: 23,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 23,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ColdDamage]: {min: 3, max: 14, t: 3},
@@ -197,8 +218,10 @@ export default normalizeItems({
   {
     id: ids.Amn,
     name: 'Amn Rune',
-    clvl: 25,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 25,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.LifeStolenPerHit]: 7,
@@ -215,8 +238,10 @@ export default normalizeItems({
   {
     id: ids.Sol,
     name: 'Sol Rune',
-    clvl: 27,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 27,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.MinimumDamage]: 9,
@@ -233,8 +258,10 @@ export default normalizeItems({
   {
     id: ids.Shael,
     name: 'Shael Rune',
-    clvl: 29,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 29,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.IncreasedAttackSpeed]: 20,
@@ -251,8 +278,10 @@ export default normalizeItems({
   {
     id: ids.Dol,
     name: 'Dol Rune',
-    clvl: 31,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 31,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.HitCausesMonsterToFlee]: 25,
@@ -286,17 +315,19 @@ export default normalizeItems({
   {
     id: ids.Io,
     name: 'Io Rune',
-    clvl: 35,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 35,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Vitality]: 10,
+          [MagicPropertyType.AddVitality]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Vitality]: 10,
+          [MagicPropertyType.AddVitality]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Vitality]: 10,
+          [MagicPropertyType.AddVitality]: 10,
         },
       },
     },
@@ -304,17 +335,19 @@ export default normalizeItems({
   {
     id: ids.Lum,
     name: 'Lum Rune',
-    clvl: 37,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 37,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Energy]: 10,
+          [MagicPropertyType.AddEnergy]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Energy]: 10,
+          [MagicPropertyType.AddEnergy]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Energy]: 10,
+          [MagicPropertyType.AddEnergy]: 10,
         },
       },
     },
@@ -322,17 +355,19 @@ export default normalizeItems({
   {
     id: ids.Ko,
     name: 'Ko Rune',
-    clvl: 39,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 39,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Dexterity]: 10,
+          [MagicPropertyType.AddDexterity]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Dexterity]: 10,
+          [MagicPropertyType.AddDexterity]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Dexterity]: 10,
+          [MagicPropertyType.AddDexterity]: 10,
         },
       },
     },
@@ -340,17 +375,19 @@ export default normalizeItems({
   {
     id: ids.Fal,
     name: 'Fal Rune',
-    clvl: 41,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 41,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Strength]: 10,
+          [MagicPropertyType.AddStrength]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Strength]: 10,
+          [MagicPropertyType.AddStrength]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Strength]: 10,
+          [MagicPropertyType.AddStrength]: 10,
         },
       },
     },
@@ -358,8 +395,10 @@ export default normalizeItems({
   {
     id: ids.Lem,
     name: 'Lem Rune',
-    clvl: 43,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 43,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ExtraGold]: 75,
@@ -376,8 +415,10 @@ export default normalizeItems({
   {
     id: ids.Pul,
     name: 'Pul Rune',
-    clvl: 45,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 45,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DamageToDemons]: 75,
@@ -395,8 +436,10 @@ export default normalizeItems({
   {
     id: ids.Um,
     name: 'Um Rune',
-    clvl: 47,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 47,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.OpenWounds]: 25,
@@ -413,8 +456,10 @@ export default normalizeItems({
   {
     id: ids.Mal,
     name: 'Mal Rune',
-    clvl: 49,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 49,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.PreventMonsterHeal]: 1,
@@ -431,8 +476,10 @@ export default normalizeItems({
   {
     id: ids.Ist,
     name: 'Ist Rune',
-    clvl: 51,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 51,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.MagicFind]: 30,
@@ -449,8 +496,10 @@ export default normalizeItems({
   {
     id: ids.Gul,
     name: 'Gul Rune',
-    clvl: 53,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 53,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.BonusToAttackRating]: 20,
@@ -467,8 +516,10 @@ export default normalizeItems({
   {
     id: ids.Vex,
     name: 'Vex Rune',
-    clvl: 55,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 55,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.ManaStolenPerHit]: 7,
@@ -485,8 +536,10 @@ export default normalizeItems({
   {
     id: ids.Ohm,
     name: 'Ohm Rune',
-    clvl: 57,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 57,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.EnhancedDamage]: 50,
@@ -503,8 +556,10 @@ export default normalizeItems({
   {
     id: ids.Lo,
     name: 'Lo Rune',
-    clvl: 59,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 59,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.DeadlyStrike]: 20,
@@ -521,8 +576,10 @@ export default normalizeItems({
   {
     id: ids.Sur,
     name: 'Sur Rune',
-    clvl: 61,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 61,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.HitBlindsTarget]: 1,
@@ -531,7 +588,7 @@ export default normalizeItems({
           [MagicPropertyType.IncreaseMaximumMana]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Mana]: 50,
+          [MagicPropertyType.AddMana]: 50,
         },
       },
     },
@@ -539,8 +596,10 @@ export default normalizeItems({
   {
     id: ids.Ber,
     name: 'Ber Rune',
-    clvl: 63,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 63,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.CrushingBlow]: 20,
@@ -557,8 +616,10 @@ export default normalizeItems({
   {
     id: ids.Jah,
     name: 'Jah Rune',
-    clvl: 65,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 65,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.IgnoreTargetDefense]: 1,
@@ -567,7 +628,7 @@ export default normalizeItems({
           [MagicPropertyType.IncreaseMaximumLife]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Life]: 50,
+          [MagicPropertyType.AddLife]: 50,
         },
       },
     },
@@ -575,8 +636,10 @@ export default normalizeItems({
   {
     id: ids.Cham,
     name: 'Cham Rune',
-    clvl: 67,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 67,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.FreezesTarget]: 3,
@@ -593,8 +656,10 @@ export default normalizeItems({
   {
     id: ids.Zod,
     name: 'Zod Rune',
-    clvl: 69,
     properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 69,
+      },
       socket: {
         [SocketCategoryType.Weapon]: {
           [MagicPropertyType.Indestructible]: 1,

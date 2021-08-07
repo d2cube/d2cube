@@ -24,6 +24,8 @@ export const isEmpty = (x) => x === null || x === undefined;
 export const isPropValueEqual = (prop) => (value) => (x) =>
   props(prop)(x) === value;
 
+export const add = (x) => (y) => x + y;
+
 export const multiply = (x) => (y) => x * y;
 
 export const percent = (x) => (x + 100) / 100;

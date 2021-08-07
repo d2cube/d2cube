@@ -1,7 +1,7 @@
 import {merge, pipe, props} from 'uinix-fp';
 
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
-import {multiply, percent} from '../../utils/fp.js';
+import {add, multiply, percent, sortEntriesBy} from '../../utils/fp.js';
 
 export const calcItemStats = (item) => {
   const baseProperties = props('properties.base')(item) || {};
@@ -16,14 +16,23 @@ export const calcItemStats = (item) => {
 };
 
 const withBaseProperties = (baseProperties) => (stats) => {
-  Object.entries(baseProperties).forEach(([baseProperty, values]) => {
+  const entries = sortEntriesBy(basePropertiesOrder)(
+    Object.entries(baseProperties),
+  );
+
+  entries.forEach(([baseProperty, values]) => {
     stats[baseProperty] = {values};
   });
+
   return stats;
 };
 
 const withMagicProperties = (magicProperties) => (stats) => {
-  Object.entries(magicProperties).forEach(([magicProperty, values]) => {
+  const entries = sortEntriesBy(magicPropertiesOrder)(
+    Object.entries(magicProperties),
+  );
+
+  entries.forEach(([magicProperty, values]) => {
     stats[magicProperty] = {type: 'magic', values};
 
     // Base properties enhanced by magic properties
@@ -42,6 +51,32 @@ const withMagicProperties = (magicProperties) => (stats) => {
             );
           }
         });
+        break;
+      }
+
+      case MagicPropertyType.AddDefense: {
+        const baseProperty = BasePropertyType.Defense;
+        if (stats[baseProperty]) {
+          stats[baseProperty].type = 'magic';
+          stats[baseProperty].values = addDefense(
+            stats[baseProperty].values,
+            values,
+          );
+        }
+
+        break;
+      }
+
+      case MagicPropertyType.EnhancedDefense: {
+        const baseProperty = BasePropertyType.Defense;
+        if (stats[baseProperty]) {
+          stats[baseProperty].type = 'magic';
+          stats[baseProperty].values = enhanceDefense(
+            stats[baseProperty].values,
+            values,
+          );
+        }
+
         break;
       }
 
@@ -79,3 +114,35 @@ const enhanceDamage = ({min, max}, x) => {
     max: multiply(p)(max),
   };
 };
+
+const addDefense = (values, x) => values.map(add(x));
+
+const enhanceDefense = (values, x) => {
+  const max = values[1];
+
+  if (Array.isArray(x)) {
+    return x.map((xx) => enhanceDefense(values, xx));
+  }
+
+  const p = percent(x);
+  return Math.floor((max + 1) * p);
+};
+
+const basePropertiesOrder = [
+  BasePropertyType.DamageThrow,
+  BasePropertyType.Damage1H,
+  BasePropertyType.Damage2H,
+  BasePropertyType.Defense,
+  BasePropertyType.BlockChance,
+  BasePropertyType.Durability,
+  BasePropertyType.RequiredDexterity,
+  BasePropertyType.RequiredStrength,
+  BasePropertyType.RequiredLevel,
+  BasePropertyType.QualityLevel,
+  BasePropertyType.AttackSpeed,
+];
+
+const magicPropertiesOrder = [
+  MagicPropertyType.EnhancedDefense,
+  MagicPropertyType.AddDefense,
+];

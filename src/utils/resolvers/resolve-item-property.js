@@ -52,7 +52,7 @@ const getAttackSpeedDescription = (value) => {
 };
 
 const serializers = {
-  [BasePropertyType.ArmorDefense]: (x) => `Defense: ${x}`,
+  [BasePropertyType.Defense]: (x) => `Defense: ${x}`,
   [BasePropertyType.AttackSpeed]: (x, item) =>
     `${item.class} Class - ${getAttackSpeedDescription(x)} Attack Speed`,
   [BasePropertyType.BlockChance]: (x) => `Chance to Block: ${x}%`,
@@ -63,7 +63,9 @@ const serializers = {
   [BasePropertyType.DamageThrow]: ({min, max}) =>
     `Throw Damage: ${min} to ${max}`,
   [BasePropertyType.Durability]: (x) => `Durability: ${x} of ${x}`,
+  [BasePropertyType.QualityLevel]: (x) => `Quality Level: ${x}`,
   [BasePropertyType.RequiredDexterity]: (x) => `Required Dexterity: ${x}`,
+  [BasePropertyType.RequiredLevel]: (x) => `Required Level: ${x}`,
   [BasePropertyType.RequiredStrength]: (x) => `Required Strength: ${x}`,
   [MagicPropertyType.AddSockets]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
@@ -89,14 +91,15 @@ const serializers = {
   [MagicPropertyType.DamageToDemons]: (x) => `+${x}% Damage to Demons`,
   [MagicPropertyType.DamageToUndead]: (x) => `+${x}% Damage to Undead`,
   [MagicPropertyType.DeadlyStrike]: (x) => `${x}% Deadly Strike`,
-  [MagicPropertyType.Defense]: (x) => `+${x} Defense`,
+  [MagicPropertyType.AddDefense]: (x) => `+${x} Defense`,
   [MagicPropertyType.DefenseVsMissle]: (x) => `+${x} Defense Vs. Missle`,
-  [MagicPropertyType.Dexterity]: (x) => `+${x} to Dexterity`,
-  [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,
+  [MagicPropertyType.AddDexterity]: (x) => `+${x} to Dexterity`,
+  [MagicPropertyType.AddEnergy]: (x) => `+${x} to Energy`,
   [MagicPropertyType.EnhancedDamage]: (x) => `${x}% Enhanced Damage`,
   [MagicPropertyType.EnhancedDefense]: (x) => `${x}% Enhanced Defense`,
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
   [MagicPropertyType.FasterBlockRate]: (x) => `${x}% Faster Block Rate`,
+  [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
   [MagicPropertyType.FireDamage]: ({min, max}) =>
     `Adds ${min}-${max} Fire Damage`,
@@ -114,7 +117,7 @@ const serializers = {
   [MagicPropertyType.IncreaseMaximumLife]: (x) => `Increase Maximum Life ${x}%`,
   [MagicPropertyType.IncreaseMaximumMana]: (x) => `Increase Maximum Mana ${x}%`,
   [MagicPropertyType.Knockback]: () => 'Knockback',
-  [MagicPropertyType.Life]: (x) => `+${x} to Life`,
+  [MagicPropertyType.AddLife]: (x) => `+${x} to Life`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
   [MagicPropertyType.LightningDamage]: ({min, max}) =>
     `Adds ${min}-${max} Lightning Damage`,
@@ -123,7 +126,7 @@ const serializers = {
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
     `${x}% Better Chance of Getting Magic Items`,
-  [MagicPropertyType.Mana]: (x) => `+${x} to Mana`,
+  [MagicPropertyType.AddMana]: (x) => `+${x} to Mana`,
   [MagicPropertyType.ManaAfterKill]: (x) => `+${x} to Mana After Each kill`,
   [MagicPropertyType.ManaStolenPerHit]: (x) => `${x}% Mana Stolen Per Hit`,
   [MagicPropertyType.MaximumColdResist]: (x) => `+${x}% to Maximum Cold Resist`,
@@ -143,9 +146,9 @@ const serializers = {
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements -${x}%`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
-  [MagicPropertyType.Strength]: (x) => `+${x} to Strength`,
+  [MagicPropertyType.AddStrength]: (x) => `+${x} to Strength`,
   [MagicPropertyType.TargetDefense]: (x) => `-${x}% Target Defense`,
-  [MagicPropertyType.Vitality]: (x) => `+${x} to Vitality`,
+  [MagicPropertyType.AddVitality]: (x) => `+${x} to Vitality`,
 };
 
 // Wrap with value formatter
