@@ -6,7 +6,7 @@ import Grid from './ui/grid.js';
 const ItemGrid = ({items = [], size}) => (
   <Grid size={size}>
     {items.map((item) => (
-      <Item key={item.id} item={item} />
+      <Item key={item.uuid} item={item} />
     ))}
   </Grid>
 );

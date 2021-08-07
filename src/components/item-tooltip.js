@@ -10,7 +10,7 @@ const ItemTooltip = ({children, description}) => {
         {typeof line === 'string' ? line : line.text}
       </Text>
     ) : (
-      <br />
+      <br key={i} />
     ),
   );
 

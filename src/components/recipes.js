@@ -9,7 +9,7 @@ import Button from './ui/button.js';
 
 const Recipes = ({items}) => {
   const [showAvailable, setShowAvailable] = useState(false);
-  const [selectedRecipeType, setSelectedRecipeType] = useState(null);
+  const [selectedRecipeType, setSelectedRecipeType] = useState('');
 
   const filters = [];
   if (selectedRecipeType) {
@@ -36,7 +36,7 @@ const Recipes = ({items}) => {
           onClick={() => setShowAvailable(!showAvailable)}
         />
         <select value={selectedRecipeType} onChange={handleUpdateRecipeType}>
-          <option value={null} />
+          <option value="" />
           {Object.values(RecipeType).map((recipeType) => (
             <option key={recipeType} value={recipeType}>
               {recipeType}
@@ -47,7 +47,7 @@ const Recipes = ({items}) => {
       <p>{recipes.length} recipes found</p>
       <Layout wrap align="flex-end" spacing="m">
         {items.map((item) => (
-          <Item key={item.id} item={item} />
+          <Item key={item.uuid} item={item} />
         ))}
       </Layout>
       <Layout as="ul" direction="column" spacing="s">

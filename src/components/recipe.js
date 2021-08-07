@@ -12,7 +12,7 @@ const Recipe = ({recipe}) => {
       <Layout align="center" spacing="m">
         {sources.map((source) => (
           <Item
-            key={source.id}
+            key={source.item.uuid}
             isInactive={source.isInactive}
             item={source.item}
           />
