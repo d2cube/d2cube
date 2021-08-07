@@ -37,6 +37,7 @@ import rings from './rings.js';
 import runes from './runes.js';
 import scepters from './scepters.js';
 import scrolls from './scrolls.js';
+import sets from './sets/index.js';
 import shields from './shields.js';
 import sorceressOrbs from './sorceress-orbs.js';
 import spears from './spears.js';
@@ -81,6 +82,7 @@ export default createItems({
   ...runes,
   ...scepters,
   ...scrolls,
+  ...sets,
   ...shields,
   ...sorceressOrbs,
   ...spears,

@@ -6,12 +6,12 @@ import {floor} from '../fp.js';
 export const resolveItemProperty =
   (item) =>
   ({property, values}) => {
-    const serialize = serializers[property] || k('');
-    return serialize(values, item);
+    const resolver = resolvers[property] || k(null);
+    return resolver(values, item);
   };
 
-const format = (serialize) => (values, item) =>
-  serialize(formatValues(values), item);
+const format = (resolver) => (values, item) =>
+  resolver(formatValues(values), item);
 
 const formatValues = (values) => {
   let formattedValues = values;
@@ -30,19 +30,19 @@ const formatValues = (values) => {
   return formattedValues;
 };
 
-const lvl = (serialize, unit) => (x) =>
-  `${serialize([x, x * 99])} (+${x}${unit} Based on Character Level)`;
+const lvl = (resolver, unit) => (x) =>
+  `${resolver([x, x * 99])} (+${x}${unit} Based on Character Level)`;
 
-// TODO: confirm logic
-const getAttackSpeedDescription = (value) => {
+// TODO: confirm logic with https://forums.d2jsp.org/topic.php?t=5458178
+const getAttackSpeedDescription = (x) => {
   let description;
-  if (value >= 20) {
+  if (x >= 20) {
     description = 'Very Slow';
-  } else if (value >= 10) {
+  } else if (x >= 10) {
     description = 'Slow';
-  } else if (value >= 0) {
+  } else if (x >= 0) {
     description = 'Normal';
-  } else if (value >= -10) {
+  } else if (x >= -10) {
     description = 'Fast';
   } else {
     description = 'Very Fast';
@@ -51,18 +51,23 @@ const getAttackSpeedDescription = (value) => {
   return description;
 };
 
-const serializers = {
+const resolvers = {
   [BasePropertyType.Defense]: (x) => `Defense: ${x}`,
   [BasePropertyType.AttackSpeed]: (x, item) =>
     `${item.class} Class - ${getAttackSpeedDescription(x)} Attack Speed`,
   [BasePropertyType.BlockChance]: (x) => `Chance to Block: ${x}%`,
-  [BasePropertyType.Damage1H]: ({min, max}) =>
-    `One-hand Damage: ${min} to ${max}`,
-  [BasePropertyType.Damage2H]: ({min, max}) =>
-    `Two-hand Damage: ${min} to ${max}`,
+  [BasePropertyType.Damage1H]: ({min, max}) => [
+    'One-hand Damage:',
+    `${min} to ${max}`,
+  ],
+  [BasePropertyType.Damage2H]: ({min, max}) => [
+    'Two-hand Damage:',
+    `${min} to ${max}`,
+  ],
   [BasePropertyType.DamageThrow]: ({min, max}) =>
     `Throw Damage: ${min} to ${max}`,
-  [BasePropertyType.Durability]: (x) => `Durability: ${x} of ${x}`,
+  [BasePropertyType.Durability]: (x) =>
+    x === Number.POSITIVE_INFINITY ? null : `Durability: ${x} of ${x}`,
   [BasePropertyType.QualityLevel]: (x) => `Quality Level: ${x}`,
   [BasePropertyType.RequiredDexterity]: (x) => `Required Dexterity: ${x}`,
   [BasePropertyType.RequiredLevel]: (x) => `Required Level: ${x}`,
@@ -77,6 +82,8 @@ const serializers = {
     `+${x} to Attack Rating Against Undead`,
   [MagicPropertyType.AttackerTakesDamage]: (x) =>
     `Attacker Takes Damage of ${x}`,
+  [MagicPropertyType.BarbarianSkillLevels]: (x) =>
+    `+${x} to Barbarian Skill Levels`,
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
@@ -123,6 +130,8 @@ const serializers = {
     `Adds ${min}-${max} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
   [MagicPropertyType.LightRadius]: (x) => `+${x} to Light Radius`,
+  [MagicPropertyType.MagicDamage]: ({min, max}) =>
+    `Adds ${min}-${max} Magic Damage`,
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
     `${x}% Better Chance of Getting Magic Items`,
@@ -138,8 +147,8 @@ const serializers = {
     `+${x}% to Maximum Poison Resist`,
   [MagicPropertyType.MinimumDamage]: (x) => `+${x} to Minimum Damage`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
-  [MagicPropertyType.PoisonDamage]: ({min, max}) =>
-    `+${min} Poison Damage Over ${max} Seconds`,
+  [MagicPropertyType.PoisonDamage]: ({value, duration}) =>
+    `+${value} Poison Damage Over ${duration} Seconds`,
   [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
@@ -152,16 +161,16 @@ const serializers = {
 };
 
 // Wrap with value formatter
-Object.entries(serializers).forEach(([property, serializer]) => {
-  serializers[property] = format(serializer);
+Object.entries(resolvers).forEach(([property, resolverr]) => {
+  resolvers[property] = format(resolverr);
 });
 
-// Derive serializers for *ByLevel properties
-serializers[MagicPropertyType.ExtraGoldByLevel] = lvl(
-  serializers[MagicPropertyType.ExtraGold],
+// Derive resolvers for *ByLevel properties
+resolvers[MagicPropertyType.ExtraGoldByLevel] = lvl(
+  resolvers[MagicPropertyType.ExtraGold],
   '%',
 );
-serializers[MagicPropertyType.MagicFindByLevel] = lvl(
-  serializers[MagicPropertyType.MagicFind],
+resolvers[MagicPropertyType.MagicFindByLevel] = lvl(
+  resolvers[MagicPropertyType.MagicFind],
   '%',
 );

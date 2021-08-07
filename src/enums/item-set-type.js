@@ -2,4 +2,6 @@
  * @readonly
  * @enum {string}
  */
-export const ItemSetType = {};
+export const ItemSetType = {
+  ImmortalKing: 'ImmortalKing',
+};

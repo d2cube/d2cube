@@ -1,4 +1,5 @@
 import {merge, props} from 'uinix-fp';
+
 import {ItemQualityType, MagicPropertyType} from '../../enums/index.js';
 import {fillNull} from '../../utils/fp.js';
 import {calcItemStats} from './calc-item-stats.js';
@@ -12,6 +13,7 @@ export const createItems = (items) =>
 const createItem = (items) => (initialItem) => {
   // Create baseItem and unset blacklisted properties
   const baseItem = items[initialItem.baseId] || {};
+  baseItem.imageId = undefined;
   baseItem.variants = undefined;
 
   const item = merge(baseItem)(initialItem);

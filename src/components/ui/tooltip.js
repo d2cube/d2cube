@@ -26,11 +26,15 @@ const Tooltip = ({children, isReadable = false, tooltip}) => {
       {children}
       {childRef ? (
         <Tippy
+          interactive
+          animation={false}
           arrow={false}
           content={tooltip}
+          duration={[100, 1000]}
           offset={[0, 0]}
-          reference={childRef}
+          placement="bottom"
           maxWidth={isReadable ? undefined : 'none'}
+          reference={childRef}
         />
       ) : (
         <span ref={spanRef} style={{display: 'none'}} />

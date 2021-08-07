@@ -23,6 +23,7 @@ export const MagicPropertyType = {
   DefenseVsMelee: 'DefenseVsMelee',
   DamageReduced: 'DamageReduced',
   DamageReducedPercentage: 'DamageReducedPercentage',
+  MagicDamage: 'MagicDamage',
   MagicDamageReduced: 'MagicDamageReduced',
   MagicDamageReducedPercentage: 'MagicDamageReducedPercentage',
   AllResistances: 'AllResistances',

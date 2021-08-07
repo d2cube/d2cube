@@ -32,6 +32,7 @@ import potions from './potions.js';
 import quests from './quests.js';
 import runes from './runes.js';
 import rings from './rings.js';
+import sets from './sets.js';
 import scepters from './scepters.js';
 import scrolls from './scrolls.js';
 import shields from './shields.js';
@@ -74,6 +75,7 @@ export default {
   ...runes,
   ...scepters,
   ...scrolls,
+  ...sets,
   ...shields,
   ...sorceressOrbs,
   ...spears,

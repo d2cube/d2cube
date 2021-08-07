@@ -1,148 +1,105 @@
-import {merge, pipe, props} from 'uinix-fp';
+// TODO: implement
+export const calcItemStats = (_item) => ({});
 
-import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
-import {add, multiply, percent, sortEntriesBy} from '../../utils/fp.js';
+// Const withMagicProperties = (magicProperties) => (stats) => {
+//   Object.entries(magicProperties).forEach(([magicProperty, values]) => {
+//     // Base properties enhanced by magic properties
+//     switch (magicProperty) {
+//       case MagicPropertyType.EnhancedDamage: {
+//         [
+//           BasePropertyType.Damage1H,
+//           BasePropertyType.Damage2H,
+//           BasePropertyType.DamageThrow,
+//         ].forEach((baseProperty) => {
+//           if (stats[baseProperty]) {
+//             stats[baseProperty].type = 'magic';
+//             stats[baseProperty].values = enhanceDamage(
+//               stats[baseProperty].values,
+//               values,
+//             );
+//           }
+//         });
+//         break;
+//       }
 
-export const calcItemStats = (item) => {
-  const baseProperties = props('properties.base')(item) || {};
-  const magicProperties = props('properties.magic')(item) || {};
-  const setProperties = props('properties.set')(item) || {};
+//       case MagicPropertyType.AddDefense: {
+//         const baseProperty = BasePropertyType.Defense;
+//         if (stats[baseProperty]) {
+//           stats[baseProperty].type = 'magic';
+//           stats[baseProperty].values = addDefense(
+//             stats[baseProperty].values,
+//             values,
+//           );
+//         }
 
-  return pipe([
-    withBaseProperties(baseProperties),
-    withMagicProperties(magicProperties),
-    withSetProperties(setProperties),
-  ])({});
-};
+//         break;
+//       }
 
-const withBaseProperties = (baseProperties) => (stats) => {
-  const entries = sortEntriesBy(basePropertiesOrder)(
-    Object.entries(baseProperties),
-  );
+//       case MagicPropertyType.EnhancedDefense: {
+//         const baseProperty = BasePropertyType.Defense;
+//         if (stats[baseProperty]) {
+//           stats[baseProperty].type = 'magic';
+//           stats[baseProperty].values = enhanceDefense(
+//             stats[baseProperty].values,
+//             values,
+//           );
+//         }
 
-  entries.forEach(([baseProperty, values]) => {
-    stats[baseProperty] = {values};
-  });
+//         break;
+//       }
 
-  return stats;
-};
+//       // TODO: figure out logic for Gear-IAS (GIAS)
+//       case MagicPropertyType.IncreasedAttackSpeed: {
+//         stats[BasePropertyType.AttackSpeed].type = 'magic';
+//         break;
+//       }
 
-const withMagicProperties = (magicProperties) => (stats) => {
-  const entries = sortEntriesBy(magicPropertiesOrder)(
-    Object.entries(magicProperties),
-  );
+//       case MagicPropertyType.Indestructible: {
+//         if (values === true) {
+//           stats[BasePropertyType.Durability].values = Number.POSITIVE_INFINITY;
+//         }
 
-  entries.forEach(([magicProperty, values]) => {
-    stats[magicProperty] = {type: 'magic', values};
+//         break;
+//       }
 
-    // Base properties enhanced by magic properties
-    switch (magicProperty) {
-      case MagicPropertyType.EnhancedDamage: {
-        [
-          BasePropertyType.Damage1H,
-          BasePropertyType.Damage2H,
-          BasePropertyType.DamageThrow,
-        ].forEach((baseProperty) => {
-          if (stats[baseProperty]) {
-            stats[baseProperty].type = 'magic';
-            stats[baseProperty].values = enhanceDamage(
-              stats[baseProperty].values,
-              values,
-            );
-          }
-        });
-        break;
-      }
+//       default:
+//         break;
+//     }
+//   });
 
-      case MagicPropertyType.AddDefense: {
-        const baseProperty = BasePropertyType.Defense;
-        if (stats[baseProperty]) {
-          stats[baseProperty].type = 'magic';
-          stats[baseProperty].values = addDefense(
-            stats[baseProperty].values,
-            values,
-          );
-        }
+//   return stats;
+// };
 
-        break;
-      }
+// const withSetProperties = (properties) => (stats) => merge(properties)(stats);
 
-      case MagicPropertyType.EnhancedDefense: {
-        const baseProperty = BasePropertyType.Defense;
-        if (stats[baseProperty]) {
-          stats[baseProperty].type = 'magic';
-          stats[baseProperty].values = enhanceDefense(
-            stats[baseProperty].values,
-            values,
-          );
-        }
+// const multiplyMap = (x) => (xs) => xs.map(multiply(x));
 
-        break;
-      }
+// const enhanceDamage = ({min, max}, x) => {
+//   if (Array.isArray(x)) {
+//     const ps = x.map(percent);
+//     return {
+//       min: multiplyMap(min)(ps),
+//       max: multiplyMap(max)(ps),
+//     };
+//   }
 
-      // TODO: figure out logic for Gear-IAS (GIAS)
-      case MagicPropertyType.IncreasedAttackSpeed: {
-        stats[BasePropertyType.AttackSpeed].type = 'magic';
-        break;
-      }
+//   const p = percent(x);
 
-      default:
-        break;
-    }
-  });
+//   return {
+//     min: multiply(p)(min),
+//     max: multiply(p)(max),
+//   };
+// };
 
-  return stats;
-};
+// const addDefense = (values, x) => values.map(add(x));
 
-const withSetProperties = (properties) => (stats) => merge(properties)(stats);
+// const enhanceDefense = (values, x) => {
+//   const max = values[1];
 
-const multiplyMap = (x) => (xs) => xs.map(multiply(x));
+//   if (Array.isArray(x)) {
+//     return x.map((xx) => enhanceDefense(values, xx));
+//   }
 
-const enhanceDamage = ({min, max}, x) => {
-  if (Array.isArray(x)) {
-    const ps = x.map(percent);
-    return {
-      min: multiplyMap(min)(ps),
-      max: multiplyMap(max)(ps),
-    };
-  }
-
-  const p = percent(x);
-
-  return {
-    min: multiply(p)(min),
-    max: multiply(p)(max),
-  };
-};
-
-const addDefense = (values, x) => values.map(add(x));
-
-const enhanceDefense = (values, x) => {
-  const max = values[1];
-
-  if (Array.isArray(x)) {
-    return x.map((xx) => enhanceDefense(values, xx));
-  }
-
-  const p = percent(x);
-  return Math.floor((max + 1) * p);
-};
-
-const basePropertiesOrder = [
-  BasePropertyType.DamageThrow,
-  BasePropertyType.Damage1H,
-  BasePropertyType.Damage2H,
-  BasePropertyType.Defense,
-  BasePropertyType.BlockChance,
-  BasePropertyType.Durability,
-  BasePropertyType.RequiredDexterity,
-  BasePropertyType.RequiredStrength,
-  BasePropertyType.RequiredLevel,
-  BasePropertyType.QualityLevel,
-  BasePropertyType.AttackSpeed,
-];
-
-const magicPropertiesOrder = [
-  MagicPropertyType.EnhancedDefense,
-  MagicPropertyType.AddDefense,
-];
+//   const p = percent(x);
+//   return Math.floor((max + 1) * p);
+// };
