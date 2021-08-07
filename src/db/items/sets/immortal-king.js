@@ -20,7 +20,6 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 76,
-        [BasePropertyType.QualityLevel]: 69,
       },
       magic: {
         [MagicPropertyType.Indestructible]: true,

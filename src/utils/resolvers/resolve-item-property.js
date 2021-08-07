@@ -52,26 +52,29 @@ const getAttackSpeedDescription = (x) => {
 };
 
 const resolvers = {
-  [BasePropertyType.Defense]: (x) => `Defense: ${x}`,
-  [BasePropertyType.AttackSpeed]: (x, item) =>
-    `${item.class} Class - ${getAttackSpeedDescription(x)} Attack Speed`,
-  [BasePropertyType.BlockChance]: (x) => `Chance to Block: ${x}%`,
+  [BasePropertyType.Defense]: (x) => ['Defense: ', x],
+  [BasePropertyType.AttackSpeed]: (x, item) => [
+    `${item.class} Class - `,
+    `${getAttackSpeedDescription(x)} Attack Speed`,
+  ],
+  [BasePropertyType.BlockChance]: (x) => [`Chance to Block: ${x}%`],
   [BasePropertyType.Damage1H]: ({min, max}) => [
-    'One-hand Damage:',
+    'One-hand Damage: ',
     `${min} to ${max}`,
   ],
   [BasePropertyType.Damage2H]: ({min, max}) => [
-    'Two-hand Damage:',
+    'Two-hand Damage: ',
     `${min} to ${max}`,
   ],
-  [BasePropertyType.DamageThrow]: ({min, max}) =>
-    `Throw Damage: ${min} to ${max}`,
+  [BasePropertyType.DamageThrow]: ({min, max}) => [
+    'Throw Damage: ',
+    `${min} to ${max}`,
+  ],
   [BasePropertyType.Durability]: (x) =>
-    x === Number.POSITIVE_INFINITY ? null : `Durability: ${x} of ${x}`,
-  [BasePropertyType.QualityLevel]: (x) => `Quality Level: ${x}`,
-  [BasePropertyType.RequiredDexterity]: (x) => `Required Dexterity: ${x}`,
-  [BasePropertyType.RequiredLevel]: (x) => `Required Level: ${x}`,
-  [BasePropertyType.RequiredStrength]: (x) => `Required Strength: ${x}`,
+    x === Number.POSITIVE_INFINITY ? null : ['Durability: ', `${x} of ${x}`],
+  [BasePropertyType.RequiredDexterity]: (x) => ['Required Dexterity: ', x],
+  [BasePropertyType.RequiredLevel]: (x) => ['Required Level: ', x],
+  [BasePropertyType.RequiredStrength]: (x) => ['Required Strength: ', x],
   [MagicPropertyType.AddSockets]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,

@@ -31,6 +31,5 @@ const basePropertiesOrder = [
   BasePropertyType.RequiredDexterity,
   BasePropertyType.RequiredStrength,
   BasePropertyType.RequiredLevel,
-  BasePropertyType.QualityLevel,
   BasePropertyType.AttackSpeed,
 ];

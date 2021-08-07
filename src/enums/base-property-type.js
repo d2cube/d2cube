@@ -13,7 +13,6 @@ export const BasePropertyType = {
   MaxSockets: 'MaxSockets',
   MeleeRange: 'MeleeRange',
   PotionSlots: 'PotionSlots',
-  QualityLevel: 'QualityLevel',
   Quantity: 'Quantity',
   RequiredDexterity: 'RequiredDexterity',
   RequiredLevel: 'RequiredLevel',

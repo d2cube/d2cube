@@ -36,7 +36,6 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 7,
-        [BasePropertyType.QualityLevel]: 87,
       },
       magic: {
         [MagicPropertyType.IncreasedAttackSpeed]: 15,
@@ -57,7 +56,6 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 41,
-        [BasePropertyType.QualityLevel]: 49,
       },
       magic: {
         [MagicPropertyType.AllSkillLevels]: 1,
@@ -78,7 +76,6 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 29,
-        [BasePropertyType.QualityLevel]: 66,
       },
       magic: {
         [MagicPropertyType.AllSkillLevels]: 1,

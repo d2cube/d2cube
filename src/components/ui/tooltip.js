@@ -27,10 +27,8 @@ const Tooltip = ({children, isReadable = false, tooltip}) => {
       {childRef ? (
         <Tippy
           interactive
-          animation={false}
           arrow={false}
           content={tooltip}
-          duration={[100, 1000]}
           offset={[0, 0]}
           placement="bottom"
           maxWidth={isReadable ? undefined : 'none'}
