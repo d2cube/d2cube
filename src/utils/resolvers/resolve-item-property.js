@@ -112,10 +112,12 @@ const resolvers = {
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
   [MagicPropertyType.FasterBlockRate]: (x) => `${x}% Faster Block Rate`,
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,
+  [MagicPropertyType.FasterRunWalk]: (x) => `${x}% Faster Run/Walk`,
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
   [MagicPropertyType.FireDamage]: ({x, y}) => `Adds ${x}-${y} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
   [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
+  [MagicPropertyType.HalfFreezeDuration]: () => 'Half Freeze Duration',
   [MagicPropertyType.HitCausesMonsterToFlee]: (x) =>
     `Hit Causes Monster to Flee ${x}%`,
   [MagicPropertyType.HitBlindsTarget]: () => 'Hit Blinds Target',

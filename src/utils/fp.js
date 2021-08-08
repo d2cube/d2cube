@@ -33,6 +33,8 @@ export const percent = (x) => (x + 100) / 100;
 export const range = (x1) => (x2) =>
   Array.from({length: x2 - x1}).map((_, i) => i + x1);
 
+export const sum = (xs) => xs.reduce((acc, x) => acc + x, 0);
+
 /**
  * Sort entries based on some property order.
  * If an entry property is not matched, sort it to the bottom.

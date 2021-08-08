@@ -4,5 +4,6 @@
  * @enum {string}
  */
 export const SkillType = {
+  ChargedBolt: 'Charged Bolt',
   Enchant: 'Enchant',
 };

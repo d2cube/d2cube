@@ -1,5 +1,7 @@
 import {filter, props} from 'uinix-fp';
 
+import {sum} from '../../utils/fp.js';
+
 // Track all magic properties from magic/set/socket bonuses
 export const calcItemStats = (item) => {
   const magicProperties = props('properties.magic')(item) || {};
@@ -14,8 +16,9 @@ export const calcItemStats = (item) => {
   // Reduce effective value
   return Object.entries(stats).reduce((acc, [property, values]) => {
     // TODO: figure out general logic
-    const flattened = values.flat();
-    acc[property] = flattened.length === 1 ? flattened[0] : flattened;
+    let effective = [];
+    effective = values.length === 1 ? values[0] : sum(values);
+    acc[property] = effective;
     return acc;
   }, {});
 };
