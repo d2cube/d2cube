@@ -18,13 +18,20 @@ export const resolveItemMagicProperties = (item) => {
 
 const magicPropertiesOrder = [
   MagicPropertyType.Indestructible,
+  MagicPropertyType.ChanceToCastSpellWhenStruck,
+  MagicPropertyType.SkillClassLevels,
   MagicPropertyType.IncreasedAttackSpeed,
   MagicPropertyType.EnhancedDamage,
   MagicPropertyType.EnhancedDefense,
   MagicPropertyType.AddDefense,
+  MagicPropertyType.AddDexterity,
+  MagicPropertyType.AddMana,
+  MagicPropertyType.PoisonResist,
   MagicPropertyType.DamageToDemons,
   MagicPropertyType.DamageToUndead,
   MagicPropertyType.CrushingBlow,
-  MagicPropertyType.CrushingBlow,
+  MagicPropertyType.OpenWounds,
+  MagicPropertyType.ExtraGoldByLevel,
+  MagicPropertyType.MagicFindByLevel,
   MagicPropertyType.AddSockets,
 ];

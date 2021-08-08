@@ -86,7 +86,8 @@ const basePropertiesOrder = [
 
 const multiplyMap = (x) => (xs) => xs.map(multiply(x));
 
-const addDefense = (values, x) => values.map(add(x));
+const addDefense = (values, x) =>
+  Array.isArray(values) ? values.map(add(x)) : add(x)(values);
 
 const indestructible = (values, x) => (x ? null : values);
 

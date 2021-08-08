@@ -24,7 +24,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: {min: 3, max: 4},
+          [MagicPropertyType.FireDamage]: {x: 3, y: 4},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddLife]: 10,
@@ -46,7 +46,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: {min: 5, max: 8},
+          [MagicPropertyType.FireDamage]: {x: 5, y: 8},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddLife]: 17,
@@ -68,7 +68,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: {min: 8, max: 12},
+          [MagicPropertyType.FireDamage]: {x: 8, y: 12},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddLife]: 24,
@@ -90,7 +90,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: {min: 10, max: 16},
+          [MagicPropertyType.FireDamage]: {x: 10, y: 16},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddLife]: 31,
@@ -112,7 +112,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: {min: 15, max: 20},
+          [MagicPropertyType.FireDamage]: {x: 15, y: 20},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddLife]: 38,
@@ -134,7 +134,7 @@ export default normalizeItems({
       class: GemClassType.Sapphire,
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: {min: 1, max: 3, duration: 1},
+          [MagicPropertyType.ColdDamage]: {x: 1, y: 3, z: 1},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddMana]: 10,
@@ -156,7 +156,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: {min: 3, max: 5, duration: 1.4},
+          [MagicPropertyType.ColdDamage]: {x: 3, y: 5, z: 1.4},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddMana]: 17,
@@ -178,7 +178,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: {min: 4, max: 7, duration: 2},
+          [MagicPropertyType.ColdDamage]: {x: 4, y: 7, z: 2},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddMana]: 24,
@@ -200,7 +200,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: {min: 6, max: 10, duration: 2.4},
+          [MagicPropertyType.ColdDamage]: {x: 6, y: 10, z: 2.4},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddMana]: 31,
@@ -222,7 +222,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: {min: 10, max: 14, duration: 3},
+          [MagicPropertyType.ColdDamage]: {x: 10, y: 14, z: 3},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddMana]: 38,
@@ -244,7 +244,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: {min: 1, max: 8},
+          [MagicPropertyType.LightningDamage]: {x: 1, y: 8},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 9,
@@ -266,7 +266,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: {min: 1, max: 14},
+          [MagicPropertyType.LightningDamage]: {x: 1, y: 14},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 13,
@@ -288,7 +288,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: {min: 1, max: 22},
+          [MagicPropertyType.LightningDamage]: {x: 1, y: 22},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 16,
@@ -310,7 +310,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: {min: 1, max: 30},
+          [MagicPropertyType.LightningDamage]: {x: 1, y: 30},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 20,
@@ -332,7 +332,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: {min: 1, max: 40},
+          [MagicPropertyType.LightningDamage]: {x: 1, y: 40},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 24,
@@ -354,7 +354,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: {value: 10, duration: 3},
+          [MagicPropertyType.PoisonDamage]: {x: 10, z: 3},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddDexterity]: 3,
@@ -376,7 +376,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: {value: 20, duration: 4},
+          [MagicPropertyType.PoisonDamage]: {x: 20, z: 4},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddDexterity]: 4,
@@ -398,7 +398,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: {value: 40, duration: 5},
+          [MagicPropertyType.PoisonDamage]: {x: 40, z: 5},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddDexterity]: 6,
@@ -420,7 +420,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: {value: 60, duration: 6},
+          [MagicPropertyType.PoisonDamage]: {x: 60, z: 6},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddDexterity]: 8,
@@ -442,7 +442,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: {value: 100, duration: 7},
+          [MagicPropertyType.PoisonDamage]: {x: 100, z: 7},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AddDexterity]: 10,

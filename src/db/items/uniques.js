@@ -79,7 +79,7 @@ export default normalizeItems({
       },
       magic: {
         [MagicPropertyType.AllSkillLevels]: 1,
-        [MagicPropertyType.LightningDamage]: {min: 1, max: 12},
+        [MagicPropertyType.LightningDamage]: {x: 1, y: 12},
         [MagicPropertyType.AddMana]: 20,
         [MagicPropertyType.IncreaseMaximumMana]: 25,
       },

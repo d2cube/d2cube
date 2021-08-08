@@ -25,7 +25,7 @@ const formatValues = (values) => {
       return acc;
     }, {});
   } else {
-    formattedValues = floor(values);
+    formattedValues = Number.isFinite(values) ? floor(values) : values;
   }
 
   return formattedValues;
@@ -91,8 +91,9 @@ const resolvers = {
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
-  [MagicPropertyType.ColdDamage]: ({min, max}) =>
-    `Adds ${min}-${max} Cold Damage`,
+  [MagicPropertyType.ChanceToCastSpellWhenStruck]: ({x, y, z}) =>
+    `${z}% Chance to cast level ${y} ${x} when struck`,
+  [MagicPropertyType.ColdDamage]: ({x, y}) => `Adds ${x}-${y} Cold Damage`,
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
   [MagicPropertyType.CrushingBlow]: (x) => `${x}% Chance of Crushing Blow`,
   [MagicPropertyType.DamageReduced]: (x) => `Damage Reduced by ${x}`,
@@ -112,8 +113,7 @@ const resolvers = {
   [MagicPropertyType.FasterBlockRate]: (x) => `${x}% Faster Block Rate`,
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
-  [MagicPropertyType.FireDamage]: ({min, max}) =>
-    `Adds ${min}-${max} Fire Damage`,
+  [MagicPropertyType.FireDamage]: ({x, y}) => `Adds ${x}-${y} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
   [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
   [MagicPropertyType.HitCausesMonsterToFlee]: (x) =>
@@ -130,12 +130,11 @@ const resolvers = {
   [MagicPropertyType.Knockback]: () => 'Knockback',
   [MagicPropertyType.AddLife]: (x) => `+${x} to Life`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
-  [MagicPropertyType.LightningDamage]: ({min, max}) =>
-    `Adds ${min}-${max} Lightning Damage`,
+  [MagicPropertyType.LightningDamage]: ({x, y}) =>
+    `Adds ${x}-${y} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
   [MagicPropertyType.LightRadius]: (x) => `+${x} to Light Radius`,
-  [MagicPropertyType.MagicDamage]: ({min, max}) =>
-    `Adds ${min}-${max} Magic Damage`,
+  [MagicPropertyType.MagicDamage]: ({x, y}) => `Adds ${x}-${y} Magic Damage`,
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
     `${x}% Better Chance of Getting Magic Items`,
@@ -151,13 +150,14 @@ const resolvers = {
     `+${x}% to Maximum Poison Resist`,
   [MagicPropertyType.MinimumDamage]: (x) => `+${x} to Minimum Damage`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
-  [MagicPropertyType.PoisonDamage]: ({value, duration}) =>
-    `+${value} Poison Damage Over ${duration} Seconds`,
+  [MagicPropertyType.PoisonDamage]: ({x, z}) =>
+    `+${x} Poison Damage Over ${z} Seconds`,
   [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements -${x}%`,
+  [MagicPropertyType.SkillClassLevels]: ({x, y}) => `+${y} to ${x}`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
   [MagicPropertyType.AddStrength]: (x) => `+${x} to Strength`,
   [MagicPropertyType.TargetDefense]: (x) => `-${x}% Target Defense`,

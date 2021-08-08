@@ -78,6 +78,7 @@ export const MagicPropertyType = {
   DamageToUndead: 'DamageToUndead',
   AttackRatingAgainstDemons: 'AttackRatingAgainstDemons',
   AttackRatingAgainstUndead: 'AttackRatingAgainstUndead',
+  SkillClassLevels: 'SkillClassLevels',
   FireSkills: 'FireSkills',
   AllSkillLevels: 'AllSkillLevels',
   AttackerTakesLightningDamage: 'AttackerTakesLightningDamage',

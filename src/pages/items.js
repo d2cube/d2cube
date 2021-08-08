@@ -10,7 +10,7 @@ import {getItemsByType} from '../api/index.js';
 import {fill} from '../utils/fp.js';
 
 const Page = () => {
-  const [selectedItemType, setSelectedItemType] = useState(ItemType.Unique);
+  const [selectedItemType, setSelectedItemType] = useState(ItemType.Set);
   const items = getItemsByType(selectedItemType);
 
   const handleUpdateItemType = (event) =>

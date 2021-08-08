@@ -4,6 +4,8 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillClassType,
+  SkillType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -33,19 +35,19 @@ export default normalizeItems({
       set: [
         null,
         {
-          [MagicPropertyType.FireDamage]: {min: 211, max: 397},
+          [MagicPropertyType.FireDamage]: {x: 211, y: 397},
         },
         {
-          [MagicPropertyType.LightningDamage]: {min: 7, max: 477},
+          [MagicPropertyType.LightningDamage]: {x: 7, y: 477},
         },
         {
-          [MagicPropertyType.ColdDamage]: {min: 127, max: 364, duration: 6},
+          [MagicPropertyType.ColdDamage]: {x: 127, y: 364, z: 6},
         },
         {
-          [MagicPropertyType.PoisonDamage]: {value: 204, duration: 6},
+          [MagicPropertyType.PoisonDamage]: {x: 204, z: 6},
         },
         {
-          [MagicPropertyType.MagicDamage]: {min: 250, max: 361},
+          [MagicPropertyType.MagicDamage]: {x: 250, y: 361},
         },
       ],
     },
@@ -54,6 +56,42 @@ export default normalizeItems({
     id: ids.ImmortalKingsSoulCage,
     name: "Immortal King's Soul Cage",
     baseId: ids.SacredArmor,
+    properties: {
+      base: {
+        [BasePropertyType.RequiredLevel]: 76,
+      },
+      magic: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
+          x: SkillType.Enchant,
+          y: 5,
+          z: 5,
+        },
+        [MagicPropertyType.SkillClassLevels]: {
+          type: SkillClassType.BarbarianCombatSkills,
+          value: 2,
+        },
+        [MagicPropertyType.AddDefense]: 400,
+        [MagicPropertyType.PoisonResist]: 50,
+      },
+      set: [
+        null,
+        {
+          [MagicPropertyType.FasterHitRecovery]: 25,
+        },
+        {
+          [MagicPropertyType.ColdResist]: 40,
+        },
+        {
+          [MagicPropertyType.FireResist]: 40,
+        },
+        {
+          [MagicPropertyType.LightningResist]: 40,
+        },
+        {
+          [MagicPropertyType.EnhancedDefense]: 50,
+        },
+      ],
+    },
   },
   {
     id: ids.ImmortalKingsWill,

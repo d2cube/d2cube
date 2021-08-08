@@ -144,7 +144,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.PoisonDamage]: {value: 75, duration: 5},
+          [MagicPropertyType.PoisonDamage]: {x: 75, z: 5},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.PoisonResist]: 30,
@@ -164,7 +164,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.FireDamage]: {min: 5, max: 30},
+          [MagicPropertyType.FireDamage]: {x: 5, y: 30},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.FireResist]: 30,
@@ -184,7 +184,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.LightningDamage]: {min: 1, max: 50},
+          [MagicPropertyType.LightningDamage]: {x: 1, y: 50},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.LightningResist]: 30,
@@ -204,7 +204,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.ColdDamage]: {min: 3, max: 14, duration: 3},
+          [MagicPropertyType.ColdDamage]: {x: 3, y: 14, z: 3},
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.ColdResist]: 30,

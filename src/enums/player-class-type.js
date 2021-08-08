@@ -1,3 +1,7 @@
+/**
+ * @readonly
+ * @enum {string}
+ */
 export const PlayerClassType = {
   Amazon: 'Amazon',
   Assassin: 'Assassin',
