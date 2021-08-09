@@ -153,6 +153,7 @@ const resolvers = {
     `Fires Magic Arrows (Level ${x})`,
   [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
   [MagicPropertyType.HalfFreezeDuration]: () => 'Half Freeze Duration',
+  [MagicPropertyType.HealStamina]: (x) => `Heal Stamina Plus ${x}%`,
   [MagicPropertyType.HitCausesMonsterToFlee]: (x) =>
     `Hit Causes Monster to Flee ${x}%`,
   [MagicPropertyType.HitBlindsTarget]: () => 'Hit Blinds Target',
@@ -166,12 +167,14 @@ const resolvers = {
   [MagicPropertyType.IncreaseMaximumMana]: (x) => `Increase Maximum Mana ${x}%`,
   [MagicPropertyType.Knockback]: () => 'Knockback',
   [MagicPropertyType.Life]: (x) => `+${x} to Life`,
-  [MagicPropertyType.HealStamina]: (x) => `Heal Stamina Plus ${x}%`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x}-${y} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
   [MagicPropertyType.LightRadius]: (x) => `+${x} to Light Radius`,
+  [MagicPropertyType.LowerFireResist]: (x) => `${x} to Enemy Fire Resistance`,
+  [MagicPropertyType.LowerLightningResist]: (x) =>
+    `${x} to Enemy Lightning Resistance`,
   [MagicPropertyType.MagicDamage]: ({x, y}) => `Adds ${x}-${y} Magic Damage`,
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
@@ -207,6 +210,14 @@ const resolvers = {
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
+  [MagicPropertyType.SorceressColdMastery]: (x) =>
+    `+${x} to Cold Mastery (Sorceress Only)`,
+  [MagicPropertyType.SorceressFireMastery]: (x) =>
+    `+${x} to Fire Mastery (Sorceress Only)`,
+  [MagicPropertyType.SorceressLightningMastery]: (x) =>
+    `+${x} to Lightning Mastery (Sorceress Only)`,
+  [MagicPropertyType.SorceressSkillLevels]: (x) =>
+    `+${x} to Sorceress Skill Levels`,
   [MagicPropertyType.Strength]: (x) => `+${x} to Strength`,
   [MagicPropertyType.TargetDefense]: (x) => `-${x}% Target Defense`,
   [MagicPropertyType.Vitality]: (x) => `+${x} to Vitality`,

@@ -24,4 +24,9 @@ export default {
   NatalyasShadow: 'NatalyasShadow',
   NatalyasTotem: 'NatalyasTotem',
   NatalyasSoul: 'NatalyasSoul',
+  TalRashasLidlessEye: 'TalRashasLidlessEye',
+  TalRashasGuardianship: 'TalRashasGuardianship',
+  TalRashasHoradricCrest: 'TalRashasHoradricCrest',
+  TalRashasFineSpunCloth: 'TalRashasFineSpunCloth',
+  TalRashasAdjudication: 'TalRashasAdjudication',
 };
