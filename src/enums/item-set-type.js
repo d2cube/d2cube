@@ -10,4 +10,5 @@ export const ItemSetType = {
   MAvinasBattleHymn: 'MAvinasBattleHymn',
   NatalyasOdium: 'NatalyasOdium',
   TalRashasWrappings: 'TalRashasWrappings',
+  TrangOulsAvatar: 'TrangOulsAvatar',
 };

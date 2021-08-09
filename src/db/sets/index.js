@@ -7,6 +7,7 @@ import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
 import natalyasOdium from './natalyas-odium.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
+import trangOulsAvatar from './trang-ouls-avatar.js';
 
 export default {
   [ItemSetType.AldursWatchtower]: aldursWatchtower,
@@ -16,4 +17,5 @@ export default {
   [ItemSetType.MAvinasBattleHymn]: mAvinasBattleHymn,
   [ItemSetType.NatalyasOdium]: natalyasOdium,
   [ItemSetType.TalRashasWrappings]: talRashasWrappings,
+  [ItemSetType.TrangOulsAvatar]: trangOulsAvatar,
 };

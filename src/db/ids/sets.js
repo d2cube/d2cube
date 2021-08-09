@@ -29,4 +29,9 @@ export default {
   TalRashasHoradricCrest: 'TalRashasHoradricCrest',
   TalRashasFineSpunCloth: 'TalRashasFineSpunCloth',
   TalRashasAdjudication: 'TalRashasAdjudication',
+  TrangOulsScales: 'TrangOulsScales',
+  TrangOulsWing: 'TrangOulsWing',
+  TrangOulsGuise: 'TrangOulsGuise',
+  TrangOulsClaws: 'TrangOulsClaws',
+  TrangOulsGirth: 'TrangOulsGirth',
 };

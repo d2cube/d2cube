@@ -149,6 +149,7 @@ const resolvers = {
   [MagicPropertyType.FireDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
+  [MagicPropertyType.FireMastery]: (x) => `+${x} to Fire Mastery`,
   [MagicPropertyType.FiresMagicArrows]: (x) =>
     `Fires Magic Arrows (Level ${x})`,
   [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
@@ -172,9 +173,11 @@ const resolvers = {
     `Adds ${x}-${y} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
   [MagicPropertyType.LightRadius]: (x) => `+${x} to Light Radius`,
-  [MagicPropertyType.LowerFireResist]: (x) => `${x} to Enemy Fire Resistance`,
+  [MagicPropertyType.LowerFireResist]: (x) => `-${x}% to Enemy Fire Resistance`,
   [MagicPropertyType.LowerLightningResist]: (x) =>
-    `${x} to Enemy Lightning Resistance`,
+    `-${x}% to Enemy Lightning Resistance`,
+  [MagicPropertyType.LowerPoisonResist]: (x) =>
+    `-${x}% to Enemy Poison Resistance`,
   [MagicPropertyType.MagicDamage]: ({x, y}) => `Adds ${x}-${y} Magic Damage`,
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
@@ -191,6 +194,14 @@ const resolvers = {
     `+${x}% to Maximum Poison Resist`,
   [MagicPropertyType.MaximumStamina]: (x) => `+${x} Maximum Stamina`,
   [MagicPropertyType.MinimumDamage]: (x) => `+${x} to Minimum Damage`,
+  [MagicPropertyType.NecromancerCurses]: (x) =>
+    `+${x} to Curses (Necromancer Only)`,
+  [MagicPropertyType.NecromancerPoisonAndBoneSkills]: (x) =>
+    `+${x} to Poison and Bone Skills (Necromancer Only)`,
+  [MagicPropertyType.NecromancerSkillLevels]: (x) =>
+    `+${x} to Necromancer Skill Levels`,
+  [MagicPropertyType.NecromancerSummoningSkills]: (x) =>
+    `+${x} to Summoning Skills (Necromancer Only)`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
   [MagicPropertyType.PaladinCombatSkills]: (x) =>
     `+${x} to Combat Skills (Paladin Only)`,
@@ -202,13 +213,17 @@ const resolvers = {
     `+${x} to Paladin Skill Levels`,
   [MagicPropertyType.PoisonDamage]: ({x, y, z}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Poison Damage Over ${z} Seconds`,
-  [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
   [MagicPropertyType.PoisonLengthReduced]: (x) =>
     `Poison Length Reduced by ${x}%`,
+  [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
+  [MagicPropertyType.PoisonSkillDamage]: (x) => `+${x}% to Poison Skill Damage`,
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
+  [MagicPropertyType.SkillFireBall]: (x) => `+${x} to Fire Ball`,
+  [MagicPropertyType.SkillFireWall]: (x) => `+${x} to Fire Wall`,
+  [MagicPropertyType.SkillMeteor]: (x) => `+${x} to Meteor`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
   [MagicPropertyType.SorceressColdMastery]: (x) =>
     `+${x} to Cold Mastery (Sorceress Only)`,
