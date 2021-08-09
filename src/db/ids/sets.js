@@ -15,4 +15,9 @@ export default {
   ImmortalKingsForge: 'ImmortalKingsForge',
   ImmortalKingsDetail: 'ImmortalKingsDetail',
   ImmortalKingsPillar: 'ImmortalKingsPillar',
+  MAvinasCaster: 'MAvinasCaster',
+  MAvinasEmbrace: 'MAvinasEmbrace',
+  MAvinasTrueSight: 'MAvinasTrueSight',
+  MAvinasIcyClutch: 'MAvinasIcyClutch',
+  MAvinasTenet: 'MAvinasTenet',
 };

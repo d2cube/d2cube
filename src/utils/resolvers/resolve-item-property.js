@@ -81,6 +81,11 @@ const resolvers = {
   [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,
+  [MagicPropertyType.AmazonBowAndCrossbowSkills]: (x) =>
+    `+${x} to Bow and Crossbow Skills (Amazon Only)`,
+  [MagicPropertyType.AmazonPasssiveAndMagicSkills]: (x) =>
+    `+${x} to Passive and Magic Skills (Amazon Only)`,
+  [MagicPropertyType.AmazonSkillLevels]: (x) => `+${x} to Amazon Skill Levels`,
   [MagicPropertyType.AttackRating]: (x) => `+${x} to Attack Rating`,
   [MagicPropertyType.AttackRatingAgainstDemons]: (x) =>
     `+${x} to Attack Rating Against Demons`,
@@ -103,9 +108,14 @@ const resolvers = {
     `${y}% Chance to cast level ${x} Charged Bolt when struck`,
   [MagicPropertyType.ChanceToCastEnchantWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Enchant when struck`,
+  [MagicPropertyType.ChanceToCastGlacialSpikeWhenStruck]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Glacial Spike when struck`,
+  [MagicPropertyType.ChanceToCastNovaOnStriking]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Nova on striking`,
   [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
   [MagicPropertyType.ColdDamage]: ({x, y}) => `Adds ${x}-${y} Cold Damage`,
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
+  [MagicPropertyType.ColdSkillDamage]: (x) => `+${x}% to Cold Skill Damage`,
   [MagicPropertyType.CrushingBlow]: (x) => `${x}% Chance of Crushing Blow`,
   [MagicPropertyType.Damage]: ({x, y}) => `Adds ${x}-${y} Damage`,
   [MagicPropertyType.DamageReduced]: (x) => `Damage Reduced by ${x}`,
@@ -133,6 +143,8 @@ const resolvers = {
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
   [MagicPropertyType.FireDamage]: ({x, y}) => `Adds ${x}-${y} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
+  [MagicPropertyType.FiresMagicArrows]: (x) =>
+    `Fires Magic Arrows (Level ${x})`,
   [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
   [MagicPropertyType.HalfFreezeDuration]: () => 'Half Freeze Duration',
   [MagicPropertyType.HitCausesMonsterToFlee]: (x) =>
@@ -200,6 +212,9 @@ Object.entries(resolvers).forEach(([property, resolverr]) => {
 // Derive resolvers for *ByLevel properties
 resolvers[MagicPropertyType.ColdAbsorbByLevel] = lvl(
   resolvers[MagicPropertyType.ColdAbsorb],
+);
+resolvers[MagicPropertyType.DefenseByLevel] = lvl(
+  resolvers[MagicPropertyType.Defense],
 );
 resolvers[MagicPropertyType.ExtraGoldByLevel] = lvl(
   resolvers[MagicPropertyType.ExtraGold],

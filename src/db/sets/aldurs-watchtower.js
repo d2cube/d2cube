@@ -24,9 +24,9 @@ export default {
     },
   ],
   items: [
+    ids.AldursAdvance,
     ids.AldursRhythm,
     ids.AldursDeception,
     ids.AldursStonyGaze,
-    ids.AldursAdvance,
   ],
 };

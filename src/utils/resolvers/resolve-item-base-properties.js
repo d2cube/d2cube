@@ -10,15 +10,20 @@ export const resolveItemBaseProperties = (item) => {
   const results = [];
   Object.entries(baseProperties).forEach((entry) => {
     const [property] = entry;
-    const {isEnhanced, values} = enhanceWithStats(item.stats)(entry);
+    const {isEnhanced, values, byLevel} = enhanceWithStats(item.stats)(entry);
     const resolved =
       !isEmpty(values) && resolveItemProperty(item)({property, values});
     if (resolved) {
       const [label, valueText] = resolved;
-      results.push([
+      const result = [
         label,
         {text: valueText, color: isEnhanced ? 'magic' : null},
-      ]);
+      ];
+      if (byLevel) {
+        result.push({text: byLevel, color: 'magic'});
+      }
+
+      results.push(result);
     }
   });
 
@@ -50,15 +55,16 @@ const enhanceWithStats = (stats) => (entry) => {
     }
 
     case BasePropertyType.BaseDefense: {
-      const enhanced = enhance(MagicPropertyType.EnhancedDefense)({
+      let enhanced = enhance(MagicPropertyType.EnhancedDefense)({
         values,
         stats,
       });
-      return enhance(MagicPropertyType.Defense)({
+      enhanced = enhance(MagicPropertyType.Defense)({
         values: enhanced.values,
         stats,
         wasEnhanced: enhanced.isEnhanced,
       });
+      return enhanceByLevel(stats[MagicPropertyType.DefenseByLevel])(enhanced);
     }
 
     case BasePropertyType.BlockChance: {
@@ -101,10 +107,24 @@ const enhance =
     };
   };
 
+const enhanceByLevel = (byLevel) => (enhanced) => ({
+  ...enhanced,
+  byLevel: isEmpty(byLevel) ? undefined : ` +[${byLevel}-${byLevel * 99}]`,
+});
+
 const multiplyMap = (x) => (xs) => xs.map(multiply(x));
 
-const addDefense = (values, enhanced) =>
-  Array.isArray(values) ? values.map(add(enhanced)) : add(enhanced)(values);
+const addDefense = (values, enhanced) => {
+  if (Array.isArray(enhanced)) {
+    return enhanced.map((v, i) =>
+      add(v)(Array.isArray(values) ? values[i] : values),
+    );
+  }
+
+  return Array.isArray(values)
+    ? values.map(add(enhanced))
+    : add(enhanced)(values);
+};
 
 // TODO: this is incorrect.  Find the official implementation.
 const ias = (values, enhanced) => {

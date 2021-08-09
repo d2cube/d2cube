@@ -12,5 +12,5 @@ export default {
       [MagicPropertyType.DamageToDemons]: 200,
     },
   ],
-  items: [ids.BulKathosSacredCharge, ids.BulKathosTribalGuardian],
+  items: [ids.BulKathosTribalGuardian, ids.BulKathosSacredCharge],
 };

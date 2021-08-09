@@ -2,8 +2,8 @@ import {ItemSetType, MagicPropertyType} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
-  id: ItemSetType.GrisworldsLegacy,
-  name: "Grisworld's Legacy",
+  id: ItemSetType.MAvinasBattleHymn,
+  name: "M'avina's Battle Hymn",
   bonus: [
     null,
     {
@@ -12,20 +12,22 @@ export default {
     {
       [MagicPropertyType.Dexterity]: 30,
     },
+    null,
     {
-      [MagicPropertyType.PaladinSkillLevels]: 3,
-      [MagicPropertyType.FasterHitRecovery]: 30,
-      [MagicPropertyType.AttackRating]: 200,
+      [MagicPropertyType.AmazonSkillLevels]: 3,
+      [MagicPropertyType.AttackRating]: 100,
+      [MagicPropertyType.Defense]: 100,
       [MagicPropertyType.Strength]: 20,
       [MagicPropertyType.Dexterity]: 30,
-      [MagicPropertyType.Life]: 150,
       [MagicPropertyType.AllResistances]: 50,
+      [MagicPropertyType.MagicFind]: 100,
     },
   ],
   items: [
-    ids.GrisworldsHonor,
-    ids.GrisworldsRedemption,
-    ids.GrisworldsHeart,
-    ids.GrisworldsValor,
+    ids.MAvinasCaster,
+    ids.MAvinasEmbrace,
+    ids.MAvinasTrueSight,
+    ids.MAvinasIcyClutch,
+    ids.MAvinasTenet,
   ],
 };

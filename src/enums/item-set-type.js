@@ -7,4 +7,5 @@ export const ItemSetType = {
   BulKathosChildren: 'BulKathosChildren',
   GrisworldsLegacy: 'GrisworldsLegacy',
   ImmortalKing: 'ImmortalKing',
+  MAvinasBattleHymn: 'MAvinasBattleHymn',
 };
