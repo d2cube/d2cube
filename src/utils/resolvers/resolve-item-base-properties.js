@@ -27,8 +27,11 @@ export const resolveItemBaseProperties = (item) => {
 
 const enhanceWithStats = (stats) => (entry) => {
   const [property, values] = entry;
-
   switch (property) {
+    case BasePropertyType.AttackSpeed: {
+      return enhance(MagicPropertyType.IncreasedAttackSpeed)({values, stats});
+    }
+
     case BasePropertyType.Damage1H:
     case BasePropertyType.Damage2H:
     case BasePropertyType.DamageThrow: {
@@ -65,10 +68,9 @@ const enhanceWithStats = (stats) => (entry) => {
     }
 
     default:
-      break;
+      return {isEnhanced: false, values};
   }
 
-  return {isEnhanced: false, values};
 };
 
 const enhance =
@@ -88,6 +90,12 @@ const multiplyMap = (x) => (xs) => xs.map(multiply(x));
 
 const addDefense = (values, enhanced) =>
   Array.isArray(values) ? values.map(add(enhanced)) : add(enhanced)(values);
+
+// TODO: this is incorrect.  Find the official implementation.
+const ias = (values, enhanced) => {
+  const delta = Math.abs(values) * percent(enhanced)
+  return values -  delta;
+}
 
 const indestructible = (values, enhanced) => (enhanced ? null : values);
 
@@ -130,6 +138,7 @@ const enhancers = {
   [MagicPropertyType.Damage]: addDamage,
   [MagicPropertyType.EnhancedDamage]: enhanceDamage,
   [MagicPropertyType.EnhancedDefense]: enhanceDefense,
+  [MagicPropertyType.IncreasedAttackSpeed]: ias,
   [MagicPropertyType.Indestructible]: indestructible,
   [MagicPropertyType.Requirements]: requirements,
 };

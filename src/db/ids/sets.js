@@ -3,6 +3,8 @@ export default {
   AldursDeception: 'AldursDeception',
   AldursStonyGaze: 'AldursStonyGaze',
   AldursAdvance: 'AldursAdvance',
+  BulKathosSacredCharge: 'BulKathosSacredCharge',
+  BulKathosTribalGuardian: 'BulKathosTribalGuardian',
   ImmortalKingsStoneCrusher: 'ImmortalKingsStoneCrusher',
   ImmortalKingsSoulCage: 'ImmortalKingsSoulCage',
   ImmortalKingsWill: 'ImmortalKingsWill',
