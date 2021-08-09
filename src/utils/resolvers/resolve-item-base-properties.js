@@ -29,7 +29,10 @@ const enhanceWithStats = (stats) => (entry) => {
   const [property, values] = entry;
   switch (property) {
     case BasePropertyType.AttackSpeed: {
-      return enhance(MagicPropertyType.IncreasedAttackSpeed)({values, stats});
+      return enhance(MagicPropertyType.IncreasedAttackSpeed)({
+        values,
+        stats,
+      });
     }
 
     case BasePropertyType.Damage1H:
@@ -58,19 +61,31 @@ const enhanceWithStats = (stats) => (entry) => {
       });
     }
 
+    case BasePropertyType.BlockChance: {
+      return enhance(MagicPropertyType.IncreasedChanceOfBlocking)({
+        values,
+        stats,
+      });
+    }
+
     case BasePropertyType.Durability: {
-      return enhance(MagicPropertyType.Indestructible)({values, stats});
+      return enhance(MagicPropertyType.Indestructible)({
+        values,
+        stats,
+      });
     }
 
     case BasePropertyType.RequiredDexterity:
     case BasePropertyType.RequiredStrength: {
-      return enhance(MagicPropertyType.Requirements)({values, stats});
+      return enhance(MagicPropertyType.Requirements)({
+        values,
+        stats,
+      });
     }
 
     default:
       return {isEnhanced: false, values};
   }
-
 };
 
 const enhance =
@@ -93,16 +108,27 @@ const addDefense = (values, enhanced) =>
 
 // TODO: this is incorrect.  Find the official implementation.
 const ias = (values, enhanced) => {
-  const delta = Math.abs(values) * percent(enhanced)
-  return values -  delta;
-}
+  const delta = Math.abs(values) * percent(enhanced);
+  return values - delta;
+};
+
+const icb = (values, enhanced) => values + enhanced;
 
 const indestructible = (values, enhanced) => (enhanced ? null : values);
 
-const addDamage = ({x, y}, enhanced) => ({
-  x: x + enhanced.x,
-  y: y + enhanced.y,
-});
+const addDamage = ({x, y}, enhanced) => {
+  if (Array.isArray(x) && Array.isArray(y)) {
+    return {
+      x: x.map(add(enhanced.x)),
+      y: y.map(add(enhanced.y)),
+    };
+  }
+
+  return {
+    x: x + enhanced.x,
+    y: y + enhanced.y,
+  };
+};
 
 const requirements = (values, enhanced) => multiply(values)(percent(enhanced));
 
@@ -139,6 +165,7 @@ const enhancers = {
   [MagicPropertyType.EnhancedDamage]: enhanceDamage,
   [MagicPropertyType.EnhancedDefense]: enhanceDefense,
   [MagicPropertyType.IncreasedAttackSpeed]: ias,
+  [MagicPropertyType.IncreasedChanceOfBlocking]: icb,
   [MagicPropertyType.Indestructible]: indestructible,
   [MagicPropertyType.Requirements]: requirements,
 };

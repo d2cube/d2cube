@@ -33,7 +33,25 @@ export const percent = (x) => (x + 100) / 100;
 export const range = (x1) => (x2) =>
   Array.from({length: x2 - x1}).map((_, i) => i + x1);
 
-export const sum = (xs) => xs.reduce((acc, x) => acc + x, 0);
+// TODO: reference S.sum
+export const sum = (xs) => {
+  const [firstValue] = xs;
+  if (isPlainObject(firstValue)) {
+    const keys = Object.keys(firstValue);
+    return xs.reduce((acc, x) => {
+      keys.forEach((key) => {
+        if (!(key in acc)) {
+          acc[key] = 0;
+        }
+
+        acc[key] += x[key];
+      });
+      return acc;
+    }, {});
+  }
+
+  return xs.reduce((acc, x) => acc + x, 0);
+};
 
 export const size = (xs) =>
   isPlainObject(xs) ? Object.keys(xs).length : xs.length;

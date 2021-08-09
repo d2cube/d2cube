@@ -103,6 +103,7 @@ export default normalizeItems({
         [MagicPropertyType.LightRadius]: 4,
         [MagicPropertyType.Socketed]: 2,
       },
+      set: [null, null, null, null, null, null],
     },
   },
   {
@@ -204,6 +205,7 @@ export default normalizeItems({
         {
           [MagicPropertyType.HalfFreezeDuration]: true,
         },
+        null,
       ],
     },
   },

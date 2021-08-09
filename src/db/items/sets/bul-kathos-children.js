@@ -28,6 +28,7 @@ export default normalizeItems({
         [MagicPropertyType.Knockback]: true,
         [MagicPropertyType.AllResistances]: 20,
       },
+      set: [null, null],
     },
   },
   {
@@ -45,6 +46,7 @@ export default normalizeItems({
         [MagicPropertyType.Strength]: 20,
         [MagicPropertyType.FireResist]: 50,
       },
+      set: [null, null],
     },
   },
 ]);

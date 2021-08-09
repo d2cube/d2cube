@@ -31,8 +31,10 @@ const formatValues = (values) => {
   return formattedValues;
 };
 
-const lvl = (resolver, unit) => (x) =>
-  `${resolver([x, x * 99])} (+${x}${unit} Based on Character Level)`;
+const lvl =
+  (resolver, unit = '') =>
+  (x) =>
+    `${resolver([x, x * 99])} (+${x}${unit} Based on Character Level)`;
 
 // TODO: confirm logic with https://forums.d2jsp.org/topic.php?t=5458178
 const getAttackSpeedDescription = (x) => {
@@ -58,7 +60,7 @@ const resolvers = {
     `${item.class} Class - `,
     `${getAttackSpeedDescription(x)} Attack Speed`,
   ],
-  [BasePropertyType.BlockChance]: (x) => [`Chance to Block: ${x}%`],
+  [BasePropertyType.BlockChance]: (x) => [`Chance to Block: `, `${x}%`],
   [BasePropertyType.Damage1H]: ({x, y}) => [
     'One-hand Damage: ',
     `${x} to ${y}`,
@@ -86,12 +88,12 @@ const resolvers = {
     `+${x} to Attack Rating Against Undead`,
   [MagicPropertyType.AttackerTakesDamage]: (x) =>
     `Attacker Takes Damage of ${x}`,
-  [MagicPropertyType.BarbarianSkillLevels]: (x) =>
-    `+${x} to Barbarian Skill Levels`,
   [MagicPropertyType.BarbarianCombatSkills]: (x) =>
     `+${x} to Combat Skills (Barbarian Only)`,
   [MagicPropertyType.BarbarianMasteries]: (x) =>
     `+${x} to Masteries (Barbarian Only)`,
+  [MagicPropertyType.BarbarianSkillLevels]: (x) =>
+    `+${x} to Barbarian Skill Levels`,
   [MagicPropertyType.BarbarianWarcries]: (x) =>
     `+${x} to Warcries (Barbarian Only)`,
   [MagicPropertyType.BonusToAttackRating]: (x) =>
@@ -101,6 +103,7 @@ const resolvers = {
     `${y}% Chance to cast level ${x} Charged Bolt when struck`,
   [MagicPropertyType.ChanceToCastEnchantWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Enchant when struck`,
+  [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
   [MagicPropertyType.ColdDamage]: ({x, y}) => `Adds ${x}-${y} Cold Damage`,
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
   [MagicPropertyType.CrushingBlow]: (x) => `${x}% Chance of Crushing Blow`,
@@ -168,6 +171,14 @@ const resolvers = {
   [MagicPropertyType.MaximumStamina]: (x) => `+${x} Maximum Stamina`,
   [MagicPropertyType.MinimumDamage]: (x) => `+${x} to Minimum Damage`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
+  [MagicPropertyType.PaladinCombatSkills]: (x) =>
+    `+${x} to Combat Skills (Paladin Only)`,
+  [MagicPropertyType.PaladinDefensiveAuras]: (x) =>
+    `+${x} to Defensive Auras (Paladin Only)`,
+  [MagicPropertyType.PaladinOffensiveAuras]: (x) =>
+    `+${x} to Offensive Auras (Paladin Only)`,
+  [MagicPropertyType.PaladinSkillLevels]: (x) =>
+    `+${x} to Paladin Skill Levels`,
   [MagicPropertyType.PoisonDamage]: ({x, z}) =>
     `+${x} Poison Damage Over ${z} Seconds`,
   [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
@@ -187,6 +198,9 @@ Object.entries(resolvers).forEach(([property, resolverr]) => {
 });
 
 // Derive resolvers for *ByLevel properties
+resolvers[MagicPropertyType.ColdAbsorbByLevel] = lvl(
+  resolvers[MagicPropertyType.ColdAbsorb],
+);
 resolvers[MagicPropertyType.ExtraGoldByLevel] = lvl(
   resolvers[MagicPropertyType.ExtraGold],
   '%',
