@@ -53,6 +53,7 @@ export const MagicPropertyType = {
   AmazonBowAndCrossbowSkills: 'AmazonBowAndCrossbowSkills',
   AmazonPasssiveAndMagicSkills: 'AmazonPasssiveAndMagicSkills',
   AssassinSkillLevels: 'AssassinSkillLevels',
+  AssassinShadowDisciplines: 'AssassinShadowDisciplines',
   BarbarianSkillLevels: 'BarbarianSkillLevels',
   BarbarianCombatSkills: 'BarbarianCombatSkills',
   BarbarianMasteries: 'BarbarianMasteries',

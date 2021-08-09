@@ -3,6 +3,7 @@ import bulKathosChildren from './bul-kathos-children.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
+import natalyasOdium from './natalyas-odium.js';
 
 export default {
   ...aldursWatchtower,
@@ -10,4 +11,5 @@ export default {
   ...grisworldsLegacy,
   ...immortalKing,
   ...mAvinasBattleHymn,
+  ...natalyasOdium,
 };

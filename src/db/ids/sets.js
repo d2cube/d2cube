@@ -20,4 +20,8 @@ export default {
   MAvinasTrueSight: 'MAvinasTrueSight',
   MAvinasIcyClutch: 'MAvinasIcyClutch',
   MAvinasTenet: 'MAvinasTenet',
+  NatalyasMark: 'NatalyasMark',
+  NatalyasShadow: 'NatalyasShadow',
+  NatalyasTotem: 'NatalyasTotem',
+  NatalyasSoul: 'NatalyasSoul',
 };

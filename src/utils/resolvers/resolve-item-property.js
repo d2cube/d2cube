@@ -86,6 +86,10 @@ const resolvers = {
   [MagicPropertyType.AmazonPasssiveAndMagicSkills]: (x) =>
     `+${x} to Passive and Magic Skills (Amazon Only)`,
   [MagicPropertyType.AmazonSkillLevels]: (x) => `+${x} to Amazon Skill Levels`,
+  [MagicPropertyType.AssassinShadowDisciplines]: (x) =>
+    `+${x} to Shadow Disciplines (Assassin Only)`,
+  [MagicPropertyType.AssassinSkillLevels]: (x) =>
+    `+${x} to Assassin Skill Levels`,
   [MagicPropertyType.AttackRating]: (x) => `+${x} to Attack Rating`,
   [MagicPropertyType.AttackRatingAgainstDemons]: (x) =>
     `+${x} to Attack Rating Against Demons`,
@@ -113,7 +117,8 @@ const resolvers = {
   [MagicPropertyType.ChanceToCastNovaOnStriking]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Nova on striking`,
   [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
-  [MagicPropertyType.ColdDamage]: ({x, y}) => `Adds ${x}-${y} Cold Damage`,
+  [MagicPropertyType.ColdDamage]: ({x, y}) =>
+    `Adds ${x === y ? x : `${x}-${y}`} Cold Damage`,
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
   [MagicPropertyType.ColdSkillDamage]: (x) => `+${x}% to Cold Skill Damage`,
   [MagicPropertyType.CrushingBlow]: (x) => `${x}% Chance of Crushing Blow`,
@@ -134,14 +139,15 @@ const resolvers = {
   [MagicPropertyType.DefenseVsMissle]: (x) => `+${x} Defense Vs. Missle`,
   [MagicPropertyType.Dexterity]: (x) => `+${x} to Dexterity`,
   [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,
-  [MagicPropertyType.EnhancedDamage]: (x) => `${x}% Enhanced Damage`,
-  [MagicPropertyType.EnhancedDefense]: (x) => `${x}% Enhanced Defense`,
+  [MagicPropertyType.EnhancedDamage]: (x) => `+${x}% Enhanced Damage`,
+  [MagicPropertyType.EnhancedDefense]: (x) => `+${x}% Enhanced Defense`,
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
   [MagicPropertyType.FasterBlockRate]: (x) => `${x}% Faster Block Rate`,
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,
   [MagicPropertyType.FasterRunWalk]: (x) => `${x}% Faster Run/Walk`,
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
-  [MagicPropertyType.FireDamage]: ({x, y}) => `Adds ${x}-${y} Fire Damage`,
+  [MagicPropertyType.FireDamage]: ({x, y}) =>
+    `Adds ${x === y ? x : `${x}-${y}`} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
   [MagicPropertyType.FiresMagicArrows]: (x) =>
     `Fires Magic Arrows (Level ${x})`,
@@ -191,9 +197,11 @@ const resolvers = {
     `+${x} to Offensive Auras (Paladin Only)`,
   [MagicPropertyType.PaladinSkillLevels]: (x) =>
     `+${x} to Paladin Skill Levels`,
-  [MagicPropertyType.PoisonDamage]: ({x, z}) =>
-    `+${x} Poison Damage Over ${z} Seconds`,
+  [MagicPropertyType.PoisonDamage]: ({x, y, z}) =>
+    `Adds ${x === y ? x : `${x}-${y}`} Poison Damage Over ${z} Seconds`,
   [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
+  [MagicPropertyType.PoisonLengthReduced]: (x) =>
+    `Poison Length Reduced by ${x}%`,
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
@@ -219,6 +227,13 @@ resolvers[MagicPropertyType.DefenseByLevel] = lvl(
 resolvers[MagicPropertyType.ExtraGoldByLevel] = lvl(
   resolvers[MagicPropertyType.ExtraGold],
   '%',
+);
+resolvers[MagicPropertyType.HealStaminaByLevel] = lvl(
+  resolvers[MagicPropertyType.HealStamina],
+  '%',
+);
+resolvers[MagicPropertyType.LifeByLevel] = lvl(
+  resolvers[MagicPropertyType.Life],
 );
 resolvers[MagicPropertyType.MagicFindByLevel] = lvl(
   resolvers[MagicPropertyType.MagicFind],
