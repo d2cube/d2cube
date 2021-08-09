@@ -53,30 +53,30 @@ const getAttackSpeedDescription = (x) => {
 };
 
 const resolvers = {
-  [BasePropertyType.Defense]: (x) => ['Defense: ', x],
+  [BasePropertyType.BaseDefense]: (x) => ['Defense: ', x],
   [BasePropertyType.AttackSpeed]: (x, item) => [
     `${item.class} Class - `,
     `${getAttackSpeedDescription(x)} Attack Speed`,
   ],
   [BasePropertyType.BlockChance]: (x) => [`Chance to Block: ${x}%`],
-  [BasePropertyType.Damage1H]: ({min, max}) => [
+  [BasePropertyType.Damage1H]: ({x, y}) => [
     'One-hand Damage: ',
-    `${min} to ${max}`,
+    `${x} to ${y}`,
   ],
-  [BasePropertyType.Damage2H]: ({min, max}) => [
+  [BasePropertyType.Damage2H]: ({x, y}) => [
     'Two-hand Damage: ',
-    `${min} to ${max}`,
+    `${x} to ${y}`,
   ],
-  [BasePropertyType.DamageThrow]: ({min, max}) => [
+  [BasePropertyType.DamageThrow]: ({x, y}) => [
     'Throw Damage: ',
-    `${min} to ${max}`,
+    `${x} to ${y}`,
   ],
   [BasePropertyType.Durability]: (x) =>
     x === Number.POSITIVE_INFINITY ? null : ['Durability: ', `${x} of ${x}`],
   [BasePropertyType.RequiredDexterity]: (x) => ['Required Dexterity: ', x],
   [BasePropertyType.RequiredLevel]: (x) => ['Required Level: ', x],
   [BasePropertyType.RequiredStrength]: (x) => ['Required Strength: ', x],
-  [MagicPropertyType.AddSockets]: (x) => `Socketed (${x})`,
+  [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,
   [MagicPropertyType.AttackRating]: (x) => `+${x} to Attack Rating`,
@@ -88,14 +88,23 @@ const resolvers = {
     `Attacker Takes Damage of ${x}`,
   [MagicPropertyType.BarbarianSkillLevels]: (x) =>
     `+${x} to Barbarian Skill Levels`,
+  [MagicPropertyType.BarbarianCombatSkills]: (x) =>
+    `+${x} to Combat Skills (Barbarian Only)`,
+  [MagicPropertyType.BarbarianMasteries]: (x) =>
+    `+${x} to Masteries (Barbarian Only)`,
+  [MagicPropertyType.BarbarianWarcries]: (x) =>
+    `+${x} to Warcries (Barbarian Only)`,
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
-  [MagicPropertyType.ChanceToCastSpellWhenStruck]: ({x, y, z}) =>
-    `${z}% Chance to cast level ${y} ${x} when struck`,
+  [MagicPropertyType.ChanceToCastChargedBoltWhenStruck]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Charged Bolt when struck`,
+  [MagicPropertyType.ChanceToCastEnchantWhenStruck]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Enchant when struck`,
   [MagicPropertyType.ColdDamage]: ({x, y}) => `Adds ${x}-${y} Cold Damage`,
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
   [MagicPropertyType.CrushingBlow]: (x) => `${x}% Chance of Crushing Blow`,
+  [MagicPropertyType.Damage]: ({x, y}) => `Adds ${x}-${y} Damage`,
   [MagicPropertyType.DamageReduced]: (x) => `Damage Reduced by ${x}`,
   [MagicPropertyType.DamageReducedPercentage]: (x) => `Damage Reduced by ${x}%`,
   [MagicPropertyType.DamageTakenGoesToMana]: (x) =>
@@ -103,10 +112,15 @@ const resolvers = {
   [MagicPropertyType.DamageToDemons]: (x) => `+${x}% Damage to Demons`,
   [MagicPropertyType.DamageToUndead]: (x) => `+${x}% Damage to Undead`,
   [MagicPropertyType.DeadlyStrike]: (x) => `${x}% Deadly Strike`,
-  [MagicPropertyType.AddDefense]: (x) => `+${x} Defense`,
+  [MagicPropertyType.DruidSkillLevels]: (x) => `+${x} to Druid Skill Levels`,
+  [MagicPropertyType.DruidElementalSkills]: (x) =>
+    `+${x} to Elemental Skills (Druid Only)`,
+  [MagicPropertyType.DruidShapeShiftingSkills]: (x) =>
+    `+${x} to Shape Shifting Skills (Druid Only)`,
+  [MagicPropertyType.Defense]: (x) => `+${x} Defense`,
   [MagicPropertyType.DefenseVsMissle]: (x) => `+${x} Defense Vs. Missle`,
-  [MagicPropertyType.AddDexterity]: (x) => `+${x} to Dexterity`,
-  [MagicPropertyType.AddEnergy]: (x) => `+${x} to Energy`,
+  [MagicPropertyType.Dexterity]: (x) => `+${x} to Dexterity`,
+  [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,
   [MagicPropertyType.EnhancedDamage]: (x) => `${x}% Enhanced Damage`,
   [MagicPropertyType.EnhancedDefense]: (x) => `${x}% Enhanced Defense`,
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
@@ -130,7 +144,8 @@ const resolvers = {
   [MagicPropertyType.IncreaseMaximumLife]: (x) => `Increase Maximum Life ${x}%`,
   [MagicPropertyType.IncreaseMaximumMana]: (x) => `Increase Maximum Mana ${x}%`,
   [MagicPropertyType.Knockback]: () => 'Knockback',
-  [MagicPropertyType.AddLife]: (x) => `+${x} to Life`,
+  [MagicPropertyType.Life]: (x) => `+${x} to Life`,
+  [MagicPropertyType.HealStamina]: (x) => `Heal Stamina Plus ${x}%`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x}-${y} Lightning Damage`,
@@ -140,7 +155,7 @@ const resolvers = {
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
     `${x}% Better Chance of Getting Magic Items`,
-  [MagicPropertyType.AddMana]: (x) => `+${x} to Mana`,
+  [MagicPropertyType.Mana]: (x) => `+${x} to Mana`,
   [MagicPropertyType.ManaAfterKill]: (x) => `+${x} to Mana After Each kill`,
   [MagicPropertyType.ManaStolenPerHit]: (x) => `${x}% Mana Stolen Per Hit`,
   [MagicPropertyType.MaximumColdResist]: (x) => `+${x}% to Maximum Cold Resist`,
@@ -150,6 +165,7 @@ const resolvers = {
     `+${x}% to Maximum Lightning Resist`,
   [MagicPropertyType.MaximumPoisonResist]: (x) =>
     `+${x}% to Maximum Poison Resist`,
+  [MagicPropertyType.MaximumStamina]: (x) => `+${x} Maximum Stamina`,
   [MagicPropertyType.MinimumDamage]: (x) => `+${x} to Minimum Damage`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
   [MagicPropertyType.PoisonDamage]: ({x, z}) =>
@@ -158,12 +174,11 @@ const resolvers = {
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
-  [MagicPropertyType.Requirements]: (x) => `Requirements -${x}%`,
-  [MagicPropertyType.SkillClassLevels]: ({x, y}) => `+${y} to ${x}`,
+  [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
-  [MagicPropertyType.AddStrength]: (x) => `+${x} to Strength`,
+  [MagicPropertyType.Strength]: (x) => `+${x} to Strength`,
   [MagicPropertyType.TargetDefense]: (x) => `-${x}% Target Defense`,
-  [MagicPropertyType.AddVitality]: (x) => `+${x} to Vitality`,
+  [MagicPropertyType.Vitality]: (x) => `+${x} to Vitality`,
 };
 
 // Wrap with value formatter

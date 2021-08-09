@@ -21,7 +21,7 @@ export default {
     {
       [MagicPropertyType.BarbarianSkillLevels]: 3,
       [MagicPropertyType.AttackRating]: 450,
-      [MagicPropertyType.AddLife]: 150,
+      [MagicPropertyType.Life]: 150,
       [MagicPropertyType.AllResistances]: 50,
       [MagicPropertyType.MagicDamageReduced]: 10,
     },

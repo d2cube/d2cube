@@ -27,11 +27,14 @@ const createItem = (items) => (initialItem) => {
       break;
   }
 
-  const addSockets = props(`properties.magic.${MagicPropertyType.AddSockets}`)(
+  const addSockets = props(`properties.magic.${MagicPropertyType.Socketed}`)(
     item,
   );
   if (addSockets) {
-    item.sockets = fillNull(addSockets);
+    const socketCount = Array.isArray(addSockets)
+      ? Math.max(...addSockets)
+      : addSockets;
+    item.sockets = fillNull(socketCount);
   }
 
   return {

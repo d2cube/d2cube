@@ -3,8 +3,8 @@
  * @enum {string}
  */
 export const BasePropertyType = {
-  Defense: 'Defense',
   AttackSpeed: 'AttackSpeed',
+  BaseDefense: 'BaseDefense',
   BlockChance: 'BlockChance',
   Damage1H: 'Damage1H',
   Damage2H: 'Damage2H',

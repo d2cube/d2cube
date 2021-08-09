@@ -7,7 +7,6 @@ An interactive D2 cube and runeword companion.
 ## TODO
 So much to do, so little time, so much fun.
 
-- [ ] Figure out logic on calculating and displaying stats and properties.
 - [ ] Check/verify recipes
 - [ ] Create item instances (rolls)
 - [ ] Cleanup code (share utils/transforms/mappers/predicates)

@@ -29,8 +29,6 @@ export {};
  * @typedef {import('../enums/index.js').PotionClassType} PotionClassType
  * @typedef {import('../enums/index.js').PrefixType} PrefixType
  * @typedef {import('../enums/index.js').RecipeType} RecipeType
- * @typedef {import('../enums/index.js').SkillClassType} SkillClassType
- * @typedef {import('../enums/index.js').SkillType} SkillType
  * @typedef {import('../enums/index.js').SocketCategoryType} SocketCategoryType
  * @typedef {import('../enums/index.js').SuffixType} SuffixType
  * @typedef {import('../enums/index.js').WeaponClassType} WeaponClassType

@@ -4,8 +4,6 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
-  SkillClassType,
-  SkillType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -30,7 +28,7 @@ export default normalizeItems({
         [MagicPropertyType.DamageToDemons]: 200,
         [MagicPropertyType.DamageToUndead]: 250,
         [MagicPropertyType.CrushingBlow]: [35, 50],
-        [MagicPropertyType.AddSockets]: 2,
+        [MagicPropertyType.Socketed]: 2,
       },
       set: [
         null,
@@ -61,16 +59,12 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 76,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
-          x: SkillType.Enchant,
+        [MagicPropertyType.ChanceToCastEnchantWhenStruck]: {
+          x: 5,
           y: 5,
-          z: 5,
         },
-        [MagicPropertyType.SkillClassLevels]: {
-          x: SkillClassType.BarbarianCombatSkills,
-          y: 2,
-        },
-        [MagicPropertyType.AddDefense]: 400,
+        [MagicPropertyType.BarbarianCombatSkills]: 2,
+        [MagicPropertyType.Defense]: 400,
         [MagicPropertyType.PoisonResist]: 50,
       },
       set: [
@@ -102,15 +96,12 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 47,
       },
       magic: {
-        [MagicPropertyType.SkillClassLevels]: {
-          x: SkillClassType.BarbarianWarcries,
-          y: 2,
-        },
-        [MagicPropertyType.AddDefense]: 125,
+        [MagicPropertyType.BarbarianWarcries]: 2,
+        [MagicPropertyType.Defense]: 125,
         [MagicPropertyType.ExtraGold]: 37,
         [MagicPropertyType.MagicFind]: [25, 40],
         [MagicPropertyType.LightRadius]: 4,
-        [MagicPropertyType.AddSockets]: 2,
+        [MagicPropertyType.Socketed]: 2,
       },
     },
   },
@@ -123,14 +114,13 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 30,
       },
       magic: {
-        [MagicPropertyType.AddDefense]: 65,
-        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
-          x: SkillType.ChargedBolt,
-          y: 4,
-          z: 12,
+        [MagicPropertyType.ChanceToCastChargedBoltWhenStruck]: {
+          x: 4,
+          y: 12,
         },
-        [MagicPropertyType.AddDexterity]: 20,
-        [MagicPropertyType.AddStrength]: 20,
+        [MagicPropertyType.Defense]: 65,
+        [MagicPropertyType.Dexterity]: 20,
+        [MagicPropertyType.Strength]: 20,
       },
       set: [
         null,
@@ -138,7 +128,7 @@ export default normalizeItems({
           [MagicPropertyType.IncreasedAttackSpeed]: 25,
         },
         {
-          [MagicPropertyType.AddDefense]: 120,
+          [MagicPropertyType.Defense]: 120,
         },
         {
           [MagicPropertyType.LifeStolenPerHit]: 10,
@@ -161,15 +151,15 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 29,
       },
       magic: {
-        [MagicPropertyType.AddDefense]: 36,
-        [MagicPropertyType.AddStrength]: 25,
-        [MagicPropertyType.FireResist]: 28,
+        [MagicPropertyType.Defense]: 36,
+        [MagicPropertyType.Strength]: 25,
         [MagicPropertyType.LightningResist]: 31,
+        [MagicPropertyType.FireResist]: 28,
       },
       set: [
         null,
         {
-          [MagicPropertyType.AddDefense]: 105,
+          [MagicPropertyType.Defense]: 105,
         },
         {
           [MagicPropertyType.FasterHitRecovery]: 25,
@@ -181,10 +171,7 @@ export default normalizeItems({
           [MagicPropertyType.DamageReducedPercentage]: 20,
         },
         {
-          [MagicPropertyType.SkillClassLevels]: {
-            x: SkillClassType.BarbarianMasteries,
-            y: 2,
-          },
+          [MagicPropertyType.BarbarianMasteries]: 2,
         },
       ],
     },
@@ -198,10 +185,10 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 31,
       },
       magic: {
-        [MagicPropertyType.AddDefense]: 75,
         [MagicPropertyType.FasterRunWalk]: 40,
         [MagicPropertyType.AttackRating]: 110,
-        [MagicPropertyType.AddLife]: 44,
+        [MagicPropertyType.Defense]: 75,
+        [MagicPropertyType.Life]: 44,
       },
       set: [
         null,
@@ -209,13 +196,10 @@ export default normalizeItems({
           [MagicPropertyType.MagicFind]: 25,
         },
         {
-          [MagicPropertyType.SkillClassLevels]: {
-            x: SkillClassType.BarbarianCombatSkills,
-            y: 2,
-          },
+          [MagicPropertyType.BarbarianCombatSkills]: 2,
         },
         {
-          [MagicPropertyType.AddDefense]: 160,
+          [MagicPropertyType.Defense]: 160,
         },
         {
           [MagicPropertyType.HalfFreezeDuration]: true,

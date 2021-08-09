@@ -12,10 +12,10 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [20, 30],
+        [BasePropertyType.BaseDefense]: [20, 30],
         [BasePropertyType.Durability]: 35,
-        [BasePropertyType.MaxSockets]: 2,
         [BasePropertyType.RequiredLevel]: 16,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -26,10 +26,10 @@ export default normalizeItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [30, 40],
+        [BasePropertyType.BaseDefense]: [30, 40],
         [BasePropertyType.Durability]: 30,
-        [BasePropertyType.MaxSockets]: 2,
         [BasePropertyType.RequiredLevel]: 39,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -40,10 +40,10 @@ export default normalizeItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [40, 50],
+        [BasePropertyType.BaseDefense]: [40, 50],
         [BasePropertyType.Durability]: 25,
-        [BasePropertyType.MaxSockets]: 3,
         [BasePropertyType.RequiredLevel]: 52,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -54,10 +54,10 @@ export default normalizeItems({
     baseId: ids.Circlet,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [50, 60],
+        [BasePropertyType.BaseDefense]: [50, 60],
         [BasePropertyType.Durability]: 20,
-        [BasePropertyType.MaxSockets]: 3,
         [BasePropertyType.RequiredLevel]: 64,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },

@@ -86,42 +86,66 @@ export default normalizeItems({
     id: ids.FulminatingPotion,
     name: 'Fulminating Potion',
     properties: {
-      [BasePropertyType.RequiredLevel]: 6,
+      base: {
+        [BasePropertyType.DamageThrow]: {x: 5, y: 15},
+        [BasePropertyType.Quantity]: 200,
+        [BasePropertyType.RequiredLevel]: 6,
+      },
     },
   },
   {
     id: ids.ExplodingPotion,
     name: 'Exploding Potion',
     properties: {
-      [BasePropertyType.RequiredLevel]: 12,
+      base: {
+        [BasePropertyType.DamageThrow]: {x: 16, y: 30},
+        [BasePropertyType.Quantity]: 200,
+        [BasePropertyType.RequiredLevel]: 12,
+      },
     },
   },
   {
     id: ids.OilPotion,
     name: 'Oil Potion',
     properties: {
-      [BasePropertyType.RequiredLevel]: 20,
+      base: {
+        [BasePropertyType.DamageThrow]: {x: 24, y: 64},
+        [BasePropertyType.Quantity]: 200,
+        [BasePropertyType.RequiredLevel]: 20,
+      },
     },
   },
   {
     id: ids.StranglingGasPotion,
     name: 'Strangling Gas Potion',
     properties: {
-      [BasePropertyType.RequiredLevel]: 6,
+      base: {
+        [BasePropertyType.DamageThrow]: {x: 24, y: 24},
+        [BasePropertyType.Quantity]: 200,
+        [BasePropertyType.RequiredLevel]: 6,
+      },
     },
   },
   {
     id: ids.ChokingGasPotion,
     name: 'Choking Gas Potion',
     properties: {
-      [BasePropertyType.RequiredLevel]: 16,
+      base: {
+        [BasePropertyType.DamageThrow]: {x: 72, y: 72},
+        [BasePropertyType.Quantity]: 200,
+        [BasePropertyType.RequiredLevel]: 16,
+      },
     },
   },
   {
     id: ids.RancidGasPotion,
     name: 'Rancid Gas Potion',
     properties: {
-      [BasePropertyType.RequiredLevel]: 24,
+      base: {
+        [BasePropertyType.DamageThrow]: {x: 96, y: 96},
+        [BasePropertyType.Quantity]: 200,
+        [BasePropertyType.RequiredLevel]: 24,
+      },
     },
   },
 ]);

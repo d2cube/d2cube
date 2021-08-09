@@ -12,7 +12,7 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [2, 3],
+        [BasePropertyType.BaseDefense]: [2, 3],
         [BasePropertyType.Durability]: 12,
       },
     },
@@ -23,7 +23,7 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [5, 6],
+        [BasePropertyType.BaseDefense]: [5, 6],
         [BasePropertyType.Durability]: 14,
       },
     },
@@ -34,9 +34,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [8, 9],
-        [BasePropertyType.RequiredStrength]: 25,
+        [BasePropertyType.BaseDefense]: [8, 9],
         [BasePropertyType.Durability]: 16,
+        [BasePropertyType.RequiredStrength]: 25,
       },
     },
   },
@@ -46,9 +46,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [9, 11],
-        [BasePropertyType.RequiredStrength]: 45,
+        [BasePropertyType.BaseDefense]: [9, 11],
         [BasePropertyType.Durability]: 18,
+        [BasePropertyType.RequiredStrength]: 45,
       },
     },
   },
@@ -58,9 +58,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [12, 15],
-        [BasePropertyType.RequiredStrength]: 60,
+        [BasePropertyType.BaseDefense]: [12, 15],
         [BasePropertyType.Durability]: 24,
+        [BasePropertyType.RequiredStrength]: 60,
       },
     },
   },
@@ -72,9 +72,9 @@ export default normalizeItems({
     imageId: ids.LeatherGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [28, 35],
-        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.BaseDefense]: [28, 35],
         [BasePropertyType.Durability]: 12,
+        [BasePropertyType.RequiredStrength]: 20,
         [BasePropertyType.RequiredLevel]: 24,
       },
     },
@@ -87,9 +87,9 @@ export default normalizeItems({
     imageId: ids.HeavyGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [33, 39],
-        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.BaseDefense]: [33, 39],
         [BasePropertyType.Durability]: 14,
+        [BasePropertyType.RequiredStrength]: 20,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -102,9 +102,9 @@ export default normalizeItems({
     imageId: ids.ChainGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [37, 44],
-        [BasePropertyType.RequiredStrength]: 58,
+        [BasePropertyType.BaseDefense]: [37, 44],
         [BasePropertyType.Durability]: 16,
+        [BasePropertyType.RequiredStrength]: 58,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -117,9 +117,9 @@ export default normalizeItems({
     imageId: ids.LightGauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [39, 47],
-        [BasePropertyType.RequiredStrength]: 88,
+        [BasePropertyType.BaseDefense]: [39, 47],
         [BasePropertyType.Durability]: 18,
+        [BasePropertyType.RequiredStrength]: 88,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -132,9 +132,9 @@ export default normalizeItems({
     imageId: ids.Gauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [43, 53],
-        [BasePropertyType.RequiredStrength]: 110,
+        [BasePropertyType.BaseDefense]: [43, 53],
         [BasePropertyType.Durability]: 24,
+        [BasePropertyType.RequiredStrength]: 110,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -147,9 +147,9 @@ export default normalizeItems({
     imageId: ids.LeatherGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [54, 62],
-        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.BaseDefense]: [54, 62],
         [BasePropertyType.Durability]: 12,
+        [BasePropertyType.RequiredStrength]: 50,
         [BasePropertyType.RequiredLevel]: 42,
       },
     },
@@ -162,9 +162,9 @@ export default normalizeItems({
     imageId: ids.HeavyGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [56, 65],
-        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.BaseDefense]: [56, 65],
         [BasePropertyType.Durability]: 14,
+        [BasePropertyType.RequiredStrength]: 50,
         [BasePropertyType.RequiredLevel]: 47,
       },
     },
@@ -177,9 +177,9 @@ export default normalizeItems({
     imageId: ids.ChainGloves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [59, 67],
-        [BasePropertyType.RequiredStrength]: 106,
+        [BasePropertyType.BaseDefense]: [59, 67],
         [BasePropertyType.Durability]: 16,
+        [BasePropertyType.RequiredStrength]: 106,
         [BasePropertyType.RequiredLevel]: 51,
       },
     },
@@ -192,9 +192,9 @@ export default normalizeItems({
     imageId: ids.LightGauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [59, 68],
-        [BasePropertyType.RequiredStrength]: 151,
+        [BasePropertyType.BaseDefense]: [59, 68],
         [BasePropertyType.Durability]: 18,
+        [BasePropertyType.RequiredStrength]: 151,
         [BasePropertyType.RequiredLevel]: 57,
       },
     },
@@ -207,9 +207,9 @@ export default normalizeItems({
     imageId: ids.Gauntlets,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [62, 71],
-        [BasePropertyType.RequiredStrength]: 185,
+        [BasePropertyType.BaseDefense]: [62, 71],
         [BasePropertyType.Durability]: 24,
+        [BasePropertyType.RequiredStrength]: 185,
         [BasePropertyType.RequiredLevel]: 64,
       },
     },

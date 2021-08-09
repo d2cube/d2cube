@@ -12,7 +12,7 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [2, 3],
+        [BasePropertyType.BaseDefense]: [2, 3],
         [BasePropertyType.Durability]: 12,
       },
     },
@@ -23,9 +23,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [5, 6],
-        [BasePropertyType.RequiredStrength]: 18,
+        [BasePropertyType.BaseDefense]: [5, 6],
         [BasePropertyType.Durability]: 14,
+        [BasePropertyType.RequiredStrength]: 18,
       },
     },
   },
@@ -35,9 +35,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [8, 9],
-        [BasePropertyType.RequiredStrength]: 30,
+        [BasePropertyType.BaseDefense]: [8, 9],
         [BasePropertyType.Durability]: 16,
+        [BasePropertyType.RequiredStrength]: 30,
       },
     },
   },
@@ -47,9 +47,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [9, 11],
-        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.BaseDefense]: [9, 11],
         [BasePropertyType.Durability]: 18,
+        [BasePropertyType.RequiredStrength]: 50,
       },
     },
   },
@@ -59,9 +59,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [12, 15],
-        [BasePropertyType.RequiredStrength]: 70,
+        [BasePropertyType.BaseDefense]: [12, 15],
         [BasePropertyType.Durability]: 24,
+        [BasePropertyType.RequiredStrength]: 70,
       },
     },
   },
@@ -73,9 +73,9 @@ export default normalizeItems({
     imageId: ids.Boots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [28, 35],
-        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.BaseDefense]: [28, 35],
         [BasePropertyType.Durability]: 12,
+        [BasePropertyType.RequiredStrength]: 20,
         [BasePropertyType.RequiredLevel]: 24,
       },
     },
@@ -88,9 +88,9 @@ export default normalizeItems({
     imageId: ids.HeavyBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [33, 39],
-        [BasePropertyType.RequiredStrength]: 47,
+        [BasePropertyType.BaseDefense]: [33, 39],
         [BasePropertyType.Durability]: 14,
+        [BasePropertyType.RequiredStrength]: 47,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -103,9 +103,9 @@ export default normalizeItems({
     imageId: ids.ChainBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [37, 44],
-        [BasePropertyType.RequiredStrength]: 65,
+        [BasePropertyType.BaseDefense]: [37, 44],
         [BasePropertyType.Durability]: 16,
+        [BasePropertyType.RequiredStrength]: 65,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -118,9 +118,9 @@ export default normalizeItems({
     imageId: ids.LightPlatedBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [39, 47],
-        [BasePropertyType.RequiredStrength]: 95,
+        [BasePropertyType.BaseDefense]: [39, 47],
         [BasePropertyType.Durability]: 18,
+        [BasePropertyType.RequiredStrength]: 95,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -133,9 +133,9 @@ export default normalizeItems({
     imageId: ids.Greaves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [43, 53],
-        [BasePropertyType.RequiredStrength]: 125,
+        [BasePropertyType.BaseDefense]: [43, 53],
         [BasePropertyType.Durability]: 24,
+        [BasePropertyType.RequiredStrength]: 125,
         [BasePropertyType.RequiredLevel]: 25,
       },
     },
@@ -148,9 +148,9 @@ export default normalizeItems({
     imageId: ids.Boots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [54, 62],
-        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.BaseDefense]: [54, 62],
         [BasePropertyType.Durability]: 12,
+        [BasePropertyType.RequiredStrength]: 50,
         [BasePropertyType.RequiredLevel]: 45,
       },
     },
@@ -163,9 +163,9 @@ export default normalizeItems({
     imageId: ids.HeavyBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [56, 65],
-        [BasePropertyType.RequiredStrength]: 91,
+        [BasePropertyType.BaseDefense]: [56, 65],
         [BasePropertyType.Durability]: 14,
+        [BasePropertyType.RequiredStrength]: 91,
         [BasePropertyType.RequiredLevel]: 49,
       },
     },
@@ -178,9 +178,9 @@ export default normalizeItems({
     imageId: ids.ChainBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [59, 67],
-        [BasePropertyType.RequiredStrength]: 118,
+        [BasePropertyType.BaseDefense]: [59, 67],
         [BasePropertyType.Durability]: 16,
+        [BasePropertyType.RequiredStrength]: 118,
         [BasePropertyType.RequiredLevel]: 54,
       },
     },
@@ -193,9 +193,9 @@ export default normalizeItems({
     imageId: ids.LightPlatedBoots,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [59, 68],
-        [BasePropertyType.RequiredStrength]: 163,
+        [BasePropertyType.BaseDefense]: [59, 68],
         [BasePropertyType.Durability]: 18,
+        [BasePropertyType.RequiredStrength]: 163,
         [BasePropertyType.RequiredLevel]: 60,
       },
     },
@@ -208,9 +208,9 @@ export default normalizeItems({
     imageId: ids.Greaves,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [62, 71],
-        [BasePropertyType.RequiredStrength]: 208,
+        [BasePropertyType.BaseDefense]: [62, 71],
         [BasePropertyType.Durability]: 24,
+        [BasePropertyType.RequiredStrength]: 208,
         [BasePropertyType.RequiredLevel]: 65,
       },
     },

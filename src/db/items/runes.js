@@ -24,11 +24,11 @@ export default normalizeItems({
           [MagicPropertyType.LightRadius]: 1,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AddDefense]: 15,
+          [MagicPropertyType.Defense]: 15,
           [MagicPropertyType.LightRadius]: 1,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AddDefense]: 15,
+          [MagicPropertyType.Defense]: 15,
           [MagicPropertyType.LightRadius]: 1,
         },
       },
@@ -301,13 +301,13 @@ export default normalizeItems({
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Requirements]: 20,
+          [MagicPropertyType.Requirements]: -20,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Requirements]: 15,
+          [MagicPropertyType.Requirements]: -15,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Requirements]: 15,
+          [MagicPropertyType.Requirements]: -15,
         },
       },
     },
@@ -321,13 +321,13 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.AddVitality]: 10,
+          [MagicPropertyType.Vitality]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AddVitality]: 10,
+          [MagicPropertyType.Vitality]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AddVitality]: 10,
+          [MagicPropertyType.Vitality]: 10,
         },
       },
     },
@@ -341,13 +341,13 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.AddEnergy]: 10,
+          [MagicPropertyType.Energy]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AddEnergy]: 10,
+          [MagicPropertyType.Energy]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AddEnergy]: 10,
+          [MagicPropertyType.Energy]: 10,
         },
       },
     },
@@ -361,13 +361,13 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.AddDexterity]: 10,
+          [MagicPropertyType.Dexterity]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AddDexterity]: 10,
+          [MagicPropertyType.Dexterity]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AddDexterity]: 10,
+          [MagicPropertyType.Dexterity]: 10,
         },
       },
     },
@@ -381,13 +381,13 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.AddStrength]: 10,
+          [MagicPropertyType.Strength]: 10,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.AddStrength]: 10,
+          [MagicPropertyType.Strength]: 10,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AddStrength]: 10,
+          [MagicPropertyType.Strength]: 10,
         },
       },
     },
@@ -588,7 +588,7 @@ export default normalizeItems({
           [MagicPropertyType.IncreaseMaximumMana]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AddMana]: 50,
+          [MagicPropertyType.Mana]: 50,
         },
       },
     },
@@ -628,7 +628,7 @@ export default normalizeItems({
           [MagicPropertyType.IncreaseMaximumLife]: 5,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.AddLife]: 50,
+          [MagicPropertyType.Life]: 50,
         },
       },
     },

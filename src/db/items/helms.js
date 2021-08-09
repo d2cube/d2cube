@@ -12,7 +12,7 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [3, 5],
+        [BasePropertyType.BaseDefense]: [3, 5],
         [BasePropertyType.Durability]: 12,
         [BasePropertyType.MaxSockets]: 2,
       },
@@ -24,9 +24,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [8, 11],
-        [BasePropertyType.RequiredStrength]: 15,
+        [BasePropertyType.BaseDefense]: [8, 11],
         [BasePropertyType.Durability]: 18,
+        [BasePropertyType.RequiredStrength]: 15,
         [BasePropertyType.MaxSockets]: 2,
       },
     },
@@ -37,9 +37,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [15, 18],
-        [BasePropertyType.RequiredStrength]: 26,
+        [BasePropertyType.BaseDefense]: [15, 18],
         [BasePropertyType.Durability]: 24,
+        [BasePropertyType.RequiredStrength]: 26,
         [BasePropertyType.MaxSockets]: 2,
       },
     },
@@ -50,9 +50,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [23, 26],
-        [BasePropertyType.RequiredStrength]: 41,
+        [BasePropertyType.BaseDefense]: [23, 26],
         [BasePropertyType.Durability]: 30,
+        [BasePropertyType.RequiredStrength]: 41,
         [BasePropertyType.MaxSockets]: 2,
       },
     },
@@ -63,9 +63,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [9, 27],
-        [BasePropertyType.RequiredStrength]: 23,
+        [BasePropertyType.BaseDefense]: [9, 27],
         [BasePropertyType.Durability]: 20,
+        [BasePropertyType.RequiredStrength]: 23,
         [BasePropertyType.MaxSockets]: 3,
       },
     },
@@ -76,9 +76,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [33, 36],
-        [BasePropertyType.RequiredStrength]: 25,
+        [BasePropertyType.BaseDefense]: [33, 36],
         [BasePropertyType.Durability]: 40,
+        [BasePropertyType.RequiredStrength]: 25,
         [BasePropertyType.MaxSockets]: 2,
       },
     },
@@ -89,9 +89,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [30, 35],
-        [BasePropertyType.RequiredStrength]: 63,
+        [BasePropertyType.BaseDefense]: [30, 35],
         [BasePropertyType.Durability]: 40,
+        [BasePropertyType.RequiredStrength]: 63,
         [BasePropertyType.MaxSockets]: 3,
       },
     },
@@ -102,9 +102,9 @@ export default normalizeItems({
     tier: ItemTierType.Normal,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [25, 45],
-        [BasePropertyType.RequiredStrength]: 55,
+        [BasePropertyType.BaseDefense]: [25, 45],
         [BasePropertyType.Durability]: 50,
+        [BasePropertyType.RequiredStrength]: 55,
         [BasePropertyType.MaxSockets]: 3,
       },
     },
@@ -117,11 +117,11 @@ export default normalizeItems({
     imageId: ids.Cap,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [45, 54],
-        [BasePropertyType.RequiredStrength]: 20,
+        [BasePropertyType.BaseDefense]: [45, 54],
         [BasePropertyType.Durability]: 12,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 20,
         [BasePropertyType.RequiredLevel]: 22,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -133,11 +133,11 @@ export default normalizeItems({
     imageId: ids.SkullCap,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [52, 62],
-        [BasePropertyType.RequiredStrength]: 43,
+        [BasePropertyType.BaseDefense]: [52, 62],
         [BasePropertyType.Durability]: 18,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 43,
         [BasePropertyType.RequiredLevel]: 25,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -149,11 +149,11 @@ export default normalizeItems({
     imageId: ids.Helm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [63, 72],
-        [BasePropertyType.RequiredStrength]: 59,
+        [BasePropertyType.BaseDefense]: [63, 72],
         [BasePropertyType.Durability]: 24,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 59,
         [BasePropertyType.RequiredLevel]: 25,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -165,11 +165,11 @@ export default normalizeItems({
     imageId: ids.FullHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [75, 84],
-        [BasePropertyType.RequiredStrength]: 82,
+        [BasePropertyType.BaseDefense]: [75, 84],
         [BasePropertyType.Durability]: 30,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 82,
         [BasePropertyType.RequiredLevel]: 25,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -181,11 +181,11 @@ export default normalizeItems({
     imageId: ids.Mask,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [54, 86],
-        [BasePropertyType.RequiredStrength]: 55,
+        [BasePropertyType.BaseDefense]: [54, 86],
         [BasePropertyType.Durability]: 20,
-        [BasePropertyType.MaxSockets]: 3,
+        [BasePropertyType.RequiredStrength]: 55,
         [BasePropertyType.RequiredLevel]: 25,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -197,11 +197,11 @@ export default normalizeItems({
     imageId: ids.BoneHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [60, 125],
-        [BasePropertyType.RequiredStrength]: 58,
+        [BasePropertyType.BaseDefense]: [60, 125],
         [BasePropertyType.Durability]: 40,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 58,
         [BasePropertyType.RequiredLevel]: 25,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -213,11 +213,11 @@ export default normalizeItems({
     imageId: ids.GreatHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [85, 98],
-        [BasePropertyType.RequiredStrength]: 115,
+        [BasePropertyType.BaseDefense]: [85, 98],
         [BasePropertyType.Durability]: 40,
-        [BasePropertyType.MaxSockets]: 3,
+        [BasePropertyType.RequiredStrength]: 115,
         [BasePropertyType.RequiredLevel]: 25,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -229,11 +229,11 @@ export default normalizeItems({
     imageId: ids.Crown,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [78, 113],
-        [BasePropertyType.RequiredStrength]: 103,
+        [BasePropertyType.BaseDefense]: [78, 113],
         [BasePropertyType.Durability]: 50,
-        [BasePropertyType.MaxSockets]: 3,
+        [BasePropertyType.RequiredStrength]: 103,
         [BasePropertyType.RequiredLevel]: 25,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -245,11 +245,11 @@ export default normalizeItems({
     imageId: ids.Cap,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [98, 141],
-        [BasePropertyType.RequiredStrength]: 50,
+        [BasePropertyType.BaseDefense]: [98, 141],
         [BasePropertyType.Durability]: 12,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 50,
         [BasePropertyType.RequiredLevel]: 43,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -261,11 +261,11 @@ export default normalizeItems({
     imageId: ids.SkullCap,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [101, 145],
-        [BasePropertyType.RequiredStrength]: 84,
+        [BasePropertyType.BaseDefense]: [101, 145],
         [BasePropertyType.Durability]: 18,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 84,
         [BasePropertyType.RequiredLevel]: 47,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -277,11 +277,11 @@ export default normalizeItems({
     imageId: ids.Helm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [105, 149],
-        [BasePropertyType.RequiredStrength]: 109,
+        [BasePropertyType.BaseDefense]: [105, 149],
         [BasePropertyType.Durability]: 24,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 109,
         [BasePropertyType.RequiredLevel]: 51,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -293,11 +293,11 @@ export default normalizeItems({
     imageId: ids.FullHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [110, 154],
-        [BasePropertyType.RequiredStrength]: 142,
+        [BasePropertyType.BaseDefense]: [110, 154],
         [BasePropertyType.Durability]: 30,
-        [BasePropertyType.MaxSockets]: 2,
+        [BasePropertyType.RequiredStrength]: 142,
         [BasePropertyType.RequiredLevel]: 40,
+        [BasePropertyType.MaxSockets]: 2,
       },
     },
   },
@@ -309,11 +309,11 @@ export default normalizeItems({
     imageId: ids.Mask,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [101, 154],
-        [BasePropertyType.RequiredStrength]: 102,
+        [BasePropertyType.BaseDefense]: [101, 154],
         [BasePropertyType.Durability]: 20,
-        [BasePropertyType.MaxSockets]: 3,
+        [BasePropertyType.RequiredStrength]: 102,
         [BasePropertyType.RequiredLevel]: 55,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -325,11 +325,11 @@ export default normalizeItems({
     imageId: ids.BoneHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [100, 157],
-        [BasePropertyType.RequiredStrength]: 106,
+        [BasePropertyType.BaseDefense]: [100, 157],
         [BasePropertyType.Durability]: 40,
-        [BasePropertyType.MaxSockets]: 3,
+        [BasePropertyType.RequiredStrength]: 106,
         [BasePropertyType.RequiredLevel]: 63,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -341,11 +341,11 @@ export default normalizeItems({
     imageId: ids.GreatHelm,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [114, 159],
-        [BasePropertyType.RequiredStrength]: 192,
+        [BasePropertyType.BaseDefense]: [114, 159],
         [BasePropertyType.Durability]: 40,
-        [BasePropertyType.MaxSockets]: 3,
+        [BasePropertyType.RequiredStrength]: 192,
         [BasePropertyType.RequiredLevel]: 59,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },
@@ -357,11 +357,11 @@ export default normalizeItems({
     imageId: ids.Crown,
     properties: {
       base: {
-        [BasePropertyType.Defense]: [111, 165],
-        [BasePropertyType.RequiredStrength]: 174,
+        [BasePropertyType.BaseDefense]: [111, 165],
         [BasePropertyType.Durability]: 50,
-        [BasePropertyType.MaxSockets]: 3,
+        [BasePropertyType.RequiredStrength]: 174,
         [BasePropertyType.RequiredLevel]: 66,
+        [BasePropertyType.MaxSockets]: 3,
       },
     },
   },

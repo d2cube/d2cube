@@ -1,20 +1,18 @@
 import {props} from 'uinix-fp';
 
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
-import {add, multiply, percent, sortEntriesBy} from '../fp.js';
+import {add, isEmpty, multiply, percent} from '../fp.js';
 import {resolveItemProperty} from './resolve-item-property.js';
 
 export const resolveItemBaseProperties = (item) => {
   const baseProperties = props('properties.base')(item) || {};
-  const entries = sortEntriesBy(basePropertiesOrder)(
-    Object.entries(baseProperties),
-  );
 
   const results = [];
-  entries.forEach((entry) => {
+  Object.entries(baseProperties).forEach((entry) => {
     const [property] = entry;
     const {isEnhanced, values} = enhanceWithStats(item.stats)(entry);
-    const resolved = values && resolveItemProperty(item)({property, values});
+    const resolved =
+      !isEmpty(values) && resolveItemProperty(item)({property, values});
     if (resolved) {
       const [label, valueText] = resolved;
       results.push([
@@ -34,23 +32,38 @@ const enhanceWithStats = (stats) => (entry) => {
     case BasePropertyType.Damage1H:
     case BasePropertyType.Damage2H:
     case BasePropertyType.DamageThrow: {
-      return enhance(MagicPropertyType.EnhancedDamage)({values, stats});
-    }
-
-    case BasePropertyType.Defense: {
-      const enhanced = enhance(MagicPropertyType.EnhancedDefense)({
+      const enhanced = enhance(MagicPropertyType.EnhancedDamage)({
         values,
         stats,
       });
-      return enhance(MagicPropertyType.AddDefense)({
+      return enhance(MagicPropertyType.Damage)({
         values: enhanced.values,
         stats,
         wasEnhanced: enhanced.isEnhanced,
       });
     }
 
-    case BasePropertyType.Durability:
+    case BasePropertyType.BaseDefense: {
+      const enhanced = enhance(MagicPropertyType.EnhancedDefense)({
+        values,
+        stats,
+      });
+      return enhance(MagicPropertyType.Defense)({
+        values: enhanced.values,
+        stats,
+        wasEnhanced: enhanced.isEnhanced,
+      });
+    }
+
+    case BasePropertyType.Durability: {
       return enhance(MagicPropertyType.Indestructible)({values, stats});
+    }
+
+    case BasePropertyType.RequiredDexterity:
+    case BasePropertyType.RequiredStrength: {
+      return enhance(MagicPropertyType.Requirements)({values, stats});
+    }
+
     default:
       break;
   }
@@ -71,56 +84,52 @@ const enhance =
     };
   };
 
-const basePropertiesOrder = [
-  BasePropertyType.DamageThrow,
-  BasePropertyType.Damage1H,
-  BasePropertyType.Damage2H,
-  BasePropertyType.Defense,
-  BasePropertyType.BlockChance,
-  BasePropertyType.Durability,
-  BasePropertyType.RequiredDexterity,
-  BasePropertyType.RequiredStrength,
-  BasePropertyType.RequiredLevel,
-  BasePropertyType.AttackSpeed,
-];
-
 const multiplyMap = (x) => (xs) => xs.map(multiply(x));
 
-const addDefense = (values, x) =>
-  Array.isArray(values) ? values.map(add(x)) : add(x)(values);
+const addDefense = (values, enhanced) =>
+  Array.isArray(values) ? values.map(add(enhanced)) : add(enhanced)(values);
 
-const indestructible = (values, x) => (x ? null : values);
+const indestructible = (values, enhanced) => (enhanced ? null : values);
 
-const enhanceDamage = ({min, max}, x) => {
-  if (Array.isArray(x)) {
-    const ps = x.map(percent);
+const addDamage = ({x, y}, enhanced) => ({
+  x: x + enhanced.x,
+  y: y + enhanced.y,
+});
+
+const requirements = (values, enhanced) => multiply(values)(percent(enhanced));
+
+const enhanceDamage = ({x, y}, enhanced) => {
+  if (Array.isArray(enhanced)) {
+    const ps = enhanced.map(percent);
     return {
-      min: multiplyMap(min)(ps),
-      max: multiplyMap(max)(ps),
+      x: multiplyMap(x)(ps),
+      y: multiplyMap(y)(ps),
     };
   }
 
-  const p = percent(x);
+  const p = percent(enhanced);
   return {
-    min: multiply(p)(min),
-    max: multiply(p)(max),
+    x: multiply(p)(x),
+    y: multiply(p)(y),
   };
 };
 
-const enhanceDefense = (values, x) => {
+const enhanceDefense = (values, enhanced) => {
   const max = values[1];
 
-  if (Array.isArray(x)) {
-    return x.map((xx) => enhanceDefense(values, xx));
+  if (Array.isArray(enhanced)) {
+    return enhanced.map((ee) => enhanceDefense(values, ee));
   }
 
-  const p = percent(x);
+  const p = percent(enhanced);
   return Math.floor((max + 1) * p);
 };
 
 const enhancers = {
-  [MagicPropertyType.AddDefense]: addDefense,
+  [MagicPropertyType.Defense]: addDefense,
+  [MagicPropertyType.Damage]: addDamage,
   [MagicPropertyType.EnhancedDamage]: enhanceDamage,
   [MagicPropertyType.EnhancedDefense]: enhanceDefense,
   [MagicPropertyType.Indestructible]: indestructible,
+  [MagicPropertyType.Requirements]: requirements,
 };
