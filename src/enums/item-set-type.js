@@ -21,6 +21,7 @@ export const ItemSetType = {
   ImmortalKing: 'ImmortalKing',
   InfernalTools: 'InfernalTools',
   IrathasFinery: 'IrathasFinery',
+  IsenhartsAmory: 'IsenhartsAmory',
   MAvinasBattleHymn: 'MAvinasBattleHymn',
   NatalyasOdium: 'NatalyasOdium',
   TalRashasWrappings: 'TalRashasWrappings',
