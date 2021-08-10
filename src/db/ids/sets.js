@@ -61,6 +61,12 @@ export default {
   TalRashasHoradricCrest: 'TalRashasHoradricCrest',
   TalRashasFineSpunCloth: 'TalRashasFineSpunCloth',
   TalRashasAdjudication: 'TalRashasAdjudication',
+  // TheDisciple
+  DarkAdherent: 'DarkAdherent',
+  LayingOfHands: 'LayingOfHands',
+  Credendum: 'Credendum',
+  RiteOfPassage: 'RiteOfPassage',
+  TellingOfBeads: 'TellingOfBeads',
   TrangOulsScales: 'TrangOulsScales',
   TrangOulsWing: 'TrangOulsWing',
   TrangOulsGuise: 'TrangOulsGuise',

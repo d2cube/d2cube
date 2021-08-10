@@ -101,8 +101,12 @@ const resolvers = {
     `${y}% Chance to cast level ${x} Enchant when struck`,
   [MagicPropertyType.ChanceToCastGlacialSpikeWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Glacial Spike when struck`,
+  [MagicPropertyType.ChanceToCastHolyBoltOnStriking]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Holy Bolt on striking`,
   [MagicPropertyType.ChanceToCastNovaOnStriking]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Nova on striking`,
+  [MagicPropertyType.ChanceToCastNovaWhenStruck]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Nova when struck`,
   [MagicPropertyType.ChanceToCastStaticFieldWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Static Field when struck`,
   [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
