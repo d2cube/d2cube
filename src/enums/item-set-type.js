@@ -4,6 +4,7 @@
  */
 export const ItemSetType = {
   AldursWatchtower: 'AldursWatchtower',
+  AngelicRaiment: 'AngelicRaiment',
   BulKathosChildren: 'BulKathosChildren',
   GrisworldsLegacy: 'GrisworldsLegacy',
   ImmortalKing: 'ImmortalKing',

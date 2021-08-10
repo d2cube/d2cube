@@ -244,6 +244,9 @@ Object.entries(resolvers).forEach(([property, resolverr]) => {
 });
 
 // Derive resolvers for *ByLevel properties
+resolvers[MagicPropertyType.AttackRatingByLevel] = lvl(
+  resolvers[MagicPropertyType.AttackRating],
+);
 resolvers[MagicPropertyType.ColdAbsorbByLevel] = lvl(
   resolvers[MagicPropertyType.ColdAbsorb],
 );
