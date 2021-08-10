@@ -19,6 +19,7 @@ export const ItemSetType = {
   HsarusDefense: 'HsarusDefense',
   HwaninsMajesty: 'HwaninsMajesty',
   ImmortalKing: 'ImmortalKing',
+  InfernalTools: 'InfernalTools',
   MAvinasBattleHymn: 'MAvinasBattleHymn',
   NatalyasOdium: 'NatalyasOdium',
   TalRashasWrappings: 'TalRashasWrappings',

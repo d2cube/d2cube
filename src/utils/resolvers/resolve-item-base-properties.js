@@ -48,6 +48,11 @@ const enhanceWithStats = (stats) => (entry) => {
         values,
         stats,
       });
+      enhanced = enhance(MagicPropertyType.MinimumDamage)({
+        values: enhanced.values,
+        stats,
+        wasEnhanced: enhanced.isEnhanced,
+      });
       enhanced = enhance(MagicPropertyType.MaximumDamage)({
         values: enhanced.values,
         stats,
@@ -171,7 +176,24 @@ const addMaxDamage = ({x, y}, enhanced) => {
 
   return {
     x,
-    y: y + enhanced.y,
+    y: y + enhanced,
+  };
+};
+
+const addMinDamage = ({x, y}, enhanced) => {
+  if (Array.isArray(enhanced)) {
+    const newX = enhanced.map(add(x));
+    return {
+      x: newX,
+      y: newX.map((xx) => Math.max(y, xx + 1)),
+    };
+  }
+
+  const newX = x + enhanced;
+
+  return {
+    x: newX,
+    y: Math.max(y, newX + 1),
   };
 };
 
@@ -212,6 +234,7 @@ const enhancers = {
   [MagicPropertyType.IncreasedAttackSpeed]: ias,
   [MagicPropertyType.IncreasedChanceOfBlocking]: icb,
   [MagicPropertyType.Indestructible]: indestructible,
+  [MagicPropertyType.MinimumDamage]: addMinDamage,
   [MagicPropertyType.MaximumDamage]: addMaxDamage,
   [MagicPropertyType.Requirements]: requirements,
 };

@@ -14,6 +14,7 @@ import heavensBrethren from './heavens-brethren.js';
 import hsarusDefense from './hsarus-defense.js';
 import hwaninsMajesty from './hwanins-majesty.js';
 import immortalKing from './immortal-king.js';
+import infernalTools from './infernal-tools.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
 import natalyasOdium from './natalyas-odium.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
@@ -37,6 +38,7 @@ export default {
   ...hsarusDefense,
   ...hwaninsMajesty,
   ...immortalKing,
+  ...infernalTools,
   ...mAvinasBattleHymn,
   ...natalyasOdium,
   ...talRashasWrappings,

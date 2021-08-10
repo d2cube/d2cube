@@ -16,6 +16,7 @@ import heavensBrethren from './heavens-brethren.js';
 import hsarusDefense from './hsarus-defense.js';
 import hwaninsMajesty from './hwanins-majesty.js';
 import immortalKing from './immortal-king.js';
+import infernalTools from './infernal-tools.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
 import natalyasOdium from './natalyas-odium.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
@@ -39,6 +40,7 @@ export default {
   [ItemSetType.HsarusDefense]: hsarusDefense,
   [ItemSetType.HwaninsMajesty]: hwaninsMajesty,
   [ItemSetType.ImmortalKing]: immortalKing,
+  [ItemSetType.InfernalTools]: infernalTools,
   [ItemSetType.MAvinasBattleHymn]: mAvinasBattleHymn,
   [ItemSetType.NatalyasOdium]: natalyasOdium,
   [ItemSetType.TalRashasWrappings]: talRashasWrappings,
