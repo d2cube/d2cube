@@ -138,6 +138,7 @@ export const MagicPropertyType = {
   ChanceToCastFrostNovaOnStriking: 'ChanceToCastFrostNovaOnStriking',
   ChanceToCastGlacialSpikeWhenStruck: 'ChanceToCastGlacialSpikeWhenStruck',
   ChanceToCastHolyBoltOnStriking: 'ChanceToCastHolyBoltOnStriking',
+  ChanceToCastIceBlastOnStriking: 'ChanceToCastIceBlastOnStriking',
   ChanceToCastNovaOnStriking: 'ChanceToCastNovaOnStriking',
   ChanceToCastNovaWhenStruck: 'ChanceToCastNovaWhenStruck',
   ChanceToCastStaticFieldWhenStruck: 'ChanceToCastStaticFieldWhenStruck',

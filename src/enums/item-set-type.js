@@ -17,6 +17,7 @@ export const ItemSetType = {
   GrisworldsLegacy: 'GrisworldsLegacy',
   HeavensBrethren: 'HeavensBrethren',
   HsarusDefense: 'HsarusDefense',
+  HwaninsMajesty: 'HwaninsMajesty',
   ImmortalKing: 'ImmortalKing',
   MAvinasBattleHymn: 'MAvinasBattleHymn',
   NatalyasOdium: 'NatalyasOdium',
