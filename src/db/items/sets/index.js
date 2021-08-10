@@ -1,6 +1,7 @@
 import aldursWatchtower from './aldurs-watchtower.js';
 import angelicRaiment from './angelic-raiment.js';
 import arcannasTricks from './arcannas-tricks.js';
+import arcticGear from './arctic-gear.js';
 import bulKathosChildren from './bul-kathos-children.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import immortalKing from './immortal-king.js';
@@ -13,6 +14,7 @@ export default {
   ...aldursWatchtower,
   ...angelicRaiment,
   ...arcannasTricks,
+  ...arcticGear,
   ...bulKathosChildren,
   ...grisworldsLegacy,
   ...immortalKing,
