@@ -126,6 +126,7 @@ export default normalizeItems({
     id: ids.TalRashasAdjudication,
     name: "Tal Rasha's Adjudication",
     baseId: ids.Amulet,
+    imageId: ids.Amulet,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 65,

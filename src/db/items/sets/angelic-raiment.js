@@ -65,6 +65,7 @@ export default normalizeItems({
     id: ids.AngelicHalo,
     name: 'Angelic Halo',
     baseId: ids.Ring,
+    imageId: ids.Ring,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -89,6 +90,7 @@ export default normalizeItems({
     id: ids.AngelicWings,
     name: 'Angelic Wings',
     baseId: ids.Amulet,
+    imageId: ids.Amulet,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,

@@ -73,6 +73,7 @@ export default normalizeItems({
     name: 'Stone of Jordan',
     size: [1, 1],
     baseId: ids.Ring,
+    imageId: ids.Ring,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 29,
