@@ -47,6 +47,7 @@ const grid = ({size, theme}) => {
 
 const item = ({theme, isEthereal, isInactive, position = [], size = []}) => ({
   // Dimensions
+  flex: 'none',
   padding: 'xxs',
   ':hover': {
     backgroundColor: 'item.hover',
