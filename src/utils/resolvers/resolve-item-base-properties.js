@@ -1,6 +1,7 @@
 import {props} from 'uinix-fp';
 
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
+import {formatValues} from '../format-values.js';
 import {add, isEmpty, multiply, percent} from '../fp.js';
 import {resolveItemProperty} from './resolve-item-property.js';
 
@@ -115,9 +116,11 @@ const enhance =
     };
   };
 
-const enhanceByLevel = (byLevel) => (enhanced) => ({
+const enhanceByLevel = (valuePerLevel) => (enhanced) => ({
   ...enhanced,
-  byLevel: isEmpty(byLevel) ? undefined : ` (+[${byLevel}-${byLevel * 99}])`,
+  byLevel: isEmpty(valuePerLevel)
+    ? undefined
+    : ` (+${formatValues([valuePerLevel, valuePerLevel * 99])})`,
 });
 
 const multiplyMap = (x) => (xs) => xs.map(multiply(x));

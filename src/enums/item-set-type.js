@@ -11,6 +11,7 @@ export const ItemSetType = {
   BulKathosChildren: 'BulKathosChildren',
   CathansTraps: 'CathansTraps',
   CiverbsVestments: 'CiverbsVestments',
+  CleglawsBrace: 'CleglawsBrace',
   GrisworldsLegacy: 'GrisworldsLegacy',
   ImmortalKing: 'ImmortalKing',
   MAvinasBattleHymn: 'MAvinasBattleHymn',

@@ -1,4 +1,5 @@
 import civerbsVetaments from './civerbs-vestaments.js';
+import cleglawsBrace from './cleglaws-brace.js';
 import aldursWatchtower from './aldurs-watchtower.js';
 import angelicRaiment from './angelic-raiment.js';
 import arcannasTricks from './arcannas-tricks.js';
@@ -22,6 +23,7 @@ export default {
   ...bulKathosChildren,
   ...cathansTraps,
   ...civerbsVetaments,
+  ...cleglawsBrace,
   ...grisworldsLegacy,
   ...immortalKing,
   ...mAvinasBattleHymn,

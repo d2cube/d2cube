@@ -8,6 +8,7 @@ import berserkersArsenal from './berserkers-arsenal.js';
 import bulKathosChildren from './bul-kathos-children.js';
 import cathansTraps from './cathans-traps.js';
 import civerbsVetaments from './civerbs-vestaments.js';
+import cleglawsBrace from './cleglaws-brace.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
@@ -24,6 +25,7 @@ export default {
   [ItemSetType.BulKathosChildren]: bulKathosChildren,
   [ItemSetType.CathansTraps]: cathansTraps,
   [ItemSetType.CiverbsVestments]: civerbsVetaments,
+  [ItemSetType.CleglawsBrace]: cleglawsBrace,
   [ItemSetType.GrisworldsLegacy]: grisworldsLegacy,
   [ItemSetType.ImmortalKing]: immortalKing,
   [ItemSetType.MAvinasBattleHymn]: mAvinasBattleHymn,

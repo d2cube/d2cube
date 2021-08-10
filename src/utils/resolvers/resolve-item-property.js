@@ -1,7 +1,7 @@
-import {isPlainObject, k} from 'uinix-fp';
+import {k} from 'uinix-fp';
 
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
-import {floor} from '../fp.js';
+import {formatValues} from '../format-values.js';
 
 export const resolveItemProperty =
   (item) =>
@@ -13,23 +13,6 @@ export const resolveItemProperty =
 
 const format = (resolver) => (values, item) =>
   resolver(formatValues(values), item);
-
-const formatValues = (values) => {
-  let formattedValues = values;
-  if (Array.isArray(values)) {
-    const [first, second] = values.map(floor);
-    formattedValues = first === second ? first : `[${first}-${second}]`;
-  } else if (isPlainObject(values)) {
-    formattedValues = Object.entries(values).reduce((acc, [key, value]) => {
-      acc[key] = formatValues(value);
-      return acc;
-    }, {});
-  } else {
-    formattedValues = Number.isFinite(values) ? floor(values) : values;
-  }
-
-  return formattedValues;
-};
 
 const lvl =
   (resolver, unit = '') =>
@@ -228,6 +211,7 @@ const resolvers = {
   [MagicPropertyType.SkillFireBall]: (x) => `+${x} to Fire Ball`,
   [MagicPropertyType.SkillFireWall]: (x) => `+${x} to Fire Wall`,
   [MagicPropertyType.SkillMeteor]: (x) => `+${x} to Meteor`,
+  [MagicPropertyType.SlowsTarget]: (x) => `Slows Target by ${x}%`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
   [MagicPropertyType.SorceressColdMastery]: (x) =>
     `+${x} to Cold Mastery (Sorceress Only)`,
