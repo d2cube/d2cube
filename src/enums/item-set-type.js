@@ -15,6 +15,7 @@ export const ItemSetType = {
   CowKingsLeathers: 'CowKingsLeathers',
   DeathsDisguise: 'DeathsDisguise',
   GrisworldsLegacy: 'GrisworldsLegacy',
+  HeavensBrethren: 'HeavensBrethren',
   ImmortalKing: 'ImmortalKing',
   MAvinasBattleHymn: 'MAvinasBattleHymn',
   NatalyasOdium: 'NatalyasOdium',

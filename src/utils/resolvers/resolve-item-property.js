@@ -99,6 +99,8 @@ const resolvers = {
     `${y}% Chance to cast level ${x} Charged Bolt when struck`,
   [MagicPropertyType.ChanceToCastEnchantWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Enchant when struck`,
+  [MagicPropertyType.ChanceToCastFrostNovaOnStriking]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Frost Nova on striking`,
   [MagicPropertyType.ChanceToCastGlacialSpikeWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Glacial Spike when struck`,
   [MagicPropertyType.ChanceToCastHolyBoltOnStriking]: ({x, y}) =>
@@ -109,6 +111,8 @@ const resolvers = {
     `${y}% Chance to cast level ${x} Nova when struck`,
   [MagicPropertyType.ChanceToCastStaticFieldWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Static Field when struck`,
+  [MagicPropertyType.ChanceToCastWeakenOnStriking]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Weaken on striking`,
   [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
   [MagicPropertyType.ColdDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Cold Damage`,
@@ -129,6 +133,7 @@ const resolvers = {
   [MagicPropertyType.DruidShapeShiftingSkills]: (x) =>
     `+${x} to Shape Shifting Skills (Druid Only)`,
   [MagicPropertyType.Defense]: (x) => `+${x} Defense`,
+  [MagicPropertyType.DefenseVsMelee]: (x) => `+${x} Defense Vs. Melee`,
   [MagicPropertyType.DefenseVsMissle]: (x) => `+${x} Defense Vs. Missle`,
   [MagicPropertyType.Dexterity]: (x) => `+${x} to Dexterity`,
   [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,

@@ -41,6 +41,11 @@ export default {
   GrisworldsHeart: 'GrisworldsHeart',
   GrisworldsHonor: 'GrisworldsHonor',
   GrisworldsValor: 'GrisworldsValor',
+  // HeavensBrethren
+  DangoonsTeaching: 'DangoonsTeaching',
+  HaemosusAdamant: 'HaemosusAdamant',
+  TaebaeksGlory: 'TaebaeksGlory',
+  OndalsAlmighty: 'OndalsAlmighty',
   ImmortalKingsStoneCrusher: 'ImmortalKingsStoneCrusher',
   ImmortalKingsSoulCage: 'ImmortalKingsSoulCage',
   ImmortalKingsWill: 'ImmortalKingsWill',
