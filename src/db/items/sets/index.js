@@ -11,6 +11,7 @@ import cathansTraps from './cathans-traps.js';
 import deathsDisguise from './deaths-disguise.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import heavensBrethren from './heavens-brethren.js';
+import hsarusDefense from './hsarus-defense.js';
 import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
 import natalyasOdium from './natalyas-odium.js';
@@ -32,6 +33,7 @@ export default {
   ...deathsDisguise,
   ...grisworldsLegacy,
   ...heavensBrethren,
+  ...hsarusDefense,
   ...immortalKing,
   ...mAvinasBattleHymn,
   ...natalyasOdium,

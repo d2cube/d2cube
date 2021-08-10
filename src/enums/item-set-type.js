@@ -16,6 +16,7 @@ export const ItemSetType = {
   DeathsDisguise: 'DeathsDisguise',
   GrisworldsLegacy: 'GrisworldsLegacy',
   HeavensBrethren: 'HeavensBrethren',
+  HsarusDefense: 'HsarusDefense',
   ImmortalKing: 'ImmortalKing',
   MAvinasBattleHymn: 'MAvinasBattleHymn',
   NatalyasOdium: 'NatalyasOdium',
