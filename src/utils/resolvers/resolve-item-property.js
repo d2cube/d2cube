@@ -272,3 +272,6 @@ resolvers[MagicPropertyType.MagicFindByLevel] = lvl(
   resolvers[MagicPropertyType.MagicFind],
   '%',
 );
+resolvers[MagicPropertyType.MaximumDamageByLevel] = lvl(
+  resolvers[MagicPropertyType.MaximumDamage],
+);

@@ -21,6 +21,7 @@ So much to do, so little time, so much fun.
 - [ ] Tests
 - [ ] Docs
 - [ ] Contribution
+- [ ] Civerb's Vestments set has unique set bonus behaviors.
 
 ## Calculation edge cases
 

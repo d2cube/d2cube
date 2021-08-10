@@ -43,15 +43,23 @@ const enhanceWithStats = (stats) => (entry) => {
     case BasePropertyType.Damage1H:
     case BasePropertyType.Damage2H:
     case BasePropertyType.DamageThrow: {
-      const enhanced = enhance(MagicPropertyType.EnhancedDamage)({
+      let enhanced = enhance(MagicPropertyType.EnhancedDamage)({
         values,
         stats,
       });
-      return enhance(MagicPropertyType.Damage)({
+      enhanced = enhance(MagicPropertyType.MaximumDamage)({
         values: enhanced.values,
         stats,
         wasEnhanced: enhanced.isEnhanced,
       });
+      enhanced = enhance(MagicPropertyType.Damage)({
+        values: enhanced.values,
+        stats,
+        wasEnhanced: enhanced.isEnhanced,
+      });
+      return enhanceByLevel(stats[MagicPropertyType.MaximumDamageByLevel])(
+        enhanced,
+      );
     }
 
     case BasePropertyType.BaseDefense: {
@@ -109,7 +117,7 @@ const enhance =
 
 const enhanceByLevel = (byLevel) => (enhanced) => ({
   ...enhanced,
-  byLevel: isEmpty(byLevel) ? undefined : ` +[${byLevel}-${byLevel * 99}]`,
+  byLevel: isEmpty(byLevel) ? undefined : ` (+[${byLevel}-${byLevel * 99}])`,
 });
 
 const multiplyMap = (x) => (xs) => xs.map(multiply(x));
@@ -146,6 +154,20 @@ const addDamage = ({x, y}, enhanced) => {
 
   return {
     x: x + enhanced.x,
+    y: y + enhanced.y,
+  };
+};
+
+const addMaxDamage = ({x, y}, enhanced) => {
+  if (Array.isArray(enhanced)) {
+    return {
+      x,
+      y: enhanced.map(add(y)),
+    };
+  }
+
+  return {
+    x,
     y: y + enhanced.y,
   };
 };
@@ -187,5 +209,6 @@ const enhancers = {
   [MagicPropertyType.IncreasedAttackSpeed]: ias,
   [MagicPropertyType.IncreasedChanceOfBlocking]: icb,
   [MagicPropertyType.Indestructible]: indestructible,
+  [MagicPropertyType.MaximumDamage]: addMaxDamage,
   [MagicPropertyType.Requirements]: requirements,
 };
