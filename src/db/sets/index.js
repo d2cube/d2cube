@@ -10,6 +10,7 @@ import cathansTraps from './cathans-traps.js';
 import civerbsVetaments from './civerbs-vestaments.js';
 import cleglawsBrace from './cleglaws-brace.js';
 import cowKingsLeathers from './cow-kings-leathers.js';
+import deathsDisguise from './deaths-disguise.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
@@ -28,6 +29,7 @@ export default {
   [ItemSetType.CiverbsVestments]: civerbsVetaments,
   [ItemSetType.CleglawsBrace]: cleglawsBrace,
   [ItemSetType.CowKingsLeathers]: cowKingsLeathers,
+  [ItemSetType.DeathsDisguise]: deathsDisguise,
   [ItemSetType.GrisworldsLegacy]: grisworldsLegacy,
   [ItemSetType.ImmortalKing]: immortalKing,
   [ItemSetType.MAvinasBattleHymn]: mAvinasBattleHymn,

@@ -8,6 +8,7 @@ import arcticGear from './arctic-gear.js';
 import berserkersArsenal from './berserkers-arsenal.js';
 import bulKathosChildren from './bul-kathos-children.js';
 import cathansTraps from './cathans-traps.js';
+import deathsDisguise from './deaths-disguise.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
@@ -26,6 +27,7 @@ export default {
   ...civerbsVetaments,
   ...cleglawsBrace,
   ...cowKingsLeathers,
+  ...deathsDisguise,
   ...grisworldsLegacy,
   ...immortalKing,
   ...mAvinasBattleHymn,

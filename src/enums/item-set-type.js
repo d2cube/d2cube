@@ -13,6 +13,7 @@ export const ItemSetType = {
   CiverbsVestments: 'CiverbsVestments',
   CleglawsBrace: 'CleglawsBrace',
   CowKingsLeathers: 'CowKingsLeathers',
+  DeathsDisguise: 'DeathsDisguise',
   GrisworldsLegacy: 'GrisworldsLegacy',
   ImmortalKing: 'ImmortalKing',
   MAvinasBattleHymn: 'MAvinasBattleHymn',
