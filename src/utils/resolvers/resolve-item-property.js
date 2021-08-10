@@ -97,6 +97,8 @@ const resolvers = {
     `+${x} to Attack Rating Against Undead`,
   [MagicPropertyType.AttackerTakesDamage]: (x) =>
     `Attacker Takes Damage of ${x}`,
+  [MagicPropertyType.AttackerTakesLightningDamage]: (x) =>
+    `Attacker Takes Lightning Damage of ${x}`,
   [MagicPropertyType.BarbarianCombatSkills]: (x) =>
     `+${x} to Combat Skills (Barbarian Only)`,
   [MagicPropertyType.BarbarianMasteries]: (x) =>
@@ -152,6 +154,7 @@ const resolvers = {
   [MagicPropertyType.FireMastery]: (x) => `+${x} to Fire Mastery`,
   [MagicPropertyType.FiresMagicArrows]: (x) =>
     `Fires Magic Arrows (Level ${x})`,
+  [MagicPropertyType.FireSkills]: (x) => `+${x} to Fire Skills`,
   [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
   [MagicPropertyType.HalfFreezeDuration]: () => 'Half Freeze Duration',
   [MagicPropertyType.HealStamina]: (x) => `Heal Stamina Plus ${x}%`,
@@ -187,6 +190,7 @@ const resolvers = {
   [MagicPropertyType.ManaStolenPerHit]: (x) => `${x}% Mana Stolen Per Hit`,
   [MagicPropertyType.MaximumColdResist]: (x) => `+${x}% to Maximum Cold Resist`,
   [MagicPropertyType.MaximumDamage]: (x) => `+${x} to Maximum Damage`,
+  [MagicPropertyType.MaximumFireDamage]: (x) => `+${x} to Maximum Fire Damage`,
   [MagicPropertyType.MaximumFireResist]: (x) => `+${x}% to Maximum Fire Resist`,
   [MagicPropertyType.MaximumLightningResist]: (x) =>
     `+${x}% to Maximum Lightning Resist`,

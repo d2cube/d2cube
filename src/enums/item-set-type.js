@@ -9,6 +9,7 @@ export const ItemSetType = {
   ArcticGear: 'ArcticGear',
   BerserkersArsenal: 'BerserkersArsenal',
   BulKathosChildren: 'BulKathosChildren',
+  CathansTraps: 'CathansTraps',
   GrisworldsLegacy: 'GrisworldsLegacy',
   ImmortalKing: 'ImmortalKing',
   MAvinasBattleHymn: 'MAvinasBattleHymn',

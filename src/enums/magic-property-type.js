@@ -34,6 +34,7 @@ export const MagicPropertyType = {
   PoisonResist: 'PoisonResist',
   MaximumPoisonResist: 'MaximumPoisonResist',
   FireDamage: 'FireDamage',
+  MaximumFireDamage: 'MaximumFireDamage',
   LightningDamage: 'LightningDamage',
   ColdDamage: 'ColdDamage',
   PoisonDamage: 'PoisonDamage',

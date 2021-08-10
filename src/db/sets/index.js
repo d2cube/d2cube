@@ -6,6 +6,7 @@ import arcannasTricks from './arcannas-tricks.js';
 import arcticGear from './arctic-gear.js';
 import berserkersArsenal from './berserkers-arsenal.js';
 import bulKathosChildren from './bul-kathos-children.js';
+import cathansTraps from './cathans-traps.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
@@ -20,6 +21,7 @@ export default {
   [ItemSetType.ArcticGear]: arcticGear,
   [ItemSetType.BerserkersArsenal]: berserkersArsenal,
   [ItemSetType.BulKathosChildren]: bulKathosChildren,
+  [ItemSetType.CathansTraps]: cathansTraps,
   [ItemSetType.GrisworldsLegacy]: grisworldsLegacy,
   [ItemSetType.ImmortalKing]: immortalKing,
   [ItemSetType.MAvinasBattleHymn]: mAvinasBattleHymn,
