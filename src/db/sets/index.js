@@ -9,6 +9,7 @@ import bulKathosChildren from './bul-kathos-children.js';
 import cathansTraps from './cathans-traps.js';
 import civerbsVetaments from './civerbs-vestaments.js';
 import cleglawsBrace from './cleglaws-brace.js';
+import cowKingsLeathers from './cow-kings-leathers.js';
 import grisworldsLegacy from './grisworlds-legacy.js';
 import immortalKing from './immortal-king.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
@@ -26,6 +27,7 @@ export default {
   [ItemSetType.CathansTraps]: cathansTraps,
   [ItemSetType.CiverbsVestments]: civerbsVetaments,
   [ItemSetType.CleglawsBrace]: cleglawsBrace,
+  [ItemSetType.CowKingsLeathers]: cowKingsLeathers,
   [ItemSetType.GrisworldsLegacy]: grisworldsLegacy,
   [ItemSetType.ImmortalKing]: immortalKing,
   [ItemSetType.MAvinasBattleHymn]: mAvinasBattleHymn,

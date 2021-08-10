@@ -93,6 +93,8 @@ const resolvers = {
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
+  [MagicPropertyType.ChanceToCastChainLightningWhenStruck]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Chain Lightning when struck`,
   [MagicPropertyType.ChanceToCastChargedBoltWhenStruck]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Charged Bolt when struck`,
   [MagicPropertyType.ChanceToCastEnchantWhenStruck]: ({x, y}) =>
@@ -101,6 +103,8 @@ const resolvers = {
     `${y}% Chance to cast level ${x} Glacial Spike when struck`,
   [MagicPropertyType.ChanceToCastNovaOnStriking]: ({x, y}) =>
     `${y}% Chance to cast level ${x} Nova on striking`,
+  [MagicPropertyType.ChanceToCastStaticFieldWhenStruck]: ({x, y}) =>
+    `${y}% Chance to cast level ${x} Static Field when struck`,
   [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
   [MagicPropertyType.ColdDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Cold Damage`,
