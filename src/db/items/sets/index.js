@@ -29,6 +29,7 @@ import talRashasWrappings from './tal-rashas-wrappings.js';
 import tancredsBattlegear from './tancreds-battlegear.js';
 import theDisciple from './the-disciple.js';
 import trangOulsAvatar from './trang-ouls-avatar.js';
+import vidalasRig from './vidalas-rig.js';
 
 export default {
   ...aldursWatchtower,
@@ -62,4 +63,5 @@ export default {
   ...tancredsBattlegear,
   ...theDisciple,
   ...trangOulsAvatar,
+  ...vidalasRig,
 };

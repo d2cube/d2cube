@@ -34,4 +34,5 @@ export const ItemSetType = {
   TancredsBattlegear: 'TancredsBattlegear',
   TheDisciple: 'TheDisciple',
   TrangOulsAvatar: 'TrangOulsAvatar',
+  VidalasRig: 'VidalasRig',
 };

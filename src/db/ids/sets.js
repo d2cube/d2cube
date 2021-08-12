@@ -125,4 +125,8 @@ export default {
   TrangOulsGuise: 'TrangOulsGuise',
   TrangOulsClaws: 'TrangOulsClaws',
   TrangOulsGirth: 'TrangOulsGirth',
+  VidalasBarb: 'VidalasBarb',
+  VidalasAmbush: 'VidalasAmbush',
+  VidalasFetlock: 'VidalasFetlock',
+  VidalasSnare: 'VidalasSnare',
 };

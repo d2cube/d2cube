@@ -216,6 +216,7 @@ const resolvers = {
     `+${x} to Offensive Auras (Paladin Only)`,
   [MagicPropertyType.PaladinSkillLevels]: (x) =>
     `+${x} to Paladin Skill Levels`,
+  [MagicPropertyType.PiercingAttack]: () => 'Piercing Attack',
   [MagicPropertyType.PoisonDamage]: ({x, y, z}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Poison Damage Over ${z} Seconds`,
   [MagicPropertyType.PoisonLengthReduced]: (x) =>
