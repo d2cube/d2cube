@@ -24,6 +24,7 @@ import milabregasRegalia from './milabregas-regalia.js';
 import najsAncientVestige from './najs-ancient-vestige.js';
 import natalyasOdium from './natalyas-odium.js';
 import orphansCall from './orphans-call.js';
+import sandersFolly from './sanders-folly.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
 import theDisciple from './the-disciple.js';
 import trangOulsAvatar from './trang-ouls-avatar.js';
@@ -53,6 +54,7 @@ export default {
   [ItemSetType.NajsAncientVestige]: najsAncientVestige,
   [ItemSetType.NatalyasOdium]: natalyasOdium,
   [ItemSetType.OrphansCall]: orphansCall,
+  [ItemSetType.SandersFolly]: sandersFolly,
   [ItemSetType.TalRashasWrappings]: talRashasWrappings,
   [ItemSetType.TheDisciple]: theDisciple,
   [ItemSetType.TrangOulsAvatar]: trangOulsAvatar,
