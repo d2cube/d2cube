@@ -20,6 +20,7 @@ import infernalTools from './infernal-tools.js';
 import irathasFinery from './irathas-finery.js';
 import isenhartsArmory from './isenharts-armory.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
+import milabregasRegalia from './milabregas-regalia.js';
 import natalyasOdium from './natalyas-odium.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
 import theDisciple from './the-disciple.js';
@@ -46,6 +47,7 @@ export default {
   [ItemSetType.IrathasFinery]: irathasFinery,
   [ItemSetType.IsenhartsAmory]: isenhartsArmory,
   [ItemSetType.MAvinasBattleHymn]: mAvinasBattleHymn,
+  [ItemSetType.MilabregasRegalia]: milabregasRegalia,
   [ItemSetType.NatalyasOdium]: natalyasOdium,
   [ItemSetType.TalRashasWrappings]: talRashasWrappings,
   [ItemSetType.TheDisciple]: theDisciple,
