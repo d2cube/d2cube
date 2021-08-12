@@ -174,7 +174,7 @@ const resolvers = {
   [MagicPropertyType.Life]: (x) => `+${x} to Life`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
-    `Adds ${x}-${y} Lightning Damage`,
+    `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
   [MagicPropertyType.LightRadius]: (x) => `+${x} to Light Radius`,
   [MagicPropertyType.LowerFireResist]: (x) => `-${x}% to Enemy Fire Resistance`,

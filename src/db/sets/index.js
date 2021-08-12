@@ -28,6 +28,7 @@ import sandersFolly from './sanders-folly.js';
 import sazabisGrandTribute from './sazabis-grand-tribute.js';
 import sigonsCompleteSteel from './sigons-complete-steel.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
+import tancredsBattlegear from './tancreds-battlegear.js';
 import theDisciple from './the-disciple.js';
 import trangOulsAvatar from './trang-ouls-avatar.js';
 
@@ -60,6 +61,7 @@ export default {
   [ItemSetType.SazabisGrandTribute]: sazabisGrandTribute,
   [ItemSetType.SigonsCompleteSteel]: sigonsCompleteSteel,
   [ItemSetType.TalRashasWrappings]: talRashasWrappings,
+  [ItemSetType.TancredsBattlegear]: tancredsBattlegear,
   [ItemSetType.TheDisciple]: theDisciple,
   [ItemSetType.TrangOulsAvatar]: trangOulsAvatar,
 };

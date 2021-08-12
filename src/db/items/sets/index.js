@@ -26,6 +26,7 @@ import sandersFolly from './sanders-folly.js';
 import sazabisGrandTribute from './sazabis-grand-tribute.js';
 import sigonsCompleteSteel from './sigons-complete-steel.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
+import tancredsBattlegear from './tancreds-battlegear.js';
 import theDisciple from './the-disciple.js';
 import trangOulsAvatar from './trang-ouls-avatar.js';
 
@@ -58,6 +59,7 @@ export default {
   ...sazabisGrandTribute,
   ...sigonsCompleteSteel,
   ...talRashasWrappings,
+  ...tancredsBattlegear,
   ...theDisciple,
   ...trangOulsAvatar,
 };

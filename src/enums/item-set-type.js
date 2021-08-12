@@ -31,6 +31,7 @@ export const ItemSetType = {
   SazabisGrandTribute: 'SazabisGrandTribute',
   SigonsCompleteSteel: 'SigonsCompleteSteel',
   TalRashasWrappings: 'TalRashasWrappings',
+  TancredsBattlegear: 'TancredsBattlegear',
   TheDisciple: 'TheDisciple',
   TrangOulsAvatar: 'TrangOulsAvatar',
 };
