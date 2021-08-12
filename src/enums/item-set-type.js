@@ -29,6 +29,7 @@ export const ItemSetType = {
   OrphansCall: 'OrphansCall',
   SandersFolly: 'SandersFolly',
   SazabisGrandTribute: 'SazabisGrandTribute',
+  SigonsCompleteSteel: 'SigonsCompleteSteel',
   TalRashasWrappings: 'TalRashasWrappings',
   TheDisciple: 'TheDisciple',
   TrangOulsAvatar: 'TrangOulsAvatar',
