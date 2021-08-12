@@ -26,6 +26,7 @@ export const ItemSetType = {
   MilabregasRegalia: 'MilabregasRegalia',
   NajsAncientVestige: 'NajsAncientVestige',
   NatalyasOdium: 'NatalyasOdium',
+  OrphansCall: 'OrphansCall',
   TalRashasWrappings: 'TalRashasWrappings',
   TheDisciple: 'TheDisciple',
   TrangOulsAvatar: 'TrangOulsAvatar',

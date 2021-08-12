@@ -43,7 +43,10 @@ const resolvers = {
     `${item.class} Class - `,
     `${getAttackSpeedDescription(x)} Attack Speed`,
   ],
-  [BasePropertyType.BlockChance]: (x) => [`Chance to Block: `, `${x}%`],
+  [BasePropertyType.BlockChance]: (x) => [
+    `Chance to Block: `,
+    `${Math.min(x, 75)}%`,
+  ],
   [BasePropertyType.Damage1H]: ({x, y}) => [
     'One-hand Damage: ',
     `${x} to ${y}`,

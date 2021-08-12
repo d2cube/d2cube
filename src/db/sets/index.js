@@ -23,6 +23,7 @@ import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
 import milabregasRegalia from './milabregas-regalia.js';
 import najsAncientVestige from './najs-ancient-vestige.js';
 import natalyasOdium from './natalyas-odium.js';
+import orphansCall from './orphans-call.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
 import theDisciple from './the-disciple.js';
 import trangOulsAvatar from './trang-ouls-avatar.js';
@@ -51,6 +52,7 @@ export default {
   [ItemSetType.MilabregasRegalia]: milabregasRegalia,
   [ItemSetType.NajsAncientVestige]: najsAncientVestige,
   [ItemSetType.NatalyasOdium]: natalyasOdium,
+  [ItemSetType.OrphansCall]: orphansCall,
   [ItemSetType.TalRashasWrappings]: talRashasWrappings,
   [ItemSetType.TheDisciple]: theDisciple,
   [ItemSetType.TrangOulsAvatar]: trangOulsAvatar,

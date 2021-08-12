@@ -86,6 +86,11 @@ export default {
   NatalyasShadow: 'NatalyasShadow',
   NatalyasTotem: 'NatalyasTotem',
   NatalyasSoul: 'NatalyasSoul',
+  // OrphansCall
+  GuillaumesFace: 'GuillaumesFace',
+  WhitstansGuard: 'WhitstansGuard',
+  MagnusSkin: 'MagnusSkin',
+  WilhelmsPride: 'WilhelmsPride',
   TalRashasLidlessEye: 'TalRashasLidlessEye',
   TalRashasGuardianship: 'TalRashasGuardianship',
   TalRashasHoradricCrest: 'TalRashasHoradricCrest',
