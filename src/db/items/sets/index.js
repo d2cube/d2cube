@@ -19,6 +19,7 @@ import irathasFinery from './irathas-finery.js';
 import isenhartsArmory from './isenharts-armory.js';
 import mAvinasBattleHymn from './m-avinas-battle-hymn.js';
 import milabregasRegalia from './milabregas-regalia.js';
+import najsAncientVestige from './najs-ancient-vestige.js';
 import natalyasOdium from './natalyas-odium.js';
 import talRashasWrappings from './tal-rashas-wrappings.js';
 import theDisciple from './the-disciple.js';
@@ -46,6 +47,7 @@ export default {
   ...isenhartsArmory,
   ...mAvinasBattleHymn,
   ...milabregasRegalia,
+  ...najsAncientVestige,
   ...natalyasOdium,
   ...talRashasWrappings,
   ...theDisciple,

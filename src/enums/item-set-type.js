@@ -24,6 +24,7 @@ export const ItemSetType = {
   IsenhartsAmory: 'IsenhartsAmory',
   MAvinasBattleHymn: 'MAvinasBattleHymn',
   MilabregasRegalia: 'MilabregasRegalia',
+  NajsAncientVestige: 'NajsAncientVestige',
   NatalyasOdium: 'NatalyasOdium',
   TalRashasWrappings: 'TalRashasWrappings',
   TheDisciple: 'TheDisciple',

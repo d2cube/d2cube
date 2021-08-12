@@ -143,7 +143,6 @@ export const MagicPropertyType = {
   ChanceToCastNovaWhenStruck: 'ChanceToCastNovaWhenStruck',
   ChanceToCastStaticFieldWhenStruck: 'ChanceToCastStaticFieldWhenStruck',
   ChanceToCastWeakenOnStriking: 'ChanceToCastWeakenOnStriking',
-  SpellCharges: 'SpellCharges',
   DefenseByLevel: 'DefenseByLevel',
   EnhancedDefenseByLevel: 'EnhancedDefenseByLevel',
   ManaByLevel: 'ManaByLevel',
@@ -186,4 +185,5 @@ export const MagicPropertyType = {
   SkillFireBall: 'SkillFireBall',
   SkillFireWall: 'SkillFireWall',
   SkillMeteor: 'SkillMeteor',
+  SpellChargesTeleport: 'SpellChargesTeleport',
 };

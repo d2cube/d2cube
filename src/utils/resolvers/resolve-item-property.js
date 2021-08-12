@@ -236,6 +236,8 @@ const resolvers = {
     `+${x} to Lightning Mastery (Sorceress Only)`,
   [MagicPropertyType.SorceressSkillLevels]: (x) =>
     `+${x} to Sorceress Skill Levels`,
+  [MagicPropertyType.SpellChargesTeleport]: ({x, y}) =>
+    `Level ${x} Teleport (${y}/${y} Charges)`,
   [MagicPropertyType.Strength]: (x) => `+${x} to Strength`,
   [MagicPropertyType.TargetDefense]: (x) => `-${x}% Target Defense`,
   [MagicPropertyType.Vitality]: (x) => `+${x} to Vitality`,
