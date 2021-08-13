@@ -5,5 +5,5 @@ import {getItemById} from '../api/index.js';
 
 export const rollItem = (data) => {
   const item = getItemById(data.id);
-  return merge({...data, uuid: uuid()})(item);
+  return merge(item)({...data, uuid: uuid()});
 };

@@ -29,6 +29,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Life]: 10,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Life]: 10,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 12,
         },
@@ -49,6 +52,9 @@ export default normalizeItems({
           [MagicPropertyType.FireDamage]: {x: 5, y: 8},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Life]: 17,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Life]: 17,
         },
         [SocketCategoryType.Shield]: {
@@ -73,6 +79,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Life]: 24,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Life]: 24,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 22,
         },
@@ -93,6 +102,9 @@ export default normalizeItems({
           [MagicPropertyType.FireDamage]: {x: 10, y: 16},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Life]: 31,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Life]: 31,
         },
         [SocketCategoryType.Shield]: {
@@ -117,6 +129,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Life]: 38,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Life]: 38,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.FireResist]: 40,
         },
@@ -137,6 +152,9 @@ export default normalizeItems({
           [MagicPropertyType.ColdDamage]: {x: 1, y: 3, z: 1},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Mana]: 10,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Mana]: 10,
         },
         [SocketCategoryType.Shield]: {
@@ -161,6 +179,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Mana]: 17,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Mana]: 17,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.ColdResist]: 16,
         },
@@ -181,6 +202,9 @@ export default normalizeItems({
           [MagicPropertyType.ColdDamage]: {x: 4, y: 7, z: 2},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Mana]: 24,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Mana]: 24,
         },
         [SocketCategoryType.Shield]: {
@@ -205,6 +229,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Mana]: 31,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Mana]: 31,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.ColdResist]: 28,
         },
@@ -225,6 +252,9 @@ export default normalizeItems({
           [MagicPropertyType.ColdDamage]: {x: 10, y: 14, z: 3},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Mana]: 38,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Mana]: 38,
         },
         [SocketCategoryType.Shield]: {
@@ -249,6 +279,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 9,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.MagicFind]: 9,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.LightningResist]: 12,
         },
@@ -269,6 +302,9 @@ export default normalizeItems({
           [MagicPropertyType.LightningDamage]: {x: 1, y: 14},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.MagicFind]: 13,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.MagicFind]: 13,
         },
         [SocketCategoryType.Shield]: {
@@ -293,6 +329,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 16,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.MagicFind]: 16,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.LightningResist]: 22,
         },
@@ -313,6 +352,9 @@ export default normalizeItems({
           [MagicPropertyType.LightningDamage]: {x: 1, y: 30},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.MagicFind]: 20,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.MagicFind]: 20,
         },
         [SocketCategoryType.Shield]: {
@@ -337,6 +379,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.MagicFind]: 24,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.MagicFind]: 24,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.LightningResist]: 40,
         },
@@ -357,6 +402,9 @@ export default normalizeItems({
           [MagicPropertyType.PoisonDamage]: {x: 10, z: 3},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Dexterity]: 3,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Dexterity]: 3,
         },
         [SocketCategoryType.Shield]: {
@@ -381,6 +429,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Dexterity]: 4,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Dexterity]: 4,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.PoisonResist]: 16,
         },
@@ -401,6 +452,9 @@ export default normalizeItems({
           [MagicPropertyType.PoisonDamage]: {x: 40, z: 5},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Dexterity]: 6,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Dexterity]: 6,
         },
         [SocketCategoryType.Shield]: {
@@ -425,6 +479,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Dexterity]: 8,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Dexterity]: 8,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.PoisonResist]: 28,
         },
@@ -445,6 +502,9 @@ export default normalizeItems({
           [MagicPropertyType.PoisonDamage]: {x: 100, z: 7},
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Dexterity]: 10,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Dexterity]: 10,
         },
         [SocketCategoryType.Shield]: {
@@ -469,6 +529,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AttackRating]: 20,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.AttackRating]: 20,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.AllResistances]: 6,
         },
@@ -489,6 +552,9 @@ export default normalizeItems({
           [MagicPropertyType.DamageToUndead]: 34,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.AttackRating]: 40,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.AttackRating]: 40,
         },
         [SocketCategoryType.Shield]: {
@@ -513,6 +579,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AttackRating]: 60,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.AttackRating]: 60,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.AllResistances]: 11,
         },
@@ -533,6 +602,9 @@ export default normalizeItems({
           [MagicPropertyType.DamageToUndead]: 54,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.AttackRating]: 80,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.AttackRating]: 80,
         },
         [SocketCategoryType.Shield]: {
@@ -557,6 +629,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.AttackRating]: 100,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.AttackRating]: 100,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.AllResistances]: 19,
         },
@@ -577,6 +652,9 @@ export default normalizeItems({
           [MagicPropertyType.AttackRating]: 40,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Strength]: 3,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Strength]: 3,
         },
         [SocketCategoryType.Shield]: {
@@ -601,6 +679,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Strength]: 4,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Strength]: 4,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.Defense]: 12,
         },
@@ -621,6 +702,9 @@ export default normalizeItems({
           [MagicPropertyType.AttackRating]: 80,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Strength]: 6,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Strength]: 6,
         },
         [SocketCategoryType.Shield]: {
@@ -645,6 +729,9 @@ export default normalizeItems({
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.Strength]: 8,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.Strength]: 8,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.Defense]: 24,
         },
@@ -665,6 +752,9 @@ export default normalizeItems({
           [MagicPropertyType.AttackRating]: 150,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.Strength]: 10,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.Strength]: 10,
         },
         [SocketCategoryType.Shield]: {
@@ -688,6 +778,10 @@ export default normalizeItems({
           [MagicPropertyType.ManaStolenPerHit]: 1,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.RegenerateMana]: 8,
+          [MagicPropertyType.ReplenishLife]: 2,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.RegenerateMana]: 8,
           [MagicPropertyType.ReplenishLife]: 2,
         },
@@ -715,6 +809,10 @@ export default normalizeItems({
           [MagicPropertyType.RegenerateMana]: 8,
           [MagicPropertyType.ReplenishLife]: 3,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.RegenerateMana]: 8,
+          [MagicPropertyType.ReplenishLife]: 3,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.AttackerTakesDamage]: 8,
         },
@@ -736,6 +834,10 @@ export default normalizeItems({
           [MagicPropertyType.ManaStolenPerHit]: 2,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.RegenerateMana]: 12,
+          [MagicPropertyType.ReplenishLife]: 3,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.RegenerateMana]: 12,
           [MagicPropertyType.ReplenishLife]: 3,
         },
@@ -763,6 +865,10 @@ export default normalizeItems({
           [MagicPropertyType.RegenerateMana]: 12,
           [MagicPropertyType.ReplenishLife]: 4,
         },
+        [SocketCategoryType.Helm]: {
+          [MagicPropertyType.RegenerateMana]: 12,
+          [MagicPropertyType.ReplenishLife]: 4,
+        },
         [SocketCategoryType.Shield]: {
           [MagicPropertyType.AttackerTakesDamage]: 16,
         },
@@ -784,6 +890,10 @@ export default normalizeItems({
           [MagicPropertyType.ManaStolenPerHit]: 3,
         },
         [SocketCategoryType.Armor]: {
+          [MagicPropertyType.RegenerateMana]: 19,
+          [MagicPropertyType.ReplenishLife]: 5,
+        },
+        [SocketCategoryType.Helm]: {
           [MagicPropertyType.RegenerateMana]: 19,
           [MagicPropertyType.ReplenishLife]: 5,
         },

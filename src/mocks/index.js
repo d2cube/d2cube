@@ -88,10 +88,10 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'WallOfTheEyeless',
+    id: 'Spear',
     durability: 1,
     position: [1, 4],
-    sockets: ['Jah', 'Ber', null],
+    sockets: ['Jah', 'Ith', 'Ber'],
     tier: 2,
   },
   {

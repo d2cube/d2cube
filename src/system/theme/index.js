@@ -23,7 +23,7 @@ const colors = {
     magic: '#4169E1',
     normal: 'white',
     rare: '#FFFF00',
-    runewords: '#A59263',
+    runeword: '#A59263',
     set: '#00FF00',
     unique: '#A59263',
   },

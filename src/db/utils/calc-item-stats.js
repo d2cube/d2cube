@@ -1,6 +1,7 @@
 import {filter, props} from 'uinix-fp';
 
 import {sum} from '../../utils/fp.js';
+import { resolveItemSocketCategoryType } from '../../utils/resolvers/resolve-item-socket-category-type.js';
 
 // Track all magic properties from magic/set/socket bonuses
 export const calcItemStats = (item) => {
@@ -8,7 +9,11 @@ export const calcItemStats = (item) => {
   const setProperties = props('properties.set')(item) || [];
 
   const stats = {};
+
+  // push magic properties
   Object.entries(magicProperties).forEach(pushEntry(stats));
+
+  // push set properties
   filter()(setProperties).map((setProperty) =>
     Object.entries(setProperty).forEach(pushEntry(stats)),
   );
