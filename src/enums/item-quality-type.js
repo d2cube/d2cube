@@ -8,7 +8,6 @@ export const ItemQualityType = {
   Magic: 'magic',
   Normal: 'normal',
   Rare: 'rare',
-  Runewords: 'runewords',
   Set: 'set',
   Unique: 'unique',
 };

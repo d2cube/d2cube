@@ -16,6 +16,7 @@ export {PlayerClassType} from './player-class-type.js';
 export {PotionClassType} from './potion-class-type.js';
 export {PrefixType} from './prefix-type.js';
 export {RecipeType} from './recipe-type.js';
+export {RunewordType} from './runeword-type.js';
 export {SocketCategoryType} from './socket-category-type.js';
 export {SuffixType} from './suffix-type.js';
 export {WeaponClassType} from './weapon-class-type.js';

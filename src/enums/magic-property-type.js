@@ -112,6 +112,7 @@ export const MagicPropertyType = {
   CrushingBlow: 'CrushingBlow',
   KickDamage: 'KickDamage',
   ManaAfterKill: 'ManaAfterKill',
+  LifeAfterKill: 'LifeAfterKill',
   LifeAfterDemonKill: 'LifeAfterDemonKill',
   DeadlyStrike: 'DeadlyStrike',
   FireAbsorbPercentage: 'FireAbsorbPercentage',
@@ -185,5 +186,6 @@ export const MagicPropertyType = {
   SkillFireBall: 'SkillFireBall',
   SkillFireWall: 'SkillFireWall',
   SkillMeteor: 'SkillMeteor',
+  SkillTeleport: 'SkillTeleport',
   SpellChargesTeleport: 'SpellChargesTeleport',
 };

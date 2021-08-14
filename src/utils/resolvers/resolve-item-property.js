@@ -172,6 +172,7 @@ const resolvers = {
   [MagicPropertyType.IncreaseMaximumMana]: (x) => `Increase Maximum Mana ${x}%`,
   [MagicPropertyType.Knockback]: () => 'Knockback',
   [MagicPropertyType.Life]: (x) => `+${x} to Life`,
+  [MagicPropertyType.LifeAfterKill]: (x) => `+${x} to Life After Each kill`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
@@ -279,4 +280,7 @@ resolvers[MagicPropertyType.MagicFindByLevel] = lvl(
 );
 resolvers[MagicPropertyType.MaximumDamageByLevel] = lvl(
   resolvers[MagicPropertyType.MaximumDamage],
+);
+resolvers[MagicPropertyType.StrengthByLevel] = lvl(
+  resolvers[MagicPropertyType.Strength],
 );

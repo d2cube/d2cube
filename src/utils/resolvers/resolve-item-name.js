@@ -2,7 +2,8 @@ import {pipe} from 'uinix-fp';
 
 import {ItemType} from '../../enums/index.js';
 import {cb, concat, join} from '../fp.js';
-import {resolveItemSocketedRunes} from './resolve-item-socketed-runes.js';
+import {resolveItemRunes} from './resolve-item-runes.js';
+import {resolveItemRuneword} from './resolve-item-runeword.js';
 
 export const resolveItemName = (item) => {
   const {
@@ -32,12 +33,13 @@ export const resolveItemName = (item) => {
       break;
   }
 
-  const {runeword, runes} = resolveItemSocketedRunes(item);
+  const runes = resolveItemRunes(item);
+  const runeword = resolveItemRuneword(runes)(item);
 
   const resolvedName = pipe([
     concat(personalization),
     concat(prefix),
-    concat(runeword || name),
+    concat(runeword ? runeword.name : name),
     concat(cb((x) => Array.from({length: x}).join('+'))(tier)),
     concat(cb((x) => `of ${x}`)(suffix)),
     join(' '),
@@ -45,7 +47,7 @@ export const resolveItemName = (item) => {
 
   return pipe([
     concat({color: runeword ? 'runeword' : color, text: resolvedName}),
-    concat({color, text: basename}),
-    concat({color: 'runeword', text: runes}),
+    concat({color, text: runeword ? name : basename}),
+    concat({color: 'runeword', text: runes ? `'${runes}'` : null}),
   ])([]);
 };
