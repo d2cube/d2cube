@@ -3,6 +3,7 @@ import {
   ItemTierType,
   ItemType,
   PlayerClassType,
+  SocketCategoryType,
   WeaponClassType,
 } from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
@@ -10,6 +11,7 @@ import ids from '../ids/index.js';
 
 export default normalizeItems({
   playerClass: PlayerClassType.Amazon,
+  socketCategory: SocketCategoryType.Weapon,
   type: ItemType.AmazonWeapon,
 })([
   {

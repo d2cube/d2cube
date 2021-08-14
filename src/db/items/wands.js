@@ -2,6 +2,7 @@ import {
   BasePropertyType,
   ItemTierType,
   ItemType,
+  SocketCategoryType,
   WeaponClassType,
 } from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
@@ -10,6 +11,7 @@ import ids from '../ids/index.js';
 export default normalizeItems({
   class: WeaponClassType.Staff,
   size: [2, 1],
+  socketCategory: SocketCategoryType.Weapon,
   type: ItemType.Wand,
 })([
   {

@@ -3,6 +3,7 @@ import {
   ItemTierType,
   ItemType,
   PlayerClassType,
+  SocketCategoryType,
   WeaponClassType,
 } from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
@@ -11,6 +12,7 @@ import ids from '../ids/index.js';
 export default normalizeItems({
   playerClass: PlayerClassType.Sorceress,
   class: WeaponClassType.Staff,
+  socketCategory: SocketCategoryType.Weapon,
   type: ItemType.SorceressOrb,
 })([
   {

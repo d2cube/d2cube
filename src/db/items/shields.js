@@ -3,11 +3,13 @@ import {
   BasePropertyType,
   ItemTierType,
   ItemType,
+  SocketCategoryType,
 } from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
 export default normalizeItems({
+  socketCategory: SocketCategoryType.Shield,
   type: ItemType.Shield,
 })([
   {

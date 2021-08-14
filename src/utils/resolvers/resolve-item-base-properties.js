@@ -31,82 +31,86 @@ export const resolveItemBaseProperties = (item) => {
   return results;
 };
 
-const enhanceWithStats = (stats) => (entry) => {
-  const [property, values] = entry;
-  switch (property) {
-    case BasePropertyType.AttackSpeed: {
-      return enhance(MagicPropertyType.IncreasedAttackSpeed)({
-        values,
-        stats,
-      });
-    }
+const enhanceWithStats =
+  (stats = {}) =>
+  (entry) => {
+    const [property, values] = entry;
+    switch (property) {
+      case BasePropertyType.AttackSpeed: {
+        return enhance(MagicPropertyType.IncreasedAttackSpeed)({
+          values,
+          stats,
+        });
+      }
 
-    case BasePropertyType.Damage1H:
-    case BasePropertyType.Damage2H:
-    case BasePropertyType.DamageThrow: {
-      let enhanced = enhance(MagicPropertyType.EnhancedDamage)({
-        values,
-        stats,
-      });
-      enhanced = enhance(MagicPropertyType.MinimumDamage)({
-        values: enhanced.values,
-        stats,
-        wasEnhanced: enhanced.isEnhanced,
-      });
-      enhanced = enhance(MagicPropertyType.MaximumDamage)({
-        values: enhanced.values,
-        stats,
-        wasEnhanced: enhanced.isEnhanced,
-      });
-      enhanced = enhance(MagicPropertyType.Damage)({
-        values: enhanced.values,
-        stats,
-        wasEnhanced: enhanced.isEnhanced,
-      });
-      return enhanceByLevel(stats[MagicPropertyType.MaximumDamageByLevel])(
-        enhanced,
-      );
-    }
+      case BasePropertyType.Damage1H:
+      case BasePropertyType.Damage2H:
+      case BasePropertyType.DamageThrow: {
+        let enhanced = enhance(MagicPropertyType.EnhancedDamage)({
+          values,
+          stats,
+        });
+        enhanced = enhance(MagicPropertyType.MinimumDamage)({
+          values: enhanced.values,
+          stats,
+          wasEnhanced: enhanced.isEnhanced,
+        });
+        enhanced = enhance(MagicPropertyType.MaximumDamage)({
+          values: enhanced.values,
+          stats,
+          wasEnhanced: enhanced.isEnhanced,
+        });
+        enhanced = enhance(MagicPropertyType.Damage)({
+          values: enhanced.values,
+          stats,
+          wasEnhanced: enhanced.isEnhanced,
+        });
+        return enhanceByLevel(stats[MagicPropertyType.MaximumDamageByLevel])(
+          enhanced,
+        );
+      }
 
-    case BasePropertyType.BaseDefense: {
-      let enhanced = enhance(MagicPropertyType.EnhancedDefense)({
-        values,
-        stats,
-      });
-      enhanced = enhance(MagicPropertyType.Defense)({
-        values: enhanced.values,
-        stats,
-        wasEnhanced: enhanced.isEnhanced,
-      });
-      return enhanceByLevel(stats[MagicPropertyType.DefenseByLevel])(enhanced);
-    }
+      case BasePropertyType.BaseDefense: {
+        let enhanced = enhance(MagicPropertyType.EnhancedDefense)({
+          values,
+          stats,
+        });
+        enhanced = enhance(MagicPropertyType.Defense)({
+          values: enhanced.values,
+          stats,
+          wasEnhanced: enhanced.isEnhanced,
+        });
+        return enhanceByLevel(stats[MagicPropertyType.DefenseByLevel])(
+          enhanced,
+        );
+      }
 
-    case BasePropertyType.BlockChance: {
-      return enhance(MagicPropertyType.IncreasedChanceOfBlocking)({
-        values,
-        stats,
-      });
-    }
+      case BasePropertyType.BlockChance: {
+        return enhance(MagicPropertyType.IncreasedChanceOfBlocking)({
+          values,
+          stats,
+        });
+      }
 
-    case BasePropertyType.Durability: {
-      return enhance(MagicPropertyType.Indestructible)({
-        values,
-        stats,
-      });
-    }
+      case BasePropertyType.Durability: {
+        return enhance(MagicPropertyType.Indestructible)({
+          values,
+          stats,
+        });
+      }
 
-    case BasePropertyType.RequiredDexterity:
-    case BasePropertyType.RequiredStrength: {
-      return enhance(MagicPropertyType.Requirements)({
-        values,
-        stats,
-      });
-    }
+      case BasePropertyType.RequiredDexterity:
+      case BasePropertyType.RequiredStrength: {
+        return enhance(MagicPropertyType.Requirements)({
+          values,
+          stats,
+        });
+      }
 
-    default:
-      return {isEnhanced: false, values};
-  }
-};
+      default:
+        return {isEnhanced: false, values};
+    }
+  };
 
 const enhance =
   (magicProperty) =>

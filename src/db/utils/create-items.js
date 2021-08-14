@@ -1,8 +1,8 @@
-import {merge, props} from 'uinix-fp';
+import {merge} from 'uinix-fp';
 
 import {ItemQualityType, MagicPropertyType} from '../../enums/index.js';
 import {fillNull} from '../../utils/fp.js';
-import {calcItemStats} from './calc-item-stats.js';
+import {resolveItemPropertyValue} from '../../utils/resolvers/resolve-item-property-value.js';
 
 export const createItems = (items) =>
   Object.entries(items).reduce((acc, [id, item]) => {
@@ -27,9 +27,10 @@ const createItem = (items) => (initialItem) => {
       break;
   }
 
-  const addSockets = props(`properties.magic.${MagicPropertyType.Socketed}`)(
-    item,
-  );
+  const addSockets = resolveItemPropertyValue(
+    'magic',
+    MagicPropertyType.Socketed,
+  )(item);
   if (addSockets) {
     const socketCount = Array.isArray(addSockets)
       ? Math.max(...addSockets)
@@ -37,9 +38,5 @@ const createItem = (items) => (initialItem) => {
     item.sockets = fillNull(socketCount);
   }
 
-  return {
-    properties: {},
-    ...item,
-    stats: calcItemStats(item),
-  };
+  return item;
 };

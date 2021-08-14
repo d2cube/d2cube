@@ -8,10 +8,11 @@ import {ItemType} from '../enums/index.js';
 import {inventoryItems} from '../mocks/index.js';
 import {getItemsByType} from '../api/index.js';
 import {fill} from '../utils/fp.js';
+import {rollItem} from '../utils/roll-item.js';
 
 const Page = () => {
   const [selectedItemType, setSelectedItemType] = useState(ItemType.Set);
-  const items = getItemsByType(selectedItemType);
+  const items = getItemsByType(selectedItemType).map(rollItem);
 
   const handleUpdateItemType = (event) =>
     setSelectedItemType(event.target.value);

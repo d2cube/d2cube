@@ -1,9 +1,15 @@
-import {BasePropertyType, ItemTierType, ItemType} from '../../enums/index.js';
+import {
+  BasePropertyType,
+  ItemTierType,
+  ItemType,
+  SocketCategoryType,
+} from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
 export default normalizeItems({
   size: [2, 2],
+  socketCategory: SocketCategoryType.Helm,
   type: ItemType.Circlet,
 })([
   {

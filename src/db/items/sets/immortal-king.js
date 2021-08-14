@@ -42,7 +42,7 @@ export default normalizeItems({
           [MagicPropertyType.ColdDamage]: {x: 127, y: 364, z: 6},
         },
         {
-          [MagicPropertyType.PoisonDamage]: {x: 204, z: 6},
+          [MagicPropertyType.PoisonDamage]: {x: 204, y: 204, z: 6},
         },
         {
           [MagicPropertyType.MagicDamage]: {x: 250, y: 361},

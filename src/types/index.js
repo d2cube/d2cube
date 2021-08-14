@@ -92,6 +92,8 @@ export {};
  *    Item properties.
  * @property {PlayerClassType} [playerClass]
  *    If specified, the item is restricted to the player class.
+ * @property {SocketCategoryType} [socketCategory]
+ *    Socket category when applying gems/runes.
  *
  * @typedef ItemInstance
  *    An item is instanced if it is created and exists in the game.

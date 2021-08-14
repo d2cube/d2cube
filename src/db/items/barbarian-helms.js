@@ -3,6 +3,7 @@ import {
   ItemTierType,
   ItemType,
   PlayerClassType,
+  SocketCategoryType,
 } from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
@@ -10,6 +11,7 @@ import ids from '../ids/index.js';
 export default normalizeItems({
   playerClass: PlayerClassType.Barbarian,
   size: [2, 2],
+  socketCategory: SocketCategoryType.Helm,
   type: ItemType.BarbarianHelm,
 })([
   {
