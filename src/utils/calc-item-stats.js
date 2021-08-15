@@ -19,18 +19,16 @@ export const calcItemStats = (item) => {
     const runes = resolveItemRunes(item);
     const runeword = resolveItemRuneword(runes)(item);
     if (runeword) {
-      const runewordProperties = props(`properties.${socketCategory}`)(
-        runeword,
-      );
-      Object.entries(runewordProperties.magic).forEach(pushEntry(stats));
-    } else {
-      item.sockets.forEach((socket) => {
-        const socketItem = getItemById(socket);
-        const socketProperties =
-          props(`properties.socket.${socketCategory}`)(socketItem) || {};
-        Object.entries(socketProperties).forEach(pushEntry(stats));
-      });
+      const runewordProperties = props('properties.magic')(runeword);
+      Object.entries(runewordProperties).forEach(pushEntry(stats));
     }
+
+    item.sockets.forEach((socket) => {
+      const socketItem = getItemById(socket);
+      const socketProperties =
+        props(`properties.socket.${socketCategory}`)(socketItem) || {};
+      Object.entries(socketProperties).forEach(pushEntry(stats));
+    });
   }
 
   // Reduce effective value

@@ -9,7 +9,7 @@ export const resolveItemRuneword =
       if (
         runeword &&
         runeword.runes.length === item.sockets.length &&
-        testIsValidRunewordCategory({item, runeword})
+        testIsValidRunewordType({item, runeword})
       ) {
         return runeword;
       }
@@ -30,5 +30,5 @@ const testIsValidRunewordQuality = (item) => {
   }
 };
 
-const testIsValidRunewordCategory = ({item, runeword}) =>
-  item.socketCategory in runeword.properties;
+const testIsValidRunewordType = ({item, runeword}) =>
+  runeword.types.includes(item.type);
