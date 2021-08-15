@@ -22,7 +22,7 @@ export default {
       [MagicPropertyType.Defense]: [750, 775],
       [MagicPropertyType.StrengthByLevel]: 0.75,
       [MagicPropertyType.LifeAfterKill]: 14,
-      [MagicPropertyType.MagicFind]: 1,
+      [MagicPropertyType.MagicFindByLevel]: 1,
       [MagicPropertyType.Socketed]: 3,
     },
   },

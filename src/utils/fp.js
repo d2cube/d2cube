@@ -53,3 +53,26 @@ export const sum = (xs) => {
 
 export const size = (xs) =>
   isPlainObject(xs) ? Object.keys(xs).length : xs.length;
+
+/**
+ * Sort entries based on some property order.
+ * If an entry property is not matched, sort it to the bottom.
+ */
+export const sortEntriesBy = (order) => (entries) =>
+  entries.sort((a, b) => {
+    const aIndex = order.indexOf(a[0]);
+    const bIndex = order.indexOf(b[0]);
+    if (aIndex === bIndex) {
+      return 0;
+    }
+
+    if (aIndex === -1) {
+      return 1;
+    }
+
+    if (bIndex === -1) {
+      return -1;
+    }
+
+    return aIndex - bIndex;
+  });

@@ -1,7 +1,8 @@
 import {props} from 'uinix-fp';
 import {getItemById} from '../api/index.js';
+import {MagicPropertyType} from '../enums/magic-property-type.js';
 
-import {add, sum} from './fp.js';
+import {add, sortEntriesBy, sum} from './fp.js';
 import {resolveItemRunes} from './resolvers/resolve-item-runes.js';
 import {resolveItemRuneword} from './resolvers/resolve-item-runeword.js';
 
@@ -21,6 +22,8 @@ export const calcItemStats = (item) => {
     if (runeword) {
       const runewordProperties = props('properties.magic')(runeword);
       Object.entries(runewordProperties).forEach(pushEntry(stats));
+      // TODO: centralize where this is initialized
+      stats[MagicPropertyType.Socketed] = [runeword.runes.length];
     }
 
     item.sockets.forEach((socket) => {
@@ -32,7 +35,10 @@ export const calcItemStats = (item) => {
   }
 
   // Reduce effective value
-  return Object.entries(stats).reduce((acc, [property, values]) => {
+  const statsEntries = sortEntriesBy(magicPropertiesOrder)(
+    Object.entries(stats),
+  );
+  return statsEntries.reduce((acc, [property, values]) => {
     // TODO: figure out general logic
     let effective = [];
     if (values.length === 1) {
@@ -63,3 +69,117 @@ const pushEntry = (x) => (entry) => {
 
   x[key].push(value);
 };
+
+// TODO: confirm order and centralize this in enums/magic-property-types.js
+const magicPropertiesOrder = [
+  MagicPropertyType.Indestructible,
+  MagicPropertyType.ChanceToCastChainLightningWhenStruck,
+  MagicPropertyType.ChanceToCastChargedBoltWhenStruck,
+  MagicPropertyType.ChanceToCastEnchantWhenStruck,
+  MagicPropertyType.ChanceToCastGlacialSpikeWhenStruck,
+  MagicPropertyType.ChanceToCastStaticFieldWhenStruck,
+  MagicPropertyType.ChanceToCastNovaWhenStruck,
+  MagicPropertyType.ChanceToCastFrostNovaOnStriking,
+  MagicPropertyType.ChanceToCastHolyBoltOnStriking,
+  MagicPropertyType.ChanceToCastIceBlastOnStriking,
+  MagicPropertyType.ChanceToCastWeakenOnStriking,
+  MagicPropertyType.AllSkillLevels,
+  MagicPropertyType.AmazonPasssiveAndMagicSkills,
+  MagicPropertyType.AssassinShadowDisciplines,
+  MagicPropertyType.BarbarianSkillLevels,
+  MagicPropertyType.BarbarianCombatSkills,
+  MagicPropertyType.BarbarianWarcries,
+  MagicPropertyType.DruidElementalSkills,
+  MagicPropertyType.DruidShapeShiftingSkills,
+  MagicPropertyType.NecromancerSkillLevels,
+  MagicPropertyType.NecromancerCurses,
+  MagicPropertyType.NecromancerSummoningSkills,
+  MagicPropertyType.NecromancerPoisonAndBoneSkills,
+  MagicPropertyType.PaladinSkillLevels,
+  MagicPropertyType.PaladinDefensiveAuras,
+  MagicPropertyType.SorceressSkillLevels,
+  MagicPropertyType.SorceressColdMastery,
+  MagicPropertyType.SorceressLightningMastery,
+  MagicPropertyType.SorceressFireMastery,
+  MagicPropertyType.FireSkills,
+  MagicPropertyType.FasterCastRate,
+  MagicPropertyType.FasterRunWalk,
+  MagicPropertyType.FasterHitRecovery,
+  MagicPropertyType.SkillTeleport,
+  MagicPropertyType.IncreasedAttackSpeed,
+  MagicPropertyType.FiresMagicArrows,
+  MagicPropertyType.EnhancedDamage,
+  MagicPropertyType.Damage,
+  MagicPropertyType.MinimumDamage,
+  MagicPropertyType.MaximumDamage,
+  MagicPropertyType.MaximumDamageByLevel,
+  MagicPropertyType.MaximumDamageByLevel,
+  MagicPropertyType.PoisonSkillDamage,
+  MagicPropertyType.IgnoreTargetDefense,
+  MagicPropertyType.DamageToDemons,
+  MagicPropertyType.AttackRating,
+  MagicPropertyType.BonusToAttackRating,
+  MagicPropertyType.AttackRatingAgainstDemons,
+  MagicPropertyType.FireDamage,
+  MagicPropertyType.LightningDamage,
+  MagicPropertyType.ColdDamage,
+  MagicPropertyType.PoisonDamage,
+  MagicPropertyType.MaximumFireDamage,
+  MagicPropertyType.ManaStolenPerHit,
+  MagicPropertyType.LifeStolenPerHit,
+  MagicPropertyType.CrushingBlow,
+  MagicPropertyType.DeadlyStrike,
+  MagicPropertyType.OpenWounds,
+  MagicPropertyType.PreventMonsterHeal,
+  MagicPropertyType.SlowsTarget,
+  MagicPropertyType.Knockback,
+  MagicPropertyType.FasterBlockRate,
+  MagicPropertyType.IncreasedChanceOfBlocking,
+  MagicPropertyType.EnhancedDefense,
+  MagicPropertyType.DefenseByLevel,
+  MagicPropertyType.Defense,
+  MagicPropertyType.DefenseVsMelee,
+  MagicPropertyType.DefenseVsMissle,
+  MagicPropertyType.Strength,
+  MagicPropertyType.StrengthByLevel,
+  MagicPropertyType.Dexterity,
+  MagicPropertyType.Energy,
+  MagicPropertyType.Vitality,
+  MagicPropertyType.Life,
+  MagicPropertyType.LifeByLevel,
+  MagicPropertyType.ReplenishLife,
+  MagicPropertyType.Mana,
+  MagicPropertyType.MaximumStamina,
+  MagicPropertyType.HealStamina,
+  MagicPropertyType.HealStaminaByLevel,
+  MagicPropertyType.RegenerateMana,
+  MagicPropertyType.ColdResist,
+  MagicPropertyType.LightningResist,
+  MagicPropertyType.FireResist,
+  MagicPropertyType.PoisonResist,
+  MagicPropertyType.AllResistances,
+  MagicPropertyType.ColdAbsorb,
+  MagicPropertyType.ColdAbsorbByLevel,
+  MagicPropertyType.MagicAbsorb,
+  MagicPropertyType.PoisonLengthReduced,
+  MagicPropertyType.HalfFreezeDuration,
+  MagicPropertyType.CannotBeFrozen,
+  MagicPropertyType.IncreaseMaximumLife,
+  MagicPropertyType.IncreaseMaximumMana,
+  MagicPropertyType.DamageReduced,
+  MagicPropertyType.DamageReducedPercentage,
+  MagicPropertyType.MagicDamageReduced,
+  MagicPropertyType.ManaAfterKill,
+  MagicPropertyType.LifeAfterKill,
+  MagicPropertyType.DamageTakenGoesToMana,
+  MagicPropertyType.AttackerTakesDamage,
+  MagicPropertyType.ExtraGold,
+  MagicPropertyType.ExtraGoldByLevel,
+  MagicPropertyType.MagicFind,
+  MagicPropertyType.MagicFindByLevel,
+  MagicPropertyType.LightRadius,
+  MagicPropertyType.DamageToUndead,
+  MagicPropertyType.Requirements,
+  MagicPropertyType.SpellChargesTeleport,
+  MagicPropertyType.Socketed,
+];

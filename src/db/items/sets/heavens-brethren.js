@@ -51,7 +51,7 @@ export default normalizeItems({
   },
   {
     id: ids.TaebaeksGlory,
-    name: "Taebaek's Teaching",
+    name: "Taebaek's Glory",
     baseId: ids.Ward,
     properties: {
       base: {
@@ -71,7 +71,7 @@ export default normalizeItems({
   },
   {
     id: ids.OndalsAlmighty,
-    name: "Ondal's Teaching",
+    name: "Ondal's Almighty",
     baseId: ids.SpiredHelm,
     properties: {
       base: {

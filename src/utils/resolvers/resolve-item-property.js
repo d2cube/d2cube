@@ -183,6 +183,7 @@ const resolvers = {
     `-${x}% to Enemy Lightning Resistance`,
   [MagicPropertyType.LowerPoisonResist]: (x) =>
     `-${x}% to Enemy Poison Resistance`,
+  [MagicPropertyType.MagicAbsorb]: (x) => `+${x} Magic Absorb`,
   [MagicPropertyType.MagicDamage]: ({x, y}) => `Adds ${x}-${y} Magic Damage`,
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
