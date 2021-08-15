@@ -1,6 +1,5 @@
 import {props} from 'uinix-fp';
 import {getItemById} from '../api/index.js';
-import {BasePropertyType} from '../enums/base-property-type.js';
 
 import {add, sum} from './fp.js';
 import {resolveItemRunes} from './resolvers/resolve-item-runes.js';
@@ -24,9 +23,6 @@ export const calcItemStats = (item) => {
         runeword,
       );
       Object.entries(runewordProperties.magic).forEach(pushEntry(stats));
-      // TODO: this is a hack for now (mutative)
-      item.properties.base[BasePropertyType.RequiredLevel] =
-        runewordProperties.base[BasePropertyType.RequiredLevel];
     } else {
       item.sockets.forEach((socket) => {
         const socketItem = getItemById(socket);
