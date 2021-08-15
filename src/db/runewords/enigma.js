@@ -26,6 +26,7 @@ export default {
         [MagicPropertyType.LifeAfterKill]: 14,
         [MagicPropertyType.DamageTakenGoesToMana]: 15,
         [MagicPropertyType.MagicFind]: 1,
+        [MagicPropertyType.Socketed]: 3,
       },
     },
   },

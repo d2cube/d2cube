@@ -231,6 +231,7 @@ const resolvers = {
   [MagicPropertyType.SkillFireBall]: (x) => `+${x} to Fire Ball`,
   [MagicPropertyType.SkillFireWall]: (x) => `+${x} to Fire Wall`,
   [MagicPropertyType.SkillMeteor]: (x) => `+${x} to Meteor`,
+  [MagicPropertyType.SkillTeleport]: (x) => `+${x} to Teleport`,
   [MagicPropertyType.SlowsTarget]: (x) => `Slows Target by ${x}%`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
   [MagicPropertyType.SorceressColdMastery]: (x) =>

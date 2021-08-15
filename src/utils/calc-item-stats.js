@@ -1,7 +1,10 @@
 import {props} from 'uinix-fp';
 import {getItemById} from '../api/index.js';
+import {BasePropertyType} from '../enums/base-property-type.js';
 
 import {add, sum} from './fp.js';
+import {resolveItemRunes} from './resolvers/resolve-item-runes.js';
+import {resolveItemRuneword} from './resolvers/resolve-item-runeword.js';
 
 // Track all magic properties from magic/set/socket bonuses
 export const calcItemStats = (item) => {
@@ -12,13 +15,26 @@ export const calcItemStats = (item) => {
   Object.entries(magicProperties).forEach(pushEntry(stats));
 
   // Calc socket properties
-  if (item.sockets) {
-    item.sockets.forEach((socket) => {
-      const socketItem = getItemById(socket);
-      const socketProperties =
-        props(`properties.socket.${item.socketCategory}`)(socketItem) || {};
-      Object.entries(socketProperties).forEach(pushEntry(stats));
-    });
+  const {sockets, socketCategory} = item;
+  if (sockets) {
+    const runes = resolveItemRunes(item);
+    const runeword = resolveItemRuneword(runes)(item);
+    if (runeword) {
+      const runewordProperties = props(`properties.${socketCategory}`)(
+        runeword,
+      );
+      Object.entries(runewordProperties.magic).forEach(pushEntry(stats));
+      // TODO: this is a hack for now (mutative)
+      item.properties.base[BasePropertyType.RequiredLevel] =
+        runewordProperties.base[BasePropertyType.RequiredLevel];
+    } else {
+      item.sockets.forEach((socket) => {
+        const socketItem = getItemById(socket);
+        const socketProperties =
+          props(`properties.socket.${socketCategory}`)(socketItem) || {};
+        Object.entries(socketProperties).forEach(pushEntry(stats));
+      });
+    }
   }
 
   // Reduce effective value
