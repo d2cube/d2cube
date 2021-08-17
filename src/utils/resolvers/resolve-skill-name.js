@@ -8,6 +8,7 @@ const names = {
   [SkillType.CriticalStrike]: 'Critical Strike',
   [SkillType.Dodge]: 'Dodge',
   [SkillType.Enchant]: 'Enchant',
+  [SkillType.EnergyShield]: 'Energy Shield',
   [SkillType.FireBall]: 'Fire Ball',
   [SkillType.FireBolt]: 'Fire Bolt',
   [SkillType.FireMastery]: 'Fire Mastery',

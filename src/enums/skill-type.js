@@ -10,6 +10,7 @@ export const SkillType = {
   CriticalStrike: 'CriticalStrike',
   Dodge: 'Dodge',
   Enchant: 'Enchant',
+  EnergyShield: 'EnergyShield',
   FireBall: 'FireBall',
   FireBolt: 'FireBolt',
   FireMastery: 'FireMastery',

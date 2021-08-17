@@ -12,6 +12,7 @@ import lionheart from './lionheart.js';
 import lore from './lore.js';
 import malice from './malice.js';
 import melody from './melody.js';
+import memory from './memory.js';
 import spirit from './spirit.js';
 
 export default {
@@ -22,6 +23,7 @@ export default {
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
+  [RunewordType.LumIoSolEth]: memory,
   [RunewordType.OrtSol]: lore,
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelKoNef]: melody,
