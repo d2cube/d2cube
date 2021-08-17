@@ -19,6 +19,7 @@ import rhyme from './rhyme.js';
 import silence from './silence.js';
 import smoke from './smoke.js';
 import spirit from './spirit.js';
+import stealth from './stealth.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
@@ -37,6 +38,7 @@ export default {
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
+  [RunewordType.TalEth]: stealth,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
   [RunewordType.TirRal]: leaf,

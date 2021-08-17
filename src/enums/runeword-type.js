@@ -15,6 +15,7 @@ export const RunewordType = {
   RalOrtTal: 'RalOrtTal',
   ShaelEth: 'ShaelEth',
   ShaelKoNef: 'ShaelKoNef',
+  TalEth: 'TalEth',
   TalThulOrtAmn: 'TalThulOrtAmn',
   ThulIoNef: 'ThulIoNef',
   TirRal: 'TirRal',
