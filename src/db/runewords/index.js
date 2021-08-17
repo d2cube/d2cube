@@ -17,6 +17,7 @@ import nadir from './nadir.js';
 import radiance from './radiance.js';
 import rhyme from './rhyme.js';
 import silence from './silence.js';
+import smoke from './smoke.js';
 import spirit from './spirit.js';
 
 export default {
@@ -29,6 +30,7 @@ export default {
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
   [RunewordType.LumIoSolEth]: memory,
+  [RunewordType.NefLum]: smoke,
   [RunewordType.NefTir]: nadir,
   [RunewordType.NefSolIth]: radiance,
   [RunewordType.OrtSol]: lore,

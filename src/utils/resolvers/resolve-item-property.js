@@ -149,7 +149,8 @@ const resolvers = {
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
-  [MagicPropertyType.LightRadius]: (x) => `+${x} to Light Radius`,
+  [MagicPropertyType.LightRadius]: (x) =>
+    `${x > 0 ? `+${x}` : x} to Light Radius`,
   [MagicPropertyType.LowerFireResist]: (x) => `${x}% to Enemy Fire Resistance`,
   [MagicPropertyType.LowerLightningResist]: (x) =>
     `${x}% to Enemy Lightning Resistance`,
