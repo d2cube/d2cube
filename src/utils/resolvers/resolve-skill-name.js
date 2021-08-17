@@ -3,6 +3,7 @@ import {SkillType} from '../../enums/index.js';
 const names = {
   [SkillType.ChainLightning]: 'Chain Lightning',
   [SkillType.ChargedBolt]: 'Charged Bolt',
+  [SkillType.CloakOfShadows]: 'Cloak of Shadows',
   [SkillType.ColdMastery]: 'Cold Mastery',
   [SkillType.CorpseExplosion]: 'Corpse Explosion',
   [SkillType.CriticalStrike]: 'Critical Strike',

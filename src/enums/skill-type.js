@@ -5,6 +5,7 @@
 export const SkillType = {
   ChainLightning: 'ChainLightning',
   ChargedBolt: 'ChargedBolt',
+  CloakOfShadows: 'CloakOfShadows',
   ColdMastery: 'ColdMastery',
   CorpseExplosion: 'CorpseExplosion',
   CriticalStrike: 'CriticalStrike',
