@@ -21,10 +21,12 @@ import smoke from './smoke.js';
 import spirit from './spirit.js';
 import stealth from './stealth.js';
 import steel from './steel.js';
+import strength from './strength.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
   [RunewordType.AmnRalThul]: kingsGrace,
+  [RunewordType.AmnTir]: strength,
   [RunewordType.DolEldHelIstTirVex]: silence,
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.HelLumFal]: lionheart,
