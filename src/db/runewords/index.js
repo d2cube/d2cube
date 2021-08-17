@@ -6,10 +6,12 @@ import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
+import kingsGrace from './kings-grace.js';
 import spirit from './spirit.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
+  [RunewordType.AmnRalThul]: kingsGrace,
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,

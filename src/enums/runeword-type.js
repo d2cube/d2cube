@@ -1,5 +1,6 @@
 export const RunewordType = {
   AmnElIthTirSol: 'AmnElIthTirSol',
+  AmnRalThul: 'AmnRalThul',
   EthRalOrtTal: 'EthRalOrtTal',
   JahGulEth: 'JahGulEth',
   JahIthBer: 'JahIthBer',
