@@ -2,6 +2,7 @@ import {
   BasePropertyType,
   ItemType,
   MagicPropertyType,
+  PlayerClassType,
   RunewordType,
   SkillType,
 } from '../../enums/index.js';
@@ -23,7 +24,10 @@ export default {
       [MagicPropertyType.LightningResist]: 60,
       [MagicPropertyType.MaximumLightningResist]: 5,
       [MagicPropertyType.Skill]: {
-        [SkillType.HolyShock]: 3,
+        [SkillType.HolyShock]: {
+          x: 3,
+          y: PlayerClassType.Paladin,
+        },
       },
       [MagicPropertyType.SpellCharges]: {
         [SkillType.ChainLightning]: {x: 7, y: 60},

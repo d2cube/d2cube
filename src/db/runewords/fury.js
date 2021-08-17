@@ -1,6 +1,7 @@
 import {
   BasePropertyType,
   MagicPropertyType,
+  PlayerClassType,
   RunewordType,
   SkillType,
 } from '../../enums/index.js';
@@ -24,7 +25,10 @@ export default {
       [MagicPropertyType.DeadlyStrike]: 33,
       [MagicPropertyType.LifeStolenPerHit]: 6,
       [MagicPropertyType.Skill]: {
-        [SkillType.Frenzy]: 5,
+        [SkillType.Frenzy]: {
+          x: 5,
+          y: PlayerClassType.Barbarian,
+        },
       },
     },
   },

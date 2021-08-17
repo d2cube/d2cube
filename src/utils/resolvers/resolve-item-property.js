@@ -186,7 +186,8 @@ const resolvers = {
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
   [MagicPropertyType.Skill]: (x) =>
     Object.entries(x).map(
-      ([skill, level]) => `+${level} to ${resolveSkillName(skill)}`,
+      ([skill, {x, y}]) =>
+        `+${x} to ${resolveSkillName(skill)}${y ? ` (${y} only)` : ''}`,
     ),
   [MagicPropertyType.SkillSetLevels]: (x) =>
     Object.entries(x).map(

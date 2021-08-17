@@ -20,7 +20,7 @@ export default {
       [MagicPropertyType.AllSkillLevels]: 2,
       [MagicPropertyType.FasterRunWalk]: 45,
       [MagicPropertyType.Skill]: {
-        [SkillType.Teleport]: 1,
+        [SkillType.Teleport]: {x: 1},
       },
       [MagicPropertyType.Defense]: [750, 775],
       [MagicPropertyType.StrengthByLevel]: 0.75,

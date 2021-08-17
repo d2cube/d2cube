@@ -4,6 +4,7 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  PlayerClassType,
   SkillSetType,
   SkillType,
 } from '../../../enums/index.js';
@@ -26,9 +27,12 @@ export default normalizeItems({
       magic: {
         [MagicPropertyType.FasterCastRate]: 20,
         [MagicPropertyType.Skill]: {
-          [SkillType.ColdMastery]: [1, 2],
-          [SkillType.LightningMastery]: [1, 2],
-          [SkillType.FireMastery]: [1, 2],
+          [SkillType.ColdMastery]: {x: [1, 2], y: PlayerClassType.Sorceress},
+          [SkillType.LightningMastery]: {
+            x: [1, 2],
+            y: PlayerClassType.Sorceress,
+          },
+          [SkillType.FireMastery]: {x: [1, 2], y: PlayerClassType.Sorceress},
         },
         [MagicPropertyType.Energy]: 10,
         [MagicPropertyType.Life]: 57,

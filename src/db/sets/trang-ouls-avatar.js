@@ -13,19 +13,19 @@ export default {
     null,
     {
       [MagicPropertyType.Skill]: {
-        [SkillType.FireBall]: 18,
+        [SkillType.FireBall]: {x: 18},
       },
       [MagicPropertyType.RegenerateMana]: 15,
     },
     {
       [MagicPropertyType.Skill]: {
-        [SkillType.FireWall]: 13,
+        [SkillType.FireWall]: {x: 13},
       },
       [MagicPropertyType.RegenerateMana]: 30,
     },
     {
       [MagicPropertyType.Skill]: {
-        [SkillType.Meteor]: 10,
+        [SkillType.Meteor]: {x: 10},
       },
       [MagicPropertyType.RegenerateMana]: 45,
     },
@@ -36,9 +36,9 @@ export default {
       [MagicPropertyType.LifeStolenPerHit]: 20,
       [MagicPropertyType.FireMastery]: 3,
       [MagicPropertyType.Skill]: {
-        [SkillType.Meteor]: 10,
-        [SkillType.FireWall]: 13,
-        [SkillType.FireBall]: 18,
+        [SkillType.Meteor]: {x: 10},
+        [SkillType.FireWall]: {x: 13},
+        [SkillType.FireBall]: {x: 18},
       },
       [MagicPropertyType.Defense]: 200,
       [MagicPropertyType.Mana]: 100,

@@ -7,6 +7,7 @@ const names = {
   [SkillType.CorpseExplosion]: 'Corpse Explosion',
   [SkillType.Enchant]: 'Enchant',
   [SkillType.FireBall]: 'Fire Ball',
+  [SkillType.FireBolt]: 'Fire Bolt',
   [SkillType.FireMastery]: 'Fire Mastery',
   [SkillType.FireWall]: 'Fire Wall',
   [SkillType.Frenzy]: 'Frenzy',
@@ -15,11 +16,13 @@ const names = {
   [SkillType.HolyBolt]: 'Holy Bolt',
   [SkillType.HolyShock]: 'Holy Shock',
   [SkillType.IceBlast]: 'Ice Blast',
+  [SkillType.Inferno]: 'Inferno',
   [SkillType.LightningMastery]: 'Lightning Mastery',
   [SkillType.Meteor]: 'Meteor',
   [SkillType.Nova]: 'Nova',
   [SkillType.StaticField]: 'Static Field',
   [SkillType.Teleport]: 'Teleport',
+  [SkillType.Warmth]: 'Warmth',
   [SkillType.Weaken]: 'Weaken',
 };
 

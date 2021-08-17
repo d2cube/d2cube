@@ -7,6 +7,7 @@ import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
 import kingsGrace from './kings-grace.js';
+import leaf from './leaf.js';
 import spirit from './spirit.js';
 
 export default {
@@ -18,4 +19,5 @@ export default {
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
+  [RunewordType.TirRal]: leaf,
 };
