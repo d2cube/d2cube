@@ -9,6 +9,7 @@ import honor from './honor.js';
 import kingsGrace from './kings-grace.js';
 import leaf from './leaf.js';
 import lionheart from './lionheart.js';
+import lore from './lore.js';
 import spirit from './spirit.js';
 
 export default {
@@ -18,6 +19,7 @@ export default {
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
+  [RunewordType.OrtSol]: lore,
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
