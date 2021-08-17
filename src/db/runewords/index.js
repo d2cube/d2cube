@@ -20,6 +20,7 @@ import silence from './silence.js';
 import smoke from './smoke.js';
 import spirit from './spirit.js';
 import stealth from './stealth.js';
+import steel from './steel.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
@@ -41,5 +42,6 @@ export default {
   [RunewordType.TalEth]: stealth,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
+  [RunewordType.TirEl]: steel,
   [RunewordType.TirRal]: leaf,
 };
