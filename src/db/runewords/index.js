@@ -15,6 +15,7 @@ import melody from './melody.js';
 import memory from './memory.js';
 import nadir from './nadir.js';
 import radiance from './radiance.js';
+import rhyme from './rhyme.js';
 import spirit from './spirit.js';
 
 export default {
@@ -30,6 +31,7 @@ export default {
   [RunewordType.NefSolIth]: radiance,
   [RunewordType.OrtSol]: lore,
   [RunewordType.RalOrtTal]: ancientsPledge,
+  [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
