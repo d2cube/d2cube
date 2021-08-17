@@ -3,6 +3,7 @@ import {
   ItemType,
   MagicPropertyType,
   RunewordType,
+  SkillType,
 } from '../../enums/index.js';
 import ids from '../ids/index.js';
 
@@ -18,7 +19,9 @@ export default {
     magic: {
       [MagicPropertyType.AllSkillLevels]: 2,
       [MagicPropertyType.FasterRunWalk]: 45,
-      [MagicPropertyType.SkillTeleport]: 1,
+      [MagicPropertyType.Skill]: {
+        [SkillType.Teleport]: 1,
+      },
       [MagicPropertyType.Defense]: [750, 775],
       [MagicPropertyType.StrengthByLevel]: 0.75,
       [MagicPropertyType.LifeAfterKill]: 14,

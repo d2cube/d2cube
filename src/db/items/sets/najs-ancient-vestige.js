@@ -4,6 +4,7 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -28,7 +29,9 @@ export default normalizeItems({
         [MagicPropertyType.LightningDamage]: {x: 6, y: 45},
         [MagicPropertyType.Energy]: 35,
         [MagicPropertyType.Mana]: 70,
-        [MagicPropertyType.SpellChargesTeleport]: {x: 11, y: 69},
+        [MagicPropertyType.SpellCharges]: {
+          [SkillType.Teleport]: {x: 11, y: 69},
+        },
         [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [null, null, null],
@@ -62,7 +65,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 28,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastChainLightningWhenStruck]: {x: 5, y: 12},
+        [MagicPropertyType.ChanceToCastWhenStruck]: {
+          [SkillType.ChainLightning]: {x: 5, y: 12},
+        },
         [MagicPropertyType.FireDamage]: {x: 25, y: 35},
         [MagicPropertyType.Defense]: 75,
         [MagicPropertyType.Strength]: 15,

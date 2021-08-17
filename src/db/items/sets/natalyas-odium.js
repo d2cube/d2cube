@@ -4,6 +4,7 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillSetType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -42,7 +43,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 73,
       },
       magic: {
-        [MagicPropertyType.AssassinShadowDisciplines]: 2,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.AssassinShadowDisciplines]: 2,
+        },
         [MagicPropertyType.Defense]: [150, 225],
         [MagicPropertyType.LifeByLevel]: 1,
         [MagicPropertyType.PoisonResist]: 25,

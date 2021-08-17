@@ -1,4 +1,9 @@
-import {ItemSetType, MagicPropertyType} from '../../enums/index.js';
+import {
+  ItemSetType,
+  MagicPropertyType,
+  SkillSetType,
+  SkillType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
@@ -7,24 +12,34 @@ export default {
   bonus: [
     null,
     {
-      [MagicPropertyType.SkillFireBall]: 18,
+      [MagicPropertyType.Skill]: {
+        [SkillType.FireBall]: 18,
+      },
       [MagicPropertyType.RegenerateMana]: 15,
     },
     {
-      [MagicPropertyType.SkillFireWall]: 13,
+      [MagicPropertyType.Skill]: {
+        [SkillType.FireWall]: 13,
+      },
       [MagicPropertyType.RegenerateMana]: 30,
     },
     {
-      [MagicPropertyType.SkillMeteor]: 10,
+      [MagicPropertyType.Skill]: {
+        [SkillType.Meteor]: 10,
+      },
       [MagicPropertyType.RegenerateMana]: 45,
     },
     {
-      [MagicPropertyType.NecromancerSkillLevels]: 3,
+      [MagicPropertyType.SkillSetLevels]: {
+        [SkillSetType.NecromancerSkills]: 3,
+      },
       [MagicPropertyType.LifeStolenPerHit]: 20,
       [MagicPropertyType.FireMastery]: 3,
-      [MagicPropertyType.SkillMeteor]: 10,
-      [MagicPropertyType.SkillFireWall]: 13,
-      [MagicPropertyType.SkillFireBall]: 18,
+      [MagicPropertyType.Skill]: {
+        [SkillType.Meteor]: 10,
+        [SkillType.FireWall]: 13,
+        [SkillType.FireBall]: 18,
+      },
       [MagicPropertyType.Defense]: 200,
       [MagicPropertyType.Mana]: 100,
       [MagicPropertyType.RegenerateMana]: 60,

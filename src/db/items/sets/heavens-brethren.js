@@ -4,6 +4,7 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -22,7 +23,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 68,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastFrostNovaOnStriking]: {x: 3, y: 10},
+        [MagicPropertyType.ChanceToCastOnStriking]: {
+          [SkillType.FrostNova]: {x: 3, y: 10},
+        },
         [MagicPropertyType.IncreasedAttackSpeed]: 40,
         [MagicPropertyType.MaximumDamageByLevel]: 1.5,
         [MagicPropertyType.FireDamage]: {x: 20, y: 30},
@@ -78,7 +81,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 69,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWeakenOnStriking]: {x: 3, y: 10},
+        [MagicPropertyType.ChanceToCastOnStriking]: {
+          [SkillType.Weaken]: {x: 3, y: 10},
+        },
         [MagicPropertyType.FasterHitRecovery]: 24,
         [MagicPropertyType.Defense]: 50,
         [MagicPropertyType.Strength]: 10,

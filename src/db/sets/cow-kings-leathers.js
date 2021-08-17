@@ -1,4 +1,4 @@
-import {ItemSetType, MagicPropertyType} from '../../enums/index.js';
+import {ItemSetType, MagicPropertyType, SkillType} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
@@ -10,7 +10,9 @@ export default {
       [MagicPropertyType.PoisonResist]: 25,
     },
     {
-      [MagicPropertyType.ChanceToCastStaticFieldWhenStruck]: {x: 5, y: 25},
+      [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [SkillType.StaticField]: {x: 5, y: 25},
+      },
       [MagicPropertyType.IncreasedAttackSpeed]: 30,
       [MagicPropertyType.Strength]: 20,
       [MagicPropertyType.MaximumStamina]: 100,
