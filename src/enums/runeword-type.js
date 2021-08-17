@@ -8,6 +8,7 @@ export const RunewordType = {
   JahIthBer: 'JahIthBer',
   LumIoSolEth: 'LumIoSolEth',
   NefTir: 'NefTir',
+  NefSolIth: 'NefSolIth',
   OrtSol: 'OrtSol',
   RalOrtTal: 'RalOrtTal',
   ShaelKoNef: 'ShaelKoNef',

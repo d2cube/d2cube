@@ -14,6 +14,7 @@ import malice from './malice.js';
 import melody from './melody.js';
 import memory from './memory.js';
 import nadir from './nadir.js';
+import radiance from './radiance.js';
 import spirit from './spirit.js';
 
 export default {
@@ -26,6 +27,7 @@ export default {
   [RunewordType.JahIthBer]: enigma,
   [RunewordType.LumIoSolEth]: memory,
   [RunewordType.NefTir]: nadir,
+  [RunewordType.NefSolIth]: radiance,
   [RunewordType.OrtSol]: lore,
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelKoNef]: melody,
