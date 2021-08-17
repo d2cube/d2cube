@@ -10,6 +10,7 @@ import kingsGrace from './kings-grace.js';
 import leaf from './leaf.js';
 import lionheart from './lionheart.js';
 import lore from './lore.js';
+import malice from './malice.js';
 import spirit from './spirit.js';
 
 export default {
@@ -17,6 +18,7 @@ export default {
   [RunewordType.AmnRalThul]: kingsGrace,
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.HelLumFal]: lionheart,
+  [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
   [RunewordType.OrtSol]: lore,

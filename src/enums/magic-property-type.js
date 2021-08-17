@@ -13,6 +13,7 @@ export const MagicPropertyType = {
   EnhancedDefense: 'EnhancedDefense',
   EnhancedDamage: 'EnhancedDamage',
   AttackRating: 'AttackRating',
+  DrainLife: 'DrainLife',
   IncreasedChanceOfBlocking: 'IncreasedChanceOfBlocking',
   MinimumDamage: 'MinimumDamage',
   MaximumDamage: 'MaximumDamage',

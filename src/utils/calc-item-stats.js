@@ -110,6 +110,8 @@ const magicPropertiesOrder = [
   MagicPropertyType.DeadlyStrike,
   MagicPropertyType.OpenWounds,
   MagicPropertyType.PreventMonsterHeal,
+  MagicPropertyType.MonsterDefensePerHit,
+  MagicPropertyType.DrainLife,
   MagicPropertyType.SlowsTarget,
   MagicPropertyType.Knockback,
   MagicPropertyType.FasterBlockRate,

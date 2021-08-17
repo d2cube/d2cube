@@ -113,6 +113,7 @@ const resolvers = {
   [MagicPropertyType.DefenseVsMelee]: (x) => `+${x} Defense Vs. Melee`,
   [MagicPropertyType.DefenseVsMissle]: (x) => `+${x} Defense Vs. Missle`,
   [MagicPropertyType.Dexterity]: (x) => `+${x} to Dexterity`,
+  [MagicPropertyType.DrainLife]: (x) => `Drain Life ${x}`,
   [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,
   [MagicPropertyType.EnhancedDamage]: (x) => `+${x}% Enhanced Damage`,
   [MagicPropertyType.EnhancedDefense]: (x) => `+${x}% Enhanced Defense`,
@@ -172,6 +173,8 @@ const resolvers = {
     `+${x}% to Maximum Poison Resist`,
   [MagicPropertyType.MaximumStamina]: (x) => `+${x} Maximum Stamina`,
   [MagicPropertyType.MinimumDamage]: (x) => `+${x} to Minimum Damage`,
+  [MagicPropertyType.MonsterDefensePerHit]: (x) =>
+    `${x} to Monster Defense Per Hit`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
   [MagicPropertyType.PiercingAttack]: () => 'Piercing Attack',
   [MagicPropertyType.PoisonDamage]: ({x, y, z}) =>
