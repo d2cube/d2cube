@@ -8,12 +8,14 @@ import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
 import kingsGrace from './kings-grace.js';
 import leaf from './leaf.js';
+import lionheart from './lionheart.js';
 import spirit from './spirit.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
   [RunewordType.AmnRalThul]: kingsGrace,
   [RunewordType.EthRalOrtTal]: holyThunder,
+  [RunewordType.HelLumFal]: lionheart,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
   [RunewordType.RalOrtTal]: ancientsPledge,
