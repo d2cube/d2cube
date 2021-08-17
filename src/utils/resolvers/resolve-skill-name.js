@@ -32,6 +32,7 @@ const names = {
   [SkillType.SlowMissles]: 'Slow Missles',
   [SkillType.StaticField]: 'Static Field',
   [SkillType.Teleport]: 'Teleport',
+  [SkillType.Twister]: 'Twister',
   [SkillType.Warmth]: 'Warmth',
   [SkillType.Weaken]: 'Weaken',
 };

@@ -34,6 +34,7 @@ export const SkillType = {
   SlowMissles: 'SlowMissles',
   StaticField: 'StaticField',
   Teleport: 'Teleport',
+  Twister: 'Twister',
   Warmth: 'Warmth',
   Weaken: 'Weaken',
 };

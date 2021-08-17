@@ -25,6 +25,7 @@ import strength from './strength.js';
 import venom from './venom.js';
 import wealth from './wealth.js';
 import white from './white.js';
+import zephyr from './zephyr.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
@@ -42,6 +43,7 @@ export default {
   [RunewordType.NefLum]: smoke,
   [RunewordType.NefTir]: nadir,
   [RunewordType.NefSolIth]: radiance,
+  [RunewordType.OrtEth]: zephyr,
   [RunewordType.OrtSol]: lore,
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
