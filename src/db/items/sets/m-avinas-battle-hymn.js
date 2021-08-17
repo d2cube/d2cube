@@ -4,6 +4,8 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillSetType,
+  SkillType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -33,10 +35,14 @@ export default normalizeItems({
           [MagicPropertyType.MagicDamage]: {x: 114, y: 377},
         },
         {
-          [MagicPropertyType.ChanceToCastNovaOnStriking]: {x: 15, y: 10},
+          [MagicPropertyType.ChanceToCastOnStriking]: {
+            [SkillType.Nova]: {x: 15, y: 10},
+          },
         },
         {
-          [MagicPropertyType.AmazonBowAndCrossbowSkills]: 2,
+          [MagicPropertyType.SkillSetLevels]: {
+            [SkillSetType.AmazonBowAndCrossbowSkills]: 2,
+          },
         },
         null,
       ],
@@ -51,8 +57,12 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 70,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastGlacialSpikeWhenStruck]: {x: 3, y: 10},
-        [MagicPropertyType.AmazonPasssiveAndMagicSkills]: 2,
+        [MagicPropertyType.ChanceToCastWhenStruck]: {
+          [SkillType.GlacialSpike]: {x: 3, y: 10},
+        },
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.AmazonPassiveAndMagicSkills]: 2,
+        },
         [MagicPropertyType.DefenseByLevel]: 4,
         [MagicPropertyType.Defense]: 350,
         [MagicPropertyType.MagicDamageReduced]: [5, 12],

@@ -4,6 +4,7 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillSetType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -23,9 +24,11 @@ export default normalizeItems({
       },
       magic: {
         [MagicPropertyType.FasterCastRate]: 20,
-        [MagicPropertyType.SorceressColdMastery]: [1, 2],
-        [MagicPropertyType.SorceressLightningMastery]: [1, 2],
-        [MagicPropertyType.SorceressFireMastery]: [1, 2],
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.SorceressColdMastery]: [1, 2],
+          [SkillSetType.SorceressLightningMastery]: [1, 2],
+          [SkillSetType.SorceressFireMastery]: [1, 2],
+        },
         [MagicPropertyType.Energy]: 10,
         [MagicPropertyType.Life]: 57,
         [MagicPropertyType.Mana]: 77,
@@ -33,7 +36,9 @@ export default normalizeItems({
       set: [
         null,
         {
-          [MagicPropertyType.SorceressSkillLevels]: 1,
+          [MagicPropertyType.SkillSetLevels]: {
+            [SkillSetType.SorceressSkills]: 1,
+          },
         },
         {
           [MagicPropertyType.LowerFireResist]: -15,
@@ -132,7 +137,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 65,
       },
       magic: {
-        [MagicPropertyType.SorceressSkillLevels]: 2,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.SorceressSkills]: 2,
+        },
         [MagicPropertyType.LightningDamage]: {x: 3, y: 32},
         [MagicPropertyType.Life]: 50,
         [MagicPropertyType.Mana]: 42,

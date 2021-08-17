@@ -4,6 +4,7 @@ import {ItemType} from '../../enums/index.js';
 import {cb, concat, join} from '../fp.js';
 import {resolveItemRunes} from './resolve-item-runes.js';
 import {resolveItemRuneword} from './resolve-item-runeword.js';
+import {resolveSuffixName} from './resolve-suffix-name.js';
 
 export const resolveItemName = (item) => {
   const {
@@ -41,7 +42,7 @@ export const resolveItemName = (item) => {
     concat(prefix),
     concat(runeword ? runeword.name : name),
     concat(cb((x) => Array.from({length: x}).join('+'))(tier)),
-    concat(cb((x) => `of ${x}`)(suffix)),
+    concat(cb((x) => `of ${resolveSuffixName(x)}`)(suffix)),
     join(' '),
   ])([]);
 

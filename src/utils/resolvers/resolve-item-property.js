@@ -2,6 +2,8 @@ import {k} from 'uinix-fp';
 
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
 import {formatValues} from '../format-values.js';
+import {resolveSkillName} from './resolve-skill-name.js';
+import {resolveSkillSetName} from './resolve-skill-set-name.js';
 
 export const resolveItemProperty =
   (item) =>
@@ -67,15 +69,6 @@ const resolvers = {
   [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,
-  [MagicPropertyType.AmazonBowAndCrossbowSkills]: (x) =>
-    `+${x} to Bow and Crossbow Skills (Amazon Only)`,
-  [MagicPropertyType.AmazonPasssiveAndMagicSkills]: (x) =>
-    `+${x} to Passive and Magic Skills (Amazon Only)`,
-  [MagicPropertyType.AmazonSkillLevels]: (x) => `+${x} to Amazon Skill Levels`,
-  [MagicPropertyType.AssassinShadowDisciplines]: (x) =>
-    `+${x} to Shadow Disciplines (Assassin Only)`,
-  [MagicPropertyType.AssassinSkillLevels]: (x) =>
-    `+${x} to Assassin Skill Levels`,
   [MagicPropertyType.AttackRating]: (x) => `+${x} to Attack Rating`,
   [MagicPropertyType.AttackRatingAgainstDemons]: (x) =>
     `+${x} to Attack Rating Against Demons`,
@@ -85,39 +78,23 @@ const resolvers = {
     `Attacker Takes Damage of ${x}`,
   [MagicPropertyType.AttackerTakesLightningDamage]: (x) =>
     `Attacker Takes Lightning Damage of ${x}`,
-  [MagicPropertyType.BarbarianCombatSkills]: (x) =>
-    `+${x} to Combat Skills (Barbarian Only)`,
-  [MagicPropertyType.BarbarianMasteries]: (x) =>
-    `+${x} to Masteries (Barbarian Only)`,
-  [MagicPropertyType.BarbarianSkillLevels]: (x) =>
-    `+${x} to Barbarian Skill Levels`,
-  [MagicPropertyType.BarbarianWarcries]: (x) =>
-    `+${x} to Warcries (Barbarian Only)`,
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
-  [MagicPropertyType.ChanceToCastChainLightningWhenStruck]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Chain Lightning when struck`,
-  [MagicPropertyType.ChanceToCastChargedBoltWhenStruck]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Charged Bolt when struck`,
-  [MagicPropertyType.ChanceToCastEnchantWhenStruck]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Enchant when struck`,
-  [MagicPropertyType.ChanceToCastFrostNovaOnStriking]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Frost Nova on striking`,
-  [MagicPropertyType.ChanceToCastGlacialSpikeWhenStruck]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Glacial Spike when struck`,
-  [MagicPropertyType.ChanceToCastHolyBoltOnStriking]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Holy Bolt on striking`,
-  [MagicPropertyType.ChanceToCastIceBlastOnStriking]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Ice Blast on striking`,
-  [MagicPropertyType.ChanceToCastNovaOnStriking]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Nova on striking`,
-  [MagicPropertyType.ChanceToCastNovaWhenStruck]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Nova when struck`,
-  [MagicPropertyType.ChanceToCastStaticFieldWhenStruck]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Static Field when struck`,
-  [MagicPropertyType.ChanceToCastWeakenOnStriking]: ({x, y}) =>
-    `${y}% Chance to cast level ${x} Weaken on striking`,
+  [MagicPropertyType.ChanceToCastOnStriking]: (x) =>
+    Object.entries(x).map(
+      ([skill, {x, y}]) =>
+        `${y}% Chance to cast level ${x} ${resolveSkillName(
+          skill,
+        )} on striking`,
+    ),
+  [MagicPropertyType.ChanceToCastWhenStruck]: (x) =>
+    Object.entries(x).map(
+      ([skill, {x, y}]) =>
+        `${y}% Chance to cast level ${x} ${resolveSkillName(
+          skill,
+        )} when struck`,
+    ),
   [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
   [MagicPropertyType.ColdDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Cold Damage`,
@@ -132,11 +109,6 @@ const resolvers = {
   [MagicPropertyType.DamageToDemons]: (x) => `+${x}% Damage to Demons`,
   [MagicPropertyType.DamageToUndead]: (x) => `+${x}% Damage to Undead`,
   [MagicPropertyType.DeadlyStrike]: (x) => `${x}% Deadly Strike`,
-  [MagicPropertyType.DruidSkillLevels]: (x) => `+${x} to Druid Skill Levels`,
-  [MagicPropertyType.DruidElementalSkills]: (x) =>
-    `+${x} to Elemental Skills (Druid Only)`,
-  [MagicPropertyType.DruidShapeShiftingSkills]: (x) =>
-    `+${x} to Shape Shifting Skills (Druid Only)`,
   [MagicPropertyType.Defense]: (x) => `+${x} Defense`,
   [MagicPropertyType.DefenseVsMelee]: (x) => `+${x} Defense Vs. Melee`,
   [MagicPropertyType.DefenseVsMissle]: (x) => `+${x} Defense Vs. Missle`,
@@ -155,7 +127,6 @@ const resolvers = {
   [MagicPropertyType.FireMastery]: (x) => `+${x} to Fire Mastery`,
   [MagicPropertyType.FiresMagicArrows]: (x) =>
     `Fires Magic Arrows (Level ${x})`,
-  [MagicPropertyType.FireSkills]: (x) => `+${x} to Fire Skills`,
   [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
   [MagicPropertyType.HalfFreezeDuration]: () => 'Half Freeze Duration',
   [MagicPropertyType.HealStamina]: (x) => `Heal Stamina Plus ${x}%`,
@@ -178,11 +149,11 @@ const resolvers = {
     `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
   [MagicPropertyType.LightRadius]: (x) => `+${x} to Light Radius`,
-  [MagicPropertyType.LowerFireResist]: (x) => `-${x}% to Enemy Fire Resistance`,
+  [MagicPropertyType.LowerFireResist]: (x) => `${x}% to Enemy Fire Resistance`,
   [MagicPropertyType.LowerLightningResist]: (x) =>
-    `-${x}% to Enemy Lightning Resistance`,
+    `${x}% to Enemy Lightning Resistance`,
   [MagicPropertyType.LowerPoisonResist]: (x) =>
-    `-${x}% to Enemy Poison Resistance`,
+    `${x}% to Enemy Poison Resistance`,
   [MagicPropertyType.MagicAbsorb]: (x) => `+${x} Magic Absorb`,
   [MagicPropertyType.MagicDamage]: ({x, y}) => `Adds ${x}-${y} Magic Damage`,
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
@@ -201,23 +172,7 @@ const resolvers = {
     `+${x}% to Maximum Poison Resist`,
   [MagicPropertyType.MaximumStamina]: (x) => `+${x} Maximum Stamina`,
   [MagicPropertyType.MinimumDamage]: (x) => `+${x} to Minimum Damage`,
-  [MagicPropertyType.NecromancerCurses]: (x) =>
-    `+${x} to Curses (Necromancer Only)`,
-  [MagicPropertyType.NecromancerPoisonAndBoneSkills]: (x) =>
-    `+${x} to Poison and Bone Skills (Necromancer Only)`,
-  [MagicPropertyType.NecromancerSkillLevels]: (x) =>
-    `+${x} to Necromancer Skill Levels`,
-  [MagicPropertyType.NecromancerSummoningSkills]: (x) =>
-    `+${x} to Summoning Skills (Necromancer Only)`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
-  [MagicPropertyType.PaladinCombatSkills]: (x) =>
-    `+${x} to Combat Skills (Paladin Only)`,
-  [MagicPropertyType.PaladinDefensiveAuras]: (x) =>
-    `+${x} to Defensive Auras (Paladin Only)`,
-  [MagicPropertyType.PaladinOffensiveAuras]: (x) =>
-    `+${x} to Offensive Auras (Paladin Only)`,
-  [MagicPropertyType.PaladinSkillLevels]: (x) =>
-    `+${x} to Paladin Skill Levels`,
   [MagicPropertyType.PiercingAttack]: () => 'Piercing Attack',
   [MagicPropertyType.PoisonDamage]: ({x, y, z}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Poison Damage Over ${z} Seconds`,
@@ -229,22 +184,21 @@ const resolvers = {
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
-  [MagicPropertyType.SkillFireBall]: (x) => `+${x} to Fire Ball`,
-  [MagicPropertyType.SkillFireWall]: (x) => `+${x} to Fire Wall`,
-  [MagicPropertyType.SkillMeteor]: (x) => `+${x} to Meteor`,
-  [MagicPropertyType.SkillTeleport]: (x) => `+${x} to Teleport`,
+  [MagicPropertyType.Skill]: (x) =>
+    Object.entries(x).map(
+      ([skill, level]) => `+${level} to ${resolveSkillName(skill)}`,
+    ),
+  [MagicPropertyType.SkillSetLevels]: (x) =>
+    Object.entries(x).map(
+      ([skillSet, level]) => `+${level} to ${resolveSkillSetName(skillSet)}`,
+    ),
   [MagicPropertyType.SlowsTarget]: (x) => `Slows Target by ${x}%`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
-  [MagicPropertyType.SorceressColdMastery]: (x) =>
-    `+${x} to Cold Mastery (Sorceress Only)`,
-  [MagicPropertyType.SorceressFireMastery]: (x) =>
-    `+${x} to Fire Mastery (Sorceress Only)`,
-  [MagicPropertyType.SorceressLightningMastery]: (x) =>
-    `+${x} to Lightning Mastery (Sorceress Only)`,
-  [MagicPropertyType.SorceressSkillLevels]: (x) =>
-    `+${x} to Sorceress Skill Levels`,
-  [MagicPropertyType.SpellChargesTeleport]: ({x, y}) =>
-    `Level ${x} Teleport (${y}/${y} Charges)`,
+  [MagicPropertyType.SpellCharges]: (x) =>
+    Object.entries(x).map(
+      ([skill, {x, y}]) =>
+        `Level ${x} ${resolveSkillName(skill)} (${y}/${y} Charges)`,
+    ),
   [MagicPropertyType.Strength]: (x) => `+${x} to Strength`,
   [MagicPropertyType.TargetDefense]: (x) => `-${x}% Target Defense`,
   [MagicPropertyType.Vitality]: (x) => `+${x} to Vitality`,

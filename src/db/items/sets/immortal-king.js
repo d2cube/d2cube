@@ -4,6 +4,8 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillSetType,
+  SkillType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -59,11 +61,12 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 76,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastEnchantWhenStruck]: {
-          x: 5,
-          y: 5,
+        [MagicPropertyType.ChanceToCastWhenStruck]: {
+          [SkillType.Enchant]: {x: 5, y: 5},
         },
-        [MagicPropertyType.BarbarianCombatSkills]: 2,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.BarbarianCombatSkills]: 2,
+        },
         [MagicPropertyType.Defense]: 400,
         [MagicPropertyType.PoisonResist]: 50,
       },
@@ -96,7 +99,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 47,
       },
       magic: {
-        [MagicPropertyType.BarbarianWarcries]: 2,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.BarbarianWarcries]: 2,
+        },
         [MagicPropertyType.Defense]: 125,
         [MagicPropertyType.ExtraGold]: 37,
         [MagicPropertyType.MagicFind]: [25, 40],
@@ -115,9 +120,8 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 30,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastChargedBoltWhenStruck]: {
-          x: 4,
-          y: 12,
+        [MagicPropertyType.ChanceToCastWhenStruck]: {
+          [SkillType.ChargedBolt]: {x: 4, y: 12},
         },
         [MagicPropertyType.Defense]: 65,
         [MagicPropertyType.Dexterity]: 20,
@@ -172,7 +176,9 @@ export default normalizeItems({
           [MagicPropertyType.DamageReducedPercentage]: 20,
         },
         {
-          [MagicPropertyType.BarbarianMasteries]: 2,
+          [MagicPropertyType.SkillSetLevels]: {
+            [SkillSetType.BarbarianMasteries]: 2,
+          },
         },
       ],
     },
@@ -197,7 +203,9 @@ export default normalizeItems({
           [MagicPropertyType.MagicFind]: 25,
         },
         {
-          [MagicPropertyType.BarbarianCombatSkills]: 2,
+          [MagicPropertyType.SkillSetLevels]: {
+            [SkillSetType.BarbarianCombatSkills]: 2,
+          },
         },
         {
           [MagicPropertyType.Defense]: 160,

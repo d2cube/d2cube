@@ -1,4 +1,8 @@
-import {ItemSetType, MagicPropertyType} from '../../enums/index.js';
+import {
+  ItemSetType,
+  MagicPropertyType,
+  SkillSetType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
@@ -13,7 +17,9 @@ export default {
       [MagicPropertyType.MagicFind]: 50,
     },
     {
-      [MagicPropertyType.DruidSkillLevels]: 3,
+      [MagicPropertyType.SkillSetLevels]: {
+        [SkillSetType.DruidSkills]: 3,
+      },
       [MagicPropertyType.EnhancedDamage]: 350,
       [MagicPropertyType.BonusToAttackRating]: 150,
       [MagicPropertyType.ManaStolenPerHit]: 10,

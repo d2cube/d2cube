@@ -4,6 +4,7 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillSetType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -22,7 +23,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 11,
       },
       magic: {
-        [MagicPropertyType.FireSkills]: 1,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.FireSkills]: 1,
+        },
         [MagicPropertyType.MaximumFireDamage]: 10,
         [MagicPropertyType.DamageToUndead]: 50,
       },

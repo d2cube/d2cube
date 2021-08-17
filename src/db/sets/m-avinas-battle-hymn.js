@@ -1,4 +1,8 @@
-import {ItemSetType, MagicPropertyType} from '../../enums/index.js';
+import {
+  ItemSetType,
+  MagicPropertyType,
+  SkillSetType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
@@ -14,7 +18,9 @@ export default {
     },
     null,
     {
-      [MagicPropertyType.AmazonSkillLevels]: 3,
+      [MagicPropertyType.SkillSetLevels]: {
+        [SkillSetType.AmazonSkills]: 3,
+      },
       [MagicPropertyType.AttackRating]: 100,
       [MagicPropertyType.Defense]: 100,
       [MagicPropertyType.Strength]: 20,

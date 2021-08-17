@@ -4,6 +4,7 @@ import {
   ItemSetType,
   ItemType,
   MagicPropertyType,
+  SkillSetType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
 import ids from '../../ids/index.js';
@@ -22,7 +23,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 49,
       },
       magic: {
-        [MagicPropertyType.NecromancerSummoningSkills]: 2,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.NecromancerSummoningSkills]: 2,
+        },
         [MagicPropertyType.FasterRunWalk]: 40,
         [MagicPropertyType.EnhancedDefense]: 150,
         [MagicPropertyType.DefenseVsMissle]: 100,
@@ -51,7 +54,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 54,
       },
       magic: {
-        [MagicPropertyType.NecromancerPoisonAndBoneSkills]: 2,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.NecromancerPoisonAndBoneSkills]: 2,
+        },
         [MagicPropertyType.IncreasedChanceOfBlocking]: 30,
         [MagicPropertyType.Defense]: 125,
         [MagicPropertyType.Strength]: 25,
@@ -63,7 +68,7 @@ export default normalizeItems({
         null,
         null,
         {
-          [MagicPropertyType.LowerPoisonResist]: 25,
+          [MagicPropertyType.LowerPoisonResist]: -25,
         },
         {
           [MagicPropertyType.ReplenishLife]: 15,
@@ -99,7 +104,9 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 45,
       },
       magic: {
-        [MagicPropertyType.NecromancerCurses]: 2,
+        [MagicPropertyType.SkillSetLevels]: {
+          [SkillSetType.NecromancerCurses]: 2,
+        },
         [MagicPropertyType.FasterCastRate]: 20,
         [MagicPropertyType.PoisonSkillDamage]: 25,
         [MagicPropertyType.Defense]: 30,
