@@ -24,6 +24,8 @@ const names = {
   [SkillType.LightningMastery]: 'Lightning Mastery',
   [SkillType.Meteor]: 'Meteor',
   [SkillType.Nova]: 'Nova',
+  [SkillType.PoisonExplosion]: 'Poison Explosion',
+  [SkillType.PoisonNova]: 'Poison Nova',
   [SkillType.SlowMissles]: 'Slow Missles',
   [SkillType.StaticField]: 'Static Field',
   [SkillType.Teleport]: 'Teleport',

@@ -26,6 +26,8 @@ export const SkillType = {
   LightningMastery: 'LightningMastery',
   Meteor: 'Meteor',
   Nova: 'Nova',
+  PoisonExplosion: 'PoisonExplosion',
+  PoisonNova: 'PoisonNova',
   SlowMissles: 'SlowMissles',
   StaticField: 'StaticField',
   Teleport: 'Teleport',

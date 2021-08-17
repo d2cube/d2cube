@@ -22,6 +22,7 @@ import spirit from './spirit.js';
 import stealth from './stealth.js';
 import steel from './steel.js';
 import strength from './strength.js';
+import venom from './venom.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
@@ -41,6 +42,7 @@ export default {
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
+  [RunewordType.TalDolMal]: venom,
   [RunewordType.TalEth]: stealth,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
