@@ -45,7 +45,7 @@ export const resolveRunewordItemTypes = (category) => {
       return missleItemTypes;
     case 'shield':
       return shieldItemTypes;
-    case 'weapons':
+    case 'weapon':
       return [...meleeItemTypes, ...missleItemTypes, ItemType.SorceressOrb];
     default:
       return [];

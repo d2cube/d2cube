@@ -16,11 +16,13 @@ import memory from './memory.js';
 import nadir from './nadir.js';
 import radiance from './radiance.js';
 import rhyme from './rhyme.js';
+import silence from './silence.js';
 import spirit from './spirit.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
   [RunewordType.AmnRalThul]: kingsGrace,
+  [RunewordType.DolEldHelIstTirVex]: silence,
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.IthElEth]: malice,
