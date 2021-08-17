@@ -11,6 +11,7 @@ import leaf from './leaf.js';
 import lionheart from './lionheart.js';
 import lore from './lore.js';
 import malice from './malice.js';
+import melody from './melody.js';
 import spirit from './spirit.js';
 
 export default {
@@ -23,6 +24,7 @@ export default {
   [RunewordType.JahIthBer]: enigma,
   [RunewordType.OrtSol]: lore,
   [RunewordType.RalOrtTal]: ancientsPledge,
+  [RunewordType.ShaelKoNef]: melody,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
   [RunewordType.TirRal]: leaf,

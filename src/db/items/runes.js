@@ -94,7 +94,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Knockback]: 1,
+          [MagicPropertyType.Knockback]: true,
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.DefenseVsMissle]: 30,
@@ -667,7 +667,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.HitBlindsTarget]: 1,
+          [MagicPropertyType.HitBlindsTarget]: true,
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.IncreaseMaximumMana]: 5,
@@ -739,13 +739,13 @@ export default normalizeItems({
           [MagicPropertyType.FreezesTarget]: 3,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.CannotBeFrozen]: 1,
+          [MagicPropertyType.CannotBeFrozen]: true,
         },
         [SocketCategoryType.Helm]: {
-          [MagicPropertyType.CannotBeFrozen]: 1,
+          [MagicPropertyType.CannotBeFrozen]: true,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.CannotBeFrozen]: 1,
+          [MagicPropertyType.CannotBeFrozen]: true,
         },
       },
     },
@@ -759,16 +759,16 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.Indestructible]: 1,
+          [MagicPropertyType.Indestructible]: true,
         },
         [SocketCategoryType.Armor]: {
-          [MagicPropertyType.Indestructible]: 1,
+          [MagicPropertyType.Indestructible]: true,
         },
         [SocketCategoryType.Helm]: {
-          [MagicPropertyType.Indestructible]: 1,
+          [MagicPropertyType.Indestructible]: true,
         },
         [SocketCategoryType.Shield]: {
-          [MagicPropertyType.Indestructible]: 1,
+          [MagicPropertyType.Indestructible]: true,
         },
       },
     },
