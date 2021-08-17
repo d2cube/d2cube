@@ -175,7 +175,7 @@ const resolvers = {
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
   [MagicPropertyType.PiercingAttack]: () => 'Piercing Attack',
   [MagicPropertyType.PoisonDamage]: ({x, y, z}) =>
-    `Adds ${x === y ? x : `${x}-${y}`} Poison Damage Over ${z} Seconds`,
+    `+${x === y ? x : `${x}-${y}`} Poison Damage Over ${z} Seconds`,
   [MagicPropertyType.PoisonLengthReduced]: (x) =>
     `Poison Length Reduced by ${x}%`,
   [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,

@@ -13,6 +13,7 @@ const names = {
   [SkillType.FrostNova]: 'Frost Nova',
   [SkillType.GlacialSpike]: 'Glacial Spike',
   [SkillType.HolyBolt]: 'Holy Bolt',
+  [SkillType.HolyShock]: 'Holy Shock',
   [SkillType.IceBlast]: 'Ice Blast',
   [SkillType.LightningMastery]: 'Lightning Mastery',
   [SkillType.Meteor]: 'Meteor',

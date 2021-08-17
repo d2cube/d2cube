@@ -1,4 +1,4 @@
-import {props} from 'uinix-fp';
+import {isPlainObject, props} from 'uinix-fp';
 import {getItemById} from '../api/index.js';
 import {MagicPropertyType} from '../enums/magic-property-type.js';
 
@@ -45,6 +45,8 @@ export const calcItemStats = (item) => {
       effective = values[0];
     } else if (values.every(Number.isFinite)) {
       effective = sum(values);
+    } else if (values.every(isPlainObject)) {
+      effective = sum(values);
     } else {
       effective = values.reduce((acc2, value) => {
         if (Array.isArray(value)) {
@@ -80,7 +82,6 @@ const magicPropertiesOrder = [
   MagicPropertyType.FasterCastRate,
   MagicPropertyType.FasterRunWalk,
   MagicPropertyType.FasterHitRecovery,
-  MagicPropertyType.Skill,
   MagicPropertyType.IncreasedAttackSpeed,
   MagicPropertyType.FiresMagicArrows,
   MagicPropertyType.EnhancedDamage,
@@ -97,10 +98,10 @@ const magicPropertiesOrder = [
   MagicPropertyType.BonusToAttackRating,
   MagicPropertyType.AttackRatingAgainstDemons,
   MagicPropertyType.FireDamage,
+  MagicPropertyType.MaximumFireDamage,
   MagicPropertyType.LightningDamage,
   MagicPropertyType.ColdDamage,
   MagicPropertyType.PoisonDamage,
-  MagicPropertyType.MaximumFireDamage,
   MagicPropertyType.ManaStolenPerHit,
   MagicPropertyType.LifeStolenPerHit,
   MagicPropertyType.CrushingBlow,
@@ -130,6 +131,8 @@ const magicPropertiesOrder = [
   MagicPropertyType.HealStaminaByLevel,
   MagicPropertyType.RegenerateMana,
   MagicPropertyType.ColdResist,
+  MagicPropertyType.Skill,
+  MagicPropertyType.MaximumLightningResist,
   MagicPropertyType.LightningResist,
   MagicPropertyType.FireResist,
   MagicPropertyType.PoisonResist,

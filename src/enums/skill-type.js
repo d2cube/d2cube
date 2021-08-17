@@ -15,6 +15,7 @@ export const SkillType = {
   FrostNova: 'FrostNova',
   GlacialSpike: 'GlacialSpike',
   HolyBolt: 'HolyBolt',
+  HolyShock: 'HolyShock',
   IceBlast: 'IceBlast',
   LightningMastery: 'LightningMastery',
   Meteor: 'Meteor',
