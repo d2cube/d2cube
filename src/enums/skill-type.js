@@ -3,6 +3,8 @@
  * @enum {string}
  */
 export const SkillType = {
+  BoneArmor: 'BoneArmor',
+  BoneSpear: 'BoneSpear',
   ChainLightning: 'ChainLightning',
   ChargedBolt: 'ChargedBolt',
   CloakOfShadows: 'CloakOfShadows',
@@ -28,6 +30,7 @@ export const SkillType = {
   Nova: 'Nova',
   PoisonExplosion: 'PoisonExplosion',
   PoisonNova: 'PoisonNova',
+  SkeletonMastery: 'SkeletonMastery',
   SlowMissles: 'SlowMissles',
   StaticField: 'StaticField',
   Teleport: 'Teleport',

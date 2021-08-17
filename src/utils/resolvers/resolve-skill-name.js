@@ -1,6 +1,8 @@
 import {SkillType} from '../../enums/index.js';
 
 const names = {
+  [SkillType.BoneArmor]: 'Bone Armor',
+  [SkillType.BoneSpear]: 'Bone Spear',
   [SkillType.ChainLightning]: 'Chain Lightning',
   [SkillType.ChargedBolt]: 'Charged Bolt',
   [SkillType.CloakOfShadows]: 'Cloak of Shadows',
@@ -26,6 +28,7 @@ const names = {
   [SkillType.Nova]: 'Nova',
   [SkillType.PoisonExplosion]: 'Poison Explosion',
   [SkillType.PoisonNova]: 'Poison Nova',
+  [SkillType.SkeletonMastery]: 'Skeleton Mastery',
   [SkillType.SlowMissles]: 'Slow Missles',
   [SkillType.StaticField]: 'Static Field',
   [SkillType.Teleport]: 'Teleport',

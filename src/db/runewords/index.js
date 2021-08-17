@@ -23,17 +23,21 @@ import stealth from './stealth.js';
 import steel from './steel.js';
 import strength from './strength.js';
 import venom from './venom.js';
+import wealth from './wealth.js';
+import white from './white.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
   [RunewordType.AmnRalThul]: kingsGrace,
   [RunewordType.AmnTir]: strength,
   [RunewordType.DolEldHelIstTirVex]: silence,
+  [RunewordType.DolIo]: white,
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
+  [RunewordType.LemKoTir]: wealth,
   [RunewordType.LumIoSolEth]: memory,
   [RunewordType.NefLum]: smoke,
   [RunewordType.NefTir]: nadir,
