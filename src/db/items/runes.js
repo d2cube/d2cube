@@ -117,7 +117,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.TargetDefense]: 25,
+          [MagicPropertyType.TargetDefense]: -25,
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.RegenerateMana]: 15,
@@ -713,7 +713,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.IgnoreTargetDefense]: 1,
+          [MagicPropertyType.IgnoreTargetDefense]: true,
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.IncreaseMaximumLife]: 5,

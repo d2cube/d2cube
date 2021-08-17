@@ -9,6 +9,7 @@ const names = {
   [SkillType.FireBall]: 'Fire Ball',
   [SkillType.FireMastery]: 'Fire Mastery',
   [SkillType.FireWall]: 'Fire Wall',
+  [SkillType.Frenzy]: 'Frenzy',
   [SkillType.FrostNova]: 'Frost Nova',
   [SkillType.GlacialSpike]: 'Glacial Spike',
   [SkillType.HolyBolt]: 'Holy Bolt',

@@ -3,7 +3,9 @@
  * @enum {string}
  */
 export const ItemType = {
-  AmazonWeapon: 'AmazonWeapon',
+  AmazonBow: 'AmazonBow',
+  AmazonJavelin: 'AmazonJavelin',
+  AmazonSpear: 'AmazonSpear',
   Ammunition: 'Ammunition',
   Amulet: 'Amulet',
   AssassinKatar: 'AssassinKatar',
@@ -15,12 +17,14 @@ export const ItemType = {
   Bow: 'Bow',
   Charm: 'Charm',
   Circlet: 'Circlet',
+  Club: 'Club',
   Crossbow: 'Crossbow',
   Dagger: 'Dagger',
   DruidPelt: 'DruidPelt',
   Essence: 'Essence',
   Gem: 'Gem',
   Glove: 'Glove',
+  Hammer: 'Hammer',
   Helm: 'Helm',
   Javelin: 'Javelin',
   Jewel: 'Jewel',

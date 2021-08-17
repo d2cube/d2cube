@@ -11,7 +11,7 @@ export default {
   id: RunewordType.ThulIoNef,
   name: 'Black',
   runes: [ids.Thul, ids.Io, ids.Nef],
-  types: [ItemType.Mace],
+  types: [ItemType.Club, ItemType.Hammer, ItemType.Mace],
   properties: {
     base: {
       [BasePropertyType.RequiredLevel]: 35,

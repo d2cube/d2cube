@@ -1,17 +1,17 @@
 import {
   BasePropertyType,
-  ItemType,
   MagicPropertyType,
   RunewordType,
   SkillType,
 } from '../../enums/index.js';
+import {resolveRunewordItemTypes} from '../../utils/resolvers/resolve-runeword-item-types.js';
 import ids from '../ids/index.js';
 
 export default {
   id: RunewordType.JahIthBer,
   name: 'Enigma',
   runes: [ids.Jah, ids.Ith, ids.Ber],
-  types: [ItemType.BodyArmor],
+  types: resolveRunewordItemTypes('armor'),
   properties: {
     base: {
       [BasePropertyType.RequiredLevel]: 65,

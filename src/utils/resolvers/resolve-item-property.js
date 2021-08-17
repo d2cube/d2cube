@@ -200,7 +200,7 @@ const resolvers = {
         `Level ${x} ${resolveSkillName(skill)} (${y}/${y} Charges)`,
     ),
   [MagicPropertyType.Strength]: (x) => `+${x} to Strength`,
-  [MagicPropertyType.TargetDefense]: (x) => `-${x}% Target Defense`,
+  [MagicPropertyType.TargetDefense]: (x) => `${x}% Target Defense`,
   [MagicPropertyType.Vitality]: (x) => `+${x} to Vitality`,
 };
 

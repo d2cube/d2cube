@@ -91,6 +91,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.MaximumDamageByLevel,
   MagicPropertyType.PoisonSkillDamage,
   MagicPropertyType.IgnoreTargetDefense,
+  MagicPropertyType.TargetDefense,
   MagicPropertyType.DamageToDemons,
   MagicPropertyType.AttackRating,
   MagicPropertyType.BonusToAttackRating,

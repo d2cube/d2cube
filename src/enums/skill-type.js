@@ -11,6 +11,7 @@ export const SkillType = {
   FireBall: 'FireBall',
   FireMastery: 'FireMastery',
   FireWall: 'FireWall',
+  Frenzy: 'Frenzy',
   FrostNova: 'FrostNova',
   GlacialSpike: 'GlacialSpike',
   HolyBolt: 'HolyBolt',

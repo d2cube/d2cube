@@ -4,7 +4,9 @@ import {createItems} from '../utils/create-items.js';
  * Database of normalized items.
  */
 
-import amazonWeapons from './amazon-weapons.js';
+import amazonBows from './amazon-bows.js';
+import amazonJavelins from './amazon-javelins.js';
+import amazonSpears from './amazon-spears.js';
 import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
 import assasinKatars from './assassin-katars.js';
@@ -16,12 +18,14 @@ import boots from './boots.js';
 import bows from './bows.js';
 import charms from './charms.js';
 import circlets from './circlets.js';
+import clubs from './clubs.js';
 import crossbows from './crossbows.js';
 import daggers from './daggers.js';
 import druidPelts from './druid-pelts.js';
 import essences from './essences.js';
 import gems from './gems.js';
 import gloves from './gloves.js';
+import hammers from './hammers.js';
 import helms from './helms.js';
 import javelins from './javelins.js';
 import jewels from './jewels.js';
@@ -49,7 +53,9 @@ import uniques from './uniques.js';
 import wands from './wands.js';
 
 export default createItems({
-  ...amazonWeapons,
+  ...amazonBows,
+  ...amazonJavelins,
+  ...amazonSpears,
   ...ammunitions,
   ...amulets,
   ...assasinKatars,
@@ -61,12 +67,14 @@ export default createItems({
   ...bows,
   ...charms,
   ...circlets,
+  ...clubs,
   ...crossbows,
   ...daggers,
   ...druidPelts,
   ...essences,
   ...gems,
   ...gloves,
+  ...hammers,
   ...helms,
   ...javelins,
   ...jewels,
