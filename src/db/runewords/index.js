@@ -1,6 +1,7 @@
 import {RunewordType} from '../../enums/index.js';
 
 import ancientsPledge from './ancients-pledge.js';
+import beast from './beast.js';
 import black from './black.js';
 import bramble from './bramble.js';
 import enigma from './enigma.js';
@@ -32,6 +33,7 @@ export default {
   [RunewordType.AmnElIthTirSol]: honor,
   [RunewordType.AmnRalThul]: kingsGrace,
   [RunewordType.AmnTir]: strength,
+  [RunewordType.BerTirUmMalLum]: beast,
   [RunewordType.DolEldHelIstTirVex]: silence,
   [RunewordType.DolIo]: white,
   [RunewordType.EthRalOrtTal]: holyThunder,

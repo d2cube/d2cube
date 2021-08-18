@@ -69,7 +69,9 @@ const resolvers = {
   [MagicPropertyType.Aura]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `Level ${x} ${resolveSkillName(skill)} Aura When Equipped${y ? ` (${y} only)` : ''}`,
+        `Level ${x} ${resolveSkillName(skill)} Aura When Equipped${
+          y ? ` (${y} only)` : ''
+        }`,
     ),
   [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,

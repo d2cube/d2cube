@@ -12,6 +12,7 @@ const names = {
   [SkillType.Dodge]: 'Dodge',
   [SkillType.Enchant]: 'Enchant',
   [SkillType.EnergyShield]: 'Energy Shield',
+  [SkillType.Fanaticism]: 'Fanaticism',
   [SkillType.FireBall]: 'Fire Ball',
   [SkillType.FireBolt]: 'Fire Bolt',
   [SkillType.FireMastery]: 'Fire Mastery',
@@ -24,6 +25,7 @@ const names = {
   [SkillType.IceBlast]: 'Ice Blast',
   [SkillType.Inferno]: 'Inferno',
   [SkillType.LightningMastery]: 'Lightning Mastery',
+  [SkillType.Lycanthropy]: 'Lycanthropy',
   [SkillType.Meteor]: 'Meteor',
   [SkillType.Nova]: 'Nova',
   [SkillType.PoisonExplosion]: 'Poison Explosion',
@@ -32,11 +34,13 @@ const names = {
   [SkillType.SlowMissles]: 'Slow Missles',
   [SkillType.StaticField]: 'Static Field',
   [SkillType.SpiritOfBarbs]: 'Spirit of Barbs',
+  [SkillType.SummonGrizzly]: 'Summon Grizzly',
   [SkillType.Teleport]: 'Teleport',
   [SkillType.Thorns]: 'Thorns',
   [SkillType.Twister]: 'Twister',
   [SkillType.Warmth]: 'Warmth',
   [SkillType.Weaken]: 'Weaken',
+  [SkillType.Werebear]: 'Werebear',
 };
 
 export const resolveSkillName = (skill) => names[skill];
