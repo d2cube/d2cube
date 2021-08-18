@@ -75,8 +75,8 @@ const pushEntry = (x) => (entry) => {
 // TODO: confirm order and centralize this in enums/magic-property-types.js
 const magicPropertiesOrder = [
   MagicPropertyType.Indestructible,
-  MagicPropertyType.ChanceToCastWhenStruck,
-  MagicPropertyType.ChanceToCastOnStriking,
+  MagicPropertyType.ChanceToCastSpellWhenStruck,
+  MagicPropertyType.ChanceToCastSpellOnStriking,
   MagicPropertyType.AllSkillLevels,
   MagicPropertyType.SkillSetLevels,
   MagicPropertyType.FasterRunWalk,

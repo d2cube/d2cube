@@ -81,14 +81,14 @@ const resolvers = {
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
-  [MagicPropertyType.ChanceToCastOnStriking]: (x) =>
+  [MagicPropertyType.ChanceToCastSpellOnStriking]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
         `${y}% Chance to cast level ${x} ${resolveSkillName(
           skill,
         )} on striking`,
     ),
-  [MagicPropertyType.ChanceToCastWhenStruck]: (x) =>
+  [MagicPropertyType.ChanceToCastSpellWhenStruck]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
         `${y}% Chance to cast level ${x} ${resolveSkillName(
@@ -188,7 +188,7 @@ const resolvers = {
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
-  [MagicPropertyType.Skill]: (x) =>
+  [MagicPropertyType.Spell]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
         `+${x} to ${resolveSkillName(skill)}${y ? ` (${y} only)` : ''}`,

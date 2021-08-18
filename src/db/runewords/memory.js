@@ -22,7 +22,7 @@ export default {
       [MagicPropertyType.SkillSetLevels]: {
         [SkillSetType.SorceressSkills]: 3,
       },
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.EnergyShield]: {x: 3, y: PlayerClassType.Sorceress},
         [SkillType.StaticField]: {x: 2, y: PlayerClassType.Sorceress},
       },

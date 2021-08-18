@@ -23,7 +23,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 49,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
           [SkillType.Nova]: {x: 3, y: 25},
         },
         [MagicPropertyType.PoisonDamage]: {x: 24, y: 34, z: 2},
@@ -42,7 +42,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 63,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastOnStriking]: {
+        [MagicPropertyType.ChanceToCastSpellOnStriking]: {
           [SkillType.HolyBolt]: {x: 3, y: 10},
         },
         [MagicPropertyType.IncreasedAttackSpeed]: 20,

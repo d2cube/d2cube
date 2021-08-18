@@ -23,7 +23,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 28,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastOnStriking]: {
+        [MagicPropertyType.ChanceToCastSpellOnStriking]: {
           [SkillType.IceBlast]: {x: 3, y: 10},
         },
         [MagicPropertyType.Indestructible]: true,
@@ -44,7 +44,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 30,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
           [SkillType.StaticField]: {x: 3, y: 10},
         },
         [MagicPropertyType.Defense]: 200,

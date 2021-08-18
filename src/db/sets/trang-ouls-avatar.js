@@ -12,19 +12,19 @@ export default {
   bonus: [
     null,
     {
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.FireBall]: {x: 18},
       },
       [MagicPropertyType.RegenerateMana]: 15,
     },
     {
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.FireWall]: {x: 13},
       },
       [MagicPropertyType.RegenerateMana]: 30,
     },
     {
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.Meteor]: {x: 10},
       },
       [MagicPropertyType.RegenerateMana]: 45,
@@ -35,7 +35,7 @@ export default {
       },
       [MagicPropertyType.LifeStolenPerHit]: 20,
       [MagicPropertyType.FireMastery]: 3,
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.Meteor]: {x: 10},
         [SkillType.FireWall]: {x: 13},
         [SkillType.FireBall]: {x: 18},

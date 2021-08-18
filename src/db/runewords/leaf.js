@@ -22,7 +22,7 @@ export default {
       [MagicPropertyType.SkillSetLevels]: {
         [SkillSetType.FireSkills]: 3,
       },
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.FireBolt]: {x: 3, y: PlayerClassType.Sorceress},
         [SkillType.Inferno]: {x: 3, y: PlayerClassType.Sorceress},
         [SkillType.Warmth]: {x: 3, y: PlayerClassType.Sorceress},

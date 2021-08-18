@@ -23,7 +23,7 @@ export default {
       [MagicPropertyType.LightningDamage]: {x: 20, y: 60},
       [MagicPropertyType.LightningResist]: 60,
       [MagicPropertyType.MaximumLightningResist]: 5,
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.HolyShock]: {
           x: 3,
           y: PlayerClassType.Paladin,

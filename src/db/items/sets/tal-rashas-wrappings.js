@@ -26,7 +26,7 @@ export default normalizeItems({
       },
       magic: {
         [MagicPropertyType.FasterCastRate]: 20,
-        [MagicPropertyType.Skill]: {
+        [MagicPropertyType.Spell]: {
           [SkillType.ColdMastery]: {x: [1, 2], y: PlayerClassType.Sorceress},
           [SkillType.LightningMastery]: {
             x: [1, 2],

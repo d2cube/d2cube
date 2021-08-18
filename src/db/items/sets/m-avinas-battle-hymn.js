@@ -35,7 +35,7 @@ export default normalizeItems({
           [MagicPropertyType.MagicDamage]: {x: 114, y: 377},
         },
         {
-          [MagicPropertyType.ChanceToCastOnStriking]: {
+          [MagicPropertyType.ChanceToCastSpellOnStriking]: {
             [SkillType.Nova]: {x: 15, y: 10},
           },
         },
@@ -57,7 +57,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 70,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
           [SkillType.GlacialSpike]: {x: 3, y: 10},
         },
         [MagicPropertyType.SkillSetLevels]: {

@@ -24,7 +24,7 @@ export default {
       [MagicPropertyType.OpenWounds]: 66,
       [MagicPropertyType.DeadlyStrike]: 33,
       [MagicPropertyType.LifeStolenPerHit]: 6,
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.Frenzy]: {
           x: 5,
           y: PlayerClassType.Barbarian,

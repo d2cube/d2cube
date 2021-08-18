@@ -23,7 +23,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 68,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastOnStriking]: {
+        [MagicPropertyType.ChanceToCastSpellOnStriking]: {
           [SkillType.FrostNova]: {x: 3, y: 10},
         },
         [MagicPropertyType.IncreasedAttackSpeed]: 40,
@@ -81,7 +81,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 69,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastOnStriking]: {
+        [MagicPropertyType.ChanceToCastSpellOnStriking]: {
           [SkillType.Weaken]: {x: 3, y: 10},
         },
         [MagicPropertyType.FasterHitRecovery]: 24,

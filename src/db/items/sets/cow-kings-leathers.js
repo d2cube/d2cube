@@ -40,7 +40,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 18,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
           [SkillType.ChainLightning]: {x: 5, y: 18},
         },
         [MagicPropertyType.EnhancedDefense]: 60,

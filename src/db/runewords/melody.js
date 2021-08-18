@@ -24,7 +24,7 @@ export default {
       [MagicPropertyType.SkillSetLevels]: {
         [SkillSetType.AmazonBowAndCrossbowSkills]: 3,
       },
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.SlowMissles]: {x: 3, y: PlayerClassType.Amazon},
         [SkillType.Dodge]: {x: 3, y: PlayerClassType.Amazon},
         [SkillType.CriticalStrike]: {x: 3, y: PlayerClassType.Amazon},

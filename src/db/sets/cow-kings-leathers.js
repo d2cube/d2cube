@@ -10,7 +10,7 @@ export default {
       [MagicPropertyType.PoisonResist]: 25,
     },
     {
-      [MagicPropertyType.ChanceToCastWhenStruck]: {
+      [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
         [SkillType.StaticField]: {x: 5, y: 25},
       },
       [MagicPropertyType.IncreasedAttackSpeed]: 30,

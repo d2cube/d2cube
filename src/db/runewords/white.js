@@ -22,7 +22,7 @@ export default {
       [MagicPropertyType.SkillSetLevels]: {
         [SkillSetType.NecromancerPoisonAndBoneSkills]: 3,
       },
-      [MagicPropertyType.Skill]: {
+      [MagicPropertyType.Spell]: {
         [SkillType.BoneArmor]: {x: 3, y: PlayerClassType.Necromancer},
         [SkillType.BoneSpear]: {x: 2, y: PlayerClassType.Necromancer},
         [SkillType.SkeletonMastery]: {x: 4, y: PlayerClassType.Necromancer},

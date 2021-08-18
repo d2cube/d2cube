@@ -61,7 +61,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 76,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
           [SkillType.Enchant]: {x: 5, y: 5},
         },
         [MagicPropertyType.SkillSetLevels]: {
@@ -120,7 +120,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 30,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
           [SkillType.ChargedBolt]: {x: 4, y: 12},
         },
         [MagicPropertyType.Defense]: 65,

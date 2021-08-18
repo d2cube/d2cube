@@ -65,7 +65,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 28,
       },
       magic: {
-        [MagicPropertyType.ChanceToCastWhenStruck]: {
+        [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
           [SkillType.ChainLightning]: {x: 5, y: 12},
         },
         [MagicPropertyType.FireDamage]: {x: 25, y: 35},

@@ -8,13 +8,13 @@ import {resolveRunewordItemTypes} from '../../utils/resolvers/resolve-runeword-i
 import ids from '../ids/index.js';
 
 export default {
-  id: RunewordType.JahIthBer,
-  name: 'Enigma',
-  runes: [ids.Jah, ids.Ith, ids.Ber],
+  id: RunewordType.RalOhmSurEth,
+  name: 'Bramble',
+  runes: [ids.Ral, ids.Ohm, ids.Sur, ids.Eth],
   types: resolveRunewordItemTypes('armor'),
   properties: {
     base: {
-      [BasePropertyType.RequiredLevel]: 65,
+      [BasePropertyType.RequiredLevel]: 61,
     },
     magic: {
       [MagicPropertyType.AllSkillLevels]: 2,

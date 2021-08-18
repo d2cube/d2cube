@@ -22,7 +22,7 @@ export default {
       [MagicPropertyType.Defense]: 25,
       [MagicPropertyType.FasterRunWalk]: 25,
       [MagicPropertyType.IncreasedAttackSpeed]: 25,
-      [MagicPropertyType.ChanceToCastWhenStruck]: {
+      [MagicPropertyType.ChanceToCastSpellWhenStruck]: {
         [SkillType.Twister]: {x: 1, y: 7},
       },
     },
