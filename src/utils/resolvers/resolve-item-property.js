@@ -74,6 +74,7 @@ const resolvers = {
         }`,
     ),
   [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
+  [MagicPropertyType.AllAttributes]: (x) => `+${x} to All Attributes`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,
   [MagicPropertyType.AttackRating]: (x) => `+${x} to Attack Rating`,
@@ -88,6 +89,13 @@ const resolvers = {
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
+  [MagicPropertyType.ChanceToCastSpellOnKill]: (x) =>
+  Object.entries(x).map(
+    ([skill, {x, y}]) =>
+      `${y}% Chance to cast level ${x} ${resolveSkillName(
+        skill,
+      )} when you kill an enemy`,
+  ),
   [MagicPropertyType.ChanceToCastSpellOnStriking]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>

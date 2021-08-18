@@ -27,4 +27,5 @@ export const RunewordType = {
   ThulIoNef: 'ThulIoNef',
   TirEl: 'TirEl',
   TirRal: 'TirRal',
+  VexHelElEldZodEth: 'VexHelElEldZodEth',
 };

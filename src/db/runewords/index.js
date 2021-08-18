@@ -4,6 +4,7 @@ import ancientsPledge from './ancients-pledge.js';
 import beast from './beast.js';
 import black from './black.js';
 import bramble from './bramble.js';
+import breathOfTheDying from './breath-of-the-dying.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -58,4 +59,5 @@ export default {
   [RunewordType.ThulIoNef]: black,
   [RunewordType.TirEl]: steel,
   [RunewordType.TirRal]: leaf,
+  [RunewordType.VexHelElEldZodEth]: breathOfTheDying,
 };
