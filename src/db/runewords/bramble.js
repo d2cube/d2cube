@@ -17,16 +17,18 @@ export default {
       [BasePropertyType.RequiredLevel]: 61,
     },
     magic: {
-      [MagicPropertyType.AllSkillLevels]: 2,
-      [MagicPropertyType.FasterRunWalk]: 45,
-      [MagicPropertyType.Spell]: {
-        [SkillType.Teleport]: {x: 1},
+      [MagicPropertyType.Aura]: {
+        [SkillType.Thorns]: {x: [15, 21]},
       },
-      [MagicPropertyType.Defense]: [750, 775],
-      [MagicPropertyType.StrengthByLevel]: 0.75,
-      [MagicPropertyType.LifeAfterKill]: 14,
-      [MagicPropertyType.MagicFindByLevel]: 1,
-      [MagicPropertyType.Socketed]: 3,
+      [MagicPropertyType.FasterHitRecovery]: 50,
+      [MagicPropertyType.PoisonSkillDamage]: [25, 50],
+      [MagicPropertyType.Defense]: 300,
+      [MagicPropertyType.MaximumColdResist]: 5,
+      [MagicPropertyType.PoisonResist]: 100,
+      [MagicPropertyType.LifeAfterKill]: 13,
+      [MagicPropertyType.SpellCharges]: {
+        [SkillType.SpiritOfBarbs]: {x: 13, y: 33},
+      },
     },
   },
 };

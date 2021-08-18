@@ -66,6 +66,11 @@ const resolvers = {
   [BasePropertyType.RequiredDexterity]: (x) => ['Required Dexterity: ', x],
   [BasePropertyType.RequiredLevel]: (x) => ['Required Level: ', x],
   [BasePropertyType.RequiredStrength]: (x) => ['Required Strength: ', x],
+  [MagicPropertyType.Aura]: (x) =>
+    Object.entries(x).map(
+      ([skill, {x, y}]) =>
+        `Level ${x} ${resolveSkillName(skill)} Aura When Equipped${y ? ` (${y} only)` : ''}`,
+    ),
   [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,

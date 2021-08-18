@@ -2,6 +2,7 @@ import {RunewordType} from '../../enums/index.js';
 
 import ancientsPledge from './ancients-pledge.js';
 import black from './black.js';
+import bramble from './bramble.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -45,6 +46,7 @@ export default {
   [RunewordType.NefSolIth]: radiance,
   [RunewordType.OrtEth]: zephyr,
   [RunewordType.OrtSol]: lore,
+  [RunewordType.RalOhmSurEth]: bramble,
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
