@@ -10,6 +10,7 @@ export const RunewordType = {
   EthRalOrtTal: 'EthRalOrtTal',
   FalOhmUm: 'FalOhmUm',
   HelLumFal: 'HelLumFal',
+  HelOhmUmLoCham: 'HelOhmUmLoCham',
   IthElEth: 'IthElEth',
   JahGulEth: 'JahGulEth',
   JahIthBer: 'JahIthBer',

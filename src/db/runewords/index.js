@@ -10,6 +10,7 @@ import chainsOfHonor from './chains-of-honor.js';
 import chaos from './chaos.js';
 import crescentMoon from './crescent-moon.js';
 import delirium from './delirium.js';
+import doom from './doom.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -47,6 +48,7 @@ export default {
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.FalOhmUm]: chaos,
   [RunewordType.HelLumFal]: lionheart,
+  [RunewordType.HelOhmUmLoCham]: doom,
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,

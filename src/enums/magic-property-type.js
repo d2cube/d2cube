@@ -53,6 +53,7 @@ export const MagicPropertyType = {
   Knockback: 'Knockback',
   AllSkillLevels: 'AllSkillLevels',
   SkillSetLevels: 'SkillSetLevels',
+  LowerColdResist: 'LowerColdResist',
   LowerFireResist: 'LowerFireResist',
   LowerLightningResist: 'LowerLightningResist',
   LowerPoisonResist: 'LowerPoisonResist',
