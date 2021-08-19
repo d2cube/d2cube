@@ -95,6 +95,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.MaximumDamageByLevel,
   MagicPropertyType.PoisonSkillDamage,
   MagicPropertyType.IgnoreTargetDefense,
+  MagicPropertyType.LowerLightningResist,
   MagicPropertyType.TargetDefense,
   MagicPropertyType.AttackRating,
   MagicPropertyType.BonusToAttackRating,

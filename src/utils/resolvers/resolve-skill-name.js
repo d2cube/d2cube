@@ -38,6 +38,7 @@ const names = {
   [SkillType.SlowMissles]: 'Slow Missles',
   [SkillType.StaticField]: 'Static Field',
   [SkillType.SpiritOfBarbs]: 'Spirit of Barbs',
+  [SkillType.SpiritWolf]: 'Spirit Wolf',
   [SkillType.SummonGrizzly]: 'Summon Grizzly',
   [SkillType.Teleport]: 'Teleport',
   [SkillType.Thorns]: 'Thorns',

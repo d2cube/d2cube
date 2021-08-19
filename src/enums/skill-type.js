@@ -39,6 +39,7 @@ export const SkillType = {
   SkeletonMastery: 'SkeletonMastery',
   SlowMissles: 'SlowMissles',
   SpiritOfBarbs: 'SpiritOfBarbs',
+  SpiritWolf: 'SpiritWolf',
   StaticField: 'StaticField',
   SummonGrizzly: 'SummonGrizzly',
   Teleport: 'Teleport',

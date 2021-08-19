@@ -8,6 +8,7 @@ import breathOfTheDying from './breath-of-the-dying.js';
 import callToArms from './call-to-arms.js';
 import chainsOfHonor from './chains-of-honor.js';
 import chaos from './chaos.js';
+import crescentMoon from './crescent-moon.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -59,6 +60,7 @@ export default {
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
+  [RunewordType.ShaelUmTir]: crescentMoon,
   [RunewordType.TalDolMal]: venom,
   [RunewordType.TalEth]: stealth,
   [RunewordType.TalThulOrtAmn]: spirit,
