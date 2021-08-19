@@ -3,6 +3,7 @@
  * @enum {string}
  */
 export const SkillType = {
+  Attract: 'Attract',
   BattleCommand: 'BattleCommand',
   BattleCry: 'BattleCry',
   BattleOrders: 'BattleOrders',
@@ -12,8 +13,10 @@ export const SkillType = {
   ChargedBolt: 'ChargedBolt',
   CloakOfShadows: 'CloakOfShadows',
   ColdMastery: 'ColdMastery',
+  Confuse: 'Confuse',
   CorpseExplosion: 'CorpseExplosion',
   CriticalStrike: 'CriticalStrike',
+  Delirium: 'Delirium',
   Dodge: 'Dodge',
   Enchant: 'Enchant',
   EnergyShield: 'EnergyShield',
@@ -33,6 +36,7 @@ export const SkillType = {
   LightningMastery: 'LightningMastery',
   Lycanthropy: 'Lycanthropy',
   Meteor: 'Meteor',
+  MindBlast: 'MindBlast',
   Nova: 'Nova',
   PoisonExplosion: 'PoisonExplosion',
   PoisonNova: 'PoisonNova',
@@ -43,6 +47,7 @@ export const SkillType = {
   StaticField: 'StaticField',
   SummonGrizzly: 'SummonGrizzly',
   Teleport: 'Teleport',
+  Terror: 'Terror',
   Thorns: 'Thorns',
   Twister: 'Twister',
   Warmth: 'Warmth',

@@ -9,6 +9,7 @@ import callToArms from './call-to-arms.js';
 import chainsOfHonor from './chains-of-honor.js';
 import chaos from './chaos.js';
 import crescentMoon from './crescent-moon.js';
+import delirium from './delirium.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -49,6 +50,7 @@ export default {
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
+  [RunewordType.LemIstIo]: delirium,
   [RunewordType.LemKoTir]: wealth,
   [RunewordType.LumIoSolEth]: memory,
   [RunewordType.NefLum]: smoke,

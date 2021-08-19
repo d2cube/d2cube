@@ -1,6 +1,7 @@
 import {SkillType} from '../../enums/index.js';
 
 const names = {
+  [SkillType.Attract]: 'Attract',
   [SkillType.BattleCommand]: 'Battle Command',
   [SkillType.BattleCry]: 'Battle Cry',
   [SkillType.BattleOrders]: 'Battle Orders',
@@ -10,8 +11,10 @@ const names = {
   [SkillType.ChargedBolt]: 'Charged Bolt',
   [SkillType.CloakOfShadows]: 'Cloak of Shadows',
   [SkillType.ColdMastery]: 'Cold Mastery',
+  [SkillType.Confuse]: 'Confuse',
   [SkillType.CorpseExplosion]: 'Corpse Explosion',
   [SkillType.CriticalStrike]: 'Critical Strike',
+  [SkillType.Delirium]: 'Delirium',
   [SkillType.Dodge]: 'Dodge',
   [SkillType.Enchant]: 'Enchant',
   [SkillType.EnergyShield]: 'Energy Shield',
@@ -31,6 +34,7 @@ const names = {
   [SkillType.LightningMastery]: 'Lightning Mastery',
   [SkillType.Lycanthropy]: 'Lycanthropy',
   [SkillType.Meteor]: 'Meteor',
+  [SkillType.MindBlast]: 'Mind Blast',
   [SkillType.Nova]: 'Nova',
   [SkillType.PoisonExplosion]: 'Poison Explosion',
   [SkillType.PoisonNova]: 'Poison Nova',
@@ -41,6 +45,7 @@ const names = {
   [SkillType.SpiritWolf]: 'Spirit Wolf',
   [SkillType.SummonGrizzly]: 'Summon Grizzly',
   [SkillType.Teleport]: 'Teleport',
+  [SkillType.Terror]: 'Terror',
   [SkillType.Thorns]: 'Thorns',
   [SkillType.Twister]: 'Twister',
   [SkillType.Warmth]: 'Warmth',
