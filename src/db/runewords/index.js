@@ -19,6 +19,7 @@ import famine from './famine.js';
 import fury from './fury.js';
 import gloom from './gloom.js';
 import handOfJustice from './hand-of-justice.js';
+import heartOfTheOak from './heart-of-the-oak.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
 import kingsGrace from './kings-grace.js';
@@ -61,6 +62,7 @@ export default {
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
+  [RunewordType.KoVexPulThul]: heartOfTheOak,
   [RunewordType.LemIstIo]: delirium,
   [RunewordType.LemKoTir]: wealth,
   [RunewordType.LumIoSolEth]: memory,
