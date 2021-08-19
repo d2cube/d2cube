@@ -89,26 +89,40 @@ const resolvers = {
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
+  [MagicPropertyType.ChanceToCastSpellOnDeath]: (x) =>
+    Object.entries(x).map(
+      ([skill, {x}]) =>
+        `100% Chance to cast level ${x} ${resolveSkillName(
+          skill,
+        )} When You Die`,
+    ),
   [MagicPropertyType.ChanceToCastSpellOnKill]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `${y}% Chance to cast level ${x} ${resolveSkillName(
+        `${y}% Chance to Cast Level ${x} ${resolveSkillName(
           skill,
-        )} when you kill an enemy`,
+        )} When You Kill an Enemy`,
+    ),
+  [MagicPropertyType.ChanceToCastSpellOnLevel]: (x) =>
+    Object.entries(x).map(
+      ([skill, {x}]) =>
+        `100% Chance to Cast Level ${x} ${resolveSkillName(
+          skill,
+        )} When You Level Up`,
     ),
   [MagicPropertyType.ChanceToCastSpellOnStriking]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `${y}% Chance to cast level ${x} ${resolveSkillName(
+        `${y}% Chance to Cast Level ${x} ${resolveSkillName(
           skill,
-        )} on striking`,
+        )} on Striking`,
     ),
   [MagicPropertyType.ChanceToCastSpellWhenStruck]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `${y}% Chance to cast level ${x} ${resolveSkillName(
+        `${y}% Chance to Cast Level ${x} ${resolveSkillName(
           skill,
-        )} when struck`,
+        )} When Struck`,
     ),
   [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
   [MagicPropertyType.ColdDamage]: ({x, y}) =>

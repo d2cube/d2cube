@@ -18,6 +18,7 @@ import exile from './exile.js';
 import famine from './famine.js';
 import fury from './fury.js';
 import gloom from './gloom.js';
+import handOfJustice from './hand-of-justice.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
 import kingsGrace from './kings-grace.js';
@@ -74,6 +75,7 @@ export default {
   [RunewordType.ShaelKoNef]: melody,
   [RunewordType.ShaelUmThul]: duress,
   [RunewordType.ShaelUmTir]: crescentMoon,
+  [RunewordType.SurChamAmnLo]: handOfJustice,
   [RunewordType.TalDolMal]: venom,
   [RunewordType.TalEth]: stealth,
   [RunewordType.TalThulOrtAmn]: spirit,
