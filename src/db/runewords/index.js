@@ -5,6 +5,7 @@ import beast from './beast.js';
 import black from './black.js';
 import bramble from './bramble.js';
 import breathOfTheDying from './breath-of-the-dying.js';
+import callToArms from './call-to-arms.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -32,6 +33,7 @@ import zephyr from './zephyr.js';
 
 export default {
   [RunewordType.AmnElIthTirSol]: honor,
+  [RunewordType.AmnRalMalIstOhm]: callToArms,
   [RunewordType.AmnRalThul]: kingsGrace,
   [RunewordType.AmnTir]: strength,
   [RunewordType.BerTirUmMalLum]: beast,

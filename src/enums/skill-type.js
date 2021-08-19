@@ -3,6 +3,9 @@
  * @enum {string}
  */
 export const SkillType = {
+  BattleCommand: 'BattleCommand',
+  BattleCry: 'BattleCry',
+  BattleOrders: 'BattleOrders',
   BoneArmor: 'BoneArmor',
   BoneSpear: 'BoneSpear',
   ChainLightning: 'ChainLightning',
