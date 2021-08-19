@@ -35,6 +35,7 @@ import passion from './passion.js';
 import prudence from './prudence.js';
 import radiance from './radiance.js';
 import rhyme from './rhyme.js';
+import sanctuary from './sanctuary.js';
 import silence from './silence.js';
 import smoke from './smoke.js';
 import spirit from './spirit.js';
@@ -66,6 +67,7 @@ export default {
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
+  [RunewordType.KoKoMal]: sanctuary,
   [RunewordType.KoVexPulThul]: heartOfTheOak,
   [RunewordType.LemIstIo]: delirium,
   [RunewordType.LemKoTir]: wealth,
