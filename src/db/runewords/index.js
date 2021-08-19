@@ -3,6 +3,7 @@ import {RunewordType} from '../../enums/index.js';
 import ancientsPledge from './ancients-pledge.js';
 import beast from './beast.js';
 import black from './black.js';
+import bone from './bone.js';
 import bramble from './bramble.js';
 import breathOfTheDying from './breath-of-the-dying.js';
 import callToArms from './call-to-arms.js';
@@ -13,6 +14,7 @@ import delirium from './delirium.js';
 import doom from './doom.js';
 import duress from './duress.js';
 import enigma from './enigma.js';
+import enlightenment from './enlightenment.js';
 import eternity from './eternity.js';
 import exile from './exile.js';
 import famine from './famine.js';
@@ -30,10 +32,14 @@ import lore from './lore.js';
 import malice from './malice.js';
 import melody from './melody.js';
 import memory from './memory.js';
+import myth from './myth.js';
 import nadir from './nadir.js';
 import passion from './passion.js';
+import peace from './peace.js';
+import principle from './principle.js';
 import prudence from './prudence.js';
 import radiance from './radiance.js';
+import rain from './rain.js';
 import rhyme from './rhyme.js';
 import sanctuary from './sanctuary.js';
 import silence from './silence.js';
@@ -44,6 +50,7 @@ import stealth from './stealth.js';
 import steel from './steel.js';
 import stone from './stone.js';
 import strength from './strength.js';
+import treachery from './treachery.js';
 import venom from './venom.js';
 import wealth from './wealth.js';
 import white from './white.js';
@@ -66,6 +73,7 @@ export default {
   [RunewordType.FalOhmOrtJah]: famine,
   [RunewordType.FalOhmUm]: chaos,
   [RunewordType.FalUmPul]: gloom,
+  [RunewordType.HelAmnNef]: myth,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.HelOhmUmLoCham]: doom,
   [RunewordType.IthElEth]: malice,
@@ -82,14 +90,20 @@ export default {
   [RunewordType.NefTir]: nadir,
   [RunewordType.NefSolIth]: radiance,
   [RunewordType.OrtEth]: zephyr,
+  [RunewordType.OrtMalIth]: rain,
   [RunewordType.OrtSol]: lore,
+  [RunewordType.PulRalSol]: enlightenment,
+  [RunewordType.RalGulEld]: principle,
   [RunewordType.RalOhmSurEth]: bramble,
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
+  [RunewordType.ShaelThulAmn]: peace,
+  [RunewordType.ShaelThulLem]: treachery,
   [RunewordType.ShaelUmPulLum]: stone,
   [RunewordType.ShaelUmThul]: duress,
   [RunewordType.ShaelUmTir]: crescentMoon,
+  [RunewordType.SolUmUm]: bone,
   [RunewordType.SurChamAmnLo]: handOfJustice,
   [RunewordType.SurEl]: wind,
   [RunewordType.TalDolMal]: venom,

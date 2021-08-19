@@ -88,10 +88,10 @@ export const inventoryItems = [
     position: [1, 8],
   },
   {
-    id: 'CrystalSword',
+    id: 'DuskShroud',
     durability: 1,
     position: [1, 4],
-    sockets: ['Amn', 'Ral', 'Mal', 'Ist', 'Ohm'],
+    sockets: ['Shael', 'Thul', 'Lem'],
   },
   {
     id: 'Falcata',
