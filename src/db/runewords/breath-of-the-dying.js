@@ -4,7 +4,7 @@ import {
   RunewordType,
   SkillType,
 } from '../../enums/index.js';
-import { resolveRunewordItemTypes } from '../../utils/resolvers/resolve-runeword-item-types.js';
+import {resolveRunewordItemTypes} from '../../utils/resolvers/resolve-runeword-item-types.js';
 import ids from '../ids/index.js';
 
 export default {

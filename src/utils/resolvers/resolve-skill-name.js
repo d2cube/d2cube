@@ -22,6 +22,7 @@ const names = {
   [SkillType.FireWall]: 'Fire Wall',
   [SkillType.Frenzy]: 'Frenzy',
   [SkillType.FrostNova]: 'Frost Nova',
+  [SkillType.FrozenOrb]: 'Frozen Orb',
   [SkillType.GlacialSpike]: 'Glacial Spike',
   [SkillType.HolyBolt]: 'Holy Bolt',
   [SkillType.HolyShock]: 'Holy Shock',
@@ -44,6 +45,7 @@ const names = {
   [SkillType.Warmth]: 'Warmth',
   [SkillType.Weaken]: 'Weaken',
   [SkillType.Werebear]: 'Werebear',
+  [SkillType.Whirlwind]: 'Whirlwind',
 };
 
 export const resolveSkillName = (skill) => names[skill];

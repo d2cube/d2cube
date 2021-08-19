@@ -6,6 +6,7 @@ import black from './black.js';
 import bramble from './bramble.js';
 import breathOfTheDying from './breath-of-the-dying.js';
 import callToArms from './call-to-arms.js';
+import chaos from './chaos.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -40,6 +41,7 @@ export default {
   [RunewordType.DolEldHelIstTirVex]: silence,
   [RunewordType.DolIo]: white,
   [RunewordType.EthRalOrtTal]: holyThunder,
+  [RunewordType.FalOhmUm]: chaos,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,

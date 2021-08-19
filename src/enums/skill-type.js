@@ -24,6 +24,7 @@ export const SkillType = {
   FireWall: 'FireWall',
   Frenzy: 'Frenzy',
   FrostNova: 'FrostNova',
+  FrozenOrb: 'FrozenOrb',
   GlacialSpike: 'GlacialSpike',
   HolyBolt: 'HolyBolt',
   HolyShock: 'HolyShock',
@@ -46,4 +47,5 @@ export const SkillType = {
   Warmth: 'Warmth',
   Weaken: 'Weaken',
   Werebear: 'Werebear',
+  Whirlwind: 'Whirlwind',
 };

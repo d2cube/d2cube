@@ -90,12 +90,12 @@ const resolvers = {
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
   [MagicPropertyType.ChanceToCastSpellOnKill]: (x) =>
-  Object.entries(x).map(
-    ([skill, {x, y}]) =>
-      `${y}% Chance to cast level ${x} ${resolveSkillName(
-        skill,
-      )} when you kill an enemy`,
-  ),
+    Object.entries(x).map(
+      ([skill, {x, y}]) =>
+        `${y}% Chance to cast level ${x} ${resolveSkillName(
+          skill,
+        )} when you kill an enemy`,
+    ),
   [MagicPropertyType.ChanceToCastSpellOnStriking]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
@@ -159,7 +159,9 @@ const resolvers = {
   [MagicPropertyType.IncreaseMaximumMana]: (x) => `Increase Maximum Mana ${x}%`,
   [MagicPropertyType.Knockback]: () => 'Knockback',
   [MagicPropertyType.Life]: (x) => `+${x} to Life`,
-  [MagicPropertyType.LifeAfterKill]: (x) => `+${x} to Life After Each kill`,
+  [MagicPropertyType.LifeAfterKill]: (x) => `+${x} to Life After Each Kill`,
+  [MagicPropertyType.LifeAfterDemonKill]: (x) =>
+    `+${x} to Life After Each Demon Kill`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
