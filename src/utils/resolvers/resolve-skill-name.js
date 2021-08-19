@@ -16,6 +16,7 @@ const names = {
   [SkillType.CriticalStrike]: 'Critical Strike',
   [SkillType.DefianceAura]: 'Defiance Aura',
   [SkillType.Delirium]: 'Delirium',
+  [SkillType.DimVision]: 'Dim Vision',
   [SkillType.Dodge]: 'Dodge',
   [SkillType.Enchant]: 'Enchant',
   [SkillType.EnergyShield]: 'Energy Shield',

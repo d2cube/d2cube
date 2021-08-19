@@ -18,6 +18,7 @@ export const SkillType = {
   CriticalStrike: 'CriticalStrike',
   DefianceAura: 'DefianceAura',
   Delirium: 'Delirium',
+  DimVision: 'DimVision',
   Dodge: 'Dodge',
   Enchant: 'Enchant',
   EnergyShield: 'EnergyShield',

@@ -17,6 +17,7 @@ import eternity from './eternity.js';
 import exile from './exile.js';
 import famine from './famine.js';
 import fury from './fury.js';
+import gloom from './gloom.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
 import kingsGrace from './kings-grace.js';
@@ -53,6 +54,7 @@ export default {
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.FalOhmOrtJah]: famine,
   [RunewordType.FalOhmUm]: chaos,
+  [RunewordType.FalUmPul]: gloom,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.HelOhmUmLoCham]: doom,
   [RunewordType.IthElEth]: malice,
