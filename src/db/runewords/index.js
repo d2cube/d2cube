@@ -42,6 +42,7 @@ import spirit from './spirit.js';
 import splendor from './splendor.js';
 import stealth from './stealth.js';
 import steel from './steel.js';
+import stone from './stone.js';
 import strength from './strength.js';
 import venom from './venom.js';
 import wealth from './wealth.js';
@@ -85,6 +86,7 @@ export default {
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
+  [RunewordType.ShaelUmPulLum]: stone,
   [RunewordType.ShaelUmThul]: duress,
   [RunewordType.ShaelUmTir]: crescentMoon,
   [RunewordType.SurChamAmnLo]: handOfJustice,
