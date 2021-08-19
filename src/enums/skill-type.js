@@ -60,6 +60,7 @@ export const SkillType = {
   Terror: 'Terror',
   Thorns: 'Thorns',
   Twister: 'Twister',
+  Vengeance: 'Vengeance',
   Volcano: 'Volcano',
   Warmth: 'Warmth',
   Weaken: 'Weaken',

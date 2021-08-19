@@ -23,6 +23,7 @@ import heartOfTheOak from './heart-of-the-oak.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
 import kingsGrace from './kings-grace.js';
+import kingslayer from './kingslayer.js';
 import leaf from './leaf.js';
 import lionheart from './lionheart.js';
 import lore from './lore.js';
@@ -66,6 +67,7 @@ export default {
   [RunewordType.LemIstIo]: delirium,
   [RunewordType.LemKoTir]: wealth,
   [RunewordType.LumIoSolEth]: memory,
+  [RunewordType.MalUmGulFal]: kingslayer,
   [RunewordType.NefLum]: smoke,
   [RunewordType.NefTir]: nadir,
   [RunewordType.NefSolIth]: radiance,
