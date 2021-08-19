@@ -31,6 +31,7 @@ import malice from './malice.js';
 import melody from './melody.js';
 import memory from './memory.js';
 import nadir from './nadir.js';
+import passion from './passion.js';
 import radiance from './radiance.js';
 import rhyme from './rhyme.js';
 import silence from './silence.js';
@@ -53,6 +54,7 @@ export default {
   [RunewordType.BerTirUmMalLum]: beast,
   [RunewordType.DolEldHelIstTirVex]: silence,
   [RunewordType.DolIo]: white,
+  [RunewordType.DolOrtEldLem]: passion,
   [RunewordType.DolUmBerIst]: chainsOfHonor,
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.FalOhmOrtJah]: famine,

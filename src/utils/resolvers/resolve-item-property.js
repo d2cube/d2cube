@@ -163,7 +163,8 @@ const resolvers = {
   [MagicPropertyType.HealStamina]: (x) => `Heal Stamina Plus ${x}%`,
   [MagicPropertyType.HitCausesMonsterToFlee]: (x) =>
     `Hit Causes Monster to Flee ${x}%`,
-  [MagicPropertyType.HitBlindsTarget]: () => 'Hit Blinds Target',
+  [MagicPropertyType.HitBlindsTarget]: (x) =>
+    `Hit Blinds Target${x ? ` +${x}` : ''}`,
   [MagicPropertyType.Indestructible]: () => 'Indestructible',
   [MagicPropertyType.IgnoreTargetDefense]: () => "Ignore Target's Defense",
   [MagicPropertyType.IncreasedAttackSpeed]: (x) =>

@@ -667,7 +667,7 @@ export default normalizeItems({
       },
       socket: {
         [SocketCategoryType.Weapon]: {
-          [MagicPropertyType.HitBlindsTarget]: true,
+          [MagicPropertyType.HitBlindsTarget]: 0,
         },
         [SocketCategoryType.Armor]: {
           [MagicPropertyType.IncreaseMaximumMana]: 5,

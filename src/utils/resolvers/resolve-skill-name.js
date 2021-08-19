@@ -5,6 +5,7 @@ const names = {
   [SkillType.BattleCommand]: 'Battle Command',
   [SkillType.BattleCry]: 'Battle Cry',
   [SkillType.BattleOrders]: 'Battle Orders',
+  [SkillType.Berserk]: 'Berserk',
   [SkillType.Blaze]: 'Blaze',
   [SkillType.BoneArmor]: 'Bone Armor',
   [SkillType.BoneSpear]: 'Bone Spear',
@@ -30,6 +31,7 @@ const names = {
   [SkillType.FrostNova]: 'Frost Nova',
   [SkillType.FrozenOrb]: 'Frozen Orb',
   [SkillType.GlacialSpike]: 'Glacial Spike',
+  [SkillType.HeartOfWolverine]: 'Heart of Wolverine',
   [SkillType.HolyBolt]: 'Holy Bolt',
   [SkillType.HolyFire]: 'Holy Fire',
   [SkillType.HolyFreeze]: 'Holy Freeze',
@@ -64,6 +66,7 @@ const names = {
   [SkillType.Weaken]: 'Weaken',
   [SkillType.Werebear]: 'Werebear',
   [SkillType.Whirlwind]: 'Whirlwind',
+  [SkillType.Zeal]: 'Zeal',
 };
 
 export const resolveSkillName = (skill) => names[skill];

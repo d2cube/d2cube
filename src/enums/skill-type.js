@@ -7,6 +7,7 @@ export const SkillType = {
   BattleCommand: 'BattleCommand',
   BattleCry: 'BattleCry',
   BattleOrders: 'BattleOrders',
+  Berserk: 'Berserk',
   Blaze: 'Blaze',
   BoneArmor: 'BoneArmor',
   BoneSpear: 'BoneSpear',
@@ -32,6 +33,7 @@ export const SkillType = {
   FrostNova: 'FrostNova',
   FrozenOrb: 'FrozenOrb',
   GlacialSpike: 'GlacialSpike',
+  HeartOfWolverine: 'HeartOfWolverine',
   HolyBolt: 'HolyBolt',
   HolyFire: 'HolyFire',
   HolyFreeze: 'HolyFreeze',
@@ -66,4 +68,5 @@ export const SkillType = {
   Weaken: 'Weaken',
   Werebear: 'Werebear',
   Whirlwind: 'Whirlwind',
+  Zeal: 'Zeal',
 };
