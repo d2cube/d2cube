@@ -39,6 +39,7 @@ const names = {
   [SkillType.Nova]: 'Nova',
   [SkillType.PoisonExplosion]: 'Poison Explosion',
   [SkillType.PoisonNova]: 'Poison Nova',
+  [SkillType.Revive]: 'Revive',
   [SkillType.SkeletonMastery]: 'Skeleton Mastery',
   [SkillType.SlowMissles]: 'Slow Missles',
   [SkillType.StaticField]: 'Static Field',

@@ -13,6 +13,7 @@ import delirium from './delirium.js';
 import doom from './doom.js';
 import duress from './duress.js';
 import enigma from './enigma.js';
+import eternity from './eternity.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
@@ -38,6 +39,7 @@ import white from './white.js';
 import zephyr from './zephyr.js';
 
 export default {
+  [RunewordType.AmnBerIstSolSur]: eternity,
   [RunewordType.AmnElIthTirSol]: honor,
   [RunewordType.AmnRalMalIstOhm]: callToArms,
   [RunewordType.AmnRalThul]: kingsGrace,

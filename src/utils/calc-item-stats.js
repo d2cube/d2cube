@@ -119,6 +119,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.HitCausesMonsterToFlee,
   MagicPropertyType.MonsterDefensePerHit,
   MagicPropertyType.DrainLife,
+  MagicPropertyType.HitBlindsTarget,
   MagicPropertyType.SlowsTarget,
   MagicPropertyType.Knockback,
   MagicPropertyType.FasterBlockRate,

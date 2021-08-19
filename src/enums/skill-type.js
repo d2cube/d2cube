@@ -41,6 +41,7 @@ export const SkillType = {
   Nova: 'Nova',
   PoisonExplosion: 'PoisonExplosion',
   PoisonNova: 'PoisonNova',
+  Revive: 'Revive',
   SkeletonMastery: 'SkeletonMastery',
   SlowMissles: 'SlowMissles',
   SpiritOfBarbs: 'SpiritOfBarbs',
