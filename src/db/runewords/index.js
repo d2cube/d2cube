@@ -32,6 +32,7 @@ import melody from './melody.js';
 import memory from './memory.js';
 import nadir from './nadir.js';
 import passion from './passion.js';
+import prudence from './prudence.js';
 import radiance from './radiance.js';
 import rhyme from './rhyme.js';
 import silence from './silence.js';
@@ -69,6 +70,7 @@ export default {
   [RunewordType.LemIstIo]: delirium,
   [RunewordType.LemKoTir]: wealth,
   [RunewordType.LumIoSolEth]: memory,
+  [RunewordType.MalTir]: prudence,
   [RunewordType.MalUmGulFal]: kingslayer,
   [RunewordType.NefLum]: smoke,
   [RunewordType.NefTir]: nadir,

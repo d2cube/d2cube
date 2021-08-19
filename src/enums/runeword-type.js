@@ -22,6 +22,7 @@ export const RunewordType = {
   LemIstIo: 'LemIstIo',
   LemKoTir: 'LemKoTir',
   LumIoSolEth: 'LumIoSolEth',
+  MalTir: 'MalTir',
   MalUmGulFal: 'MalUmGulFal',
   NefLum: 'NefLum',
   NefTir: 'NefTir',
