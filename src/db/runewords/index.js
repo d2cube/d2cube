@@ -39,6 +39,7 @@ import sanctuary from './sanctuary.js';
 import silence from './silence.js';
 import smoke from './smoke.js';
 import spirit from './spirit.js';
+import splendor from './splendor.js';
 import stealth from './stealth.js';
 import steel from './steel.js';
 import strength from './strength.js';
@@ -58,6 +59,7 @@ export default {
   [RunewordType.DolIo]: white,
   [RunewordType.DolOrtEldLem]: passion,
   [RunewordType.DolUmBerIst]: chainsOfHonor,
+  [RunewordType.EthLum]: splendor,
   [RunewordType.EthRalOrtTal]: holyThunder,
   [RunewordType.FalOhmOrtJah]: famine,
   [RunewordType.FalOhmUm]: chaos,

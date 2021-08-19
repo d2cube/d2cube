@@ -9,6 +9,7 @@ export const RunewordType = {
   DolIo: 'DolIo',
   DolOrtEldLem: 'DolOrtEldLem',
   DolUmBerIst: 'DolUmBerIst',
+  EthLum: 'EthLum',
   EthRalOrtTal: 'EthRalOrtTal',
   FalOhmOrtJah: 'FalOhmOrtJah',
   FalOhmUm: 'FalOhmUm',
