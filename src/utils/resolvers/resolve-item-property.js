@@ -155,6 +155,8 @@ const resolvers = {
     `${x}% Increased Attack Speed`,
   [MagicPropertyType.IncreasedChanceOfBlocking]: (x) =>
     `${x}% Increased Chance of Blocking`,
+  [MagicPropertyType.IncreaseMaximumDurability]: (x) =>
+    `Increase Maximum Durability ${x}%`,
   [MagicPropertyType.IncreaseMaximumLife]: (x) => `Increase Maximum Life ${x}%`,
   [MagicPropertyType.IncreaseMaximumMana]: (x) => `Increase Maximum Mana ${x}%`,
   [MagicPropertyType.Knockback]: () => 'Knockback',
@@ -206,6 +208,7 @@ const resolvers = {
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
+  [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x} Slower Stamina Drain`,
   [MagicPropertyType.Spell]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>

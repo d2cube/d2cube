@@ -11,6 +11,7 @@ import chaos from './chaos.js';
 import crescentMoon from './crescent-moon.js';
 import delirium from './delirium.js';
 import doom from './doom.js';
+import duress from './duress.js';
 import enigma from './enigma.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
@@ -64,6 +65,7 @@ export default {
   [RunewordType.RalOrtTal]: ancientsPledge,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
+  [RunewordType.ShaelUmThul]: duress,
   [RunewordType.ShaelUmTir]: crescentMoon,
   [RunewordType.TalDolMal]: venom,
   [RunewordType.TalEth]: stealth,
