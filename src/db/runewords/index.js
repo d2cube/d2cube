@@ -47,6 +47,7 @@ import strength from './strength.js';
 import venom from './venom.js';
 import wealth from './wealth.js';
 import white from './white.js';
+import wind from './wind.js';
 import zephyr from './zephyr.js';
 
 export default {
@@ -90,6 +91,7 @@ export default {
   [RunewordType.ShaelUmThul]: duress,
   [RunewordType.ShaelUmTir]: crescentMoon,
   [RunewordType.SurChamAmnLo]: handOfJustice,
+  [RunewordType.SurEl]: wind,
   [RunewordType.TalDolMal]: venom,
   [RunewordType.TalEth]: stealth,
   [RunewordType.TalThulOrtAmn]: spirit,

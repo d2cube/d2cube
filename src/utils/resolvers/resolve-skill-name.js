@@ -61,6 +61,7 @@ const names = {
   [SkillType.Teleport]: 'Teleport',
   [SkillType.Terror]: 'Terror',
   [SkillType.Thorns]: 'Thorns',
+  [SkillType.Tornado]: 'Tornado',
   [SkillType.Twister]: 'Twister',
   [SkillType.Vengeance]: 'Vengeance',
   [SkillType.Volcano]: 'Volcano',
