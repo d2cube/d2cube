@@ -74,7 +74,6 @@ const pushEntry = (x) => (entry) => {
 
 // TODO: confirm order and centralize this in enums/magic-property-types.js
 const magicPropertiesOrder = [
-  MagicPropertyType.Aura,
   MagicPropertyType.Indestructible,
   MagicPropertyType.ChanceToCastSpellOnLevel,
   MagicPropertyType.ChanceToCastSpellWhenStruck,
@@ -82,6 +81,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.ChanceToCastSpellOnDeath,
   MagicPropertyType.ChanceToCastSpellOnAttack,
   MagicPropertyType.ChanceToCastSpellOnKill,
+  MagicPropertyType.Aura,
   MagicPropertyType.AllSkillLevels,
   MagicPropertyType.SkillSetLevels,
   MagicPropertyType.FasterRunWalk,
@@ -145,7 +145,9 @@ const magicPropertiesOrder = [
   MagicPropertyType.Life,
   MagicPropertyType.LifeByLevel,
   MagicPropertyType.ReplenishLife,
+  MagicPropertyType.IncreaseMaximumLife,
   MagicPropertyType.IncreaseMaximumMana,
+  MagicPropertyType.ManaByLevel,
   MagicPropertyType.Mana,
   MagicPropertyType.RegenerateMana,
   MagicPropertyType.MaximumStamina,
@@ -167,7 +169,6 @@ const magicPropertiesOrder = [
   MagicPropertyType.PoisonLengthReduced,
   MagicPropertyType.HalfFreezeDuration,
   MagicPropertyType.CannotBeFrozen,
-  MagicPropertyType.IncreaseMaximumLife,
   MagicPropertyType.IncreaseMaximumDurability,
   MagicPropertyType.DamageReduced,
   MagicPropertyType.DamageReducedPercentage,
@@ -184,6 +185,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.LightRadius,
   MagicPropertyType.RepairsDurability,
   MagicPropertyType.SpellCharges,
+  MagicPropertyType.ReduceVendorPrices,
   MagicPropertyType.Requirements,
   MagicPropertyType.Socketed,
 ];

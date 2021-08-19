@@ -42,6 +42,7 @@ const names = {
   [SkillType.HolyFreeze]: 'Holy Freeze',
   [SkillType.HolyShock]: 'Holy Shock',
   [SkillType.Howl]: 'Howl',
+  [SkillType.Hydra]: 'Hydra',
   [SkillType.IceBlast]: 'Ice Blast',
   [SkillType.Inferno]: 'Inferno',
   [SkillType.LifeTap]: 'Life Tap',

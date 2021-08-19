@@ -159,4 +159,5 @@ export const MagicPropertyType = {
   Aura: 'Aura',
   Spell: 'Spell',
   SpellCharges: 'SpellCharges',
+  ReduceVendorPrices: 'ReduceVendorPrices',
 };

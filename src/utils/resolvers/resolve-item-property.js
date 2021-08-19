@@ -228,6 +228,8 @@ const resolvers = {
   [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
   [MagicPropertyType.PoisonSkillDamage]: (x) => `+${x}% to Poison Skill Damage`,
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
+  [MagicPropertyType.ReduceVendorPrices]: (x) =>
+    `Reduce All Vendor Prices ${x}%`,
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
   [MagicPropertyType.RepairsDurability]: (x) =>
     `Repairs 1 Durability In ${x} Seconds`,
@@ -288,6 +290,9 @@ resolvers[MagicPropertyType.LifeByLevel] = lvl(
 resolvers[MagicPropertyType.MagicFindByLevel] = lvl(
   resolvers[MagicPropertyType.MagicFind],
   '%',
+);
+resolvers[MagicPropertyType.ManaByLevel] = lvl(
+  resolvers[MagicPropertyType.Mana],
 );
 resolvers[MagicPropertyType.MaximumDamageByLevel] = lvl(
   resolvers[MagicPropertyType.MaximumDamage],

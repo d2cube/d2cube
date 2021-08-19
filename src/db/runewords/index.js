@@ -15,7 +15,10 @@ import death from './death.js';
 import delirium from './delirium.js';
 import destruction from './destruction.js';
 import doom from './doom.js';
+import dragon from './dragon.js';
+import dream from './dream.js';
 import duress from './duress.js';
+import edge from './edge.js';
 import enigma from './enigma.js';
 import enlightenment from './enlightenment.js';
 import eternity from './eternity.js';
@@ -80,6 +83,7 @@ export default {
   [RunewordType.HelElVexOrtGul]: death,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.HelOhmUmLoCham]: doom,
+  [RunewordType.IoJahPul]: dream,
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
@@ -111,12 +115,14 @@ export default {
   [RunewordType.SolUmUm]: bone,
   [RunewordType.SurChamAmnLo]: handOfJustice,
   [RunewordType.SurEl]: wind,
+  [RunewordType.SurLoSol]: dragon,
   [RunewordType.TalDolMal]: venom,
   [RunewordType.TalEth]: stealth,
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
   [RunewordType.TirEl]: steel,
   [RunewordType.TirRal]: leaf,
+  [RunewordType.TirTalAmn]: edge,
   [RunewordType.VexHelElEldZodEth]: breathOfTheDying,
   [RunewordType.VexLoBerJahKo]: destruction,
   [RunewordType.VexOhmIstDol]: exile,

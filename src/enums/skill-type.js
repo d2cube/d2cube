@@ -44,6 +44,7 @@ export const SkillType = {
   HolyFreeze: 'HolyFreeze',
   HolyShock: 'HolyShock',
   Howl: 'Howl',
+  Hydra: 'Hydra',
   IceBlast: 'IceBlast',
   Inferno: 'Inferno',
   LifeTap: 'LifeTap',
