@@ -5,12 +5,15 @@ import beast from './beast.js';
 import black from './black.js';
 import bone from './bone.js';
 import bramble from './bramble.js';
+import brand from './brand.js';
 import breathOfTheDying from './breath-of-the-dying.js';
 import callToArms from './call-to-arms.js';
 import chainsOfHonor from './chains-of-honor.js';
 import chaos from './chaos.js';
 import crescentMoon from './crescent-moon.js';
+import death from './death.js';
 import delirium from './delirium.js';
+import destruction from './destruction.js';
 import doom from './doom.js';
 import duress from './duress.js';
 import enigma from './enigma.js';
@@ -74,11 +77,13 @@ export default {
   [RunewordType.FalOhmUm]: chaos,
   [RunewordType.FalUmPul]: gloom,
   [RunewordType.HelAmnNef]: myth,
+  [RunewordType.HelElVexOrtGul]: death,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.HelOhmUmLoCham]: doom,
   [RunewordType.IthElEth]: malice,
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
+  [RunewordType.JahLoMalGul]: brand,
   [RunewordType.KoKoMal]: sanctuary,
   [RunewordType.KoVexPulThul]: heartOfTheOak,
   [RunewordType.LemIstIo]: delirium,
@@ -113,5 +118,6 @@ export default {
   [RunewordType.TirEl]: steel,
   [RunewordType.TirRal]: leaf,
   [RunewordType.VexHelElEldZodEth]: breathOfTheDying,
+  [RunewordType.VexLoBerJahKo]: destruction,
   [RunewordType.VexOhmIstDol]: exile,
 };

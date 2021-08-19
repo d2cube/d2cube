@@ -89,6 +89,11 @@ const resolvers = {
   [MagicPropertyType.BonusToAttackRating]: (x) =>
     `+${x}% Bonus to Attack Rating`,
   [MagicPropertyType.CannotBeFrozen]: () => 'Cannot be Frozen',
+  [MagicPropertyType.ChanceToCastSpellOnAttack]: (x) =>
+    Object.entries(x).map(
+      ([skill, {x, y}]) =>
+        `${y}% Chance to Cast Level ${x} ${resolveSkillName(skill)} on Attack`,
+    ),
   [MagicPropertyType.ChanceToCastSpellOnDeath]: (x) =>
     Object.entries(x).map(
       ([skill, {x}]) =>
@@ -155,6 +160,8 @@ const resolvers = {
     `Adds ${x === y ? x : `${x}-${y}`} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
   [MagicPropertyType.FireMastery]: (x) => `+${x} to Fire Mastery`,
+  [MagicPropertyType.FiresExplosiveArrowsOrBolts]: (x) =>
+    `Fires Explosive Arrows or Bolts (Level ${x})`,
   [MagicPropertyType.FiresMagicArrows]: (x) =>
     `Fires Magic Arrows (Level ${x})`,
   [MagicPropertyType.FreezesTarget]: (x) =>
@@ -259,6 +266,10 @@ resolvers[MagicPropertyType.AttackRatingByLevel] = lvl(
 );
 resolvers[MagicPropertyType.ColdAbsorbByLevel] = lvl(
   resolvers[MagicPropertyType.ColdAbsorb],
+);
+resolvers[MagicPropertyType.DeadlyStrikeByLevel] = lvl(
+  resolvers[MagicPropertyType.DeadlyStrike],
+  '%',
 );
 resolvers[MagicPropertyType.DefenseByLevel] = lvl(
   resolvers[MagicPropertyType.Defense],

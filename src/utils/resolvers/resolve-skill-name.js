@@ -1,12 +1,14 @@
 import {SkillType} from '../../enums/index.js';
 
 const names = {
+  [SkillType.AmplifyDamage]: 'Amplify Damage',
   [SkillType.Attract]: 'Attract',
   [SkillType.BattleCommand]: 'Battle Command',
   [SkillType.BattleCry]: 'Battle Cry',
   [SkillType.BattleOrders]: 'Battle Orders',
   [SkillType.Berserk]: 'Berserk',
   [SkillType.Blaze]: 'Blaze',
+  [SkillType.BloodGolem]: 'Blood Golem',
   [SkillType.BoneArmor]: 'Bone Armor',
   [SkillType.BoneSpear]: 'Bone Spear',
   [SkillType.ChainLightning]: 'Chain Lightning',

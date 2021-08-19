@@ -112,6 +112,7 @@ export const MagicPropertyType = {
   FiresMagicArrows: 'FiresMagicArrows',
   FiresExplosiveArrowsOrBolts: 'FiresExplosiveArrowsOrBolts',
   Socketed: 'Socketed',
+  ChanceToCastSpellOnAttack: 'ChanceToCastSpellOnAttack',
   ChanceToCastSpellOnDeath: 'ChanceToCastSpellOnDeath',
   ChanceToCastSpellOnKill: 'ChanceToCastSpellOnKill',
   ChanceToCastSpellOnLevel: 'ChanceToCastSpellOnLevel',
