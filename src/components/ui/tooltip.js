@@ -27,6 +27,7 @@ const Tooltip = ({children, isReadable = false, tooltip}) => {
       {childRef ? (
         <Tippy
           interactive
+          appendTo={document.body}
           arrow={false}
           content={tooltip}
           offset={[0, 0]}
