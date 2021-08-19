@@ -15,6 +15,7 @@ import duress from './duress.js';
 import enigma from './enigma.js';
 import eternity from './eternity.js';
 import exile from './exile.js';
+import famine from './famine.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
@@ -50,6 +51,7 @@ export default {
   [RunewordType.DolIo]: white,
   [RunewordType.DolUmBerIst]: chainsOfHonor,
   [RunewordType.EthRalOrtTal]: holyThunder,
+  [RunewordType.FalOhmOrtJah]: famine,
   [RunewordType.FalOhmUm]: chaos,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.HelOhmUmLoCham]: doom,
