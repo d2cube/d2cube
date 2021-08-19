@@ -36,4 +36,5 @@ export const RunewordType = {
   TirEl: 'TirEl',
   TirRal: 'TirRal',
   VexHelElEldZodEth: 'VexHelElEldZodEth',
+  VexOhmIstDol: 'VexOhmIstDol',
 };

@@ -143,7 +143,8 @@ const resolvers = {
   [MagicPropertyType.FireMastery]: (x) => `+${x} to Fire Mastery`,
   [MagicPropertyType.FiresMagicArrows]: (x) =>
     `Fires Magic Arrows (Level ${x})`,
-  [MagicPropertyType.FreezesTarget]: (x) => `Freezes Target +${x}`,
+  [MagicPropertyType.FreezesTarget]: (x) =>
+    `Freezes Target${x ? ` +${x}` : ''}`,
   [MagicPropertyType.HalfFreezeDuration]: () => 'Half Freeze Duration',
   [MagicPropertyType.HealStamina]: (x) => `Heal Stamina Plus ${x}%`,
   [MagicPropertyType.HitCausesMonsterToFlee]: (x) =>
@@ -206,6 +207,8 @@ const resolvers = {
   [MagicPropertyType.PoisonSkillDamage]: (x) => `+${x}% to Poison Skill Damage`,
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
+  [MagicPropertyType.RepairsDurability]: (x) =>
+    `Repairs 1 Durability In ${x} Seconds`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x} Slower Stamina Drain`,

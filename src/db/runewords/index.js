@@ -14,6 +14,7 @@ import doom from './doom.js';
 import duress from './duress.js';
 import enigma from './enigma.js';
 import eternity from './eternity.js';
+import exile from './exile.js';
 import fury from './fury.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
@@ -76,4 +77,5 @@ export default {
   [RunewordType.TirEl]: steel,
   [RunewordType.TirRal]: leaf,
   [RunewordType.VexHelElEldZodEth]: breathOfTheDying,
+  [RunewordType.VexOhmIstDol]: exile,
 };
