@@ -197,6 +197,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.RepairsDurability,
   MagicPropertyType.SpellCharges,
   MagicPropertyType.ReduceVendorPrices,
+  MagicPropertyType.Experience,
   MagicPropertyType.Requirements,
   MagicPropertyType.Socketed,
 ];

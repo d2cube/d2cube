@@ -1,4 +1,8 @@
 export default {
+  // Charms
+  Annihilus: 'Annihilus',
+  HellfireTorch: 'HellfireTorch',
+  GheedsFortune: 'GheedsFortune',
   // Jewels
   RainbowFacetLevelCold: 'RainbowFacetLevelCold',
   RainbowFacetLevelFire: 'RainbowFacetLevelFire',

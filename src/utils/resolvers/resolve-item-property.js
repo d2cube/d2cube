@@ -144,6 +144,7 @@ const resolvers = {
   [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,
   [MagicPropertyType.EnhancedDamage]: (x) => `+${x}% Enhanced Damage`,
   [MagicPropertyType.EnhancedDefense]: (x) => `+${x}% Enhanced Defense`,
+  [MagicPropertyType.Experience]: (x) => `${x}% to Experience Gained`,
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
   [MagicPropertyType.FasterBlockRate]: (x) => `${x}% Faster Block Rate`,
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,

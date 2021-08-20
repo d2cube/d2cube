@@ -1,6 +1,7 @@
 import {SkillSetType} from '../../enums/index.js';
 
 const names = {
+  [SkillSetType.CharacterSkills]: 'Character Class Skills',
   [SkillSetType.AmazonSkills]: 'Amazon Skill Levels',
   [SkillSetType.AmazonBowAndCrossbowSkills]:
     'Bow and Crossbow Skills (Amazon Only)',

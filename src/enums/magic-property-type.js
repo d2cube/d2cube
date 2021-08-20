@@ -165,4 +165,5 @@ export const MagicPropertyType = {
   SpellCharges: 'SpellCharges',
   ReanimateAs: 'ReanimateAs',
   ReduceVendorPrices: 'ReduceVendorPrices',
+  Experience: 'Experience',
 };

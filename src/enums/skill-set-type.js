@@ -3,6 +3,7 @@
  * @enum {string}
  */
 export const SkillSetType = {
+  CharacterSkills: 'CharacterSkills',
   AmazonSkills: 'AmazonSkills',
   AmazonBowAndCrossbowSkills: 'AmazonBowAndCrossbowSkills',
   AmazonJavelinAndSpearSkills: 'AmazonJavelinAndSpearSkills',
