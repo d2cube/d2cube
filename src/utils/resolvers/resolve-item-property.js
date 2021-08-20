@@ -1,8 +1,8 @@
 import {k} from 'uinix-fp';
 
+import {humanize} from '../fp.js';
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
 import {formatValues} from '../format-values.js';
-import {resolveSkillName} from './resolve-skill-name.js';
 import {resolveSkillSetName} from './resolve-skill-set-name.js';
 
 export const resolveItemProperty =
@@ -69,7 +69,7 @@ const resolvers = {
   [MagicPropertyType.Aura]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `Level ${x} ${resolveSkillName(skill)} Aura When Equipped${
+        `Level ${x} ${humanize(skill)} Aura When Equipped${
           y ? ` (${y} only)` : ''
         }`,
     ),
@@ -93,44 +93,36 @@ const resolvers = {
   [MagicPropertyType.ChanceToCastSpellOnAttack]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `${y}% Chance to Cast Level ${x} ${resolveSkillName(skill)} on Attack`,
+        `${y}% Chance to Cast Level ${x} ${humanize(skill)} on Attack`,
     ),
   [MagicPropertyType.ChanceToCastSpellOnDeath]: (x) =>
     Object.entries(x).map(
       ([skill, {x}]) =>
-        `100% Chance to cast level ${x} ${resolveSkillName(
-          skill,
-        )} When You Die`,
+        `100% Chance to cast level ${x} ${humanize(skill)} When You Die`,
     ),
   [MagicPropertyType.ChanceToCastSpellOnKill]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `${y}% Chance to Cast Level ${x} ${resolveSkillName(
+        `${y}% Chance to Cast Level ${x} ${humanize(
           skill,
         )} When You Kill an Enemy`,
     ),
   [MagicPropertyType.ChanceToCastSpellOnLevel]: (x) =>
     Object.entries(x).map(
       ([skill, {x}]) =>
-        `100% Chance to Cast Level ${x} ${resolveSkillName(
-          skill,
-        )} When You Level Up`,
+        `100% Chance to Cast Level ${x} ${humanize(skill)} When You Level Up`,
     ),
   [MagicPropertyType.ChanceToCastSpellOnStriking]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `${y}% Chance to Cast Level ${x} ${resolveSkillName(
-          skill,
-        )} on Striking`,
+        `${y}% Chance to Cast Level ${x} ${humanize(skill)} on Striking`,
     ),
   [MagicPropertyType.ChanceToCastSpellWhenStruck]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `${y}% Chance to Cast Level ${x} ${resolveSkillName(
-          skill,
-        )} When Struck`,
+        `${y}% Chance to Cast Level ${x} ${humanize(skill)} When Struck`,
     ),
-  [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
+  [MagicPropertyType.ColdAbsorb]: (x) => `Cold Absorb ${x}%`,
   [MagicPropertyType.ColdDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Cold Damage`,
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
@@ -157,7 +149,7 @@ const resolvers = {
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,
   [MagicPropertyType.FasterRunWalk]: (x) => `${x}% Faster Run/Walk`,
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
-  [MagicPropertyType.FireAbsorb]: (x) => `+${x} Fire Absorb`,
+  [MagicPropertyType.FireAbsorb]: (x) => `Fire Absorb ${x}%`,
   [MagicPropertyType.FireDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
@@ -190,6 +182,7 @@ const resolvers = {
   [MagicPropertyType.LifeAfterDemonKill]: (x) =>
     `+${x} to Life After Each Demon Kill`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
+  [MagicPropertyType.LightningAbsorb]: (x) => `Lightning Absorb ${x}%`,
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
@@ -244,7 +237,7 @@ const resolvers = {
   [MagicPropertyType.Spell]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
-        `+${x} to ${resolveSkillName(skill)}${y ? ` (${y} only)` : ''}`,
+        `+${x} to ${humanize(skill)}${y ? ` (${y} only)` : ''}`,
     ),
   [MagicPropertyType.SkillSetLevels]: (x) =>
     Object.entries(x).map(
@@ -254,8 +247,7 @@ const resolvers = {
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x}% Slower Stamina Drain`,
   [MagicPropertyType.SpellCharges]: (x) =>
     Object.entries(x).map(
-      ([skill, {x, y}]) =>
-        `Level ${x} ${resolveSkillName(skill)} (${y}/${y} Charges)`,
+      ([skill, {x, y}]) => `Level ${x} ${humanize(skill)} (${y}/${y} Charges)`,
     ),
   [MagicPropertyType.Strength]: (x) => `+${x} to Strength`,
   [MagicPropertyType.TargetDefense]: (x) => `${x}% Target Defense`,

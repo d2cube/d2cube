@@ -17,6 +17,8 @@ export const fillNull = (n) => fill(n)(k(null));
 
 export const join = (delimiter) => (xs) => xs.join(delimiter);
 
+export const humanize = (x) => x.replace(/([A-Z])/g, ' $1').trim();
+
 export const isEmpty = (x) => x === null || x === undefined;
 
 export const isPropValueEqual = (prop) => (value) => (x) =>
