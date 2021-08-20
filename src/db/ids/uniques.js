@@ -1,4 +1,13 @@
 export default {
+  // Jewels
+  RainbowFacetLevelCold: 'RainbowFacetLevelCold',
+  RainbowFacetLevelFire: 'RainbowFacetLevelFire',
+  RainbowFacetLevelLightning: 'RainbowFacetLevelLightning',
+  RainbowFacetLevelPoison: 'RainbowFacetLevelPoison',
+  RainbowFacetDeathCold: 'RainbowFacetDeathCold',
+  RainbowFacetDeathFire: 'RainbowFacetDeathFire',
+  RainbowFacetDeathLightning: 'RainbowFacetDeathLightning',
+  RainbowFacetDeathPoison: 'RainbowFacetDeathPoison',
   // Rings
   BulKathosWeddingBand: 'BulKathosWeddingBand',
   CarrionWind: 'CarrionWind',

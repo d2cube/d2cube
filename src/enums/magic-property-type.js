@@ -58,6 +58,8 @@ export const MagicPropertyType = {
   LowerLightningResist: 'LowerLightningResist',
   LowerPoisonResist: 'LowerPoisonResist',
   ColdSkillDamage: 'ColdSkillDamage',
+  FireSkillDamage: 'FireSkillDamage',
+  LightningSkillDamage: 'LightningSkillDamage',
   PoisonSkillDamage: 'PoisonSkillDamage',
   FireMastery: 'FireMastery',
   LightRadius: 'LightRadius',

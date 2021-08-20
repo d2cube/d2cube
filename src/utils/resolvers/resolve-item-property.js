@@ -154,6 +154,7 @@ const resolvers = {
     `Adds ${x === y ? x : `${x}-${y}`} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
   [MagicPropertyType.FireMastery]: (x) => `+${x} to Fire Mastery`,
+  [MagicPropertyType.FireSkillDamage]: (x) => `+${x}% to Fire Skill Damage`,
   [MagicPropertyType.FiresExplosiveArrowsOrBolts]: (x) =>
     `Fires Explosive Arrows or Bolts (Level ${x})`,
   [MagicPropertyType.FiresMagicArrows]: (x) =>
@@ -186,6 +187,8 @@ const resolvers = {
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
+  [MagicPropertyType.LightningSkillDamage]: (x) =>
+    `+${x}% to Lightning Skill Damage`,
   [MagicPropertyType.LightRadius]: (x) =>
     `${x > 0 ? `+${x}` : x} to Light Radius`,
   [MagicPropertyType.LowerColdResist]: (x) => `${x}% to Enemy Cold Resistance`,
