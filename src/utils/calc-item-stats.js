@@ -38,6 +38,7 @@ export const calcItemStats = (item) => {
   const statsEntries = sortEntriesBy(magicPropertiesOrder)(
     Object.entries(stats),
   );
+
   return statsEntries.reduce((acc, [property, values]) => {
     // TODO: figure out general logic
     let effective = [];
@@ -175,6 +176,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.ColdAbsorbByLevel,
   MagicPropertyType.LightningAbsorb,
   MagicPropertyType.FireAbsorb,
+  MagicPropertyType.FireAbsorbByLevel,
   MagicPropertyType.MagicAbsorb,
   MagicPropertyType.PoisonLengthReduced,
   MagicPropertyType.HalfFreezeDuration,

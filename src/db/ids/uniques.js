@@ -1,4 +1,17 @@
 export default {
+  // Amulets
+  AtmasScarab: 'AtmasScarab',
+  CrescentMoon: 'CrescentMoon',
+  HighlordsWrath: 'HighlordsWrath',
+  MarasKaleidoscope: 'MarasKaleidoscope',
+  Metalgrid: 'Metalgrid',
+  NokozanRelic: 'NokozanRelic',
+  SaracensChance: 'SaracensChance',
+  SeraphsHymn: 'SeraphsHymn',
+  TheCatsEye: 'TheCatsEye',
+  TheEyeOfEtlich: 'TheEyeOfEtlich',
+  TheMahimOakCurio: 'TheMahimOakCurio',
+  TheRisingSun: 'TheRisingSun',
   // Charms
   Annihilus: 'Annihilus',
   HellfireTorch: 'HellfireTorch',

@@ -285,6 +285,10 @@ resolvers[MagicPropertyType.ExtraGoldByLevel] = lvl(
   resolvers[MagicPropertyType.ExtraGold],
   '%',
 );
+resolvers[MagicPropertyType.FireAbsorbByLevel] = lvl(
+  resolvers[MagicPropertyType.FireAbsorb],
+  '%',
+);
 resolvers[MagicPropertyType.HealStaminaByLevel] = lvl(
   resolvers[MagicPropertyType.HealStamina],
   '%',
