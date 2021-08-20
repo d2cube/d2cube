@@ -24,7 +24,7 @@ export default normalizeItems({
       },
       magic: {
         [MagicPropertyType.IncreasedAttackSpeed]: 30,
-        [MagicPropertyType.Damage]: {x: 40, y: 62},
+        [MagicPropertyType.AddDamage]: {x: 40, y: 62},
         [MagicPropertyType.DamageToDemons]: 200,
         [MagicPropertyType.LightningDamage]: {x: 50, y: 75},
         [MagicPropertyType.ManaStolenPerHit]: 5,

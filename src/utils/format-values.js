@@ -4,7 +4,11 @@ export const formatValues = (values) => {
   let formattedValues = values;
   if (Array.isArray(values)) {
     const [first, second] = values.map(Math.floor);
-    formattedValues = first === second ? first : `[${first}-${second}]`;
+    const isNegative = first < 0;
+    formattedValues =
+      first === second
+        ? first
+        : `${isNegative ? '-' : ''}[${Math.abs(first)}-${Math.abs(second)}]`;
   } else if (isPlainObject(values)) {
     formattedValues = Object.entries(values).reduce((acc, [key, value]) => {
       acc[key] = formatValues(value);

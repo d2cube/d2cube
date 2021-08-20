@@ -37,10 +37,10 @@ export default normalizeItems({
           },
         },
         {
-          [MagicPropertyType.Damage]: {x: 10, y: 20},
+          [MagicPropertyType.AddDamage]: {x: 10, y: 20},
         },
         {
-          [MagicPropertyType.Damage]: {x: 10, y: 20},
+          [MagicPropertyType.AddDamage]: {x: 10, y: 20},
         },
       ],
     },

@@ -23,15 +23,24 @@ import enigma from './enigma.js';
 import enlightenment from './enlightenment.js';
 import eternity from './eternity.js';
 import exile from './exile.js';
+import faith from './faith.js';
 import famine from './famine.js';
+import fortitude from './fortitude.js';
 import fury from './fury.js';
 import gloom from './gloom.js';
+import grief from './grief.js';
 import handOfJustice from './hand-of-justice.js';
+import harmony from './harmony.js';
 import heartOfTheOak from './heart-of-the-oak.js';
 import holyThunder from './holy-thunder.js';
 import honor from './honor.js';
+import ice from './ice.js';
+import infinity from './infinity.js';
+import insight from './insight.js';
 import kingsGrace from './kings-grace.js';
 import kingslayer from './kingslayer.js';
+import lastWish from './last-wish.js';
+import lawbringer from './lawbringer.js';
 import leaf from './leaf.js';
 import lionheart from './lionheart.js';
 import lore from './lore.js';
@@ -66,16 +75,21 @@ import zephyr from './zephyr.js';
 export default {
   [RunewordType.AmnBerIstSolSur]: eternity,
   [RunewordType.AmnElIthTirSol]: honor,
+  [RunewordType.AmnLemKo]: lawbringer,
   [RunewordType.AmnRalMalIstOhm]: callToArms,
   [RunewordType.AmnRalThul]: kingsGrace,
   [RunewordType.AmnTir]: strength,
+  [RunewordType.AmnShaelJahLo]: ice,
+  [RunewordType.BerMalBerIst]: infinity,
   [RunewordType.BerTirUmMalLum]: beast,
   [RunewordType.DolEldHelIstTirVex]: silence,
   [RunewordType.DolIo]: white,
   [RunewordType.DolOrtEldLem]: passion,
   [RunewordType.DolUmBerIst]: chainsOfHonor,
+  [RunewordType.ElSolDolLo]: fortitude,
   [RunewordType.EthLum]: splendor,
   [RunewordType.EthRalOrtTal]: holyThunder,
+  [RunewordType.EthTirLoMalRal]: grief,
   [RunewordType.FalOhmOrtJah]: famine,
   [RunewordType.FalOhmUm]: chaos,
   [RunewordType.FalUmPul]: gloom,
@@ -88,6 +102,7 @@ export default {
   [RunewordType.JahGulEth]: fury,
   [RunewordType.JahIthBer]: enigma,
   [RunewordType.JahLoMalGul]: brand,
+  [RunewordType.JahMalJahSurJahBer]: lastWish,
   [RunewordType.KoKoMal]: sanctuary,
   [RunewordType.KoVexPulThul]: heartOfTheOak,
   [RunewordType.LemIstIo]: delirium,
@@ -98,6 +113,7 @@ export default {
   [RunewordType.NefLum]: smoke,
   [RunewordType.NefTir]: nadir,
   [RunewordType.NefSolIth]: radiance,
+  [RunewordType.OhmJahLemEld]: faith,
   [RunewordType.OrtEth]: zephyr,
   [RunewordType.OrtMalIth]: rain,
   [RunewordType.OrtSol]: lore,
@@ -105,6 +121,7 @@ export default {
   [RunewordType.RalGulEld]: principle,
   [RunewordType.RalOhmSurEth]: bramble,
   [RunewordType.RalOrtTal]: ancientsPledge,
+  [RunewordType.RalTirTalSol]: insight,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
   [RunewordType.ShaelThulAmn]: peace,
@@ -121,6 +138,7 @@ export default {
   [RunewordType.TalThulOrtAmn]: spirit,
   [RunewordType.ThulIoNef]: black,
   [RunewordType.TirEl]: steel,
+  [RunewordType.TirIthSolKo]: harmony,
   [RunewordType.TirRal]: leaf,
   [RunewordType.TirTalAmn]: edge,
   [RunewordType.VexHelElEldZodEth]: breathOfTheDying,

@@ -60,7 +60,7 @@ const enhanceWithStats =
           stats,
           wasEnhanced: enhanced.isEnhanced,
         });
-        enhanced = enhance(MagicPropertyType.Damage)({
+        enhanced = enhance(MagicPropertyType.AddDamage)({
           values: enhanced.values,
           stats,
           wasEnhanced: enhanced.isEnhanced,
@@ -232,7 +232,7 @@ const enhanceDefense = (values, enhanced) => {
 
 const enhancers = {
   [MagicPropertyType.Defense]: addDefense,
-  [MagicPropertyType.Damage]: addDamage,
+  [MagicPropertyType.AddDamage]: addDamage,
   [MagicPropertyType.EnhancedDamage]: enhanceDamage,
   [MagicPropertyType.EnhancedDefense]: enhanceDefense,
   [MagicPropertyType.IncreasedAttackSpeed]: ias,

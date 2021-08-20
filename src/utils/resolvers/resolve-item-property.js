@@ -74,6 +74,7 @@ const resolvers = {
         }`,
     ),
   [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
+  [MagicPropertyType.AddDamage]: ({x, y}) => `Adds ${x}-${y} Damage`,
   [MagicPropertyType.AllAttributes]: (x) => `+${x} to All Attributes`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,
@@ -135,7 +136,7 @@ const resolvers = {
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
   [MagicPropertyType.ColdSkillDamage]: (x) => `+${x}% to Cold Skill Damage`,
   [MagicPropertyType.CrushingBlow]: (x) => `${x}% Chance of Crushing Blow`,
-  [MagicPropertyType.Damage]: ({x, y}) => `Adds ${x}-${y} Damage`,
+  [MagicPropertyType.Damage]: (x) => `Damage ${x}`,
   [MagicPropertyType.DamageReduced]: (x) => `Damage Reduced by ${x}`,
   [MagicPropertyType.DamageReducedPercentage]: (x) => `Damage Reduced by ${x}%`,
   [MagicPropertyType.DamageTakenGoesToMana]: (x) =>
@@ -228,6 +229,7 @@ const resolvers = {
   [MagicPropertyType.PoisonResist]: (x) => `Poison Resist +${x}%`,
   [MagicPropertyType.PoisonSkillDamage]: (x) => `+${x}% to Poison Skill Damage`,
   [MagicPropertyType.PreventMonsterHeal]: () => 'Prevent Monster Heal',
+  [MagicPropertyType.ReanimateAs]: ({x}) => `${x}% Reanimate As: Returned`,
   [MagicPropertyType.ReduceVendorPrices]: (x) =>
     `Reduce All Vendor Prices ${x}%`,
   [MagicPropertyType.RegenerateMana]: (x) => `Regenerate Mana ${x}%`,
@@ -235,6 +237,8 @@ const resolvers = {
     `Repairs 1 Durability In ${x} Seconds`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
+  [MagicPropertyType.SlainMonstersRestInPeace]: () =>
+    'Slain Monsters Rest in Peace',
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x} Slower Stamina Drain`,
   [MagicPropertyType.Spell]: (x) =>
     Object.entries(x).map(
@@ -269,6 +273,10 @@ resolvers[MagicPropertyType.AttackRatingByLevel] = lvl(
 resolvers[MagicPropertyType.ColdAbsorbByLevel] = lvl(
   resolvers[MagicPropertyType.ColdAbsorb],
 );
+resolvers[MagicPropertyType.DamageToDemonsByLevel] = lvl(
+  resolvers[MagicPropertyType.DamageToDemons],
+  '%',
+);
 resolvers[MagicPropertyType.DeadlyStrikeByLevel] = lvl(
   resolvers[MagicPropertyType.DeadlyStrike],
   '%',
@@ -299,4 +307,7 @@ resolvers[MagicPropertyType.MaximumDamageByLevel] = lvl(
 );
 resolvers[MagicPropertyType.StrengthByLevel] = lvl(
   resolvers[MagicPropertyType.Strength],
+);
+resolvers[MagicPropertyType.VitalityByLevel] = lvl(
+  resolvers[MagicPropertyType.Vitality],
 );
