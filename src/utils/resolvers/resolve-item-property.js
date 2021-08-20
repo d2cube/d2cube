@@ -157,6 +157,7 @@ const resolvers = {
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,
   [MagicPropertyType.FasterRunWalk]: (x) => `${x}% Faster Run/Walk`,
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
+  [MagicPropertyType.FireAbsorb]: (x) => `+${x} Fire Absorb`,
   [MagicPropertyType.FireDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,

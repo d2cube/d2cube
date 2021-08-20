@@ -49,13 +49,18 @@ import melody from './melody.js';
 import memory from './memory.js';
 import myth from './myth.js';
 import nadir from './nadir.js';
+import oath from './oath.js';
+import obedience from './obedience.js';
 import passion from './passion.js';
 import peace from './peace.js';
+import phoenix from './phoenix.js';
+import pride from './pride.js';
 import principle from './principle.js';
 import prudence from './prudence.js';
 import radiance from './radiance.js';
 import rain from './rain.js';
 import rhyme from './rhyme.js';
+import rift from './rift.js';
 import sanctuary from './sanctuary.js';
 import silence from './silence.js';
 import smoke from './smoke.js';
@@ -67,9 +72,11 @@ import stone from './stone.js';
 import strength from './strength.js';
 import treachery from './treachery.js';
 import venom from './venom.js';
+import voiceOfReason from './voice-of-reason.js';
 import wealth from './wealth.js';
 import white from './white.js';
 import wind from './wind.js';
+import wrath from './wrath.js';
 import zephyr from './zephyr.js';
 
 export default {
@@ -82,6 +89,7 @@ export default {
   [RunewordType.AmnShaelJahLo]: ice,
   [RunewordType.BerMalBerIst]: infinity,
   [RunewordType.BerTirUmMalLum]: beast,
+  [RunewordType.ChamSurIoLo]: pride,
   [RunewordType.DolEldHelIstTirVex]: silence,
   [RunewordType.DolIo]: white,
   [RunewordType.DolOrtEldLem]: passion,
@@ -95,6 +103,8 @@ export default {
   [RunewordType.FalUmPul]: gloom,
   [RunewordType.HelAmnNef]: myth,
   [RunewordType.HelElVexOrtGul]: death,
+  [RunewordType.HelKoLemGul]: rift,
+  [RunewordType.HelKoThulEthFal]: obedience,
   [RunewordType.HelLumFal]: lionheart,
   [RunewordType.HelOhmUmLoCham]: doom,
   [RunewordType.IoJahPul]: dream,
@@ -106,6 +116,7 @@ export default {
   [RunewordType.KoKoMal]: sanctuary,
   [RunewordType.KoVexPulThul]: heartOfTheOak,
   [RunewordType.LemIstIo]: delirium,
+  [RunewordType.LemKoElEld]: voiceOfReason,
   [RunewordType.LemKoTir]: wealth,
   [RunewordType.LumIoSolEth]: memory,
   [RunewordType.MalTir]: prudence,
@@ -117,6 +128,7 @@ export default {
   [RunewordType.OrtEth]: zephyr,
   [RunewordType.OrtMalIth]: rain,
   [RunewordType.OrtSol]: lore,
+  [RunewordType.PulLumBerMal]: wrath,
   [RunewordType.PulRalSol]: enlightenment,
   [RunewordType.RalGulEld]: principle,
   [RunewordType.RalOhmSurEth]: bramble,
@@ -124,6 +136,7 @@ export default {
   [RunewordType.RalTirTalSol]: insight,
   [RunewordType.ShaelEth]: rhyme,
   [RunewordType.ShaelKoNef]: melody,
+  [RunewordType.ShaelPulMalLum]: oath,
   [RunewordType.ShaelThulAmn]: peace,
   [RunewordType.ShaelThulLem]: treachery,
   [RunewordType.ShaelUmPulLum]: stone,
@@ -144,4 +157,5 @@ export default {
   [RunewordType.VexHelElEldZodEth]: breathOfTheDying,
   [RunewordType.VexLoBerJahKo]: destruction,
   [RunewordType.VexOhmIstDol]: exile,
+  [RunewordType.VexVexLoJah]: phoenix,
 };
