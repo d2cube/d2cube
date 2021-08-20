@@ -49,7 +49,7 @@ import staves from './staves.js';
 import swords from './swords.js';
 import tokens from './tokens.js';
 import tomes from './tomes.js';
-import uniques from './uniques.js';
+import uniques from './uniques/index.js';
 import wands from './wands.js';
 
 export default createItems({
