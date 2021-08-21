@@ -3,6 +3,7 @@
  * @enum {string}
  */
 export const SkillType = {
+  RandomSorceressSkill: 'RandomSorceressSkill',
   AmplifyDamage: 'AmplifyDamage',
   Attract: 'Attract',
   BattleCommand: 'BattleCommand',

@@ -1,4 +1,5 @@
 import amulets from './amulets.js';
+import bodyArmors from './body-armors.js';
 import charms from './charms.js';
 import jewels from './jewels.js';
 import rings from './rings.js';
@@ -7,6 +8,7 @@ import swords from './swords.js';
 
 export default {
   ...amulets,
+  ...bodyArmors,
   ...charms,
   ...jewels,
   ...rings,

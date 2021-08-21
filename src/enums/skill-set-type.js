@@ -4,6 +4,7 @@
  */
 export const SkillSetType = {
   CharacterSkills: 'CharacterSkills',
+  RandomSorceressSkills: 'RandomSorceressSkills',
   AmazonSkills: 'AmazonSkills',
   AmazonBowAndCrossbowSkills: 'AmazonBowAndCrossbowSkills',
   AmazonJavelinAndSpearSkills: 'AmazonJavelinAndSpearSkills',

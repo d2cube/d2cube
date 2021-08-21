@@ -264,6 +264,9 @@ Object.entries(resolvers).forEach(([property, resolverr]) => {
 });
 
 // Derive resolvers for *ByLevel properties
+resolvers[MagicPropertyType.AttackRatingAgainstDemonsByLevel] = lvl(
+  resolvers[MagicPropertyType.AttackRatingAgainstDemons],
+);
 resolvers[MagicPropertyType.AttackRatingByLevel] = lvl(
   resolvers[MagicPropertyType.AttackRating],
 );
