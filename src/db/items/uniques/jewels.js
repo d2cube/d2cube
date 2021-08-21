@@ -18,7 +18,6 @@ export default normalizeItems({
       [BasePropertyType.RequiredLevel]: 49,
     },
   },
-  size: [1, 1],
   type: ItemType.Unique,
 })([
   {

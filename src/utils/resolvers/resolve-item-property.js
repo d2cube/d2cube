@@ -122,7 +122,8 @@ const resolvers = {
       ([skill, {x, y}]) =>
         `${y}% Chance to Cast Level ${x} ${humanize(skill)} When Struck`,
     ),
-  [MagicPropertyType.ColdAbsorb]: (x) => `Cold Absorb ${x}%`,
+  [MagicPropertyType.ColdAbsorb]: (x) => `+${x} Cold Absorb`,
+  [MagicPropertyType.ColdAbsorbPercentage]: (x) => `Cold Absorb ${x}%`,
   [MagicPropertyType.ColdDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Cold Damage`,
   [MagicPropertyType.ColdResist]: (x) => `Cold Resist +${x}%`,
@@ -150,7 +151,8 @@ const resolvers = {
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,
   [MagicPropertyType.FasterRunWalk]: (x) => `${x}% Faster Run/Walk`,
   [MagicPropertyType.FasterHitRecovery]: (x) => `${x}% Faster Hit Recovery`,
-  [MagicPropertyType.FireAbsorb]: (x) => `Fire Absorb ${x}%`,
+  [MagicPropertyType.FireAbsorb]: (x) => `+${x} Fire Absorb`,
+  [MagicPropertyType.FireAbsorbPercentage]: (x) => `Fire Absorb ${x}%`,
   [MagicPropertyType.FireDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Fire Damage`,
   [MagicPropertyType.FireResist]: (x) => `Fire Resist +${x}%`,
@@ -184,7 +186,9 @@ const resolvers = {
   [MagicPropertyType.LifeAfterDemonKill]: (x) =>
     `+${x} to Life After Each Demon Kill`,
   [MagicPropertyType.LifeStolenPerHit]: (x) => `${x}% Life Stolen Per Hit`,
-  [MagicPropertyType.LightningAbsorb]: (x) => `Lightning Absorb ${x}%`,
+  [MagicPropertyType.LightningAbsorb]: (x) => `+${x} Lightning Absorb`,
+  [MagicPropertyType.LightningAbsorbPercentage]: (x) =>
+    `Lightning Absorb ${x}%`,
   [MagicPropertyType.LightningDamage]: ({x, y}) =>
     `Adds ${x === y ? x : `${x}-${y}`} Lightning Damage`,
   [MagicPropertyType.LightningResist]: (x) => `Lightning Resist +${x}%`,
@@ -269,6 +273,9 @@ resolvers[MagicPropertyType.AttackRatingAgainstDemonsByLevel] = lvl(
 );
 resolvers[MagicPropertyType.AttackRatingByLevel] = lvl(
   resolvers[MagicPropertyType.AttackRating],
+);
+resolvers[MagicPropertyType.AttackerTakesDamageByLevel] = lvl(
+  resolvers[MagicPropertyType.AttackerTakesDamage],
 );
 resolvers[MagicPropertyType.ColdAbsorbByLevel] = lvl(
   resolvers[MagicPropertyType.ColdAbsorb],

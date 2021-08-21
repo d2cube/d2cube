@@ -13,7 +13,6 @@ export default normalizeItems({
   baseId: ids.Amulet,
   imageId: ids.Amulet,
   quality: ItemQualityType.Unique,
-  size: [1, 1],
   type: ItemType.Unique,
 })([
   {

@@ -12,6 +12,20 @@ export default {
   TheEyeOfEtlich: 'TheEyeOfEtlich',
   TheMahimOakCurio: 'TheMahimOakCurio',
   TheRisingSun: 'TheRisingSun',
+  // Belts
+  Lenymo: 'Lenymo',
+  Snakecord: 'Snakecord',
+  Nightsmoke: 'Nightsmoke',
+  Goldwrap: 'Goldwrap',
+  Bladebuckle: 'Bladebuckle',
+  StringOfEars: 'StringOfEars',
+  Razortail: 'Razortail',
+  GloomsTrap: 'GloomsTrap',
+  Snowclash: 'Snowclash',
+  ThundergodsVigor: 'ThundergodsVigor',
+  ArachnidMesh: 'ArachnidMesh',
+  NosferatusCoil: 'NosferatusCoil',
+  VerdungosHeartyCord: 'VerdungosHeartyCord',
   // BodyArmors
   Greyform: 'Greyform',
   BlinkbatsForm: 'BlinkbatsForm',
@@ -54,6 +68,9 @@ export default {
   Annihilus: 'Annihilus',
   HellfireTorch: 'HellfireTorch',
   GheedsFortune: 'GheedsFortune',
+  // Circlets
+  KirasGuardian: 'KirasGuardian',
+  GriffonsEye: 'GriffonsEye',
   // Jewels
   RainbowFacetLevelCold: 'RainbowFacetLevelCold',
   RainbowFacetLevelFire: 'RainbowFacetLevelFire',

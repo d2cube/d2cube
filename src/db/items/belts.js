@@ -50,7 +50,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.BaseDefense]: [6, 6],
-        [BasePropertyType.Durability]: 20,
+        [BasePropertyType.Durability]: 18,
         [BasePropertyType.RequiredStrength]: 45,
         [BasePropertyType.PotionSlots]: 12,
       },
@@ -86,7 +86,7 @@ export default normalizeItems({
     },
   },
   {
-    id: ids.SharksinBelt,
+    id: ids.SharkskinBelt,
     name: 'Sharkskin Belt',
     tier: ItemTierType.Exceptional,
     baseId: ids.LightBelt,

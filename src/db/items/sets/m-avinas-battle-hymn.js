@@ -140,7 +140,7 @@ export default normalizeItems({
   {
     id: ids.MAvinasTenet,
     name: "M'avina's Tenet",
-    baseId: ids.SharksinBelt,
+    baseId: ids.SharkskinBelt,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 45,

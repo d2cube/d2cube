@@ -5,7 +5,7 @@ export default {
   LightPlatedBoots: 'LightPlatedBoots',
   Greaves: 'Greaves',
   DemonhideBoots: 'DemonhideBoots',
-  SharksinBoots: 'SharksinBoots',
+  SharkskinBoots: 'SharkskinBoots',
   MeshBoots: 'MeshBoots',
   BattleBoots: 'BattleBoots',
   WarBoots: 'WarBoots',

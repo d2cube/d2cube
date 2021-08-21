@@ -81,8 +81,8 @@ export default normalizeItems({
     },
   },
   {
-    id: ids.SharksinBoots,
-    name: 'Sharksin Boots',
+    id: ids.SharkskinBoots,
+    name: 'Sharkskin Boots',
     tier: ItemTierType.Exceptional,
     baseId: ids.HeavyBoots,
     imageId: ids.HeavyBoots,

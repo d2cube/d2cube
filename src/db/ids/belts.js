@@ -5,7 +5,7 @@ export default {
   HeavyBelt: 'HeavyBelt',
   PlatedBelt: 'PlatedBelt',
   DemonhideSash: 'DemonhideSash',
-  SharksinBelt: 'SharksinBelt',
+  SharkskinBelt: 'SharkskinBelt',
   MeshBelt: 'MeshBelt',
   BattleBelt: 'BattleBelt',
   WarBelt: 'WarBelt',

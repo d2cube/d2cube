@@ -12,7 +12,6 @@ export default normalizeItems({
   baseId: ids.Ring,
   imageId: ids.Ring,
   quality: ItemQualityType.Unique,
-  size: [1, 1],
   type: ItemType.Unique,
 })([
   {
@@ -62,7 +61,7 @@ export default normalizeItems({
         [BasePropertyType.RequiredLevel]: 45,
       },
       magic: {
-        [MagicPropertyType.FireAbsorb]: 15,
+        [MagicPropertyType.FireAbsorbPercentage]: 15,
         [MagicPropertyType.HealStamina]: 15,
         [MagicPropertyType.MaximumStamina]: 40,
         [MagicPropertyType.Life]: 40,
@@ -132,7 +131,7 @@ export default normalizeItems({
         [MagicPropertyType.CannotBeFrozen]: true,
         [MagicPropertyType.Dexterity]: [15, 20],
         [MagicPropertyType.Mana]: 40,
-        [MagicPropertyType.ColdAbsorb]: 20,
+        [MagicPropertyType.ColdAbsorbPercentage]: 20,
       },
     },
   },
@@ -162,7 +161,7 @@ export default normalizeItems({
         [MagicPropertyType.ChanceToCastSpellOnStriking]: {
           [SkillType.Lightning]: {x: 16, y: 10},
         },
-        [MagicPropertyType.LightningAbsorb]: [10, 20],
+        [MagicPropertyType.LightningAbsorbPercentage]: [10, 20],
         [MagicPropertyType.MagicFind]: [10, 20],
         [MagicPropertyType.SpellCharges]: {
           [SkillType.SpiritOfBarbs]: {x: 7, y: 11},
