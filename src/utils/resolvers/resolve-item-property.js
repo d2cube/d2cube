@@ -316,6 +316,9 @@ resolvers[MagicPropertyType.ManaByLevel] = lvl(
 resolvers[MagicPropertyType.MaximumDamageByLevel] = lvl(
   resolvers[MagicPropertyType.MaximumDamage],
 );
+resolvers[MagicPropertyType.MaximumStaminaByLevel] = lvl(
+  resolvers[MagicPropertyType.MaximumStamina],
+);
 resolvers[MagicPropertyType.StrengthByLevel] = lvl(
   resolvers[MagicPropertyType.Strength],
 );

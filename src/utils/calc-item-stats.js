@@ -161,6 +161,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.IncreaseMaximumLife,
   MagicPropertyType.IncreaseMaximumMana,
   MagicPropertyType.RegenerateMana,
+  MagicPropertyType.MaximumStaminaByLevel,
   MagicPropertyType.MaximumStamina,
   MagicPropertyType.SlowerStaminaDrain,
   MagicPropertyType.HealStamina,

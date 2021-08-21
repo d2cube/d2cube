@@ -68,6 +68,7 @@ export const MagicPropertyType = {
   FasterRunWalk: 'FasterRunWalk',
   HealStamina: 'HealStamina',
   MaximumStamina: 'MaximumStamina',
+  MaximumStaminaByLevel: 'MaximumStaminaByLevel',
   FasterHitRecovery: 'FasterHitRecovery',
   FasterBlockRate: 'FasterBlockRate',
   FasterCastRate: 'FasterCastRate',

@@ -1,4 +1,5 @@
 import belts from './belts.js';
+import boots from './boots.js';
 import amulets from './amulets.js';
 import bodyArmors from './body-armors.js';
 import charms from './charms.js';
@@ -12,6 +13,7 @@ export default {
   ...amulets,
   ...belts,
   ...bodyArmors,
+  ...boots,
   ...charms,
   ...circlets,
   ...jewels,
