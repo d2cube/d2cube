@@ -53,7 +53,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.BaseDefense]: [12, 14],
-        [BasePropertyType.BlockChance]: 35,
+        [BasePropertyType.BlockChance]: 42,
         [BasePropertyType.Durability]: 24,
         [BasePropertyType.RequiredStrength]: 34,
         [BasePropertyType.MaxSockets]: 3,
@@ -111,7 +111,7 @@ export default normalizeItems({
   {
     id: ids.TowerShield,
     name: 'Tower Shield',
-    size: [4, 2],
+    size: [3, 2],
     armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     properties: {
@@ -190,7 +190,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.BaseDefense]: [53, 61],
         [BasePropertyType.BlockChance]: 44,
-        [BasePropertyType.Durability]: 64,
+        [BasePropertyType.Durability]: 62,
         [BasePropertyType.RequiredStrength]: 71,
         [BasePropertyType.RequiredLevel]: 25,
         [BasePropertyType.MaxSockets]: 3,
@@ -209,7 +209,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.BaseDefense]: [59, 67],
         [BasePropertyType.BlockChance]: 48,
-        [BasePropertyType.Durability]: 76,
+        [BasePropertyType.Durability]: 116,
         [BasePropertyType.RequiredStrength]: 91,
         [BasePropertyType.RequiredLevel]: 25,
         [BasePropertyType.MaxSockets]: 3,
@@ -257,7 +257,7 @@ export default normalizeItems({
   {
     id: ids.Pavise,
     name: 'Pavise',
-    size: [4, 2],
+    size: [3, 2],
     armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     baseId: ids.TowerShield,
@@ -265,8 +265,8 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.BaseDefense]: [68, 78],
-        [BasePropertyType.BlockChance]: 50,
-        [BasePropertyType.Durability]: 72,
+        [BasePropertyType.BlockChance]: 54,
+        [BasePropertyType.Durability]: 172,
         [BasePropertyType.RequiredStrength]: 133,
         [BasePropertyType.RequiredLevel]: 25,
         [BasePropertyType.MaxSockets]: 3,
@@ -285,7 +285,7 @@ export default normalizeItems({
       base: {
         [BasePropertyType.BaseDefense]: [80, 93],
         [BasePropertyType.BlockChance]: 46,
-        [BasePropertyType.Durability]: 80,
+        [BasePropertyType.Durability]: 100,
         [BasePropertyType.RequiredStrength]: 110,
         [BasePropertyType.RequiredLevel]: 25,
         [BasePropertyType.MaxSockets]: 3,
@@ -409,7 +409,7 @@ export default normalizeItems({
   {
     id: ids.Aegis,
     name: 'Aegis',
-    size: [4, 2],
+    size: [3, 2],
     armorType: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     baseId: ids.TowerShield,

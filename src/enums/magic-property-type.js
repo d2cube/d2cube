@@ -157,6 +157,7 @@ export const MagicPropertyType = {
   OpenWoundsByLevel: 'OpenWoundsByLevel',
   KickDamageByLevel: 'KickDamageByLevel',
   DeadlyStrikeByLevel: 'DeadlyStrikeByLevel',
+  AddDurability: 'AddDurability',
   RepairsDurability: 'RepairsDurability',
   ReplenishesQuantity: 'ReplenishesQuantity',
   IncreasedStackSize: 'IncreasedStackSize',

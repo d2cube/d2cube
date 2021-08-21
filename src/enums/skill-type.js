@@ -65,6 +65,7 @@ export const SkillType = {
   LightningFury: 'LightningFury',
   LightningMastery: 'LightningMastery',
   LightningStrike: 'LightningStrike',
+  LowerResist: 'LowerResist',
   Lycanthropy: 'Lycanthropy',
   Meditation: 'Meditation',
   Meteor: 'Meteor',

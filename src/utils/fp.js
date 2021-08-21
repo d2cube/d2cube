@@ -26,6 +26,10 @@ export const isPropValueEqual = (prop) => (value) => (x) =>
 
 export const add = (x) => (y) => x + y;
 
+export const max = (x) => (y) => Math.max(x, y);
+
+export const min = (x) => (y) => Math.min(x, y);
+
 export const multiply = (x) => (y) => x * y;
 
 export const percent = (x) => (x + 100) / 100;

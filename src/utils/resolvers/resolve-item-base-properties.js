@@ -2,7 +2,7 @@ import {props} from 'uinix-fp';
 
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
 import {formatValues} from '../format-values.js';
-import {add, isEmpty, multiply, percent} from '../fp.js';
+import {add, isEmpty, min, multiply, percent} from '../fp.js';
 import {resolveItemProperty} from './resolve-item-property.js';
 
 export const resolveItemBaseProperties = (item) => {
@@ -93,9 +93,14 @@ const enhanceWithStats =
       }
 
       case BasePropertyType.Durability: {
-        return enhance(MagicPropertyType.Indestructible)({
+        const enhanced = enhance(MagicPropertyType.AddDurability)({
           values,
           stats,
+        });
+        return enhance(MagicPropertyType.Indestructible)({
+          values: enhanced.values,
+          stats,
+          wasEnhanced: enhanced.isEnhanced,
         });
       }
 
@@ -152,7 +157,15 @@ const ias = (values, enhanced) => {
   return values - delta;
 };
 
-const icb = (values, enhanced) => values + enhanced;
+const icb = (values, enhanced) => {
+  const MAX_BLOCK = 75;
+  const minByMaxBlock = min(MAX_BLOCK);
+  if (Array.isArray(enhanced)) {
+    return enhanced.map(add(values)).map(minByMaxBlock);
+  }
+
+  return minByMaxBlock(values + enhanced);
+};
 
 const indestructible = (values, enhanced) => (enhanced ? null : values);
 
@@ -168,6 +181,18 @@ const addDamage = ({x, y}, enhanced) => {
     x: x + enhanced.x,
     y: y + enhanced.y,
   };
+};
+
+const addDurability = (values, enhanced) => {
+  if (Array.isArray(enhanced)) {
+    return enhanced.map((v, i) =>
+      add(v)(Array.isArray(values) ? values[i] : values),
+    );
+  }
+
+  return Array.isArray(values)
+    ? values.map(add(enhanced))
+    : add(enhanced)(values);
 };
 
 const addMaxDamage = ({x, y}, enhanced) => {
@@ -233,6 +258,7 @@ const enhanceDefense = (values, enhanced) => {
 const enhancers = {
   [MagicPropertyType.Defense]: addDefense,
   [MagicPropertyType.AddDamage]: addDamage,
+  [MagicPropertyType.AddDurability]: addDurability,
   [MagicPropertyType.EnhancedDamage]: enhanceDamage,
   [MagicPropertyType.EnhancedDefense]: enhanceDefense,
   [MagicPropertyType.IncreasedAttackSpeed]: ias,

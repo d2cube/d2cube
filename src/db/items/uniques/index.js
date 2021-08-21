@@ -5,6 +5,7 @@ import bodyArmors from './body-armors.js';
 import charms from './charms.js';
 import circlets from './circlets.js';
 import gloves from './gloves.js';
+import helms from './helms.js';
 import jewels from './jewels.js';
 import rings from './rings.js';
 import shields from './shields.js';
@@ -18,6 +19,7 @@ export default {
   ...charms,
   ...circlets,
   ...gloves,
+  ...helms,
   ...jewels,
   ...rings,
   ...shields,

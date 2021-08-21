@@ -45,10 +45,7 @@ const resolvers = {
     `${item.class} Class - `,
     `${getAttackSpeedDescription(x)} Attack Speed`,
   ],
-  [BasePropertyType.BlockChance]: (x) => [
-    `Chance to Block: `,
-    `${Math.min(x, 75)}%`,
-  ],
+  [BasePropertyType.BlockChance]: (x) => ['Chance to Block: ', `${x}%`],
   [BasePropertyType.Damage1H]: ({x, y}) => [
     'One-hand Damage: ',
     `${x} to ${y}`,
@@ -75,6 +72,7 @@ const resolvers = {
     ),
   [MagicPropertyType.Socketed]: (x) => `Socketed (${x})`,
   [MagicPropertyType.AddDamage]: ({x, y}) => `Adds ${x}-${y} Damage`,
+  [MagicPropertyType.AddDurability]: (x) => `+${x} Durability`,
   [MagicPropertyType.AllAttributes]: (x) => `+${x} to All Attributes`,
   [MagicPropertyType.AllSkillLevels]: (x) => `+${x} to All Skills`,
   [MagicPropertyType.AllResistances]: (x) => `All Resistances +${x}`,
@@ -297,6 +295,9 @@ resolvers[MagicPropertyType.DeadlyStrikeByLevel] = lvl(
 );
 resolvers[MagicPropertyType.DefenseByLevel] = lvl(
   resolvers[MagicPropertyType.Defense],
+);
+resolvers[MagicPropertyType.DexterityByLevel] = lvl(
+  resolvers[MagicPropertyType.Dexterity],
 );
 resolvers[MagicPropertyType.ExtraGoldByLevel] = lvl(
   resolvers[MagicPropertyType.ExtraGold],
