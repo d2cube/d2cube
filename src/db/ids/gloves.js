@@ -4,7 +4,7 @@ export default {
   ChainGloves: 'ChainGloves',
   LightGauntlets: 'LightGauntlets',
   Gauntlets: 'Gauntlets',
-  DemonhideGlove: 'DemonhideGlove',
+  DemonhideGloves: 'DemonhideGloves',
   SharkskinGloves: 'SharkskinGloves',
   HeavyBracers: 'HeavyBracers',
   BattleGauntlets: 'BattleGauntlets',

@@ -271,6 +271,9 @@ Object.entries(resolvers).forEach(([property, resolverr]) => {
 resolvers[MagicPropertyType.AttackRatingAgainstDemonsByLevel] = lvl(
   resolvers[MagicPropertyType.AttackRatingAgainstDemons],
 );
+resolvers[MagicPropertyType.AttackRatingAgainstUndeadByLevel] = lvl(
+  resolvers[MagicPropertyType.AttackRatingAgainstUndead],
+);
 resolvers[MagicPropertyType.AttackRatingByLevel] = lvl(
   resolvers[MagicPropertyType.AttackRating],
 );
@@ -282,6 +285,10 @@ resolvers[MagicPropertyType.ColdAbsorbByLevel] = lvl(
 );
 resolvers[MagicPropertyType.DamageToDemonsByLevel] = lvl(
   resolvers[MagicPropertyType.DamageToDemons],
+  '%',
+);
+resolvers[MagicPropertyType.DamageToUndeadByLevel] = lvl(
+  resolvers[MagicPropertyType.DamageToUndead],
   '%',
 );
 resolvers[MagicPropertyType.DeadlyStrikeByLevel] = lvl(

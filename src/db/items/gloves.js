@@ -65,7 +65,7 @@ export default normalizeItems({
     },
   },
   {
-    id: ids.DemonhideGlove,
+    id: ids.DemonhideGloves,
     name: 'Demonhide Glove',
     tier: ItemTierType.Exceptional,
     baseId: ids.LeatherGloves,

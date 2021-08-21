@@ -85,6 +85,20 @@ export default {
   // Circlets
   KirasGuardian: 'KirasGuardian',
   GriffonsEye: 'GriffonsEye',
+  // Gloves
+  TheHandOfBroc: 'TheHandOfBroc',
+  Bloodfist: 'Bloodfist',
+  ChanceGuards: 'ChanceGuards',
+  Magefist: 'Magefist',
+  Frostburn: 'Frostburn',
+  VenomGrip: 'VenomGrip',
+  Gravepalm: 'Gravepalm',
+  Ghoulhide: 'Ghoulhide',
+  LavaGout: 'LavaGout',
+  Hellmouth: 'Hellmouth',
+  DraculsGrasp: 'DraculsGrasp',
+  SoulDrainer: 'SoulDrainer',
+  Steelrend: 'Steelrend',
   // Jewels
   RainbowFacetLevelCold: 'RainbowFacetLevelCold',
   RainbowFacetLevelFire: 'RainbowFacetLevelFire',
