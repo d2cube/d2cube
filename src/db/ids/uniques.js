@@ -158,6 +158,10 @@ export default {
   Homunculus: 'Homunculus',
   Boneflame: 'Boneflame',
   DarkforceSpawn: 'DarkforceSpawn',
+  // PaladinShields
+  HeraldOfZakarum: 'HeraldOfZakarum',
+  AlmaNegra: 'AlmaNegra',
+  Dragonscale: 'Dragonscale',
   // Rings
   BulKathosWeddingBand: 'BulKathosWeddingBand',
   CarrionWind: 'CarrionWind',
@@ -191,6 +195,10 @@ export default {
   MedusasGaze: 'MedusasGaze',
   HeadHuntersGlory: 'HeadHuntersGlory',
   SpiritWard: 'SpiritWard',
+  // SorceressOrbs
+  TheOculus: 'TheOculus',
+  EschutasTemper: 'EschutasTemper',
+  DeathsFathom: 'DeathsFathom',
   // Swords
   BladeOfAliBaba: 'BladeOfAliBaba',
   BloodCrescent: 'BloodCrescent',

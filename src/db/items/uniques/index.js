@@ -11,9 +11,11 @@ import druidPelts from './druid-pelts.js';
 import gloves from './gloves.js';
 import helms from './helms.js';
 import necromancerHeads from './necromancer-heads.js';
+import paladinShields from './paladin-shields.js';
 import jewels from './jewels.js';
 import rings from './rings.js';
 import shields from './shields.js';
+import sorceressOrbs from './sorceress-orbs.js';
 import swords from './swords.js';
 
 export default {
@@ -30,8 +32,10 @@ export default {
   ...gloves,
   ...helms,
   ...necromancerHeads,
+  ...paladinShields,
   ...jewels,
   ...rings,
   ...shields,
+  ...sorceressOrbs,
   ...swords,
 };
