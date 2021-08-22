@@ -38,6 +38,7 @@ export const SkillType = {
   EnergyShield: 'EnergyShield',
   Fade: 'Fade',
   Fanaticism: 'Fanaticism',
+  FeralRage: 'FeralRage',
   Firestorm: 'Firestorm',
   FireBall: 'FireBall',
   FireBolt: 'FireBolt',
@@ -87,6 +88,7 @@ export const SkillType = {
   SpiritOfBarbs: 'SpiritOfBarbs',
   SpiritWolf: 'SpiritWolf',
   StaticField: 'StaticField',
+  SummonDireWolf: 'SummonDireWolf',
   SummonGrizzly: 'SummonGrizzly',
   Taunt: 'Taunt',
   Teleport: 'Teleport',
@@ -104,6 +106,7 @@ export const SkillType = {
   Warmth: 'Warmth',
   Weaken: 'Weaken',
   Werebear: 'Werebear',
+  Werewolf: 'Werewolf',
   Whirlwind: 'Whirlwind',
   Zeal: 'Zeal',
 };

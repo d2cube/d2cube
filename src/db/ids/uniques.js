@@ -24,6 +24,11 @@ export default {
   TheEyeOfEtlich: 'TheEyeOfEtlich',
   TheMahimOakCurio: 'TheMahimOakCurio',
   TheRisingSun: 'TheRisingSun',
+  // BarbarianHelms
+  ArreatsFace: 'ArreatsFace',
+  Wolfhowl: 'Wolfhowl',
+  DemonhornsEdge: 'DemonhornsEdge',
+  HalaberdsReign: 'HalaberdsReign',
   // Belts
   Lenymo: 'Lenymo',
   Snakecord: 'Snakecord',
@@ -97,6 +102,11 @@ export default {
   // Circlets
   KirasGuardian: 'KirasGuardian',
   GriffonsEye: 'GriffonsEye',
+  // DruidPelts
+  JalalsMane: 'JalalsMane',
+  CerebusBite: 'CerebusBite',
+  SpiritKeeper: 'SpiritKeeper',
+  Ravenlore: 'Ravenlore',
   // Gloves
   TheHandOfBroc: 'TheHandOfBroc',
   Bloodfist: 'Bloodfist',
@@ -144,6 +154,10 @@ export default {
   RainbowFacetDeathFire: 'RainbowFacetDeathFire',
   RainbowFacetDeathLightning: 'RainbowFacetDeathLightning',
   RainbowFacetDeathPoison: 'RainbowFacetDeathPoison',
+  // NecromancerHeads
+  Homunculus: 'Homunculus',
+  Boneflame: 'Boneflame',
+  DarkforceSpawn: 'DarkforceSpawn',
   // Rings
   BulKathosWeddingBand: 'BulKathosWeddingBand',
   CarrionWind: 'CarrionWind',

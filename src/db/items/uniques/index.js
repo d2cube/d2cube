@@ -1,13 +1,16 @@
 import amazonWeapons from './amazon-weapons.js';
 import amulets from './amulets.js';
 import assassinKatars from './assassin-katars.js';
+import barbarianHelms from './barbarian-helms.js';
 import belts from './belts.js';
 import bodyArmors from './body-armors.js';
 import boots from './boots.js';
 import charms from './charms.js';
 import circlets from './circlets.js';
+import druidPelts from './druid-pelts.js';
 import gloves from './gloves.js';
 import helms from './helms.js';
+import necromancerHeads from './necromancer-heads.js';
 import jewels from './jewels.js';
 import rings from './rings.js';
 import shields from './shields.js';
@@ -17,13 +20,16 @@ export default {
   ...amazonWeapons,
   ...amulets,
   ...assassinKatars,
+  ...barbarianHelms,
   ...belts,
   ...bodyArmors,
   ...boots,
   ...charms,
   ...circlets,
+  ...druidPelts,
   ...gloves,
   ...helms,
+  ...necromancerHeads,
   ...jewels,
   ...rings,
   ...shields,
