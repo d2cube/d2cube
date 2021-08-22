@@ -1,4 +1,16 @@
 export default {
+  // AmazonWeapons
+  LycandersAim: 'LycandersAim',
+  LycandersFlank: 'LycandersFlank',
+  TitansRevenge: 'TitansRevenge',
+  BloodRavensCharge: 'BloodRavensCharge',
+  Stoneraven: 'Stoneraven',
+  Thunderstroke: 'Thunderstroke',
+  // AssassinKatars
+  BartucsCutThroat: 'BartucsCutThroat',
+  JadeTalon: 'JadeTalon',
+  ShadowKiller: 'ShadowKiller',
+  FirelizardsTalons: 'FirelizardsTalons',
   // Amulets
   AtmasScarab: 'AtmasScarab',
   CrescentMoon: 'CrescentMoon',

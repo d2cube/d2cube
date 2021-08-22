@@ -168,4 +168,5 @@ export const MagicPropertyType = {
   ReanimateAs: 'ReanimateAs',
   ReduceVendorPrices: 'ReduceVendorPrices',
   Experience: 'Experience',
+  Ethereal: 'Ethereal',
 };

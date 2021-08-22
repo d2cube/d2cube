@@ -1,4 +1,8 @@
-import {props} from 'uinix-fp';
+/**
+ * TODO: cleanup this file after consolidating enhanced stats
+ */
+
+import {isPlainObject, props} from 'uinix-fp';
 
 import {BasePropertyType, MagicPropertyType} from '../../enums/index.js';
 import {formatValues} from '../format-values.js';
@@ -65,9 +69,14 @@ const enhanceWithStats =
           stats,
           wasEnhanced: enhanced.isEnhanced,
         });
-        return enhanceByLevel(stats[MagicPropertyType.MaximumDamageByLevel])(
-          enhanced,
-        );
+        enhanced = enhanceByLevel(
+          stats[MagicPropertyType.MaximumDamageByLevel],
+        )(enhanced);
+        return enhance(MagicPropertyType.Ethereal)({
+          values: enhanced.values,
+          stats,
+          wasEnhanced: enhanced.isEnhanced,
+        });
       }
 
       case BasePropertyType.BaseDefense: {
@@ -228,6 +237,30 @@ const addMinDamage = ({x, y}, enhanced) => {
 
 const requirements = (values, enhanced) => multiply(values)(percent(enhanced));
 
+const ethereal = (values) => {
+  if (Array.isArray(values)) {
+    return values.map((value) => {
+      if (isPlainObject(value)) {
+        return Object.entries(value).reduce((acc, [k, v]) => {
+          acc[k] = v * 1.5;
+          return acc;
+        }, {});
+      }
+
+      return value * 1.5;
+    });
+  }
+
+  if (isPlainObject(values)) {
+    return Object.entries(values).reduce((acc, [k, v]) => {
+      acc[k] = Array.isArray(v) ? v.map(multiply(1.5)) : v * 1.5;
+      return acc;
+    }, {});
+  }
+
+  return values * 1.5;
+};
+
 const enhanceDamage = ({x, y}, enhanced) => {
   if (Array.isArray(enhanced)) {
     const ps = enhanced.map(percent);
@@ -261,6 +294,7 @@ const enhancers = {
   [MagicPropertyType.AddDurability]: addDurability,
   [MagicPropertyType.EnhancedDamage]: enhanceDamage,
   [MagicPropertyType.EnhancedDefense]: enhanceDefense,
+  [MagicPropertyType.Ethereal]: ethereal,
   [MagicPropertyType.IncreasedAttackSpeed]: ias,
   [MagicPropertyType.IncreasedChanceOfBlocking]: icb,
   [MagicPropertyType.Indestructible]: indestructible,

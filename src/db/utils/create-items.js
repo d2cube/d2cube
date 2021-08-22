@@ -38,5 +38,13 @@ const createItem = (items) => (initialItem) => {
     item.sockets = fillNull(socketCount);
   }
 
+  const isEthereal = resolveItemPropertyValue(
+    'magic',
+    MagicPropertyType.Ethereal,
+  )(item);
+  if (isEthereal) {
+    item.isEthereal = isEthereal;
+  }
+
   return item;
 };

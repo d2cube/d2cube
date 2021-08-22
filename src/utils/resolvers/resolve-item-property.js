@@ -60,9 +60,15 @@ const resolvers = {
   ],
   [BasePropertyType.Durability]: (x) =>
     x === Number.POSITIVE_INFINITY ? null : ['Durability: ', `${x} of ${x}`],
-  [BasePropertyType.RequiredDexterity]: (x) => ['Required Dexterity: ', x],
+  [BasePropertyType.RequiredDexterity]: (x, item) => [
+    'Required Dexterity: ',
+    item.isEthereal ? x - 10 : x,
+  ],
   [BasePropertyType.RequiredLevel]: (x) => ['Required Level: ', x],
-  [BasePropertyType.RequiredStrength]: (x) => ['Required Strength: ', x],
+  [BasePropertyType.RequiredStrength]: (x, item) => [
+    'Required Strength: ',
+    item.isEthereal ? x - 10 : x,
+  ],
   [MagicPropertyType.Aura]: (x) =>
     Object.entries(x).map(
       ([skill, {x, y}]) =>
@@ -143,6 +149,7 @@ const resolvers = {
   [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,
   [MagicPropertyType.EnhancedDamage]: (x) => `+${x}% Enhanced Damage`,
   [MagicPropertyType.EnhancedDefense]: (x) => `+${x}% Enhanced Defense`,
+  [MagicPropertyType.Ethereal]: () => 'Ethereal (Cannot be Repaired)',
   [MagicPropertyType.Experience]: (x) => `${x}% to Experience Gained`,
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
   [MagicPropertyType.FasterBlockRate]: (x) => `${x}% Faster Block Rate`,
@@ -174,6 +181,7 @@ const resolvers = {
     `${x}% Increased Attack Speed`,
   [MagicPropertyType.IncreasedChanceOfBlocking]: (x) =>
     `${x}% Increased Chance of Blocking`,
+  [MagicPropertyType.IncreasedStackSize]: (x) => `Increased Stack Size (${x})`,
   [MagicPropertyType.IncreaseMaximumDurability]: (x) =>
     `Increase Maximum Durability ${x}%`,
   [MagicPropertyType.IncreaseMaximumLife]: (x) => `Increase Maximum Life ${x}%`,
@@ -236,6 +244,8 @@ const resolvers = {
   [MagicPropertyType.RepairsDurability]: (x) =>
     `Repairs 1 Durability In ${x} Seconds`,
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
+  [MagicPropertyType.ReplenishesQuantity]: (x) =>
+    `Replenishes 1 Quantity Every ${x} seconds`,
   [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
   [MagicPropertyType.SlainMonstersRestInPeace]: () =>
     'Slain Monsters Rest in Peace',

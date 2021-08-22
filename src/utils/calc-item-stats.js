@@ -211,5 +211,8 @@ const magicPropertiesOrder = [
   MagicPropertyType.ReduceVendorPrices,
   MagicPropertyType.Experience,
   MagicPropertyType.Requirements,
+  MagicPropertyType.IncreasedStackSize,
+  MagicPropertyType.ReplenishesQuantity,
+  MagicPropertyType.Ethereal,
   MagicPropertyType.Socketed,
 ];
