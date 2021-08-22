@@ -148,6 +148,8 @@ const enhanceByLevel = (valuePerLevel) => (enhanced) => ({
 
 const multiplyMap = (x) => (xs) => xs.map(multiply(x));
 
+const sumArray = (x) => (y) => x.map((xx, i) => xx + y[i]);
+
 const addDefense = (values, enhanced) => {
   if (Array.isArray(enhanced)) {
     return enhanced.map((v, i) =>
@@ -180,9 +182,15 @@ const indestructible = (values, enhanced) => (enhanced ? null : values);
 
 const addDamage = ({x, y}, enhanced) => {
   if (Array.isArray(x) && Array.isArray(y)) {
+    const newX = Array.isArray(enhanced.x)
+      ? sumArray(x)(enhanced.x)
+      : x.map(add(enhanced.x));
+    const newY = Array.isArray(enhanced.y)
+      ? sumArray(y)(enhanced.y)
+      : y.map(add(enhanced.y));
     return {
-      x: x.map(add(enhanced.x)),
-      y: y.map(add(enhanced.y)),
+      x: newX,
+      y: newY,
     };
   }
 
@@ -212,6 +220,13 @@ const addMaxDamage = ({x, y}, enhanced) => {
     };
   }
 
+  if (Array.isArray(x)) {
+    return {
+      x,
+      y: y.map(add(enhanced)),
+    };
+  }
+
   return {
     x,
     y: y + enhanced,
@@ -227,8 +242,15 @@ const addMinDamage = ({x, y}, enhanced) => {
     };
   }
 
-  const newX = x + enhanced;
+  if (Array.isArray(x)) {
+    const newX = x.map(add(enhanced));
+    return {
+      x: newX,
+      y: y.map((yy) => Math.max(Math.max(...x), yy)),
+    };
+  }
 
+  const newX = x + enhanced;
   return {
     x: newX,
     y: Math.max(y, newX + 1),

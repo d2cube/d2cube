@@ -41,7 +41,7 @@ const colors = {
 
 const fontFamilies = {
   body: 'AlegreyaSansRegular',
-  diablo: 'ExocetMedium',
+  diablo: 'Exocet',
 };
 
 const fontSizes = {

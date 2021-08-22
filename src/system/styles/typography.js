@@ -2,8 +2,8 @@ const fontFaces = {
   AlegreyaSansRegular: {
     src: ['fonts/alegreya-sans-regular.ttf'],
   },
-  ExocetMedium: {
-    src: ['fonts/exocet-medium.ttf'],
+  Exocet: {
+    src: ['fonts/exocet.woff2'],
   },
 };
 

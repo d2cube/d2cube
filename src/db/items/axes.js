@@ -208,7 +208,7 @@ export default normalizeItems({
     id: ids.Hatchet,
     name: 'Hatchet',
     tier: ItemTierType.Exceptional,
-    size: [2, 1],
+    size: [3, 1],
     baseId: ids.HandAxe,
     imageId: ids.HandAxe,
     properties: {
@@ -439,7 +439,7 @@ export default normalizeItems({
     id: ids.Tomahawk,
     name: 'Tomahawk',
     tier: ItemTierType.Elite,
-    size: [2, 1],
+    size: [3, 1],
     baseId: ids.HandAxe,
     imageId: ids.HandAxe,
     properties: {

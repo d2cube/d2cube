@@ -149,6 +149,8 @@ const resolvers = {
   [MagicPropertyType.Energy]: (x) => `+${x} to Energy`,
   [MagicPropertyType.EnhancedDamage]: (x) => `+${x}% Enhanced Damage`,
   [MagicPropertyType.EnhancedDefense]: (x) => `+${x}% Enhanced Defense`,
+  [MagicPropertyType.EnhancedMaximumDamage]: (x) =>
+    `+${x}% Enhanced Maximum Damage`,
   [MagicPropertyType.Ethereal]: () => 'Ethereal (Cannot be Repaired)',
   [MagicPropertyType.Experience]: (x) => `${x}% to Experience Gained`,
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
@@ -246,7 +248,8 @@ const resolvers = {
   [MagicPropertyType.ReplenishLife]: (x) => `Replenish Life +${x}`,
   [MagicPropertyType.ReplenishesQuantity]: (x) =>
     `Replenishes 1 Quantity Every ${x} seconds`,
-  [MagicPropertyType.Requirements]: (x) => `Requirements ${x}%`,
+  [MagicPropertyType.Requirements]: (x) =>
+    `Requirements ${x > 0 ? '+' : ''}${x}%`,
   [MagicPropertyType.SlainMonstersRestInPeace]: () =>
     'Slain Monsters Rest in Peace',
   [MagicPropertyType.SlowerStaminaDrain]: (x) => `${x} Slower Stamina Drain`,
@@ -308,6 +311,10 @@ resolvers[MagicPropertyType.DefenseByLevel] = lvl(
 );
 resolvers[MagicPropertyType.DexterityByLevel] = lvl(
   resolvers[MagicPropertyType.Dexterity],
+);
+resolvers[MagicPropertyType.EnhancedMaximumDamageByLevel] = lvl(
+  resolvers[MagicPropertyType.MaximumDamage],
+  '%',
 );
 resolvers[MagicPropertyType.ExtraGoldByLevel] = lvl(
   resolvers[MagicPropertyType.ExtraGold],
