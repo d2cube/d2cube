@@ -6,8 +6,10 @@ import barbarianHelms from './barbarian-helms.js';
 import belts from './belts.js';
 import bodyArmors from './body-armors.js';
 import boots from './boots.js';
+import bows from './bows.js';
 import charms from './charms.js';
 import circlets from './circlets.js';
+import crossbows from './crossbows.js';
 import druidPelts from './druid-pelts.js';
 import gloves from './gloves.js';
 import helms from './helms.js';
@@ -28,8 +30,10 @@ export default {
   ...belts,
   ...bodyArmors,
   ...boots,
+  ...bows,
   ...charms,
   ...circlets,
+  ...crossbows,
   ...druidPelts,
   ...gloves,
   ...helms,

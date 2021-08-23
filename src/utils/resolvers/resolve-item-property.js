@@ -231,7 +231,7 @@ const resolvers = {
   [MagicPropertyType.MonsterDefensePerHit]: (x) =>
     `${x} to Monster Defense Per Hit`,
   [MagicPropertyType.OpenWounds]: (x) => `${x}% Chance of Open Wounds`,
-  [MagicPropertyType.PiercingAttack]: () => 'Piercing Attack',
+  [MagicPropertyType.PiercingAttack]: (x) => `Piercing Attack (${x}%)`,
   [MagicPropertyType.PoisonDamage]: ({x, y, z}) =>
     `+${x === y ? x : `${x}-${y}`} Poison Damage Over ${z} Seconds`,
   [MagicPropertyType.PoisonLengthReduced]: (x) =>

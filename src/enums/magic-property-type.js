@@ -135,7 +135,6 @@ export const MagicPropertyType = {
   EnergyByLevel: 'EnergyByLevel',
   VitalityByLevel: 'VitalityByLevel',
   AttackRatingByLevel: 'AttackRatingByLevel',
-  AttackingRatingPercentageByLevel: 'AttackingRatingPercentageByLevel',
   ColdDamageByLevel: 'ColdDamageByLevel',
   FireDamageByLevel: 'FireDamageByLevel',
   LightningDamageByLevel: 'LightningDamageByLevel',

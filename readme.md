@@ -7,6 +7,7 @@ An interactive D2 cube and runeword companion.
 ## TODO
 So much to do, so little time, so much fun.
 
+- [ ] Move throwing weapons to its own ItemType.
 - [ ] Check/verify recipes
 - [ ] Create item instances (rolls)
 - [ ] Cleanup code (share utils/transforms/mappers/predicates)

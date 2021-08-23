@@ -118,7 +118,7 @@ export default normalizeItems({
     imageId: ids.HeavyCrossbow,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {x: 35, y: 55},
+        [BasePropertyType.Damage2H]: {x: 33, y: 55},
         [BasePropertyType.RequiredDexterity]: 80,
         [BasePropertyType.RequiredStrength]: 110,
         [BasePropertyType.RequiredLevel]: 25,

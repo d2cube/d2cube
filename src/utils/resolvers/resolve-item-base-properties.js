@@ -214,9 +214,10 @@ const addDurability = (values, enhanced) => {
 
 const addMaxDamage = ({x, y}, enhanced) => {
   if (Array.isArray(enhanced)) {
+    const newY = Array.isArray(y) ? sumArray(enhanced)(y) : y;
     return {
       x,
-      y: enhanced.map(add(y)),
+      y: newY,
     };
   }
 

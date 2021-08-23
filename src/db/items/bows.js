@@ -177,7 +177,7 @@ export default normalizeItems({
     properties: {
       base: {
         [BasePropertyType.Damage2H]: {x: 10, y: 29},
-        [BasePropertyType.RequiredDexterity]: 48,
+        [BasePropertyType.RequiredDexterity]: 49,
         [BasePropertyType.RequiredStrength]: 53,
         [BasePropertyType.RequiredLevel]: 23,
         [BasePropertyType.AttackSpeed]: 0,
