@@ -1,4 +1,4 @@
-const cursor = 'url(images/ui/cursor.gif), auto';
+const cursor = 'url(images/ui/cursor.cur), auto';
 
 const vendor = {
   '.tippy-box': {

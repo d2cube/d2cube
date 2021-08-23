@@ -46,6 +46,7 @@ export const ItemType = {
   Spear: 'Spear',
   Staff: 'Staff',
   Sword: 'Sword',
+  ThrowingWeapon: 'ThrowingWeapon',
   Token: 'Token',
   Tome: 'Tome',
   Unique: 'Unique',

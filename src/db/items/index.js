@@ -47,6 +47,7 @@ import sorceressOrbs from './sorceress-orbs.js';
 import spears from './spears.js';
 import staves from './staves.js';
 import swords from './swords.js';
+import throwingWeapons from './throwing-weapons.js';
 import tokens from './tokens.js';
 import tomes from './tomes.js';
 import uniques from './uniques/index.js';
@@ -96,6 +97,7 @@ export default createItems({
   ...spears,
   ...staves,
   ...swords,
+  ...throwingWeapons,
   ...tokens,
   ...tomes,
   ...uniques,
