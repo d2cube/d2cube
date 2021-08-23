@@ -39,6 +39,7 @@ const getAttackSpeedDescription = (x) => {
   return description;
 };
 
+// TODO: share/reuse common resolvers
 const resolvers = {
   [BasePropertyType.BaseDefense]: (x) => ['Defense: ', x],
   [BasePropertyType.AttackSpeed]: (x, item) => [
@@ -211,11 +212,12 @@ const resolvers = {
   [MagicPropertyType.LowerPoisonResist]: (x) =>
     `${x}% to Enemy Poison Resistance`,
   [MagicPropertyType.MagicAbsorb]: (x) => `+${x} Magic Absorb`,
-  [MagicPropertyType.MagicDamage]: ({x, y}) => `Adds ${x}-${y} Magic Damage`,
+  [MagicPropertyType.MagicDamage]: ({x, y}) =>
+    `Adds ${x === y ? x : `${x}-${y}`} Magic Damage`,
   [MagicPropertyType.MagicDamageReduced]: (x) => `Magic Damage Reduced by ${x}`,
   [MagicPropertyType.MagicFind]: (x) =>
     `${x}% Better Chance of Getting Magic Items`,
-  [MagicPropertyType.Mana]: (x) => `+${x} to Mana`,
+  [MagicPropertyType.Mana]: (x) => `${x > 0 ? '+' : ''}${x} to Mana`,
   [MagicPropertyType.ManaAfterKill]: (x) => `+${x} to Mana After Each kill`,
   [MagicPropertyType.ManaStolenPerHit]: (x) => `${x}% Mana Stolen Per Hit`,
   [MagicPropertyType.MaximumColdResist]: (x) => `+${x}% to Maximum Cold Resist`,
@@ -330,6 +332,10 @@ resolvers[MagicPropertyType.HealStaminaByLevel] = lvl(
 );
 resolvers[MagicPropertyType.LifeByLevel] = lvl(
   resolvers[MagicPropertyType.Life],
+);
+resolvers[MagicPropertyType.LightningResistByLevel] = lvl(
+  resolvers[MagicPropertyType.LightningResist],
+  '%',
 );
 resolvers[MagicPropertyType.MagicFindByLevel] = lvl(
   resolvers[MagicPropertyType.MagicFind],

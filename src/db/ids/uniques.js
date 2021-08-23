@@ -162,6 +162,18 @@ export default {
   PusSpitter: 'PusSpitter',
   GutSiphon: 'GutSiphon',
   Hellrack: 'Hellrack',
+  // Daggers
+  Gull: 'Gull',
+  SpectralShard: 'SpectralShard',
+  TheDiggler: 'TheDiggler',
+  TheJadeTanDo: 'TheJadeTanDo',
+  BlackbogsSharp: 'BlackbogsSharp',
+  HeartCarver: 'HeartCarver',
+  Spineripper: 'Spineripper',
+  Stormspike: 'Stormspike',
+  Fleshripper: 'Fleshripper',
+  Ghostflame: 'Ghostflame',
+  Wizardspike: 'Wizardspike',
   // DruidPelts
   JalalsMane: 'JalalsMane',
   CerebusBite: 'CerebusBite',
@@ -205,6 +217,10 @@ export default {
   AndarielsVisage: 'AndarielsVisage',
   CrownOfAges: 'CrownOfAges',
   GiantSkull: 'GiantSkull',
+  // Javelins
+  DemonsArch: 'DemonsArch',
+  WraithFlight: 'WraithFlight',
+  GargoylesBite: 'GargoylesBite',
   // Jewels
   RainbowFacetLevelCold: 'RainbowFacetLevelCold',
   RainbowFacetLevelFire: 'RainbowFacetLevelFire',

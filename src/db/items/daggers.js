@@ -178,7 +178,7 @@ export default normalizeItems({
         [BasePropertyType.Damage1H]: {x: 19, y: 36},
         [BasePropertyType.Durability]: 24,
         [BasePropertyType.RequiredDexterity]: 97,
-        [BasePropertyType.RequiredStrength]: 73,
+        [BasePropertyType.RequiredStrength]: 47,
         [BasePropertyType.RequiredLevel]: 25,
         [BasePropertyType.AttackSpeed]: -10,
         [BasePropertyType.MaxSockets]: 2,

@@ -10,9 +10,11 @@ import bows from './bows.js';
 import charms from './charms.js';
 import circlets from './circlets.js';
 import crossbows from './crossbows.js';
+import daggers from './daggers.js';
 import druidPelts from './druid-pelts.js';
 import gloves from './gloves.js';
 import helms from './helms.js';
+import javelins from './javelins.js';
 import necromancerHeads from './necromancer-heads.js';
 import paladinShields from './paladin-shields.js';
 import jewels from './jewels.js';
@@ -34,9 +36,11 @@ export default {
   ...charms,
   ...circlets,
   ...crossbows,
+  ...daggers,
   ...druidPelts,
   ...gloves,
   ...helms,
+  ...javelins,
   ...necromancerHeads,
   ...paladinShields,
   ...jewels,
