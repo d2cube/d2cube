@@ -20,6 +20,7 @@ import javelins from './javelins.js';
 import maces from './maces.js';
 import necromancerHeads from './necromancer-heads.js';
 import paladinShields from './paladin-shields.js';
+import polearms from './polearms.js';
 import jewels from './jewels.js';
 import rings from './rings.js';
 import shields from './shields.js';
@@ -49,6 +50,7 @@ export default {
   ...maces,
   ...necromancerHeads,
   ...paladinShields,
+  ...polearms,
   ...jewels,
   ...rings,
   ...shields,

@@ -8,7 +8,6 @@ import {resolveSuffixName} from './resolve-suffix-name.js';
 
 export const resolveItemName = (item) => {
   const {
-    basename,
     quality,
     name,
     personalization,
@@ -17,6 +16,7 @@ export const resolveItemName = (item) => {
     suffix,
     tier,
     type,
+    basename = name,
   } = item;
 
   let color = sockets ? 'socketed' : null;
@@ -37,18 +37,27 @@ export const resolveItemName = (item) => {
   const runes = resolveItemRunes(item);
   const runeword = resolveItemRuneword(runes)(item);
 
-  const resolvedName = pipe([
-    concat(personalization),
-    concat(prefix),
-    concat(runeword ? runeword.name : name),
-    concat(cb((x) => Array.from({length: x}).join('+'))(tier)),
-    concat(cb((x) => `of ${resolveSuffixName(x)}`)(suffix)),
+  const tierSuffix = (x) => Array.from({length: x}).join('+');
+
+  const resolvedName =
+    quality &&
+    pipe([
+      concat(personalization),
+      concat(prefix),
+      concat(runeword ? runeword.name : name),
+      concat(cb((x) => `of ${resolveSuffixName(x)}`)(suffix)),
+      join(' '),
+    ])([]);
+
+  const resolvedBasename = pipe([
+    concat(basename),
+    concat(cb(tierSuffix)(tier)),
     join(' '),
   ])([]);
 
   return pipe([
     concat({color: runeword ? 'runeword' : color, text: resolvedName}),
-    concat({color, text: runeword ? name : basename}),
+    concat({color, text: runeword ? name : resolvedBasename}),
     concat({color: 'runeword', text: runes ? `'${runes}'` : null}),
   ])([]);
 };
