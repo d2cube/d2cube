@@ -157,7 +157,7 @@ export default normalizeItems({
     imageId: ids.Spetum,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {x: 29, y: 50},
+        [BasePropertyType.Damage2H]: {x: 29, y: 59},
         [BasePropertyType.Durability]: 28,
         [BasePropertyType.RequiredStrength]: 101,
         [BasePropertyType.RequiredLevel]: 25,
@@ -270,7 +270,7 @@ export default normalizeItems({
     imageId: ids.Pike,
     properties: {
       base: {
-        [BasePropertyType.Damage2H]: {x: 33, y: 1778},
+        [BasePropertyType.Damage2H]: {x: 33, y: 178},
         [BasePropertyType.Durability]: 25,
         [BasePropertyType.RequiredDexterity]: 106,
         [BasePropertyType.RequiredStrength]: 165,

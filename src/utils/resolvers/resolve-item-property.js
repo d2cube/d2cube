@@ -153,7 +153,7 @@ const resolvers = {
   [MagicPropertyType.EnhancedMaximumDamage]: (x) =>
     `+${x}% Enhanced Maximum Damage`,
   [MagicPropertyType.Ethereal]: () => 'Ethereal (Cannot be Repaired)',
-  [MagicPropertyType.Experience]: (x) => `${x}% to Experience Gained`,
+  [MagicPropertyType.Experience]: (x) => `+${x}% to Experience Gained`,
   [MagicPropertyType.ExtraGold]: (x) => `${x}% Extra Gold From Monsters`,
   [MagicPropertyType.FasterBlockRate]: (x) => `${x}% Faster Block Rate`,
   [MagicPropertyType.FasterCastRate]: (x) => `${x}% Faster Cast Rate`,

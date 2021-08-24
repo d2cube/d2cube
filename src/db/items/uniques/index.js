@@ -26,7 +26,11 @@ import rings from './rings.js';
 import scepters from './scepters.js';
 import shields from './shields.js';
 import sorceressOrbs from './sorceress-orbs.js';
+import spears from './spears.js';
+import staves from './staves.js';
 import swords from './swords.js';
+import throwingWeapons from './throwing-weapons.js';
+import wands from './wands.js';
 
 export default {
   ...amazonWeapons,
@@ -57,5 +61,9 @@ export default {
   ...scepters,
   ...shields,
   ...sorceressOrbs,
+  ...spears,
+  ...staves,
   ...swords,
+  ...throwingWeapons,
+  ...wands,
 };
