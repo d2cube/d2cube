@@ -292,6 +292,16 @@ export default {
   RavenFrost: 'RavenFrost',
   StoneOfJordan: 'StoneOfJordan',
   WhispProjector: 'WhispProjector',
+  // Scepters
+  KnellStriker: 'KnellStriker',
+  Rusthandle: 'Rusthandle',
+  Stormeye: 'Stormeye',
+  ZakarumsHand: 'ZakarumsHand',
+  TheFetidSprinkler: 'TheFetidSprinkler',
+  HandOfBlessedLight: 'HandOfBlessedLight',
+  HeavensLight: 'HeavensLight',
+  TheRedeemer: 'TheRedeemer',
+  AstreonsIronWard: 'AstreonsIronWard',
   // Shields
   PeltaLunata: 'PeltaLunata',
   UmbralDisk: 'UmbralDisk',

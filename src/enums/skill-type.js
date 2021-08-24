@@ -93,6 +93,7 @@ export const SkillType = {
   PoisonNova: 'PoisonNova',
   Raven: 'Raven',
   Redemption: 'Redemption',
+  ResistLightning: 'ResistLightning',
   Revive: 'Revive',
   Sacrifice: 'Sacrifice',
   Sanctuary: 'Sanctuary',

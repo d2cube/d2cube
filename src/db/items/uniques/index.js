@@ -23,6 +23,7 @@ import paladinShields from './paladin-shields.js';
 import polearms from './polearms.js';
 import jewels from './jewels.js';
 import rings from './rings.js';
+import scepters from './scepters.js';
 import shields from './shields.js';
 import sorceressOrbs from './sorceress-orbs.js';
 import swords from './swords.js';
@@ -53,6 +54,7 @@ export default {
   ...polearms,
   ...jewels,
   ...rings,
+  ...scepters,
   ...shields,
   ...sorceressOrbs,
   ...swords,

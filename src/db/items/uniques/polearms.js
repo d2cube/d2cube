@@ -3,7 +3,6 @@ import {
   ItemQualityType,
   ItemType,
   MagicPropertyType,
-  PlayerClassType,
   SkillSetType,
   SkillType,
 } from '../../../enums/index.js';
