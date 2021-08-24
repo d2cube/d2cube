@@ -27,7 +27,7 @@ export default normalizeItems({
           [SkillSetType.NecromancerSkills]: 1,
         },
         [MagicPropertyType.MinimumDamage]: 8,
-        [MagicPropertyType.DamageToUndead]: 150,
+        [MagicPropertyType.DamageToUndead]: 100,
       },
       set: [
         null,

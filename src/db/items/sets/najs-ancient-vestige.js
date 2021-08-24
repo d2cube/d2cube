@@ -32,7 +32,6 @@ export default normalizeItems({
         [MagicPropertyType.SpellCharges]: {
           [SkillType.Teleport]: {x: 11, y: 69},
         },
-        [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [null, null, null],
     },

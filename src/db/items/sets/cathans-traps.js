@@ -27,7 +27,6 @@ export default normalizeItems({
           [SkillSetType.FireSkills]: 1,
         },
         [MagicPropertyType.MaximumFireDamage]: 10,
-        [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [
         null,

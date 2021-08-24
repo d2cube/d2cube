@@ -29,7 +29,6 @@ export default normalizeItems({
         [MagicPropertyType.LightningDamage]: {x: 50, y: 75},
         [MagicPropertyType.ManaStolenPerHit]: 5,
         [MagicPropertyType.LifeStolenPerHit]: 10,
-        [MagicPropertyType.DamageToUndead]: 50,
         [MagicPropertyType.Socketed]: [2, 3],
       },
       set: [

@@ -27,7 +27,6 @@ export default normalizeItems({
           [SkillSetType.SorceressSkills]: 1,
         },
         [MagicPropertyType.DeadlyStrike]: 25,
-        [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [
         null,

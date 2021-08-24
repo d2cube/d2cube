@@ -29,7 +29,6 @@ export default normalizeItems({
         [MagicPropertyType.IncreasedAttackSpeed]: 40,
         [MagicPropertyType.MaximumDamageByLevel]: 1.5,
         [MagicPropertyType.FireDamage]: {x: 20, y: 30},
-        [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [null, null, null, null],
     },

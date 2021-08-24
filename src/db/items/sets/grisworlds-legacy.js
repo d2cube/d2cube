@@ -25,7 +25,7 @@ export default normalizeItems({
       magic: {
         [MagicPropertyType.IncreasedAttackSpeed]: 40,
         [MagicPropertyType.EnhancedDamage]: [200, 240],
-        [MagicPropertyType.DamageToUndead]: 250,
+        [MagicPropertyType.DamageToUndead]: 200,
         [MagicPropertyType.Requirements]: -20,
         [MagicPropertyType.Socketed]: [3, 4],
       },

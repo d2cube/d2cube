@@ -1,6 +1,7 @@
 import {isPlainObject, props} from 'uinix-fp';
 import {getItemById} from '../api/index.js';
 import {MagicPropertyType} from '../enums/magic-property-type.js';
+import {WeaponClassType} from '../enums/weapon-class-type.js';
 
 import {add, sortEntriesBy, sum} from './fp.js';
 import {resolveItemRunes} from './resolvers/resolve-item-runes.js';
@@ -9,6 +10,20 @@ import {resolveItemRuneword} from './resolvers/resolve-item-runeword.js';
 // Track all magic properties from magic/set/socket bonuses
 export const calcItemStats = (item) => {
   const stats = {};
+
+  // Weapon class modifiers
+  switch (item.class) {
+    case WeaponClassType.Mace:
+    case WeaponClassType.Scepter:
+    case WeaponClassType.Staff:
+      if (props(`properties.magic.${MagicPropertyType.DamageToUndead}`)) {
+        stats[MagicPropertyType.DamageToUndead] = [50];
+      }
+
+      break;
+    default:
+      break;
+  }
 
   // Calc magic properties
   const magicProperties = props('properties.magic')(item) || {};
@@ -86,8 +101,8 @@ const magicPropertiesOrder = [
   MagicPropertyType.AllSkillLevels,
   MagicPropertyType.SkillSetLevels,
   MagicPropertyType.FasterRunWalk,
-  MagicPropertyType.FasterCastRate,
   MagicPropertyType.IncreasedAttackSpeed,
+  MagicPropertyType.FasterCastRate,
   MagicPropertyType.FasterHitRecovery,
   MagicPropertyType.FasterBlockRate,
   MagicPropertyType.IncreasedChanceOfBlocking,
@@ -131,8 +146,8 @@ const magicPropertiesOrder = [
   MagicPropertyType.FireSkillDamage,
   MagicPropertyType.PoisonSkillDamage,
   MagicPropertyType.SlainMonstersRestInPeace,
-  MagicPropertyType.MonsterDefensePerHit,
   MagicPropertyType.CrushingBlow,
+  MagicPropertyType.MonsterDefensePerHit,
   MagicPropertyType.DeadlyStrikeByLevel,
   MagicPropertyType.DeadlyStrike,
   MagicPropertyType.OpenWounds,
@@ -140,8 +155,8 @@ const magicPropertiesOrder = [
   MagicPropertyType.PreventMonsterHeal,
   MagicPropertyType.DrainLife,
   MagicPropertyType.HitCausesMonsterToFlee,
-  MagicPropertyType.Knockback,
   MagicPropertyType.HitBlindsTarget,
+  MagicPropertyType.Knockback,
   MagicPropertyType.SlowsTarget,
   MagicPropertyType.FreezesTarget,
   MagicPropertyType.EnhancedDefense,
@@ -207,9 +222,9 @@ const magicPropertiesOrder = [
   MagicPropertyType.MagicFind,
   MagicPropertyType.MagicFindByLevel,
   MagicPropertyType.LightRadius,
-  MagicPropertyType.RepairsDurability,
   MagicPropertyType.AddDurability,
   MagicPropertyType.SpellCharges,
+  MagicPropertyType.RepairsDurability,
   MagicPropertyType.ReduceVendorPrices,
   MagicPropertyType.Experience,
   MagicPropertyType.Requirements,

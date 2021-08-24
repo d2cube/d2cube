@@ -43,7 +43,6 @@ export default normalizeItems({
         [MagicPropertyType.ColdDamage]: {x: 25, y: 75, z: 2},
         [MagicPropertyType.ManaStolenPerHit]: 8,
         [MagicPropertyType.Mana]: 25,
-        [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [null, null, null, null],
     },

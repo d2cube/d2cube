@@ -25,7 +25,6 @@ export default normalizeItems({
         [MagicPropertyType.MaximumDamage]: [17, 23],
         [MagicPropertyType.MaximumDamageByLevel]: 1,
         [MagicPropertyType.AttackRating]: 75,
-        [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [null, null, null],
     },

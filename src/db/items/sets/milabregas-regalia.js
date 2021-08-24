@@ -28,7 +28,6 @@ export default normalizeItems({
         },
         [MagicPropertyType.EnhancedDamage]: 50,
         [MagicPropertyType.LightRadius]: 2,
-        [MagicPropertyType.DamageToUndead]: 50,
       },
       set: [null, null, null, null],
     },
