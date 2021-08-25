@@ -5,6 +5,7 @@
 export const SkillType = {
   RandomSorceressSkill: 'RandomSorceressSkill',
   AmplifyDamage: 'AmplifyDamage',
+  ArticBlast: 'ArticBlast',
   Attract: 'Attract',
   BattleCommand: 'BattleCommand',
   BattleCry: 'BattleCry',
@@ -94,6 +95,7 @@ export const SkillType = {
   PoisonExplosion: 'PoisonExplosion',
   PoisonNova: 'PoisonNova',
   PowerStrike: 'PowerStrike',
+  Rabies: 'Rabies',
   RaiseSkeletalMage: 'RaiseSkeletalMage',
   RaiseSkeleton: 'RaiseSkeleton',
   Raven: 'Raven',
@@ -110,6 +112,7 @@ export const SkillType = {
   Strafe: 'Strafe',
   SummonDireWolf: 'SummonDireWolf',
   SummonGrizzly: 'SummonGrizzly',
+  SwordMastery: 'SwordMastery',
   Taunt: 'Taunt',
   Teeth: 'Teeth',
   Telekinesis: 'Telekinesis',

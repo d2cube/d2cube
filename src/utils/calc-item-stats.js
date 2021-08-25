@@ -216,6 +216,7 @@ const magicPropertiesOrder = [
   MagicPropertyType.LifeAfterKill,
   MagicPropertyType.LifeAfterDemonKill,
   MagicPropertyType.AttackerTakesDamage,
+  MagicPropertyType.AttackerTakesLightningDamage,
   MagicPropertyType.DamageTakenGoesToMana,
   MagicPropertyType.ExtraGold,
   MagicPropertyType.ExtraGoldByLevel,
