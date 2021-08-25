@@ -4,7 +4,7 @@ import {Layout, useStyles} from 'uinix-ui';
 import Hud from './hud.js';
 import Backdrop from './ui/backdrop.js';
 import Splash from './ui/splash.js';
-import Soundtrack from './ui/soundtrack.js';
+import ScrollTop from './ui/scroll-top.js';
 
 let cachedEntered = false;
 
@@ -19,21 +19,23 @@ const PageLayout = ({children, title = null}) => {
 
   return (
     <Layout direction="column" h="100vh" spacing="l">
+      <ScrollTop />
       <Backdrop />
-      <Soundtrack isEnabled={entered} />
       {entered ? (
-        <Layout
-          as="main"
-          direction="column"
-          flex="auto"
-          px="l"
-          spacing="l"
-          styles={styles.fadeIn}
-        >
-          {title && <h2>{title}</h2>}
-          {children}
+        <>
+          <Layout
+            as="main"
+            direction="column"
+            flex="auto"
+            px="l"
+            spacing="l"
+            styles={styles.fadeIn}
+          >
+            {title && <h2>{title}</h2>}
+            {children}
+          </Layout>
           <Hud />
-        </Layout>
+        </>
       ) : (
         <Splash onEnter={handleEnter} />
       )}

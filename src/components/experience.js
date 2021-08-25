@@ -1,4 +1,3 @@
-import React from 'react';
 import {Element, Layout, useStyles} from 'uinix-ui';
 
 import {fill} from '../utils/fp.js';
@@ -13,7 +12,11 @@ const Experience = ({experience}) => {
 
   return (
     <Tooltip tooltip={tooltip}>
-      <Layout position="relative">
+      <Element
+        position="relative"
+        styleProps={{display: 'flex'}}
+        styles={styles.responsiveHide}
+      >
         <Element
           styleProps={{
             color: 'player.xp',
@@ -25,7 +28,7 @@ const Experience = ({experience}) => {
         {fill(10)((i) => (
           <Layout key={i} b="bordered" flex="auto" h="bar" z="forward" />
         ))}
-      </Layout>
+      </Element>
     </Tooltip>
   );
 };

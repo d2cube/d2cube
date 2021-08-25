@@ -1,4 +1,3 @@
-import React from 'react';
 import {Element, useStyles} from 'uinix-ui';
 
 const Grid = ({children, size}) => {

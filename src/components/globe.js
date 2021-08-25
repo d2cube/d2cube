@@ -1,4 +1,3 @@
-import React from 'react';
 import {Element, useStyles} from 'uinix-ui';
 
 import Tooltip from './ui/tooltip.js';

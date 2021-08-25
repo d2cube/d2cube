@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {GameVersionType} from '../enums/index.js';
 import {random} from '../utils/random.js';
 import Image from './ui/image.js';

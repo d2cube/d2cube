@@ -1,5 +1,5 @@
 import Link from 'next/link.js';
-import React from 'react';
+
 import {Layout, Icon, useStyles} from 'uinix-ui';
 
 import Tooltip from './tooltip.js';

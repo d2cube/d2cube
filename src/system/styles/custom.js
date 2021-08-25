@@ -9,6 +9,10 @@ const fadeIn = {
   animationName: 'fade.in',
 };
 
+const responsiveHide = ({display = 'block'}) => ({
+  display: ['none', 'none', display],
+});
+
 const interactive = {
   ':hover': {
     opacity: 'hover',
@@ -18,6 +22,7 @@ const interactive = {
 const globe = ({theme, type}) => {
   const color = theme.colors.player[type];
   return {
+    ...responsiveHide({display: 'block'}),
     borderRadius: 'round',
     background: `radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.8) 1px, ${color} 5%, black 70%, ${color} 100%)`,
     height: 'globe',
@@ -78,4 +83,5 @@ export default {
   interactive,
   item,
   progress,
+  responsiveHide,
 };

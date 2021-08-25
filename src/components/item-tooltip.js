@@ -1,4 +1,4 @@
-import React from 'react';
+import {Fragment} from 'react';
 import {Text} from 'uinix-ui';
 
 import Tooltip from './ui/tooltip.js';
@@ -22,7 +22,7 @@ const resolve = (lines, level = 0) =>
       );
     }
 
-    return <React.Fragment key={i}>{content}</React.Fragment>;
+    return <Fragment key={i}>{content}</Fragment>;
   });
 
 export default ItemTooltip;

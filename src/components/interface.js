@@ -1,4 +1,3 @@
-import React from 'react';
 import {Layout} from 'uinix-ui';
 
 import {cubeItems, inventoryItems} from '../mocks/index.js';

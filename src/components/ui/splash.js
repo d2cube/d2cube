@@ -1,4 +1,3 @@
-import React from 'react';
 import {Layout, Text, useStyles} from 'uinix-ui';
 
 import Button from './button.js';
@@ -15,7 +14,7 @@ const Splash = ({onEnter}) => {
         styles={styles.fadeIn}
       >
         <Text as="h1" pt="70%" variant="diablo">
-          d2cube
+          D2Cube
         </Text>
         <Button text="Enter" onClick={onEnter} />
       </Layout>

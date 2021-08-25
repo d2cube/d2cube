@@ -1,4 +1,3 @@
-import React from 'react';
 import {Layout} from 'uinix-ui';
 
 import ItemSocket from './item-socket.js';

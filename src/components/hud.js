@@ -1,5 +1,4 @@
-import React from 'react';
-import {Layout} from 'uinix-ui';
+import {Element, Layout} from 'uinix-ui';
 
 import {player} from '../mocks/index.js';
 import Globe from './globe.js';
@@ -9,17 +8,13 @@ const Hud = () => {
   const {life, mana} = player;
 
   return (
-    <Layout
-      as="footer"
-      align="center"
-      mx="auto"
-      spacing="m"
-      variant="sticky.bottom"
-    >
-      <Globe type="life" max={life.max} value={life.value} />
-      <HudPanel player={player} />
-      <Globe type="mana" max={mana.max} value={mana.value} />
-    </Layout>
+    <Element as="footer" bg="interface.background" variant="sticky.bottom">
+      <Layout align="center" mx="auto" w="min-content">
+        <Globe type="life" max={life.max} value={life.value} />
+        <HudPanel player={player} />
+        <Globe type="mana" max={mana.max} value={mana.value} />
+      </Layout>
+    </Element>
   );
 };
 

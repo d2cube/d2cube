@@ -10,7 +10,6 @@ So much to do, so little time, so much fun.
 - [ ] Check/verify recipes
 - [ ] Create item instances (rolls)
 - [ ] Cleanup code (share utils/transforms/mappers/predicates)
-- [ ] Document all weapons/armors
 - [ ] Document all affixes
 - [ ] Mercenary
 - [ ] Larzuk

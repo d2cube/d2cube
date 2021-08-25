@@ -1,4 +1,3 @@
-import React from 'react';
 import {Element} from 'uinix-ui';
 
 import ItemImage from './item-image.js';

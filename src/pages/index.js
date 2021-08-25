@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Interface from '../components/interface.js';
 import PageLayout from '../components/page-layout.js';
 

@@ -264,10 +264,9 @@ const ethereal = (values) => {
   if (Array.isArray(values)) {
     return values.map((value) => {
       if (isPlainObject(value)) {
-        return Object.entries(value).reduce((acc, [k, v]) => {
-          acc[k] = v * 1.5;
-          return acc;
-        }, {});
+        return Object.fromEntries(
+          Object.entries(value).map(([k, v]) => [k, v * 1.5]),
+        );
       }
 
       return value * 1.5;
@@ -275,10 +274,12 @@ const ethereal = (values) => {
   }
 
   if (isPlainObject(values)) {
-    return Object.entries(values).reduce((acc, [k, v]) => {
-      acc[k] = Array.isArray(v) ? v.map(multiply(1.5)) : v * 1.5;
-      return acc;
-    }, {});
+    return Object.fromEntries(
+      Object.entries(values).map(([k, v]) => [
+        k,
+        Array.isArray(v) ? v.map(multiply(1.5)) : v * 1.5,
+      ]),
+    );
   }
 
   return values * 1.5;

@@ -1,4 +1,3 @@
-import React from 'react';
 import {Icon, Layout} from 'uinix-ui';
 
 import ItemGrid from './item-grid.js';

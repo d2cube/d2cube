@@ -84,8 +84,8 @@ const sizes = {
   frame: slotSize * 12,
   globe: 160,
   icon: {
-    s: 20,
-    m: 40,
+    s: 16,
+    m: 24,
     l: 60,
   },
   slot: slotSize,

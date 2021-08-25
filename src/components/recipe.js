@@ -1,4 +1,3 @@
-import React from 'react';
 import {Layout, Text} from 'uinix-ui';
 
 import Item from './item.js';

@@ -1,5 +1,7 @@
 import styles from './styles/index.js';
 
+const responsiveCssProperties = ['display', 'height', 'width'];
+
 const elementShorthandPropsMapping = {
   // Visual
   backgroundColor: ['bg'],
@@ -36,4 +38,5 @@ const elementStyles = [({onClick}) => (onClick ? styles.interactive : null)];
 export default {
   elementShorthandPropsMapping,
   elementStyles,
+  responsiveCssProperties,
 };

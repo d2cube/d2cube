@@ -117,25 +117,6 @@ export const inventoryItems = [
   },
 ].map(rollItem);
 
-export const beltItems = [
-  {
-    id: 'SuperHealingPotion',
-    position: [1, 1],
-  },
-  {
-    id: 'SuperHealingPotion',
-    position: [1, 2],
-  },
-  {
-    id: 'FullRejuvenationPotion',
-    position: [1, 3],
-  },
-  {
-    id: 'ScrollOfTownPortal',
-    position: [1, 4],
-  },
-].map(rollItem);
-
 export const player = {
   life: {
     max: 1000,

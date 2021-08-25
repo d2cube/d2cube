@@ -1,4 +1,3 @@
-import React from 'react';
 import {Element, useStyles} from 'uinix-ui';
 
 import {resolveItemDescription} from '../utils/resolvers/resolve-item-description.js';

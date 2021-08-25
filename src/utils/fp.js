@@ -44,6 +44,7 @@ export const sum = (xs) => {
   const [firstValue] = xs;
   if (isPlainObject(firstValue)) {
     const keys = Object.keys(firstValue);
+    // eslint-disable-next-line unicorn/prefer-object-from-entries
     return xs.reduce((acc, x) => {
       keys.forEach((key) => {
         if (!(key in acc)) {

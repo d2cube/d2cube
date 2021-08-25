@@ -10,10 +10,9 @@ export const formatValues = (values) => {
         ? first
         : `${isNegative ? '-' : ''}[${Math.abs(first)}-${Math.abs(second)}]`;
   } else if (isPlainObject(values)) {
-    formattedValues = Object.entries(values).reduce((acc, [key, value]) => {
-      acc[key] = formatValues(value);
-      return acc;
-    }, {});
+    formattedValues = Object.fromEntries(
+      Object.entries(values).map(([key, value]) => [key, formatValues(value)]),
+    );
   } else {
     formattedValues = Number.isFinite(values) ? Math.floor(values) : values;
   }

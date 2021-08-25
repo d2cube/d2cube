@@ -54,29 +54,29 @@ export const calcItemStats = (item) => {
     Object.entries(stats),
   );
 
-  return statsEntries.reduce((acc, [property, values]) => {
-    // TODO: figure out general logic
-    let effective = [];
-    if (values.length === 1) {
-      effective = values[0];
-    } else if (values.every(Number.isFinite)) {
-      effective = sum(values);
-    } else if (values.every(isPlainObject)) {
-      effective = sum(values);
-    } else {
-      effective = values.reduce((acc2, value) => {
-        if (Array.isArray(value)) {
-          return value;
-        }
+  return Object.fromEntries(
+    statsEntries.map(([property, values]) => {
+      // TODO: figure out general logic
+      let effective = [];
+      if (values.length === 1) {
+        effective = values[0];
+      } else if (values.every(Number.isFinite)) {
+        effective = sum(values);
+      } else if (values.every(isPlainObject)) {
+        effective = sum(values);
+      } else {
+        effective = values.reduce((acc2, value) => {
+          if (Array.isArray(value)) {
+            return value;
+          }
 
-        return acc2.map(add(value));
-      }, []);
-    }
+          return acc2.map(add(value));
+        }, []);
+      }
 
-    acc[property] = effective;
-
-    return acc;
-  }, {});
+      return [property, effective];
+    }),
+  );
 };
 
 const pushEntry = (x) => (entry) => {
