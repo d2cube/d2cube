@@ -10,9 +10,10 @@ const Item = ({item, isInactive = false, variant = null}) => {
   const styles = useStyles();
 
   const {id, imageId, isEthereal, position, size, sockets, variants} = item;
+  const description = resolveItemDescription(item);
 
   return (
-    <ItemTooltip description={resolveItemDescription(item)}>
+    <ItemTooltip description={description}>
       <Element
         position="relative"
         styleProps={{

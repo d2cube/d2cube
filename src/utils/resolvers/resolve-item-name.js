@@ -26,6 +26,9 @@ export const resolveItemName = (item) => {
     case ItemType.Token:
       color = 'crafted';
       break;
+    case ItemType.Rune:
+      color = 'rune';
+      break;
     default:
       if (quality) {
         color = quality;
@@ -39,21 +42,18 @@ export const resolveItemName = (item) => {
 
   const tierSuffix = (x) => Array.from({length: x}).join('+');
 
-  const resolvedName =
-    quality &&
-    pipe([
-      concat(personalization),
-      concat(prefix),
-      concat(runeword ? runeword.name : name),
-      concat(cb((x) => `of ${resolveSuffixName(x)}`)(suffix)),
-      join(' '),
-    ])([]);
-
-  const resolvedBasename = pipe([
-    concat(basename),
-    concat(cb(tierSuffix)(tier)),
+  const resolvedName = pipe([
+    concat(personalization),
+    concat(prefix),
+    concat(runeword ? runeword.name : name),
+    concat(quality ? '' : cb(tierSuffix)(tier)),
+    concat(cb((x) => `of ${resolveSuffixName(x)}`)(suffix)),
     join(' '),
   ])([]);
+
+  const resolvedBasename =
+    basename !== name &&
+    pipe([concat(basename), concat(cb(tierSuffix)(tier)), join(' ')])([]);
 
   return pipe([
     concat({color: runeword ? 'runeword' : color, text: resolvedName}),

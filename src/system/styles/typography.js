@@ -32,6 +32,11 @@ const global = {
   h6: {
     fontFamily: 'diablo',
   },
+  mark: {
+    background: 'none',
+    backgroundColor: 'brand.primary',
+    textDecoration: 'underline',
+  },
 };
 
 const variants = {

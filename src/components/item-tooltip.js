@@ -3,8 +3,10 @@ import {Text} from 'uinix-ui';
 
 import Tooltip from './ui/tooltip.js';
 
-const ItemTooltip = ({children, description}) => (
-  <Tooltip tooltip={resolve(description)}>{children}</Tooltip>
+const ItemTooltip = ({children, description, placement = undefined}) => (
+  <Tooltip placement={placement} tooltip={resolve(description)}>
+    {children}
+  </Tooltip>
 );
 
 const resolve = (lines, level = 0) =>

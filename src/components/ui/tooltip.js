@@ -4,17 +4,22 @@ import React, {useEffect, useRef, useState} from 'react';
 import 'tippy.js/dist/tippy.css';
 
 // Based on: https://github.com/atomiks/tippyjs-react/issues/71#issuecomment-796880050
-const Tooltip = ({children, isReadable = false, tooltip}) => {
+const Tooltip = ({
+  children,
+  isReadable = false,
+  placement = 'auto',
+  tooltip,
+}) => {
   const spanRef = useRef(null);
-  const [childRef, setChildRef] = useState(null);
+  const [triggerRef, setTriggerRef] = useState(null);
 
   useEffect(() => {
     const span = spanRef.current;
     if (span) {
-      setChildRef(span.previousElementSibling);
+      setTriggerRef(span.previousElementSibling);
     }
 
-    return () => setChildRef(null);
+    return () => setTriggerRef(null);
   }, []);
 
   if (!tooltip) {
@@ -24,16 +29,17 @@ const Tooltip = ({children, isReadable = false, tooltip}) => {
   return (
     <>
       {children}
-      {childRef ? (
+      {triggerRef ? (
         <Tippy
           interactive
+          animation={false}
           appendTo={document.body}
           arrow={false}
           content={tooltip}
-          offset={[0, 0]}
-          placement="bottom"
           maxWidth={isReadable ? undefined : 'none'}
-          reference={childRef}
+          offset={[0, 0]}
+          placement={placement}
+          reference={triggerRef}
         />
       ) : (
         <span ref={spanRef} style={{display: 'none'}} />

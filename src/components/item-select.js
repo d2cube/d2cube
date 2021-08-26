@@ -1,7 +1,7 @@
 import {getItems} from '../api/get-items.js';
 import {rollItem} from '../utils/roll-item.js';
 import Select from './ui/select.js';
-import Item from './item.js';
+import ItemName from './item-name.js';
 
 const ItemSelect = ({value = undefined, onChange = undefined}) => (
   <Select
@@ -12,10 +12,9 @@ const ItemSelect = ({value = undefined, onChange = undefined}) => (
   />
 );
 
-const renderOption = (option) => {
-  const {item} = option;
-  return item.name;
-};
+const renderOption = ({option, query}) => (
+  <ItemName item={option.item} query={query} />
+);
 
 const mapItemToOption = (item) => ({
   item: rollItem(item),

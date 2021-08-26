@@ -15,6 +15,7 @@ import {up} from './up.js';
 
 export default {
   help,
+  info,
   pause,
   play,
   nav: {
