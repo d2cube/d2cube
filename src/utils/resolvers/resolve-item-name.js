@@ -1,7 +1,7 @@
 import {pipe} from 'uinix-fp';
 
-import {ItemType} from '../../enums/index.js';
 import {cb, concat, join} from '../fp.js';
+import {resolveItemColor} from './resolve-item-color.js';
 import {resolveItemRunes} from './resolve-item-runes.js';
 import {resolveItemRuneword} from './resolve-item-runeword.js';
 import {resolveSuffixName} from './resolve-suffix-name.js';
@@ -12,31 +12,12 @@ export const resolveItemName = (item) => {
     name,
     personalization,
     prefix,
-    sockets,
     suffix,
     tier,
-    type,
     basename = name,
   } = item;
 
-  let color = sockets ? 'socketed' : null;
-  switch (type) {
-    case ItemType.Key:
-    case ItemType.Essence:
-    case ItemType.Token:
-      color = 'crafted';
-      break;
-    case ItemType.Rune:
-      color = 'rune';
-      break;
-    default:
-      if (quality) {
-        color = quality;
-      }
-
-      break;
-  }
-
+  const color = resolveItemColor(item);
   const runes = resolveItemRunes(item);
   const runeword = resolveItemRuneword(runes)(item);
 

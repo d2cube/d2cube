@@ -1,6 +1,8 @@
 import {k, props} from 'uinix-fp';
 import {useTheme} from 'uinix-ui';
 
+import {resolveItemColor} from '../../utils/resolvers/resolve-item-color.js';
+
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const theme = useTheme();
 
@@ -9,8 +11,11 @@ const themedStyles = {
   bordered: props('bordered')(theme.borders),
   diabloFont: props('diablo')(theme.fontFamilies),
   hover: props('hover')(theme.opacities),
+  interfaceActive: props('interface.active')(theme.colors),
   interfaceBackground: props('interface.background')(theme.colors),
-  textPrimary: props('text.primary')(theme.colors),
+  interfaceHover: props('interface.hover')(theme.colors),
+  brandPrimaryColor: props('brand.primary')(theme.colors),
+  textPrimaryColor: props('text.primary')(theme.colors),
 };
 
 const IndicatorsContainer = k(null);
@@ -24,27 +29,34 @@ export const styles = {
     ...provided,
     backgroundColor: themedStyles.interfaceBackground,
     border: themedStyles.bordered,
-    color: themedStyles.textPrimary,
     fontFamily: themedStyles.diabloFont,
+    ':hover': {
+      border: themedStyles.bordered,
+    },
   }),
   input: (provided) => ({
     ...provided,
-    color: themedStyles.textPrimary,
+    color: themedStyles.textPrimaryColor,
   }),
   menu: (provided) => ({
     ...provided,
     backgroundColor: themedStyles.interfaceBackground,
   }),
-  option: (provided) => ({
+  option: (provided, state) => ({
     ...provided,
-    backgroundColor: themedStyles.interfaceBackground,
+    backgroundColor: state.isFocused
+      ? themedStyles.interfaceActive
+      : themedStyles.interfaceBackground,
     fontFamily: themedStyles.diabloFont,
     ':hover': {
-      opacity: themedStyles.hover,
+      backgroundColor: themedStyles.interfaceHover,
     },
   }),
-  singleValue: (provided) => ({
-    ...provided,
-    color: themedStyles.textPrimary,
-  }),
+  singleValue: (provided, state) => {
+    const {item} = state.getValue()[0];
+    return {
+      ...provided,
+      color: props(resolveItemColor(item))(theme.colors),
+    };
+  },
 };

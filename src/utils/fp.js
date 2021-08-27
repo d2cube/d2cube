@@ -11,6 +11,17 @@ export const cb = (f) => (x) => isEmpty(x) ? x : f(x);
 export const concat = (x) => (xs) =>
   isEmpty(x) ? xs : xs.concat(Array.isArray(x) ? x : [x]);
 
+export const groupBy = (key) => (xs) =>
+  xs.reduce((acc, x) => {
+    const group = x[key];
+    if (!(group in acc)) {
+      acc[group] = [];
+    }
+
+    acc[group].push(x);
+    return acc;
+  }, {});
+
 export const fill = (n) => (f) => range(0)(n).map(f);
 
 export const fillNull = (n) => fill(n)(k(null));

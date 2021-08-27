@@ -2,7 +2,7 @@ const cursor = 'url(images/ui/cursor.cur), auto';
 
 const vendor = {
   '.tippy-box': {
-    backgroundColor: 'interface.popover',
+    backgroundColor: 'interface.tooltip',
   },
   '.tippy-content': {
     color: 'text.primary',

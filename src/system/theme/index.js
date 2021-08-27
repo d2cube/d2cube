@@ -1,5 +1,5 @@
 // Variables
-const brandColor = '#a58546';
+const brandColor = '#C7B377';
 const slotSize = 40;
 
 const animations = {
@@ -13,8 +13,10 @@ const colors = {
   interface: {
     background: '#010101',
     border: '#4d4842',
+    hover: 'rgb(199, 179, 119, 0.2)',
+    active: 'rgb(199, 179, 119, 0.4)',
     grid: '#131015',
-    popover: 'rgba(0, 0, 0, 0.9)',
+    tooltip: 'rgba(0, 0, 0, 0.8)',
   },
   item: {
     invalid: 'rgba(149, 53, 39, 0.5)',
@@ -23,10 +25,10 @@ const colors = {
     magic: '#057AF0',
     normal: 'white',
     rare: '#FFCC00',
-    runeword: '#C7B377',
+    runeword: brandColor,
     rune: '#FFA800',
     set: '#00FF00',
-    unique: '#C7B377',
+    unique: brandColor,
   },
   player: {
     life: '#a61313',

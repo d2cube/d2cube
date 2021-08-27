@@ -19,10 +19,6 @@ const interactive = {
   },
 };
 
-const itemName = ({quality}) => ({
-  color: `item.${quality}`,
-});
-
 const globe = ({theme, type}) => {
   const color = theme.colors.player[type];
   return {
@@ -86,7 +82,6 @@ export default {
   grid,
   interactive,
   item,
-  itemName,
   progress,
   responsiveHide,
 };
