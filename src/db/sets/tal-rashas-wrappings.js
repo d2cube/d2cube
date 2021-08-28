@@ -1,5 +1,6 @@
 import {
   ItemSetType,
+  ItemTierType,
   MagicPropertyType,
   SkillSetType,
 } from '../../enums/index.js';
@@ -8,6 +9,7 @@ import ids from '../ids/index.js';
 export default {
   id: ItemSetType.TalRashasWrappings,
   name: "Tal Rasha's Wrappings",
+  tier: ItemTierType.Elite,
   bonus: [
     null,
     {

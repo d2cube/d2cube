@@ -1,9 +1,15 @@
-import {ItemSetType, MagicPropertyType, SkillType} from '../../enums/index.js';
+import {
+  ItemSetType,
+  ItemTierType,
+  MagicPropertyType,
+  SkillType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
   id: ItemSetType.CowKingsLeathers,
   name: "Cow King's Leathers",
+  tier: ItemTierType.Exceptional,
   bonus: [
     null,
     {

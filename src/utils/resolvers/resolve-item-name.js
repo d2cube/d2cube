@@ -37,8 +37,8 @@ export const resolveItemName = (item) => {
     pipe([concat(basename), concat(cb(tierSuffix)(tier)), join(' ')])([]);
 
   return pipe([
-    concat({color: runeword ? 'runeword' : color, text: resolvedName}),
+    concat({color: runeword ? 'item.runeword' : color, text: resolvedName}),
     concat({color, text: runeword ? name : resolvedBasename}),
-    concat({color: 'runeword', text: runes ? `'${runes}'` : null}),
+    concat({color: 'item.runeword', text: runes ? `'${runes}'` : null}),
   ])([]);
 };

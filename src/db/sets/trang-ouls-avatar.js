@@ -1,5 +1,6 @@
 import {
   ItemSetType,
+  ItemTierType,
   MagicPropertyType,
   SkillSetType,
   SkillType,
@@ -9,6 +10,7 @@ import ids from '../ids/index.js';
 export default {
   id: ItemSetType.TrangOulsAvatar,
   name: "Trang Oul's Avatar",
+  tier: ItemTierType.Elite,
   bonus: [
     null,
     {

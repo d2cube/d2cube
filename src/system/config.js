@@ -29,6 +29,7 @@ const elementShorthandPropsMapping = {
   top: ['top'],
   // Dimension
   height: ['h'],
+  minHeight: ['minH'],
   width: ['w'],
   zIndex: ['z'],
 };

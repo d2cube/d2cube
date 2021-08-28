@@ -1,9 +1,14 @@
-import {ItemSetType, MagicPropertyType} from '../../enums/index.js';
+import {
+  ItemSetType,
+  ItemTierType,
+  MagicPropertyType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
   id: ItemSetType.IrathasFinery,
   name: "Iratha's Finery",
+  tier: ItemTierType.Normal,
   bonus: [
     null,
     {

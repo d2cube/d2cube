@@ -18,7 +18,7 @@ export const resolveItemSetProperties = (item) => {
     item,
     result,
     setProperties,
-    color: 'set',
+    color: 'item.set',
   });
 
   result.push(null);
@@ -26,12 +26,12 @@ export const resolveItemSetProperties = (item) => {
     item,
     result,
     setProperties: set.bonus,
-    color: 'unique',
+    color: 'item.unique',
   });
 
-  result.push(null, {text: set.name, color: 'unique'});
+  result.push(null, {text: set.name, color: 'item.unique'});
   set.items.forEach((id) => {
-    result.push({text: getItemById(id).name, color: 'set'});
+    result.push({text: getItemById(id).name, color: 'item.set'});
   });
 
   return result;

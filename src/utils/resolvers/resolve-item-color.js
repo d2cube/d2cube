@@ -3,23 +3,22 @@ import {ItemType} from '../../enums/index.js';
 export const resolveItemColor = (item) => {
   const {quality, sockets, type} = item;
 
-  let color = sockets ? 'socketed' : null;
   switch (type) {
     case ItemType.Key:
     case ItemType.Essence:
     case ItemType.Token:
-      color = 'crafted';
-      break;
+      return 'item.crafted';
     case ItemType.Rune:
-      color = 'rune';
-      break;
+      return 'item.rune';
     default:
       if (quality) {
-        color = quality;
+        return `item.${quality}`;
       }
 
-      break;
-  }
+      if (sockets) {
+        return 'item.socketed';
+      }
 
-  return `item.${color}`;
+      return null;
+  }
 };

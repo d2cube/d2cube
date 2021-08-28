@@ -1,25 +1,37 @@
 import {useState} from 'react';
-import {pipe, prop} from 'uinix-fp';
+import {Layout} from 'uinix-ui';
 
 import {getSets} from '../api/get-sets.js';
 import PageLayout from '../components/page-layout.js';
-import ItemSelect from '../components/item-select.js';
-import Item from '../components/item.js';
+import SetPreview from '../components/set-preview.js';
+import {ItemTierTypeLabels} from '../constants/item-tier-type-labels.js';
 import {groupBy} from '../utils/fp.js';
 
 const Page = () => {
-  const [item, setItem] = useState(null);
-  const groupedSets = getGroupedSets();
-  console.log(groupedSets);
+  const [set, setSet] = useState(null);
+  console.log(set);
 
   return (
     <PageLayout title="Sets">
-      <ItemSelect value={item} onChange={pipe([prop('item'), setItem])} />
-      {item && <Item item={item} />}
+      <Layout>
+        <ul>
+          {Object.entries(groupedSets).map(([tier, sets]) => (
+            <ul key={tier}>
+              {ItemTierTypeLabels[tier]}
+              {sets.map((set) => (
+                <li key={set.id} onClick={() => setSet(set)}>
+                  {set.name}
+                </li>
+              ))}
+            </ul>
+          ))}
+        </ul>
+        {set && <SetPreview set={set} />}
+      </Layout>
     </PageLayout>
   );
 };
 
-const getGroupedSets = () => groupBy('tier')(getSets());
+const groupedSets = groupBy('tier')(getSets());
 
 export default Page;

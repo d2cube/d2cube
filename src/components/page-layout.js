@@ -18,7 +18,7 @@ const PageLayout = ({children, title = null}) => {
   };
 
   return (
-    <Layout direction="column" h="100vh" spacing="l">
+    <Layout direction="column" minH="100vh" spacing="l">
       <ScrollTop />
       <Backdrop />
       {entered ? (

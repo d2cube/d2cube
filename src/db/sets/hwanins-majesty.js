@@ -1,9 +1,14 @@
-import {ItemSetType, MagicPropertyType} from '../../enums/index.js';
+import {
+  ItemSetType,
+  ItemTierType,
+  MagicPropertyType,
+} from '../../enums/index.js';
 import ids from '../ids/index.js';
 
 export default {
   id: ItemSetType.HwaninsMajesty,
   name: "Hwanin's Majesty",
+  tier: ItemTierType.Exceptional,
   bonus: [
     null,
     {
