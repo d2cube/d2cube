@@ -1,3 +1,4 @@
+import {EquipSlotType} from '../enums/equip-slot-type.js';
 import {ItemQualityType} from '../enums/item-quality-type.js';
 import {rollItem} from '../utils/roll-item.js';
 
@@ -34,30 +35,43 @@ export const inventoryItems = [
     position: [3, 1],
   },
   {
-    id: 'PerfectSkull',
-    position: [4, 3],
+    id: 'ImmortalKingsWill',
+    equipped: EquipSlotType.Head,
+    sockets: ['PerfectTopaz', 'Zod'],
+  },
+  {
+    id: 'ImmortalKingsForge',
+    equipped: EquipSlotType.Hands,
+  },
+  {
+    id: 'ImmortalKingsPillar',
+    equipped: EquipSlotType.Feet,
   },
   {
     id: 'Bolts',
-    position: [1, 2],
+    equipped: EquipSlotType.OffHand,
   },
   {
-    id: 'FlawlessTopaz',
-    position: [1, 3],
+    id: 'StringOfEars',
+    equipped: EquipSlotType.Waist,
   },
   {
-    id: 'KeyOfTerror',
-    position: [2, 3],
+    id: 'BulKathosTribalGuardian',
+    equipped: EquipSlotType.AlternateMainHand,
+  },
+  {
+    id: 'BulKathosSacredCharge',
+    equipped: EquipSlotType.AlternateOffHand,
   },
   {
     id: 'StoneOfJordan',
-    position: [3, 6],
+    equipped: EquipSlotType.LeftFinger,
   },
   {
     id: 'Ring',
     position: [3, 8],
     quality: ItemQualityType.Magic,
-    prefix: 'Cruel',
+    equipped: EquipSlotType.RightFinger,
   },
   {
     id: 'Ring',
@@ -66,7 +80,7 @@ export const inventoryItems = [
   },
   {
     id: 'Amulet',
-    position: [4, 7],
+    equipped: EquipSlotType.Neck,
     quality: ItemQualityType.Magic,
   },
   {
@@ -90,18 +104,14 @@ export const inventoryItems = [
   {
     id: 'ReflexBow',
     durability: 1,
-    position: [1, 4],
+    equipped: EquipSlotType.MainHand,
     sockets: ['Pul', 'Lum', 'Ber', 'Mal'],
   },
   {
-    id: 'Falcata',
+    id: 'DuskShroud',
     quality: 'normal',
-    durability: 1,
-    position: [1, 9],
-  },
-  {
-    id: 'WirtsLeg',
-    position: [1, 10],
+    equipped: EquipSlotType.Torso,
+    sockets: ['Jah', 'Ith', 'Ber'],
   },
   {
     id: 'DiablosHorn',

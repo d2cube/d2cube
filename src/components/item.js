@@ -5,6 +5,8 @@ import ItemImage from './item-image.js';
 import ItemSockets from './item-sockets.js';
 import ItemTooltip from './item-tooltip.js';
 
+const SOCKET_CLASSNAME = 'sockets';
+
 // TODO: organize and document logic in relevant utils
 const Item = ({item, isInactive = false, variant = null}) => {
   const styles = useStyles();
@@ -17,17 +19,33 @@ const Item = ({item, isInactive = false, variant = null}) => {
       <Element
         position="relative"
         styleProps={{
+          hoverable: {
+            className: SOCKET_CLASSNAME,
+            default: {
+              opacity: 0,
+            },
+            hover: {
+              opacity: 1,
+            },
+          },
           isEthereal,
           isInactive,
           position,
           size,
         }}
-        styles={styles.item}
+        styles={[styles.item, styles.hoverableClassName]}
       >
-        <ItemImage id={imageId || id} variant={variant} variants={variants} />
-        <Element bottom={0} left={0} position="absolute" right={0} top={0}>
+        <Element
+          bottom={0}
+          className={SOCKET_CLASSNAME}
+          left={0}
+          position="absolute"
+          right={0}
+          top={0}
+        >
           <ItemSockets sockets={sockets} size={size} />
         </Element>
+        <ItemImage id={imageId || id} variant={variant} variants={variants} />
       </Element>
     </ItemTooltip>
   );

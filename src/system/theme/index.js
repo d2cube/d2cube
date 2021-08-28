@@ -6,20 +6,26 @@ const animations = {
   easeInOut: '1s ease-in-out',
 };
 
+const borderWidths = {
+  border: '2px',
+  frame: '40px',
+};
+
 const colors = {
   brand: {
     primary: brandColor,
   },
   interface: {
     background: '#010101',
-    border: '#4d4842',
+    border: '#3D322A',
     hover: 'rgb(199, 179, 119, 0.2)',
     active: 'rgb(199, 179, 119, 0.4)',
     grid: '#131015',
     tooltip: 'rgba(0, 0, 0, 0.8)',
   },
   item: {
-    invalid: 'rgba(149, 53, 39, 0.5)',
+    hover: 'rgba(24,100,8,.25)',
+    invalid: 'rgba(144,0,0,.25)',
     socketed: '#484848',
     crafted: '#FFA800',
     magic: '#057AF0',
@@ -105,9 +111,8 @@ const spacings = {
   xxl: '128px',
 };
 
-const borderWidths = {
-  border: '2px',
-  frame: '40px',
+const transitions = {
+  opacity: 'opacity 0.5s',
 };
 
 const borders = {
@@ -132,5 +137,6 @@ export default {
   radii,
   sizes,
   spacings,
+  transitions,
   zIndices,
 };

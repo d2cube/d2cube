@@ -1,17 +1,23 @@
-import {Icon, Layout} from 'uinix-ui';
+import {prop} from 'uinix-fp';
+import {Layout} from 'uinix-ui';
 
+import {normalize, not} from '../utils/fp.js';
+import InventoryPaperdoll from './inventory-paperdoll.js';
 import ItemGrid from './item-grid.js';
-import BrandIcon from './ui/brand-icon.js';
 import Frame from './ui/frame.js';
 
 const Inventory = ({items}) => (
   <Frame title="Inventory" help={help}>
+    <InventoryPaperdoll
+      items={normalize('equipped')(items.filter(testIsEquipped))}
+    />
     <Layout align="center" direction="column" spacing="s">
-      <ItemGrid items={items} size={[4, 10]} />
-      <BrandIcon icon="interface.add" size="icon.l" tooltip="Add item" />
+      <ItemGrid items={items.filter(not(testIsEquipped))} size={[4, 10]} />
     </Layout>
   </Frame>
 );
+
+const testIsEquipped = prop('equipped');
 
 const help = (
   <Layout direction="column" spacing="m">
@@ -20,11 +26,6 @@ const help = (
       would in the game.
     </div>
     <div>Right click on an item to destroy it.</div>
-    <div>
-      Search and add new items to your inventory by clicking on the &ldquo;Add
-      Item&rdquo; <Icon display="inline" icon="interface.add" size="icon.s" />{' '}
-      button.
-    </div>
   </Layout>
 );
 

@@ -19,6 +19,14 @@ const interactive = {
   },
 };
 
+const hoverableClassName = ({hoverable}) => ({
+  [`> .${hoverable.className}`]: {
+    ...hoverable.default,
+    transition: 'opacity',
+  },
+  [`:hover > .${hoverable.className}`]: hoverable.hover,
+});
+
 const globe = ({theme, type}) => {
   const color = theme.colors.player[type];
   return {
@@ -31,7 +39,7 @@ const globe = ({theme, type}) => {
   };
 };
 
-const grid = ({size, theme}) => {
+const grid = ({theme, size}) => {
   const slotSize = theme.sizes.slot;
   const borderColor = theme.colors.interface.border;
   const borderWidth = theme.borderWidths.border;
@@ -50,16 +58,22 @@ const grid = ({size, theme}) => {
   };
 };
 
+const itemHover = {
+  ':hover': {
+    backgroundColor: 'item.hover',
+  },
+};
+
+const itemSize = ({theme, size}) => ({
+  height: size[0] * theme.sizes.slot,
+  width: size[1] * theme.sizes.slot,
+});
+
 const item = ({theme, isEthereal, isInactive, position = [], size = []}) => ({
   // Dimensions
   flex: 'none',
   padding: 'xxs',
-  ':hover': {
-    backgroundColor: 'item.hover',
-  },
-  height: size[0] * theme.sizes.slot,
-  width: size[1] * theme.sizes.slot,
-  // Grid
+  ...itemSize({theme, size}),
   gridRowStart: position[0],
   gridRowEnd: position[0] + size[0],
   gridColumnStart: position[1],
@@ -80,8 +94,11 @@ export default {
   fadeIn,
   globe,
   grid,
+  hoverableClassName,
   interactive,
   item,
+  itemHover,
+  itemSize,
   progress,
   responsiveHide,
 };
