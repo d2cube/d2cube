@@ -92,7 +92,10 @@ const radii = {
 
 const sizes = {
   bar: 12,
-  frame: slotSize * 12,
+  frame: {
+    maxWidth: 800,
+    minWidth: 400,
+  },
   globe: 160,
   icon: {
     s: 16,

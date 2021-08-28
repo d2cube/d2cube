@@ -11,7 +11,8 @@ const frame = {
   borderStyle: 'solid',
   borderWidth: 'frame',
   borderImage: 'url(images/ui/frame.png) 140 repeat',
-  minWidth: 'frame',
+  maxWidth: 'frame.maxWidth',
+  minWidth: 'frame.minWidth',
 };
 
 const fullscreen = {
