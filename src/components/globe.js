@@ -6,7 +6,7 @@ const Globe = ({type, max, value}) => {
   const styles = useStyles();
 
   return (
-    <Tooltip tooltip={`${type}: ${value} / ${max}`}>
+    <Tooltip placement="top" tooltip={`${type}: ${value} / ${max}`}>
       <Element styleProps={{type}} styles={styles.globe} />
     </Tooltip>
   );

@@ -1,7 +1,6 @@
 import {
   BasePropertyType,
   ItemQualityType,
-  ItemType,
   MagicPropertyType,
   SkillSetType,
   SkillType,
@@ -13,7 +12,6 @@ export default normalizeItems({
   baseId: ids.Amulet,
   imageId: ids.Amulet,
   quality: ItemQualityType.Unique,
-  type: ItemType.Unique,
 })([
   {
     id: ids.AtmasScarab,

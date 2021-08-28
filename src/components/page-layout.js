@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
-import {Layout, useStyles} from 'uinix-ui';
+import {Layout, Text, useStyles} from 'uinix-ui';
 
 import Hud from './hud.js';
 import Backdrop from './ui/backdrop.js';
+import BrandLogo from './ui/brand-logo.js';
 import Splash from './ui/splash.js';
 import ScrollTop from './ui/scroll-top.js';
 
 let cachedEntered = false;
 
-const PageLayout = ({children, title = null}) => {
+const PageLayout = ({children, title}) => {
   const [entered, setEntered] = useState(cachedEntered);
   const styles = useStyles();
 
@@ -27,11 +28,21 @@ const PageLayout = ({children, title = null}) => {
             as="main"
             direction="column"
             flex="auto"
-            px="l"
+            p="l"
             spacing="l"
             styles={styles.fadeIn}
           >
-            {title && <h2>{title}</h2>}
+            {title ? (
+              <Layout align="baseline" spacing="s">
+                <BrandLogo />
+                <Text fontSize="xl" variant="diablo">
+                  /
+                </Text>
+                <h2>{title}</h2>
+              </Layout>
+            ) : (
+              <BrandLogo />
+            )}
             {children}
           </Layout>
           <Hud />

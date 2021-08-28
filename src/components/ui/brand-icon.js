@@ -18,7 +18,7 @@ const BrandIcon = ({icon, size = 'icon.m', href = null, tooltip, ...rest}) => {
   );
 
   return (
-    <Tooltip isReadable tooltip={tooltip}>
+    <Tooltip isReadable placement="top" tooltip={tooltip}>
       <Layout {...rest} as={as} align="center" justify="center">
         {href ? <Link href={href}>{iconElement}</Link> : iconElement}
       </Layout>

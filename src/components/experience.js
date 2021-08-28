@@ -11,7 +11,7 @@ const Experience = ({experience}) => {
   const tooltip = `Experience: ${value} / ${max} (${percent})`;
 
   return (
-    <Tooltip tooltip={tooltip}>
+    <Tooltip placement="top" tooltip={tooltip}>
       <Element
         position="relative"
         styleProps={{display: 'flex'}}

@@ -4,7 +4,6 @@ import {database} from './database.js';
 import {gift} from './gift.js';
 import {github} from './github.js';
 import {help} from './help.js';
-import {home} from './home.js';
 import {info} from './info.js';
 import {layers} from './layers.js';
 import {pause} from './pause.js';
@@ -14,15 +13,14 @@ import {transmute} from './transmute.js';
 import {up} from './up.js';
 
 export default {
+  cube,
   help,
   info,
   pause,
   play,
   nav: {
     about: info,
-    cube,
     developers: code,
-    home,
     github,
     items: database,
     runewords,

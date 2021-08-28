@@ -121,7 +121,7 @@ export {};
  *    See https://user.xmission.com/~trevin/DiabloIIv1.09_Magic_Names.html#rare_first_name
  * @property {ContainerType} [container]
  *    e.g. Cube/Inventory/Stash/Belt/Mercenary.
- * @property {EquipSlotType} [equipped]
+ * @property {EquipSlotType} [equipSlot]
  *    e.g. Head/Neck/Torso/MainHand/OffHand/Waist/Feet etc.
  * @property {Array<Id|null>} [sockets]
  *    Values can be null (empty socket) or item Id (socketed Gem/Jewel/Rune).

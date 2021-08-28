@@ -15,8 +15,9 @@ export const normalize = (key) => (xs) =>
   Object.fromEntries(xs.map((x) => [x[key], x]));
 
 export const groupBy = (key) => (xs) =>
+  // eslint-disable-next-line unicorn/prefer-object-from-entries
   xs.reduce((acc, x) => {
-    const group = x[key];
+    const group = props(key)(x);
     if (!(group in acc)) {
       acc[group] = [];
     }

@@ -1,3 +1,9 @@
+const diablo = {
+  color: 'brand.primary',
+  fontFamily: 'diablo',
+  margin: 0,
+};
+
 const fontFaces = {
   AlegreyaSansRegular: {
     src: ['fonts/alegreya-sans-regular.ttf'],
@@ -12,26 +18,20 @@ const global = {
     fontFamily: 'body',
   },
   h1: {
-    fontFamily: 'diablo',
+    ...diablo,
     fontSize: 'xxl',
   },
   h2: {
-    fontFamily: 'diablo',
+    ...diablo,
     fontSize: 'xl',
   },
   h3: {
-    fontFamily: 'diablo',
+    ...diablo,
     fontSize: 'l',
   },
-  h4: {
-    fontFamily: 'diablo',
-  },
-  h5: {
-    fontFamily: 'diablo',
-  },
-  h6: {
-    fontFamily: 'diablo',
-  },
+  h4: diablo,
+  h5: diablo,
+  h6: diablo,
   mark: {
     background: 'none',
     backgroundColor: 'brand.primary',
@@ -40,11 +40,7 @@ const global = {
 };
 
 const variants = {
-  diablo: {
-    color: 'brand.primary',
-    fontFamily: 'diablo',
-    margin: 0,
-  },
+  diablo,
 };
 
 export default {

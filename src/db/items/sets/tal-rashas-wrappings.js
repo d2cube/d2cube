@@ -2,7 +2,6 @@ import {
   BasePropertyType,
   ItemQualityType,
   ItemSetType,
-  ItemType,
   MagicPropertyType,
   PlayerClassType,
   SkillSetType,
@@ -14,7 +13,6 @@ import ids from '../../ids/index.js';
 export default normalizeItems({
   quality: ItemQualityType.Set,
   set: ItemSetType.TalRashasWrappings,
-  type: ItemType.Set,
 })([
   {
     id: ids.TalRashasLidlessEye,

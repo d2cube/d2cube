@@ -1,7 +1,6 @@
 import {
   BasePropertyType,
   ItemQualityType,
-  ItemType,
   MagicPropertyType,
   SkillType,
 } from '../../../enums/index.js';
@@ -10,7 +9,6 @@ import ids from '../../ids/index.js';
 
 export default normalizeItems({
   quality: ItemQualityType.Unique,
-  type: ItemType.Unique,
 })([
   {
     id: ids.DemonsArch,

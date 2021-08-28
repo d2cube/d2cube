@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
+import {getItemsByType} from '../api/index.js';
 import Item from '../components/item.js';
-import ItemSearch from '../components/item-search.js';
+import ItemName from '../components/item-name.js';
+import ItemSelect from '../components/item-select.js';
 import PageLayout from '../components/page-layout.js';
 import {ItemType} from '../enums/index.js';
-import {getItemsByType} from '../api/index.js';
 import {rollItem} from '../utils/roll-item.js';
 
 const Page = () => {
-  const [selectedItemType, setSelectedItemType] = useState(ItemType.Set);
-  const [filters, setFilters] = useState([]);
+  const [selectedItemType, setSelectedItemType] = useState(ItemType.Rune);
   const items = getItemsByType(selectedItemType).map(rollItem);
 
   const handleUpdateItemType = (event) =>
@@ -19,8 +19,7 @@ const Page = () => {
   return (
     <PageLayout title="Items">
       <Layout bg="interface.background" direction="column" spacing="l">
-        <ItemSearch filters={filters} onChange={setFilters} />
-        <pre>{JSON.stringify(filters)}</pre>
+        <ItemSelect />
         <select value={selectedItemType} onChange={handleUpdateItemType}>
           {Object.values(ItemType).map((type) => (
             <option key={type} value={type}>
@@ -28,10 +27,10 @@ const Page = () => {
             </option>
           ))}
         </select>
-        <Layout wrap spacing="m">
+        <Layout direction="column" spacing="s">
           {items.map((item) => (
             <Layout key={item.id} direction="column" spacing="l">
-              <h4>{item.title || item.name}</h4>
+              <ItemName item={item} />
               <Item key={item.id} item={item} />
             </Layout>
           ))}

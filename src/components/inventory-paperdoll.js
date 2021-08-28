@@ -12,11 +12,13 @@ const SwapStateType = {
 const InventoryPaperdoll = ({items}) => {
   const [swapState, setSwapState] = useState(SwapStateType.One);
 
+  const swapToggle = <Swap selectedState={swapState} onSwap={setSwapState} />;
+
   return (
     <Layout align="flex-end" spacing="s">
       <Layout direction="column" spacing="s">
         <Layout direction="column">
-          <Swap selectedState={swapState} onSwap={setSwapState} />
+          {swapToggle}
           <InventoryEquipSlot
             slot={EquipSlotType.MainHand}
             item={
@@ -64,7 +66,7 @@ const InventoryPaperdoll = ({items}) => {
       </Layout>
       <Layout direction="column" spacing="s">
         <Layout direction="column">
-          <Swap selectedState={swapState} onSwap={setSwapState} />
+          {swapToggle}
           <InventoryEquipSlot
             slot={EquipSlotType.OffHand}
             item={

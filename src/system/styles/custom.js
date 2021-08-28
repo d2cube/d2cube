@@ -81,7 +81,7 @@ const item = ({theme, isEthereal, isInactive, position = [], size = []}) => ({
   // Effects
   filter: isInactive ? 'grayscale(100%)' : undefined,
   objectFit: 'cover',
-  opacity: isInactive || isEthereal ? 'inactive' : undefined,
+  opacity: isInactive || isEthereal ? 'ethereal' : undefined,
 });
 
 const progress = ({color, percent}) => ({

@@ -8,7 +8,6 @@ const InventoryEquipSlot = ({item = null, slot}) => {
   const styles = useStyles();
 
   const {src, size} = getConfig(slot);
-  console.log(styles.itemHover);
 
   return (
     <Element

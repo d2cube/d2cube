@@ -1,8 +1,10 @@
 import {props} from 'uinix-fp';
+import {getSetById} from '../../api/index.js';
 
-import {getItemById, getSetById} from '../../api/index.js';
 import {prepend} from '../fp.js';
 import {resolveItemProperty} from './resolve-item-property.js';
+import {resolveSetItems} from './resolve-set-items.js';
+import {resolveSetProperties} from './resolve-set-properties.js';
 
 export const resolveItemSetProperties = (item) => {
   const setProperties = props('properties.set')(item) || [];
@@ -12,32 +14,8 @@ export const resolveItemSetProperties = (item) => {
   }
 
   const set = getSetById(item.set);
-  const result = [];
+  let resolved = [];
 
-  resolveSetProperties({
-    item,
-    result,
-    setProperties,
-    color: 'item.set',
-  });
-
-  result.push(null);
-  resolveSetProperties({
-    item,
-    result,
-    setProperties: set.bonus,
-    color: 'item.unique',
-  });
-
-  result.push(null, {text: set.name, color: 'item.unique'});
-  set.items.forEach((id) => {
-    result.push({text: getItemById(id).name, color: 'item.set'});
-  });
-
-  return result;
-};
-
-const resolveSetProperties = ({item, result, setProperties, color}) => {
   [...setProperties].reverse().forEach((setProperty, i) => {
     if (setProperty) {
       const setCountText =
@@ -51,8 +29,17 @@ const resolveSetProperties = ({item, result, setProperties, color}) => {
         const text = Array.isArray(resolvedItemProperty)
           ? resolvedItemProperty.map(prepend(setCountText)).join('\n')
           : prepend(setCountText)(resolvedItemProperty);
-        result.push({text, color});
+        resolved.push({text, color: 'item.set'});
       });
     }
   });
+
+  resolved = [
+    ...resolved,
+    null,
+    ...resolveSetProperties(set),
+    ...resolveSetItems(set),
+  ];
+
+  return resolved;
 };

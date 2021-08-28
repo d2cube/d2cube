@@ -1,7 +1,6 @@
 import {
   BasePropertyType,
   ItemQualityType,
-  ItemType,
   MagicPropertyType,
   SkillType,
 } from '../../../enums/index.js';
@@ -12,7 +11,6 @@ export default normalizeItems({
   baseId: ids.Ring,
   imageId: ids.Ring,
   quality: ItemQualityType.Unique,
-  type: ItemType.Unique,
 })([
   {
     id: ids.BulKathosWeddingBand,

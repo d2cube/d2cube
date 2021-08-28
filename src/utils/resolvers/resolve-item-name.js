@@ -1,6 +1,7 @@
 import {pipe} from 'uinix-fp';
 
 import {cb, concat, join} from '../fp.js';
+import {getTierLabel} from '../get-tier-label.js';
 import {resolveItemColor} from './resolve-item-color.js';
 import {resolveItemRunes} from './resolve-item-runes.js';
 import {resolveItemRuneword} from './resolve-item-runeword.js';
@@ -21,20 +22,18 @@ export const resolveItemName = (item) => {
   const runes = resolveItemRunes(item);
   const runeword = resolveItemRuneword(runes)(item);
 
-  const tierSuffix = (x) => Array.from({length: x}).join('+');
-
   const resolvedName = pipe([
     concat(personalization),
     concat(prefix),
     concat(runeword ? runeword.name : name),
-    concat(quality ? '' : cb(tierSuffix)(tier)),
+    concat(quality ? '' : cb(getTierLabel)(tier)),
     concat(cb((x) => `of ${resolveSuffixName(x)}`)(suffix)),
     join(' '),
   ])([]);
 
   const resolvedBasename =
     basename !== name &&
-    pipe([concat(basename), concat(cb(tierSuffix)(tier)), join(' ')])([]);
+    pipe([concat(basename), concat(cb(getTierLabel)(tier)), join(' ')])([]);
 
   return pipe([
     concat({color: runeword ? 'item.runeword' : color, text: resolvedName}),

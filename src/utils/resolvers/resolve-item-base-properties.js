@@ -22,10 +22,10 @@ export const resolveItemBaseProperties = (item) => {
       const [label, valueText] = resolved;
       const result = [
         label,
-        {text: valueText, color: isEnhanced ? 'magic' : null},
+        {text: valueText, color: isEnhanced ? 'item.magic' : null},
       ];
       if (byLevel) {
-        result.push({text: byLevel, color: 'magic'});
+        result.push({text: byLevel, color: 'item.magic'});
       }
 
       results.push(result);

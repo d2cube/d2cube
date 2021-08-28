@@ -21,7 +21,7 @@ const colors = {
     hover: 'rgb(199, 179, 119, 0.2)',
     active: 'rgb(199, 179, 119, 0.4)',
     grid: '#131015',
-    tooltip: 'rgba(0, 0, 0, 0.8)',
+    tooltip: 'rgba(0, 0, 0, 0.9)',
   },
   item: {
     hover: 'rgba(24,100,8,.25)',
@@ -44,6 +44,7 @@ const colors = {
   },
   text: {
     primary: '#fdfad9',
+    muted: '#666',
     heading: brandColor,
   },
 };
@@ -58,8 +59,8 @@ const fontSizes = {
   s: '0.85rem',
   m: '1rem',
   l: '1.25rem',
-  xl: '1.5rem',
-  xxl: '2rem',
+  xl: '2rem',
+  xxl: '3rem',
 };
 
 const keyframes = {
@@ -79,6 +80,7 @@ const keyframes = {
 
 const opacities = {
   inactive: '0.3',
+  ethereal: '0.7',
   hover: '0.8',
 };
 

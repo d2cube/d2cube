@@ -2,7 +2,6 @@ import {
   BasePropertyType,
   ItemQualityType,
   ItemSetType,
-  ItemType,
   MagicPropertyType,
 } from '../../../enums/index.js';
 import {normalizeItems} from '../../utils/normalize-items.js';
@@ -11,7 +10,6 @@ import ids from '../../ids/index.js';
 export default normalizeItems({
   quality: ItemQualityType.Set,
   set: ItemSetType.BulKathosChildren,
-  type: ItemType.Set,
 })([
   {
     id: ids.BulKathosSacredCharge,

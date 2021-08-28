@@ -1,15 +1,11 @@
-import {getItems} from '../api/get-items.js';
+import {getItems} from '../api/index.js';
 import {rollItem} from '../utils/roll-item.js';
 import Select from './ui/select.js';
 import ItemName from './item-name.js';
 
-const ItemSelect = ({
-  filters = [],
-  value = undefined,
-  onChange = undefined,
-}) => (
+const ItemSelect = ({value = undefined, onChange = undefined}) => (
   <Select
-    options={getOptions(filters)}
+    options={options}
     value={value}
     renderOption={renderOption}
     onChange={onChange}
@@ -26,6 +22,8 @@ const mapItemToOption = (item) => ({
   label: item.name,
 });
 
-const getOptions = (filters) => getItems().map(mapItemToOption);
+const getOptions = () => getItems().map(mapItemToOption);
+
+const options = getOptions();
 
 export default ItemSelect;

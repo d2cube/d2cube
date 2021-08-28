@@ -1,14 +1,12 @@
 import {Layout} from 'uinix-ui';
 
-import {cubeItems, inventoryItems} from '../mocks/index.js';
-import Cube from './cube.js';
-import Inventory from './inventory.js';
+const empty = <div />;
 
-const Interface = () => (
+const Interface = ({left = empty, right = empty}) => (
   <Layout direction="column" flex="auto" justify="center" spacing="l">
     <Layout justify="space-between" spacing="l">
-      <Cube items={cubeItems} />
-      <Inventory items={inventoryItems} />
+      {left}
+      {right}
     </Layout>
   </Layout>
 );

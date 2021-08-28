@@ -12,10 +12,9 @@ export const createItems = (items) =>
 const createItem = (items) => (initialItem) => {
   // Create baseItem and unset blacklisted properties
   const baseItem = items[initialItem.baseId] || {};
-  baseItem.imageId = undefined;
-  baseItem.variants = undefined;
+  const {imageId, variants, ...baseItemData} = baseItem;
 
-  const item = merge(baseItem)(initialItem);
+  const item = merge(baseItemData)(initialItem);
 
   switch (item.quality) {
     case ItemQualityType.Set:

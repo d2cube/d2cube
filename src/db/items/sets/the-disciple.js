@@ -2,7 +2,6 @@ import {
   BasePropertyType,
   ItemQualityType,
   ItemSetType,
-  ItemType,
   MagicPropertyType,
   SkillType,
 } from '../../../enums/index.js';
@@ -12,7 +11,6 @@ import ids from '../../ids/index.js';
 export default normalizeItems({
   quality: ItemQualityType.Set,
   set: ItemSetType.TheDisciple,
-  type: ItemType.Set,
 })([
   {
     id: ids.DarkAdherent,

@@ -1,7 +1,6 @@
 import {
   BasePropertyType,
   ItemQualityType,
-  ItemType,
   MagicPropertyType,
   SkillSetType,
   SkillType,
@@ -11,7 +10,6 @@ import ids from '../../ids/index.js';
 
 export default normalizeItems({
   quality: ItemQualityType.Unique,
-  type: ItemType.Unique,
 })([
   {
     id: ids.Doomslinger,

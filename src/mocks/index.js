@@ -36,42 +36,42 @@ export const inventoryItems = [
   },
   {
     id: 'ImmortalKingsWill',
-    equipped: EquipSlotType.Head,
+    equipSlot: EquipSlotType.Head,
     sockets: ['PerfectTopaz', 'Zod'],
   },
   {
     id: 'ImmortalKingsForge',
-    equipped: EquipSlotType.Hands,
+    equipSlot: EquipSlotType.Hands,
   },
   {
     id: 'ImmortalKingsPillar',
-    equipped: EquipSlotType.Feet,
+    equipSlot: EquipSlotType.Feet,
   },
   {
     id: 'Bolts',
-    equipped: EquipSlotType.OffHand,
+    equipSlot: EquipSlotType.OffHand,
   },
   {
     id: 'StringOfEars',
-    equipped: EquipSlotType.Waist,
+    equipSlot: EquipSlotType.Waist,
   },
   {
     id: 'BulKathosTribalGuardian',
-    equipped: EquipSlotType.AlternateMainHand,
+    equipSlot: EquipSlotType.AlternateMainHand,
   },
   {
     id: 'BulKathosSacredCharge',
-    equipped: EquipSlotType.AlternateOffHand,
+    equipSlot: EquipSlotType.AlternateOffHand,
   },
   {
     id: 'StoneOfJordan',
-    equipped: EquipSlotType.LeftFinger,
+    equipSlot: EquipSlotType.LeftFinger,
   },
   {
     id: 'Ring',
     position: [3, 8],
     quality: ItemQualityType.Magic,
-    equipped: EquipSlotType.RightFinger,
+    equipSlot: EquipSlotType.RightFinger,
   },
   {
     id: 'Ring',
@@ -80,7 +80,7 @@ export const inventoryItems = [
   },
   {
     id: 'Amulet',
-    equipped: EquipSlotType.Neck,
+    equipSlot: EquipSlotType.Neck,
     quality: ItemQualityType.Magic,
   },
   {
@@ -104,13 +104,13 @@ export const inventoryItems = [
   {
     id: 'ReflexBow',
     durability: 1,
-    equipped: EquipSlotType.MainHand,
+    equipSlot: EquipSlotType.MainHand,
     sockets: ['Pul', 'Lum', 'Ber', 'Mal'],
   },
   {
     id: 'DuskShroud',
     quality: 'normal',
-    equipped: EquipSlotType.Torso,
+    equipSlot: EquipSlotType.Torso,
     sockets: ['Jah', 'Ith', 'Ber'],
   },
   {

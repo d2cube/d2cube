@@ -1,14 +1,13 @@
 import {k, props} from 'uinix-fp';
 import {useTheme} from 'uinix-ui';
 
-import {resolveItemColor} from '../../utils/resolvers/resolve-item-color.js';
-
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const theme = useTheme();
 
 // TODO: uinix-ui to allow accessing theme values via property path
 const themedStyles = {
   bordered: props('bordered')(theme.borders),
+  borderWidth: props('border')(theme.borderWidths),
   diabloFont: props('diablo')(theme.fontFamilies),
   hover: props('hover')(theme.opacities),
   interfaceActive: props('interface.active')(theme.colors),
@@ -16,6 +15,9 @@ const themedStyles = {
   interfaceHover: props('interface.hover')(theme.colors),
   brandPrimaryColor: props('brand.primary')(theme.colors),
   textPrimaryColor: props('text.primary')(theme.colors),
+  textMutedColor: props('text.muted')(theme.colors),
+  defaultFontSize: props('m')(theme.fontSizes),
+  spacingSmall: props('s')(theme.spacings),
 };
 
 const IndicatorsContainer = k(null);
@@ -25,38 +27,76 @@ export const components = {
 };
 
 export const styles = {
-  control: (provided) => ({
-    ...provided,
+  container: () => ({
+    width: '100%',
+  }),
+  control: () => ({
     backgroundColor: themedStyles.interfaceBackground,
     border: themedStyles.bordered,
     fontFamily: themedStyles.diabloFont,
+    padding: themedStyles.spacingSmall,
+    '> div': {
+      padding: 0,
+    },
     ':hover': {
       border: themedStyles.bordered,
     },
   }),
-  input: (provided) => ({
-    ...provided,
+  groupHeading: () => ({
+    borderBottom: themedStyles.bordered,
+    borderTop: themedStyles.bordered,
+    fontFamily: themedStyles.diabloFont,
+    fontSize: themedStyles.largeFontSize,
+    padding: themedStyles.spacingSmall,
+    marginTop: `calc(-${themedStyles.spacingSmall} - ${themedStyles.borderWidth})`,
+  }),
+  input: () => ({
     color: themedStyles.textPrimaryColor,
   }),
-  menu: (provided) => ({
-    ...provided,
+  menu: () => ({
     backgroundColor: themedStyles.interfaceBackground,
-  }),
-  option: (provided, state) => ({
-    ...provided,
-    backgroundColor: state.isFocused
-      ? themedStyles.interfaceActive
-      : themedStyles.interfaceBackground,
-    fontFamily: themedStyles.diabloFont,
-    ':hover': {
-      backgroundColor: themedStyles.interfaceHover,
+    border: themedStyles.bordered,
+    marginTop: themedStyles.spacingSmall,
+    '> div': {
+      padding: 0,
     },
   }),
-  singleValue: (provided, state) => {
-    const {item} = state.getValue()[0];
-    return {
-      ...provided,
-      color: props(resolveItemColor(item))(theme.colors),
-    };
-  },
+  noOptionsMessage: () => ({
+    fontFamily: themedStyles.diabloFont,
+    color: themedStyles.textMutedColor,
+    padding: themedStyles.spacingSmall,
+  }),
+  option: (_, state) => ({
+    backgroundColor: getOptionBackgroundColor(
+      state,
+      themedStyles.interfaceBackground,
+    ),
+    fontFamily: themedStyles.diabloFont,
+    padding: themedStyles.spacingSmall,
+    ':hover': {
+      backgroundColor: getOptionBackgroundColor(
+        state,
+        themedStyles.interfaceHover,
+      ),
+    },
+  }),
+  placeholder: () => ({
+    color: themedStyles.textMutedColor,
+    position: 'absolute',
+  }),
+  singleValue: () => ({
+    color: themedStyles.textPrimaryColor,
+  }),
+};
+
+const getOptionBackgroundColor = (state, defaultBackgroundColor) => {
+  if (state.isSelected) {
+    return themedStyles.interfaceActive;
+  }
+
+  if (state.isFocused) {
+    return themedStyles.interfaceHover;
+  }
+
+  return defaultBackgroundColor;
 };

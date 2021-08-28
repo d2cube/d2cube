@@ -1,7 +1,6 @@
 import {
   BasePropertyType,
   ItemQualityType,
-  ItemType,
   MagicPropertyType,
   PlayerClassType,
   SkillSetType,
@@ -12,7 +11,6 @@ import ids from '../../ids/index.js';
 
 export default normalizeItems({
   quality: ItemQualityType.Unique,
-  type: ItemType.Unique,
 })([
   {
     id: ids.TorchOfIro,

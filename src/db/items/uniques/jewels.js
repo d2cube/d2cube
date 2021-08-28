@@ -1,7 +1,6 @@
 import {
   BasePropertyType,
   ItemQualityType,
-  ItemType,
   MagicPropertyType,
   SkillType,
 } from '../../../enums/index.js';
@@ -18,7 +17,6 @@ export default normalizeItems({
       [BasePropertyType.RequiredLevel]: 49,
     },
   },
-  type: ItemType.Unique,
 })([
   {
     id: ids.RainbowFacetLevelCold,

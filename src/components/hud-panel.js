@@ -9,12 +9,11 @@ const HudPanel = ({player}) => (
     <Experience experience={player.experience} />
     <Layout align="center" spacing="xs">
       <Grid size={[1, 4]}>
-        <BrandIcon icon="nav.cube" href="/cube" tooltip="Cube" />
         <BrandIcon icon="nav.items" href="/items" tooltip="Items" />
         <BrandIcon icon="nav.sets" href="/sets" tooltip="Sets" />
         <BrandIcon icon="nav.runewords" href="/runewords" tooltip="Runewords" />
       </Grid>
-      <BrandIcon icon="nav.home" href="/" size="icon.l" tooltip="Home" />
+      <BrandIcon icon="cube" href="/" size="icon.l" tooltip="Home" />
       <Grid size={[1, 4]}>
         <BrandIcon
           icon="nav.developers"

@@ -1,5 +1,6 @@
-import {Layout, Text, useStyles} from 'uinix-ui';
+import {Layout, useStyles} from 'uinix-ui';
 
+import BrandLogo from './brand-logo.js';
 import Button from './button.js';
 
 const Splash = ({onEnter}) => {
@@ -10,12 +11,10 @@ const Splash = ({onEnter}) => {
       <Layout
         align="center"
         direction="column"
-        spacing="m"
+        spacing="l"
         styles={styles.fadeIn}
       >
-        <Text as="h1" pt="70%" variant="diablo">
-          D2Cube
-        </Text>
+        <BrandLogo />
         <Button text="Enter" onClick={onEnter} />
       </Layout>
     </Layout>

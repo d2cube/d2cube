@@ -1,19 +1,18 @@
-import {Layout, Text} from 'uinix-ui';
+import {Layout} from 'uinix-ui';
 
 import Help from './help.js';
 
-const Frame = ({children, help, title}) => (
+const Frame = ({children, flex = 'none', help, title}) => (
   <Layout
     as="section"
     align="center"
     direction="column"
+    flex={flex}
     spacing="l"
     variant="frame"
   >
     <Layout align="center" spacing="m">
-      <Text as="h2" variant="diablo">
-        {title}
-      </Text>
+      <h3>{title}</h3>
       <Help text={help} />
     </Layout>
     {children}

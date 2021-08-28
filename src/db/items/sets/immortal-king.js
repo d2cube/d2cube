@@ -2,7 +2,6 @@ import {
   BasePropertyType,
   ItemQualityType,
   ItemSetType,
-  ItemType,
   MagicPropertyType,
   SkillSetType,
   SkillType,
@@ -13,7 +12,6 @@ import ids from '../../ids/index.js';
 export default normalizeItems({
   quality: ItemQualityType.Set,
   set: ItemSetType.ImmortalKing,
-  type: ItemType.Set,
 })([
   {
     id: ids.ImmortalKingsStoneCrusher,
