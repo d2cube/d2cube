@@ -62,7 +62,7 @@ const fontSizes = {
   m: '1rem',
   l: '1.25rem',
   xl: '1.5rem',
-  xxl: '2rem',
+  xxl: '2.5rem',
 };
 
 const keyframes = {
@@ -106,7 +106,9 @@ const sizes = {
     height: 8,
   },
   frame: {
-    height: slotSize * 14,
+    height: {
+      inventory: slotSize * 14 + 20,
+    },
     width: {
       s: 400,
       m: 600,
@@ -115,7 +117,7 @@ const sizes = {
   },
   globe: 120,
   paragraph: {
-    width: 400,
+    width: 600,
   },
   pre: {
     height: 300,

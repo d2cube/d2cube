@@ -61,4 +61,19 @@ export default {
     borderTop: 'bordered',
     width: '100%',
   },
+  input: {
+    backgroundColor: 'interface.background',
+    border: 'bordered',
+    color: 'text.primary',
+    fontFamily: 'body',
+    fontSize: 'm',
+    outline: 'none',
+    padding: 's',
+    width: '100%',
+  },
+  'input::placeholder': {
+    color: 'text.muted',
+    opacity: 1,
+    fontFamily: 'diablo',
+  },
 };

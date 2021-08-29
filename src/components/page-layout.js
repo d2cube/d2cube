@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import {Layout, Text, useStyles} from 'uinix-ui';
+import {Layout, useStyles} from 'uinix-ui';
 
 import Hud from './hud.js';
-import BrandLogo from './ui/brand-logo.js';
 import Splash from './ui/splash.js';
 import ScrollTop from './ui/scroll-top.js';
 
@@ -34,30 +33,17 @@ const PageLayout = ({children, title}) => {
               align="center"
               as="header"
               justify="center"
-              pt="l"
               spacing="m"
               variant="header"
-            >
-              <BrandLogo />
-              {title && (
-                <>
-                  <Text fontSize="xl" variant="diablo">
-                    /
-                  </Text>
-                  <h2>{title}</h2>
-                </>
-              )}
-              <Layout position="absolute" right="l">
-                <ScrollTop />
-              </Layout>
-            </Layout>
+            />
             {children}
           </Layout>
-          <Hud />
+          <Hud title={title} />
         </>
       ) : (
         <Splash onEnter={handleEnter} />
       )}
+      <ScrollTop />
     </Layout>
   );
 };

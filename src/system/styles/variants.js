@@ -6,11 +6,20 @@ const absolute = {
   top: 0,
 };
 
+const button = {
+  s: {
+    fontSize: 's',
+    paddingLeft: 'm',
+    paddingRight: 'm',
+  },
+  m: {}, // Uses default global button styles
+};
+
 const frame = {
   backgroundImage: 'url(images/ui/stone.jpg)',
   borderStyle: 'solid',
   borderWidth: 'frame',
-  borderImage: 'url(images/ui/frame.png) 140 repeat',
+  borderImage: 'url(images/ui/frame.png) 100 repeat',
 };
 
 const socket = {
@@ -58,6 +67,7 @@ const header = {
 
 export default {
   absolute,
+  button,
   footer,
   frame,
   header,

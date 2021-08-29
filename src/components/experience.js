@@ -12,11 +12,7 @@ const Experience = ({experience}) => {
 
   return (
     <Tooltip placement="top" tooltip={tooltip}>
-      <Element
-        position="relative"
-        styleProps={{display: 'flex'}}
-        styles={styles.responsiveHide}
-      >
+      <Layout alignSelf="stretch" position="relative">
         <Element
           styleProps={{
             color: 'player.xp',
@@ -28,7 +24,7 @@ const Experience = ({experience}) => {
         {fill(10)((i) => (
           <Layout key={i} b="bordered" flex="auto" h="bar.height" z="forward" />
         ))}
-      </Element>
+      </Layout>
     </Tooltip>
   );
 };

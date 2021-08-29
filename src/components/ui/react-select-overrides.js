@@ -9,6 +9,7 @@ const themedStyles = {
   bordered: props('bordered')(theme.borders),
   borderWidth: props('border')(theme.borderWidths),
   diabloFont: props('diablo')(theme.fontFamilies),
+  bodyFont: props('body')(theme.fontFamilies),
   hover: props('hover')(theme.opacities),
   interfaceActive: props('interface.active')(theme.colors),
   interfaceBackground: props('interface.background')(theme.colors),
@@ -52,6 +53,7 @@ export const styles = {
   }),
   input: () => ({
     color: themedStyles.textPrimaryColor,
+    fontFamily: themedStyles.bodyFont,
   }),
   menu: () => ({
     backgroundColor: themedStyles.interfaceBackground,

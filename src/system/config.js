@@ -36,7 +36,11 @@ const elementShorthandPropsMapping = {
   zIndex: ['z'],
 };
 
-const elementStyles = [({onClick}) => (onClick ? styles.interactive : null)];
+const elementStyles = [
+  ({onClick}) => (onClick ? styles.interactive : null),
+  ({disabled}) =>
+    disabled ? {opacity: 'inactive', pointerEvents: 'none'} : null,
+];
 
 export default {
   elementShorthandPropsMapping,

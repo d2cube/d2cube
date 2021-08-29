@@ -18,7 +18,7 @@ const Tooltip = ({children, isReadable = false, placement, tooltip}) => {
   }, []);
 
   if (!tooltip) {
-    return null;
+    return children;
   }
 
   return (

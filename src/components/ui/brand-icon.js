@@ -4,7 +4,13 @@ import {Layout, Icon, useStyles} from 'uinix-ui';
 
 import Tooltip from './tooltip.js';
 
-const BrandIcon = ({icon, size = 'icon.m', href = null, tooltip, ...rest}) => {
+const BrandIcon = ({
+  icon,
+  size = 'icon.m',
+  href = null,
+  tooltip = null,
+  ...rest
+}) => {
   const styles = useStyles();
   const as = rest.href ? 'a' : 'div';
 

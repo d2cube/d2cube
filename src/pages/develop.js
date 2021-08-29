@@ -9,16 +9,17 @@ import {UrlType} from '../enums/index.js';
 
 const Page = () => {
   const left = (
-    <Frame size="l" title="API">
+    <Frame title="API">
       <Layout direction="column" overflow="auto">
         <p>
           D2Cube provides a public API accessible via <a href="/api">/api</a>.
+          You can test the API methods below!
         </p>
         <p>An upcoming NodeJS API will be supported in the near future.</p>
         <p>
           Please refer to{' '}
           <a href={UrlType.DocsApi}>the official documentation</a> for more
-          details.
+          details and report any issues <a href={UrlType.GithubIssues}>here</a>.
         </p>
         <ul>
           {methods.map(({name}) => (
@@ -29,7 +30,6 @@ const Page = () => {
             </li>
           ))}
         </ul>
-        <hr />
         <ApiMethods methods={methods} />
       </Layout>
     </Frame>

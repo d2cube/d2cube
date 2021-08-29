@@ -9,7 +9,7 @@ const Page = () => {
   const right = <Inventory items={inventoryItems} />;
 
   return (
-    <PageLayout title={null}>
+    <PageLayout title="Cube">
       <Interface left={left} right={right} />
     </PageLayout>
   );

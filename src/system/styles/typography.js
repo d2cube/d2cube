@@ -52,6 +52,8 @@ const global = {
     textDecoration: 'underline',
   },
   p: {
+    margin: 0,
+    marginBottom: 'l',
     maxWidth: 'paragraph.width',
   },
   ul: {

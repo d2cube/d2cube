@@ -1,10 +1,11 @@
 import {useState} from 'react';
-import {Layout, Text} from 'uinix-ui';
+import {Element, Layout, Text} from 'uinix-ui';
 
 import * as api from '../api/index.js';
-import Input from '../components/ui/input.js';
-import Labelled from '../components/ui/labelled.js';
 import {isEmpty} from '../utils/fp.js';
+import Copyable from './ui/copyable.js';
+import Input from './ui/input.js';
+import Labelled from './ui/labelled.js';
 
 const ApiMethod = ({method}) => {
   const {
@@ -24,14 +25,21 @@ const ApiMethod = ({method}) => {
   try {
     const apiMethod = api[name];
     response = apiMethod(parameter);
+    if (isEmpty(response)) {
+      error = '404: Not Found';
+    }
   } catch {
-    error = 'Invalid request';
+    error = '404: Not Found';
   }
 
   const url = '/api' + path + (parameter ? '/' + parameter : '');
 
+  const jsonResponse = json(response);
+  console.log(jsonResponse);
+
   return (
     <Layout direction="column" spacing="l">
+      <Element as="hr" py="l" />
       <h4 id={name}>
         <Text as="code" fontSize="l">
           {name}
@@ -42,23 +50,20 @@ const ApiMethod = ({method}) => {
         <Input
           disabled={isParametersDisabled}
           placeholder={
-            isParametersDisabled ? 'No parameter' : 'Provide a valid value'
+            isParametersDisabled ? 'No parameters' : 'Provide a valid value'
           }
           value={parameter}
           onChange={setParameter}
         />
       </Labelled>
-      <Labelled
-        label={
-          <Layout spacing="m">
-            <div>URL</div>
-            <a href={url}>(Link)</a>
-          </Layout>
-        }
-      >
-        <pre>
-          {httpMethod} {url}
-        </pre>
+      <Labelled label="URL">
+        <Copyable label="curl" text={`curl https://d2cu.be${url}`}>
+          <pre>
+            <a href={url}>
+              {httpMethod} {url}
+            </a>
+          </pre>
+        </Copyable>
       </Labelled>
       <Labelled label="Response">
         {error ? (
@@ -66,15 +71,15 @@ const ApiMethod = ({method}) => {
             {error}
           </Text>
         ) : (
-          json(response)
+          <Copyable text={jsonResponse}>
+            <pre>{jsonResponse}</pre>
+          </Copyable>
         )}
       </Labelled>
-      <hr />
     </Layout>
   );
 };
 
-const json = (x) =>
-  isEmpty(x) ? <pre>None</pre> : <pre>{JSON.stringify(x, null, 2)}</pre>;
+const json = (x) => (isEmpty(x) ? null : JSON.stringify(x, null, 2));
 
 export default ApiMethod;

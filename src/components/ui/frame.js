@@ -13,7 +13,7 @@ const Frame = ({
   <Layout
     as="section"
     direction="column"
-    h={isFixedHeight ? 'frame.height' : undefined}
+    h={isFixedHeight ? 'frame.height.inventory' : undefined}
     spacing="l"
     variant="frame"
     w={`frame.width.${size}`}
