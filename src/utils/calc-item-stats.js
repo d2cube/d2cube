@@ -1,5 +1,5 @@
 import {isPlainObject, props} from 'uinix-fp';
-import {getItemById} from '../api/index.js';
+import {getItem} from '../api/index.js';
 import {MagicPropertyType} from '../enums/magic-property-type.js';
 import {WeaponClassType} from '../enums/weapon-class-type.js';
 
@@ -42,7 +42,7 @@ export const calcItemStats = (item) => {
     }
 
     item.sockets.forEach((socket) => {
-      const socketItem = getItemById(socket);
+      const socketItem = getItem(socket);
       const socketProperties =
         props(`properties.socket.${socketCategory}`)(socketItem) || {};
       Object.entries(socketProperties).forEach(pushEntry(stats));

@@ -8,7 +8,7 @@ const Hud = () => {
   const {life, mana} = player;
 
   return (
-    <Element as="footer" variant="sticky.bottom">
+    <Element as="footer" variant="footer">
       <Layout align="center" mx="auto" w="min-content">
         <Globe type="life" max={life.max} value={life.value} />
         <HudPanel player={player} />

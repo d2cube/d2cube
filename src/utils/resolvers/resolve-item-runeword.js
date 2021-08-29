@@ -1,11 +1,11 @@
-import {getRunewordById} from '../../api/index.js';
+import {getRuneword} from '../../api/index.js';
 import {ItemQualityType} from '../../enums/index.js';
 
 export const resolveItemRuneword =
   (runes = []) =>
   (item) => {
     if (testIsValidRunewordQuality(item)) {
-      const runeword = getRunewordById(runes);
+      const runeword = getRuneword(runes);
       if (
         runeword &&
         runeword.runes.length === item.sockets.length &&

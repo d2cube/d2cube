@@ -15,6 +15,8 @@ const Select = ({
   onChange,
 }) => (
   <ReactSelect
+    isClearable
+    isSearchable
     components={{
       ...components,
       Option: createOptionComponent(renderOption),

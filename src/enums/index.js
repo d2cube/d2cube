@@ -1,3 +1,4 @@
+export {ApiMethodType} from './api-method-type.js';
 export {ArmorClassType} from './armor-class-type.js';
 export {BasePropertyType} from './base-property-type.js';
 export {ContainerType} from './container-type.js';
@@ -23,4 +24,5 @@ export {SocketCategoryType} from './socket-category-type.js';
 export {SkillSetType} from './skill-set-type.js';
 export {SkillType} from './skill-type.js';
 export {SuffixType} from './suffix-type.js';
+export {UrlType} from './url-type.js';
 export {WeaponClassType} from './weapon-class-type.js';

@@ -7,6 +7,7 @@ import {help} from './help.js';
 import {info} from './info.js';
 import {layers} from './layers.js';
 import {pause} from './pause.js';
+import {paypal} from './paypal.js';
 import {play} from './play.js';
 import {runewords} from './runewords.js';
 import {transmute} from './transmute.js';
@@ -17,6 +18,7 @@ export default {
   help,
   info,
   pause,
+  paypal,
   play,
   nav: {
     about: info,

@@ -11,10 +11,8 @@ const ScrollTop = () => {
   return (
     <BrandIcon
       icon="up"
-      position="fixed"
-      right="m"
+      size="icon.l"
       tooltip="Back to top"
-      top="m"
       onClick={scrollTop}
     />
   );

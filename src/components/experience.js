@@ -26,7 +26,7 @@ const Experience = ({experience}) => {
           variant="absolute"
         />
         {fill(10)((i) => (
-          <Layout key={i} b="bordered" flex="auto" h="bar" z="forward" />
+          <Layout key={i} b="bordered" flex="auto" h="bar.height" z="forward" />
         ))}
       </Element>
     </Tooltip>

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Layout, Text, useStyles} from 'uinix-ui';
 
 import Hud from './hud.js';
-import Backdrop from './ui/backdrop.js';
 import BrandLogo from './ui/brand-logo.js';
 import Splash from './ui/splash.js';
 import ScrollTop from './ui/scroll-top.js';
@@ -20,29 +19,38 @@ const PageLayout = ({children, title}) => {
 
   return (
     <Layout direction="column" minH="100vh" spacing="l">
-      <ScrollTop />
-      <Backdrop />
       {entered ? (
         <>
           <Layout
             as="main"
+            align="center"
             direction="column"
             flex="auto"
-            p="l"
-            spacing="l"
+            spacing="xl"
             styles={styles.fadeIn}
+            variant="container"
           >
-            {title ? (
-              <Layout align="baseline" spacing="s">
-                <BrandLogo />
-                <Text fontSize="xl" variant="diablo">
-                  /
-                </Text>
-                <h2>{title}</h2>
-              </Layout>
-            ) : (
+            <Layout
+              align="center"
+              as="header"
+              justify="center"
+              pt="l"
+              spacing="m"
+              variant="header"
+            >
               <BrandLogo />
-            )}
+              {title && (
+                <>
+                  <Text fontSize="xl" variant="diablo">
+                    /
+                  </Text>
+                  <h2>{title}</h2>
+                </>
+              )}
+              <Layout position="absolute" right="l">
+                <ScrollTop />
+              </Layout>
+            </Layout>
             {children}
           </Layout>
           <Hud />

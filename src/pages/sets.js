@@ -1,12 +1,12 @@
 import {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
-import Interface from '../components/interface.js';
 import Inventory from '../components/inventory.js';
 import PageLayout from '../components/page-layout.js';
 import SetPreview from '../components/set-preview.js';
 import SetSelect from '../components/set-select.js';
 import Frame from '../components/ui/frame.js';
+import Interface from '../components/ui/interface.js';
 import {getValidEquipSlot} from '../utils/get-valid-equip-slot.js';
 import {rollItem} from '../utils/roll-item.js';
 
@@ -16,11 +16,12 @@ const Page = () => {
 
   const left = (
     <Frame
-      flex="auto"
+      isFixedHeight
       help="Search and select a Set to preview it in the inventory."
+      size="m"
       title="Select Set"
     >
-      <Layout alignSelf="stretch" spacing="l">
+      <Layout minH="0" spacing="l">
         <Layout flex="1">
           <SetSelect
             value={selectedSetOption}
@@ -28,7 +29,7 @@ const Page = () => {
           />
         </Layout>
         {set && (
-          <Layout flex="1">
+          <Layout flex="1" overflow="auto">
             <SetPreview set={set} />
           </Layout>
         )}
@@ -40,9 +41,7 @@ const Page = () => {
 
   return (
     <PageLayout title="Sets">
-      <Layout>
-        <Interface left={left} right={right} />
-      </Layout>
+      <Interface left={left} right={right} />
     </PageLayout>
   );
 };

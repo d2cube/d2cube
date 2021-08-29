@@ -7,7 +7,7 @@ const vendor = {
   '.tippy-content': {
     color: 'text.primary',
     fontFamily: 'diablo',
-    fontSize: 'm',
+    fontSize: 's',
     padding: 's',
     textAlign: 'center',
     whiteSpace: 'pre-wrap',
@@ -20,6 +20,12 @@ export default {
     boxSizing: 'border-box',
   },
   body: {
+    background: 'center center',
+    backgroundImage: 'url(images/ui/background.png)',
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'auto 100%',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
     backgroundColor: 'interface.background',
     color: 'text.primary',
     cursor,
@@ -49,5 +55,10 @@ export default {
     paddingLeft: 'xl',
     paddingRight: 'xl',
     paddingTop: 's',
+  },
+  hr: {
+    border: 'none',
+    borderTop: 'bordered',
+    width: '100%',
   },
 };

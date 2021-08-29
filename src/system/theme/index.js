@@ -18,14 +18,16 @@ const colors = {
   interface: {
     background: '#010101',
     border: '#3D322A',
-    hover: 'rgb(199, 179, 119, 0.2)',
-    active: 'rgb(199, 179, 119, 0.4)',
+    error: '#a51313',
+    fade: 'rgba(0, 0, 0, 0.7)',
+    hover: 'rgba(199, 179, 119, 0.2)',
+    active: 'rgba(199, 179, 119, 0.4)',
     grid: '#131015',
     tooltip: 'rgba(0, 0, 0, 0.9)',
   },
   item: {
-    hover: 'rgba(24,100,8,.25)',
-    invalid: 'rgba(144,0,0,.25)',
+    hover: 'rgba(24, 100, 8, 0.25)',
+    invalid: 'rgba(144, 0, 0, 0.25)',
     socketed: '#484848',
     crafted: '#FFA800',
     magic: '#057AF0',
@@ -51,16 +53,16 @@ const colors = {
 
 const fontFamilies = {
   body: 'AlegreyaSansRegular',
+  code: 'Courier New',
   diablo: 'Exocet',
 };
 
 const fontSizes = {
-  xs: '0.70rem',
   s: '0.85rem',
   m: '1rem',
   l: '1.25rem',
-  xl: '2rem',
-  xxl: '3rem',
+  xl: '1.5rem',
+  xxl: '2rem',
 };
 
 const keyframes = {
@@ -78,6 +80,10 @@ const keyframes = {
   },
 };
 
+const lineHeights = {
+  body: '1.5',
+};
+
 const opacities = {
   inactive: '0.3',
   ethereal: '0.7',
@@ -90,30 +96,48 @@ const radii = {
   round: '100%',
 };
 
+const shadows = {
+  footer: '0px -30px 30px black',
+  header: '0px 30px 30px black',
+};
+
 const sizes = {
-  bar: 12,
-  frame: {
-    maxWidth: 800,
-    minWidth: 400,
+  bar: {
+    height: 8,
   },
-  globe: 160,
+  frame: {
+    height: slotSize * 14,
+    width: {
+      s: 400,
+      m: 600,
+      l: 800,
+    },
+  },
+  globe: 120,
+  paragraph: {
+    width: 400,
+  },
+  pre: {
+    height: 300,
+  },
   icon: {
     s: 16,
     m: 24,
-    l: 60,
+    l: 32,
+    xl: 48,
   },
   slot: slotSize,
   socket: slotSize * 0.8,
 };
 
 const spacings = {
-  xxs: '2px',
-  xs: '4px',
-  s: '8px',
-  m: '16px',
-  l: '32px',
-  xl: '64px',
-  xxl: '128px',
+  xxs: '1px',
+  xs: '2px',
+  s: '4px',
+  m: '8',
+  l: '16',
+  xl: '32',
+  xxl: '64',
 };
 
 const transitions = {
@@ -138,8 +162,10 @@ export default {
   fontFamilies,
   fontSizes,
   keyframes,
+  lineHeights,
   opacities,
   radii,
+  shadows,
   sizes,
   spacings,
   transitions,

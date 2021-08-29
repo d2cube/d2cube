@@ -7,7 +7,7 @@ const BrandLogo = () => (
   <Link href="/">
     <Layout align="center">
       <Text as="h1">D2</Text>
-      <BrandIcon icon="cube" size="icon.l" tooltip="d2cube" />
+      <BrandIcon icon="cube" size="icon.l" tooltip="D2Cube" />
     </Layout>
   </Link>
 );

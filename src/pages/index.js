@@ -1,7 +1,7 @@
 import Cube from '../components/cube.js';
-import Interface from '../components/interface.js';
 import Inventory from '../components/inventory.js';
 import PageLayout from '../components/page-layout.js';
+import Interface from '../components/ui/interface.js';
 import {cubeItems, inventoryItems} from '../mocks/index.js';
 
 const Page = () => {

@@ -13,10 +13,24 @@ const fontFaces = {
   },
 };
 
+const code = {
+  color: 'brand.primary',
+  backgroundColor: 'interface.background',
+  fontFamily: 'code',
+  fontSize: 's',
+  padding: 's',
+};
+
 const global = {
+  a: {
+    color: 'brand.primary',
+  },
   body: {
     fontFamily: 'body',
+    fontSize: 'm',
+    lineHeight: 'body',
   },
+  code,
   h1: {
     ...diablo,
     fontSize: 'xxl',
@@ -37,10 +51,25 @@ const global = {
     backgroundColor: 'brand.primary',
     textDecoration: 'underline',
   },
+  p: {
+    maxWidth: 'paragraph.width',
+  },
+  ul: {
+    paddingLeft: 'l',
+  },
+  pre: {
+    ...code,
+    margin: 0,
+    maxHeight: 'pre.height',
+    overflow: 'auto',
+  },
 };
 
 const variants = {
   diablo,
+  error: {
+    color: 'interface.error',
+  },
 };
 
 export default {

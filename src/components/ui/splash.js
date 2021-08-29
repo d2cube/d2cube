@@ -7,10 +7,11 @@ const Splash = ({onEnter}) => {
   const styles = useStyles();
 
   return (
-    <Layout align="center" justify="center" variant="splash">
+    <Layout align="flex-end" justify="center" variant="splash">
       <Layout
         align="center"
         direction="column"
+        pb="xxl"
         spacing="l"
         styles={styles.fadeIn}
       >

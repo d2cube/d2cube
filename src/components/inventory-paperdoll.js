@@ -15,8 +15,8 @@ const InventoryPaperdoll = ({items}) => {
   const swapToggle = <Swap selectedState={swapState} onSwap={setSwapState} />;
 
   return (
-    <Layout align="flex-end" spacing="s">
-      <Layout direction="column" spacing="s">
+    <Layout align="flex-end" spacing="m">
+      <Layout direction="column" spacing="m">
         <Layout direction="column">
           {swapToggle}
           <InventoryEquipSlot
@@ -39,7 +39,7 @@ const InventoryPaperdoll = ({items}) => {
         slot={EquipSlotType.RightFinger}
         item={items[EquipSlotType.RightFinger]}
       />
-      <Layout direction="column" spacing="s">
+      <Layout direction="column" spacing="m">
         <InventoryEquipSlot
           slot={EquipSlotType.Head}
           item={items[EquipSlotType.Head]}
@@ -53,7 +53,7 @@ const InventoryPaperdoll = ({items}) => {
           item={items[EquipSlotType.Waist]}
         />
       </Layout>
-      <Layout direction="column" h="100%" justify="space-between" spacing="s">
+      <Layout direction="column" h="100%" justify="space-between" spacing="m">
         <div />
         <InventoryEquipSlot
           slot={EquipSlotType.Neck}
@@ -64,7 +64,7 @@ const InventoryPaperdoll = ({items}) => {
           item={items[EquipSlotType.LeftFinger]}
         />
       </Layout>
-      <Layout direction="column" spacing="s">
+      <Layout direction="column" spacing="m">
         <Layout direction="column">
           {swapToggle}
           <InventoryEquipSlot

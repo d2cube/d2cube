@@ -11,18 +11,6 @@ const frame = {
   borderStyle: 'solid',
   borderWidth: 'frame',
   borderImage: 'url(images/ui/frame.png) 140 repeat',
-  maxWidth: 'frame.maxWidth',
-  minWidth: 'frame.minWidth',
-};
-
-const fullscreen = {
-  bottom: 0,
-  height: '100%',
-  left: 0,
-  position: 'fixed',
-  right: 0,
-  top: 0,
-  width: '100%',
 };
 
 const socket = {
@@ -33,26 +21,46 @@ const socket = {
 };
 
 const splash = {
-  backgroundImage: 'linear-gradient(rgba(0,0,0,0), black, black)',
+  backgroundColor: 'interface.fade',
   bottom: 0,
   left: 0,
-  padding: 'xl',
+  padding: 'xxl',
   position: 'fixed',
   right: 0,
   top: 0,
 };
 
 const sticky = {
+  top: {
+    position: 'sticky',
+    top: 0,
+    zIndex: 'forward',
+  },
   bottom: {
     bottom: 0,
     position: 'sticky',
+    zIndex: 'forward',
   },
+};
+
+const footer = {
+  ...sticky.bottom,
+  backgroundColor: 'interface.background',
+  boxShadow: 'footer',
+};
+
+const header = {
+  ...sticky.top,
+  backgroundColor: 'interface.background',
+  boxShadow: 'header',
+  width: '100%',
 };
 
 export default {
   absolute,
-  fullscreen,
+  footer,
   frame,
+  header,
   socket,
   splash,
   sticky,

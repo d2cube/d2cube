@@ -9,6 +9,7 @@ const elementShorthandPropsMapping = {
   color: ['color'],
   display: ['display'],
   opacity: ['opacity'],
+  overflow: ['overflow'],
   // Margin
   margin: ['m'],
   marginBottom: ['mb', 'my', 'm'],
@@ -29,6 +30,7 @@ const elementShorthandPropsMapping = {
   top: ['top'],
   // Dimension
   height: ['h'],
+  maxHeight: ['maxH'],
   minHeight: ['minH'],
   width: ['w'],
   zIndex: ['z'],

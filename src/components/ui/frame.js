@@ -2,16 +2,23 @@ import {Layout} from 'uinix-ui';
 
 import Help from './help.js';
 
-const Frame = ({children, flex = 'none', help, title}) => (
+const Frame = ({
+  alignTitle = undefined,
+  children,
+  help = undefined,
+  isFixedHeight = false,
+  size = undefined,
+  title,
+}) => (
   <Layout
     as="section"
-    align="center"
     direction="column"
-    flex={flex}
+    h={isFixedHeight ? 'frame.height' : undefined}
     spacing="l"
     variant="frame"
+    w={`frame.width.${size}`}
   >
-    <Layout align="center" spacing="m">
+    <Layout align="center" alignSelf={alignTitle} spacing="m">
       <h3>{title}</h3>
       <Help text={help} />
     </Layout>

@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
-import {getItemsByType} from '../api/index.js';
 import Item from '../components/item.js';
 import ItemName from '../components/item-name.js';
 import ItemSelect from '../components/item-select.js';
 import PageLayout from '../components/page-layout.js';
 import {ItemType} from '../enums/index.js';
 import {rollItem} from '../utils/roll-item.js';
+import {getItems} from '../api/index.js';
 
 const Page = () => {
   const [selectedItemType, setSelectedItemType] = useState(ItemType.Rune);
@@ -39,5 +39,8 @@ const Page = () => {
     </PageLayout>
   );
 };
+
+const getItemsByType = (type) =>
+  getItems().filter((item) => item.type === type);
 
 export default Page;

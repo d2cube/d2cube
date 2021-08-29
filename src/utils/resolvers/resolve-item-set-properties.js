@@ -1,5 +1,5 @@
 import {props} from 'uinix-fp';
-import {getSetById} from '../../api/index.js';
+import {getSet} from '../../api/index.js';
 
 import {prepend} from '../fp.js';
 import {resolveItemProperty} from './resolve-item-property.js';
@@ -13,7 +13,7 @@ export const resolveItemSetProperties = (item) => {
     return [];
   }
 
-  const set = getSetById(item.set);
+  const set = getSet(item.set);
   let resolved = [];
 
   [...setProperties].reverse().forEach((setProperty, i) => {
