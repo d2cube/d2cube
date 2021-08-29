@@ -20,7 +20,7 @@ export default {
   play,
   nav: {
     about: info,
-    developers: code,
+    develop: code,
     github,
     items: database,
     runewords,

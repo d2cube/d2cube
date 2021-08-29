@@ -15,11 +15,7 @@ const HudPanel = ({player}) => (
       </Grid>
       <BrandIcon icon="cube" href="/" size="icon.l" tooltip="Home" />
       <Grid size={[1, 4]}>
-        <BrandIcon
-          icon="nav.developers"
-          href="/developers"
-          tooltip="Developers"
-        />
+        <BrandIcon icon="nav.develop" href="/develop" tooltip="Develop" />
         <BrandIcon icon="nav.about" href="/about" tooltip="About" />
         <BrandIcon icon="nav.support" href="/support" tooltip="Support" />
         <BrandIcon
