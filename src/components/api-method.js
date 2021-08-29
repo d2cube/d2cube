@@ -28,7 +28,7 @@ const ApiMethod = ({method}) => {
     error = 'Invalid request';
   }
 
-  const url = '/api' + path + (parameter || '');
+  const url = '/api' + path + (parameter ? '/' + parameter : '');
 
   return (
     <Layout direction="column" spacing="l">
