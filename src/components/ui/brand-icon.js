@@ -7,12 +7,11 @@ import Tooltip from './tooltip.js';
 const BrandIcon = ({
   icon,
   size = 'icon.m',
-  href = null,
+  href = '',
   tooltip = null,
   ...rest
 }) => {
   const styles = useStyles();
-  const as = rest.href ? 'a' : 'div';
 
   const iconElement = (
     <Icon
@@ -23,10 +22,24 @@ const BrandIcon = ({
     />
   );
 
+  let LinkElement;
+  let linkProps;
+  if (href.startsWith('http')) {
+    LinkElement = 'a';
+    linkProps = {href, rel: 'noreferrer', target: '_blank'};
+  } else {
+    LinkElement = Link;
+    linkProps = {href};
+  }
+
   return (
     <Tooltip isReadable placement="top" tooltip={tooltip}>
-      <Layout {...rest} as={as} align="center" justify="center">
-        {href ? <Link href={href}>{iconElement}</Link> : iconElement}
+      <Layout {...rest} align="center" justify="center">
+        {href ? (
+          <LinkElement {...linkProps}>{iconElement}</LinkElement>
+        ) : (
+          iconElement
+        )}
       </Layout>
     </Tooltip>
   );
