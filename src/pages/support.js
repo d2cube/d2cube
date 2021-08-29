@@ -9,7 +9,7 @@ import {UrlType} from '../enums/index.js';
 
 const Page = () => {
   const left = (
-    <Frame help={null} title="Thank you for your support">
+    <Frame title="Thank you for your support">
       <p>
         <BrandLogo /> will <strong>always</strong> be open-source and
         (ads-)free.
@@ -21,7 +21,8 @@ const Page = () => {
         shipping relevant features and updates.
       </p>
       <p>Drop a donation if you would like to show your support!</p>
-      <Layout align="center" spacing="l">
+      <p>- Chris</p>
+      <Layout align="center" spacing="xl">
         <BrandIcon
           icon="githubSponsor"
           href={UrlType.GithubSponsor}

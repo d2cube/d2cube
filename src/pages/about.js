@@ -26,6 +26,7 @@ const Page = () => {
           <ExternalLink href={UrlType.NextJs}>Next.js</ExternalLink>.
         </p>
       </div>
+      <hr />
       <div>
         <h3>Features</h3>
         <ul>
@@ -63,6 +64,7 @@ const Page = () => {
           </li>
         </ul>
       </div>
+      <hr />
       <div>
         <h3>Resources</h3>
         The following external links supplement the site.
