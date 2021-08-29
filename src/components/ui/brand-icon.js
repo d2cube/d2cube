@@ -5,6 +5,7 @@ import {Layout, Icon, useStyles} from 'uinix-ui';
 import Tooltip from './tooltip.js';
 
 const BrandIcon = ({
+  as = undefined,
   icon,
   size = 'icon.m',
   href = '',
@@ -15,6 +16,7 @@ const BrandIcon = ({
 
   const iconElement = (
     <Icon
+      aria-label={tooltip}
       color="brand.primary"
       icon={icon}
       size={size}
@@ -34,7 +36,7 @@ const BrandIcon = ({
 
   return (
     <Tooltip isReadable placement="top" tooltip={tooltip}>
-      <Layout {...rest} align="center" justify="center">
+      <Layout {...rest} as={as} align="center" justify="center">
         {href ? (
           <LinkElement {...linkProps}>{iconElement}</LinkElement>
         ) : (
