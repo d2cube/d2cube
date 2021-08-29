@@ -21,7 +21,7 @@ const Page = () => {
       size="m"
       title="Select Set"
     >
-      <Layout minH="0" spacing="xl">
+      <Layout minH="0" spacing="l">
         <Layout flex="1">
           <SetSelect
             value={selectedSetOption}

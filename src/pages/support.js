@@ -2,6 +2,7 @@ import {Layout} from 'uinix-ui';
 
 import PageLayout from '../components/page-layout.js';
 import BrandIcon from '../components/ui/brand-icon.js';
+import BrandLogo from '../components/ui/brand-logo.js';
 import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
 import {UrlType} from '../enums/index.js';
@@ -10,7 +11,8 @@ const Page = () => {
   const left = (
     <Frame help={null} title="Thank you for your support">
       <p>
-        D2Cube will <strong>always</strong> be open-source and (ads-)free.
+        <BrandLogo /> will <strong>always</strong> be open-source and
+        (ads-)free.
       </p>
       <p>
         While this imposes on personal time and financial commitments, I believe
@@ -19,7 +21,6 @@ const Page = () => {
         shipping relevant features and updates.
       </p>
       <p>Drop a donation if you would like to show your support!</p>
-      <hr />
       <Layout align="center" spacing="l">
         <BrandIcon
           icon="githubSponsor"

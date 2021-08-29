@@ -1,3 +1,20 @@
+const baseButton = {
+  backgroundImage: 'url(images/ui/button.jpg)',
+  backgroundSize: '100% 400%',
+  border: 'none',
+  color: 'brand.primary',
+  flex: 'none',
+  fontFamily: 'diablo',
+  fontSize: 'l',
+  margin: 0,
+  outline: 'none',
+  padding: 0,
+  paddingBottom: 's',
+  paddingLeft: 'xl',
+  paddingRight: 'xl',
+  paddingTop: 's',
+};
+
 const absolute = {
   bottom: 0,
   left: 0,
@@ -12,7 +29,43 @@ const button = {
     paddingLeft: 'm',
     paddingRight: 'm',
   },
-  m: {}, // Uses default global button styles
+  m: baseButton,
+};
+
+const divider = {
+  backgroundImage: 'url(images/ui/divider.png)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: '100% 10px',
+  backgroundPosition: 'center top',
+  border: 'none',
+  flex: 'none',
+  height: '10px',
+  margin: 0,
+  position: 'relative',
+  '::before': {
+    backgroundImage: 'url(images/ui/divider-knob.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '20px 20px',
+    position: 'absolute',
+    content: '""',
+    color: 'transparent',
+    height: '20px',
+    left: '-2px',
+    top: '-5px',
+    width: '20px',
+  },
+  '::after': {
+    backgroundImage: 'url(images/ui/divider-knob.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '20px 20px',
+    position: 'absolute',
+    content: '""',
+    color: 'transparent',
+    height: '20px',
+    right: '-2px',
+    top: '-5px',
+    width: '20px',
+  },
 };
 
 const frame = {
@@ -68,6 +121,7 @@ const header = {
 export default {
   absolute,
   button,
+  divider,
   footer,
   frame,
   header,

@@ -20,7 +20,7 @@ const Frame = ({
   >
     <Layout align="center" alignSelf={alignTitle} spacing="m">
       <h3>{title}</h3>
-      <Help text={help} />
+      {help && <Help text={help} />}
     </Layout>
     {children}
   </Layout>

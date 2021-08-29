@@ -14,7 +14,7 @@ const HudPanel = ({player, title}) => (
         <BrandIcon icon="nav.sets" href="/sets" tooltip="Sets" />
         <BrandIcon icon="nav.runewords" href="/runewords" tooltip="Runewords" />
         <div />
-        <BrandIcon as="h1" icon="cube" href="/" size="icon.xl" tooltip="Cube" />
+        <BrandIcon as="h1" icon="cube" href="/" size="icon.l" tooltip="Cube" />
         <BrandIcon icon="nav.develop" href="/develop" tooltip="Develop" />
         <BrandIcon icon="nav.about" href="/about" tooltip="About" />
         <BrandIcon icon="nav.support" href="/support" tooltip="Support" />

@@ -103,43 +103,42 @@ const shadows = {
 
 const sizes = {
   bar: {
-    height: 8,
+    height: '8px',
   },
   frame: {
     height: {
-      inventory: slotSize * 14 + 20,
+      inventory: `${slotSize * 14 + 20}px`,
     },
     width: {
-      s: 400,
-      m: 600,
-      l: 800,
+      s: '400px',
+      m: '600px',
+      l: '800px',
     },
   },
-  globe: 120,
+  globe: '120px',
   paragraph: {
-    width: 600,
+    width: '600px',
   },
   pre: {
-    height: 300,
+    height: '300px',
   },
   icon: {
-    s: 16,
-    m: 24,
-    l: 32,
-    xl: 48,
+    s: '16px',
+    m: '24px',
+    l: '48px',
   },
   slot: slotSize,
-  socket: slotSize * 0.8,
+  socket: `${slotSize * 0.8}px`,
 };
 
 const spacings = {
   xxs: '1px',
   xs: '2px',
   s: '4px',
-  m: '8',
-  l: '16',
-  xl: '32',
-  xxl: '64',
+  m: '8px',
+  l: '16px',
+  xl: '32px',
+  xxl: '64px',
 };
 
 const transitions = {

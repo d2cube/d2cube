@@ -19,6 +19,7 @@ const themedStyles = {
   textMutedColor: props('text.muted')(theme.colors),
   defaultFontSize: props('m')(theme.fontSizes),
   spacingSmall: props('s')(theme.spacings),
+  spacingMedium: props('m')(theme.spacings),
 };
 
 const IndicatorsContainer = k(null);
@@ -49,7 +50,7 @@ export const styles = {
     fontFamily: themedStyles.diabloFont,
     fontSize: themedStyles.largeFontSize,
     padding: themedStyles.spacingSmall,
-    marginTop: `calc(-${themedStyles.spacingSmall} - ${themedStyles.borderWidth})`,
+    marginTop: `calc(-${themedStyles.spacingMedium} - ${themedStyles.borderWidth})`,
   }),
   input: () => ({
     color: themedStyles.textPrimaryColor,

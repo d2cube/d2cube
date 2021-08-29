@@ -57,6 +57,7 @@ const global = {
     maxWidth: 'paragraph.width',
   },
   ul: {
+    margin: 0,
     paddingLeft: 'l',
   },
   pre: {

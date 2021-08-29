@@ -1,9 +1,10 @@
 import {useState} from 'react';
-import {Element, Layout, Text} from 'uinix-ui';
+import {Layout, Text} from 'uinix-ui';
 
 import * as api from '../api/index.js';
 import {isEmpty} from '../utils/fp.js';
 import Copyable from './ui/copyable.js';
+import ExternalLink from './ui/external-link.js';
 import Input from './ui/input.js';
 import Labelled from './ui/labelled.js';
 
@@ -35,11 +36,9 @@ const ApiMethod = ({method}) => {
   const url = '/api' + path + (parameter ? '/' + parameter : '');
 
   const jsonResponse = json(response);
-  console.log(jsonResponse);
 
   return (
     <Layout direction="column" spacing="l">
-      <Element as="hr" py="l" />
       <h4 id={name}>
         <Text as="code" fontSize="l">
           {name}
@@ -59,9 +58,9 @@ const ApiMethod = ({method}) => {
       <Labelled label="URL">
         <Copyable label="curl" text={`curl https://d2cu.be${url}`}>
           <pre>
-            <a href={url}>
+            <ExternalLink href={url}>
               {httpMethod} {url}
-            </a>
+            </ExternalLink>
           </pre>
         </Copyable>
       </Labelled>
