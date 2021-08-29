@@ -1,5 +1,3 @@
-import {Layout} from 'uinix-ui';
-
 import ApiMethods from '../components/api-methods.js';
 import PageLayout from '../components/page-layout.js';
 import BrandLogo from '../components/ui/brand-logo.js';
@@ -11,8 +9,8 @@ import {UrlType} from '../enums/index.js';
 
 const Page = () => {
   const left = (
-    <Frame title="API">
-      <Layout direction="column" overflow="auto" spacing="l">
+    <Frame title="For Developers">
+      <div>
         <p>
           <BrandLogo /> provides a public API accessible via{' '}
           <ExternalLink href="/api">/api</ExternalLink>. You can test the API
@@ -27,6 +25,10 @@ const Page = () => {
           for more details and report any issues{' '}
           <ExternalLink href={UrlType.GithubIssues}>here</ExternalLink>.
         </p>
+      </div>
+      <hr />
+      <div>
+        <h3>API</h3>
         <ul>
           {methods.map(({name}) => (
             <li key={name}>
@@ -37,12 +39,12 @@ const Page = () => {
           ))}
         </ul>
         <ApiMethods methods={methods} />
-      </Layout>
+      </div>
     </Frame>
   );
 
   return (
-    <PageLayout title="Develop">
+    <PageLayout title="Developers">
       <Interface left={left} />
     </PageLayout>
   );

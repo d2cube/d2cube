@@ -5,11 +5,11 @@ import Divider from './ui/divider.js';
 import ApiMethod from './api-method.js';
 
 const ApiMethods = ({methods}) => (
-  <Layout direction="column" py="xl" spacing="xxl">
+  <Layout direction="column" pt="xxl" spacing="xl">
     {methods.map((method) => (
       <Fragment key={method.name}>
-        <Divider />
         <ApiMethod method={method} />
+        <Divider />
       </Fragment>
     ))}
   </Layout>

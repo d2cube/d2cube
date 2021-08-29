@@ -49,7 +49,9 @@ const ApiMethod = ({method}) => {
         <Input
           disabled={isParametersDisabled}
           placeholder={
-            isParametersDisabled ? 'No parameters' : 'Provide a valid value'
+            isParametersDisabled
+              ? 'No parameters'
+              : `e.g. '${apiParameter.example}'`
           }
           value={parameter}
           onChange={setParameter}

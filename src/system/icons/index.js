@@ -30,7 +30,7 @@ export default {
   nav: {
     about: info,
     community: users,
-    develop: code,
+    developers: code,
     items: database,
     roadmap: list,
     runewords,
