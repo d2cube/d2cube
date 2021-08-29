@@ -20,7 +20,13 @@ const Page = () => {
       </p>
       <p>Drop a donation if you would like to show your support!</p>
       <hr />
-      <Layout wrap align="center" spacing="m" wrapSpacing="m">
+      <Layout align="center" spacing="l">
+        <BrandIcon
+          icon="githubSponsor"
+          href={UrlType.GithubSponsor}
+          size="icon.l"
+          tooltip="Github Sponsor"
+        />
         <BrandIcon
           icon="paypal"
           href={UrlType.Paypal}

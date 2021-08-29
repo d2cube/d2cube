@@ -3,6 +3,7 @@ import {cube} from './cube.js';
 import {database} from './database.js';
 import {gift} from './gift.js';
 import {github} from './github.js';
+import {githubSponsor} from './github-sponsor.js';
 import {help} from './help.js';
 import {info} from './info.js';
 import {layers} from './layers.js';
@@ -16,6 +17,7 @@ import {up} from './up.js';
 export default {
   cube,
   help,
+  githubSponsor,
   info,
   pause,
   paypal,
