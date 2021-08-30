@@ -1,6 +1,5 @@
 import ReactSelect from 'react-select';
 
-// TODO formalize in uinix-search
 const Search = ({filters, schema, onChange}) => {
   console.log(filters, schema, onChange);
   const options = [];

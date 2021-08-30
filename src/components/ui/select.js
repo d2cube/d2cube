@@ -8,20 +8,25 @@ import {components, styles} from './react-select-overrides.js';
 
 const Select = ({
   isMenuOpen = undefined,
+  isMulti = false,
   options,
   placeholder = 'Search...',
   value,
+  formatOptionLabel = undefined,
   renderOption = defaultRenderOption,
   onChange,
 }) => (
   <ReactSelect
     isClearable
     isSearchable
+    hideSelectedOptions={false}
+    isMulti={isMulti}
     components={{
       ...components,
       Option: createOptionComponent(renderOption),
     }}
     filterOption={filterOption}
+    formatOptionLabel={formatOptionLabel}
     menuIsOpen={isMenuOpen}
     options={options}
     placeholder={placeholder}

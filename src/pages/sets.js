@@ -24,6 +24,7 @@ const Page = () => {
       <Layout minH="0" spacing="l">
         <Layout flex="1">
           <SetSelect
+            isMenuOpen
             value={selectedSetOption}
             onChange={setSelectedSetOption}
           />

@@ -16,11 +16,8 @@ const baseButton = {
 };
 
 const absolute = {
-  bottom: 0,
-  left: 0,
+  inset: 0,
   position: 'absolute',
-  right: 0,
-  top: 0,
 };
 
 const button = {
@@ -75,6 +72,12 @@ const frame = {
   borderImage: 'url(images/ui/frame.png) 100 repeat',
 };
 
+const pentagram = {
+  backgroundImage: 'url(images/ui/pentagram.svg)',
+  backgroundPosition: 'center center',
+  backgroundRepeat: 'no-repeat',
+};
+
 const socket = {
   borderRadius: 'round',
   border: 'socketed',
@@ -84,12 +87,9 @@ const socket = {
 
 const splash = {
   backgroundColor: 'interface.fade',
-  bottom: 0,
-  left: 0,
+  inset: 0,
   padding: 'xxl',
   position: 'fixed',
-  right: 0,
-  top: 0,
 };
 
 const sticky = {
@@ -125,6 +125,7 @@ export default {
   footer,
   frame,
   header,
+  pentagram,
   socket,
   splash,
   sticky,

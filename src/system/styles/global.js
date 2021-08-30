@@ -20,7 +20,6 @@ export default {
   ...vendor,
   '*': {
     boxSizing: 'border-box',
-    cursor,
   },
   body: {
     background: 'center center',
@@ -31,9 +30,13 @@ export default {
     backgroundRepeat: 'no-repeat',
     backgroundColor: 'interface.background',
     color: 'text.primary',
+    cursor,
     margin: 0,
     minHeight: '100vh',
     padding: 0,
+  },
+  'a, button': {
+    cursor,
   },
   'a:hover': {
     opacity: 'hover',

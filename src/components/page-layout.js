@@ -25,17 +25,11 @@ const PageLayout = ({children, title}) => {
             align="center"
             direction="column"
             flex="auto"
+            pt="xl"
             spacing="xl"
             styles={styles.fadeIn}
             variant="container"
           >
-            <Layout
-              align="center"
-              as="header"
-              justify="center"
-              spacing="m"
-              variant="header"
-            />
             {children}
           </Layout>
           <Hud title={title} />

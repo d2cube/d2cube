@@ -10,35 +10,45 @@ const themedStyles = {
   borderWidth: props('border')(theme.borderWidths),
   diabloFont: props('diablo')(theme.fontFamilies),
   bodyFont: props('body')(theme.fontFamilies),
+  fontSizeSmall: props('s')(theme.fontSizes),
   hover: props('hover')(theme.opacities),
   interfaceActive: props('interface.active')(theme.colors),
   interfaceBackground: props('interface.background')(theme.colors),
   interfaceHover: props('interface.hover')(theme.colors),
+  borderColor: props('interface.border')(theme.colors),
   brandPrimaryColor: props('brand.primary')(theme.colors),
   textPrimaryColor: props('text.primary')(theme.colors),
   textMutedColor: props('text.muted')(theme.colors),
   defaultFontSize: props('m')(theme.fontSizes),
+  spacingExtraSmall: props('xs')(theme.spacings),
   spacingSmall: props('s')(theme.spacings),
   spacingMedium: props('m')(theme.spacings),
 };
 
-const IndicatorsContainer = k(null);
-
 export const components = {
-  IndicatorsContainer,
+  DropdownIndicator: k(null),
+  IndicatorSeparator: k(null),
 };
 
 export const styles = {
+  clearIndicator: () => ({
+    color: themedStyles.borderColor,
+    display: 'flex',
+  }),
   container: () => ({
+    fontSize: themedStyles.fontSizeSmall,
     width: '100%',
   }),
   control: () => ({
     backgroundColor: themedStyles.interfaceBackground,
     border: themedStyles.bordered,
+    display: 'flex',
     fontFamily: themedStyles.diabloFont,
+    justifyContent: 'space-between',
     padding: themedStyles.spacingSmall,
     '> div': {
       padding: 0,
+      justifyContent: 'center',
     },
     ':hover': {
       border: themedStyles.bordered,
@@ -59,10 +69,26 @@ export const styles = {
   menu: () => ({
     backgroundColor: themedStyles.interfaceBackground,
     border: themedStyles.bordered,
+    color: themedStyles.textPrimaryColor,
     marginTop: themedStyles.spacingSmall,
     '> div': {
       padding: 0,
     },
+  }),
+  multiValue: () => ({
+    backgroundColor: themedStyles.brandPrimaryColor,
+    display: 'flex',
+    margin: themedStyles.spacingExtraSmall,
+  }),
+  multiValueRemove: () => ({
+    color: themedStyles.borderColor,
+    display: 'flex',
+    alignItems: 'center',
+    ':hover': {
+      opacity: themedStyles.hover,
+    },
+    paddingLeft: themedStyles.spacingExtraSmall,
+    paddingRight: themedStyles.spacingExtraSmall,
   }),
   noOptionsMessage: () => ({
     fontFamily: themedStyles.diabloFont,

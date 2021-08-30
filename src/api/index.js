@@ -9,3 +9,4 @@ export {getRunewords} from './get-runewords.js';
 export {getRuneword} from './get-runeword.js';
 export {getSets} from './get-sets.js';
 export {getSet} from './get-set.js';
+export {search} from './search.js';

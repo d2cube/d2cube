@@ -5,7 +5,7 @@ import CopyButton from './copy-button.js';
 const Copyable = ({children, label = 'Copy', text}) => (
   <Element position="relative">
     {children}
-    <Element bottom="xs" position="absolute" right="xs">
+    <Element bottom={0} position="absolute" right={0}>
       <CopyButton label={label} text={text} />
     </Element>
   </Element>

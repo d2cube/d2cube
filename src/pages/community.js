@@ -12,7 +12,7 @@ const Page = () => {
     <Frame title="Community">
       <p>
         Join the following communities to continue the discussion and improve{' '}
-        <BrandLogo />!
+        <BrandLogo />.
       </p>
       <Layout align="center" spacing="xl">
         <BrandIcon

@@ -4,9 +4,13 @@ import {groupBy} from '../utils/fp.js';
 import SetName from './set-name.js';
 import Select from './ui/select.js';
 
-const SetSelect = ({value = undefined, onChange = undefined}) => (
+const SetSelect = ({
+  isMenuOpen = false,
+  value = undefined,
+  onChange = undefined,
+}) => (
   <Select
-    isMenuOpen
+    isMenuOpen={isMenuOpen}
     options={options}
     placeholder="Search sets..."
     value={value}

@@ -35,14 +35,7 @@ const Item = ({item, isInactive = false, variant = null}) => {
         }}
         styles={[styles.item, styles.hoverableClassName]}
       >
-        <Element
-          bottom={0}
-          className={SOCKET_CLASSNAME}
-          left={0}
-          position="absolute"
-          right={0}
-          top={0}
-        >
+        <Element className={SOCKET_CLASSNAME} variant="absolute">
           <ItemSockets sockets={sockets} size={size} />
         </Element>
         <ItemImage id={imageId || id} variant={variant} variants={variants} />

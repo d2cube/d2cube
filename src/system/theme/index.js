@@ -8,7 +8,7 @@ const animations = {
 
 const borderWidths = {
   border: '2px',
-  frame: '40px',
+  frame: '32px',
 };
 
 const colors = {
@@ -58,6 +58,7 @@ const fontFamilies = {
 };
 
 const fontSizes = {
+  xs: '0.75rem',
   s: '0.85rem',
   m: '1rem',
   l: '1.25rem',
@@ -85,7 +86,7 @@ const lineHeights = {
 };
 
 const opacities = {
-  inactive: '0.3',
+  inactive: '0.25',
   ethereal: '0.7',
   hover: '0.8',
 };

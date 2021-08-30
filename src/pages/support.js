@@ -21,7 +21,7 @@ const Page = () => {
         shipping relevant features and updates.
       </p>
       <p>Drop a donation if you would like to show your support!</p>
-      <p>- Chris</p>
+      <p>chrisrzhou</p>
       <Layout align="center" spacing="xl">
         <BrandIcon
           icon="githubSponsor"

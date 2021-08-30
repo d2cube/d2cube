@@ -25,6 +25,7 @@ const elementShorthandPropsMapping = {
   // Position
   position: ['position'],
   bottom: ['bottom'],
+  inset: ['inset'],
   left: ['left'],
   right: ['right'],
   top: ['top'],
@@ -38,8 +39,7 @@ const elementShorthandPropsMapping = {
 
 const elementStyles = [
   ({onClick}) => (onClick ? styles.interactive : null),
-  ({disabled}) =>
-    disabled ? {opacity: 'inactive', pointerEvents: 'none'} : null,
+  ({disabled}) => (disabled ? {opacity: 'inactive'} : null),
 ];
 
 export default {

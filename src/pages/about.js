@@ -42,7 +42,7 @@ const Page = () => {
                 <em>What can I cube given these items?</em>
               </li>
               <li>
-                <em>What can Runewords can I make given these items?</em>
+                <em>What Runewords can I make given these items?</em>
               </li>
             </ul>
           </li>
