@@ -19,14 +19,6 @@ const interactive = {
   },
 };
 
-const hoverableClassName = ({hoverable}) => ({
-  [`> .${hoverable.className}`]: {
-    ...hoverable.default,
-    transition: 'opacity',
-  },
-  [`:hover > .${hoverable.className}`]: hoverable.hover,
-});
-
 const globe = ({theme, type}) => {
   const color = theme.colors.player[type];
   return {
@@ -93,7 +85,6 @@ export default {
   fadeIn,
   globe,
   grid,
-  hoverableClassName,
   interactive,
   item,
   itemHover,

@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
+import {getSet} from '../api/index.js';
 import Inventory from '../components/inventory.js';
 import PageLayout from '../components/page-layout.js';
 import SetPreview from '../components/set-preview.js';
@@ -11,8 +12,8 @@ import {getValidEquipSlot} from '../utils/get-valid-equip-slot.js';
 import {rollItem} from '../utils/roll-item.js';
 
 const Page = () => {
-  const [selectedSetOption, setSelectedSetOption] = useState(null);
-  const set = selectedSetOption?.set;
+  const [setId, setSetId] = useState(null);
+  const set = getSet(setId);
 
   const left = (
     <Frame
@@ -23,11 +24,7 @@ const Page = () => {
     >
       <Layout minH="0" spacing="l">
         <Layout flex="1">
-          <SetSelect
-            isMenuOpen
-            value={selectedSetOption}
-            onChange={setSelectedSetOption}
-          />
+          <SetSelect isMenuOpen value={setId} onChange={setSetId} />
         </Layout>
         {set && (
           <Layout flex="1" overflow="auto">

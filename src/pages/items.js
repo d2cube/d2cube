@@ -19,7 +19,7 @@ const Page = () => {
   return (
     <PageLayout title="Items">
       <Layout bg="interface.background" direction="column" spacing="l">
-        <ItemSelect />
+        <ItemSelect onChange={console.log} />
         <select value={selectedItemType} onChange={handleUpdateItemType}>
           {Object.values(ItemType).map((type) => (
             <option key={type} value={type}>
@@ -31,7 +31,7 @@ const Page = () => {
           {items.map((item) => (
             <Layout key={item.id} direction="column" spacing="l">
               <ItemName item={item} />
-              <Item key={item.id} item={item} />
+              <Item item={item} />
             </Layout>
           ))}
         </Layout>

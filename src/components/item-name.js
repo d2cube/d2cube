@@ -1,22 +1,26 @@
-import {resolveItemColor} from '../utils/resolvers/resolve-item-color.js';
+import {filter, k} from 'uinix-fp';
+import {Layout} from 'uinix-ui';
 
+import {getTierLabel} from '../utils/get-tier-label.js';
+import {mark} from '../utils/mark.js';
+import {resolveItemColor} from '../utils/resolvers/resolve-item-color.js';
 import {resolveItemDescription} from '../utils/resolvers/resolve-item-description.js';
 import ItemTooltip from './item-tooltip.js';
 import BrandText from './ui/brand-text.js';
 
 // TODO: organize and document logic in relevant utils
-const ItemName = ({item, query = ''}) => {
+const ItemName = ({item, query = '', renderExtra = k(null)}) => {
   const color = resolveItemColor(item);
   const description = resolveItemDescription(item);
 
-  const snippets = item.name.split(new RegExp(`(${query})`, 'gi'));
-  const matchedName = snippets.map((snippet, i) =>
-    i % 2 === 0 ? snippet : <mark key={i}>{snippet}</mark>,
-  );
+  const name = filter()([item.name, getTierLabel(item.tier)]).join(' ');
 
   return (
     <ItemTooltip description={description}>
-      <BrandText color={color} text={matchedName} />
+      <Layout align="center" justify="space-between" spacing="s">
+        <BrandText color={color} text={mark(name, query)} />
+        {renderExtra(item)}
+      </Layout>
     </ItemTooltip>
   );
 };

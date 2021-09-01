@@ -15,9 +15,7 @@ const Splash = ({onEnter}) => {
         spacing="l"
         styles={styles.fadeIn}
       >
-        <h1>
-          <BrandLogo size="l" />
-        </h1>
+        <BrandLogo as="h1" size="l" />
         <Button text="Enter" onClick={onEnter} />
       </Layout>
     </Layout>

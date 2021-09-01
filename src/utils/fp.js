@@ -14,6 +14,8 @@ export const concat = (x) => (xs) =>
 export const normalize = (key) => (xs) =>
   Object.fromEntries(xs.map((x) => [x[key], x]));
 
+export const degroupBy = (key) => (xs) => xs.flatMap((x) => x[key] || x);
+
 export const groupBy = (key) => (xs) =>
   // eslint-disable-next-line unicorn/prefer-object-from-entries
   xs.reduce((acc, x) => {
@@ -40,6 +42,16 @@ export const isPropValueEqual = (prop) => (value) => (x) =>
   props(prop)(x) === value;
 
 export const add = (x) => (y) => x + y;
+
+const equal = (x) => (y) => x === y;
+
+export const count =
+  (f = equal) =>
+  (y) =>
+  (xs) =>
+    xs.filter(f(y)).length;
+
+export const map = (f) => (xs) => xs.map(f);
 
 export const max = (x) => (y) => Math.max(x, y);
 

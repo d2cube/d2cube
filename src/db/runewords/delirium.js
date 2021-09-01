@@ -9,7 +9,7 @@ import ids from '../ids/index.js';
 
 export default {
   id: RunewordType.LemIstIo,
-  name: 'LemIstIo',
+  name: 'Delirium',
   runes: [ids.Lem, ids.Ist, ids.Io],
   types: resolveRunewordItemTypes('helm'),
   properties: {

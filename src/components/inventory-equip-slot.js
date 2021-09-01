@@ -21,7 +21,7 @@ const InventoryEquipSlot = ({item = null, slot}) => {
         align="center"
         justify="center"
         styles={styles.itemHover}
-        variant="absolute"
+        variant="absolute.stretch"
       >
         {item && <Item item={item} />}
       </Layout>

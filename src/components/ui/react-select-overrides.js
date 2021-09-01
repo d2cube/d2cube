@@ -48,7 +48,6 @@ export const styles = {
     padding: themedStyles.spacingSmall,
     '> div': {
       padding: 0,
-      justifyContent: 'center',
     },
     ':hover': {
       border: themedStyles.bordered,
@@ -57,6 +56,7 @@ export const styles = {
   groupHeading: () => ({
     borderBottom: themedStyles.bordered,
     borderTop: themedStyles.bordered,
+    color: themedStyles.textMutedColor,
     fontFamily: themedStyles.diabloFont,
     fontSize: themedStyles.largeFontSize,
     padding: themedStyles.spacingSmall,
@@ -111,7 +111,11 @@ export const styles = {
   }),
   placeholder: () => ({
     color: themedStyles.textMutedColor,
+    overflow: 'hidden',
     position: 'absolute',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    width: '100%',
   }),
   singleValue: () => ({
     color: themedStyles.textPrimaryColor,

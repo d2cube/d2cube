@@ -1,6 +1,6 @@
 # d2cube
 
-An interactive D2 cube and runeword companion.
+An interactive D2 Cube and Runeword companion.
 
 ---
 

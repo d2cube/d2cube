@@ -10,7 +10,7 @@ const ItemSockets = ({sockets, size}) => {
   const gridColumnStarts = getGridColumnStarts({sockets, size});
 
   return (
-    <Layout align="center" justify="center" ml="xxs" variant="absolute">
+    <Layout align="center" justify="center" ml="xxs" variant="absolute.stretch">
       <Layout styles={styles.grid}>
         {gridColumnStarts.map((gridColumnStart, i) => (
           <Layout

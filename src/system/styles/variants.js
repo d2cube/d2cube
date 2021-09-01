@@ -16,8 +16,17 @@ const baseButton = {
 };
 
 const absolute = {
-  inset: 0,
-  position: 'absolute',
+  stretch: {
+    inset: 0,
+    position: 'absolute',
+  },
+  center: {
+    height: 'min-content',
+    inset: 0,
+    margin: 'auto',
+    position: 'absolute',
+    width: 'min-content',
+  },
 };
 
 const button = {
@@ -72,11 +81,13 @@ const frame = {
   borderImage: 'url(images/ui/frame.png) 100 repeat',
 };
 
-const pentagram = {
+const pentagram = ({isActive}) => ({
+  ...absolute.stretch,
   backgroundImage: 'url(images/ui/pentagram.svg)',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
-};
+  filter: isActive ? 'saturate(4)' : undefined,
+});
 
 const socket = {
   borderRadius: 'round',

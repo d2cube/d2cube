@@ -1,6 +1,6 @@
 import {props} from 'uinix-fp';
-import {OperatorType} from '../enums/operator-type.js';
 
+import {SEARCH_OPERATORS} from '../constants/index.js';
 import {and} from '../utils/fp.js';
 import {getItems} from './get-items.js';
 
@@ -12,13 +12,8 @@ export const search = (filters) => {
 };
 
 const condition = (filter) => (x) => {
-  const operator = operators[filter.operator];
+  const operator = SEARCH_OPERATORS[filter.operator];
   return operator(filter.value)(props(filter.field)(x));
-};
-
-const operators = {
-  [OperatorType.Contains]: (x) => (y) => y.includes(x),
-  [OperatorType.Equals]: (x) => (y) => x === y,
 };
 
 const items = getItems();

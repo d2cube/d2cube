@@ -1,16 +1,17 @@
 import {getSets} from '../api/index.js';
 import {ITEM_TIER_TYPE_LABELS} from '../constants/index.js';
-import {groupBy} from '../utils/fp.js';
 import SetName from './set-name.js';
 import Select from './ui/select.js';
 
 const SetSelect = ({
-  isMenuOpen = false,
+  isMenuOpen = undefined,
   value = undefined,
   onChange = undefined,
 }) => (
   <Select
+    group={group}
     isMenuOpen={isMenuOpen}
+    noOptionsMessage="No sets found."
     options={options}
     placeholder="Search sets..."
     value={value}
@@ -20,25 +21,20 @@ const SetSelect = ({
 );
 
 const renderOption = ({option, query}) => (
-  <SetName set={option.set} query={query} />
+  <SetName set={option.data} query={query} />
 );
 
 const mapSetToOption = (set) => ({
-  set,
+  data: set,
   value: set.id,
   label: set.name,
 });
 
-const getOptions = () => {
-  const sets = getSets().map(mapSetToOption);
-  const groupedSets = groupBy('set.tier')(sets);
-  return Object.entries(groupedSets).map(([tier, options]) => ({
-    label: ITEM_TIER_TYPE_LABELS[tier],
-    value: tier,
-    options,
-  }));
+const group = {
+  key: 'data.tier',
+  labels: ITEM_TIER_TYPE_LABELS,
 };
 
-const options = getOptions();
+const options = getSets().map(mapSetToOption);
 
 export default SetSelect;

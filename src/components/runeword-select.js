@@ -1,27 +1,59 @@
+import {useMemo} from 'react';
+
 import {getRunewords} from '../api/index.js';
+import RunewordName from './runeword-name.js';
 import Select from './ui/select.js';
 
-const RunewordSelect = ({isMenuOpen = false, value, onChange}) => (
-  <Select
-    isMenuOpen={isMenuOpen}
-    options={options}
-    placeholder="Search runewords..."
-    value={value}
-    renderOption={renderOption}
-    onChange={onChange}
-  />
-);
+const RunewordSelect = ({isMenuOpen = undefined, runes, value, onChange}) => {
+  const options = useMemo(
+    () => runewords.filter(filterByRunes(runes)).map(mapRunewordToOption),
+    [runes],
+  );
 
-const renderOption = ({option}) => <div>{option.label}</div>;
+  let noOptionsMessage = null;
+  let placeholder;
+  if (runes) {
+    placeholder =
+      options.length === 0
+        ? `No Runewords spelled with '${runes}'`
+        : `Runewords spelled with '${runes}'`;
+  } else {
+    placeholder = 'Search Runewords...';
+    noOptionsMessage = 'No Runewords found.';
+  }
+
+  return (
+    <Select
+      isMenuOpen={isMenuOpen}
+      noOptionsMessage={noOptionsMessage}
+      options={options}
+      placeholder={placeholder}
+      value={value}
+      renderOption={createRenderOption(runes)}
+      onChange={onChange}
+    />
+  );
+};
+
+const filterByRunes = (runes) => (runeword) => {
+  if (!runes) {
+    return true;
+  }
+
+  return runes ? runeword.id.includes(runes) : true;
+};
+
+const createRenderOption =
+  (runes) =>
+  ({option, query}) =>
+    <RunewordName query={query} runeQuery={runes} runeword={option.data} />;
 
 const mapRunewordToOption = (runeword) => ({
-  runeword,
+  data: runeword,
   value: runeword.id,
   label: runeword.name,
 });
 
 const runewords = getRunewords();
-
-const options = runewords.map(mapRunewordToOption);
 
 export default RunewordSelect;

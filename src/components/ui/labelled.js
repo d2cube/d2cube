@@ -1,8 +1,10 @@
-import {Layout, Text} from 'uinix-ui';
+import {Layout} from 'uinix-ui';
 
-const Labelled = ({label, children}) => (
-  <Layout as="label" direction="column" spacing="s">
-    <Text variant="diablo">{label}</Text>
+import BrandText from './brand-text.js';
+
+const Labelled = ({flex = 'auto', label, children}) => (
+  <Layout as="label" direction="column" flex={flex} spacing="s">
+    <BrandText text={label} />
     {children}
   </Layout>
 );

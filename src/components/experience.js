@@ -19,7 +19,7 @@ const Experience = ({experience}) => {
             percent,
           }}
           styles={styles.progress}
-          variant="absolute"
+          variant="absolute.stretch"
         />
         {fill(10)((i) => (
           <Layout key={i} b="bordered" flex="auto" h="bar.height" z="forward" />

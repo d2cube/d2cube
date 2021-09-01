@@ -86,7 +86,8 @@ const lineHeights = {
 };
 
 const opacities = {
-  inactive: '0.25',
+  disabled: '0.2',
+  inactive: '0.3',
   ethereal: '0.7',
   hover: '0.8',
 };
@@ -113,7 +114,6 @@ const sizes = {
     width: {
       s: '400px',
       m: '600px',
-      l: '800px',
     },
   },
   globe: '120px',

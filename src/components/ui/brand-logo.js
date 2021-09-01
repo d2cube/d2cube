@@ -1,10 +1,11 @@
-import {Layout, Text} from 'uinix-ui';
+import {Layout} from 'uinix-ui';
 
 import BrandIcon from './brand-icon.js';
+import BrandText from './brand-text.js';
 
-const BrandLogo = ({size = 'm'}) => (
+const BrandLogo = ({as = undefined, size = 'm'}) => (
   <Layout inline align="center">
-    <Text variant="diablo">D2</Text>
+    <BrandText as={as} text="D2" />
     <BrandIcon icon="cube" size={`icon.${size}`} />
   </Layout>
 );

@@ -1,7 +1,12 @@
 import {Text} from 'uinix-ui';
 
-const BrandText = ({color = undefined, text}) => (
-  <Text color={color} variant="diablo">
+const BrandText = ({
+  as = undefined,
+  color = undefined,
+  fontSize = undefined,
+  text,
+}) => (
+  <Text as={as} color={color} fontSize={fontSize} variant="diablo">
     {text}
   </Text>
 );

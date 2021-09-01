@@ -1,8 +1,9 @@
 import {useState} from 'react';
-import {Layout, Text} from 'uinix-ui';
+import {Layout} from 'uinix-ui';
 
 import {EquipSlotType} from '../enums/index.js';
 import InventoryEquipSlot from './inventory-equip-slot.js';
+import BrandText from './ui/brand-text.js';
 
 const SwapStateType = {
   One: 'I',
@@ -98,7 +99,7 @@ const Swap = ({selectedState, onSwap}) => (
         flex="auto"
         onClick={() => onSwap(state)}
       >
-        <Text fontFamily="diablo">{state}</Text>
+        <BrandText text={state} />
       </Layout>
     ))}
   </Layout>
