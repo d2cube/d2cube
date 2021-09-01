@@ -22,9 +22,15 @@ const Page = () => {
       <li>
         Character simulation
         <ul>
-          <li>Stats</li>
-          <li>Skills</li>
+          <li>Player Stats</li>
+          <li>Player Skills</li>
           <li>Mercenary</li>
+        </ul>
+      </li>
+      <li>
+        Game Files
+        <ul>
+          <li>Load/Save from D2 game files</li>
         </ul>
       </li>
     </Frame>

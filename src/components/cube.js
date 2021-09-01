@@ -5,7 +5,7 @@ import BrandIcon from './ui/brand-icon.js';
 import Frame from './ui/frame.js';
 
 const Cube = ({items}) => (
-  <Frame title="Cube" help={help}>
+  <Frame title="Cube" help={help} size="s">
     <Layout align="center" direction="column" spacing="s">
       <ItemGrid items={items} size={[4, 3]} />
       <BrandIcon icon="interface.transmute" size="icon.l" tooltip="Transmute" />
