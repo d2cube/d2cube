@@ -96,18 +96,13 @@ export const styles = {
     padding: themedStyles.spacingSmall,
   }),
   option: (_, state) => ({
-    backgroundColor: getOptionBackgroundColor(
-      state,
-      themedStyles.interfaceBackground,
-    ),
+    backgroundColor: state.isSelected
+      ? themedStyles.interfaceActive
+      : state.isFocused
+      ? themedStyles.interfaceHover
+      : themedStyles.interfaceBackground,
     fontFamily: themedStyles.diabloFont,
     padding: themedStyles.spacingSmall,
-    ':hover': {
-      backgroundColor: getOptionBackgroundColor(
-        state,
-        themedStyles.interfaceHover,
-      ),
-    },
   }),
   placeholder: () => ({
     color: themedStyles.textMutedColor,
@@ -120,16 +115,4 @@ export const styles = {
   singleValue: () => ({
     color: themedStyles.textPrimaryColor,
   }),
-};
-
-const getOptionBackgroundColor = (state, defaultBackgroundColor) => {
-  if (state.isSelected) {
-    return themedStyles.interfaceActive;
-  }
-
-  if (state.isFocused) {
-    return themedStyles.interfaceHover;
-  }
-
-  return defaultBackgroundColor;
 };

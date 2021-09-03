@@ -97,10 +97,9 @@ const propByValue = prop('value');
 const defaultRenderOption = prop('label');
 
 const createOptionComponent = (renderOption) => (props) => {
-  const {children, data, innerProps, selectProps, ...rest} = props;
-  const {onClick} = innerProps;
+  const {children, data, selectProps, ...rest} = props;
   return (
-    <rsComponents.Option {...rest} innerProps={{onClick}}>
+    <rsComponents.Option {...rest}>
       {renderOption({option: data, query: selectProps.inputValue})}
     </rsComponents.Option>
   );
