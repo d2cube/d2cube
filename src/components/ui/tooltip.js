@@ -30,7 +30,6 @@ const Tooltip = ({children, isReadable = false, placement, tooltip}) => {
           arrow={false}
           content={tooltip}
           maxWidth={isReadable ? undefined : 'none'}
-          offset={[0, 0]}
           placement={placement}
           reference={triggerRef}
         />

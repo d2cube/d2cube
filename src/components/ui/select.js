@@ -74,7 +74,6 @@ const Select = ({
     <ReactSelect
       isClearable
       isSearchable
-      hideSelectedOptions={false}
       isMulti={isMulti}
       components={{
         ...components,

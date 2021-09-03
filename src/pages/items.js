@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
-import Item from '../components/item.js';
 import ItemName from '../components/item-name.js';
 import ItemSelect from '../components/item-select.js';
 import PageLayout from '../components/page-layout.js';
@@ -29,10 +28,7 @@ const Page = () => {
         </select>
         <Layout direction="column" spacing="s">
           {items.map((item) => (
-            <Layout key={item.id} direction="column" spacing="l">
-              <ItemName item={item} />
-              <Item item={item} />
-            </Layout>
+            <ItemName key={item.id} item={item} />
           ))}
         </Layout>
       </Layout>

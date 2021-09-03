@@ -8,15 +8,7 @@ import {resolveItemRuneword} from './resolve-item-runeword.js';
 import {resolveSuffixName} from './resolve-suffix-name.js';
 
 export const resolveItemName = (item) => {
-  const {
-    quality,
-    name,
-    personalization,
-    prefix,
-    suffix,
-    tier,
-    basename = name,
-  } = item;
+  const {name, personalization, prefix, suffix, tier, basename = name} = item;
 
   const color = resolveItemColor(item);
   const runes = resolveItemRunes(item);
@@ -26,14 +18,12 @@ export const resolveItemName = (item) => {
     concat(personalization),
     concat(prefix),
     concat(runeword ? runeword.name : name),
-    concat(quality ? '' : cb(getTierLabel)(tier)),
+    concat(cb(getTierLabel)(tier)),
     concat(cb((x) => `of ${resolveSuffixName(x)}`)(suffix)),
     join(' '),
   ])([]);
 
-  const resolvedBasename =
-    basename !== name &&
-    pipe([concat(basename), concat(cb(getTierLabel)(tier)), join(' ')])([]);
+  const resolvedBasename = basename === name ? null : basename;
 
   return pipe([
     concat({color: runeword ? 'item.runeword' : color, text: resolvedName}),
