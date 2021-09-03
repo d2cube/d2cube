@@ -37,6 +37,7 @@ export const styles = {
   }),
   container: () => ({
     fontSize: themedStyles.fontSizeSmall,
+    position: 'relative',
     width: '100%',
   }),
   control: () => ({
@@ -66,11 +67,18 @@ export const styles = {
     color: themedStyles.textPrimaryColor,
     fontFamily: themedStyles.bodyFont,
   }),
-  menu: () => ({
+  menuList: () => ({
     backgroundColor: themedStyles.interfaceBackground,
+    maxHeight: 300,
+    overflowY: 'auto',
+  }),
+  menu: () => ({
     border: themedStyles.bordered,
     color: themedStyles.textPrimaryColor,
+    left: 0,
     marginTop: themedStyles.spacingSmall,
+    position: 'absolute',
+    right: 0,
     '> div': {
       padding: 0,
     },
@@ -98,19 +106,17 @@ export const styles = {
   option: (_, state) => ({
     backgroundColor: state.isSelected
       ? themedStyles.interfaceActive
-      : state.isFocused
-      ? themedStyles.interfaceHover
       : themedStyles.interfaceBackground,
     fontFamily: themedStyles.diabloFont,
     padding: themedStyles.spacingSmall,
+    ':hover': {
+      backgroundColor: state.isSelected
+        ? themedStyles.interfaceActive
+        : themedStyles.interfaceHover,
+    },
   }),
   placeholder: () => ({
     color: themedStyles.textMutedColor,
-    overflow: 'hidden',
-    position: 'absolute',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    width: '100%',
   }),
   singleValue: () => ({
     color: themedStyles.textPrimaryColor,

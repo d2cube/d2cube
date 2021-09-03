@@ -21,11 +21,11 @@ const absolute = {
     position: 'absolute',
   },
   center: {
-    height: 'min-content',
+    height: 'fit-content',
     inset: 0,
     margin: 'auto',
     position: 'absolute',
-    width: 'min-content',
+    width: 'fit-content',
   },
 };
 

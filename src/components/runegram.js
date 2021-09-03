@@ -7,7 +7,9 @@ import {resolveItemRuneword} from '../utils/resolvers/resolve-item-runeword.js';
 import {rollItem} from '../utils/roll-item.js';
 import Item from './item.js';
 import Rune from './rune.js';
+import RunesName from './runes-name.js';
 import RunewordName from './runeword-name.js';
+import BrandText from './ui/brand-text.js';
 import CircleLayout from './ui/circle-layout.js';
 import Frame from './ui/frame.js';
 
@@ -37,13 +39,21 @@ const Runegram = ({itemId, runes}) => {
             />
           ))}
         </CircleLayout>
-        {runeword && (
-          <Element pt="50%" variant="absolute.center">
+        <Element pt="50%" variant="absolute.center">
+          {runeword ? (
             <RunewordName layout="vertical" runeword={runeword} />
-          </Element>
-        )}
+          ) : item && runes.length === 0 ? (
+            <BrandText text="Select runes" />
+          ) : (
+            <RunesName runes={runes} />
+          )}
+        </Element>
         <Element variant="absolute.center">
-          {item && <Item item={item} />}
+          {item ? (
+            <Item item={item} />
+          ) : (
+            <BrandText text="Select an item base" />
+          )}
         </Element>
       </Element>
     </Frame>

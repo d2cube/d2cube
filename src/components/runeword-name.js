@@ -3,6 +3,7 @@ import {Layout} from 'uinix-ui';
 import {mark} from '../utils/mark.js';
 import {resolveRunewordProperties} from '../utils/resolvers/resolve-runeword-properties.js';
 import ItemTooltip from './item-tooltip.js';
+import RunesName from './runes-name.js';
 import BrandText from './ui/brand-text.js';
 
 const RunewordName = ({
@@ -18,10 +19,7 @@ const RunewordName = ({
       justify="space-between"
     >
       <BrandText color="item.runeword" text={mark(runeword.name, query)} />
-      <BrandText
-        color="item.rune"
-        text={mark(runeword.runes.join(''), runeQuery, {isCaseSensitive: true})}
-      />
+      <RunesName query={runeQuery} runes={runeword.runes} />
     </Layout>
   </ItemTooltip>
 );

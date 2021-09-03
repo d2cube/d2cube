@@ -1,15 +1,12 @@
-import {SEARCH_FILTERS, ITEM_TYPE_LABELS} from '../constants/index.js';
+import {SEARCH_FILTERS} from '../constants/index.js';
 import {BasePropertyType} from '../enums/base-property-type.js';
+import {getItemTypeLabel} from '../utils/get-item-type-label.js';
 import ItemSelect from './item-select.js';
 import BrandText from './ui/brand-text.js';
 
-const SocketedItemSelect = ({filters = [], value, onChange}) => (
+const SocketedItemSelect = ({value, onChange}) => (
   <ItemSelect
-    filters={[
-      SEARCH_FILTERS.isQualityNormal,
-      SEARCH_FILTERS.isSocketable,
-      ...filters,
-    ]}
+    filters={filters}
     group={group}
     value={value}
     renderExtra={renderExtra}
@@ -24,9 +21,11 @@ const renderExtra = (item) => (
   />
 );
 
+const filters = [SEARCH_FILTERS.isQualityNormal, SEARCH_FILTERS.isSocketable];
+
 const group = {
   key: 'data.type',
-  labels: ITEM_TYPE_LABELS,
+  getLabel: getItemTypeLabel,
 };
 
 export default SocketedItemSelect;

@@ -1,5 +1,5 @@
 import {getSets} from '../api/index.js';
-import {ITEM_TIER_TYPE_LABELS} from '../constants/index.js';
+import {getItemTierTypeLabel} from '../utils/get-item-tier-type-label.js';
 import SetName from './set-name.js';
 import Select from './ui/select.js';
 
@@ -32,7 +32,7 @@ const mapSetToOption = (set) => ({
 
 const group = {
   key: 'data.tier',
-  labels: ITEM_TIER_TYPE_LABELS,
+  getLabel: getItemTierTypeLabel,
 };
 
 const options = getSets().map(mapSetToOption);

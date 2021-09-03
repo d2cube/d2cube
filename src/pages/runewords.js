@@ -10,7 +10,6 @@ import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
 import Labelled from '../components/ui/labelled.js';
 import SocketedItemSelect from '../components/socketed-item-select.js';
-import {SEARCH_FILTERS} from '../constants/index.js';
 
 const Page = () => {
   const [runes, setRunes] = useState([]);
@@ -24,7 +23,6 @@ const Page = () => {
 
   const handleChangeRunewordId = (updatedRunewordId) => {
     setRunewordId(updatedRunewordId);
-    setItemId(null);
 
     if (updatedRunewordId) {
       const updatedRuneword = getRuneword(updatedRunewordId);
@@ -36,36 +34,22 @@ const Page = () => {
     }
   };
 
-  const runeword = getRuneword(runes.join(''));
-
-  const itemFilters = runeword
-    ? [
-        SEARCH_FILTERS.createContainsTypes(runeword?.types),
-        SEARCH_FILTERS.createGreaterThanEqualSocketCount(
-          runeword?.runes.length,
-        ),
-      ]
-    : [];
-
   const left = (
-    <Frame help={help} size="s" title="Socketing Runewords">
+    <Frame help={help} size="s" title="Creating Runewords">
       <Layout direction="column" spacing="l">
+        <Labelled label="Item Base">
+          <SocketedItemSelect value={itemId} onChange={setItemId} />
+        </Labelled>
         <Labelled label="Runes">
           <RuneSelect value={runes} onChange={handleChangeRunes} />
         </Labelled>
         <Labelled label="Runeword">
           <RunewordSelect
             isMenuOpen
+            itemId={itemId}
             runes={runes.join('')}
             value={runewordId}
             onChange={handleChangeRunewordId}
-          />
-        </Labelled>
-        <Labelled label="Socketed Item">
-          <SocketedItemSelect
-            filters={itemFilters}
-            value={itemId}
-            onChange={setItemId}
           />
         </Labelled>
       </Layout>
@@ -82,14 +66,12 @@ const Page = () => {
 };
 
 const help = (
-  <div>
-    <p>Explore how to create and spell Runewords with valid runes and items.</p>
-    <ul>
-      <li>Applied changes can be previewed by the Runegram.</li>
-      <li>Applied runes will filter valid Runewords.</li>
-      <li>Applied Runewords will filter valid items.</li>
-    </ul>
-  </div>
+  <ol>
+    <li>Select an item base</li>
+    <li>Select runes (in order)</li>
+    <li>Select a valid filtered Runeword</li>
+    <li>Preview with the Runegram</li>
+  </ol>
 );
 
 export default Page;

@@ -4,9 +4,13 @@ import ReactSelect, {
   createFilter,
 } from 'react-windowed-select';
 import {k, prop} from 'uinix-fp';
+import {Element} from 'uinix-ui';
 
 import {degroupBy, groupBy, isEmpty} from '../../utils/fp.js';
-import {components, styles} from './react-select-overrides.js';
+import {
+  components as overrideComponents,
+  styles,
+} from './react-select-overrides.js';
 
 const Select = ({
   group = undefined,
@@ -27,7 +31,7 @@ const Select = ({
 
     const groupedOptions = groupBy(group.key)(initialOptions);
     return Object.entries(groupedOptions).map(([groupValue, options]) => ({
-      label: group.labels[groupValue],
+      label: group.getLabel(groupValue),
       value: groupValue,
       options,
     }));
@@ -43,6 +47,15 @@ const Select = ({
   const optionValue = isMulti
     ? value.map((v) => optionsMap[v])
     : optionsMap[value];
+
+  const components = useMemo(
+    () => ({
+      ...overrideComponents,
+      Menu: createMenuComponent(isMenuOpen),
+      Option: createOptionComponent(renderOption),
+    }),
+    [isMenuOpen, renderOption],
+  );
 
   const handleChange = (updatedOption, state) => {
     if (onChange) {
@@ -74,11 +87,9 @@ const Select = ({
     <ReactSelect
       isClearable
       isSearchable
+      hideSelectedOptions={false}
       isMulti={isMulti}
-      components={{
-        ...components,
-        Option: createOptionComponent(renderOption),
-      }}
+      components={components}
       filterOption={filterOption}
       formatOptionLabel={formatOptionLabel}
       menuIsOpen={isMenuOpen}
@@ -96,16 +107,29 @@ const propByValue = prop('value');
 
 const defaultRenderOption = prop('label');
 
-const createOptionComponent = (renderOption) => (props) => {
-  const {children, data, selectProps, ...rest} = props;
+const createMenuComponent = (isMenuOpen) => (props) => {
+  const {children, ...rest} = props;
   return (
-    <rsComponents.Option {...rest}>
+    <rsComponents.Menu {...rest}>
+      <Element position="relative" z={isMenuOpen ? undefined : 1}>
+        {children}
+      </Element>
+    </rsComponents.Menu>
+  );
+};
+
+const createOptionComponent = (renderOption) => (props) => {
+  const {children, data, innerProps, selectProps, ...rest} = props;
+  const {onClick} = innerProps;
+  return (
+    <rsComponents.Option {...rest} innerProps={{onClick}}>
       {renderOption({option: data, query: selectProps.inputValue})}
     </rsComponents.Option>
   );
 };
 
 const filterOption = createFilter({
+  ignoreAccents: false,
   matchFrom: 'start',
 });
 
