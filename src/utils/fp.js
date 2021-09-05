@@ -30,6 +30,8 @@ export const groupBy = (key) => (xs) =>
     return acc;
   }, {});
 
+export const keyOn = (key) => (x) => ({[key]: x});
+
 export const fill = (n) => (f) => range(0)(n).map(f);
 
 export const fillNull = (n) => fill(n)(k(null));

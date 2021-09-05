@@ -7,12 +7,13 @@ import RunesName from './runes-name.js';
 import BrandText from './ui/brand-text.js';
 
 const RunewordName = ({
-  query = '',
+  item,
   layout = 'horizontal',
+  query = '',
   runeQuery = '',
   runeword,
 }) => (
-  <ItemTooltip description={resolveRunewordProperties(runeword)}>
+  <ItemTooltip description={resolveRunewordProperties(runeword, item)}>
     <Layout
       align="center"
       direction={layout === 'horizontal' ? 'row' : 'column'}

@@ -3,10 +3,9 @@ import ReactSelect, {
   components as rsComponents,
   createFilter,
 } from 'react-windowed-select';
-import {k, prop} from 'uinix-fp';
-import {Element} from 'uinix-ui';
+import {k, pipe, prop} from 'uinix-fp';
 
-import {degroupBy, groupBy, isEmpty} from '../../utils/fp.js';
+import {degroupBy, groupBy, isEmpty, keyOn} from '../../utils/fp.js';
 import {
   components as overrideComponents,
   styles,
@@ -16,6 +15,7 @@ const Select = ({
   group = undefined,
   isMenuOpen = undefined,
   isMulti = false,
+  max = undefined,
   noOptionsMessage = undefined,
   options: initialOptions,
   placeholder = 'Search...',
@@ -51,10 +51,9 @@ const Select = ({
   const components = useMemo(
     () => ({
       ...overrideComponents,
-      Menu: createMenuComponent(isMenuOpen),
       Option: createOptionComponent(renderOption),
     }),
-    [isMenuOpen, renderOption],
+    [renderOption],
   );
 
   const handleChange = (updatedOption, state) => {
@@ -91,7 +90,10 @@ const Select = ({
       isMulti={isMulti}
       components={components}
       filterOption={filterOption}
-      formatOptionLabel={formatOptionLabel}
+      formatOptionLabel={
+        formatOptionLabel || pipe([keyOn('option'), renderOption])
+      }
+      max={max}
       menuIsOpen={isMenuOpen}
       noOptionsMessage={k(noOptionsMessage)}
       options={options}
@@ -106,17 +108,6 @@ const Select = ({
 const propByValue = prop('value');
 
 const defaultRenderOption = prop('label');
-
-const createMenuComponent = (isMenuOpen) => (props) => {
-  const {children, ...rest} = props;
-  return (
-    <rsComponents.Menu {...rest}>
-      <Element position="relative" z={isMenuOpen ? undefined : 1}>
-        {children}
-      </Element>
-    </rsComponents.Menu>
-  );
-};
 
 const createOptionComponent = (renderOption) => (props) => {
   const {children, data, innerProps, selectProps, ...rest} = props;

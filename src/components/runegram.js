@@ -2,7 +2,8 @@ import {Element} from 'uinix-ui';
 
 import {search} from '../api/index.js';
 import {SEARCH_FILTERS} from '../constants/index.js';
-import {count} from '../utils/fp.js';
+import {BasePropertyType} from '../enums/index.js';
+import {count, fillNull} from '../utils/fp.js';
 import {resolveItemRuneword} from '../utils/resolvers/resolve-item-runeword.js';
 import {rollItem} from '../utils/roll-item.js';
 import Item from './item.js';
@@ -17,16 +18,16 @@ const Runegram = ({itemId, runes}) => {
   let item;
   let runeword;
   if (itemId) {
-    item = itemId && rollItem({id: itemId, sockets: runes});
+    item = rollItem({id: itemId});
+    item.sockets =
+      runes.length === 0
+        ? fillNull(item.properties.base[BasePropertyType.MaxSockets])
+        : runes;
     runeword = resolveItemRuneword(runes.join(''))(item);
   }
 
   return (
-    <Frame
-      alignTitle="center"
-      help="The Runegram visualizes socketed runes on an item.  When valid runes spell a runeword, this is visually indicated in the Runegram."
-      title="Runegram"
-    >
+    <Frame alignTitle="center" help={help} title="Runegram">
       <Element position="relative" p="l">
         <Element styleProps={{isActive: runeword}} variant="pentagram" />
         <CircleLayout radius={15}>
@@ -41,7 +42,7 @@ const Runegram = ({itemId, runes}) => {
         </CircleLayout>
         <Element pt="50%" variant="absolute.center">
           {runeword ? (
-            <RunewordName layout="vertical" runeword={runeword} />
+            <RunewordName item={item} layout="vertical" runeword={runeword} />
           ) : item && runes.length === 0 ? (
             <BrandText text="Select runes" />
           ) : (
@@ -61,5 +62,21 @@ const Runegram = ({itemId, runes}) => {
 };
 
 const allRunes = search([SEARCH_FILTERS.isTypeRune]);
+
+const help = (
+  <div>
+    <p>The Runegram visualizes socketed runes on an item.</p>
+    <p>
+      A selected item base of choice sits in the center of the Runegram. Runes
+      are laid out in a circle in order of their quality and become active when
+      they are selected. You can conveniently estimate the cost of a Runeword by
+      observing its relative placement in the Runegram.
+    </p>
+    <p>
+      The Runegram becomes active when a Runeword is spelled with valid runes on
+      an appropriate item.
+    </p>
+  </div>
+);
 
 export default Runegram;

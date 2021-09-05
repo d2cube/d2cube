@@ -1,8 +1,8 @@
-import {humanize} from '../fp.js';
 import {BasePropertyType} from '../../enums/base-property-type.js';
+import {getItemTypeLabel} from '../get-item-type-label.js';
 import {resolveItemProperty} from './resolve-item-property.js';
 
-export const resolveRunewordProperties = (runeword) => {
+export const resolveRunewordProperties = (runeword, item) => {
   const {id, name, properties, types} = runeword;
   const {base: baseProperties, magic: magicProperties} = properties;
   const requiredLevel = resolveItemProperty()({
@@ -25,9 +25,20 @@ export const resolveRunewordProperties = (runeword) => {
     resolved.push({text, color: 'item.magic'});
   });
 
-  resolved.push(null, {
-    text: types.map(humanize).join('\n'),
-    color: 'item.socketed',
+  types.forEach((type) => {
+    const typeLabel = getItemTypeLabel(type);
+    const text =
+      type === item?.type ? (
+        <mark>
+          {item.name} ({typeLabel})
+        </mark>
+      ) : (
+        typeLabel
+      );
+    resolved.push({
+      text,
+      color: 'item.socketed',
+    });
   });
 
   return resolved;

@@ -20,7 +20,7 @@ const Page = () => {
       isFixedHeight
       help="Search and select a Set to preview it in the inventory."
       size="m"
-      title="Select Set"
+      title="Preview Item Sets"
     >
       <Layout minH="0" spacing="l">
         <Layout flex="1">

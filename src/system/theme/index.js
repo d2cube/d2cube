@@ -109,7 +109,7 @@ const sizes = {
   },
   frame: {
     height: {
-      inventory: `${slotSize * 14 + 20}px`,
+      inventory: slotSize * 14,
     },
     width: {
       s: '400px',

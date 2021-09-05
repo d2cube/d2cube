@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
-import {getRuneword} from '../api/index.js';
+import {getItem, getRuneword} from '../api/index.js';
 import PageLayout from '../components/page-layout.js';
 import Runegram from '../components/runegram.js';
 import RuneSelect from '../components/rune-select.js';
@@ -10,11 +10,18 @@ import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
 import Labelled from '../components/ui/labelled.js';
 import SocketedItemSelect from '../components/socketed-item-select.js';
+import {BasePropertyType} from '../enums/index.js';
 
 const Page = () => {
   const [runes, setRunes] = useState([]);
   const [runewordId, setRunewordId] = useState(null);
   const [itemId, setItemId] = useState(null);
+
+  const handleChangeItemId = (updatedItemId) => {
+    setItemId(updatedItemId);
+    setRunes([]);
+    setRunewordId(null);
+  };
 
   const handleChangeRunes = (updatedRunes) => {
     setRunes(updatedRunes);
@@ -34,19 +41,30 @@ const Page = () => {
     }
   };
 
+  let item;
+  let maxSocketsCount;
+  if (itemId) {
+    item = getItem(itemId);
+    maxSocketsCount = item.properties.base[BasePropertyType.MaxSockets];
+  }
+
   const left = (
     <Frame help={help} size="s" title="Creating Runewords">
       <Layout direction="column" spacing="l">
         <Labelled label="Item Base">
-          <SocketedItemSelect value={itemId} onChange={setItemId} />
+          <SocketedItemSelect value={itemId} onChange={handleChangeItemId} />
         </Labelled>
         <Labelled label="Runes">
-          <RuneSelect value={runes} onChange={handleChangeRunes} />
+          <RuneSelect
+            max={maxSocketsCount}
+            value={runes}
+            onChange={handleChangeRunes}
+          />
         </Labelled>
         <Labelled label="Runeword">
           <RunewordSelect
-            isMenuOpen
             itemId={itemId}
+            maxSocketsCount={maxSocketsCount}
             runes={runes.join('')}
             value={runewordId}
             onChange={handleChangeRunewordId}
@@ -66,12 +84,12 @@ const Page = () => {
 };
 
 const help = (
-  <ol>
+  <ul>
     <li>Select an item base</li>
     <li>Select runes (in order)</li>
     <li>Select a valid filtered Runeword</li>
     <li>Preview with the Runegram</li>
-  </ol>
+  </ul>
 );
 
 export default Page;

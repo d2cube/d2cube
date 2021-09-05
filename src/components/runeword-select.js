@@ -7,51 +7,56 @@ import {getItemTypeLabel} from '../utils/get-item-type-label.js';
 import RunewordName from './runeword-name.js';
 import Select from './ui/select.js';
 
-const RunewordSelect = ({
-  isMenuOpen = undefined,
-  itemId,
-  runes,
-  value,
-  onChange,
-}) => {
+const RunewordSelect = ({itemId, maxSocketsCount, runes, value, onChange}) => {
   const item = getItem(itemId);
 
   const options = useMemo(
-    () => runewords.filter(tests({item, runes})).map(mapRunewordToOption),
-    [item, runes],
+    () =>
+      runewords
+        .filter(tests({maxSocketsCount, item, runes}))
+        .map(mapRunewordToOption),
+    [maxSocketsCount, item, runes],
   );
 
-  const placeholder = getPlaceholder({item, matchCount: options.length, runes});
+  const placeholder = getPlaceholder({item, runes});
 
   return (
     <Select
-      isMenuOpen={isMenuOpen}
       noOptionsMessage="No runewords found."
       options={options}
       placeholder={placeholder}
       value={value}
-      renderOption={createRenderOption(runes)}
+      renderOption={createRenderOption({item, runes})}
       onChange={onChange}
     />
   );
 };
 
 const tests =
-  ({item, runes}) =>
+  ({maxSocketsCount, item, runes}) =>
   (runeword) =>
     and([
       () => new RegExp(runes + '([^a-z]|[^a-z]?$)').test(runeword.id),
       () => (item ? runeword.types.includes(item.type) : true),
+      () =>
+        maxSocketsCount > 0 ? runeword.runes.length <= maxSocketsCount : true,
     ])();
 
 const createRenderOption =
-  (runes) =>
+  ({item, runes}) =>
   ({option, query}) =>
-    <RunewordName query={query} runeQuery={runes} runeword={option.data} />;
+    (
+      <RunewordName
+        item={item}
+        query={query}
+        runeQuery={runes}
+        runeword={option.data}
+      />
+    );
 
-const getPlaceholder = ({item, matchCount, runes}) =>
+const getPlaceholder = ({item, runes}) =>
   pipe([
-    concat(matchCount ? 'Search' : 'No'),
+    concat('Search'),
     concat(item ? getItemTypeLabel(item.type) : null),
     concat('Runewords'),
     concat(runes ? `with '${runes}'` : null),

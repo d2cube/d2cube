@@ -22,7 +22,7 @@ const Page = () => {
           <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>. The
           site is built with{' '}
           <ExternalLink href={UrlType.UinixUi}>uinix-ui</ExternalLink> and
-          served as a static site via{' '}
+          served statically via{' '}
           <ExternalLink href={UrlType.NextJs}>Next.js</ExternalLink>.
         </p>
       </div>
@@ -33,16 +33,17 @@ const Page = () => {
           <li>Open-source</li>
           <li>(Ads-)Free</li>
           <li>Public API</li>
+          <li>Pure static site</li>
           <li>Searchable and complete item/sets/runewords database</li>
           <li>Unique companion experience adopting in-game UIUX</li>
           <li>
             Computational validation through the UI
             <ul>
               <li>
-                <em>What can I cube given these items?</em>
+                <em>What can I cube given these components?</em>
               </li>
               <li>
-                <em>What Runewords can I make given these items?</em>
+                <em>What Runewords can I make given these components?</em>
               </li>
             </ul>
           </li>
@@ -51,15 +52,15 @@ const Page = () => {
             <ul>
               <li>Cubing</li>
               <li>Socketing</li>
-              <li>Gambling</li>
-              <li>Quest enhancements (e.g. Larzuk, Anya, Charsi)</li>
             </ul>
           </li>
           <li>
-            [Upcoming] Character simulation
+            Upcoming
             <ul>
-              <li>Stats</li>
-              <li>Skills</li>
+              <li>Character Stats</li>
+              <li>Character Skills</li>
+              <li>Gambling</li>
+              <li>Quest enhancements (e.g. Larzuk, Anya, Charsi)</li>
             </ul>
           </li>
         </ul>

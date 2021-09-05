@@ -1,5 +1,8 @@
+import {components as rsComponents} from 'react-windowed-select';
 import {k, props} from 'uinix-fp';
-import {useTheme} from 'uinix-ui';
+import {Element, useTheme} from 'uinix-ui';
+
+import BrandText from './brand-text.js';
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const theme = useTheme();
@@ -28,6 +31,26 @@ const themedStyles = {
 export const components = {
   DropdownIndicator: k(null),
   IndicatorSeparator: k(null),
+  Menu: (props) => {
+    const {children, getValue, selectProps, ...rest} = props;
+    const {isMulti, max} = selectProps;
+    const hasExceededMaxMultiSelection =
+      isMulti && max && getValue().length >= max;
+    return (
+      <rsComponents.Menu {...rest}>
+        {hasExceededMaxMultiSelection ? (
+          <Element p="s">
+            <BrandText
+              color="text.muted"
+              text={`Only ${max} selections allowed`}
+            />
+          </Element>
+        ) : (
+          children
+        )}
+      </rsComponents.Menu>
+    );
+  },
 };
 
 export const styles = {
@@ -69,10 +92,11 @@ export const styles = {
   }),
   menuList: () => ({
     backgroundColor: themedStyles.interfaceBackground,
-    maxHeight: 300,
+    maxHeight: 400,
     overflowY: 'auto',
   }),
   menu: () => ({
+    backgroundColor: themedStyles.interfaceBackground,
     border: themedStyles.bordered,
     color: themedStyles.textPrimaryColor,
     left: 0,
@@ -82,6 +106,7 @@ export const styles = {
     '> div': {
       padding: 0,
     },
+    zIndex: 1,
   }),
   multiValue: () => ({
     backgroundColor: themedStyles.brandPrimaryColor,
@@ -120,5 +145,6 @@ export const styles = {
   }),
   singleValue: () => ({
     color: themedStyles.textPrimaryColor,
+    flex: 'auto',
   }),
 };

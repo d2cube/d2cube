@@ -5,11 +5,11 @@ import Select from './ui/select.js';
 import ItemName from './item-name.js';
 
 const ItemSelect = ({
-  isMenuOpen = undefined,
   isMulti = false,
   filters = [],
   formatOptionLabel = undefined,
   group = undefined,
+  max = undefined,
   noOptionsMessage = 'No items found.',
   placeholder = 'Search items...',
   value,
@@ -21,11 +21,11 @@ const ItemSelect = ({
 
   return (
     <Select
-      isMenuOpen={isMenuOpen}
       isMulti={isMulti}
       formatOptionLabel={formatOptionLabel}
       group={group}
       options={options}
+      max={max}
       noOptionsMessage={noOptionsMessage}
       placeholder={placeholder}
       value={value}
