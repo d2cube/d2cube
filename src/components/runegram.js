@@ -2,8 +2,7 @@ import {Element} from 'uinix-ui';
 
 import {search} from '../api/index.js';
 import {SEARCH_FILTERS} from '../constants/index.js';
-import {BasePropertyType} from '../enums/index.js';
-import {count, fillNull} from '../utils/fp.js';
+import {count} from '../utils/fp.js';
 import {resolveItemRuneword} from '../utils/resolvers/resolve-item-runeword.js';
 import {rollItem} from '../utils/roll-item.js';
 import Item from './item.js';
@@ -14,15 +13,11 @@ import BrandText from './ui/brand-text.js';
 import CircleLayout from './ui/circle-layout.js';
 import Frame from './ui/frame.js';
 
-const Runegram = ({itemId, runes}) => {
-  let item;
+const Runegram = ({item, runes}) => {
   let runeword;
-  if (itemId) {
-    item = rollItem({id: itemId});
-    item.sockets =
-      runes.length === 0
-        ? fillNull(item.properties.base[BasePropertyType.MaxSockets])
-        : runes;
+  if (item) {
+    item.sockets = item.sockets.map((_, i) => runes[i]);
+    item = rollItem(item);
     runeword = resolveItemRuneword(runes.join(''))(item);
   }
 

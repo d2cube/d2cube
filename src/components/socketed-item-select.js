@@ -1,6 +1,7 @@
 import {SEARCH_FILTERS} from '../constants/index.js';
 import {BasePropertyType} from '../enums/base-property-type.js';
 import {getItemTypeLabel} from '../utils/get-item-type-label.js';
+import {getSocketedLabel} from '../utils/get-socketed-label.js';
 import ItemSelect from './item-select.js';
 import BrandText from './ui/brand-text.js';
 
@@ -17,7 +18,7 @@ const SocketedItemSelect = ({value, onChange}) => (
 const renderExtra = (item) => (
   <BrandText
     color="text.muted"
-    text={`${item.properties.base[BasePropertyType.MaxSockets]} max sockets`}
+    text={getSocketedLabel(item.properties.base[BasePropertyType.MaxSockets])}
   />
 );
 

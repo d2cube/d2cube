@@ -3,7 +3,7 @@ import ReactSelect, {
   components as rsComponents,
   createFilter,
 } from 'react-windowed-select';
-import {k, pipe, prop} from 'uinix-fp';
+import {k, pipe, props} from 'uinix-fp';
 
 import {degroupBy, groupBy, isEmpty, keyOn} from '../../utils/fp.js';
 import {
@@ -15,6 +15,7 @@ const Select = ({
   group = undefined,
   isMenuOpen = undefined,
   isMulti = false,
+  isSearchable = true,
   max = undefined,
   noOptionsMessage = undefined,
   options: initialOptions,
@@ -65,19 +66,19 @@ const Select = ({
             break;
           case 'deselect-option':
           case 'select-option':
-            onChange([...value, propByValue(state.option)]);
+            onChange([...value, getValue(state.option)]);
             break;
           case 'pop-value':
             onChange(value.slice(0, -1));
             break;
           case 'remove-value':
-            onChange(updatedOption.map(propByValue));
+            onChange(updatedOption.map(getValue));
             break;
           default:
             break;
         }
       } else {
-        onChange(propByValue(updatedOption));
+        onChange(getValue(updatedOption));
       }
     }
   };
@@ -85,7 +86,7 @@ const Select = ({
   return (
     <ReactSelect
       isClearable
-      isSearchable
+      isSearchable={isSearchable}
       hideSelectedOptions={false}
       isMulti={isMulti}
       components={components}
@@ -105,9 +106,9 @@ const Select = ({
   );
 };
 
-const propByValue = prop('value');
+const getValue = (x) => (isEmpty(x) ? null : props('value')(x));
 
-const defaultRenderOption = prop('label');
+const defaultRenderOption = props('option.label');
 
 const createOptionComponent = (renderOption) => (props) => {
   const {children, data, innerProps, selectProps, ...rest} = props;

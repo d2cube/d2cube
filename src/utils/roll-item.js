@@ -5,10 +5,16 @@ import {getItem} from '../api/index.js';
 import {calcItemStats} from './calc-item-stats.js';
 
 export const rollItem = (data) => {
-  const item = merge(getItem(data.id))(data);
+  const item = getItem(data.id);
+
+  if (!item) {
+    return item;
+  }
+
+  const rolledItem = merge(item)(data);
   return {
-    ...item,
-    stats: calcItemStats(item),
+    ...rolledItem,
+    stats: calcItemStats(rolledItem),
     uuid: uuid(),
   };
 };

@@ -1,4 +1,4 @@
-import {isPlainObject, k, props} from 'uinix-fp';
+import {isPlainObject, k, merge, props} from 'uinix-fp';
 
 export const append = (x) => (y) => y + x;
 
@@ -12,6 +12,8 @@ export const cb = (f) => (x) => isEmpty(x) ? x : f(x);
 
 export const concat = (x) => (xs) =>
   isEmpty(x) ? xs : xs.concat(Array.isArray(x) ? x : [x]);
+
+export const clone = (x) => (isPlainObject(x) ? merge({})(x) : x);
 
 export const normalize = (key) => (xs) =>
   Object.fromEntries(xs.map((x) => [x[key], x]));
@@ -32,7 +34,7 @@ export const groupBy = (key) => (xs) =>
 
 export const keyOn = (key) => (x) => ({[key]: x});
 
-export const fill = (n) => (f) => range(0)(n).map(f);
+export const fill = (n) => (f) => range(1)(n).map(f);
 
 export const fillNull = (n) => fill(n)(k(null));
 
@@ -68,7 +70,7 @@ export const percent = (x) => (x + 100) / 100;
 export const prepend = (x2) => (x1) => `${x1}${x2}`;
 
 export const range = (x1) => (x2) =>
-  Array.from({length: x2 - x1}).map((_, i) => i + x1);
+  Array.from({length: x2 - x1 + 1}).map((_, i) => i + x1);
 
 // TODO: reference S.sum
 export const sum = (xs) => {
