@@ -1,13 +1,9 @@
 import {getSets} from '../api/index.js';
-import {getItemTierTypeLabel} from '../utils/get-item-tier-type-label.js';
+import {getTierLabel} from '../utils/get-tier-label.js';
 import SetName from './set-name.js';
 import Select from './ui/select.js';
 
-const SetSelect = ({
-  isMenuOpen = undefined,
-  value = undefined,
-  onChange = undefined,
-}) => (
+const SetSelect = ({isMenuOpen = undefined, value, onChange}) => (
   <Select
     group={group}
     isMenuOpen={isMenuOpen}
@@ -32,7 +28,7 @@ const mapSetToOption = (set) => ({
 
 const group = {
   key: 'data.tier',
-  getLabel: getItemTierTypeLabel,
+  getLabel: getTierLabel,
 };
 
 const options = getSets().map(mapSetToOption);

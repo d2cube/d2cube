@@ -1,3 +1,5 @@
+import {chevronLeft} from './chevron-left.js';
+import {chevronRight} from './chevron-right.js';
 import {code} from './code.js';
 import {cube} from './cube.js';
 import {database} from './database.js';
@@ -19,6 +21,8 @@ import {users} from './users.js';
 
 export default {
   cube,
+  chevronLeft,
+  chevronRight,
   discord,
   help,
   github,

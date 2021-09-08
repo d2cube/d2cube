@@ -17,7 +17,7 @@ export {};
  * @typedef {import('../enums/index.js').EquipSlotType} EquipSlotType
  * @typedef {import('../enums/index.js').GameVersionType} GameVersionType
  * @typedef {import('../enums/index.js').GemClassType} GemClassType
- * @typedef {import('../enums/index.js').GemQualityType} GemQualityType
+ * @typedef {import('../enums/index.js').GemTierType} GemTierType
  * @typedef {import('../enums/index.js').ItemFirstNameType} ItemFirstNameType
  * @typedef {import('../enums/index.js').ItemQualityType} ItemQualityType
  * @typedef {import('../enums/index.js').ItemSecondNameType} ItemSecondNameType

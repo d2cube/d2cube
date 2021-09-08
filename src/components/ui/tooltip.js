@@ -1,5 +1,5 @@
 import Tippy from '@tippyjs/react';
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import 'tippy.js/dist/tippy.css';
 

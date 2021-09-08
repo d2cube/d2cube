@@ -1,7 +1,6 @@
 import {k} from 'uinix-fp';
 import {Element, Layout, useStyles} from 'uinix-ui';
 
-import {appendTierLabel} from '../utils/append-tier-label.js';
 import {mark} from '../utils/mark.js';
 import {resolveItemColor} from '../utils/resolvers/resolve-item-color.js';
 import {resolveItemDescription} from '../utils/resolvers/resolve-item-description.js';
@@ -10,10 +9,15 @@ import ItemTooltip from './item-tooltip.js';
 import BrandText from './ui/brand-text.js';
 
 // TODO: organize and document logic in relevant utils
-const ItemName = ({item, query = '', renderExtra = k(null)}) => {
+const ItemName = ({
+  item,
+  query = '',
+  shouldDisplayImage = false,
+  renderExtra = k(null),
+}) => {
   const styles = useStyles();
 
-  const {id, imageId, name, tier} = item;
+  const {id, imageId, name} = item;
   const color = resolveItemColor(item);
   const description = resolveItemDescription(item);
 
@@ -29,12 +33,15 @@ const ItemName = ({item, query = '', renderExtra = k(null)}) => {
   );
 
   return (
-    <ItemTooltip description={description} preview={preview}>
+    <ItemTooltip
+      description={description}
+      preview={shouldDisplayImage ? null : preview}
+    >
       <Layout align="center" justify="space-between" spacing="s">
-        <BrandText
-          color={color}
-          text={mark(appendTierLabel(tier)(name), query)}
-        />
+        <Layout direction="column" spacing="m">
+          <BrandText color={color} text={mark(name, query)} />
+          {shouldDisplayImage && preview}
+        </Layout>
         {renderExtra(item)}
       </Layout>
     </ItemTooltip>

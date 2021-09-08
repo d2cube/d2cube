@@ -31,7 +31,7 @@ const colors = {
     socketed: '#484848',
     crafted: '#FFA800',
     magic: '#057AF0',
-    normal: 'white',
+    normal: '#fdfad9',
     rare: '#FFCC00',
     runeword: brandColor,
     rune: '#FFA800',
@@ -58,8 +58,8 @@ const fontFamilies = {
 };
 
 const fontSizes = {
-  xs: '0.75rem',
-  s: '0.85rem',
+  xs: '0.8rem',
+  s: '0.9rem',
   m: '1rem',
   l: '1.25rem',
   xl: '1.5rem',
@@ -112,8 +112,9 @@ const sizes = {
       inventory: slotSize * 14,
     },
     width: {
-      s: '400px',
+      s: '300px',
       m: '600px',
+      l: '900px',
     },
   },
   globe: '120px',

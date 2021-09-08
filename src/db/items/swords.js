@@ -1,5 +1,6 @@
 import {
   BasePropertyType,
+  ItemQualityType,
   ItemTierType,
   ItemType,
   SocketCategoryType,
@@ -10,6 +11,7 @@ import ids from '../ids/index.js';
 
 export default normalizeItems({
   class: WeaponClassType.Sword,
+  quality: ItemQualityType.Normal,
   socketCategory: SocketCategoryType.Weapon,
   type: ItemType.Sword,
 })([

@@ -1,6 +1,7 @@
 import {
   ArmorClassType,
   BasePropertyType,
+  ItemQualityType,
   ItemTierType,
   ItemType,
   SocketCategoryType,
@@ -9,6 +10,7 @@ import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
 export default normalizeItems({
+  quality: ItemQualityType.Normal,
   socketCategory: SocketCategoryType.Shield,
   type: ItemType.Shield,
 })([
@@ -16,7 +18,7 @@ export default normalizeItems({
     id: ids.Buckler,
     name: 'Buckler',
     size: [2, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -32,7 +34,7 @@ export default normalizeItems({
     id: ids.SmallShield,
     name: 'Small Shield',
     size: [2, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -48,7 +50,7 @@ export default normalizeItems({
     id: ids.LargeShield,
     name: 'Large Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -64,7 +66,7 @@ export default normalizeItems({
     id: ids.KiteShield,
     name: 'Kite Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -80,7 +82,7 @@ export default normalizeItems({
     id: ids.SpikedShield,
     name: 'Spiked Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -96,7 +98,7 @@ export default normalizeItems({
     id: ids.BoneShield,
     name: 'Bone Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -112,7 +114,7 @@ export default normalizeItems({
     id: ids.TowerShield,
     name: 'Tower Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -128,7 +130,7 @@ export default normalizeItems({
     id: ids.GothicShield,
     name: 'Gothic Shield',
     size: [4, 2],
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -144,7 +146,7 @@ export default normalizeItems({
     id: ids.Defender,
     name: 'Defender',
     size: [2, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.Buckler,
     imageId: ids.Buckler,
@@ -163,7 +165,7 @@ export default normalizeItems({
     id: ids.RoundShield,
     name: 'Round Shield',
     size: [2, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.SmallShield,
     imageId: ids.SmallShield,
@@ -182,7 +184,7 @@ export default normalizeItems({
     id: ids.Scutum,
     name: 'Scutum',
     size: [3, 2],
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.LargeShield,
     imageId: ids.LargeShield,
@@ -201,7 +203,7 @@ export default normalizeItems({
     id: ids.DragonShield,
     name: 'Dragon Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.KiteShield,
     imageId: ids.KiteShield,
@@ -220,7 +222,7 @@ export default normalizeItems({
     id: ids.BarbedShield,
     name: 'Barbed Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.SpikedShield,
     imageId: ids.SpikedShield,
@@ -239,7 +241,7 @@ export default normalizeItems({
     id: ids.GrimShield,
     name: 'Grim Shield',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.BoneShield,
     imageId: ids.BoneShield,
@@ -258,7 +260,7 @@ export default normalizeItems({
     id: ids.Pavise,
     name: 'Pavise',
     size: [3, 2],
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     baseId: ids.TowerShield,
     imageId: ids.TowerShield,
@@ -277,7 +279,7 @@ export default normalizeItems({
     id: ids.AncientShield,
     name: 'Ancient Shield',
     size: [4, 2],
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.GothicShield,
     imageId: ids.GothicShield,
@@ -296,7 +298,7 @@ export default normalizeItems({
     id: ids.Heater,
     name: 'Heater',
     size: [2, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.Buckler,
     imageId: ids.Buckler,
@@ -315,7 +317,7 @@ export default normalizeItems({
     id: ids.Luna,
     name: 'Luna',
     size: [2, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.SmallShield,
     imageId: ids.SmallShield,
@@ -334,7 +336,7 @@ export default normalizeItems({
     id: ids.Hyperion,
     name: 'Hyperion',
     size: [3, 2],
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.LargeShield,
     imageId: ids.LargeShield,
@@ -353,7 +355,7 @@ export default normalizeItems({
     id: ids.Monarch,
     name: 'Monarch',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.KiteShield,
     imageId: ids.KiteShield,
@@ -372,7 +374,7 @@ export default normalizeItems({
     id: ids.BladeBarrier,
     name: 'Blade Barrier',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.SpikedShield,
     imageId: ids.SpikedShield,
@@ -391,7 +393,7 @@ export default normalizeItems({
     id: ids.TrollNest,
     name: 'Troll Nest',
     size: [3, 2],
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.BoneShield,
     imageId: ids.BoneShield,
@@ -410,7 +412,7 @@ export default normalizeItems({
     id: ids.Aegis,
     name: 'Aegis',
     size: [3, 2],
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     baseId: ids.TowerShield,
     imageId: ids.TowerShield,
@@ -429,7 +431,7 @@ export default normalizeItems({
     id: ids.Ward,
     name: 'Ward',
     size: [4, 2],
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.GothicShield,
     imageId: ids.GothicShield,

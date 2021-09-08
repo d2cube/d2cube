@@ -2,7 +2,12 @@ import {BasePropertyType, FieldType, OperatorType} from '../enums/index.js';
 import Search from './ui/search.js';
 
 const ItemSearch = ({filters, onChange}) => (
-  <Search schema={schema} filters={filters} onChange={onChange} />
+  <Search
+    placeholder="Search items by applying filters..."
+    schema={schema}
+    filters={filters}
+    onChange={onChange}
+  />
 );
 
 const createFields = () => {

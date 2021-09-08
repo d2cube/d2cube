@@ -1,9 +1,15 @@
-import {BasePropertyType, OperatorType, ItemType} from '../enums/index.js';
+import {
+  BasePropertyType,
+  OperatorType,
+  ItemQualityType,
+  ItemType,
+} from '../enums/index.js';
 
 export const SEARCH_FILTERS = {
   isQualityNormal: {
     field: 'quality',
-    operator: OperatorType.Empty,
+    operator: OperatorType.Equals,
+    value: ItemQualityType.Normal,
   },
   isTypeRune: {
     field: 'type',

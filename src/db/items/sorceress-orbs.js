@@ -1,5 +1,6 @@
 import {
   BasePropertyType,
+  ItemQualityType,
   ItemTierType,
   ItemType,
   PlayerClassType,
@@ -10,8 +11,9 @@ import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
 export default normalizeItems({
-  playerClass: PlayerClassType.Sorceress,
   class: WeaponClassType.Staff,
+  playerClass: PlayerClassType.Sorceress,
+  quality: ItemQualityType.Normal,
   socketCategory: SocketCategoryType.Weapon,
   type: ItemType.SorceressOrb,
 })([

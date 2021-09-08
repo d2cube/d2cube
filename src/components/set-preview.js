@@ -9,8 +9,8 @@ import ItemName from './item-name.js';
 
 const SetPreview = ({set}) => (
   <Layout direction="column" px="l" spacing="xl">
-    <Layout direction="column">
-      <BrandText text={set.name} />
+    <Layout align="center" direction="column">
+      <BrandText color="item.unique" text={set.name} />
       {set.items.map((id) => (
         <ItemName key={id} item={rollItem({id})} />
       ))}

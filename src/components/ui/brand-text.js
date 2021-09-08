@@ -5,8 +5,15 @@ const BrandText = ({
   color = undefined,
   fontSize = undefined,
   text,
+  textAlign = undefined,
 }) => (
-  <Text as={as} color={color} fontSize={fontSize} variant="diablo">
+  <Text
+    as={as}
+    color={color}
+    fontFamily="diablo"
+    fontSize={fontSize}
+    textAlign={textAlign}
+  >
     {text}
   </Text>
 );

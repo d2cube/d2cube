@@ -53,8 +53,13 @@ const Page = () => {
     }
   };
 
+  const handleChangeSockets = (updatedSockets) => {
+    setSockets(updatedSockets);
+    setRunes([]);
+  };
+
   const left = (
-    <Frame help={help} size="m" title="Creating Runewords">
+    <Frame help={help} size="m" title="Runewords">
       <Layout minH="0" spacing="l">
         <Layout direction="column" flex="1" spacing="l">
           <Labelled label="Item Base">
@@ -65,7 +70,7 @@ const Page = () => {
               <SocketSelect
                 max={getMaxSockets(item)}
                 value={sockets}
-                onChange={setSockets}
+                onChange={handleChangeSockets}
               />
             </Labelled>
           )}
@@ -107,16 +112,16 @@ const Page = () => {
 const help = (
   <div>
     <p>
-      Use the following interface to explore creating Runewords based on applied
-      filters (item base, sockets, runes).
+      Use the following interface to explore creating Runewords from available
+      item bases, sockets, and runes.
     </p>
     <div>
-      How to use:
+      Instructions:
       <ul>
         <li>Select a socketed item base</li>
         <li>Specify sockets</li>
         <li>Specify runes in order</li>
-        <li>Select a filtered Runeword</li>
+        <li>Select a valid Runeword</li>
         <li>Preview with the Runegram</li>
       </ul>
     </div>

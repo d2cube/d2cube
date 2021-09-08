@@ -75,7 +75,7 @@ const divider = {
 };
 
 const frame = {
-  backgroundImage: 'url(images/ui/stone.jpg)',
+  backgroundImage: 'url(images/ui/stone.png)',
   borderStyle: 'solid',
   borderWidth: 'frame',
   borderImage: 'url(images/ui/frame.png) 100 repeat',

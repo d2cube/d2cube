@@ -1,5 +1,6 @@
 import {
   BasePropertyType,
+  ItemQualityType,
   ItemTierType,
   ItemType,
   WeaponClassType,
@@ -9,6 +10,7 @@ import ids from '../ids/index.js';
 
 export default normalizeItems({
   class: WeaponClassType.Javelin,
+  quality: ItemQualityType.Normal,
   type: ItemType.Javelin,
 })([
   {

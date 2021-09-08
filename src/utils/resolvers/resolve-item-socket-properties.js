@@ -9,12 +9,7 @@ export const resolveItemSocketProperties = (item) => {
     return [];
   }
 
-  return [
-    'Can be inserted into socketed items',
-    null,
-    ...mapSocketPropertyText(item),
-    null,
-  ];
+  return mapSocketPropertyText(item);
 };
 
 const mapSocketPropertyText = (item) => {

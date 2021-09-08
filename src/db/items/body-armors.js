@@ -1,6 +1,7 @@
 import {
   ArmorClassType,
   BasePropertyType,
+  ItemQualityType,
   ItemTierType,
   ItemType,
   SocketCategoryType,
@@ -10,6 +11,7 @@ import ids from '../ids/index.js';
 
 export default normalizeItems({
   size: [3, 2],
+  quality: ItemQualityType.Normal,
   socketCategory: SocketCategoryType.Armor,
   type: ItemType.BodyArmor,
 })([
@@ -17,7 +19,7 @@ export default normalizeItems({
     id: ids.QuiltedArmor,
     name: 'Quilted Armor',
     tier: ItemTierType.Normal,
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     properties: {
       base: {
         [BasePropertyType.BaseDefense]: [8, 11],
@@ -30,7 +32,7 @@ export default normalizeItems({
   {
     id: ids.LeatherArmor,
     name: 'Leather Armor',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -44,7 +46,7 @@ export default normalizeItems({
   {
     id: ids.HardLeatherArmor,
     name: 'Hard Leather Armor',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -58,7 +60,7 @@ export default normalizeItems({
   {
     id: ids.StuddedLeather,
     name: 'Studded Leather',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -72,7 +74,7 @@ export default normalizeItems({
   {
     id: ids.RingMail,
     name: 'Ring Mail',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -86,7 +88,7 @@ export default normalizeItems({
   {
     id: ids.ScaleMail,
     name: 'Scale Mail',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -100,7 +102,7 @@ export default normalizeItems({
   {
     id: ids.ChainMail,
     name: 'Chain Mail',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -114,7 +116,7 @@ export default normalizeItems({
   {
     id: ids.BreastPlate,
     name: 'Breast Plate',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -128,7 +130,7 @@ export default normalizeItems({
   {
     id: ids.SplintMail,
     name: 'Splint Mail',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -142,7 +144,7 @@ export default normalizeItems({
   {
     id: ids.PlateMail,
     name: 'Plate Mail',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -156,7 +158,7 @@ export default normalizeItems({
   {
     id: ids.FieldPlate,
     name: 'Field Plate',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -170,7 +172,7 @@ export default normalizeItems({
   {
     id: ids.GothicPlate,
     name: 'Gothic Plate',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -184,7 +186,7 @@ export default normalizeItems({
   {
     id: ids.LightPlate,
     name: 'Light Plate',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -198,7 +200,7 @@ export default normalizeItems({
   {
     id: ids.FullPlateMail,
     name: 'Full Plate Mail',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -212,7 +214,7 @@ export default normalizeItems({
   {
     id: ids.AncientArmor,
     name: 'Ancient Armor',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Normal,
     properties: {
       base: {
@@ -226,7 +228,7 @@ export default normalizeItems({
   {
     id: ids.GhostArmor,
     name: 'Ghost Armor',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
@@ -243,7 +245,7 @@ export default normalizeItems({
   {
     id: ids.SerpentskinArmor,
     name: 'Serpentskin Armor',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
@@ -260,7 +262,7 @@ export default normalizeItems({
   {
     id: ids.DemonhideArmor,
     name: 'Demonhide Armor',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
@@ -277,7 +279,7 @@ export default normalizeItems({
   {
     id: ids.TrellisedArmor,
     name: 'Trellised Armor',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
@@ -294,7 +296,7 @@ export default normalizeItems({
   {
     id: ids.LinkedMail,
     name: 'Linked Mail',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
@@ -311,7 +313,7 @@ export default normalizeItems({
   {
     id: ids.TigulatedMail,
     name: 'Tigulated Mail',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
@@ -328,7 +330,7 @@ export default normalizeItems({
   {
     id: ids.MeshArmor,
     name: 'Mesh Armor',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.RingMail,
     imageId: ids.RingMail,
@@ -345,7 +347,7 @@ export default normalizeItems({
   {
     id: ids.Cuirass,
     name: 'Cuirass',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
@@ -362,7 +364,7 @@ export default normalizeItems({
   {
     id: ids.RussetArmor,
     name: 'Russet Armor',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
@@ -379,7 +381,7 @@ export default normalizeItems({
   {
     id: ids.TemplarCoat,
     name: 'Templar Coat',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
@@ -396,7 +398,7 @@ export default normalizeItems({
   {
     id: ids.SharktoothArmor,
     name: 'Sharktooth Armor',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
@@ -413,7 +415,7 @@ export default normalizeItems({
   {
     id: ids.EmbossedPlate,
     name: 'Embossed Plate',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
@@ -430,7 +432,7 @@ export default normalizeItems({
   {
     id: ids.MagePlate,
     name: 'Mage Plate',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Exceptional,
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
@@ -447,7 +449,7 @@ export default normalizeItems({
   {
     id: ids.ChaosArmor,
     name: 'Chaos Armor',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Exceptional,
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
@@ -464,7 +466,7 @@ export default normalizeItems({
   {
     id: ids.OrnatePlate,
     name: 'Ornate Plate',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Exceptional,
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,
@@ -481,7 +483,7 @@ export default normalizeItems({
   {
     id: ids.DuskShroud,
     name: 'Dusk Shroud',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.QuiltedArmor,
     imageId: ids.QuiltedArmor,
@@ -498,7 +500,7 @@ export default normalizeItems({
   {
     id: ids.Wyrmhide,
     name: 'Wyrmhide',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.LeatherArmor,
     imageId: ids.LeatherArmor,
@@ -515,7 +517,7 @@ export default normalizeItems({
   {
     id: ids.ScarabHusk,
     name: 'Scarab Husk',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.HardLeatherArmor,
     imageId: ids.HardLeatherArmor,
@@ -532,7 +534,7 @@ export default normalizeItems({
   {
     id: ids.WireFleece,
     name: 'Wire Fleece',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.StuddedLeather,
     imageId: ids.StuddedLeather,
@@ -549,7 +551,7 @@ export default normalizeItems({
   {
     id: ids.DiamondMail,
     name: 'Diamond Mail',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.ChainMail,
     imageId: ids.ChainMail,
@@ -566,7 +568,7 @@ export default normalizeItems({
   {
     id: ids.LoricatedMail,
     name: 'Loricated Mail',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     baseId: ids.ScaleMail,
     imageId: ids.ScaleMail,
@@ -583,7 +585,7 @@ export default normalizeItems({
   {
     id: ids.Boneweave,
     name: 'Boneweave',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.RingMail,
     imageId: ids.RingMail,
@@ -600,7 +602,7 @@ export default normalizeItems({
   {
     id: ids.GreatHauberk,
     name: 'Great Hauberk',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.BreastPlate,
     imageId: ids.BreastPlate,
@@ -617,7 +619,7 @@ export default normalizeItems({
   {
     id: ids.BalrogSkin,
     name: 'Balrog Skin',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.SplintMail,
     imageId: ids.SplintMail,
@@ -634,7 +636,7 @@ export default normalizeItems({
   {
     id: ids.HellforgePlate,
     name: 'Hellforge Plate',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     baseId: ids.PlateMail,
     imageId: ids.PlateMail,
@@ -651,7 +653,7 @@ export default normalizeItems({
   {
     id: ids.KrakenShell,
     name: 'Kraken Shell',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.FieldPlate,
     imageId: ids.FieldPlate,
@@ -668,7 +670,7 @@ export default normalizeItems({
   {
     id: ids.LacqueredPlate,
     name: 'Lacquered Plate',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.GothicPlate,
     imageId: ids.GothicPlate,
@@ -685,7 +687,7 @@ export default normalizeItems({
   {
     id: ids.ArchonPlate,
     name: 'Archon Plate',
-    armorType: ArmorClassType.Light,
+    class: ArmorClassType.Light,
     tier: ItemTierType.Elite,
     baseId: ids.LightPlate,
     imageId: ids.LightPlate,
@@ -702,7 +704,7 @@ export default normalizeItems({
   {
     id: ids.ShadowPlate,
     name: 'Shadow Plate',
-    armorType: ArmorClassType.Heavy,
+    class: ArmorClassType.Heavy,
     tier: ItemTierType.Elite,
     baseId: ids.FullPlateMail,
     imageId: ids.FullPlateMail,
@@ -719,7 +721,7 @@ export default normalizeItems({
   {
     id: ids.SacredArmor,
     name: 'Sacred Armor',
-    armorType: ArmorClassType.Medium,
+    class: ArmorClassType.Medium,
     tier: ItemTierType.Elite,
     baseId: ids.AncientArmor,
     imageId: ids.AncientArmor,

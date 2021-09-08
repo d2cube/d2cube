@@ -15,6 +15,7 @@ const Select = ({
   group = undefined,
   isMenuOpen = undefined,
   isMulti = false,
+  isClearable = true,
   isSearchable = true,
   max = undefined,
   noOptionsMessage = undefined,
@@ -85,7 +86,7 @@ const Select = ({
 
   return (
     <ReactSelect
-      isClearable
+      isClearable={isClearable}
       isSearchable={isSearchable}
       hideSelectedOptions={false}
       isMulti={isMulti}

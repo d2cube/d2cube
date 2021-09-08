@@ -44,6 +44,9 @@ export const humanize = (x) => x.replace(/([A-Z])/g, ' $1').trim();
 
 export const isEmpty = (x) => x === null || x === undefined;
 
+export const isEmptyObject = (x) =>
+  isPlainObject(x) && Object.keys(x).length === 0;
+
 export const isPropValueEqual = (prop) => (value) => (x) =>
   props(prop)(x) === value;
 

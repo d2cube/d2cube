@@ -1,6 +1,7 @@
 import {
   ArmorClassType,
   BasePropertyType,
+  ItemQualityType,
   ItemTierType,
   ItemType,
   PlayerClassType,
@@ -12,6 +13,7 @@ import ids from '../ids/index.js';
 export default normalizeItems({
   class: ArmorClassType.Light,
   playerClass: PlayerClassType.Necromancer,
+  quality: ItemQualityType.Normal,
   size: [2, 2],
   socketCategory: SocketCategoryType.Shield,
   type: ItemType.NecromancerHead,

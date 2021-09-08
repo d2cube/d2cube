@@ -1,8 +1,9 @@
-import {ItemType} from '../../enums/index.js';
+import {ItemQualityType, ItemType} from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
 export default normalizeItems({
+  quality: ItemQualityType.Normal,
   type: ItemType.Charm,
 })([
   {

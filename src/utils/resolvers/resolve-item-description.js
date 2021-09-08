@@ -1,20 +1,14 @@
 import {pipe} from 'uinix-fp';
 
 import {concat} from '../fp.js';
-import {resolveItemBaseProperties} from './resolve-item-base-properties.js';
 import {resolveItemName} from './resolve-item-name.js';
-import {resolveItemQuantity} from './resolve-item-quantity.js';
-import {resolveItemSetProperties} from './resolve-item-set-properties.js';
-import {resolveItemSocketProperties} from './resolve-item-socket-properties.js';
-import {resolveItemStats} from './resolve-item-stats.js';
+import {resolveItemProperties} from './resolve-item-properties.js';
+import {resolveItemSetBonuses} from './resolve-item-set-bonuses.js';
 
 export const resolveItemDescription = (item) =>
   pipe([
     concat(resolveItemName(item)),
-    concat(resolveItemQuantity(item)),
-    concat(resolveItemSocketProperties(item)),
-    concat(resolveItemBaseProperties(item)),
-    concat(resolveItemStats(item)),
-    concat(resolveItemSetProperties(item)),
+    concat(resolveItemProperties(item)),
+    concat(resolveItemSetBonuses(item)),
     concat(item.description),
   ])([]);

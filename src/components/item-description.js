@@ -1,5 +1,7 @@
 import {Fragment} from 'react';
-import {Text} from 'uinix-ui';
+import {Layout} from 'uinix-ui';
+
+import BrandText from './ui/brand-text.js';
 
 const ItemDescription = ({description, level = 0}) =>
   description.map((line, i) => {
@@ -8,16 +10,19 @@ const ItemDescription = ({description, level = 0}) =>
       content = <br />;
     } else if (Array.isArray(line)) {
       content = (
-        <div>
+        <Layout justify="center">
           <ItemDescription description={line} level={level + 1} />
-        </div>
+        </Layout>
       );
     } else {
       const {color, text} = line;
       content = (
-        <Text as={level > 0 ? 'span' : 'div'} color={color}>
-          {typeof line === 'string' ? line : text}
-        </Text>
+        <BrandText
+          as={level > 0 ? 'span' : 'div'}
+          color={color}
+          text={typeof line === 'string' ? line : text}
+          textAlign="center"
+        />
       );
     }
 

@@ -10,8 +10,7 @@ const vendor = {
     color: 'text.primary',
     fontFamily: 'diablo',
     fontSize: 's',
-    padding: 's',
-    textAlign: 'center',
+    padding: 'm',
     whiteSpace: 'pre-wrap',
   },
 };
@@ -57,5 +56,28 @@ export default {
     color: 'text.muted',
     opacity: 1,
     fontFamily: 'diablo',
+  },
+  table: {
+    border: 'bordered',
+    borderCollapse: 'collapse',
+    fontSize: 's',
+    width: '100%',
+  },
+  td: {
+    border: 'bordered',
+    paddingLeft: 'm',
+    paddingRight: 'm',
+  },
+  th: {
+    border: 'bordered',
+    color: 'brand.primary',
+    fontFamily: 'diablo',
+    paddingLeft: 'm',
+    paddingRight: 'm',
+    textAlign: 'left',
+    whiteSpace: 'nowrap',
+  },
+  tr: {
+    verticalAlign: 'top',
   },
 };

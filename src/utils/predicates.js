@@ -1,6 +1,6 @@
 import {
   GemClassType,
-  GemQualityType,
+  GemTierType,
   ItemQualityType,
   BasePropertyType,
   ItemType,
@@ -86,27 +86,15 @@ export const isEliteTier = isTierEqual(ItemTierType.Elite);
 /**
  * Composed
  **/
-export const isChippedGem = and([
-  isQualityEqual(GemQualityType.Chipped),
-  isGem,
-]);
+export const isChippedGem = and([isQualityEqual(GemTierType.Chipped), isGem]);
 
-export const isFlawedGem = and([isQualityEqual(GemQualityType.Flawed), isGem]);
+export const isFlawedGem = and([isQualityEqual(GemTierType.Flawed), isGem]);
 
-export const isFlawlessGem = and([
-  isQualityEqual(GemQualityType.Flawless),
-  isGem,
-]);
+export const isFlawlessGem = and([isQualityEqual(GemTierType.Flawless), isGem]);
 
-export const isRegularGem = and([
-  isQualityEqual(GemQualityType.Regular),
-  isGem,
-]);
+export const isRegularGem = and([isQualityEqual(GemTierType.Regular), isGem]);
 
-export const isPerfectGem = and([
-  isQualityEqual(GemQualityType.Perfect),
-  isGem,
-]);
+export const isPerfectGem = and([isQualityEqual(GemTierType.Perfect), isGem]);
 
 export const isRuby = and([isClassEqual(GemClassType.Ruby), isGem]);
 

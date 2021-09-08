@@ -65,6 +65,7 @@ const resolvers = {
     'Required Dexterity: ',
     item.isEthereal ? x - 10 : x,
   ],
+  [BasePropertyType.Quantity]: (x) => ['Quantity: ', x],
   [BasePropertyType.RequiredLevel]: (x) => ['Required Level: ', x],
   [BasePropertyType.RequiredStrength]: (x, item) => [
     'Required Strength: ',

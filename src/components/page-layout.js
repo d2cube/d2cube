@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Layout, useStyles} from 'uinix-ui';
 
 import Hud from './hud.js';

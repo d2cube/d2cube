@@ -1,4 +1,4 @@
-import React, {createElement as h} from 'react';
+import {createElement as h} from 'react';
 
 import {load} from 'uinix-ui';
 

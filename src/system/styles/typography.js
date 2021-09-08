@@ -57,8 +57,17 @@ const global = {
     maxWidth: 'paragraph.width',
   },
   ul: {
+    listStyleType: 'none',
     margin: 0,
     paddingLeft: 'l',
+  },
+  'ul li:before': {
+    content: "'⍟'",
+    color: 'brand.primary',
+    display: 'inline-block',
+    marginLeft: '-l',
+    paddingLeft: 's',
+    transform: 'rotate(180deg)',
   },
   pre: {
     ...code,

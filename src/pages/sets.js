@@ -18,9 +18,9 @@ const Page = () => {
   const left = (
     <Frame
       isFixedHeight
-      help="Search and select a Set to preview it in the inventory."
+      help="Preview selected item sets in the Inventory."
       size="m"
-      title="Preview Item Sets"
+      title="Item Sets"
     >
       <Layout minH="0" spacing="l">
         <Layout flex="1">

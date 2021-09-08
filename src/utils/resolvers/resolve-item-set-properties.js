@@ -1,10 +1,7 @@
 import {props} from 'uinix-fp';
-import {getSet} from '../../api/index.js';
 
 import {prepend} from '../fp.js';
 import {resolveItemProperty} from './resolve-item-property.js';
-import {resolveSetItems} from './resolve-set-items.js';
-import {resolveSetProperties} from './resolve-set-properties.js';
 
 export const resolveItemSetProperties = (item) => {
   const setProperties = props('properties.set')(item) || [];
@@ -13,8 +10,7 @@ export const resolveItemSetProperties = (item) => {
     return [];
   }
 
-  const set = getSet(item.set);
-  let resolved = [];
+  const resolved = [];
 
   [...setProperties].reverse().forEach((setProperty, i) => {
     if (setProperty) {
@@ -33,13 +29,6 @@ export const resolveItemSetProperties = (item) => {
       });
     }
   });
-
-  resolved = [
-    ...resolved,
-    null,
-    ...resolveSetProperties(set),
-    ...resolveSetItems(set),
-  ];
 
   return resolved;
 };
