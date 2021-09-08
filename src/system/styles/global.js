@@ -65,8 +65,7 @@ export default {
   },
   td: {
     border: 'bordered',
-    paddingLeft: 'm',
-    paddingRight: 'm',
+    padding: 'm',
   },
   th: {
     border: 'bordered',

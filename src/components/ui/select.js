@@ -12,6 +12,7 @@ import {
 } from './react-select-overrides.js';
 
 const Select = ({
+  enableDuplicateValue = false,
   group = undefined,
   isMenuOpen = undefined,
   isMulti = false,
@@ -21,6 +22,7 @@ const Select = ({
   noOptionsMessage = undefined,
   options: initialOptions,
   placeholder = 'Search...',
+  shouldRenderValue = true,
   value,
   formatOptionLabel = undefined,
   renderOption = defaultRenderOption,
@@ -66,6 +68,13 @@ const Select = ({
             onChange([]);
             break;
           case 'deselect-option':
+            if (enableDuplicateValue) {
+              onChange([...value, getValue(state.option)]);
+            } else {
+              onChange(updatedOption.map(getValue));
+            }
+
+            break;
           case 'select-option':
             onChange([...value, getValue(state.option)]);
             break;
@@ -86,6 +95,7 @@ const Select = ({
 
   return (
     <ReactSelect
+      controlShouldRenderValue={shouldRenderValue}
       isClearable={isClearable}
       isSearchable={isSearchable}
       hideSelectedOptions={false}

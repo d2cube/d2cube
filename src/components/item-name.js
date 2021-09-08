@@ -1,4 +1,3 @@
-import {k} from 'uinix-fp';
 import {Element, Layout, useStyles} from 'uinix-ui';
 
 import {mark} from '../utils/mark.js';
@@ -9,12 +8,7 @@ import ItemTooltip from './item-tooltip.js';
 import BrandText from './ui/brand-text.js';
 
 // TODO: organize and document logic in relevant utils
-const ItemName = ({
-  item,
-  query = '',
-  shouldDisplayImage = false,
-  renderExtra = k(null),
-}) => {
+const ItemName = ({item, query = '', shouldDisplayImage = false}) => {
   const styles = useStyles();
 
   const {id, imageId, name} = item;
@@ -37,12 +31,9 @@ const ItemName = ({
       description={description}
       preview={shouldDisplayImage ? null : preview}
     >
-      <Layout align="center" justify="space-between" spacing="s">
-        <Layout direction="column" spacing="m">
-          <BrandText color={color} text={mark(name, query)} />
-          {shouldDisplayImage && preview}
-        </Layout>
-        {renderExtra(item)}
+      <Layout direction="column" spacing="m">
+        <BrandText color={color} text={mark(name, query)} />
+        {shouldDisplayImage && preview}
       </Layout>
     </ItemTooltip>
   );

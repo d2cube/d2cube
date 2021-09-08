@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {v4 as uuid} from 'uuid';
 
 import {search} from '../api/index.js';
 import ItemSearch from '../components/item-search.js';
@@ -10,14 +11,20 @@ import {rollItem} from '../utils/roll-item.js';
 
 const Page = () => {
   const [filters, setFilters] = useState([]);
+  const [queryKey, setQueryKey] = useState(uuid());
 
   const items = search(filters).map(rollItem);
+
+  const handleUpdateFilters = (updatedFilters) => {
+    setQueryKey(uuid());
+    setFilters(updatedFilters);
+  };
 
   return (
     <PageLayout title="Items">
       <Frame help={help} size="l" title="Item Database">
-        <ItemSearch filters={filters} onChange={setFilters} />
-        <ItemsTable items={items} />
+        <ItemSearch filters={filters} onChange={handleUpdateFilters} />
+        <ItemsTable key={queryKey} items={items} />
       </Frame>
     </PageLayout>
   );
@@ -29,10 +36,9 @@ const help = (
       Items are searchable by applying filter conditions using the search input.
     </p>
     <p>Search results are presented in a table grouped on common attributes.</p>
-    <p>Item descriptions seek to honor its in-game representation.</p>
     <div>
-      The following notations are used in item descriptions to further enhance
-      item descriptions.
+      Item descriptions aim to stay close to its in-game description, and use
+      the following additional notation for further details.
       <ul>
         <li>
           Item quality are easily identified by their colors: e.g.{' '}

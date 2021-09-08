@@ -1,36 +1,36 @@
 import {useMemo} from 'react';
-import ReactSelect from 'react-select';
 
-import {
-  components as overrideComponents,
-  styles,
-} from './react-select-overrides.js';
+import {SEARCH_FILTERS} from '../../constants/index.js';
+import Select from './select.js';
 
 const Search = ({placeholder, filters, schema, onChange}) => {
-  console.log(filters, schema, onChange);
-  const options = [];
+  const options = useMemo(() => mapSchemaToOptions(schema), [schema]);
 
-  const components = useMemo(
-    () => ({
-      ...overrideComponents,
-    }),
-    [],
-  );
-
-  const handleChange = (updatedOptions) => {
-    console.log(updatedOptions);
+  const handleChange = (updatedFilters) => {
+    onChange(updatedFilters);
   };
 
   return (
-    <ReactSelect
-      components={components}
+    <Select
+      isMulti
       placeholder={placeholder}
       options={options}
-      // @ts-ignore
-      styles={styles}
+      value={filters}
       onChange={handleChange}
     />
   );
+};
+
+const mapSchemaToOptions = (schema) => {
+  console.log(schema);
+  const options = [
+    {
+      label: 'Type === Rune',
+      value: SEARCH_FILTERS.isTypeRune,
+    },
+  ];
+
+  return options;
 };
 
 export default Search;

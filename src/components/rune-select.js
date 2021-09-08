@@ -5,6 +5,7 @@ import ItemSelect from './item-select.js';
 
 const RuneSelect = ({max, value, onChange}) => (
   <ItemSelect
+    enableDuplicateValue
     isMulti
     formatOptionLabel={formatOptionLabel}
     filters={filters}

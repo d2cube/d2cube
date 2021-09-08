@@ -1,22 +1,45 @@
-import {useState} from 'react';
-import {props} from 'uinix-fp';
+import {useMemo, useState} from 'react';
+import {prop} from 'uinix-fp';
 import {Element, Layout} from 'uinix-ui';
 
-import {isEmpty, isEmptyObject} from '../../utils/fp.js';
 import PageSelect from './page-select.js';
+import Select from './select.js';
 
 const Table = ({columns, data}) => {
+  const [visibleColumnsKeys, setVisibleColumnKeys] = useState(
+    columns.map(prop('key')),
+  );
   const [page, setPage] = useState(0);
+
+  const columnOptions = useMemo(
+    () =>
+      columns.map(({key, label}) => ({
+        label,
+        value: key,
+      })),
+    [columns],
+  );
+
+  const visibleColumns = useMemo(
+    () => columns.filter((column) => visibleColumnsKeys.includes(column.key)),
+    [columns, visibleColumnsKeys],
+  );
+
   const pageSize = 50;
   const totalCount = data.length;
 
-  const filteredColumns = Object.fromEntries(
-    Object.entries(columns).filter(filterColumnEntry(data)),
-  );
-
   return (
     <Layout direction="column" spacing="s">
-      <Layout alignSelf="flex-end">
+      <Layout alignSelf="flex-end" spacing="m" w="50%">
+        <Select
+          isMulti
+          isClearable={false}
+          shouldRenderValue={false}
+          value={visibleColumnsKeys}
+          options={columnOptions}
+          placeholder="Show / Hide Columns"
+          onChange={setVisibleColumnKeys}
+        />
         <PageSelect
           page={page}
           pageSize={pageSize}
@@ -27,9 +50,9 @@ const Table = ({columns, data}) => {
       <table>
         <thead>
           <tr>
-            {Object.entries(filteredColumns).map(([key, column]) => (
-              <Element key={key} as="th" w={column.width}>
-                {column.label}
+            {visibleColumns.map(({key, label, width}) => (
+              <Element key={key} as="th" w={width}>
+                {label}
               </Element>
             ))}
           </tr>
@@ -37,9 +60,9 @@ const Table = ({columns, data}) => {
         <tbody>
           {data.slice(page * pageSize, (page + 1) * pageSize).map((d, i) => (
             <tr key={i}>
-              {Object.entries(filteredColumns).map(([key, column]) => (
-                <Element key={key} as="td" w={column.width}>
-                  {column.render(d)}
+              {visibleColumns.map(({key, render, width}) => (
+                <Element key={key} as="td" w={width}>
+                  {render(d)}
                 </Element>
               ))}
             </tr>
@@ -49,13 +72,5 @@ const Table = ({columns, data}) => {
     </Layout>
   );
 };
-
-const filterColumnEntry =
-  (data) =>
-  ([_, column]) =>
-    !data.every((d) => {
-      const v = props(column.key)(d);
-      return isEmpty(v) || isEmptyObject(v);
-    });
 
 export default Table;
