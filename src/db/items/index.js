@@ -9,7 +9,7 @@ import amazonJavelins from './amazon-javelins.js';
 import amazonSpears from './amazon-spears.js';
 import ammunitions from './ammunitions.js';
 import amulets from './amulets.js';
-import assasinKatars from './assassin-katars.js';
+import assassinKatars from './assassin-katars.js';
 import axes from './axes.js';
 import barbarianHelms from './barbarian-helms.js';
 import belts from './belts.js';
@@ -53,8 +53,9 @@ import tomes from './tomes.js';
 import uniques from './uniques/index.js';
 import wands from './wands.js';
 
+// Order matters
 export default createItems({
-  // Order matters
+  // Non-Weapons/Armor
   ...runes,
   ...gems,
   ...essences,
@@ -63,14 +64,15 @@ export default createItems({
   ...scrolls,
   ...tokens,
   ...tomes,
+  ...ammunitions,
   ...uniques,
   ...sets,
+  // Weapons/Armor
   ...amazonBows,
   ...amazonJavelins,
   ...amazonSpears,
-  ...ammunitions,
   ...amulets,
-  ...assasinKatars,
+  ...assassinKatars,
   ...axes,
   ...barbarianHelms,
   ...belts,

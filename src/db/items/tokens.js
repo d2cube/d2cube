@@ -12,7 +12,7 @@ export default normalizeItems({
     description: [
       {
         text: 'Right-click to reset stat/skill points',
-        color: 'crafted',
+        color: 'item.crafted',
       },
     ],
   },
