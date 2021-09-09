@@ -9,4 +9,5 @@ export const ApiMethodType = {
   GetSet: 'getSet',
   GetRunewords: 'getRunewords',
   GetRuneword: 'getRuneword',
+  Search: 'search',
 };

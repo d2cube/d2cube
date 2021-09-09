@@ -1,13 +1,19 @@
+import {saveAs} from 'file-saver';
 import {useMemo, useState} from 'react';
 import {prop} from 'uinix-fp';
 import {Element, Layout} from 'uinix-ui';
 
+import BrandIcon from './brand-icon.js';
 import PageSelect from './page-select.js';
 import Select from './select.js';
 
-const Table = ({columns, data}) => {
+const Table = ({
+  columns,
+  data,
+  visibleColumnKeys: initialVisibleColumnKeys = columns.map(prop('key')),
+}) => {
   const [visibleColumnsKeys, setVisibleColumnKeys] = useState(
-    columns.map(prop('key')),
+    initialVisibleColumnKeys,
   );
   const [page, setPage] = useState(0);
 
@@ -25,12 +31,24 @@ const Table = ({columns, data}) => {
     [columns, visibleColumnsKeys],
   );
 
+  const handleExport = () => {
+    const file = new File([JSON.stringify(data, null, 2)], 'items.json', {
+      type: 'application/json',
+    });
+    saveAs(file);
+  };
+
   const pageSize = 50;
   const totalCount = data.length;
 
   return (
     <Layout direction="column" spacing="s">
       <Layout alignSelf="flex-end" spacing="m" w="50%">
+        <BrandIcon
+          icon="download"
+          tooltip="Export as JSON"
+          onClick={handleExport}
+        />
         <Select
           isMulti
           isClearable={false}

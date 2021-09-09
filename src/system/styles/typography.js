@@ -79,6 +79,16 @@ const global = {
 
 const variants = {
   diablo,
+  chip: {
+    backgroundColor: 'interface.background',
+    border: 'bordered',
+    color: 'brand.primary',
+    fontSize: 'xs',
+    paddingBottom: 'xs',
+    paddingLeft: 's',
+    paddingRight: 's',
+    paddingTop: 'xs',
+  },
   error: {
     color: 'interface.error',
   },

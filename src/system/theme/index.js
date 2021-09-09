@@ -58,7 +58,7 @@ const fontFamilies = {
 };
 
 const fontSizes = {
-  xs: '0.8rem',
+  xs: '0.75rem',
   s: '0.9rem',
   m: '1rem',
   l: '1.25rem',

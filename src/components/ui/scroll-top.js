@@ -13,7 +13,6 @@ const ScrollTop = () => {
       icon="up"
       position="fixed"
       right="l"
-      size="icon.l"
       top="l"
       tooltip="Back to top"
       onClick={scrollTop}

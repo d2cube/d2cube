@@ -19,7 +19,7 @@ const ApiMethod = ({method}) => {
 
   const [parameter, setParameter] = useState(apiParameter.example);
 
-  const isParametersDisabled = isEmpty(parameter);
+  const isParametersDisabled = apiParameter.isDisabled || isEmpty(parameter);
 
   let error;
   let response;

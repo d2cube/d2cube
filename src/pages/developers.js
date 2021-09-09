@@ -9,7 +9,7 @@ import {UrlType} from '../enums/index.js';
 
 const Page = () => {
   const left = (
-    <Frame title="For Developers">
+    <Frame size="l" title="For Developers">
       <div>
         <p>
           <BrandLogo /> provides a public API accessible via{' '}

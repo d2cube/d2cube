@@ -108,8 +108,15 @@ export const styles = {
     },
     zIndex: 1,
   }),
+  multiValueLabel: () => ({
+    color: themedStyles.brandPrimaryColor,
+    fontSize: themedStyles.fontSizeSmall,
+    paddingLeft: themedStyles.spacingSmall,
+    paddingRight: themedStyles.spacingSmall,
+  }),
   multiValue: () => ({
-    backgroundColor: themedStyles.brandPrimaryColor,
+    backgroundColor: themedStyles.interfaceBackground,
+    border: themedStyles.bordered,
     display: 'flex',
     margin: themedStyles.spacingExtraSmall,
   }),
@@ -131,8 +138,11 @@ export const styles = {
   option: (_, state) => ({
     backgroundColor: state.isSelected
       ? themedStyles.interfaceActive
+      : state.isFocused
+      ? themedStyles.interfaceHover
       : themedStyles.interfaceBackground,
     fontFamily: themedStyles.diabloFont,
+    fontSize: themedStyles.fontSizeSmall,
     padding: themedStyles.spacingSmall,
     ':hover': {
       backgroundColor: state.isSelected

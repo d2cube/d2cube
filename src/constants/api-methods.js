@@ -81,4 +81,18 @@ export const API_METHODS = [
       example: 'ImmortalKing',
     },
   },
+  {
+    name: ApiMethodType.Search,
+    httpMethod: 'POST',
+    description:
+      'Searches items based on provided filters.  Please refer to the official API docs for details.',
+    path: '/search',
+    body: {
+      filters: {
+        type: 'SearchFilter[]',
+        description: 'An array of SearchFilter objects.',
+        example: [],
+      },
+    },
+  },
 ];

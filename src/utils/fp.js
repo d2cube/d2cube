@@ -1,3 +1,4 @@
+import escapeStringRegexp from 'escape-string-regexp';
 import {isPlainObject, k, merge, props} from 'uinix-fp';
 
 export const append = (x) => (y) => y + x;
@@ -47,6 +48,8 @@ export const isEmpty = (x) => x === null || x === undefined;
 export const isEmptyObject = (x) =>
   isPlainObject(x) && Object.keys(x).length === 0;
 
+export const isNumber = (x) => /^-?\d*.{0,1}\d+$/.test(x);
+
 export const isPropValueEqual = (prop) => (value) => (x) =>
   props(prop)(x) === value;
 
@@ -59,6 +62,9 @@ export const count =
   (y) =>
   (xs) =>
     xs.filter(f(y)).length;
+
+export const match = (p) => (x) =>
+  new RegExp(escapeStringRegexp(p), 'i').test(x);
 
 export const map = (f) => (xs) => xs.map(f);
 

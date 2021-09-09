@@ -1,4 +1,5 @@
 import {useMemo} from 'react';
+import {k} from 'uinix-fp';
 import {Layout} from 'uinix-ui';
 
 import {search} from '../api/index.js';
@@ -16,7 +17,7 @@ const ItemSelect = ({
   placeholder = 'Search items...',
   value,
   onChange,
-  renderExtra = undefined,
+  renderExtra = k(null),
 }) => {
   const items = useMemo(() => search(filters), [filters]);
   const options = useMemo(() => items.map(mapItemToOption), [items]);

@@ -17,6 +17,8 @@
   "homepage": "https://d2cu.be",
   "dependencies": {
     "@tippyjs/react": "^4.2.5",
+    "escape-string-regexp": "^4.0.0",
+    "file-saver": "^2.0.5",
     "next": "^11.1.0",
     "next-transpile-modules": "^8.0.0",
     "react": "^17.0.1",

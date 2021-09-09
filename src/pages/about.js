@@ -3,7 +3,7 @@ import BrandLogo from '../components/ui/brand-logo.js';
 import ExternalLink from '../components/ui/external-link.js';
 import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
-import {UrlType} from '../enums/url-type.js';
+import {UrlType} from '../enums/index.js';
 
 const Page = () => {
   const left = (
@@ -19,10 +19,9 @@ const Page = () => {
             open-source project
           </ExternalLink>{' '}
           built and maintained by{' '}
-          <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>. The
-          site is built with{' '}
-          <ExternalLink href={UrlType.UinixUi}>uinix-ui</ExternalLink> and
-          served statically via{' '}
+          <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>. It is a
+          100% static site built with{' '}
+          <ExternalLink href={UrlType.Uinix}>uinix</ExternalLink> and served via{' '}
           <ExternalLink href={UrlType.NextJs}>Next.js</ExternalLink>.
         </p>
       </div>

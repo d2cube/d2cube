@@ -9,5 +9,5 @@ export const UrlType = {
   GithubSponsor: 'https://github.com/sponsors/chrisrzhou',
   NextJs: 'https://nextjs.org',
   Paypal: 'https://www.paypal.com/paypalme/chrisrzhou',
-  UinixUi: 'https://uinix.dev/packages/uinix-ui',
+  UinixUi: 'https://uinix.dev',
 };

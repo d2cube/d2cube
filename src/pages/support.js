@@ -1,11 +1,11 @@
 import {Layout} from 'uinix-ui';
 
 import PageLayout from '../components/page-layout.js';
-import BrandIcon from '../components/ui/brand-icon.js';
 import BrandLogo from '../components/ui/brand-logo.js';
 import Frame from '../components/ui/frame.js';
+import GithubSponsorIcon from '../components/ui/github-sponsor-icon.js';
 import Interface from '../components/ui/interface.js';
-import {UrlType} from '../enums/index.js';
+import PaypalIcon from '../components/ui/paypal-icon.js';
 
 const Page = () => {
   const left = (
@@ -22,19 +22,9 @@ const Page = () => {
       </p>
       <p>Drop a donation if you would like to show your support!</p>
       <p>chrisrzhou</p>
-      <Layout align="center" spacing="xl">
-        <BrandIcon
-          icon="githubSponsor"
-          href={UrlType.GithubSponsor}
-          size="icon.l"
-          tooltip="Github Sponsor"
-        />
-        <BrandIcon
-          icon="paypal"
-          href={UrlType.Paypal}
-          size="icon.l"
-          tooltip="Paypal"
-        />
+      <Layout align="center" spacing="l">
+        <GithubSponsorIcon />
+        <PaypalIcon />
       </Layout>
     </Frame>
   );

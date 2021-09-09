@@ -1,76 +1,170 @@
-import {BasePropertyType, FieldType, OperatorType} from '../enums/index.js';
+import {
+  ArmorClassType,
+  ItemQualityType,
+  ItemSetType,
+  ItemType,
+  FieldType,
+  GemClassType,
+  OperatorType,
+  PlayerClassType,
+  PotionClassType,
+  WeaponClassType,
+} from '../enums/index.js';
 import Search from './ui/search.js';
 
 const ItemSearch = ({filters, onChange}) => (
   <Search
-    placeholder="Search items by applying filters..."
+    placeholder='Simply type ahead to search for items! (e.g. "unique", "immortal", "mana", "barb", "topaz")'
     schema={schema}
     filters={filters}
     onChange={onChange}
   />
 );
 
-const createFields = () => {
-  const fields = {
-    Name: {
-      value: 'Name',
-      label: 'Name',
-      type: FieldType.String,
-    },
-    [BasePropertyType.RequiredLevel]: {
-      value: [BasePropertyType.RequiredLevel],
-      label: 'Required Level',
-      type: FieldType.Number,
-    },
-  };
+const enums = {
+  ArmorClassType,
+  GemClassType,
+  ItemQualityType: {
+    [ItemQualityType.Normal]: ItemQualityType.Normal,
+    [ItemQualityType.Set]: ItemQualityType.Set,
+    [ItemQualityType.Unique]: ItemQualityType.Unique,
+  },
+  ItemSetType,
+  ItemType,
+  PlayerClassType,
+  PotionClassType,
+  WeaponClassType,
+};
 
-  return fields;
+const fields = {
+  name: {
+    id: 'name',
+    label: 'Name',
+    type: FieldType.String,
+  },
+  stats: {
+    id: 'stats',
+    label: 'Stats',
+    type: FieldType.Json,
+  },
+  type: {
+    id: 'type',
+    label: 'Type',
+    type: FieldType.EnumSet,
+    enums: 'ItemType',
+  },
+  quality: {
+    id: 'quality',
+    label: 'Quality',
+    type: FieldType.EnumSet,
+    enums: 'ItemQualityType',
+  },
+  set: {
+    id: 'set',
+    label: 'Set',
+    type: FieldType.EnumSet,
+    enums: 'ItemSetType',
+  },
+  playerClass: {
+    id: 'playerClass',
+    label: 'Player Class',
+    type: FieldType.EnumSet,
+    enums: 'PlayerClassType',
+  },
+  gemClass: {
+    id: 'class',
+    label: 'Gem Class',
+    type: FieldType.EnumSet,
+    enums: 'GemClassType',
+  },
+  weaponClass: {
+    id: 'class',
+    label: 'Weapon Class',
+    type: FieldType.EnumSet,
+    enums: 'WeaponClassType',
+  },
+  armorClass: {
+    id: 'class',
+    label: 'Armor Class',
+    type: FieldType.EnumSet,
+    enums: 'ArmorClassType',
+  },
+  potionClass: {
+    id: 'class',
+    label: 'Potion Class',
+    type: FieldType.EnumSet,
+    enums: 'PotionClassType',
+  },
+  tier: {
+    id: 'tier',
+    label: 'Tier',
+    type: FieldType.Number,
+  },
 };
 
 const operators = {
-  [OperatorType.Equals]: {
-    value: OperatorType.Equals,
-    label: 'equals',
-  },
-  [OperatorType.Between]: {
-    value: OperatorType.Between,
-    label: 'between',
-  },
   [OperatorType.Contains]: {
-    value: OperatorType.Contains,
+    id: OperatorType.Contains,
     label: 'contains',
+    cardinality: Number.POSITIVE_INFINITY,
+  },
+  [OperatorType.Equals]: {
+    id: OperatorType.Equals,
+    label: 'equals',
+    cardinality: 1,
+  },
+  [OperatorType.FuzzyContains]: {
+    id: OperatorType.FuzzyContains,
+    label: 'fuzzy contains',
+    cardinality: 1,
   },
   [OperatorType.GreaterThan]: {
-    value: OperatorType.GreaterThan,
+    id: OperatorType.GreaterThan,
     label: 'greater than',
+    cardinality: 1,
   },
   [OperatorType.LessThan]: {
-    value: OperatorType.LessThan,
+    id: OperatorType.LessThan,
     label: 'less than',
+    cardinality: 1,
+  },
+  [OperatorType.Matches]: {
+    id: OperatorType.Matches,
+    label: 'matches',
+    cardinality: 1,
   },
 };
 
 const types = {
   [FieldType.Number]: {
-    value: FieldType.Number,
-    label: 'number',
+    id: FieldType.Number,
+    label: 'Number',
     operators: [
-      OperatorType.Empty,
       OperatorType.Equals,
       OperatorType.LessThan,
       OperatorType.GreaterThan,
-      OperatorType.Between,
     ],
   },
+  [FieldType.EnumSet]: {
+    id: FieldType.EnumSet,
+    label: 'EnumSet',
+    operators: [OperatorType.Contains],
+  },
+  [FieldType.Json]: {
+    id: FieldType.Json,
+    label: 'Json',
+    operators: [OperatorType.FuzzyContains],
+  },
   [FieldType.String]: {
-    value: FieldType.String,
-    label: 'string',
-    operators: [OperatorType.Empty, OperatorType.Equals, OperatorType.Contains],
+    id: FieldType.String,
+    label: 'String',
+    operators: [OperatorType.Matches],
   },
 };
 
 const schema = {
-  fields: createFields(),
+  enums,
+  fields,
   operators,
   types,
 };

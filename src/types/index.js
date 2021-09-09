@@ -78,8 +78,6 @@ export {};
  *    e.g. Ring/Amulet/Gem/Rune.
  * @property {number[]} size
  *    A 2-sized array indicating the item's size (by row/column).
- * @property {Description[]} [description]
- *    Quality level.
  * @property {ArmorClassType|GemClassType|PotionClassType|WeaponClassType} [class]
  *    The sub-category/class/family of the item
  * @property {ItemQualityType} [quality]
@@ -130,6 +128,8 @@ export {};
  *    An item can exist either:
  *      - as a base definition referenced in the app.
  *      - as an instance and created ("rolled") based on its definition.
+ * @property {Description[]} [description]
+ *    Materialized Item description
  * @property {Properties} stats
  *    Stats are random rolls on a ItemBase.properties.
  */

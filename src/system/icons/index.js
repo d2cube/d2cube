@@ -4,6 +4,7 @@ import {code} from './code.js';
 import {cube} from './cube.js';
 import {database} from './database.js';
 import {discord} from './discord.js';
+import {download} from './download.js';
 import {gift} from './gift.js';
 import {github} from './github.js';
 import {githubSponsor} from './github-sponsor.js';
@@ -24,6 +25,7 @@ export default {
   chevronLeft,
   chevronRight,
   discord,
+  download,
   help,
   github,
   githubSponsor,
