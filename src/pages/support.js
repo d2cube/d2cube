@@ -12,7 +12,7 @@ const Page = () => {
     <Frame title="Thank you for your support">
       <p>
         <BrandLogo /> will <strong>always</strong> be open-source and
-        (ads-)free.
+        (ads/login-)free.
       </p>
       <p>
         While this imposes on personal time and financial commitments, I believe

@@ -83,7 +83,7 @@ export const API_METHODS = [
   },
   {
     name: ApiMethodType.Search,
-    httpMethod: 'POST',
+    httpMethod: 'GET',
     description:
       'Searches items based on provided filters.  Please refer to the official API docs for details.',
     path: '/search',

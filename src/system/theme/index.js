@@ -112,9 +112,9 @@ const sizes = {
       inventory: slotSize * 14,
     },
     width: {
-      s: '300px',
+      s: '400px',
       m: '600px',
-      l: '900px',
+      l: '800px',
     },
   },
   globe: '120px',

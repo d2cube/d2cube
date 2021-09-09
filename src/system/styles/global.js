@@ -32,6 +32,7 @@ export default {
     cursor,
     margin: 0,
     minHeight: '100vh',
+    width: '100vw', // This trick prevents vertical scrollbar from affecting page width.
     padding: 0,
   },
   'a, button': {

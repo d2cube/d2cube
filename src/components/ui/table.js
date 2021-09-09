@@ -43,7 +43,7 @@ const Table = ({
 
   return (
     <Layout direction="column" spacing="s">
-      <Layout alignSelf="flex-end" spacing="m" w="50%">
+      <Layout alignSelf="flex-end" spacing="m" w="400px">
         <BrandIcon
           icon="download"
           tooltip="Export as JSON"

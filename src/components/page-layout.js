@@ -21,7 +21,8 @@ const PageLayout = ({children, title}) => {
   };
 
   return (
-    <Layout direction="column" minH="100vh" spacing="l">
+    <Layout direction="column" minH="100vh">
+      <ScrollTop />
       {entered ? (
         <>
           <Layout
@@ -29,7 +30,7 @@ const PageLayout = ({children, title}) => {
             align="center"
             direction="column"
             flex="auto"
-            pt="xl"
+            py="xl"
             spacing="xl"
             styles={styles.fadeIn}
             variant="container"
@@ -37,24 +38,23 @@ const PageLayout = ({children, title}) => {
             {children}
           </Layout>
           <Hud title={title} />
+          <Layout
+            bottom="l"
+            direction="column"
+            position="fixed"
+            right="l"
+            spacing="l"
+            z="forward"
+          >
+            <GithubSponsorIcon />
+            <PaypalIcon />
+            <DiscordIcon />
+            <GithubIcon />
+          </Layout>
         </>
       ) : (
         <Splash onEnter={handleEnter} />
       )}
-      <Layout
-        bottom="l"
-        direction="column"
-        position="fixed"
-        right="l"
-        spacing="l"
-        z="forward"
-      >
-        <GithubSponsorIcon />
-        <PaypalIcon />
-        <DiscordIcon />
-        <GithubIcon />
-      </Layout>
-      <ScrollTop />
     </Layout>
   );
 };

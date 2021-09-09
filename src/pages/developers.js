@@ -28,7 +28,7 @@ const Page = () => {
       </div>
       <hr />
       <div>
-        <h3>API</h3>
+        <h3>API Methods</h3>
         <ul>
           {methods.map(({name}) => (
             <li key={name}>

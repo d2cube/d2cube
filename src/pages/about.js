@@ -7,22 +7,32 @@ import {UrlType} from '../enums/index.js';
 
 const Page = () => {
   const left = (
-    <Frame title="About D2Cube">
+    <Frame
+      title={
+        <div>
+          About <BrandLogo />
+        </div>
+      }
+    >
       <div>
         <p>
-          <BrandLogo /> is an unofficial non-profit Diablo 2 fansite and is not
-          affiliated with Blizzard.
+          <BrandLogo />, pronounced D2 Cube, is an unofficial non-profit Diablo
+          2 fansite and is not affiliated with Blizzard.
         </p>
         <p>
-          It is an{' '}
+          <BrandLogo /> takes an interactive and inquiry-based approach to
+          deliver a unique D2 companion experience in teaching and answering
+          questions about the game.
+        </p>
+        <p>
+          <BrandLogo /> is (ads/login-)free 100% static site built with{' '}
+          <ExternalLink href={UrlType.Uinix}>uinix</ExternalLink> and served via{' '}
+          <ExternalLink href={UrlType.NextJs}>Next.js</ExternalLink>. It is an{' '}
           <ExternalLink href={UrlType.GithubRepo}>
             open-source project
           </ExternalLink>{' '}
-          built and maintained by{' '}
-          <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>. It is a
-          100% static site built with{' '}
-          <ExternalLink href={UrlType.Uinix}>uinix</ExternalLink> and served via{' '}
-          <ExternalLink href={UrlType.NextJs}>Next.js</ExternalLink>.
+          maintained by{' '}
+          <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>.
         </p>
       </div>
       <hr />
@@ -30,22 +40,11 @@ const Page = () => {
         <h3>Features</h3>
         <ul>
           <li>Open-source</li>
-          <li>(Ads-)Free</li>
+          <li>(Ads/login-)Free</li>
           <li>Public API</li>
-          <li>Pure static site</li>
-          <li>Searchable and complete item/sets/runewords database</li>
-          <li>Unique companion experience adopting in-game UIUX</li>
-          <li>
-            Computational validation through the UI
-            <ul>
-              <li>
-                <em>What can I cube given these components?</em>
-              </li>
-              <li>
-                <em>What Runewords can I make given these components?</em>
-              </li>
-            </ul>
-          </li>
+          <li>100% static site</li>
+          <li>Searchable item database</li>
+          <li>Inquiry-based companion experience</li>
           <li>
             Item simulation
             <ul>
@@ -59,7 +58,7 @@ const Page = () => {
               <li>Character Stats</li>
               <li>Character Skills</li>
               <li>Gambling</li>
-              <li>Quest enhancements (e.g. Larzuk, Anya, Charsi)</li>
+              <li>Quests (e.g. Larzuk, Anya, Charsi)</li>
             </ul>
           </li>
         </ul>
