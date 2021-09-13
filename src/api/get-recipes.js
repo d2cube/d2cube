@@ -21,7 +21,11 @@ const findItem = (stack, sourceItem, test) => {
   return null;
 };
 
-export const getRecipes = ({items = [], filters = [], showAvailable}) => {
+export const getRecipes = ({
+  items = [],
+  filters = [],
+  showAvailable = false,
+} = {}) => {
   const recipes = [];
   const filteredRecipes =
     filters.length > 0

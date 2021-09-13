@@ -1,16 +1,13 @@
-import Cube from '../components/cube.js';
-import Inventory from '../components/inventory.js';
 import PageLayout from '../components/page-layout.js';
+import CubeRecipes from '../components/cube-recipes.js';
 import Interface from '../components/ui/interface.js';
-import {cubeItems, inventoryItems} from '../mocks/index.js';
 
 const Page = () => {
-  const left = <Cube items={cubeItems} />;
-  const right = <Inventory items={inventoryItems} />;
+  const left = <CubeRecipes />;
 
   return (
     <PageLayout title="Cube">
-      <Interface left={left} right={right} />
+      <Interface left={left} />
     </PageLayout>
   );
 };

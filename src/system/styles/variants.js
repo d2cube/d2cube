@@ -13,6 +13,7 @@ const baseButton = {
   paddingLeft: 'xl',
   paddingRight: 'xl',
   paddingTop: 's',
+  width: 'min-content',
 };
 
 const absolute = {

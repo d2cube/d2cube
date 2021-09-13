@@ -1,6 +1,6 @@
 import {Layout, Text} from 'uinix-ui';
 
-import Item from './item.js';
+import ItemName from './item-name.js';
 import BrandText from './ui/brand-text.js';
 
 const Recipe = ({recipe}) => {
@@ -11,9 +11,9 @@ const Recipe = ({recipe}) => {
       <Text>{name}</Text>
       <Layout align="center" spacing="m">
         {sources.map((source) => (
-          <Item
+          <ItemName
             key={source.item.uuid}
-            isInactive={source.isInactive}
+            shouldDisplayImage
             item={source.item}
           />
         ))}
@@ -21,7 +21,7 @@ const Recipe = ({recipe}) => {
         {typeof target === 'string' ? (
           <BrandText text={target} />
         ) : (
-          <Item isInactive={target.isInactive} item={target.item} />
+          <ItemName shouldDisplayImage item={target.item} />
         )}
       </Layout>
     </Layout>
