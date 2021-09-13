@@ -2,14 +2,13 @@
   "private": true,
   "name": "d2cube",
   "version": "1.0.0",
-  "description": "An interactive D2 Cube and Runewords companion",
-  "license": "MIT",
+  "description": "An interactive unique D2 companion",
   "keywords": [
     "d2",
-    "d2r",
-    "diablo2",
     "cube",
-    "runewords"
+    "runewords",
+    "d2r",
+    "diablo2"
   ],
   "repository": "chrisrzhou/d2cube",
   "bugs": "https://github.com/chrisrzhou/d2cube/issues",

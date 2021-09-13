@@ -1,4 +1,8 @@
-import {BasePropertyType, ItemType} from '../../enums/index.js';
+import {
+  BasePropertyType,
+  ItemQualityType,
+  ItemType,
+} from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
 
@@ -8,6 +12,7 @@ export default normalizeItems({
   {
     id: ids.Key,
     name: 'Key',
+    quality: ItemQualityType.Normal,
     size: [1, 1],
     properties: {
       base: {

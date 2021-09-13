@@ -3,7 +3,6 @@ import {
   ItemQualityType,
   ItemType,
   MagicPropertyType,
-  WeaponClassType,
 } from '../../enums/index.js';
 import {normalizeItems} from '../utils/normalize-items.js';
 import ids from '../ids/index.js';
@@ -17,25 +16,29 @@ export default normalizeItems({
     id: ids.ScrollOfInifuss,
     name: 'Scroll of Inifuss',
     size: [2, 2],
+    description: [
+      {
+        text: 'Key to the Cairn Stones',
+        color: 'item.quest',
+      },
+    ],
   },
   {
     id: ids.WirtsLeg,
     name: "Wirt's Leg",
-    class: WeaponClassType.Mace,
-    size: [3, 1],
+    quality: ItemQualityType.Normal,
+    baseId: ids.Club,
     properties: {
       base: {
         [BasePropertyType.Damage1H]: {x: 1, y: 8},
         [BasePropertyType.Durability]: 66,
-        [BasePropertyType.AttackSpeed]: -10,
-        [BasePropertyType.MaxSockets]: 2,
-        [BasePropertyType.MeleeRange]: 1,
       },
     },
   },
   {
     id: ids.HoradricMalus,
     name: 'Horadric Malus',
+    baseId: ids.WarHammer, // Not really, but assigning to an item for now
     size: [2, 1],
     properties: {
       base: {
@@ -44,15 +47,18 @@ export default normalizeItems({
         [BasePropertyType.RequiredDexterity]: 15,
         [BasePropertyType.Durability]: 55,
       },
-      magic: {
-        [MagicPropertyType.DamageToUndead]: 150,
-      },
     },
   },
   {
     id: ids.BookOfSkill,
     name: 'Book of Skill',
     size: [2, 2],
+    description: [
+      {
+        text: 'Right Click to Learn Skill of Your Choice',
+        color: 'item.quest',
+      },
+    ],
   },
   {
     id: ids.HoradricScroll,
@@ -63,11 +69,17 @@ export default normalizeItems({
     id: ids.HoradricCube,
     name: 'Horadric Cube',
     size: [2, 2],
+    description: [
+      {
+        text: 'Right Click to Open',
+        color: 'item.quest',
+      },
+    ],
   },
   {
     id: ids.StaffOfKings,
     name: 'Staff of Kings',
-    size: [4, 1],
+    baseId: ids.ShortStaff,
     properties: {
       base: {
         [BasePropertyType.Damage2H]: {x: 10, y: 15},
@@ -85,7 +97,7 @@ export default normalizeItems({
   {
     id: ids.AmuletOfTheViper,
     name: 'Amulet of the Viper',
-    baseId: ids.Ring,
+    baseId: ids.Amulet,
     properties: {
       magic: {
         [MagicPropertyType.PoisonResist]: 25,
@@ -97,7 +109,7 @@ export default normalizeItems({
   {
     id: ids.HoradricStaff,
     name: 'Horadric Staff',
-    size: [4, 1],
+    baseId: ids.LongStaff,
     properties: {
       base: {
         [BasePropertyType.Damage2H]: {x: 12, y: 20},
@@ -114,7 +126,6 @@ export default normalizeItems({
         [MagicPropertyType.LightningResist]: 10,
         [MagicPropertyType.FireResist]: 10,
         [MagicPropertyType.PoisonResist]: 35,
-        [MagicPropertyType.DamageToUndead]: 50,
       },
     },
   },
@@ -132,11 +143,17 @@ export default normalizeItems({
     id: ids.PotionOfLife,
     name: 'Potion of Life',
     size: [1, 1],
+    description: [
+      {
+        text: 'Right Click to Permanently Add 20 to Life',
+        color: 'item.quest',
+      },
+    ],
   },
   {
     id: ids.TheGidbinn,
     name: 'The Gidbinn',
-    size: [2, 1],
+    baseId: ids.Dagger,
     properties: {
       base: {
         [BasePropertyType.Damage1H]: {x: 3, y: 7},
@@ -171,7 +188,7 @@ export default normalizeItems({
   {
     id: ids.KhalimsFlail,
     name: "Khalim's Flail",
-    size: [3, 2],
+    baseId: ids.Flail,
     properties: {
       base: {
         [BasePropertyType.Damage1H]: {x: 1, y: 15},
@@ -191,7 +208,7 @@ export default normalizeItems({
   {
     id: ids.KhalimsWill,
     name: "Khalim's Will",
-    size: [3, 2],
+    baseId: ids.Flail,
     properties: {
       base: {
         [BasePropertyType.Damage1H]: {x: 1, y: 15},
@@ -216,7 +233,7 @@ export default normalizeItems({
   {
     id: ids.HellforgeHammer,
     name: 'Hellforge Hammer',
-    size: [3, 2],
+    baseId: ids.WarHammer,
     properties: {
       base: {
         [BasePropertyType.Damage1H]: {x: 6, y: 15},
@@ -228,7 +245,6 @@ export default normalizeItems({
         [MagicPropertyType.FireDamage]: {x: 5, y: 20},
         [MagicPropertyType.Defense]: 35,
         [MagicPropertyType.FireResist]: 40,
-        [MagicPropertyType.DamageToUndead]: 50,
       },
     },
   },
@@ -236,10 +252,22 @@ export default normalizeItems({
     id: ids.MalahsPotion,
     name: "Malah's Potion",
     size: [1, 1],
+    description: [
+      {
+        text: 'Keep it to Thaw Anya',
+        color: 'item.quest',
+      },
+    ],
   },
   {
     id: ids.ScrollOfResistance,
     name: 'Scroll of Resistance',
     size: [2, 2],
+    description: [
+      {
+        text: 'Right Click to Cast',
+        color: 'item.quest',
+      },
+    ],
   },
 ]);

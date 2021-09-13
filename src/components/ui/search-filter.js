@@ -10,7 +10,7 @@ const SearchFilter = ({enums, field, operator, value}) => {
     switch (field.type) {
       case FieldType.EnumSet: {
         valueText = (
-          <Layout wrap py="s" spacing="m" wrapSpacing="s">
+          <Layout wrap spacing="s" wrapSpacing="s">
             {enums.map((text) => (
               <Chip key={text} text={text} />
             ))}
@@ -30,7 +30,7 @@ const SearchFilter = ({enums, field, operator, value}) => {
   }
 
   return (
-    <Layout align="center" spacing="m">
+    <Layout py="s" spacing="m">
       <BrandText color="item.rune" text={field.label} />
       <BrandText color="item.unique" text={operator.label} />
       <BrandText color="text.primary" text={valueText} />

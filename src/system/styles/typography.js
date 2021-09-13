@@ -84,10 +84,8 @@ const variants = {
     border: 'bordered',
     color: 'brand.primary',
     fontSize: 'xs',
-    paddingBottom: 'xs',
     paddingLeft: 's',
     paddingRight: 's',
-    paddingTop: 'xs',
   },
   error: {
     color: 'interface.error',

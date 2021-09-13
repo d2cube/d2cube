@@ -32,6 +32,7 @@ const colors = {
     crafted: '#FFA800',
     magic: '#057AF0',
     normal: '#fdfad9',
+    quest: brandColor,
     rare: '#FFCC00',
     runeword: brandColor,
     rune: '#FFA800',
