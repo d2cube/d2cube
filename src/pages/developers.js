@@ -26,20 +26,17 @@ const Page = () => {
           <ExternalLink href={UrlType.GithubIssues}>here</ExternalLink>.
         </p>
       </div>
-      <hr />
-      <div>
-        <h3>API Methods</h3>
-        <ul>
-          {methods.map(({name}) => (
-            <li key={name}>
-              <a href={`#${name}`}>
-                <code>{name}</code>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <ApiMethods methods={methods} />
-      </div>
+      <h3>API Methods</h3>
+      <ul>
+        {methods.map(({name}) => (
+          <li key={name}>
+            <a href={`#${name}`}>
+              <code>{name}</code>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <ApiMethods methods={methods} />
     </Frame>
   );
 

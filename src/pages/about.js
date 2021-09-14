@@ -30,7 +30,7 @@ const Page = () => {
           </ExternalLink>{' '}
           maintained by{' '}
           <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>, who
-          enjoys the intersection of D2 + open-source + and building UIs.
+          enjoys the intersection of D2 + open-source + data + UI systems.
         </p>
       </div>
       <hr />

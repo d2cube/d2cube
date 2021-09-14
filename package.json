@@ -10,8 +10,8 @@
     "d2r",
     "diablo2"
   ],
-  "repository": "chrisrzhou/d2cube",
-  "bugs": "https://github.com/chrisrzhou/d2cube/issues",
+  "repository": "d2cube/d2cube",
+  "bugs": "https://github.com/d2cube/d2cube/issues",
   "author": "Chris Zhou <chrisrzhou@pm.me> (https://chrisrzhou.io)",
   "homepage": "https://d2cu.be",
   "dependencies": {
