@@ -29,7 +29,7 @@ const Page = () => {
 
   return (
     <PageLayout title="Items">
-      <Frame help={help} size="l" title="Item Database">
+      <Frame help={help} size="l" title="ItemDB">
         <ItemSearch filters={filters} onChange={handleUpdateFilters} />
         <ItemsTable key={queryKey} items={items} />
       </Frame>
@@ -40,9 +40,9 @@ const Page = () => {
 const help = (
   <div>
     <p>
-      Search for items by applying filters in drill-down fashion (ie.{' '}
-      <code>AND</code> logic). A fairly large set of item fields are searchable
-      with a convenient typeahead prompt!
+      Search for items in the <code>ItemDB</code> by applying filters in
+      drill-down fashion (ie. <code>AND</code> logic). A fairly large set of
+      item fields are searchable with a convenient typeahead prompt!
     </p>
     <p>
       Search results are presented in a paginated and configurable table. This

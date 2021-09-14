@@ -1,6 +1,6 @@
 # d2cube
 
-An interactive unique D2 companion.
+A unique interactive and visual D2 companion experience.
 
 ---
 
@@ -8,7 +8,6 @@ An interactive unique D2 companion.
 - [ ] Contribution and Issue templates
 - [ ] Discord channel templates
 - [ ] Docs
-- [ ] Contribution
 
 ## TODO
 So much to do, so little time, so much fun.

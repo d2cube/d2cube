@@ -11,7 +11,6 @@ import {githubSponsor} from './github-sponsor.js';
 import {help} from './help.js';
 import {info} from './info.js';
 import {layers} from './layers.js';
-import {list} from './list.js';
 import {pause} from './pause.js';
 import {paypal} from './paypal.js';
 import {play} from './play.js';
@@ -36,9 +35,10 @@ export default {
   nav: {
     about: info,
     community: users,
+    cube,
     developers: code,
+    home: cube,
     items: database,
-    roadmap: list,
     runewords,
     sets: layers,
     support: gift,

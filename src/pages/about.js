@@ -17,22 +17,20 @@ const Page = () => {
       <div>
         <p>
           <BrandLogo />, pronounced D2 Cube, is an unofficial non-profit Diablo
-          2 fansite and is not affiliated with Blizzard.
+          2 fansite and is not affiliated with Blizzard. It takes an interactive
+          and inquiry-based approach to deliver a unique D2 companion
+          experience.
         </p>
         <p>
-          <BrandLogo /> takes an interactive and inquiry-based approach to
-          deliver a unique D2 companion experience in teaching and answering
-          questions about the game.
-        </p>
-        <p>
-          <BrandLogo /> is (ads/login-)free 100% static site built with{' '}
+          This is a 100% static site built with{' '}
           <ExternalLink href={UrlType.Uinix}>uinix</ExternalLink> and served via{' '}
           <ExternalLink href={UrlType.NextJs}>Next.js</ExternalLink>. It is an{' '}
           <ExternalLink href={UrlType.GithubRepo}>
             open-source project
           </ExternalLink>{' '}
           maintained by{' '}
-          <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>.
+          <ExternalLink href={UrlType.Author}>chrisrzhou</ExternalLink>, who
+          enjoys the intersection of D2 + open-source + and building UIs.
         </p>
       </div>
       <hr />
@@ -59,6 +57,48 @@ const Page = () => {
               <li>Character Skills</li>
               <li>Gambling</li>
               <li>Quests (e.g. Larzuk, Anya, Charsi)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div>
+        <h3>Roadmap</h3>
+        <p>
+          A lot of exciting things are planned for <BrandLogo />. So much to do,
+          so little time!
+        </p>
+        <ul>
+          <li>Support D2R item images</li>
+          <li>
+            Invetory Management. Transfer/move items between:
+            <ul>
+              <li>Cube</li>
+              <li>Stash</li>
+              <li>Mercenary</li>
+            </ul>
+          </li>
+          <li>
+            Item Sim
+            <ul>
+              <li>Creation</li>
+              <li>Gambling</li>
+              <li>Rolling (magical/rare affixes)</li>
+              <li>Quest enhancements (e.g. Larzuk, Anya, Charsi)</li>
+            </ul>
+          </li>
+          <li>
+            Character Sim
+            <ul>
+              <li>Player Stats</li>
+              <li>Player Skills</li>
+              <li>Mercenary</li>
+            </ul>
+          </li>
+          <li>
+            Game Files
+            <ul>
+              <li>Load/Save from D2 game files</li>
             </ul>
           </li>
         </ul>

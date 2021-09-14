@@ -19,7 +19,7 @@ const colors = {
     background: '#010101',
     border: '#3D322A',
     error: '#a51313',
-    fade: 'rgba(0, 0, 0, 0.7)',
+    fade: 'rgba(0, 0, 0, 0.8)',
     hover: 'rgba(199, 179, 119, 0.2)',
     active: 'rgba(199, 179, 119, 0.4)',
     grid: '#131015',
@@ -145,6 +145,7 @@ const spacings = {
 };
 
 const transitions = {
+  all: 'all 0.5s',
   opacity: 'opacity 0.5s',
 };
 

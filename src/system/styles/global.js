@@ -43,6 +43,8 @@ export default {
   },
   button: variants.button.m,
   hr: variants.divider,
+  'hr::before': variants.divider['::before'],
+  'hr::after': variants.divider['::after'],
   input: {
     backgroundColor: 'interface.background',
     border: 'bordered',

@@ -8,7 +8,7 @@ const Recipes = ({recipes, onClear}) => (
     {recipes.map((recipe) => (
       <Recipe key={recipe.id} recipe={recipe} />
     ))}
-    <Button size="s" text="Clear" onClick={onClear} />
+    <Button text="Clear" onClick={onClear} />
   </Layout>
 );
 

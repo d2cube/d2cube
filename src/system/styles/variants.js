@@ -5,13 +5,12 @@ const baseButton = {
   color: 'brand.primary',
   flex: 'none',
   fontFamily: 'diablo',
-  fontSize: 'l',
+  fontSize: 's',
   margin: 0,
   outline: 'none',
-  padding: 0,
+  paddingLeft: 'm',
+  paddingRight: 'm',
   paddingBottom: 's',
-  paddingLeft: 'xl',
-  paddingRight: 'xl',
   paddingTop: 's',
   width: 'min-content',
 };
@@ -31,12 +30,41 @@ const absolute = {
 };
 
 const button = {
-  s: {
-    fontSize: 's',
-    paddingLeft: 'm',
-    paddingRight: 'm',
-  },
   m: baseButton,
+  l: {
+    fontSize: 'l',
+    paddingLeft: 'xl',
+    paddingRight: 'xl',
+  },
+};
+
+const card = {
+  preview: {
+    // This is a somewhat coupled implementation
+    border: 'bordered',
+    borderRadius: 'm',
+    padding: 'l',
+    opacity: 1,
+    transition: 'all',
+    '> iframe': {
+      height: 0,
+      transition: 'all',
+    },
+    '> button': {
+      display: 'none',
+    },
+    ':hover': {
+      backgroundColor: 'interface.background',
+      color: 'text.primary',
+      opacity: 'hover',
+      '> iframe': {
+        height: 300,
+      },
+      '> button': {
+        display: 'block',
+      },
+    },
+  },
 };
 
 const divider = {
@@ -133,6 +161,7 @@ const header = {
 export default {
   absolute,
   button,
+  card,
   divider,
   footer,
   frame,

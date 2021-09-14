@@ -87,6 +87,10 @@ const variants = {
     paddingLeft: 's',
     paddingRight: 's',
   },
+  description: {
+    ...diablo,
+    color: 'text.muted',
+  },
   error: {
     color: 'interface.error',
   },

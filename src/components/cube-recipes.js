@@ -17,10 +17,10 @@ const CubeRecipes = () => {
   return (
     <Frame isFixedHeight alignTitle="center" size="l" title="Cube" help={help}>
       <Layout minH="0" spacing="xl">
-        <Cube items={items} onTransmute={handleTransmute} />
         <Layout flex="1" overflow="auto">
           <Recipes recipes={recipes} onClear={handleClear} />
         </Layout>
+        <Cube items={items} onTransmute={handleTransmute} />
       </Layout>
     </Frame>
   );

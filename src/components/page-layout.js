@@ -11,7 +11,7 @@ import ScrollTop from './ui/scroll-top.js';
 
 let cachedEntered = false;
 
-const PageLayout = ({children, title}) => {
+const PageLayout = ({children, title = null}) => {
   const [entered, setEntered] = useState(cachedEntered);
   const styles = useStyles();
 
