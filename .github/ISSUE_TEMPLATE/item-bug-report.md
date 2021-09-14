@@ -1,5 +1,5 @@
 ---
-name: Item Bug report
+name: Item Bug Report
 about: Item-only related bugs
 title: "[ITEM BUG] <ITEM_ID>"
 labels: bug, items
