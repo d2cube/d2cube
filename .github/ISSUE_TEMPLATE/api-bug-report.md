@@ -10,7 +10,7 @@ assignees: ''
 **API name**
 e.g. `getItems`, `getRuneword`, `search`
 
-**To Reproduce**
+**Reproduce**
 Please provide steps to reproduce the behavior.
 
 **Expected behavior**

@@ -10,7 +10,7 @@ assignees: ''
 **Item ID**
 e.g. `ImmortalKingsSoulCage`, `WirtsLeg`, `PerfectTopaz`
 
-**Describe Bug**
+**Describe the bug**
 e.g. Inaccurate name, properties, image etc.
 
 **Expected behavior**
