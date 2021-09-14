@@ -19,7 +19,7 @@ const ItemImage = ({
 
   const src = `${version}/items/${id}${suffix}.webp`;
 
-  return <Image alt={id} src={src} />;
+  return <Image src={src} />;
 };
 
 export default ItemImage;

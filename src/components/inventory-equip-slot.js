@@ -16,7 +16,7 @@ const InventoryEquipSlot = ({item = null, slot}) => {
       styleProps={{size}}
       styles={styles.itemSize}
     >
-      <Image alt={slot} src={src} />
+      <Image src={src} />
       <Layout
         align="center"
         justify="center"
