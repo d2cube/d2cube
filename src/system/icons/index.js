@@ -17,6 +17,7 @@ import {play} from './play.js';
 import {runewords} from './runewords.js';
 import {transmute} from './transmute.js';
 import {up} from './up.js';
+import {video} from './video.js';
 import {users} from './users.js';
 import {x} from './x.js';
 
@@ -34,6 +35,7 @@ export default {
   paypal,
   play,
   up,
+  video,
   x,
   nav: {
     about: info,

@@ -8,7 +8,7 @@ import ItemsTable from '../components/items-table.js';
 import PageLayout from '../components/page-layout.js';
 import BrandText from '../components/ui/brand-text.js';
 import Frame from '../components/ui/frame.js';
-import {SEARCH_OPERATORS} from '../constants/index.js';
+import {PREVIEWS, SEARCH_OPERATORS} from '../constants/index.js';
 import {rollItem} from '../utils/roll-item.js';
 
 const search = createSearch({
@@ -29,7 +29,7 @@ const Page = () => {
 
   return (
     <PageLayout title="Items">
-      <Frame help={help} size="l" title="ItemDB">
+      <Frame help={help} preview={PREVIEWS.items} size="l" title="Items">
         <ItemSearch filters={filters} onChange={handleUpdateFilters} />
         <ItemsTable key={queryKey} items={items} />
       </Frame>

@@ -8,6 +8,7 @@ import SetPreview from '../components/set-preview.js';
 import SetSelect from '../components/set-select.js';
 import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
+import {PREVIEWS} from '../constants/index.js';
 import {getValidEquipSlot} from '../utils/get-valid-equip-slot.js';
 import {rollItem} from '../utils/roll-item.js';
 
@@ -16,12 +17,7 @@ const Page = () => {
   const set = getSet(setId);
 
   const left = (
-    <Frame
-      isFixedHeight
-      help="Preview selected item sets in the Inventory."
-      size="m"
-      title="Item Sets"
-    >
+    <Frame isFixedHeight preview={PREVIEWS.sets} size="m" title="Item Sets">
       <Layout minH="0" spacing="l">
         <Layout flex="1">
           <SetSelect isMenuOpen value={setId} onChange={setSetId} />

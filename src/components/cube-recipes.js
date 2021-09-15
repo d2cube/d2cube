@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {Layout} from 'uinix-ui';
 
 import {getRecipes} from '../api/index.js';
+import {PREVIEWS} from '../constants/index.js';
 import {cubeItems} from '../mocks/index.js';
 import Cube from './cube.js';
 import Recipes from './recipes.js';
@@ -15,7 +16,14 @@ const CubeRecipes = () => {
   const handleClear = () => console.log('clear');
 
   return (
-    <Frame isFixedHeight alignTitle="center" size="l" title="Cube" help={help}>
+    <Frame
+      isFixedHeight
+      alignTitle="center"
+      preview={PREVIEWS.cube}
+      size="l"
+      title="Cube"
+      help={help}
+    >
       <Layout minH="0" spacing="xl">
         <Layout flex="1" overflow="auto">
           <Recipes recipes={recipes} onClear={handleClear} />

@@ -4,12 +4,12 @@ import BrandLogo from '../components/ui/brand-logo.js';
 import ExternalLink from '../components/ui/external-link.js';
 import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
-import {API_METHODS as methods} from '../constants/api-methods.js';
+import {API_METHODS as methods, PREVIEWS} from '../constants/index.js';
 import {UrlType} from '../enums/index.js';
 
 const Page = () => {
   const left = (
-    <Frame size="l" title="For Developers">
+    <Frame preview={PREVIEWS.developers} size="l" title="For Developers">
       <div>
         <p>
           <BrandLogo /> provides a public API accessible via{' '}

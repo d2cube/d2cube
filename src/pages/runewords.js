@@ -11,6 +11,7 @@ import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
 import Labelled from '../components/ui/labelled.js';
 import SocketedItemSelect from '../components/socketed-item-select.js';
+import {PREVIEWS} from '../constants/index.js';
 import {fillNull} from '../utils/fp.js';
 import {rollItem} from '../utils/roll-item.js';
 
@@ -54,7 +55,7 @@ const Page = () => {
   };
 
   const left = (
-    <Frame help={help} size="m" title="Runewords">
+    <Frame help={help} preview={PREVIEWS.runewords} size="m" title="Runewords">
       <Layout minH="0" spacing="l">
         <Layout direction="column" flex="1" spacing="l">
           <Labelled label="Sockets">
