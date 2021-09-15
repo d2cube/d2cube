@@ -39,8 +39,8 @@ Support this project and give back by [sponsoring][] it.  Your profile and contr
 [MIT][license] © [Chris Zhou][@chrisrzhou]
 
 <!-- project -->
-[license]: https://github.com/d2cube/d2cube/blob/main/license
-[sponsoring]: https://github.com/d2cube/d2cube
+[license]: https://github.com/chrisrzhou/d2cube/blob/main/license
+[sponsoring]: https://github.com/chrisrzhou/d2cube
 
 <!-- refs -->
 [@chrisrzhou]: https://github.com/chrisrzhou

@@ -2,7 +2,7 @@ import {useMemo, useState} from 'react';
 import ReactSelect from 'react-windowed-select';
 import {props} from 'uinix-fp';
 
-import {FieldType} from '../../enums/field-type.js';
+import {FieldType} from '../../enums/index.js';
 import {match, isNumber} from '../../utils/fp.js';
 import SearchFilter from './search-filter.js';
 import {components, styles} from './react-select-overrides.js';

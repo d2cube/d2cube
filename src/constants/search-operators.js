@@ -1,4 +1,4 @@
-import {OperatorType} from '../enums/operator-type.js';
+import {OperatorType} from '../enums/index.js';
 import {match} from '../utils/fp.js';
 import {resolveItemStats} from '../utils/resolvers/resolve-item-stats.js';
 

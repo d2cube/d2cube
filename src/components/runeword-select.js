@@ -2,7 +2,7 @@ import {useMemo} from 'react';
 import {pipe} from 'uinix-fp';
 
 import {getRunewords} from '../api/index.js';
-import {BasePropertyType} from '../enums/base-property-type.js';
+import {BasePropertyType} from '../enums/index.js';
 import {and, append, concat, join} from '../utils/fp.js';
 import {getItemTypeLabel} from '../utils/get-item-type-label.js';
 import {getSocketedLabel} from '../utils/get-socketed-label.js';

@@ -1,5 +1,5 @@
 import {SEARCH_FILTERS} from '../constants/index.js';
-import {BasePropertyType} from '../enums/base-property-type.js';
+import {BasePropertyType} from '../enums/index.js';
 import {getItemTypeLabel} from '../utils/get-item-type-label.js';
 import {getSocketedLabel} from '../utils/get-socketed-label.js';
 import ItemSelect from './item-select.js';
