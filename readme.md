@@ -5,8 +5,7 @@ A unique interactive and visual D2 companion experience.
 ---
 
 ## Feedback/Polish
-- Add arrow pagination
-- Split enum into options
+- Split search enum into options
 
 ## Pre-release items
 - [ ] Docs
