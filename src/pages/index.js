@@ -44,10 +44,12 @@ const Page = () => {
   );
 
   return (
-    <PageLayout title="Home">
-      <Interface left={left} />
+    <>
+      <PageLayout title="Home">
+        <Interface left={left} />
+      </PageLayout>
       {modal}
-    </PageLayout>
+    </>
   );
 };
 

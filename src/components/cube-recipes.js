@@ -18,7 +18,6 @@ const CubeRecipes = () => {
   return (
     <Frame
       isFixedHeight
-      alignTitle="center"
       preview={PREVIEWS.cube}
       size="l"
       title="Cube"

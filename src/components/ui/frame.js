@@ -34,16 +34,23 @@ const Frame = ({
         variant="frame"
         w={`frame.width.${size}`}
       >
-        <Layout align="center" alignSelf={alignTitle} spacing="m">
-          <h3>{title}</h3>
+        <Layout
+          align="center"
+          alignSelf={alignTitle}
+          justify="space-between"
+          spacing="m"
+        >
+          <Layout align="center" spacing="m">
+            <h3>{title}</h3>
+            {help && <Help text={help} />}
+          </Layout>
           {preview && (
             <BrandIcon
               icon="video"
-              title="View Preview"
+              tooltip="Click to view preview"
               onClick={handleShowPreview}
             />
           )}
-          {help && <Help text={help} />}
         </Layout>
         {children}
       </Layout>
