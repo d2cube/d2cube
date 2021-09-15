@@ -5,24 +5,38 @@ import {getSocketedLabel} from '../utils/get-socketed-label.js';
 import ItemSelect from './item-select.js';
 import BrandText from './ui/brand-text.js';
 
-const SocketedItemSelect = ({value, onChange}) => (
-  <ItemSelect
-    filters={filters}
-    group={group}
-    value={value}
-    renderExtra={renderExtra}
-    onChange={onChange}
-  />
-);
+const SocketedItemSelect = ({sockets, types, value, onChange}) => {
+  const filters = [SEARCH_FILTERS.isQualityNormal, SEARCH_FILTERS.isSocketable];
 
-const renderExtra = (item) => (
-  <BrandText
-    color="text.muted"
-    text={getSocketedLabel(item.properties.base[BasePropertyType.MaxSockets])}
-  />
-);
+  if (sockets) {
+    filters.push(SEARCH_FILTERS.createGreaterThanEqualsSocketsCount(sockets));
+  }
 
-const filters = [SEARCH_FILTERS.isQualityNormal, SEARCH_FILTERS.isSocketable];
+  if (types) {
+    filters.push(SEARCH_FILTERS.createContainsTypes(types));
+  }
+
+  return (
+    <ItemSelect
+      filters={filters}
+      group={group}
+      value={value}
+      renderExtra={createRenderExtra(sockets)}
+      onChange={onChange}
+    />
+  );
+};
+
+const createRenderExtra = (sockets) => (item) =>
+  (
+    <BrandText
+      color="text.muted"
+      text={getSocketedLabel({
+        max: item.properties.base[BasePropertyType.MaxSockets],
+        sockets,
+      })}
+    />
+  );
 
 const group = {
   key: 'data.type',

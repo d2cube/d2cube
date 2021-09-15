@@ -4,31 +4,43 @@ A unique interactive and visual D2 companion experience.
 
 ---
 
+## Feedback/Polish
+- Add arrow pagination
+- Split enum into options
+
 ## Pre-release items
-- [ ] Contribution and Issue templates
-- [ ] Discord channel templates
 - [ ] Docs
 
-## TODO
-So much to do, so little time, so much fun.
+## Intro
 
-- [ ] Check/verify recipes
-- [ ] D2R image assets
-- [ ] Cleanup code (share utils/transforms/mappers/predicates)
-- [ ] Document all affixes
-- [ ] Mercenary
-- [ ] Larzuk
-- [ ] Stats Page
-- [ ] Rare name page
-- [ ] Personalization
-- [ ] Civerb's Vestments set has unique set bonus behaviors.
+## Contents
 
-## Debt
-- [ ] Visualize System Knowledge
-- [ ] Implement and improve uinix-related code
-- [ ] Tests
-- [ ] Clean up TODOs
-- [ ] Figure out clowny dependencies with `rollItem`.
-- [ ] Cleanup UI components
+## Features
+
+## App
+
+## API
+
+## Docs
+
+## Roadmap
+
+## Project
+
+### Contribute
+
+### Sponsor
+
+Support this project and give back by [sponsoring][] it.  Your profile and contributions will be recognized below.
+
+### Backstory
+
+### License
+[MIT][license] © [Chris Zhou][@chrisrzhou]
+
+<!-- project -->
+[license]: https://github.com/d2cube/d2cube/blob/main/license
+[sponsoring]: https://github.com/d2cube/d2cube
 
 <!-- refs -->
+[@chrisrzhou]: https://github.com/chrisrzhou

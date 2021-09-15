@@ -10,6 +10,7 @@ import Select from './select.js';
 const Table = ({
   columns,
   data,
+  pageSize = 20,
   visibleColumnKeys: initialVisibleColumnKeys = columns.map(prop('key')),
 }) => {
   const [visibleColumnsKeys, setVisibleColumnKeys] = useState(
@@ -38,7 +39,6 @@ const Table = ({
     saveAs(file);
   };
 
-  const pageSize = 50;
   const totalCount = data.length;
 
   return (

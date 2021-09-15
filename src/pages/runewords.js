@@ -11,7 +11,6 @@ import Frame from '../components/ui/frame.js';
 import Interface from '../components/ui/interface.js';
 import Labelled from '../components/ui/labelled.js';
 import SocketedItemSelect from '../components/socketed-item-select.js';
-import {BasePropertyType} from '../enums/index.js';
 import {fillNull} from '../utils/fp.js';
 import {rollItem} from '../utils/roll-item.js';
 
@@ -22,17 +21,12 @@ const Page = () => {
   const [sockets, setSockets] = useState(null);
 
   const item = rollItem({id: itemId});
+  const runeword = getRuneword(runewordId);
 
+  // Socket the item if it exists
   if (item) {
-    item.sockets = fillNull(sockets || getMaxSockets(item));
+    item.sockets = fillNull(sockets);
   }
-
-  const handleChangeItemId = (updatedItemId) => {
-    setItemId(updatedItemId);
-    setSockets(null);
-    setRunes([]);
-    setRunewordId(null);
-  };
 
   const handleChangeRunes = (updatedRunes) => {
     setRunes(updatedRunes);
@@ -46,7 +40,7 @@ const Page = () => {
       const updatedRuneword = getRuneword(updatedRunewordId);
       if (updatedRuneword) {
         setRunes(updatedRuneword.runes);
-        setSockets(Math.min(getMaxSockets(item), updatedRuneword.runes.length));
+        setSockets(updatedRuneword.runes.length);
       }
     } else {
       setRunes([]);
@@ -54,6 +48,7 @@ const Page = () => {
   };
 
   const handleChangeSockets = (updatedSockets) => {
+    setItemId(null);
     setSockets(updatedSockets);
     setRunes([]);
   };
@@ -62,18 +57,17 @@ const Page = () => {
     <Frame help={help} size="m" title="Runewords">
       <Layout minH="0" spacing="l">
         <Layout direction="column" flex="1" spacing="l">
-          <Labelled label="Item Base">
-            <SocketedItemSelect value={itemId} onChange={handleChangeItemId} />
+          <Labelled label="Sockets">
+            <SocketSelect value={sockets} onChange={handleChangeSockets} />
           </Labelled>
-          {item && (
-            <Labelled label="Sockets">
-              <SocketSelect
-                max={getMaxSockets(item)}
-                value={sockets}
-                onChange={handleChangeSockets}
-              />
-            </Labelled>
-          )}
+          <Labelled label="Item Base">
+            <SocketedItemSelect
+              sockets={sockets}
+              types={runeword?.types}
+              value={itemId}
+              onChange={setItemId}
+            />
+          </Labelled>
           {sockets >= 0 && (
             <Labelled label="Runes">
               <RuneSelect
@@ -88,7 +82,7 @@ const Page = () => {
           <Labelled label="Runeword">
             <RunewordSelect
               isMenuOpen
-              itemId={itemId}
+              item={item}
               sockets={sockets}
               runes={runes.join('')}
               value={runewordId}
@@ -111,24 +105,10 @@ const Page = () => {
 
 const help = (
   <div>
-    <p>
-      Use the following interface to explore creating Runewords from available
-      item bases, sockets, and runes.
-    </p>
-    <div>
-      Instructions:
-      <ul>
-        <li>Select a socketed item base</li>
-        <li>Specify sockets</li>
-        <li>Specify runes in order</li>
-        <li>Select a valid Runeword</li>
-        <li>Preview with the Runegram</li>
-      </ul>
-    </div>
+    Use the following interface to explore creating Runewords from any valid
+    combinations of socketed item bases and runes. Preview the results with the
+    Runegram.
   </div>
 );
-
-const getMaxSockets = (item) =>
-  item ? item.properties.base[BasePropertyType.MaxSockets] : 0;
 
 export default Page;

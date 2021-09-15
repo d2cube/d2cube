@@ -95,6 +95,7 @@ const Select = ({
 
   return (
     <ReactSelect
+      closeMenuOnSelect={!isMulti}
       controlShouldRenderValue={shouldRenderValue}
       isClearable={isClearable}
       isSearchable={isSearchable}

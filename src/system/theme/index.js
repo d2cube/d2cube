@@ -3,6 +3,7 @@ const brandColor = '#C7B377';
 const slotSize = 40;
 
 const animations = {
+  easeInOutFast: '0.3s ease-in-out',
   easeInOut: '1s ease-in-out',
 };
 
@@ -19,7 +20,7 @@ const colors = {
     background: '#010101',
     border: '#3D322A',
     error: '#a51313',
-    fade: 'rgba(0, 0, 0, 0.8)',
+    fade: 'rgba(0, 0, 0, 0.85)',
     hover: 'rgba(199, 179, 119, 0.2)',
     active: 'rgba(199, 179, 119, 0.4)',
     grid: '#131015',
@@ -119,6 +120,15 @@ const sizes = {
     },
   },
   globe: '120px',
+  iframe: {
+    height: '600px',
+    width: '800px',
+  },
+  modal: {
+    width: {
+      m: '600px',
+    },
+  },
   paragraph: {
     width: '600px',
   },
@@ -157,6 +167,7 @@ const borders = {
 const zIndices = {
   back: '-1',
   forward: '1',
+  modal: '2',
 };
 
 export default {

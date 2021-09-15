@@ -1,7 +1,8 @@
 import {useMemo} from 'react';
 import {pipe} from 'uinix-fp';
 
-import {getItem, getRunewords} from '../api/index.js';
+import {getRunewords} from '../api/index.js';
+import {BasePropertyType} from '../enums/base-property-type.js';
 import {and, append, concat, join} from '../utils/fp.js';
 import {getItemTypeLabel} from '../utils/get-item-type-label.js';
 import {getSocketedLabel} from '../utils/get-socketed-label.js';
@@ -10,14 +11,12 @@ import Select from './ui/select.js';
 
 const RunewordSelect = ({
   isMenuOpen = undefined,
-  itemId,
+  item,
   sockets,
   runes,
   value,
   onChange,
 }) => {
-  const item = getItem(itemId);
-
   const options = useMemo(
     () =>
       runewords.filter(tests({sockets, item, runes})).map(mapRunewordToOption),
@@ -45,7 +44,20 @@ const tests =
     and([
       () => new RegExp(runes + '([^a-z]|[^a-z]?$)').test(runeword.id),
       () => (item ? runeword.types.includes(item.type) : true),
-      () => (sockets > 0 ? runeword.runes.length === sockets : true),
+      () => {
+        const runewordLength = runeword.runes.length;
+        if (sockets === null && item) {
+          return (
+            runewordLength <= item.properties.base[BasePropertyType.MaxSockets]
+          );
+        }
+
+        if (sockets > 0) {
+          return runeword.runes.length === sockets;
+        }
+
+        return true;
+      },
     ])();
 
 const createRenderOption =
@@ -63,7 +75,7 @@ const createRenderOption =
 const getPlaceholder = ({item, sockets, runes}) =>
   pipe([
     concat('Search'),
-    concat(sockets ? `${getSocketedLabel(sockets)}-socketed` : null),
+    concat(sockets ? `${getSocketedLabel({max: sockets})}-socketed` : null),
     concat(item ? getItemTypeLabel(item.type) : null),
     concat('Runewords'),
     concat(runes ? `with '${runes}'` : null),

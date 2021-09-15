@@ -44,7 +44,7 @@ const fields = {
   },
   stats: {
     id: 'stats',
-    label: 'Stats',
+    label: 'Properties',
     type: FieldType.Json,
   },
   type: {
@@ -113,9 +113,9 @@ const operators = {
     label: 'equals',
     cardinality: 1,
   },
-  [OperatorType.FuzzyContains]: {
-    id: OperatorType.FuzzyContains,
-    label: 'fuzzy contains',
+  [OperatorType.FuzzySearch]: {
+    id: OperatorType.FuzzySearch,
+    label: 'matches',
     cardinality: 1,
   },
   [OperatorType.GreaterThan]: {
@@ -153,7 +153,7 @@ const types = {
   [FieldType.Json]: {
     id: FieldType.Json,
     label: 'Json',
-    operators: [OperatorType.FuzzyContains],
+    operators: [OperatorType.FuzzySearch],
   },
   [FieldType.String]: {
     id: FieldType.String,

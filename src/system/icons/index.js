@@ -18,6 +18,7 @@ import {runewords} from './runewords.js';
 import {transmute} from './transmute.js';
 import {up} from './up.js';
 import {users} from './users.js';
+import {x} from './x.js';
 
 export default {
   cube,
@@ -32,6 +33,8 @@ export default {
   pause,
   paypal,
   play,
+  up,
+  x,
   nav: {
     about: info,
     community: users,
@@ -46,5 +49,4 @@ export default {
   interface: {
     transmute,
   },
-  up,
 };

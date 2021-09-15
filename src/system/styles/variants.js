@@ -6,12 +6,11 @@ const baseButton = {
   flex: 'none',
   fontFamily: 'diablo',
   fontSize: 's',
+  lineHeight: 'body',
   margin: 0,
   outline: 'none',
   paddingLeft: 'm',
   paddingRight: 'm',
-  paddingBottom: 's',
-  paddingTop: 's',
   width: 'min-content',
 };
 
@@ -29,40 +28,33 @@ const absolute = {
   },
 };
 
+const fixed = {
+  position: 'fixed',
+  inset: 0,
+};
+
 const button = {
   m: baseButton,
   l: {
     fontSize: 'l',
+    paddingBottom: 's',
     paddingLeft: 'xl',
     paddingRight: 'xl',
+    paddingTop: 's',
   },
 };
 
 const card = {
   preview: {
-    // This is a somewhat coupled implementation
     border: 'bordered',
     borderRadius: 'm',
-    padding: 'l',
+    padding: 'm',
     opacity: 1,
     transition: 'all',
-    '> iframe': {
-      height: 0,
-      transition: 'all',
-    },
-    '> button': {
-      display: 'none',
-    },
     ':hover': {
       backgroundColor: 'interface.background',
       color: 'text.primary',
       opacity: 'hover',
-      '> iframe': {
-        height: 300,
-      },
-      '> button': {
-        display: 'block',
-      },
     },
   },
 };
@@ -126,10 +118,9 @@ const socket = {
 };
 
 const splash = {
+  ...fixed,
   backgroundColor: 'interface.fade',
-  inset: 0,
   padding: 'xxl',
-  position: 'fixed',
 };
 
 const sticky = {
@@ -158,14 +149,46 @@ const header = {
   width: '100%',
 };
 
+const modal = {
+  overlay: {
+    ...fixed,
+    animation: 'easeInOutFast',
+    animationName: 'fade.in',
+    backgroundColor: 'interface.fade',
+    zIndex: 'modal',
+  },
+  container: {
+    backgroundColor: 'interface.background',
+    border: 'bordered',
+    borderRadius: 'm',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: '10%',
+    marginTop: '10%',
+    maxHeight: '70vh',
+    width: 'modal.width.m',
+    zIndex: 'modal',
+  },
+  header: {
+    borderBottom: 'bordered',
+    padding: 'l',
+  },
+  contents: {
+    overflowY: 'auto',
+    padding: 'l',
+  },
+};
+
 export default {
   absolute,
   button,
   card,
   divider,
+  fixed,
   footer,
   frame,
   header,
+  modal,
   pentagram,
   socket,
   splash,

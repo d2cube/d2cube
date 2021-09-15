@@ -34,6 +34,8 @@ const elementShorthandPropsMapping = {
   maxHeight: ['maxH'],
   minHeight: ['minH'],
   width: ['w'],
+  maxWidth: ['maxW'],
+  minWidth: ['minW'],
   zIndex: ['z'],
 };
 

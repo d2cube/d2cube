@@ -21,4 +21,14 @@ export const SEARCH_FILTERS = {
     operator: OperatorType.GreaterThan,
     value: 0,
   },
+  createContainsTypes: (types) => ({
+    field: 'type',
+    operator: OperatorType.Contains,
+    value: types,
+  }),
+  createGreaterThanEqualsSocketsCount: (sockets) => ({
+    field: `properties.base.${BasePropertyType.MaxSockets}`,
+    operator: OperatorType.GreaterThan,
+    value: sockets - 1,
+  }),
 };

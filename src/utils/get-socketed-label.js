@@ -1,5 +1,6 @@
-import {k} from 'uinix-fp';
-
 import {fill} from './fp.js';
 
-export const getSocketedLabel = (sockets) => fill(sockets)(k('○')).join('');
+export const getSocketedLabel = ({max, sockets = max}) =>
+  fill(max)((i) => (sockets >= i ? '●' : '○'))
+    .reverse()
+    .join('');
