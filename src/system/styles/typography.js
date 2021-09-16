@@ -48,7 +48,8 @@ const global = {
   h6: diablo,
   mark: {
     background: 'none',
-    backgroundColor: 'brand.primary',
+    backgroundColor: 'interface.active',
+    color: 'inherit',
     textDecoration: 'underline',
   },
   p: {

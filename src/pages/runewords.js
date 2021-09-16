@@ -49,8 +49,9 @@ const Page = () => {
   };
 
   const handleChangeSockets = (updatedSockets) => {
-    setItemId(null);
     setSockets(updatedSockets);
+    setItemId(null);
+    setRunewordId(null);
     setRunes([]);
   };
 
@@ -106,9 +107,15 @@ const Page = () => {
 
 const help = (
   <div>
-    Use the following interface to explore creating Runewords from any valid
-    combinations of socketed item bases and runes. Preview the results with the
-    Runegram.
+    <p>
+      Use the following interface to explore creating Runewords from any valid
+      combinations of socketed item bases and runes.
+    </p>
+    <p>
+      Socket counts are indicated by the <code>○</code> (max) and <code>●</code>{' '}
+      (applied) symbols.
+    </p>
+    <p>The Runegram on the right visualizes the Runeword creation process.</p>
   </div>
 );
 

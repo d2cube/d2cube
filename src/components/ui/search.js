@@ -4,16 +4,12 @@ import {props} from 'uinix-fp';
 
 import {FieldType} from '../../enums/index.js';
 import {match, isNumber} from '../../utils/fp.js';
+import BrandText from './brand-text.js';
 import SearchFilter from './search-filter.js';
-import {components, styles} from './react-select-overrides.js';
-
-const overrideStyles = {
-  ...styles,
-  menuList: () => ({
-    ...styles.menuList(),
-    maxHeight: null,
-  }),
-};
+import {
+  components as overrideComponents,
+  styles as overrideStyles,
+} from './react-select-overrides.js';
 
 const Search = ({placeholder, filters, schema, onChange}) => {
   const [query, setQuery] = useState('');
@@ -45,14 +41,35 @@ const Search = ({placeholder, filters, schema, onChange}) => {
     <ReactSelect
       isMulti
       components={components}
-      menuPortalTarget={document.body}
       options={options}
       placeholder={placeholder}
-      styles={overrideStyles}
+      styles={styles}
       onChange={handleChange}
       onInputChange={setQuery}
     />
   );
+};
+
+const MultiValueLabel = ({data}) => {
+  const {enumValue, field, operator, query} = data.data;
+  return (
+    <SearchFilter
+      isPreview
+      enumValue={enumValue}
+      field={field}
+      operator={operator}
+      query={query}
+    />
+  );
+};
+
+const components = {
+  ...overrideComponents,
+  MultiValueLabel,
+};
+
+const styles = {
+  ...overrideStyles,
 };
 
 const createOptions = ({query, schema}) => {
@@ -63,58 +80,78 @@ const createOptions = ({query, schema}) => {
       const fieldOperators = types[field.type].operators.map(
         (operator) => operators[operator],
       );
-      const fieldEnums = Object.values(enums[field.enums] || {}).filter(
+      const enumValues = Object.values(enums[field.enums] || {}).filter(
         match(query),
       );
-      return fieldOperators.map(
-        createOperatorOption({enums: fieldEnums, field, query}),
-      );
+
+      const options = [];
+      fieldOperators.forEach((operator) => {
+        if (field.enums) {
+          enumValues.forEach((enumValue) => {
+            options.push(createOption({enumValue, field, operator, query}));
+          });
+        } else {
+          options.push(createOption({field, operator, query}));
+        }
+      });
+
+      return {
+        label: (
+          <BrandText color="item.crafted" fontSize="s" text={field.label} />
+        ),
+        options,
+      };
     });
+};
+
+const createOption = ({enumValue = null, field, operator, query}) => {
+  const option = {
+    data: {
+      enumValue,
+      field,
+      filter: {
+        field: field.id,
+        operator: operator.id,
+        value: coerceValue({enumValue, field, query}),
+      },
+      operator,
+      query,
+    },
+    label: (
+      <SearchFilter
+        enumValue={enumValue}
+        field={field}
+        operator={operator}
+        query={query}
+      />
+    ),
+  };
+  option.value = getValue(option);
+  return option;
 };
 
 const testIsValidField =
   ({query, schema}) =>
   (field) => {
     switch (field.type) {
-      case FieldType.EnumSet:
+      case FieldType.Enum:
         return Object.values(schema.enums[field.enums]).some(match(query));
       case FieldType.Number:
-        return isNumber(query || 0);
+        return isNumber(query);
+      case FieldType.String:
+      case FieldType.Json:
+        return Boolean(query);
       default:
         return true;
     }
   };
 
-const createOperatorOption =
-  ({enums, field, query}) =>
-  (operator) => {
-    const option = {
-      data: {
-        filter: {
-          field: field.id,
-          operator: operator.id,
-          value: coerceValue({enums, field, query}),
-        },
-      },
-      label: (
-        <SearchFilter
-          enums={enums}
-          field={field}
-          operator={operator}
-          value={query}
-        />
-      ),
-    };
-    option.value = getValue(option);
-    return option;
-  };
-
-const coerceValue = ({enums, field, query}) => {
+const coerceValue = ({enumValue, field, query}) => {
   switch (field.type) {
     case FieldType.Number:
       return Number.parseInt(query, 10);
-    case FieldType.EnumSet:
-      return enums;
+    case FieldType.Enum:
+      return enumValue;
     case FieldType.String:
     default:
       return query;

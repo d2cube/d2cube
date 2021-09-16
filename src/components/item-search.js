@@ -14,7 +14,7 @@ import Search from './ui/search.js';
 
 const ItemSearch = ({filters, onChange}) => (
   <Search
-    placeholder='Simply type ahead to search for items! (e.g. "unique", "immortal", "mana", "barb", "topaz")'
+    placeholder='Keep typing to narrow your search on matching fields e.g. "unique", "mana", "axe", "barb"'
     schema={schema}
     filters={filters}
     onChange={onChange}
@@ -47,58 +47,58 @@ const fields = {
     label: 'Properties',
     type: FieldType.Json,
   },
-  type: {
-    id: 'type',
-    label: 'Type',
-    type: FieldType.EnumSet,
-    enums: 'ItemType',
-  },
   quality: {
     id: 'quality',
     label: 'Quality',
-    type: FieldType.EnumSet,
+    type: FieldType.Enum,
     enums: 'ItemQualityType',
-  },
-  set: {
-    id: 'set',
-    label: 'Set',
-    type: FieldType.EnumSet,
-    enums: 'ItemSetType',
-  },
-  playerClass: {
-    id: 'playerClass',
-    label: 'Player Class',
-    type: FieldType.EnumSet,
-    enums: 'PlayerClassType',
-  },
-  gemClass: {
-    id: 'class',
-    label: 'Gem Class',
-    type: FieldType.EnumSet,
-    enums: 'GemClassType',
-  },
-  weaponClass: {
-    id: 'class',
-    label: 'Weapon Class',
-    type: FieldType.EnumSet,
-    enums: 'WeaponClassType',
-  },
-  armorClass: {
-    id: 'class',
-    label: 'Armor Class',
-    type: FieldType.EnumSet,
-    enums: 'ArmorClassType',
-  },
-  potionClass: {
-    id: 'class',
-    label: 'Potion Class',
-    type: FieldType.EnumSet,
-    enums: 'PotionClassType',
   },
   tier: {
     id: 'tier',
     label: 'Tier',
     type: FieldType.Number,
+  },
+  playerClass: {
+    id: 'playerClass',
+    label: 'Player Class',
+    type: FieldType.Enum,
+    enums: 'PlayerClassType',
+  },
+  weaponClass: {
+    id: 'class',
+    label: 'Weapon Class',
+    type: FieldType.Enum,
+    enums: 'WeaponClassType',
+  },
+  armorClass: {
+    id: 'class',
+    label: 'Armor Class',
+    type: FieldType.Enum,
+    enums: 'ArmorClassType',
+  },
+  gemClass: {
+    id: 'class',
+    label: 'Gem Class',
+    type: FieldType.Enum,
+    enums: 'GemClassType',
+  },
+  potionClass: {
+    id: 'class',
+    label: 'Potion Class',
+    type: FieldType.Enum,
+    enums: 'PotionClassType',
+  },
+  type: {
+    id: 'type',
+    label: 'Type',
+    type: FieldType.Enum,
+    enums: 'ItemType',
+  },
+  set: {
+    id: 'set',
+    label: 'Set',
+    type: FieldType.Enum,
+    enums: 'ItemSetType',
   },
 };
 
@@ -115,7 +115,7 @@ const operators = {
   },
   [OperatorType.FuzzySearch]: {
     id: OperatorType.FuzzySearch,
-    label: 'matches',
+    label: 'contains',
     cardinality: 1,
   },
   [OperatorType.GreaterThan]: {
@@ -145,10 +145,10 @@ const types = {
       OperatorType.GreaterThan,
     ],
   },
-  [FieldType.EnumSet]: {
-    id: FieldType.EnumSet,
-    label: 'EnumSet',
-    operators: [OperatorType.Contains],
+  [FieldType.Enum]: {
+    id: FieldType.Enum,
+    label: 'Enum',
+    operators: [OperatorType.Equals],
   },
   [FieldType.Json]: {
     id: FieldType.Json,

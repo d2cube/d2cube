@@ -119,6 +119,8 @@ export const styles = {
     border: themedStyles.bordered,
     display: 'flex',
     margin: themedStyles.spacingExtraSmall,
+    paddingLeft: themedStyles.spacingSmall,
+    paddingRight: themedStyles.spacingSmall,
   }),
   multiValueRemove: () => ({
     color: themedStyles.borderColor,
@@ -152,6 +154,9 @@ export const styles = {
   }),
   placeholder: () => ({
     color: themedStyles.textMutedColor,
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
   }),
   singleValue: () => ({
     color: themedStyles.textPrimaryColor,

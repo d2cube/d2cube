@@ -31,6 +31,7 @@ const PageLayout = ({children, title = null}) => {
             direction="column"
             flex="auto"
             py="xl"
+            pb="footer"
             spacing="xl"
             styles={styles.fadeIn}
             variant="container"

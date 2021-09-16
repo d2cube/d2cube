@@ -17,7 +17,13 @@ const Page = () => {
   const set = getSet(setId);
 
   const left = (
-    <Frame isFixedHeight preview={PREVIEWS.sets} size="m" title="Item Sets">
+    <Frame
+      isFixedHeight
+      help="Search for sets and preview them in the Inventory."
+      preview={PREVIEWS.sets}
+      size="m"
+      title="Item Sets"
+    >
       <Layout minH="0" spacing="l">
         <Layout flex="1">
           <SetSelect isMenuOpen value={setId} onChange={setSetId} />

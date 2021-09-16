@@ -27,17 +27,10 @@ export const resolveRunewordProperties = (runeword, item) => {
 
   types.forEach((type) => {
     const typeLabel = getItemTypeLabel(type);
-    const text =
-      type === item?.type ? (
-        <mark>
-          {item.name} ({typeLabel})
-        </mark>
-      ) : (
-        typeLabel
-      );
+    const isTypeMatch = type === item?.type;
     resolved.push({
-      text,
-      color: 'item.socketed',
+      text: isTypeMatch ? `${item.name} (${typeLabel})` : typeLabel,
+      color: isTypeMatch ? 'item.runeword' : 'item.socketed',
     });
   });
 

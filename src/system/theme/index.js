@@ -152,6 +152,7 @@ const spacings = {
   l: '16px',
   xl: '32px',
   xxl: '64px',
+  footer: '160px',
 };
 
 const transitions = {

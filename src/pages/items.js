@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {v4 as uuid} from 'uuid';
+import {Element} from 'uinix-ui';
 
 import {getItems} from '../api/index.js';
 import {createSearch} from '../api/search.js'; // TODO: avoid this internal API
@@ -30,7 +31,9 @@ const Page = () => {
   return (
     <PageLayout title="Items">
       <Frame help={help} preview={PREVIEWS.items} size="l" title="Items">
-        <ItemSearch filters={filters} onChange={handleUpdateFilters} />
+        <Element variant="sticky.top">
+          <ItemSearch filters={filters} onChange={handleUpdateFilters} />
+        </Element>
         <ItemsTable key={queryKey} items={items} />
       </Frame>
     </PageLayout>
@@ -40,17 +43,17 @@ const Page = () => {
 const help = (
   <div>
     <p>
-      Search for items in the <code>ItemDB</code> by applying filters in
-      drill-down fashion (ie. <code>AND</code> logic). A fairly large set of
-      item fields are searchable with a convenient typeahead prompt!
+      Search for items in the <code>ItemDB</code> by narrowing down on matching
+      fields using the typeahead prompt. Build specific search queries by
+      applying multiple filters in drilldown-fashion.
     </p>
     <p>
-      Search results are presented in a paginated and configurable table. This
-      table can be conveniently exported as JSON.
+      Search results are presented in a paginated and column-configurable table.
+      The results can be downloaded as JSON.
     </p>
     <div>
       Item descriptions aim to stay close to its in-game presentation. The
-      following additional notations are used to emphasize details.
+      following additional notations are used to emphasize further details.
       <ul>
         <li>
           Item quality are easily identified by their colors: e.g.{' '}
@@ -59,10 +62,7 @@ const help = (
           <BrandText color="item.magic" text="Magic" />
         </li>
         <li>
-          Range values are enclosed in <code>[...]</code>
-        </li>
-        <li>
-          The +/++/+++ symbols indicate Normal/Exceptional/Elite item tiers.
+          Range/variable values are enclosed in <code>[...]</code>
         </li>
       </ul>
     </div>

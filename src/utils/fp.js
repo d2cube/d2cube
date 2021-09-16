@@ -22,7 +22,6 @@ export const normalize = (key) => (xs) =>
 export const degroupBy = (key) => (xs) => xs.flatMap((x) => x[key] || x);
 
 export const groupBy = (key) => (xs) =>
-  // eslint-disable-next-line unicorn/prefer-object-from-entries
   xs.reduce((acc, x) => {
     const group = props(key)(x);
     if (!(group in acc)) {
@@ -86,7 +85,6 @@ export const sum = (xs) => {
   const [firstValue] = xs;
   if (isPlainObject(firstValue)) {
     const keys = Object.keys(firstValue);
-    // eslint-disable-next-line unicorn/prefer-object-from-entries
     return xs.reduce((acc, x) => {
       keys.forEach((key) => {
         if (!(key in acc)) {

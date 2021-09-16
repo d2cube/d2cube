@@ -63,13 +63,15 @@ const help = (
     <p>The Runegram visualizes socketed runes on an item.</p>
     <p>
       A selected item base of choice sits in the center of the Runegram. Runes
-      are laid out in a circle in order of their quality and become active when
-      they are selected. You can conveniently estimate the cost of a Runeword by
-      observing its relative placement in the Runegram.
+      are laid out in a circle, ordered based on of their quality in a clockwise
+      fashion. This provides a way to estimate the cost of a Runeword by simply
+      observing the distribution of applied runes (with cheap runes beginning in
+      the top-right quadrant and expensive runes ending in the top-left
+      quadrant).
     </p>
     <p>
-      The Runegram becomes active when a Runeword is spelled with valid runes on
-      an appropriate item.
+      A rune becomes active when applied on an item. The entire Runegram becomes
+      active when a Runeword is spelled with valid runes on an appropriate item.
     </p>
   </div>
 );

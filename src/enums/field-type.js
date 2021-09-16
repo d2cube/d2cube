@@ -1,5 +1,5 @@
 export const FieldType = {
-  EnumSet: 'enum set',
+  Enum: 'enum',
   Json: 'json',
   Number: 'number',
   String: 'string',

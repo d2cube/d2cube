@@ -10,7 +10,7 @@ import Select from './select.js';
 const Table = ({
   columns,
   data,
-  pageSize = 20,
+  pageSize = 50,
   visibleColumnKeys: initialVisibleColumnKeys = columns.map(prop('key')),
 }) => {
   const [visibleColumnsKeys, setVisibleColumnKeys] = useState(

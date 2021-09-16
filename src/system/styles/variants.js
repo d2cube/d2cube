@@ -137,9 +137,12 @@ const sticky = {
 };
 
 const footer = {
-  ...sticky.bottom,
   backgroundColor: 'interface.background',
   boxShadow: 'footer',
+  bottom: 0,
+  left: 0,
+  position: 'fixed',
+  right: 0,
 };
 
 const header = {

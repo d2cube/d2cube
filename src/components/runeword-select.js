@@ -1,10 +1,8 @@
 import {useMemo} from 'react';
-import {pipe} from 'uinix-fp';
 
 import {getRunewords} from '../api/index.js';
 import {BasePropertyType} from '../enums/index.js';
-import {and, append, concat, join} from '../utils/fp.js';
-import {getItemTypeLabel} from '../utils/get-item-type-label.js';
+import {and} from '../utils/fp.js';
 import {getSocketedLabel} from '../utils/get-socketed-label.js';
 import RunewordName from './runeword-name.js';
 import Select from './ui/select.js';
@@ -17,20 +15,31 @@ const RunewordSelect = ({
   value,
   onChange,
 }) => {
-  const options = useMemo(
-    () =>
-      runewords.filter(tests({sockets, item, runes})).map(mapRunewordToOption),
-    [sockets, item, runes],
-  );
+  const options = useMemo(() => {
+    const groupedRunewords = runewords
+      .filter(tests({sockets, item, runes}))
+      .reduce((acc, runeword) => {
+        const runeCount = runeword.runes.length;
+        if (!(runeCount in acc)) {
+          acc[runeCount] = [];
+        }
 
-  const placeholder = getPlaceholder({item, sockets, runes});
+        acc[runeCount].push(runeword);
+        return acc;
+      }, {});
+
+    return Object.entries(groupedRunewords).map(([runeCount, runewords]) => ({
+      label: getSocketedLabel({max: runeCount}),
+      options: runewords.map(runewordToOption),
+    }));
+  }, [sockets, item, runes]);
 
   return (
     <Select
       isMenuOpen={isMenuOpen}
       noOptionsMessage="No runewords found."
       options={options}
-      placeholder={placeholder}
+      placeholder="Search runewords..."
       value={value}
       renderOption={createRenderOption({item, runes})}
       onChange={onChange}
@@ -72,18 +81,7 @@ const createRenderOption =
       />
     );
 
-const getPlaceholder = ({item, sockets, runes}) =>
-  pipe([
-    concat('Search'),
-    concat(sockets ? `${getSocketedLabel({max: sockets})}-socketed` : null),
-    concat(item ? getItemTypeLabel(item.type) : null),
-    concat('Runewords'),
-    concat(runes ? `with '${runes}'` : null),
-    join(' '),
-    append('...'),
-  ])([]);
-
-const mapRunewordToOption = (runeword) => ({
+const runewordToOption = (runeword) => ({
   data: runeword,
   value: runeword.id,
   label: runeword.name,

@@ -8,7 +8,7 @@ export const PREVIEWS = {
     icon: 'nav.cube',
     title: 'Cube',
     description: 'Explore recipes with the Horadric Cube.',
-    src: createIframeSrc('2b88b1667ec643919fe0aeb2c4f353c2'),
+    src: createIframeSrc(''),
   },
   items: {
     id: 'items',
@@ -16,7 +16,7 @@ export const PREVIEWS = {
     icon: 'nav.items',
     title: 'Items',
     description: 'Query items with a powerful search interface.',
-    src: createIframeSrc('e2880ce20d864acb92ea5553562a4ace'),
+    src: createIframeSrc('9ecbdaac890042d0a2063c2c351f7c13'),
   },
   sets: {
     id: 'sets',
@@ -24,7 +24,7 @@ export const PREVIEWS = {
     icon: 'nav.sets',
     title: 'Sets',
     description: 'View item sets and bonuses with the Inventory.',
-    src: createIframeSrc('2b88b1667ec643919fe0aeb2c4f353c2'),
+    src: createIframeSrc('f21f3f2e3ca34dcc93103c3d8857ad3d'),
   },
   runewords: {
     id: 'runewords',
@@ -32,7 +32,7 @@ export const PREVIEWS = {
     icon: 'nav.runewords',
     title: 'Runewords',
     description: 'Explore Runewords with the Runegram.',
-    src: createIframeSrc('eeaa4cfabe0a4cfebbe2f48625c0e783'),
+    src: createIframeSrc('aad7f6eec99b44bda45efae0323c6866'),
   },
   developers: {
     id: 'developers',
@@ -40,6 +40,6 @@ export const PREVIEWS = {
     icon: 'nav.developers',
     title: 'Developers',
     description: 'Reference the REST/Node API.',
-    src: createIframeSrc('34348c39d6ed4465900bfeaa31f3d59a'),
+    src: createIframeSrc('7ec6d624313b4a5bb6af892c96019f47'),
   },
 };
