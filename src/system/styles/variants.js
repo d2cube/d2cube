@@ -1,3 +1,5 @@
+import {slotSize} from '../theme/index.js';
+
 const baseButton = {
   backgroundImage: 'url(images/ui/button.jpg)',
   backgroundSize: '100% 400%',
@@ -59,11 +61,20 @@ const card = {
   },
 };
 
+const cube = {
+  backgroundImage: 'url(images/ui/cube-background.png)',
+  backgroundPosition: 'center center',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: '100%',
+  heigth: slotSize * 20,
+  width: slotSize * 10,
+};
+
 const divider = {
   backgroundImage: 'url(images/ui/divider.png)',
+  backgroundPosition: 'center top',
   backgroundRepeat: 'no-repeat',
   backgroundSize: '100% 10px',
-  backgroundPosition: 'center top',
   border: 'none',
   flex: 'none',
   height: '10px',
@@ -186,6 +197,7 @@ export default {
   absolute,
   button,
   card,
+  cube,
   divider,
   fixed,
   footer,

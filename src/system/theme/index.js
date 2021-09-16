@@ -1,10 +1,12 @@
 // Variables
+export const slotSize = 40;
+
 const brandColor = '#C7B377';
-const slotSize = 40;
 
 const animations = {
   easeInOutFast: '0.3s ease-in-out',
   easeInOut: '1s ease-in-out',
+  linearSlow: '3s linear',
 };
 
 const borderWidths = {
@@ -73,12 +75,27 @@ const keyframes = {
     in: {
       '0%': {
         filter: 'blur(10px)',
-        opacity: 0,
+        opacity: '0',
       },
       '100%': {
         filter: 'blur(0px)',
         opacity: '1',
       },
+    },
+  },
+  transmute: {
+    // To be further enhanced!
+    '0%': {
+      opacity: '0',
+    },
+    '50%': {
+      opacity: '1',
+    },
+    '70%': {
+      opacity: 'ethereal',
+    },
+    '100%': {
+      opacity: '0',
     },
   },
 };
@@ -101,6 +118,7 @@ const radii = {
 };
 
 const shadows = {
+  transmute: `0px 0px 120px 60px ${brandColor}`,
   footer: '0px -30px 30px black',
   header: '0px 30px 30px black',
 };
