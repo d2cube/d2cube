@@ -4,9 +4,6 @@ A unique interactive and visual D2 companion experience.
 
 ---
 
-## Pre-release items
-- [ ] Docs
-
 ## Intro
 
 ## Contents
