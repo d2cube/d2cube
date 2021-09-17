@@ -3,8 +3,9 @@ import {Element, Layout} from 'uinix-ui';
 import {useToggle} from '../hooks/index.js';
 import ItemGrid from './item-grid.js';
 import BrandIcon from './ui/brand-icon.js';
+import BrandText from './ui/brand-text.js';
 
-const Cube = ({items, onTransmute}) => {
+const Cube = ({disabled, event, items, onTransmute}) => {
   const [transmuteKey, toggleTransmuteKey] = useToggle();
 
   const handleTransmute = () => {
@@ -23,13 +24,21 @@ const Cube = ({items, onTransmute}) => {
         variant="cube"
       >
         <Element position="relative" styles={styles.backdropAlignment}>
-          <ItemGrid items={items} size={[4, 3]} />
           <Element key={transmuteKey} styles={styles.transmute} />
+          <ItemGrid items={items} size={[4, 3]} />
+          {event && (
+            <Element variant="absolute.stretch">
+              <Layout align="center" justify="center" variant="portal.red">
+                <BrandText color="text.event" textAlign="center" text={event} />
+                </Layout>
+            </Element>
+          )}
         </Element>
         <BrandIcon
+          disabled={disabled}
           icon="interface.transmute"
           size="icon.l"
-          tooltip="Transmute"
+          tooltip={disabled ? 'Nothing to Transmute' : 'Transmute'}
           onClick={handleTransmute}
         />
       </Layout>
@@ -40,11 +49,11 @@ const Cube = ({items, onTransmute}) => {
 const styles = {
   backdropAlignment: {
     // Hacky but works to align layout with the backdrop.  will remove once we have formal assets.
-    paddingRight: 's',
-    paddingTop: 's',
+    marginLeft: '-s',
+    marginTop: 's',
   },
   transmute: {
-    animation: 'linearSlow',
+    animation: 'linear',
     animationName: 'transmute',
     backgroundColor: 'brand.primary',
     boxShadow: 'transmute',

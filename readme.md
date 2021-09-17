@@ -4,6 +4,14 @@ A unique interactive and visual D2 companion experience.
 
 ---
 
+Cube:
+- RecipeSearch component (filter by recipe type, item types, item name)
+- Indicate selected/loaded recipe in Cube panel
+- Indicate target/post-transmute item/event in Cube panel
+  - Indicate invalid recipe ("nothing to transmute").
+  - Indicate transmute happened successfully and describe target item.
+  - Indicate portals (e.g. Chaos Tristram Portal Opened)
+
 ## Intro
 
 ## Contents

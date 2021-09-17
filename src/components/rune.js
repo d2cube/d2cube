@@ -4,7 +4,12 @@ import Item from './item.js';
 import BrandText from './ui/brand-text.js';
 
 const Rune = ({count, disabled, rune}) => (
-  <Layout disabled={disabled} align="center" direction="column" spacing="-s">
+  <Layout
+    align="center"
+    direction="column"
+    opacity={disabled ? 'inactive' : undefined}
+    spacing="-s"
+  >
     <Item item={rune} />
     <BrandText
       color="item.rune"

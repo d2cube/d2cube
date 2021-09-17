@@ -6,7 +6,7 @@ const brandColor = '#C7B377';
 const animations = {
   easeInOutFast: '0.3s ease-in-out',
   easeInOut: '1s ease-in-out',
-  linearSlow: '3s linear',
+  linear: '1.5s linear',
 };
 
 const borderWidths = {
@@ -49,9 +49,10 @@ const colors = {
     xp: '#c0b98f',
   },
   text: {
-    primary: '#fdfad9',
-    muted: '#666',
+    event: '#ff4640',
     heading: brandColor,
+    muted: '#666',
+    primary: '#fdfad9',
   },
 };
 
@@ -105,8 +106,7 @@ const lineHeights = {
 };
 
 const opacities = {
-  disabled: '0.2',
-  inactive: '0.3',
+  inactive: '0.2',
   ethereal: '0.7',
   hover: '0.8',
 };

@@ -41,13 +41,7 @@ const elementShorthandPropsMapping = {
 
 const elementStyles = [
   ({onClick}) => (onClick ? styles.interactive : null),
-  ({disabled}) =>
-    disabled
-      ? {
-          opacity: 'disabled',
-          filter: 'grayscale(1)',
-        }
-      : null,
+  ({disabled}) => (disabled ? styles.disabled : null),
 ];
 
 export default {

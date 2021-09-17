@@ -4,6 +4,10 @@ const centered = {
   justifyContent: 'center',
 };
 
+const disabled = {
+  filter: 'grayscale(1)',
+};
+
 const fadeIn = {
   animation: 'easeInOut',
   animationName: 'fade.in',
@@ -61,19 +65,23 @@ const itemSize = ({theme, size}) => ({
   width: size[1] * theme.sizes.slot,
 });
 
-const item = ({theme, isEthereal, isInactive, position = [], size = []}) => ({
-  // Dimensions
-  flex: 'none',
-  padding: 'xxs',
-  ...itemSize({theme, size}),
-  gridRowStart: position[0],
-  gridRowEnd: position[0] + size[0],
-  gridColumnStart: position[1],
-  gridColumnEnd: position[1] + size[1],
-  // Effects
-  objectFit: 'cover',
-  opacity: isInactive ? 'inactive' : isEthereal ? 'ethereal' : undefined,
-});
+const item = ({theme, isEthereal, isInactive, position = [], size = []}) => {
+  const [h, w] = size;
+  const [row, col] = position;
+  return {
+    // Dimensions
+    flex: 'none',
+    padding: 'xxs',
+    ...itemSize({theme, size}),
+    gridRowStart: row + 1,
+    gridRowEnd: row + h + 1,
+    gridColumnStart: col + 1,
+    gridColumnEnd: col + w + 1,
+    // Effects
+    objectFit: 'cover',
+    opacity: isInactive ? 'inactive' : isEthereal ? 'ethereal' : undefined,
+  };
+};
 
 const progress = ({color, percent}) => ({
   backgroundColor: color,
@@ -82,6 +90,7 @@ const progress = ({color, percent}) => ({
 
 export default {
   centered,
+  disabled,
   fadeIn,
   globe,
   grid,

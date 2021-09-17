@@ -65,8 +65,8 @@ const Page = () => {
       <div>
         <h3>Roadmap</h3>
         <p>
-          A lot of exciting things are planned for <BrandLogo />. So much to do,
-          so little time!
+          <BrandLogo /> aims to eventually sim all item/inventory/skill/stats
+          interactions and relationships in the game.
         </p>
         <ul>
           <li>Support D2R item images</li>

@@ -11,13 +11,13 @@ const Recipe = ({recipe}) => {
       <Text>{name}</Text>
       <Layout align="center" spacing="m">
         {sources.map((source) => (
-          <Item key={source.item.uuid} item={source.item} />
+          <Item key={source.uuid} item={source} />
         ))}
         <Text>➔</Text>
-        {typeof target === 'string' ? (
-          <BrandText color="item.crafted" text={target} />
+        {target.isEvent ? (
+          <BrandText color="text.event" text={target.text} />
         ) : (
-          <Item item={target.item} />
+          <Item item={target} />
         )}
       </Layout>
     </Layout>

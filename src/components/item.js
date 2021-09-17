@@ -6,10 +6,10 @@ import ItemSockets from './item-sockets.js';
 import ItemTooltip from './item-tooltip.js';
 
 // TODO: organize and document logic in relevant utils
-const Item = ({item, isInactive = false, variant = null}) => {
+const Item = ({item, isInactive = false}) => {
   const styles = useStyles();
 
-  const {id, imageId, isEthereal, position, size, sockets, variants} = item;
+  const {id, imageId, isEthereal, position, size, sockets} = item;
   const description = resolveItemDescription(item);
 
   return (
@@ -27,7 +27,7 @@ const Item = ({item, isInactive = false, variant = null}) => {
         <Element variant="absolute.stretch">
           <ItemSockets sockets={sockets} size={size} />
         </Element>
-        <ItemImage id={imageId || id} variant={variant} variants={variants} />
+        <ItemImage id={imageId || id} />
       </Element>
     </ItemTooltip>
   );

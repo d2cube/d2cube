@@ -41,7 +41,7 @@ const recipes = [
       },
     ],
     target: {
-      event: 'Chaos Tristram (Pandemonium Event)',
+      event: 'Chaos Tristram',
     },
   },
   {
@@ -64,7 +64,7 @@ const recipes = [
       },
     ],
     target: {
-      event: 'Uber Tristram (Pandemonium Event)',
+      event: 'Uber Tristram',
     },
   },
 ];

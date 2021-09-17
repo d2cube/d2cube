@@ -6,10 +6,12 @@ import Tooltip from './tooltip.js';
 
 const BrandIcon = ({
   as = undefined,
+  disabled = false,
   icon,
   size = 'icon.m',
   href = '',
   tooltip = null,
+  onClick = undefined,
   ...rest
 }) => {
   const styles = useStyles();
@@ -18,9 +20,11 @@ const BrandIcon = ({
     <Icon
       aria-label={tooltip}
       color="brand.primary"
+      disabled={disabled}
       icon={icon}
       size={size}
       styles={styles.centered}
+      onClick={onClick}
     />
   );
 
@@ -35,7 +39,7 @@ const BrandIcon = ({
   }
 
   return (
-    <Tooltip isReadable placement="top" tooltip={tooltip}>
+    <Tooltip isReadable placement="auto" tooltip={tooltip}>
       <Layout {...rest} as={as} align="center" justify="center">
         {href ? (
           <LinkElement {...linkProps}>{iconElement}</LinkElement>

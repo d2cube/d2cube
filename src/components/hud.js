@@ -1,6 +1,5 @@
 import {Element, Layout} from 'uinix-ui';
 
-import {player} from '../mocks/index.js';
 import Globe from './globe.js';
 import HudPanel from './hud-panel.js';
 
@@ -16,6 +15,22 @@ const Hud = ({title}) => {
       </Layout>
     </Element>
   );
+};
+
+// TODO: implement player stats in the future
+const player = {
+  life: {
+    max: 1000,
+    value: 1000,
+  },
+  experience: {
+    max: 1000,
+    value: 642,
+  },
+  mana: {
+    max: 1000,
+    value: 1000,
+  },
 };
 
 export default Hud;

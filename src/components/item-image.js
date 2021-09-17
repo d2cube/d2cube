@@ -1,23 +1,10 @@
 import {GameVersionType} from '../enums/index.js';
-import {random} from '../utils/random.js';
 import Image from './ui/image.js';
 
 const defaultVersion = GameVersionType.D2;
 
-const ItemImage = ({
-  id,
-  variant = null,
-  variants = null,
-  version = defaultVersion,
-}) => {
-  let suffix = '';
-  if (variant) {
-    suffix += variant;
-  } else if (variants) {
-    suffix += random(1, variants);
-  }
-
-  const src = `${version}/items/${id}${suffix}.webp`;
+const ItemImage = ({id, version = defaultVersion}) => {
+  const src = `${version}/items/${id}.webp`;
 
   return <Image src={src} />;
 };

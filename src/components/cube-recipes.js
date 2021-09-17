@@ -1,9 +1,11 @@
+import {Layout} from 'uinix-ui';
+
 import {getRecipes} from '../api/index.js';
 import {PREVIEWS} from '../constants/index.js';
 import Recipes from './recipes.js';
 import Frame from './ui/frame.js';
 
-const CubeRecipes = () => (
+const CubeRecipes = ({onClear, onSelect}) => (
   <Frame
     isFixedHeight
     help={help}
@@ -11,7 +13,9 @@ const CubeRecipes = () => (
     size="m"
     title="Recipes"
   >
-    <Recipes recipes={recipes} onClear={console.log} />
+    <Layout direction="column" overflow="auto">
+      <Recipes recipes={recipes} onClear={onClear} onSelect={onSelect} />
+    </Layout>
   </Frame>
 );
 

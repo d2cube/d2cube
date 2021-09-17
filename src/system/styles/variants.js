@@ -1,4 +1,4 @@
-import {slotSize} from '../theme/index.js';
+import theme, {slotSize} from '../theme/index.js';
 
 const baseButton = {
   backgroundImage: 'url(images/ui/button.jpg)',
@@ -193,6 +193,15 @@ const modal = {
   },
 };
 
+const portal = {
+  red: {
+    borderRadius: '75%',
+    background: `radial-gradient(#000000, #000000 60%, ${theme.colors.text.event} 70%)`,
+    height: '100%',
+    width: '100%',
+  },
+};
+
 export default {
   absolute,
   button,
@@ -205,6 +214,7 @@ export default {
   header,
   modal,
   pentagram,
+  portal,
   socket,
   splash,
   sticky,
