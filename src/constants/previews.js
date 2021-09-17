@@ -8,7 +8,7 @@ export const PREVIEWS = {
     icon: 'nav.cube',
     title: 'Cube',
     description: 'Explore recipes with the Horadric Cube.',
-    src: createIframeSrc(''),
+    src: createIframeSrc('ddeb1e7ccd2744f0a4dd89b7b5c34c5d'),
   },
   items: {
     id: 'items',

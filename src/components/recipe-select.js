@@ -9,7 +9,7 @@ const RecipeSelect = ({value, onChange}) => (
     group={group}
     noOptionsMessage="No recipes found."
     options={options}
-    placeholder='Search recipes... e.g. "rune", "portal", "socket", "ruby"'
+    placeholder='Search recipes... e.g. "rune", "cow", "socket", "ruby"'
     value={value}
     renderOption={createRenderOption(value)}
     onChange={onChange}
