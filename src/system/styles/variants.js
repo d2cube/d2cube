@@ -66,7 +66,8 @@ const cube = {
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: '100%',
-  heigth: slotSize * 20,
+  border: 'bordered',
+  height: slotSize * 12,
   width: slotSize * 10,
 };
 

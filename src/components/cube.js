@@ -14,34 +14,31 @@ const Cube = ({disabled, event, items, onTransmute}) => {
   };
 
   return (
-    <Layout variant="frame">
-      <Layout
-        align="center"
-        direction="column"
-        flex="auto"
-        justify="center"
-        spacing="s"
-        variant="cube"
-      >
-        <Element position="relative" styles={styles.backdropAlignment}>
-          <Element key={transmuteKey} styles={styles.transmute} />
-          <ItemGrid items={items} size={[4, 3]} />
-          {event && (
-            <Element variant="absolute.stretch">
-              <Layout align="center" justify="center" variant="portal.red">
-                <BrandText color="text.event" textAlign="center" text={event} />
-                </Layout>
-            </Element>
-          )}
-        </Element>
-        <BrandIcon
-          disabled={disabled}
-          icon="interface.transmute"
-          size="icon.l"
-          tooltip={disabled ? 'Nothing to Transmute' : 'Transmute'}
-          onClick={handleTransmute}
-        />
-      </Layout>
+    <Layout
+      align="center"
+      direction="column"
+      justify="center"
+      spacing="s"
+      variant="cube"
+    >
+      <Element position="relative" styles={styles.backdropAlignment}>
+        <Element key={transmuteKey} styles={styles.transmute} />
+        <ItemGrid items={items} size={[4, 3]} />
+        {event && (
+          <Element variant="absolute.stretch">
+            <Layout align="center" justify="center" variant="portal.red">
+              <BrandText color="text.event" textAlign="center" text={event} />
+            </Layout>
+          </Element>
+        )}
+      </Element>
+      <BrandIcon
+        disabled={disabled}
+        icon="interface.transmute"
+        size="icon.l"
+        tooltip={disabled ? 'Nothing to Transmute' : 'Transmute'}
+        onClick={handleTransmute}
+      />
     </Layout>
   );
 };

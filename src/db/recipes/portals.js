@@ -22,7 +22,7 @@ const recipes = [
     },
   },
   {
-    name: '1 Key of Terror + 1 Key of Hate + 1 Key of Destruction → Chaos Tristram (Pandemonium Event)',
+    name: '1 Key of Terror + 1 Key of Hate + 1 Key of Destruction → Chaos Tristram',
     sources: [
       {
         item: {
@@ -45,7 +45,7 @@ const recipes = [
     },
   },
   {
-    name: "Mephisto's Brain + Diablo's Horn + Baal's Eye → Uber Tristram (Pandemonium Event)",
+    name: "Mephisto's Brain + Diablo's Horn + Baal's Eye → Uber Tristram",
     sources: [
       {
         item: {
@@ -70,5 +70,5 @@ const recipes = [
 ];
 
 export default createRecipes({
-  type: RecipeType.Event,
+  type: RecipeType.Portal,
 })(recipes);

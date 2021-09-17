@@ -6,6 +6,7 @@ import Tooltip from './tooltip.js';
 
 const BrandIcon = ({
   as = undefined,
+  color = 'brand.primary',
   disabled = false,
   icon,
   size = 'icon.m',
@@ -19,7 +20,7 @@ const BrandIcon = ({
   const iconElement = (
     <Icon
       aria-label={tooltip}
-      color="brand.primary"
+      color={color}
       disabled={disabled}
       icon={icon}
       size={size}

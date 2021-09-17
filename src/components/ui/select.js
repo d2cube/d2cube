@@ -13,6 +13,7 @@ import {
 
 const Select = ({
   enableDuplicateValue = false,
+  filterOptionMatchMode = 'start',
   group = undefined,
   isMenuOpen = undefined,
   isMulti = false,
@@ -47,6 +48,11 @@ const Select = ({
       degrouped.map((option) => [option.value, option]),
     );
   }, [options]);
+
+  const filterOption = useMemo(
+    () => createFilterOption(filterOptionMatchMode),
+    [filterOptionMatchMode],
+  );
 
   const optionValue = isMulti
     ? value.map((v) => optionsMap[v])
@@ -122,6 +128,12 @@ const getValue = (x) => (isEmpty(x) ? null : props('value')(x));
 
 const defaultRenderOption = props('option.label');
 
+const createFilterOption = (matchFrom) =>
+  createFilter({
+    ignoreAccents: false,
+    matchFrom,
+  });
+
 const createOptionComponent = (renderOption) => (props) => {
   const {children, data, innerProps, selectProps, ...rest} = props;
   const {onClick} = innerProps;
@@ -131,10 +143,5 @@ const createOptionComponent = (renderOption) => (props) => {
     </rsComponents.Option>
   );
 };
-
-const filterOption = createFilter({
-  ignoreAccents: false,
-  matchFrom: 'start',
-});
 
 export default Select;

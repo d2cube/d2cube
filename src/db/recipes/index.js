@@ -1,7 +1,7 @@
 import amulets from './amulets.js';
-import events from './events.js';
 import gems from './gems.js';
 import magics from './magics.js';
+import portals from './portals.js';
 import potions from './potions.js';
 import quests from './quests.js';
 import rares from './rares.js';
@@ -14,9 +14,9 @@ import upgrades from './upgrades.js';
 
 export default [
   ...amulets,
-  ...events,
   ...gems,
   ...magics,
+  ...portals,
   ...potions,
   ...quests,
   ...rares,
