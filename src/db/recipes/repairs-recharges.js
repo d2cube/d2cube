@@ -1,13 +1,13 @@
 import {merge} from 'uinix-fp';
 
-import {BasePropertyType, RecipeType} from '../../enums/index.js';
-import {createRecipes} from '../../utils/create-recipes.js';
 import {
-  isChippedGem,
-  isFlawedGem,
-  isNonEtherealArmor,
-  isNonEtherealWeapon,
-} from '../../utils/predicates.js';
+  BasePropertyType,
+  ItemQualityType,
+  MagicPropertyType,
+  RecipeType,
+  SkillType,
+} from '../../enums/index.js';
+import {createRecipes} from '../../utils/create-recipes.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -22,9 +22,8 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          overrideDescription: [[{text: 'Any non-ethereal weapon'}]],
+          durability: 1,
         },
-        test: isNonEtherealWeapon,
       },
     ],
     target: {
@@ -37,7 +36,7 @@ const recipes = [
     },
   },
   {
-    name: '1 Ort + 1 Chipped Gem (any type) + 1 Weapon → Fully Repaired Weapon',
+    name: '1 Ort + 1 Chipped Gem (any type) + 1 Weapon → Fully Repaired and Recharged Weapon',
     sources: [
       {
         item: {
@@ -47,16 +46,22 @@ const recipes = [
       {
         item: {
           id: ids.ChippedDiamond,
-          overrideDescription: [[{text: 'Chipped Gem (any type)'}]],
         },
-        test: isChippedGem,
       },
       {
         item: {
           id: ids.CrystalSword,
-          overrideDescription: [[{text: 'Any non-ethereal weapon'}]],
+          quality: ItemQualityType.Magic,
+          durability: 1,
+          properties: {
+            magic: {
+              [MagicPropertyType.SpellCharges]: {
+                [SkillType.Enchant]: {x: 1, y: 10},
+                [SkillType.Teleport]: {x: 1, y: 10},
+              },
+            },
+          },
         },
-        test: isNonEtherealWeapon,
       },
     ],
     target: {
@@ -79,11 +84,8 @@ const recipes = [
       {
         item: {
           id: ids.ArchonPlate,
-          overrideDescription: [
-            [{text: 'Any non-ethereal armor (helms, belts, gloves etc)'}],
-          ],
+          durability: 1,
         },
-        test: isNonEtherealArmor,
       },
     ],
     target: {
@@ -106,18 +108,21 @@ const recipes = [
       {
         item: {
           id: ids.FlawedDiamond,
-          overrideDescription: [[{text: 'Flawed Gem (any type)'}]],
         },
-        test: isFlawedGem,
       },
       {
         item: {
           id: ids.ArchonPlate,
-          overrideDescription: [
-            [{text: 'Any non-ethereal armor (helms, belts, gloves etc)'}],
-          ],
+          durability: 1,
+          properties: {
+            magic: {
+              [MagicPropertyType.SpellCharges]: {
+                [SkillType.Enchant]: {x: 1, y: 10},
+                [SkillType.Teleport]: {x: 1, y: 10},
+              },
+            },
+          },
         },
-        test: isNonEtherealArmor,
       },
     ],
     target: {

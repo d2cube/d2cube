@@ -15,5 +15,6 @@ export const RecipeType = {
   Rune: 'Rune',
   Socket: 'Socket',
   Stack: 'Stack',
+  Token: 'Token',
   Upgrade: 'Upgrade',
 };

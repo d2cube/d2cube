@@ -1,5 +1,4 @@
 import {createElement as h} from 'react';
-
 import {load} from 'uinix-ui';
 
 import config from '../system/config.js';

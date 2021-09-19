@@ -1,32 +1,28 @@
 import {ItemQualityType, PrefixType, RecipeType} from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
-import {isMagicRing} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
   {
-    name: '3 Magic Rings → 1 Magic Ring',
+    name: '3 Magic Rings → 1 Magic Amulet',
     sources: [
       {
         item: {
           id: ids.Ring,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicRing,
       },
       {
         item: {
           id: ids.Ring,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicRing,
       },
       {
         item: {
           id: ids.Ring,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicRing,
       },
     ],
     target: {

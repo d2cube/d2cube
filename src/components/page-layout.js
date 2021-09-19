@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Layout, useStyles} from 'uinix-ui';
 
+import Head from './head.js';
 import Hud from './hud.js';
 import DiscordIcon from './ui/discord-icon.js';
 import GithubIcon from './ui/github-icon.js';
@@ -21,42 +22,45 @@ const PageLayout = ({children, title = null}) => {
   };
 
   return (
-    <Layout direction="column" minH="100vh">
-      <ScrollTop />
-      {entered ? (
-        <>
-          <Layout
-            as="main"
-            align="center"
-            direction="column"
-            flex="auto"
-            py="xl"
-            pb="footer"
-            spacing="xl"
-            styles={styles.fadeIn}
-            variant="container"
-          >
-            {children}
-          </Layout>
-          <Hud title={title} />
-          <Layout
-            bottom="l"
-            direction="column"
-            position="fixed"
-            right="l"
-            spacing="l"
-            z="forward"
-          >
-            <GithubSponsorIcon />
-            <PaypalIcon />
-            <DiscordIcon />
-            <GithubIcon />
-          </Layout>
-        </>
-      ) : (
-        <Splash onEnter={handleEnter} />
-      )}
-    </Layout>
+    <>
+      <Head title={title} />
+      <Layout direction="column" minH="100vh">
+        <ScrollTop />
+        {entered ? (
+          <>
+            <Layout
+              as="main"
+              align="center"
+              direction="column"
+              flex="auto"
+              py="xl"
+              pb="footer"
+              spacing="xl"
+              styles={styles.fadeIn}
+              variant="container"
+            >
+              {children}
+            </Layout>
+            <Hud title={title} />
+            <Layout
+              bottom="l"
+              direction="column"
+              position="fixed"
+              right="l"
+              spacing="l"
+              z="forward"
+            >
+              <GithubSponsorIcon />
+              <PaypalIcon />
+              <DiscordIcon />
+              <GithubIcon />
+            </Layout>
+          </>
+        ) : (
+          <Splash onEnter={handleEnter} />
+        )}
+      </Layout>
+    </>
   );
 };
 

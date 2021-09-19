@@ -1,11 +1,5 @@
 import {RecipeType} from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
-import {
-  isChippedGem,
-  isHealthPotion,
-  isManaPotion,
-  isRegularGem,
-} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -40,51 +34,37 @@ const recipes = [
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperManaPotion,
-          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
         },
-        test: isManaPotion,
       },
       {
         item: {
           id: ids.SuperManaPotion,
-          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
         },
-        test: isManaPotion,
       },
       {
         item: {
           id: ids.SuperManaPotion,
-          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
         },
-        test: isManaPotion,
       },
       {
         item: {
           id: ids.ChippedDiamond,
-          overrideDescription: [[{text: 'Chipped Gem (any type)'}]],
         },
-        test: isChippedGem,
       },
     ],
     target: {
@@ -99,51 +79,37 @@ const recipes = [
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperManaPotion,
-          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
         },
-        test: isManaPotion,
       },
       {
         item: {
           id: ids.SuperManaPotion,
-          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
         },
-        test: isManaPotion,
       },
       {
         item: {
           id: ids.SuperManaPotion,
-          overrideDescription: [[{text: 'Mana Potion (any type)'}]],
         },
-        test: isManaPotion,
       },
       {
         item: {
           id: ids.Diamond,
-          overrideDescription: [[{text: 'Regular Gem (any type)'}]],
         },
-        test: isRegularGem,
       },
     ],
     target: {
@@ -163,9 +129,7 @@ const recipes = [
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
     ],
     target: {

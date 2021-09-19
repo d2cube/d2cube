@@ -1,7 +1,5 @@
-import {and} from '../../utils/fp.js';
 import {ItemQualityType, RecipeType} from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
-import {isRare} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -22,12 +20,7 @@ const recipes = [
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Rare,
-          overrideDescription: [
-            [{text: 'Rare Item', color: 'item.quality.rare'}],
-            [{text: 'Change to create a higher quality rare.'}],
-          ],
         },
-        test: isRare,
       },
     ],
     target: {
@@ -71,15 +64,7 @@ const recipes = [
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Rare,
-          overrideDescription: [
-            [{text: 'Rare Item', color: 'item.quality.rare'}],
-            [
-              {text: 'Use this recipe to reroll a rare of the same type'},
-              {text: 'Will not work on items larger than 3x2'},
-            ],
-          ],
         },
-        test: and([isRare]),
       },
     ],
     target: {

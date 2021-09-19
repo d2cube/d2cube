@@ -123,6 +123,8 @@ export {};
  *    e.g. Head/Neck/Torso/MainHand/OffHand/Waist/Feet etc.
  * @property {Array<Id|null>} [sockets]
  *    Values can be null (empty socket) or item Id (socketed Gem/Jewel/Rune).
+ * @property {number} [durability]
+ *    Item durability
  *
  * @typedef {ItemBase & ItemInstance} Item
  *    An item can exist either:

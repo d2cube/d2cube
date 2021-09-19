@@ -13,7 +13,11 @@ const renderer = ({days, hours, minutes, seconds, completed}) => {
 
   const dateString = `${days}D:${hours}H:${minutes}M:${seconds}S`;
   return (
-    <BrandText color="text.muted" text={`Resurrection in ${dateString}`} />
+    <BrandText
+      color="text.muted"
+      text={`Resurrection in ${dateString}`}
+      textAlign="center"
+    />
   );
 };
 

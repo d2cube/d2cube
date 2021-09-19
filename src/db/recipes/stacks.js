@@ -1,6 +1,5 @@
 import {RecipeType} from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
-import {isAxe, isDagger, isSpear} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -50,9 +49,7 @@ const recipes = [
       {
         item: {
           id: ids.Spear,
-          overrideDescription: [[{text: 'Spear (any type)'}]],
         },
-        test: isSpear,
       },
       {
         item: {
@@ -72,16 +69,12 @@ const recipes = [
       {
         item: {
           id: ids.Axe,
-          overrideDescription: [[{text: 'Axe (any type)'}]],
         },
-        test: isAxe,
       },
       {
         item: {
           id: ids.Dagger,
-          overrideDescription: [[{text: 'Dagger (any type)'}]],
         },
-        test: isDagger,
       },
     ],
     target: {

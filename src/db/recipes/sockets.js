@@ -8,17 +8,6 @@ import {
   RecipeType,
 } from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
-import {
-  isChippedGem,
-  isFlawlessGem,
-  isMagicWeapon,
-  isSocketed,
-  isUnsocketedNormalBodyArmor,
-  isUnsocketedNormalHelm,
-  isUnsocketedNormalShield,
-  isUnsocketedNormalWeapon,
-  isUnsocketedRare,
-} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -49,12 +38,7 @@ const recipes = [
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Rare,
-          overrideDescription: [
-            [{text: 'Rare Item', color: 'item.quality.rare'}],
-            [{text: 'Item must be socketable and have no initial sockets.'}],
-          ],
         },
-        test: isUnsocketedRare,
       },
     ],
     target: {
@@ -70,38 +54,23 @@ const recipes = [
       {
         item: {
           id: ids.ChippedDiamond,
-          overrideDescription: [[{text: 'Chipped Gem (any type)'}]],
         },
-        test: isChippedGem,
       },
       {
         item: {
           id: ids.ChippedDiamond,
-          overrideDescription: [[{text: 'Chipped Gem (any type)'}]],
         },
-        test: isChippedGem,
       },
       {
         item: {
           id: ids.ChippedDiamond,
-          overrideDescription: [[{text: 'Chipped Gem (any type)'}]],
         },
-        test: isChippedGem,
       },
       {
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Magic,
-          overrideDescription: [
-            [{text: 'Magic Weapon', color: 'item.quality.magic'}],
-            [
-              {text: 'Always creates an qlvl 25 weapon'},
-              {text: '1-2 sockets will be added.'},
-              {text: 'Properties will be rerolled'},
-            ],
-          ],
         },
-        test: isMagicWeapon,
       },
     ],
     target: {
@@ -117,38 +86,23 @@ const recipes = [
       {
         item: {
           id: ids.FlawlessDiamond,
-          overrideDescription: [[{text: 'Flawless Gem (any type)'}]],
         },
-        test: isFlawlessGem,
       },
       {
         item: {
           id: ids.FlawlessDiamond,
-          overrideDescription: [[{text: 'Flawless Gem (any type)'}]],
         },
-        test: isFlawlessGem,
       },
       {
         item: {
           id: ids.FlawlessDiamond,
-          overrideDescription: [[{text: 'Flawless Gem (any type)'}]],
         },
-        test: isFlawlessGem,
       },
       {
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Magic,
-          overrideDescription: [
-            [{text: 'Magic Weapon', color: 'item.quality.magic'}],
-            [
-              {text: 'Always creates an qlvl 30 weapon'},
-              {text: '1-2 sockets will be added.'},
-              {text: 'Properties will be rerolled'},
-            ],
-          ],
         },
-        test: isMagicWeapon,
       },
     ],
     target: {
@@ -174,16 +128,8 @@ const recipes = [
       {
         item: {
           id: ids.CrystalSword,
-          overrideDescription: [
-            [
-              {
-                text: 'Any item with sockets.  This will destroy any socketed items.',
-              },
-            ],
-          ],
           sockets: ['Jah', 'Ber', 'Ist'],
         },
-        test: isSocketed,
       },
     ],
     target: {
@@ -217,15 +163,7 @@ const recipes = [
         item: {
           id: ids.ArchonPlate,
           quality: ItemQualityType.Normal,
-          overrideDescription: [
-            [
-              {text: 'Adds 1-4 sockets to an unsocketed normal body armor.'},
-              {text: 'Does not work with low-quality or superior items.'},
-              {text: 'Cannot add sockets beyond the max socket of the item.'},
-            ],
-          ],
         },
-        test: isUnsocketedNormalBodyArmor,
       },
     ],
     target: {
@@ -260,15 +198,7 @@ const recipes = [
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Normal,
-          overrideDescription: [
-            [
-              {text: 'Adds 1-6 sockets to an unsocketed normal weapon.'},
-              {text: 'Does not work with low-quality or superior items.'},
-              {text: 'Cannot add sockets beyond the max socket of the item.'},
-            ],
-          ],
         },
-        test: isUnsocketedNormalWeapon,
       },
     ],
     target: {
@@ -303,15 +233,7 @@ const recipes = [
         item: {
           id: ids.Crown,
           quality: ItemQualityType.Normal,
-          overrideDescription: [
-            [
-              {text: 'Adds 1-3 sockets to an unsocketed normal helm.'},
-              {text: 'Does not work with low-quality or superior items.'},
-              {text: 'Cannot add sockets beyond the max socket of the item.'},
-            ],
-          ],
         },
-        test: isUnsocketedNormalHelm,
       },
     ],
     target: {
@@ -346,15 +268,7 @@ const recipes = [
         item: {
           id: ids.Monarch,
           quality: ItemQualityType.Normal,
-          overrideDescription: [
-            [
-              {text: 'Adds 1-4 sockets to an unsocketed normal shield.'},
-              {text: 'Does not work with low-quality or superior items.'},
-              {text: 'Cannot add sockets beyond the max socket of the item.'},
-            ],
-          ],
         },
-        test: isUnsocketedNormalShield,
       },
     ],
     target: {

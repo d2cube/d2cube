@@ -10,6 +10,7 @@ import rings from './rings.js';
 import runes from './runes.js';
 import sockets from './sockets.js';
 import stacks from './stacks.js';
+import tokens from './tokens.js';
 import upgrades from './upgrades.js';
 
 export default [
@@ -25,5 +26,6 @@ export default [
   ...runes,
   ...sockets,
   ...stacks,
+  ...tokens,
   ...upgrades,
 ];

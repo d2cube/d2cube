@@ -24,6 +24,6 @@ const Splash = ({onEnter}) => {
   );
 };
 
-const launchDate = new Date('September 23, 2021 08:00:00');
+const launchDate = new Date(Date.UTC(2021, 8, 23, 15));
 
 export default Splash;

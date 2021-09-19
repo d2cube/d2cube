@@ -59,8 +59,10 @@ const resolvers = {
     'Throw Damage: ',
     `${x} to ${y}`,
   ],
-  [BasePropertyType.Durability]: (x) =>
-    x === Number.POSITIVE_INFINITY ? null : ['Durability: ', `${x} of ${x}`],
+  [BasePropertyType.Durability]: (x, item) =>
+    x === Number.POSITIVE_INFINITY
+      ? null
+      : ['Durability: ', `${item.durability || x} of ${x}`],
   [BasePropertyType.RequiredDexterity]: (x, item) => [
     'Required Dexterity: ',
     item.isEthereal ? x - 10 : x,

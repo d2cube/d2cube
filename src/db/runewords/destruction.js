@@ -9,7 +9,7 @@ import ids from '../ids/index.js';
 
 export default {
   id: RunewordType.VexLoBerJahKo,
-  name: 'Death',
+  name: 'Destruction',
   runes: [ids.Vex, ids.Lo, ids.Ber, ids.Jah, ids.Ko],
   types: [ItemType.Polearm, ItemType.Sword],
   properties: {

@@ -1,6 +1,5 @@
 import {ItemQualityType, PrefixType, RecipeType} from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
-import {isMagicAmulet, isMagicRing} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -12,21 +11,18 @@ const recipes = [
           id: ids.Amulet,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicAmulet,
       },
       {
         item: {
           id: ids.Amulet,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicAmulet,
       },
       {
         item: {
           id: ids.Amulet,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicAmulet,
       },
     ],
     target: {
@@ -44,7 +40,6 @@ const recipes = [
           id: ids.Ring,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicRing,
       },
       {
         item: {
@@ -73,7 +68,6 @@ const recipes = [
           id: ids.Ring,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicRing,
       },
       {
         item: {
@@ -102,7 +96,6 @@ const recipes = [
           id: ids.Ring,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicRing,
       },
       {
         item: {
@@ -129,7 +122,6 @@ const recipes = [
           id: ids.Ring,
           quality: ItemQualityType.Magic,
         },
-        test: isMagicRing,
       },
       {
         item: {id: ids.PerfectEmerald},

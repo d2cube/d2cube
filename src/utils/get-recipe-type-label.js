@@ -15,5 +15,6 @@ const LABELS = {
   [RecipeType.Rune]: 'Runes',
   [RecipeType.Socket]: 'Socketed Items',
   [RecipeType.Stack]: 'Stacked Items',
+  [RecipeType.Token]: 'Tokens',
   [RecipeType.Upgrade]: 'Upped Items',
 };

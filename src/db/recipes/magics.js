@@ -4,15 +4,6 @@ import {fillNull} from '../../utils/fp.js';
 import {random} from '../../utils/random.js';
 import {ItemQualityType, RecipeType, SuffixType} from '../../enums/index.js';
 import {createRecipes} from '../../utils/create-recipes.js';
-import {
-  isHealthPotion,
-  isMagic,
-  isMagicSword,
-  isPerfectGem,
-  isRegularGem,
-  isRuby,
-  isSocketedNormalWeapon,
-} from '../../utils/predicates.js';
 import ids from '../ids/index.js';
 
 const recipes = [
@@ -22,40 +13,28 @@ const recipes = [
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.SuperHealingPotion,
-          overrideDescription: [[{text: 'Health Potion (any type)'}]],
         },
-        test: isHealthPotion,
       },
       {
         item: {
           id: ids.ChippedRuby,
-          overrideDescription: [[{text: 'Ruby (any type)'}]],
         },
-        test: isRuby,
       },
       {
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Magic,
-          overrideDescription: [
-            [{text: 'Magic Sword', color: 'item.quality.magic'}],
-          ],
         },
-        test: isMagicSword,
       },
     ],
     target: {
@@ -71,34 +50,23 @@ const recipes = [
       {
         item: {
           id: ids.PerfectDiamond,
-          overrideDescription: [[{text: 'Perfect gem (any type)'}]],
         },
-        test: isPerfectGem,
       },
       {
         item: {
           id: ids.PerfectDiamond,
-          overrideDescription: [[{text: 'Perfect gem (any type)'}]],
         },
-        test: isPerfectGem,
       },
       {
         item: {
           id: ids.PerfectDiamond,
-          overrideDescription: [[{text: 'Perfect gem (any type)'}]],
         },
-        test: isPerfectGem,
       },
       {
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Magic,
-          overrideDescription: [
-            [{text: 'Magic Item', color: 'item.quality.magic'}],
-            [{text: 'Including rings, amulets, jewels, charms etc'}],
-          ],
         },
-        test: isMagic,
       },
     ],
     target: {
@@ -111,39 +79,24 @@ const recipes = [
       {
         item: {
           id: ids.Diamond,
-          overrideDescription: [[{text: 'Regular gem (any type)'}]],
         },
-        test: isRegularGem,
       },
       {
         item: {
           id: ids.Diamond,
-          overrideDescription: [[{text: 'Regular gem (any type)'}]],
         },
-        test: isRegularGem,
       },
       {
         item: {
           id: ids.Diamond,
-          overrideDescription: [[{text: 'Regular gem (any type)'}]],
         },
-        test: isRegularGem,
       },
       {
         item: {
           id: ids.CrystalSword,
           quality: ItemQualityType.Normal,
           sockets: fillNull(random(1, 6)),
-          overrideDescription: [
-            [
-              {
-                text: 'Socketed Normal Weapon (any type)',
-                color: 'item.quality.normal',
-              },
-            ],
-          ],
         },
-        test: isSocketedNormalWeapon,
       },
     ],
     target: {
