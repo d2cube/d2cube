@@ -1,4 +1,4 @@
-import {Element} from 'uinix-ui';
+import {Element, Layout} from 'uinix-ui';
 
 import {search} from '../api/index.js';
 import {SEARCH_FILTERS} from '../constants/index.js';
@@ -12,6 +12,7 @@ import RunewordName from './runeword-name.js';
 import BrandText from './ui/brand-text.js';
 import CircleLayout from './ui/circle-layout.js';
 import Frame from './ui/frame.js';
+import ResponsiveHide from './ui/responsive-hide.js';
 
 const Runegram = ({item, runes}) => {
   let runeword;
@@ -25,17 +26,30 @@ const Runegram = ({item, runes}) => {
     <Frame alignTitle="center" help={help} title="Runegram">
       <Element position="relative" p="l">
         <Element styleProps={{isActive: runeword}} variant="pentagram" />
-        <CircleLayout radius={15}>
-          {allRunes.map((rune) => (
-            <Rune
-              key={rune.id}
-              count={count()(rune.id)(runes)}
-              disabled={!runes.includes(rune.id)}
-              rune={rune}
-            />
-          ))}
-        </CircleLayout>
-        <Element pt="50%" variant="absolute.center">
+        <ResponsiveHide mode="opacity">
+          <CircleLayout radius={15}>
+            {allRunes.map((rune) => (
+              <Rune
+                key={rune.id}
+                count={count()(rune.id)(runes)}
+                disabled={!runes.includes(rune.id)}
+                rune={rune}
+              />
+            ))}
+          </CircleLayout>
+        </ResponsiveHide>
+        <Layout
+          align="center"
+          direction="column"
+          justify="center"
+          spacing="l"
+          variant="absolute.center"
+        >
+          {item ? (
+            <Item item={item} />
+          ) : (
+            <BrandText text="Select an item base" />
+          )}
           {runeword ? (
             <RunewordName item={item} layout="vertical" runeword={runeword} />
           ) : item && runes.length === 0 ? (
@@ -43,14 +57,7 @@ const Runegram = ({item, runes}) => {
           ) : (
             <RunesName runes={runes} />
           )}
-        </Element>
-        <Element variant="absolute.center">
-          {item ? (
-            <Item item={item} />
-          ) : (
-            <BrandText text="Select an item base" />
-          )}
-        </Element>
+        </Layout>
       </Element>
     </Frame>
   );

@@ -56,42 +56,37 @@ const Page = () => {
   };
 
   const left = (
-    <Frame help={help} preview={PREVIEWS.runewords} size="m" title="Runewords">
-      <Layout minH="0" spacing="l">
-        <Layout direction="column" flex="1" spacing="l">
-          <Labelled label="Sockets">
-            <SocketSelect value={sockets} onChange={handleChangeSockets} />
-          </Labelled>
-          <Labelled label="Item Base">
-            <SocketedItemSelect
-              sockets={sockets}
-              types={runeword?.types}
-              value={itemId}
-              onChange={setItemId}
+    <Frame help={help} preview={PREVIEWS.runewords} size="s" title="Runewords">
+      <Layout direction="column" spacing="m">
+        <Labelled label="Sockets">
+          <SocketSelect value={sockets} onChange={handleChangeSockets} />
+        </Labelled>
+        <Labelled label="Item Base">
+          <SocketedItemSelect
+            sockets={sockets}
+            types={runeword?.types}
+            value={itemId}
+            onChange={setItemId}
+          />
+        </Labelled>
+        {sockets >= 0 && (
+          <Labelled label="Runes">
+            <RuneSelect
+              max={sockets}
+              value={runes}
+              onChange={handleChangeRunes}
             />
           </Labelled>
-          {sockets >= 0 && (
-            <Labelled label="Runes">
-              <RuneSelect
-                max={sockets}
-                value={runes}
-                onChange={handleChangeRunes}
-              />
-            </Labelled>
-          )}
-        </Layout>
-        <Layout flex="1">
-          <Labelled label="Runeword">
-            <RunewordSelect
-              isMenuOpen
-              item={item}
-              sockets={sockets}
-              runes={runes.join('')}
-              value={runewordId}
-              onChange={handleChangeRunewordId}
-            />
-          </Labelled>
-        </Layout>
+        )}
+        <Labelled label="Runeword">
+          <RunewordSelect
+            item={item}
+            sockets={sockets}
+            runes={runes.join('')}
+            value={runewordId}
+            onChange={handleChangeRunewordId}
+          />
+        </Labelled>
       </Layout>
     </Frame>
   );

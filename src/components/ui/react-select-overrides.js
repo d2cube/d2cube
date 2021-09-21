@@ -154,9 +154,6 @@ export const styles = {
   }),
   placeholder: () => ({
     color: themedStyles.textMutedColor,
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
   }),
   singleValue: () => ({
     color: themedStyles.textPrimaryColor,

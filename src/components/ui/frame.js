@@ -29,10 +29,14 @@ const Frame = ({
       <Layout
         as="section"
         direction="column"
-        h={isFixedHeight ? 'frame.height.inventory' : undefined}
+        maxH={
+          isFixedHeight
+            ? [undefined, undefined, 'frame.height.inventory']
+            : undefined
+        }
         spacing="l"
         variant="frame"
-        w={`frame.width.${size}`}
+        w={`width.${size}`}
       >
         <Layout
           align="center"

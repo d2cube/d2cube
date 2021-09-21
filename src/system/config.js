@@ -1,6 +1,13 @@
 import styles from './styles/index.js';
 
-const responsiveCssProperties = ['display', 'height', 'width'];
+const responsiveCssProperties = [
+  'display',
+  'flexDirection',
+  'height',
+  'maxHeight',
+  'opacity',
+  'width',
+];
 
 const elementShorthandPropsMapping = {
   // Visual

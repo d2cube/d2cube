@@ -55,7 +55,7 @@ const global = {
   p: {
     margin: 0,
     marginBottom: 'l',
-    maxWidth: 'paragraph.width',
+    maxWidth: 'width.m',
   },
   ul: {
     listStyleType: 'none',
@@ -73,8 +73,9 @@ const global = {
   pre: {
     ...code,
     margin: 0,
-    maxHeight: 'pre.height',
+    maxHeight: '50vh',
     overflow: 'auto',
+    maxWidth: 'width.m',
   },
 };
 

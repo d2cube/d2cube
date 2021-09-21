@@ -23,7 +23,9 @@ const PreviewModal = ({enableLink = false, preview, onHide}) => {
       onHide={onHide}
     >
       <Layout align="center" direction="column" spacing="l">
-        <Text variant="description">{description}</Text>
+        <Text textAlign="center" variant="description">
+          {description}
+        </Text>
         <Iframe key={iframeKey} src={src} />
         <Layout align="center" spacing="l">
           <Button text="Rewatch" onClick={toggleIframeKey} />

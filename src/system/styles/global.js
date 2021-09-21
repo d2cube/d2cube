@@ -61,6 +61,7 @@ export default {
     fontFamily: 'diablo',
   },
   table: {
+    backgroundColor: 'interface.background',
     border: 'bordered',
     borderCollapse: 'collapse',
     fontSize: 's',

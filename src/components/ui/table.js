@@ -10,7 +10,7 @@ import Select from './select.js';
 const Table = ({
   columns,
   data,
-  pageSize = 50,
+  pageSize = 10,
   visibleColumnKeys: initialVisibleColumnKeys = columns.map(prop('key')),
 }) => {
   const [visibleColumnsKeys, setVisibleColumnKeys] = useState(
@@ -43,28 +43,6 @@ const Table = ({
 
   return (
     <Layout direction="column" spacing="s">
-      <Layout alignSelf="flex-end" spacing="m" w="400px">
-        <BrandIcon
-          icon="download"
-          tooltip="Export as JSON"
-          onClick={handleExport}
-        />
-        <Select
-          isMulti
-          isClearable={false}
-          shouldRenderValue={false}
-          value={visibleColumnsKeys}
-          options={columnOptions}
-          placeholder="Show / Hide Columns"
-          onChange={setVisibleColumnKeys}
-        />
-        <PageSelect
-          page={page}
-          pageSize={pageSize}
-          totalCount={totalCount}
-          onChange={setPage}
-        />
-      </Layout>
       <table>
         <thead>
           <tr>
@@ -87,6 +65,28 @@ const Table = ({
           ))}
         </tbody>
       </table>
+      <Layout justify="flex-start" spacing="m">
+        <Select
+          isMulti
+          isClearable={false}
+          shouldRenderValue={false}
+          value={visibleColumnsKeys}
+          options={columnOptions}
+          placeholder="Show Columns"
+          onChange={setVisibleColumnKeys}
+        />
+        <PageSelect
+          page={page}
+          pageSize={pageSize}
+          totalCount={totalCount}
+          onChange={setPage}
+        />
+        <BrandIcon
+          icon="download"
+          tooltip="Export as JSON"
+          onClick={handleExport}
+        />
+      </Layout>
     </Layout>
   );
 };

@@ -12,7 +12,7 @@ const Recipe = ({disableItems = false, query = '', recipe}) => {
     <Layout direction="column" py="xs">
       <Text>{mark(name, query)}</Text>
       {!disableItems && (
-        <Layout align="center" spacing="m">
+        <Layout wrap align="center" spacing="m">
           {sources.map((source) => (
             <Item key={source.uuid} item={source} />
           ))}

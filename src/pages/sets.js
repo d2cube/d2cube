@@ -21,19 +21,15 @@ const Page = () => {
       isFixedHeight
       help="Search for sets and preview them in the Inventory."
       preview={PREVIEWS.sets}
-      size="m"
+      size="s"
       title="Item Sets"
     >
-      <Layout minH="0" spacing="l">
-        <Layout flex="1">
-          <SetSelect isMenuOpen value={setId} onChange={setSetId} />
+      <SetSelect isMenuOpen={!setId} value={setId} onChange={setSetId} />
+      {set && (
+        <Layout justify="center" overflow="auto">
+          <SetPreview set={set} />
         </Layout>
-        {set && (
-          <Layout flex="1" overflow="auto">
-            <SetPreview set={set} />
-          </Layout>
-        )}
-      </Layout>
+      )}
     </Frame>
   );
 

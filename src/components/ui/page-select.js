@@ -32,6 +32,6 @@ const getOptionLabel =
   };
 
 const formatOptionLabel = (option) =>
-  `${option.label} of ${option.data.totalCount} rows`;
+  `${option.label} of ${option.data.totalCount}`;
 
 export default PageSelect;

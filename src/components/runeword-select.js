@@ -1,8 +1,10 @@
 import {useMemo} from 'react';
+import {pipe} from 'uinix-fp';
 
 import {getRunewords} from '../api/index.js';
+import {getItemTypeLabel} from '../utils/get-item-type-label.js';
 import {BasePropertyType} from '../enums/index.js';
-import {and} from '../utils/fp.js';
+import {and, append, concat, join} from '../utils/fp.js';
 import {getSocketedLabel} from '../utils/get-socketed-label.js';
 import RunewordName from './runeword-name.js';
 import Select from './ui/select.js';
@@ -34,18 +36,31 @@ const RunewordSelect = ({
     }));
   }, [sockets, item, runes]);
 
+  const placeholder = getPlaceholder({item, sockets, runes});
+
   return (
     <Select
       isMenuOpen={isMenuOpen}
       noOptionsMessage="No runewords found."
       options={options}
-      placeholder="Search runewords..."
+      placeholder={placeholder}
       value={value}
       renderOption={createRenderOption({item, runes})}
       onChange={onChange}
     />
   );
 };
+
+const getPlaceholder = ({item, sockets, runes}) =>
+  pipe([
+    concat('Search'),
+    concat(sockets ? `${getSocketedLabel({max: sockets})}-socketed` : null),
+    concat(item ? getItemTypeLabel(item.type) : null),
+    concat('Runewords'),
+    concat(runes ? `with '${runes}'` : null),
+    join(' '),
+    append('...'),
+  ])([]);
 
 const tests =
   ({sockets, item, runes}) =>

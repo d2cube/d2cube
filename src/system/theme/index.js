@@ -1,6 +1,12 @@
 // Variables
 export const slotSize = 40;
 
+const widths = {
+  s: '400px',
+  m: '600px',
+  l: '800px',
+};
+
 const brandColor = '#C7B377';
 
 const animations = {
@@ -131,27 +137,12 @@ const sizes = {
     height: {
       inventory: slotSize * 14,
     },
-    width: {
-      s: '400px',
-      m: '600px',
-      l: '800px',
-    },
+    width: widths,
   },
   globe: '120px',
   iframe: {
     height: '600px',
-    width: '800px',
-  },
-  modal: {
-    width: {
-      m: '600px',
-    },
-  },
-  paragraph: {
-    width: '600px',
-  },
-  pre: {
-    height: '300px',
+    width: widths.l,
   },
   icon: {
     s: '16px',
@@ -160,6 +151,7 @@ const sizes = {
   },
   slot: slotSize,
   socket: `${slotSize * 0.8}px`,
+  width: widths,
 };
 
 const spacings = {

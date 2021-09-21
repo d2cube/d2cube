@@ -1,4 +1,6 @@
-import theme, {slotSize} from '../theme/index.js';
+import theme from '../theme/index.js';
+
+const containerWidth = `calc(100vw - ${theme.spacings.xl})`;
 
 const baseButton = {
   backgroundImage: 'url(images/ui/button.jpg)',
@@ -66,10 +68,8 @@ const cube = {
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: '100%',
-  border: 'bordered',
-  margin: 'auto',
-  height: slotSize * 12,
-  width: slotSize * 10,
+  padding: 'xl',
+  width: '100%',
 };
 
 const divider = {
@@ -113,6 +113,7 @@ const frame = {
   borderStyle: 'solid',
   borderWidth: 'frame',
   borderImage: 'url(images/ui/frame.png) 100 repeat',
+  maxWidth: containerWidth,
 };
 
 const pentagram = ({isActive}) => ({
@@ -179,10 +180,10 @@ const modal = {
     borderRadius: 'm',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom: '10%',
-    marginTop: '10%',
+    marginTop: '10vh',
     maxHeight: '70vh',
-    width: 'modal.width.m',
+    maxWidth: containerWidth,
+    width: 'width.m',
     zIndex: 'modal',
   },
   header: {

@@ -14,41 +14,32 @@ const Cube = ({disabled, event, items, onTransmute}) => {
   };
 
   return (
-    <Layout
-      align="center"
-      direction="column"
-      justify="center"
-      spacing="s"
-      variant="cube"
-    >
-      <Element position="relative" styles={styles.backdropAlignment}>
-        <Element key={transmuteKey} styles={styles.transmute} />
-        <ItemGrid items={items} size={[4, 3]} />
-        {event && (
-          <Element variant="absolute.stretch">
-            <Layout align="center" justify="center" variant="portal.red">
-              <BrandText color="text.event" textAlign="center" text={event} />
-            </Layout>
-          </Element>
-        )}
-      </Element>
-      <BrandIcon
-        disabled={disabled}
-        icon="interface.transmute"
-        size="icon.l"
-        tooltip={disabled ? 'Nothing to Transmute' : 'Transmute'}
-        onClick={handleTransmute}
-      />
+    <Layout align="center" justify="center" variant="cube">
+      <Layout direction="column" spacing="m" variant="frame">
+        <Element position="relative">
+          <Element key={transmuteKey} styles={styles.transmute} />
+          <ItemGrid items={items} size={[4, 3]} />
+          {event && (
+            <Element variant="absolute.stretch">
+              <Layout align="center" justify="center" variant="portal.red">
+                <BrandText color="text.event" textAlign="center" text={event} />
+              </Layout>
+            </Element>
+          )}
+        </Element>
+        <BrandIcon
+          disabled={disabled}
+          icon="interface.transmute"
+          size="icon.l"
+          tooltip={disabled ? 'Nothing to Transmute' : 'Transmute'}
+          onClick={handleTransmute}
+        />
+      </Layout>
     </Layout>
   );
 };
 
 const styles = {
-  backdropAlignment: {
-    // Hacky but works to align layout with the backdrop.  will remove once we have formal assets.
-    marginLeft: '-s',
-    marginTop: 's',
-  },
   transmute: {
     animation: 'linear',
     animationName: 'transmute',

@@ -9,6 +9,7 @@ import GithubSponsorIcon from './ui/github-sponsor-icon.js';
 import PaypalIcon from './ui/paypal-icon.js';
 import Splash from './ui/splash.js';
 import ScrollTop from './ui/scroll-top.js';
+import ResponsiveHide from './ui/responsive-hide.js';
 
 let cachedEntered = false;
 
@@ -33,28 +34,30 @@ const PageLayout = ({children, title = null}) => {
               align="center"
               direction="column"
               flex="auto"
+              px="l"
               py="xl"
               pb="footer"
               spacing="xl"
               styles={styles.fadeIn}
-              variant="container"
             >
               {children}
             </Layout>
             <Hud title={title} />
-            <Layout
-              bottom="l"
-              direction="column"
-              position="fixed"
-              right="l"
-              spacing="l"
-              z="forward"
-            >
-              <GithubSponsorIcon />
-              <PaypalIcon />
-              <DiscordIcon />
-              <GithubIcon />
-            </Layout>
+            <ResponsiveHide>
+              <Layout
+                bottom="l"
+                direction="column"
+                position="fixed"
+                right="l"
+                spacing="l"
+                z="forward"
+              >
+                <GithubSponsorIcon />
+                <PaypalIcon />
+                <DiscordIcon />
+                <GithubIcon />
+              </Layout>
+            </ResponsiveHide>
           </>
         ) : (
           <Splash onEnter={handleEnter} />
