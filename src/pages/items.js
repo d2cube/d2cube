@@ -64,6 +64,10 @@ const help = (
         <li>
           Range/variable values are enclosed in <code>[...]</code>
         </li>
+        <li>
+          The <code>+</code> symbols in the item name indicate Exceptional/Elite
+          item tiers.
+        </li>
       </ul>
     </div>
   </div>

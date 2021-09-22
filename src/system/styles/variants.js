@@ -52,7 +52,10 @@ const card = {
   preview: {
     border: 'bordered',
     borderRadius: 'm',
-    padding: 'm',
+    paddingBottom: 'm',
+    paddingLeft: 'l',
+    paddingRight: 'l',
+    paddingTop: 'm',
     opacity: 1,
     transition: 'all',
     ':hover': {

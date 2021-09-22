@@ -6,7 +6,7 @@ export {EquipSlotType} from './equip-slot-type.js';
 export {FieldType} from './field-type.js';
 export {GameVersionType} from './game-version-type.js';
 export {GemClassType} from './gem-class-type.js';
-export {GemTierType} from './gem-tier-type.js';
+export {GemLevelType} from './gem-level-type.js';
 export {ItemFirstNameType} from './item-first-name-type.js';
 export {ItemQualityType} from './item-quality-type.js';
 export {ItemSecondNameType} from './item-second-name-type.js';

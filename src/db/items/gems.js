@@ -1,7 +1,7 @@
 import {
   BasePropertyType,
   GemClassType,
-  GemTierType,
+  GemLevelType,
   ItemType,
   MagicPropertyType,
   SocketCategoryType,
@@ -17,7 +17,7 @@ export default normalizeItems({
     id: ids.ChippedRuby,
     name: 'Chipped Ruby',
     class: GemClassType.Ruby,
-    tier: GemTierType.Chipped,
+    level: GemLevelType.Chipped,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 1,
@@ -42,7 +42,7 @@ export default normalizeItems({
     id: ids.FlawedRuby,
     name: 'Flawed Ruby',
     class: GemClassType.Ruby,
-    tier: GemTierType.Flawed,
+    level: GemLevelType.Flawed,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 5,
@@ -67,7 +67,7 @@ export default normalizeItems({
     id: ids.Ruby,
     name: 'Ruby',
     class: GemClassType.Ruby,
-    tier: GemTierType.Regular,
+    level: GemLevelType.Regular,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -92,7 +92,7 @@ export default normalizeItems({
     id: ids.FlawlessRuby,
     name: 'Flawless Ruby',
     class: GemClassType.Ruby,
-    tier: GemTierType.Flawless,
+    level: GemLevelType.Flawless,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -117,7 +117,7 @@ export default normalizeItems({
     id: ids.PerfectRuby,
     name: 'Perfect Ruby',
     class: GemClassType.Ruby,
-    tier: GemTierType.Perfect,
+    level: GemLevelType.Perfect,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 18,
@@ -142,7 +142,7 @@ export default normalizeItems({
     id: ids.ChippedSapphire,
     name: 'Chipped Sapphire',
     class: GemClassType.Sapphire,
-    tier: GemTierType.Chipped,
+    level: GemLevelType.Chipped,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 1,
@@ -168,7 +168,7 @@ export default normalizeItems({
     id: ids.FlawedSapphire,
     name: 'Flawed Sapphire',
     class: GemClassType.Sapphire,
-    tier: GemTierType.Flawed,
+    level: GemLevelType.Flawed,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 5,
@@ -193,7 +193,7 @@ export default normalizeItems({
     id: ids.Sapphire,
     name: 'Sapphire',
     class: GemClassType.Sapphire,
-    tier: GemTierType.Regular,
+    level: GemLevelType.Regular,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -218,7 +218,7 @@ export default normalizeItems({
     id: ids.FlawlessSapphire,
     name: 'Flawless Sapphire',
     class: GemClassType.Sapphire,
-    tier: GemTierType.Flawless,
+    level: GemLevelType.Flawless,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -243,7 +243,7 @@ export default normalizeItems({
     id: ids.PerfectSapphire,
     name: 'Perfect Sapphire',
     class: GemClassType.Sapphire,
-    tier: GemTierType.Perfect,
+    level: GemLevelType.Perfect,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 18,
@@ -268,7 +268,7 @@ export default normalizeItems({
     id: ids.ChippedTopaz,
     name: 'Chipped Topaz',
     class: GemClassType.Topaz,
-    tier: GemTierType.Chipped,
+    level: GemLevelType.Chipped,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 1,
@@ -293,7 +293,7 @@ export default normalizeItems({
     id: ids.FlawedTopaz,
     name: 'Flawed Topaz',
     class: GemClassType.Topaz,
-    tier: GemTierType.Flawed,
+    level: GemLevelType.Flawed,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 5,
@@ -318,7 +318,7 @@ export default normalizeItems({
     id: ids.Topaz,
     name: 'Topaz',
     class: GemClassType.Topaz,
-    tier: GemTierType.Regular,
+    level: GemLevelType.Regular,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -343,7 +343,7 @@ export default normalizeItems({
     id: ids.FlawlessTopaz,
     name: 'Flawless Topaz',
     class: GemClassType.Topaz,
-    tier: GemTierType.Flawless,
+    level: GemLevelType.Flawless,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -368,7 +368,7 @@ export default normalizeItems({
     id: ids.PerfectTopaz,
     name: 'Perfect Topaz',
     class: GemClassType.Topaz,
-    tier: GemTierType.Perfect,
+    level: GemLevelType.Perfect,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 18,
@@ -393,7 +393,7 @@ export default normalizeItems({
     id: ids.ChippedEmerald,
     name: 'Chipped Emerald',
     class: GemClassType.Emerald,
-    tier: GemTierType.Chipped,
+    level: GemLevelType.Chipped,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 1,
@@ -418,7 +418,7 @@ export default normalizeItems({
     id: ids.FlawedEmerald,
     name: 'Flawed Emerald',
     class: GemClassType.Emerald,
-    tier: GemTierType.Flawed,
+    level: GemLevelType.Flawed,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 5,
@@ -443,7 +443,7 @@ export default normalizeItems({
     id: ids.Emerald,
     name: 'Emerald',
     class: GemClassType.Emerald,
-    tier: GemTierType.Regular,
+    level: GemLevelType.Regular,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -468,7 +468,7 @@ export default normalizeItems({
     id: ids.FlawlessEmerald,
     name: 'Flawless Emerald',
     class: GemClassType.Emerald,
-    tier: GemTierType.Flawless,
+    level: GemLevelType.Flawless,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -493,7 +493,7 @@ export default normalizeItems({
     id: ids.PerfectEmerald,
     name: 'Perfect Emerald',
     class: GemClassType.Emerald,
-    tier: GemTierType.Perfect,
+    level: GemLevelType.Perfect,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 18,
@@ -518,7 +518,7 @@ export default normalizeItems({
     id: ids.ChippedDiamond,
     name: 'Chipped Diamond',
     class: GemClassType.Diamond,
-    tier: GemTierType.Chipped,
+    level: GemLevelType.Chipped,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 1,
@@ -543,7 +543,7 @@ export default normalizeItems({
     id: ids.FlawedDiamond,
     name: 'Flawed Diamond',
     class: GemClassType.Diamond,
-    tier: GemTierType.Flawed,
+    level: GemLevelType.Flawed,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 5,
@@ -568,7 +568,7 @@ export default normalizeItems({
     id: ids.Diamond,
     name: 'Diamond',
     class: GemClassType.Diamond,
-    tier: GemTierType.Regular,
+    level: GemLevelType.Regular,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -593,7 +593,7 @@ export default normalizeItems({
     id: ids.FlawlessDiamond,
     name: 'Flawless Diamond',
     class: GemClassType.Diamond,
-    tier: GemTierType.Flawless,
+    level: GemLevelType.Flawless,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -618,7 +618,7 @@ export default normalizeItems({
     id: ids.PerfectDiamond,
     name: 'Perfect Diamond',
     class: GemClassType.Diamond,
-    tier: GemTierType.Perfect,
+    level: GemLevelType.Perfect,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 18,
@@ -643,7 +643,7 @@ export default normalizeItems({
     id: ids.ChippedAmethyst,
     name: 'Chipped Amethyst',
     class: GemClassType.Amethyst,
-    tier: GemTierType.Chipped,
+    level: GemLevelType.Chipped,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 1,
@@ -668,7 +668,7 @@ export default normalizeItems({
     id: ids.FlawedAmethyst,
     name: 'Flawed Amethyst',
     class: GemClassType.Amethyst,
-    tier: GemTierType.Flawed,
+    level: GemLevelType.Flawed,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 5,
@@ -693,7 +693,7 @@ export default normalizeItems({
     id: ids.Amethyst,
     name: 'Amethyst',
     class: GemClassType.Amethyst,
-    tier: GemTierType.Regular,
+    level: GemLevelType.Regular,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -718,7 +718,7 @@ export default normalizeItems({
     id: ids.FlawlessAmethyst,
     name: 'Flawless Amethyst',
     class: GemClassType.Amethyst,
-    tier: GemTierType.Flawless,
+    level: GemLevelType.Flawless,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -743,7 +743,7 @@ export default normalizeItems({
     id: ids.PerfectAmethyst,
     name: 'Perfect Amethyst',
     class: GemClassType.Amethyst,
-    tier: GemTierType.Perfect,
+    level: GemLevelType.Perfect,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 18,
@@ -768,7 +768,7 @@ export default normalizeItems({
     id: ids.ChippedSkull,
     name: 'Chipped Skull',
     class: GemClassType.Skull,
-    tier: GemTierType.Chipped,
+    level: GemLevelType.Chipped,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 1,
@@ -796,7 +796,7 @@ export default normalizeItems({
     id: ids.FlawedSkull,
     name: 'Flawed Skull',
     class: GemClassType.Skull,
-    tier: GemTierType.Flawed,
+    level: GemLevelType.Flawed,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 5,
@@ -824,7 +824,7 @@ export default normalizeItems({
     id: ids.Skull,
     name: 'Skull',
     class: GemClassType.Skull,
-    tier: GemTierType.Regular,
+    level: GemLevelType.Regular,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 12,
@@ -852,7 +852,7 @@ export default normalizeItems({
     id: ids.FlawlessSkull,
     name: 'Flawless Skull',
     class: GemClassType.Skull,
-    tier: GemTierType.Flawless,
+    level: GemLevelType.Flawless,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -880,7 +880,7 @@ export default normalizeItems({
     id: ids.PerfectSkull,
     name: 'Perfect Skull',
     class: GemClassType.Skull,
-    tier: GemTierType.Perfect,
+    level: GemLevelType.Perfect,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 18,

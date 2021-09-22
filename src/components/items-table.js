@@ -1,6 +1,7 @@
 import {props} from 'uinix-fp';
 
 import {getSet} from '../api/index.js';
+import {getItemTierLabel} from '../utils/get-item-tier-label.js';
 import {getItemTypeLabel} from '../utils/get-item-type-label.js';
 import {resolveItemProperties} from '../utils/resolvers/resolve-item-properties.js';
 import {BasePropertyType} from '../enums/base-property-type.js';
@@ -14,14 +15,7 @@ const ItemsTable = ({items}) => (
   <Table
     columns={columns}
     data={items}
-    visibleColumnKeys={[
-      'name',
-      'type',
-      'quality',
-      'tier',
-      'clvl',
-      'properties',
-    ]}
+    visibleColumnKeys={['name', 'type', 'tier', 'properties']}
   />
 );
 
@@ -46,7 +40,12 @@ const columns = [
   {
     key: 'tier',
     label: 'Tier',
-    render: (d) => <BrandText text={d.tier} />,
+    render: (d) => <BrandText text={getItemTierLabel(d.tier)} />,
+  },
+  {
+    key: 'level',
+    label: 'Level',
+    render: (d) => <BrandText text={d.level} />,
   },
   {
     key: CLVL_KEY,

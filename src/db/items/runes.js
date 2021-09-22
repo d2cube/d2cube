@@ -14,7 +14,7 @@ export default normalizeItems({
   {
     id: ids.El,
     name: 'El Rune',
-    tier: 1,
+    level: 1,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 11,
@@ -42,7 +42,7 @@ export default normalizeItems({
   {
     id: ids.Eld,
     name: 'Eld Rune',
-    tier: 2,
+    level: 2,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 11,
@@ -67,7 +67,7 @@ export default normalizeItems({
   {
     id: ids.Tir,
     name: 'Tir Rune',
-    tier: 3,
+    level: 3,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 13,
@@ -91,7 +91,7 @@ export default normalizeItems({
   {
     id: ids.Nef,
     name: 'Nef Rune',
-    tier: 4,
+    level: 4,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 13,
@@ -115,7 +115,7 @@ export default normalizeItems({
   {
     id: ids.Eth,
     name: 'Eth Rune',
-    tier: 5,
+    level: 5,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -139,7 +139,7 @@ export default normalizeItems({
   {
     id: ids.Ith,
     name: 'Ith Rune',
-    tier: 6,
+    level: 6,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 15,
@@ -163,7 +163,7 @@ export default normalizeItems({
   {
     id: ids.Tal,
     name: 'Tal Rune',
-    tier: 7,
+    level: 7,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 17,
@@ -187,7 +187,7 @@ export default normalizeItems({
   {
     id: ids.Ral,
     name: 'Ral Rune',
-    tier: 8,
+    level: 8,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 19,
@@ -211,7 +211,7 @@ export default normalizeItems({
   {
     id: ids.Ort,
     name: 'Ort Rune',
-    tier: 9,
+    level: 9,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 21,
@@ -235,7 +235,7 @@ export default normalizeItems({
   {
     id: ids.Thul,
     name: 'Thul Rune',
-    tier: 10,
+    level: 10,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 23,
@@ -259,7 +259,7 @@ export default normalizeItems({
   {
     id: ids.Amn,
     name: 'Amn Rune',
-    tier: 11,
+    level: 11,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 25,
@@ -283,7 +283,7 @@ export default normalizeItems({
   {
     id: ids.Sol,
     name: 'Sol Rune',
-    tier: 12,
+    level: 12,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 27,
@@ -307,7 +307,7 @@ export default normalizeItems({
   {
     id: ids.Shael,
     name: 'Shael Rune',
-    tier: 13,
+    level: 13,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 29,
@@ -331,7 +331,7 @@ export default normalizeItems({
   {
     id: ids.Dol,
     name: 'Dol Rune',
-    tier: 14,
+    level: 14,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 31,
@@ -355,7 +355,7 @@ export default normalizeItems({
   {
     id: ids.Hel,
     name: 'Hel Rune',
-    tier: 15,
+    level: 15,
     properties: {
       socket: {
         [SocketCategoryType.Weapon]: {
@@ -376,7 +376,7 @@ export default normalizeItems({
   {
     id: ids.Io,
     name: 'Io Rune',
-    tier: 16,
+    level: 16,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 35,
@@ -400,7 +400,7 @@ export default normalizeItems({
   {
     id: ids.Lum,
     name: 'Lum Rune',
-    tier: 17,
+    level: 17,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 37,
@@ -424,7 +424,7 @@ export default normalizeItems({
   {
     id: ids.Ko,
     name: 'Ko Rune',
-    tier: 18,
+    level: 18,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 39,
@@ -448,7 +448,7 @@ export default normalizeItems({
   {
     id: ids.Fal,
     name: 'Fal Rune',
-    tier: 19,
+    level: 19,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 41,
@@ -472,7 +472,7 @@ export default normalizeItems({
   {
     id: ids.Lem,
     name: 'Lem Rune',
-    tier: 20,
+    level: 20,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 43,
@@ -496,7 +496,7 @@ export default normalizeItems({
   {
     id: ids.Pul,
     name: 'Pul Rune',
-    tier: 21,
+    level: 21,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 45,
@@ -521,7 +521,7 @@ export default normalizeItems({
   {
     id: ids.Um,
     name: 'Um Rune',
-    tier: 22,
+    level: 22,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 47,
@@ -545,7 +545,7 @@ export default normalizeItems({
   {
     id: ids.Mal,
     name: 'Mal Rune',
-    tier: 23,
+    level: 23,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 49,
@@ -569,7 +569,7 @@ export default normalizeItems({
   {
     id: ids.Ist,
     name: 'Ist Rune',
-    tier: 24,
+    level: 24,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 51,
@@ -593,7 +593,7 @@ export default normalizeItems({
   {
     id: ids.Gul,
     name: 'Gul Rune',
-    tier: 25,
+    level: 25,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 53,
@@ -617,7 +617,7 @@ export default normalizeItems({
   {
     id: ids.Vex,
     name: 'Vex Rune',
-    tier: 26,
+    level: 26,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 55,
@@ -641,7 +641,7 @@ export default normalizeItems({
   {
     id: ids.Ohm,
     name: 'Ohm Rune',
-    tier: 27,
+    level: 27,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 57,
@@ -665,7 +665,7 @@ export default normalizeItems({
   {
     id: ids.Lo,
     name: 'Lo Rune',
-    tier: 28,
+    level: 28,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 59,
@@ -689,7 +689,7 @@ export default normalizeItems({
   {
     id: ids.Sur,
     name: 'Sur Rune',
-    tier: 29,
+    level: 29,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 61,
@@ -713,7 +713,7 @@ export default normalizeItems({
   {
     id: ids.Ber,
     name: 'Ber Rune',
-    tier: 30,
+    level: 30,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 63,
@@ -737,7 +737,7 @@ export default normalizeItems({
   {
     id: ids.Jah,
     name: 'Jah Rune',
-    tier: 31,
+    level: 31,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 65,
@@ -761,7 +761,7 @@ export default normalizeItems({
   {
     id: ids.Cham,
     name: 'Cham Rune',
-    tier: 32,
+    level: 32,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 67,
@@ -785,7 +785,7 @@ export default normalizeItems({
   {
     id: ids.Zod,
     name: 'Zod Rune',
-    tier: 33,
+    level: 33,
     properties: {
       base: {
         [BasePropertyType.RequiredLevel]: 69,

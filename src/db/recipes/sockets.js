@@ -169,7 +169,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[BasePropertyType.MaxSockets];
+        const maxSockets = item.properties.base[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: fillNull(random(1, Math.min(maxSockets, 4))),
         });
@@ -204,7 +204,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[BasePropertyType.MaxSockets];
+        const maxSockets = item.properties.base[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: fillNull(random(1, Math.min(maxSockets, 6))),
         });
@@ -239,7 +239,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[BasePropertyType.MaxSockets];
+        const maxSockets = item.properties.base[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: fillNull(random(1, Math.min(maxSockets, 3))),
         });
@@ -274,7 +274,7 @@ const recipes = [
     target: {
       transform: (sources) => {
         const item = sources[3];
-        const maxSockets = item.properties[BasePropertyType.MaxSockets];
+        const maxSockets = item.properties.base[BasePropertyType.MaxSockets];
         return merge(item)({
           sockets: fillNull(random(1, Math.min(maxSockets, 4))),
         });

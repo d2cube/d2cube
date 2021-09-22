@@ -1,9 +1,3 @@
-import {ItemTierType} from '../enums/index.js';
+import {fillWith} from './fp.js';
 
-export const getTierLabel = (tier) => LABELS[tier];
-
-const LABELS = {
-  [ItemTierType.Normal]: 'Normal',
-  [ItemTierType.Exceptional]: 'Exceptional',
-  [ItemTierType.Elite]: 'Elite',
-};
+export const getTierLabel = (tier) => fillWith(tier - 1)('+').join('');

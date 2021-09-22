@@ -24,7 +24,7 @@ export const PREVIEWS = {
     icon: 'nav.sets',
     title: 'Sets',
     description: 'View item sets and bonuses with the Inventory.',
-    src: createIframeSrc('f21f3f2e3ca34dcc93103c3d8857ad3d'),
+    src: createIframeSrc('366847bd20fd4c749b2f8841d1accf83'),
   },
   runewords: {
     id: 'runewords',

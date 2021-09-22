@@ -72,7 +72,7 @@ const Table = ({
           shouldRenderValue={false}
           value={visibleColumnsKeys}
           options={columnOptions}
-          placeholder="Show Columns"
+          placeholder="Columns"
           onChange={setVisibleColumnKeys}
         />
         <PageSelect

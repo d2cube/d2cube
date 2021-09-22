@@ -1,4 +1,5 @@
 import {getItems} from '../api/index.js';
+import {rollItem} from './roll-item.js';
 
 export const up = (currentItem) => {
   const items = getItems();
@@ -15,11 +16,12 @@ export const up = (currentItem) => {
 
   const uppedProperties = {
     name: uppedItem.name,
+    tier: tier + 1,
     properties: uppedItem.properties,
   };
 
-  return {
+  return rollItem({
     ...currentItem,
     ...uppedProperties,
-  };
+  });
 };

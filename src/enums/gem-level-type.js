@@ -3,7 +3,7 @@
  * @readonly
  * @enum {number}
  */
-export const GemTierType = {
+export const GemLevelType = {
   Chipped: 0,
   Flawed: 1,
   Regular: 2,

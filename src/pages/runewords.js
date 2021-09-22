@@ -16,25 +16,32 @@ import {fillNull} from '../utils/fp.js';
 import {rollItem} from '../utils/roll-item.js';
 
 const Page = () => {
+  const [ethereal, setEthereal] = useState(null);
   const [runes, setRunes] = useState([]);
   const [runewordId, setRunewordId] = useState(null);
   const [itemId, setItemId] = useState(null);
   const [sockets, setSockets] = useState(null);
 
-  const item = rollItem({id: itemId});
+  const item = rollItem({
+    id: itemId,
+    isEthereal: testIsEthereal(ethereal),
+    isEtherealBugged: testIsEtherealBugged(ethereal),
+    sockets: fillNull(sockets),
+  });
+
   const runeword = getRuneword(runewordId);
 
-  // Socket the item if it exists
-  if (item) {
-    item.sockets = fillNull(sockets);
-  }
+  const handleUpdateItemId = (updatedItemId) => {
+    setItemId(updatedItemId);
+    setEthereal(null);
+  };
 
-  const handleChangeRunes = (updatedRunes) => {
+  const handleUpdateRunes = (updatedRunes) => {
     setRunes(updatedRunes);
     setRunewordId(getRuneword(updatedRunes.join(''))?.id);
   };
 
-  const handleChangeRunewordId = (updatedRunewordId) => {
+  const handleUpdateRunewordId = (updatedRunewordId) => {
     setRunewordId(updatedRunewordId);
 
     if (updatedRunewordId) {
@@ -48,7 +55,8 @@ const Page = () => {
     }
   };
 
-  const handleChangeSockets = (updatedSockets) => {
+  const handleUpdateSockets = (updatedSockets) => {
+    setEthereal(null);
     setSockets(updatedSockets);
     setItemId(null);
     setRunewordId(null);
@@ -59,14 +67,14 @@ const Page = () => {
     <Frame help={help} preview={PREVIEWS.runewords} size="s" title="Runewords">
       <Layout direction="column" spacing="m">
         <Labelled label="Sockets">
-          <SocketSelect value={sockets} onChange={handleChangeSockets} />
+          <SocketSelect value={sockets} onChange={handleUpdateSockets} />
         </Labelled>
         <Labelled label="Item Base">
           <SocketedItemSelect
             sockets={sockets}
             types={runeword?.types}
             value={itemId}
-            onChange={setItemId}
+            onChange={handleUpdateItemId}
           />
         </Labelled>
         {sockets >= 0 && (
@@ -74,7 +82,7 @@ const Page = () => {
             <RuneSelect
               max={sockets}
               value={runes}
-              onChange={handleChangeRunes}
+              onChange={handleUpdateRunes}
             />
           </Labelled>
         )}
@@ -84,7 +92,7 @@ const Page = () => {
             sockets={sockets}
             runes={runes.join('')}
             value={runewordId}
-            onChange={handleChangeRunewordId}
+            onChange={handleUpdateRunewordId}
           />
         </Labelled>
       </Layout>
@@ -108,10 +116,15 @@ const help = (
     </p>
     <p>
       Socket counts are indicated by the <code>○</code> (max) and <code>●</code>{' '}
-      (applied) symbols.
+      (applied) symbols. The <code>+</code> symbols in the item name indicate
+      Exceptional/Elite item tiers.
     </p>
     <p>The Runegram on the right visualizes the Runeword creation process.</p>
   </div>
 );
+
+const testIsEthereal = (x) => ['ethereal', 'ethereal bugged'].includes(x);
+
+const testIsEtherealBugged = (x) => x === 'ethereal bugged';
 
 export default Page;

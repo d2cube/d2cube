@@ -36,7 +36,9 @@ export const keyOn = (key) => (x) => ({[key]: x});
 
 export const fill = (n) => (f) => range(1)(n).map(f);
 
-export const fillNull = (n) => fill(n)(k(null));
+export const fillNull = (n) => fillWith(n)(null);
+
+export const fillWith = (n) => (x) => fill(n)(k(x));
 
 export const join = (delimiter) => (xs) => xs.join(delimiter);
 

@@ -29,6 +29,7 @@ const Frame = ({
       <Layout
         as="section"
         direction="column"
+        flex="auto"
         maxH={
           isFixedHeight
             ? [undefined, undefined, 'frame.height.inventory']

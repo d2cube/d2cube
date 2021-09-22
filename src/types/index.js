@@ -17,7 +17,7 @@ export {};
  * @typedef {import('../enums/index.js').EquipSlotType} EquipSlotType
  * @typedef {import('../enums/index.js').GameVersionType} GameVersionType
  * @typedef {import('../enums/index.js').GemClassType} GemClassType
- * @typedef {import('../enums/index.js').GemTierType} GemTierType
+ * @typedef {import('../enums/index.js').GemLevelType} GemLevelType
  * @typedef {import('../enums/index.js').ItemFirstNameType} ItemFirstNameType
  * @typedef {import('../enums/index.js').ItemQualityType} ItemQualityType
  * @typedef {import('../enums/index.js').ItemSecondNameType} ItemSecondNameType
@@ -103,6 +103,8 @@ export {};
  *    A 2-sized array representing the row/column in a container.
  * @property {boolean} [isEthereal]
  *    Item is ethereal (cannot be repaired).
+ * @property {boolean} [isEtherealBugged]
+ *    Item is ethereal-bugged (cannot be repaired).
  * @property {boolean} [isUnidentified]
  *    Item is unidentified.
  * @property {string} [personalization]

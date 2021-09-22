@@ -10,9 +10,9 @@ const HudPanel = ({player, title}) => (
     <Layout align="center" spacing="xs">
       <Grid size={[1, 9]}>
         <BrandIcon icon="nav.cube" href="/cube" tooltip="Cube" />
+        <BrandIcon icon="nav.items" href="/items" tooltip="Items" />
         <BrandIcon icon="nav.sets" href="/sets" tooltip="Sets" />
         <BrandIcon icon="nav.runewords" href="/runewords" tooltip="Runewords" />
-        <BrandIcon icon="nav.items" href="/items" tooltip="Items" />
         <BrandIcon
           as="h1"
           icon="nav.home"

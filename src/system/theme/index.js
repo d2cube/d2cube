@@ -113,7 +113,7 @@ const lineHeights = {
 
 const opacities = {
   inactive: '0.2',
-  ethereal: '0.7',
+  ethereal: '0.3',
   hover: '0.8',
 };
 

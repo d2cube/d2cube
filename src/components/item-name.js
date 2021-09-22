@@ -1,5 +1,6 @@
 import {Element, Layout, useStyles} from 'uinix-ui';
 
+import {getTierLabel} from '../utils/get-tier-label.js';
 import {mark} from '../utils/mark.js';
 import {resolveItemColor} from '../utils/resolvers/resolve-item-color.js';
 import {resolveItemDescription} from '../utils/resolvers/resolve-item-description.js';
@@ -11,7 +12,7 @@ import BrandText from './ui/brand-text.js';
 const ItemName = ({item, query = '', shouldDisplayImage = false}) => {
   const styles = useStyles();
 
-  const {id, imageId, name} = item;
+  const {id, imageId, name, tier} = item;
   const color = resolveItemColor(item);
   const description = resolveItemDescription(item);
 
@@ -32,7 +33,10 @@ const ItemName = ({item, query = '', shouldDisplayImage = false}) => {
       preview={shouldDisplayImage ? null : preview}
     >
       <Layout direction="column" spacing="m">
-        <BrandText color={color} text={mark(name, query)} />
+        <BrandText
+          color={color}
+          text={mark(`${name}${getTierLabel(tier)}`, query)}
+        />
         {shouldDisplayImage && preview}
       </Layout>
     </ItemTooltip>
